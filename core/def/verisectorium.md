@@ -37,7 +37,7 @@ The work must facilitate being worked on by many minds who do not know it before
 
 A truth-centric, continually improving body of work, resilient to constant turnover; or a concrete instance of one with its ontology, data store and history.
 
-- It is never finished. A «steady⸱state» is a resting point, not an end.
+- It is rarely finished. A «steady⸱state» is a resting point, and not by itself an end.
 - No piece in it claims more than what has been done to it warrants, and none is left as if nothing had been done when something has.
 - Every piece of its content answers to at least one of its truth determinants; a piece that answers to none is a note about the verisectorium, not content of it.
 
