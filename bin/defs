@@ -86,7 +86,7 @@ outline  = File.read(OUTLINE)
 outline_files = outline.scan(/\[\[def\/([^\\|\]]+)\\\|/).flatten.uniq
 outline_terms, outline_subs = [], {}
 outline.each_line do |l|
-  next unless l =~ /\A\| *(?:provisional|promised|present) *\| *[^|]* *\| *\[\[def\/([^\\|\]]+)\\\|[^\]]*\]\] *\| *([^|]*) *\|/
+  next unless l =~ /\A\| *(?:provisional|promised|present|accepted) *\| *[^|]* *\| *\[\[def\/([^\\|\]]+)\\\|[^\]]*\]\] *\| *([^|]*) *\|/
   noun = $1.tr('-', SEP)
   outline_terms << noun
   outline_subs[noun] = $2.scan(/‹([^›]+)›/).flatten
@@ -173,7 +173,7 @@ when 'check'
   end
   check_refs.call('outline', outline.sub(/\A.*?\n## I\./m, ''))
   outline.each_line.with_index(1) do |line, n|
-    next unless line =~ /\A\| *(provisional|promised|present|gap) *\| *([^|]+?) *\| *\[\[def\/([^\\|\]]+)\\\|/
+    next unless line =~ /\A\| *(provisional|promised|present|accepted|gap) *\| *([^|]+?) *\| *\[\[def\/([^\\|\]]+)\\\|/
     defcol, f = $2.strip, $3
     problems << "outline:#{n}: #{f} has def '#{defcol}' but no file core/def/#{f}.md" if defcol != '–' && !defs.key?(f)
     problems << "outline:#{n}: #{f} has a file but def column says '–'" if defcol == '–' && defs.key?(f)
