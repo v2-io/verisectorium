@@ -1,7 +1,7 @@
 ```kdl
 term "frontier" pos=noun pl="-s" {
   avoid "todo list" "a frontier is computed, never typed"
-  rel of "working⸱state" card="{1,1}"
+  rel of term="working⸱state" card="{1,1}"
 }
 status provisional
 ```

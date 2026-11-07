@@ -21,9 +21,9 @@
 #   ‹sub›                  declared subtype of the «noun» on the same line, or unique across the lexicon
 # KDL 2.0 (gem kdl >= 2.0). Block shape:
 #   term "name" pos=noun pl="-s" { subtypes "a" "b"; synonyms "x"; avoid "word" "why";
-#                                  rel verb "target"... card="{m,n}" note="…" informal=#true }
+#                                  rel verb term="target" card="{m,n}" note="…" informal=#true }
 #   status provisional
-# Body: ## Intro · ## Definition (one line, then invariant bullets) · any free ## sections ·
+# Body: optional ## Intro · ## Definition (one line, then bullets, or a ### Invariants subsection) · any free ## sections ·
 #       ## Discussion · ## Examples · ## Working Notes (required)
 
 require 'kdl'
@@ -51,7 +51,11 @@ def parse_def(path)
     when 'subtypes' then t['subtypes'] += vals(c)
     when 'synonyms' then t['synonyms'] += vals(c)
     when 'avoid'    then t['avoid'][vals(c)[0]] = vals(c)[1]
-    when 'rel'      then rel, *to = vals(c); t['rels'] << props(c).merge('rel' => rel, 'to' => to)
+    when 'rel'
+      rel, *to = vals(c)
+      pr = props(c)
+      to << pr.delete('term') if pr['term']
+      t['rels'] << pr.merge('rel' => rel, 'to' => to)
     else raise "unknown child '#{c.name}' under term"
     end
   end
@@ -66,9 +70,12 @@ def parse_def(path)
       sections[current] << line
     end
   end
-  deflines = (sections['Definition'] || '').lines.map(&:rstrip).reject(&:empty?)
+  defsec = sections['Definition'] || ''
+  head, inv = defsec.split(/^### Invariants\s*$/, 2)
+  deflines = head.lines.map(&:rstrip).reject(&:empty?)
+  invariants = (inv || head).lines.map(&:rstrip).select { |l| l.start_with?('- ') }
   { 'term' => t, 'status' => status && vals(status).first, 'sections' => sections,
-    'def' => deflines.find { |l| !l.start_with?('- ') }, 'invariants' => deflines.select { |l| l.start_with?('- ') }, 'text' => text }
+    'def' => deflines.find { |l| !(l.start_with?('- ') || l.start_with?('#')) }, 'invariants' => invariants, 'text' => text }
 end
 
 problems = []
@@ -148,11 +155,11 @@ when 'check'
   defs.each do |f, d|
     t = d['term']['name']
     problems << "#{f}: status is missing" unless d['status']
-    %w[Intro Definition].each { |s| problems << "#{f}: missing section '## #{s}'" unless d['sections'].key?(s) }
+    problems << "#{f}: missing section '## Definition'" unless d['sections'].key?('Definition')
     problems << "#{f}: missing '## Working Notes'" unless d['sections'].key?('Working Notes')
-    intro = d['sections']['Intro'].to_s
+    intro = d['sections']['Intro'].to_s + d['sections']['Definition'].to_s
     pl = d['term']['pl']; plural = pl && (pl.start_with?('-') ? t + pl[1..] : pl)
-    problems << "#{f}: '#{t}' is not introduced as «#{t.upcase}» in ## Intro" unless intro.include?("«#{t.upcase}»") || (plural && intro.include?("«#{plural.upcase}»"))
+    problems << "#{f}: '#{t}' is not introduced as «#{t.upcase}» in ## Intro or ## Definition" unless intro.include?("«#{t.upcase}»") || (plural && intro.include?("«#{plural.upcase}»"))
     problems << "#{f}: ## Definition does not open with a one-line def" unless d['def']
     check_refs.call(f, d['text'])
     d['term']['rels'].each do |r|
@@ -205,7 +212,7 @@ when 'dot'
   puts '}'
 
 when 'overview'
-  order.each { |f| puts "## #{defs[f]['term']['name']}", '', defs[f]['sections']['Intro'].to_s.strip, '' }
+  order.each { |f| puts "## #{defs[f]['term']['name']}", '', (defs[f]['sections']['Intro'] || defs[f]['sections']['Definition']).to_s.strip, '' }
 
 when 'terms'
   order.each do |f|

@@ -2,8 +2,8 @@
 term "veritoid⸱kind" pos=noun pl="veritoid⸱kinds" {
   avoid "filename prefix" "a kind is declared, never carried in a name"
   avoid "speech act" "an earlier model individuated kinds by how they fail; here by what is asked of them"
-  rel allows "dimension" card="{1,N}" note="which are open for a given veritoid depends on its ground"
-  rel declares "move" card="{0,N}"
+  rel allows term="dimension" card="{1,N}" note="which are open for a given veritoid depends on its ground"
+  rel declares term="move" card="{0,N}"
 }
 status provisional
 ```

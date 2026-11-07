@@ -1,8 +1,8 @@
 ```kdl
 term "claimed⸱level" pos=noun pl="claimed⸱levels" {
   avoid "status" "ASF's frontmatter word was a claimed level written as if it were a value"
-  rel of "veritoid" card="{1,1}"
-  rel compared-with "value" card="{1,N}"
+  rel of term="veritoid" card="{1,1}"
+  rel compared-with term="value" card="{1,N}"
 }
 status provisional
 ```

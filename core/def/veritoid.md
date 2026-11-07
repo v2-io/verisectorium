@@ -4,12 +4,12 @@ term "veritoid" pos=noun pl="-s" {
   avoid "record" "used for this and for the whole segment at once"
   avoid "statement" "too narrow; a question or a note is a veritoid too"
   avoid "unit of fate" "how a piece fails is one question among several asked of it, not what makes it one piece"
-  rel of-kind "veritoid⸱kind" card="{1,1}"
-  rel holds "content" card="{1,1}"
-  rel states "ground" card="{1,N}"
-  rel carries "bound" card="{0,N}"
-  rel claims "claimed⸱level" card="{0,1}"
-  rel sits-in "slot" card="{1,1}" note="one slot of one segment"
+  rel of-kind term="veritoid⸱kind" card="{1,1}"
+  rel holds term="content" card="{1,1}"
+  rel states term="ground" card="{1,N}"
+  rel carries term="bound" card="{0,N}"
+  rel claims term="claimed⸱level" card="{0,1}"
+  rel sits-in term="slot" card="{1,1}" note="one slot of one segment"
 }
 status provisional
 ```

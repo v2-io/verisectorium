@@ -3,8 +3,8 @@ term "steady⸱state" pos=noun pl="steady⸱states" {
   avoid "stable" "suggests nothing is moving; a steady store may be under heavy work in work time"
   avoid "main" "a branch name, one way of holding it"
   avoid "fixed point" "right as mathematics, wrong as a word for readers"
-  rel is-a "state" card="{1,1}"
-  rel reached-by "atomic⸱changeset" card="{0,1}" note="none for the first"
+  rel is-a term="state" card="{1,1}"
+  rel reached-by term="atomic⸱changeset" card="{0,1}" note="none for the first"
 }
 status provisional
 ```

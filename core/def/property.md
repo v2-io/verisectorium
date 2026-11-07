@@ -3,7 +3,8 @@ term "property" pos=noun pl="properties" {
   subtypes "written" "computed"
   avoid "field" "a field is how a property may be stored; the property is what is known about the piece"
   avoid "attribute" "a plain measurement with no judgment in it, such as word count or age; defined with the dimension group"
-  rel of "veritoid" "segment" card="{1,1}"
+  rel of term="veritoid" card="{1,1}"
+  rel of term="segment" card="{1,1}"
 }
 status provisional
 ```

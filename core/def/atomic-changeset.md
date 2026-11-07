@@ -3,12 +3,12 @@ term "atomic⸱changeset" pos=noun pl="atomic⸱changesets" {
   avoid "episode" "an earlier word for the same container"
   avoid "commit" "one way of holding one"
   avoid "atom" "atomic means all-or-nothing and has nothing to do with any small unit of content"
-  rel from "steady⸱state" card="{1,1}"
-  rel to "steady⸱state" card="{1,1}"
-  rel opened-by "perturbation" card="{1,1}"
-  rel holds "segment⸱changeset" card="{0,N}"
-  rel holds "act" card="{0,N}"
-  rel leaves "accepted⸱remainder" card="{0,1}"
+  rel from term="steady⸱state" card="{1,1}"
+  rel to term="steady⸱state" card="{1,1}"
+  rel opened-by term="perturbation" card="{1,1}"
+  rel holds term="segment⸱changeset" card="{0,N}"
+  rel holds term="act" card="{0,N}"
+  rel leaves term="accepted⸱remainder" card="{0,1}"
 }
 status provisional
 ```

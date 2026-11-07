@@ -2,7 +2,7 @@
 term "truth⸱determinant" pos=noun pl="truth⸱determinants" {
   synonyms "truth aspects"
   avoid "fitness function" "a determinant is what the work must answer to; a fitness function is one way of scoring agreement with it"
-  rel declared-by "verisectorium" card="{1,1}"
+  rel declared-by term="verisectorium" card="{1,1}"
 }
 status provisional
 ```

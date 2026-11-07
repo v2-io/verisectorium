@@ -4,12 +4,12 @@ term "ontology" pos=noun pl="-s" {
   avoid "system model" "used for a flow sketch that declared no dimensions"
   avoid "template" "the seed a new store is initialized from; a template may supply a definition but is not one"
   avoid "schema" "right as a comparison, wrong as the word; a definition declares questions and moves, not only shapes"
-  rel governs "data⸱store" card="{1,1}"
-  rel declares "veritoid⸱kind" card="{1,N}"
-  rel declares "segment⸱kind" card="{1,N}"
-  rel declares "dimension" card="{1,N}"
-  rel declares "reference⸱kind" card="{0,N}"
-  rel declares "move" card="{0,N}"
+  rel governs term="data⸱store" card="{1,1}"
+  rel declares term="veritoid⸱kind" card="{1,N}"
+  rel declares term="segment⸱kind" card="{1,N}"
+  rel declares term="dimension" card="{1,N}"
+  rel declares term="reference⸱kind" card="{0,N}"
+  rel declares term="move" card="{0,N}"
 }
 status provisional
 ```

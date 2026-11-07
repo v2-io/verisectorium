@@ -1,8 +1,8 @@
 ```kdl
 term "ground" pos=noun pl="-s" {
   avoid "foundation" "an earlier word, which also names a thing rested on, which this is not"
-  rel of "veritoid" card="{1,1}"
-  rel opens "dimension" card="{0,N}" note="among those the veritoid's kind allows"
+  rel of term="veritoid" card="{1,1}"
+  rel opens term="dimension" card="{0,N}" note="among those the veritoid's kind allows"
 }
 status provisional
 ```

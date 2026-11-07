@@ -1,6 +1,6 @@
 ```kdl
 term "state" pos=noun pl="-s" {
-  rel at-a-point-in "log" card="{1,1}"
+  rel at-a-point-in term="log" card="{1,1}"
 }
 status provisional
 ```

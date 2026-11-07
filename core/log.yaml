@@ -40,3 +40,7 @@
   by: Fable session, at Joseph's direction
   did: one term per def file; every former group split (24 term files), each a kdl block with a single term node, then Intro / Definition / free sections / Discussion / Examples / Working Notes; split files carry a working note that their intro and discussion are still shared verbatim with former group-mates; outline rows one per term (87), with a subtypes column in place of terms-defined; checker, README and legend updated
   why: the co-definition test was a judgment call made twice over the same material; one term per file has no judgment in it, and no file is named for something that is not a term (Joseph, 2026-11-07)
+- at: 2026-11-07T04:10-07:00
+  by: Joseph (verisectorium.md), then the Fable session (tooling)
+  did: Joseph reworked verisectorium.md (intro folded into the definition; invariants as a subsection with a caveat; the three properties as discussion items; rel targets as term="…"); the checker and README follow: rel term= property on every def, Intro optional, a ### Invariants subsection recognized; 40 relations
+  why: his form of the file is the one to adjudicate against; the tooling bends to the file, not the file to the tooling

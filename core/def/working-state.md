@@ -2,8 +2,8 @@
 term "working⸱state" pos=noun pl="working⸱states" {
   avoid "branch" "one way of holding it"
   avoid "unstable" "it is incomplete, not unstable"
-  rel is-a "state" card="{1,1}"
-  rel belongs-to "atomic⸱changeset" card="{1,1}"
+  rel is-a term="state" card="{1,1}"
+  rel belongs-to term="atomic⸱changeset" card="{1,1}"
 }
 status provisional
 ```

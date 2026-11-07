@@ -2,9 +2,9 @@
 term "data⸱store" pos=noun pl="-s" {
   avoid "repository" "not a git repository and not a directory of files, though it may be held in one"
   avoid "database" "how it is held is undecided"
-  rel holds "verisectorium" card="{1,1}"
-  rel governed-by "ontology" card="{1,1}"
-  rel recorded-in "log" card="{1,1}"
+  rel holds term="verisectorium" card="{1,1}"
+  rel governed-by term="ontology" card="{1,1}"
+  rel recorded-in term="log" card="{1,1}"
 }
 status provisional
 ```
