@@ -36,3 +36,7 @@
   by: Fable session, at Joseph's suggestion
   did: per-term subsections allowed under ### «term» (free-named, or Discussion / Examples / Working Notes); group-level sections kept for what concerns the group as a whole; verisectorium.md restructured so the three defining properties sit under «verisectorium», and each term carries its own discussion, examples and working notes
   why: the exemplars keep discussion and notes at group level, which blurs once a group has more than one term; the three properties are about the term, not the pair (Joseph, 2026-11-07)
+- at: 2026-11-07T03:30-07:00
+  by: Fable session, at Joseph's direction
+  did: one term per def file; every former group split (24 term files), each a kdl block with a single term node, then Intro / Definition / free sections / Discussion / Examples / Working Notes; split files carry a working note that their intro and discussion are still shared verbatim with former group-mates; outline rows one per term (87), with a subtypes column in place of terms-defined; checker, README and legend updated
+  why: the co-definition test was a judgment call made twice over the same material; one term per file has no judgment in it, and no file is named for something that is not a term (Joseph, 2026-11-07)

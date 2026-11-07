@@ -1,6 +1,4 @@
 ```kdl
-group "veritoid" "content" "veritoid⸱kind"
-status provisional
 term "veritoid" pos=noun pl="-s" {
   avoid "atom" "used for this before, and it sounds related to the atomic changeset, which it is not"
   avoid "record" "used for this and for the whole segment at once"
@@ -13,44 +11,20 @@ term "veritoid" pos=noun pl="-s" {
   rel claims "claimed⸱level" card="{0,1}"
   rel sits-in "slot" card="{1,1}" note="one slot of one segment"
 }
-term "content" pos=noun {
-  synonyms "body"
-}
-term "veritoid⸱kind" pos=noun pl="veritoid⸱kinds" {
-  avoid "filename prefix" "a kind is declared, never carried in a name"
-  avoid "speech act" "an earlier model individuated kinds by how they fail; here by what is asked of them"
-  rel allows "dimension" card="{1,N}" note="which are open for a given veritoid depends on its ground"
-  rel declares "move" card="{0,N}"
-}
+status provisional
 ```
 
 ## Intro
 
 The «data⸱store» holds pieces of «CONTENT»: a formal statement, a step of a derivation, a paragraph of explanation, a caption, a question, an auditor's note. Every piece of content is of a declared «VERITOID⸱KIND», which says what form the content takes, which «truth⸱determinants» it answers to, and which questions may be asked of it. A «VERITOID» is one piece of content of a declared kind, together with the answers to those questions. A veritoid almost never makes sense alone; it sits in a «segment» with others it depends on, and the segment is where it is written and reviewed.
 
-## Terms
-
-### «veritoid»
+## Definition
 
 One piece of content of a declared kind, together with the answers to the questions that kind allows.
-
 - It is never changed alone. It changes only inside a «segment⸱changeset».
 - It contains no veritoid. Where its parts stand or fall separately, it is split.
 - It has no «name» of its own; it is reached through its segment.
 - Its content, ground, bounds, claimed level and references are ‹written›. Its answers are ‹computed›.
-
-### «content»
-
-The text or data a veritoid holds, at a version.
-
-- Two contents are the same version when they are the same after normalization. A reflow mints no version.
-
-### «veritoid⸱kind»
-
-A declared type of veritoid, saying what form its content takes, what it answers to, and which questions may be asked of it.
-
-- A veritoid moving up any ladder never changes its kind.
-- A kind earns its place when some question is asked of its veritoids that is asked of no other kind's, or when some «move» treats them differently.
 
 ## Discussion
 
@@ -64,6 +38,7 @@ A declared type of veritoid, saying what form its content takes, what it answers
 
 ## Working Notes
 
+- Intro, discussion and examples shared verbatim with former group-mates (content, veritoid⸱kind); to be rewritten for this term alone when adjudicated.
 - Open, and it matters. Whether a veritoid has an identity of its own that survives being moved, or is only its place in a segment. See «recut». Every split, promote and inbox drain hits this.
 - Not confirmed. That there are exactly two levels. Joseph said he was still not sure; the discussion's lean is a reading of his "practical granularity".
 - Open. Whether the word survives. Joseph offered it half in jest, for having no history; "content+dimensions" was his other candidate.

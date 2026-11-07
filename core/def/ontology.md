@@ -1,6 +1,4 @@
 ```kdl
-group "ontology"
-status provisional
 term "ontology" pos=noun pl="-s" {
   synonyms "store definition"
   avoid "system model" "used for a flow sketch that declared no dimensions"
@@ -13,18 +11,16 @@ term "ontology" pos=noun pl="-s" {
   rel declares "reference⸱kind" card="{0,N}"
   rel declares "move" card="{0,N}"
 }
+status provisional
 ```
 
 ## Intro
 
 An «ONTOLOGY» governs a «data⸱store»: it declares the kinds of thing the store may hold, the questions that may be asked of each, the references that may run between them, and the ways an answer may change. It holds no content of its own. It has versions, and every piece in the store follows one version of its kind.
 
-## Terms
-
-### «ontology»
+## Definition
 
 The declared kinds, dimensions, reference kinds and moves of one store; versioned; holding no content.
-
 - It has versions. Each «veritoid» and «segment» follows one version of its kind.
 - It is written by hand for now. Holding the definition itself as content of a store is deferred.
 - A change to it is a change to what "steady" can mean for part of the store, and is recorded like any other change.

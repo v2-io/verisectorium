@@ -1,6 +1,4 @@
 ```kdl
-group "atomic⸱changeset" "perturbation" "frontier" "accepted⸱remainder"
-status provisional
 term "atomic⸱changeset" pos=noun pl="atomic⸱changesets" {
   avoid "episode" "an earlier word for the same container"
   avoid "commit" "one way of holding one"
@@ -12,50 +10,19 @@ term "atomic⸱changeset" pos=noun pl="atomic⸱changesets" {
   rel holds "act" card="{0,N}"
   rel leaves "accepted⸱remainder" card="{0,1}"
 }
-term "perturbation" pos=noun pl="-s" {
-  synonyms "motivating perturbation"
-}
-term "frontier" pos=noun pl="-s" {
-  avoid "todo list" "a frontier is computed, never typed"
-  rel of "working⸱state" card="{1,1}"
-}
-term "accepted⸱remainder" pos=noun pl="accepted⸱remainders"
+status provisional
 ```
 
 ## Intro
 
 An «ATOMIC⸱CHANGESET» is everything, writes and acts together, that takes the «data⸱store» from one «steady⸱state» to the next. It opens with a «PERTURBATION», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «FRONTIER» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «ACCEPTED⸱REMAINDER»: what has been left on it by explicit, recorded decision, with its reason.
 
-## Terms
-
-### «atomic⸱changeset»
+## Definition
 
 Everything, writes and acts together, that takes the store from one steady state to the next.
-
 - Only a complete one moves the store to its next steady state. It is complete when, everywhere the perturbation reached, what is written is consistent and every «claimed⸱level» is either earned again or honestly lowered.
 - It is usually more than one mind can assemble in one pass, so it is built in stages, and at every stage the frontier says what is still owed.
 - An act that changes nothing written and leaves nothing owed, such as a confirming check, is an atomic changeset of size one.
-
-### «perturbation»
-
-Whatever first disturbs a steady store and so opens an atomic changeset.
-
-- A finding that something is broken is itself a perturbation, before anyone has written a repair.
-- Connecting an unconnected segment into the verisectorium, by a reference or by a place in a projection, is a perturbation of its own, and usually a large one.
-
-### «frontier»
-
-Everything still owed in a working state; what is known not yet to be consistent, computed afresh after each write or act.
-
-- It holds references whose target has changed since they were last checked, veritoids whose claimed level is above what is now earned, acts that no longer bind where a value rested on them, and questions a rule has raised that a mind must answer.
-- If it keeps growing instead of shrinking, work stops and the whole is looked at. The usual causes are two ideas treated as one, a genuine tension between two well-supported claims, or a foundation that has moved.
-
-### «accepted⸱remainder»
-
-What is left on the frontier at the close of an atomic changeset by explicit, recorded decision, with its reason.
-
-- An unrecorded remainder is an incomplete changeset, not an accepted one.
-- Each item on it is visible to anything that later rests on what it concerns.
 
 ## Discussion
 
@@ -70,6 +37,7 @@ What is left on the frontier at the close of an atomic changeset by explicit, re
 
 ## Working Notes
 
+- Intro, discussion and examples shared verbatim with former group-mates (perturbation, frontier, accepted⸱remainder); to be rewritten for this term alone when adjudicated.
 - Open. Whether the frontier's four kinds of item are complete. The list is from working one example.
 - Open. What an agent will do to make the frontier empty: affirmations and accepted remainders are both cheap exits, and any marker of "done" becomes a target.
 - Adjudicated against msc/notes 05 (22:19Z), 09 §4.3, 11 def-changeset.

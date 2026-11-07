@@ -1,6 +1,4 @@
 ```kdl
-group "steady⸱state" "working⸱state" "steady⸱time" "work⸱time"
-status provisional
 term "steady⸱state" pos=noun pl="steady⸱states" {
   avoid "stable" "suggests nothing is moving; a steady store may be under heavy work in work time"
   avoid "main" "a branch name, one way of holding it"
@@ -8,47 +6,18 @@ term "steady⸱state" pos=noun pl="steady⸱states" {
   rel is-a "state" card="{1,1}"
   rel reached-by "atomic⸱changeset" card="{0,1}" note="none for the first"
 }
-term "working⸱state" pos=noun pl="working⸱states" {
-  avoid "branch" "one way of holding it"
-  avoid "unstable" "it is incomplete, not unstable"
-  rel is-a "state" card="{1,1}"
-  rel belongs-to "atomic⸱changeset" card="{1,1}"
-}
-term "steady⸱time" pos=noun
-term "work⸱time" pos=noun
+status provisional
 ```
 
 ## Intro
 
 There are two kinds of time, and they are kept apart. In «STEADY⸱TIME» the «data⸱store» moves from one «STEADY⸱STATE» to the next, each move at one logical instant; nothing exists between two steady states, and at each one the «verisectorium» is good or true, with stated conditions. In «WORK⸱TIME» minds assemble such a move over hours and days, with an order, clock times and actors; while they do there is a «WORKING⸱STATE», the last steady state plus whatever has been staged so far, which changes as work proceeds and is never the verisectorium.
 
-## Terms
-
-### «steady⸱state»
+## Definition
 
 A state the store has actually rested in; nothing known inconsistent beyond what has been explicitly accepted, and no rule that would fire.
-
 - At a steady state the verisectorium is good or true, with stated conditions. Everything it says is either earned or honestly marked as not yet earned.
 - The steady states form a line. No steady state exists between two neighbours.
-
-### «working⸱state»
-
-The last steady state plus everything one atomic changeset in progress has staged so far.
-
-- It is never the verisectorium. Readers of the verisectorium read steady states.
-- Its «frontier» is computable at every moment.
-
-### «steady⸱time»
-
-The sequence of steady states, in which each move happens at one logical instant.
-
-- "Claim first, then description" is never a fact in steady time. Inside one move nothing is before anything else.
-
-### «work⸱time»
-
-The hours and days in which minds assemble a move, with an order, clock times and actors.
-
-- What was done in work time is kept. A check made on a draft later changed is still a record of the checker, though it binds to nothing in the next steady state.
 
 ## Discussion
 
@@ -61,6 +30,7 @@ The hours and days in which minds assemble a move, with an order, clock times an
 
 ## Working Notes
 
+- Intro, discussion and examples shared verbatim with former group-mates (working⸱state, steady⸱time, work⸱time); to be rewritten for this term alone when adjudicated.
 - Open. Whether a finding that breaks something may show on the steady line before its consequences are worked through, as a mark on a value that says "a known defect probably lowers this; not yet worked through; do not rely on it". Joseph would accept such marks if they are rare and nearly always what is being worked on. A steady state would then promise two different things, consistent and honestly current. Lean: allow the mark, and have it inhibit anything new from binding at the marked level rather than capping how many may exist.
 - Open. Several working states at once, and whether the union of two independently steady stores is itself steady. Punted by Joseph, who is alone in charge of workflow for now.
 - Open. Whether a working state is held as a branch, a separate store, or something else. An architectural decision; the requirements are checkpoints, a diff against the starting steady state, the frontier, a merge only when the frontier is empty or accepted, and detection of overlapping changesets before merge.

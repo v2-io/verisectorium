@@ -1,28 +1,30 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 #
-# defs — check, draw and read the definition groups in core/def/*.md
+# defs — check, draw and read the term definitions in core/def/*.md (one term per file)
 #
-#   defs check     every def parses (a leading ```kdl block + fixed body headings); the kdl
-#                  `group` args, `term` nodes and ### «term» headings agree; no term defined
-#                  twice; each group term appears as «TERM» in ## Intro; every «…» and ‹…›
-#                  resolves; relation targets are defined or promised terms; cardinalities
-#                  are {m,n}; the outline's `def` column agrees with which files exist
+#   defs check     every def parses (a leading ```kdl block with one `term` node and a `status`,
+#                  then the body sections); the file is named for its term (- for ⸱); no term
+#                  defined twice; the term appears as «TERM» (or its plural) in ## Intro; the
+#                  ## Definition section opens with a one-line def; every «…» and ‹…› resolves;
+#                  relation targets are defined or promised terms; cardinalities are {m,n};
+#                  the outline's `def` column agrees with which files exist
 #   defs dot       Graphviz of every term with relations, edges labelled "relation {m,n}"
 #   defs overview  the intros, in outline order, as one text
-#   defs terms     one line per term: term, group, one-line definition, subtypes
+#   defs terms     one line per term: term, one-line definition, subtypes
 #
 # Resolution rules (core/model.outline.md legend, core/def/README.md):
 #   «term»                 exactly one def defines it, or the outline promises it; plural per `pl`;
 #                          possessive by 's or ' («veritoid's», «verisectoria'»)
-#   «wording|def/g#term»   group g defines or (if unfiled) the outline promises term
+#   «wording|def/term»     that def (or, if unfiled, the outline) defines the term
 #   «sub⸱noun»             full name of subtype sub of noun, when sub⸱noun is not itself a term
-#   ‹sub›                  declared subtype of the «noun» that follows or precedes it on the same
-#                          line, or unique across the lexicon
+#   ‹sub›                  declared subtype of the «noun» on the same line, or unique across the lexicon
 # KDL 2.0 (gem kdl >= 2.0). Block shape:
-#   group "lead" "other"...     status provisional
 #   term "name" pos=noun pl="-s" { subtypes "a" "b"; synonyms "x"; avoid "word" "why";
 #                                  rel verb "target"... card="{m,n}" note="…" informal=#true }
+#   status provisional
+# Body: ## Intro · ## Definition (one line, then invariant bullets) · any free ## sections ·
+#       ## Discussion · ## Examples · ## Working Notes (required)
 
 require 'kdl'
 
@@ -30,9 +32,8 @@ ROOT    = File.expand_path('..', __dir__)
 DEF_DIR = File.join(ROOT, 'core', 'def')
 OUTLINE = File.join(ROOT, 'core', 'model.outline.md')
 SEP     = "⸱"
-SECTIONS = ['Intro', 'Terms', 'Discussion', 'Examples', 'Working Notes'].freeze
 
-def file_for(group) = group.tr(SEP, '-')
+def file_for(term) = term.tr(SEP, '-')
 def vals(node) = node.arguments.map(&:value)
 def props(node) = node.properties.transform_values(&:value)
 
@@ -41,23 +42,20 @@ def parse_def(path)
   raise 'no leading ```kdl block' unless text =~ /\A```kdl\n(.*?)\n```\n(.*)\z/m
   kdl, body = Regexp.last_match(1), Regexp.last_match(2)
   doc = KDL.parse(kdl)
-  group = doc.nodes.find { |n| n.name == 'group' } or raise 'no group node'
-  status = doc.nodes.find { |n| n.name == 'status' }
-  terms = {}
-  doc.nodes.select { |n| n.name == 'term' }.each do |n|
-    name = vals(n).first
-    t = props(n).merge('subtypes' => [], 'synonyms' => [], 'avoid' => {}, 'rels' => [])
-    n.children.each do |c|
-      case c.name
-      when 'subtypes' then t['subtypes'] += vals(c)
-      when 'synonyms' then t['synonyms'] += vals(c)
-      when 'avoid'    then t['avoid'][vals(c)[0]] = vals(c)[1]
-      when 'rel'      then rel, *to = vals(c); t['rels'] << props(c).merge('rel' => rel, 'to' => to)
-      else raise "unknown child '#{c.name}' under term #{name}"
-      end
+  tnodes = doc.nodes.select { |n| n.name == 'term' }
+  raise "expected exactly one term node, found #{tnodes.size}" unless tnodes.size == 1
+  n = tnodes.first
+  t = props(n).merge('name' => vals(n).first, 'subtypes' => [], 'synonyms' => [], 'avoid' => {}, 'rels' => [])
+  n.children.each do |c|
+    case c.name
+    when 'subtypes' then t['subtypes'] += vals(c)
+    when 'synonyms' then t['synonyms'] += vals(c)
+    when 'avoid'    then t['avoid'][vals(c)[0]] = vals(c)[1]
+    when 'rel'      then rel, *to = vals(c); t['rels'] << props(c).merge('rel' => rel, 'to' => to)
+    else raise "unknown child '#{c.name}' under term"
     end
-    terms[name] = t
   end
+  status = doc.nodes.find { |x| x.name == 'status' }
   sections = {}
   current = nil
   body.each_line do |line|
@@ -68,67 +66,45 @@ def parse_def(path)
       sections[current] << line
     end
   end
-  term_bodies = {}
-  (sections['Terms'] || '').split(/^### /).drop(1).each do |chunk|
-    head, *rest = chunk.lines
-    top, subs, cur = [], {}, nil
-    rest.each do |l|
-      if l =~ /\A#### (.+?)\s*\z/ then cur = Regexp.last_match(1); subs[cur] = +''
-      elsif cur then subs[cur] << l
-      else top << l.rstrip
-      end
-    end
-    top.reject!(&:empty?)
-    term_bodies[head[/«([^»]+)»/, 1]] = { 'def' => top.find { |l| !l.start_with?('- ') }, 'invariants' => top.select { |l| l.start_with?('- ') }, 'subsections' => subs }
-  end
-  { 'group' => vals(group), 'status' => status && vals(status).first, 'terms' => terms,
-    'sections' => sections, 'term_bodies' => term_bodies, 'text' => text }
+  deflines = (sections['Definition'] || '').lines.map(&:rstrip).reject(&:empty?)
+  { 'term' => t, 'status' => status && vals(status).first, 'sections' => sections,
+    'def' => deflines.find { |l| !l.start_with?('- ') }, 'invariants' => deflines.select { |l| l.start_with?('- ') }, 'text' => text }
 end
 
 problems = []
 outline  = File.read(OUTLINE)
-outline_groups = outline.scan(/\[\[def\/([^\\|\]]+)\\\|/).flatten.uniq
+outline_files = outline.scan(/\[\[def\/([^\\|\]]+)\\\|/).flatten.uniq
 outline_terms, outline_subs = [], {}
 outline.each_line do |l|
-  next unless l =~ /\A\| *(?:provisional|promised|present) *\| *[^|]* *\| *\[\[def\/[^\]]+\]\] *\| *([^|]*) *\|/
-  $1.split('<br>').each do |cell|
-    noun = cell[/\A\s*([^\s‹]+)/, 1] or next
-    outline_terms << noun
-    outline_subs[noun] = cell.scan(/‹([^›]+)›/).flatten
-  end
+  next unless l =~ /\A\| *(?:provisional|promised|present) *\| *[^|]* *\| *\[\[def\/([^\\|\]]+)\\\|[^\]]*\]\] *\| *([^|]*) *\|/
+  noun = $1.tr('-', SEP)
+  outline_terms << noun
+  outline_subs[noun] = $2.scan(/‹([^›]+)›/).flatten
 end
 files = Dir[File.join(DEF_DIR, '*.md')].map { |f| File.basename(f, '.md') }.reject { |f| f == 'README' }.sort
 
-groups = {}
-files.each do |g|
-  groups[g] = parse_def(File.join(DEF_DIR, "#{g}.md"))
+defs = {}
+files.each do |f|
+  defs[f] = parse_def(File.join(DEF_DIR, "#{f}.md"))
 rescue StandardError => e
-  problems << "#{g}: does not parse: #{e.message}"
+  problems << "#{f}: does not parse: #{e.message}"
 end
-order = (outline_groups & groups.keys) | (groups.keys - outline_groups)
+order = (outline_files & defs.keys) | (defs.keys - outline_files)
 
-terms, plurals, subtypes = {}, {}, {}        # term=>group ; plural=>term ; subtype=>[nouns]
-groups.each do |g, d|
-  listed, defined, headed = d['group'], d['terms'].keys, d['term_bodies'].keys
-  (listed - defined).each { |t| problems << "#{g}: '#{t}' is in the group but has no term node" }
-  (defined - listed).each { |t| problems << "#{g}: term '#{t}' is not in the group node" }
-  (listed - headed).each { |t| problems << "#{g}: '#{t}' has no '### «#{t}»' heading under ## Terms" }
-  (headed - listed).each { |t| problems << "#{g}: '### «#{t}»' heading for a term not in the group" }
-  lead = listed.first
-  problems << "#{g}: file should be named '#{file_for(lead)}' unless the outline links it as #{g}" if lead && file_for(lead) != g && !outline_groups.include?(g)
-  listed.each do |t|
-    problems << "#{g}: '#{t}' is already defined in #{terms[t]}" if terms.key?(t)
-    terms[t] = g
-    next unless d['terms'][t]            # already reported above
-    pl = d['terms'][t]['pl']
-    plurals[pl.start_with?('-') ? t + pl[1..] : pl] = t if pl
-    d['terms'][t]['subtypes'].each { |s| (subtypes[s] ||= []) << t }
-  end
+terms, plurals, subtypes = {}, {}, {}          # term=>file ; plural=>term ; subtype=>[nouns]
+defs.each do |f, d|
+  t = d['term']['name']
+  problems << "#{f}: file should be named '#{file_for(t)}' for term '#{t}'" unless file_for(t) == f
+  problems << "#{f}: '#{t}' is already defined in #{terms[t]}" if terms.key?(t)
+  terms[t] = f
+  pl = d['term']['pl']
+  plurals[pl.start_with?('-') ? t + pl[1..] : pl] = t if pl
+  d['term']['subtypes'].each { |s| (subtypes[s] ||= []) << t }
 end
 outline_subs.each { |noun, subs| subs.each { |s| (subtypes[s] ||= []) << noun unless (subtypes[s] || []).include?(noun) } }
 
 resolve_term = lambda do |w|
-  w = w.downcase.sub(/['’]s?\z/, '')          # possessives: «veritoid's», «verisectoria'»
+  w = w.downcase.sub(/['’]s?\z/, '')
   return w if terms.key?(w) || outline_terms.include?(w)
   return plurals[w] if plurals.key?(w)
   return w.sub(/s\z/, '') if outline_terms.include?(w.sub(/s\z/, ''))
@@ -139,17 +115,18 @@ resolve_term = lambda do |w|
   nil
 end
 
-REF  = /«([^»|\\]+?)(?:\\?\|def\/([^»#]+)#([^»]+))?»/
-SUB  = /‹([^›]+)›/
+REF = /«([^»|\\]+?)(?:\\?\|def\/([^»#]+?)(?:#([^»]+))?)?»/
+SUB = /‹([^›]+)›/
 
 check_refs = lambda do |where, text|
   text = text.gsub(/`[^`]*`/, '')
-  text.scan(REF) do |wording, g, t|
-    if g
-      if groups.key?(g)
-        problems << "#{where}: «#{wording}|def/#{g}##{t}» names a term that group does not define" unless groups[g]['group'].include?(t)
+  text.scan(REF) do |wording, f, t|
+    if f
+      t ||= f.tr('-', SEP)
+      if defs.key?(f)
+        problems << "#{where}: «#{wording}|def/#{f}» names #{t}, which that file does not define" unless defs[f]['term']['name'] == t
       else
-        problems << "#{where}: «#{wording}|def/#{g}##{t}» names a term the outline does not promise" unless outline_terms.include?(t)
+        problems << "#{where}: «#{wording}|def/#{f}» names a term the outline does not promise" unless outline_terms.include?(t)
       end
     else
       problems << "#{where}: «#{wording}» resolves to no defined or promised term or subtype" unless resolve_term.call(wording)
@@ -168,55 +145,48 @@ end
 
 case ARGV[0]
 when 'check'
-  groups.each do |g, d|
-    problems << "#{g}: status is missing" unless d['status']
-    (SECTIONS - d['sections'].keys).each { |s| problems << "#{g}: missing section '## #{s}'" unless ['Discussion', 'Examples', 'Working Notes'].include?(s) }
-    has_notes = d['sections'].key?('Working Notes') || d['term_bodies'].values.any? { |b| b['subsections'].key?('Working Notes') }
-    problems << "#{g}: no Working Notes, at group level or under any term" unless has_notes
-    (d['sections'].keys - SECTIONS).each { |s| problems << "#{g}: unexpected section '## #{s}'" }
+  defs.each do |f, d|
+    t = d['term']['name']
+    problems << "#{f}: status is missing" unless d['status']
+    %w[Intro Definition].each { |s| problems << "#{f}: missing section '## #{s}'" unless d['sections'].key?(s) }
+    problems << "#{f}: missing '## Working Notes'" unless d['sections'].key?('Working Notes')
     intro = d['sections']['Intro'].to_s
-    d['group'].each do |t|
-      pl = d['terms'].dig(t, 'pl'); plural = pl && (pl.start_with?('-') ? t + pl[1..] : pl)
-      problems << "#{g}: '#{t}' is not introduced as «#{t.upcase}» in ## Intro" unless intro.include?("«#{t.upcase}»") || (plural && intro.include?("«#{plural.upcase}»"))
-      problems << "#{g}: '#{t}' has no one-line def under its heading" unless d['term_bodies'].dig(t, 'def')
+    pl = d['term']['pl']; plural = pl && (pl.start_with?('-') ? t + pl[1..] : pl)
+    problems << "#{f}: '#{t}' is not introduced as «#{t.upcase}» in ## Intro" unless intro.include?("«#{t.upcase}»") || (plural && intro.include?("«#{plural.upcase}»"))
+    problems << "#{f}: ## Definition does not open with a one-line def" unless d['def']
+    check_refs.call(f, d['text'])
+    d['term']['rels'].each do |r|
+      problems << "#{f}: relation '#{r['rel']}' has no cardinality {m,n}" unless r['card'].to_s =~ /\A\{\d+,(\d+|N)\}\z/
+      next if r['informal']
+      problems << "#{f}: relation '#{r['rel']}' has no target" if r['to'].empty?
+      r['to'].each { |x| problems << "#{f}: relation '#{r['rel']}' points at '#{x}', which is neither defined nor promised" unless terms.key?(x) || outline_terms.include?(x) }
     end
-    check_refs.call(g, d['text'])
-    d['terms'].each do |t, m|
-      m['rels'].each do |r|
-        problems << "#{g}: '#{t}' relation '#{r['rel']}' has no cardinality {m,n}" unless r['card'].to_s =~ /\A\{\d+,(\d+|N)\}\z/
-        next if r['informal']
-        problems << "#{g}: '#{t}' relation '#{r['rel']}' has no target" if r['to'].empty?
-        r['to'].each { |x| problems << "#{g}: '#{t}' relation '#{r['rel']}' points at '#{x}', which is neither defined nor promised" unless terms.key?(x) || outline_terms.include?(x) }
-      end
-      m['subtypes'].each { |s| problems << "#{g}: subtype '#{s}' of '#{t}' is also a term (#{terms[s]})" if terms.key?(s) }
-    end
+    d['term']['subtypes'].each { |s| problems << "#{f}: subtype '#{s}' is also a term (#{terms[s]})" if terms.key?(s) }
   end
   check_refs.call('outline', outline.sub(/\A.*?\n## I\./m, ''))
   outline.each_line.with_index(1) do |line, n|
     next unless line =~ /\A\| *(provisional|promised|present|gap) *\| *([^|]+?) *\| *\[\[def\/([^\\|\]]+)\\\|/
-    defcol, g = $2.strip, $3
-    problems << "outline:#{n}: #{g} has def '#{defcol}' but no file core/def/#{g}.md" if defcol != '–' && !groups.key?(g)
-    problems << "outline:#{n}: #{g} has a file but def column says '–'" if defcol == '–' && groups.key?(g)
+    defcol, f = $2.strip, $3
+    problems << "outline:#{n}: #{f} has def '#{defcol}' but no file core/def/#{f}.md" if defcol != '–' && !defs.key?(f)
+    problems << "outline:#{n}: #{f} has a file but def column says '–'" if defcol == '–' && defs.key?(f)
   end
-  (groups.keys - outline_groups).each { |g| problems << "#{g}: has a file but no row in the outline" }
+  (defs.keys - outline_files).each { |f| problems << "#{f}: has a file but no row in the outline" }
   if problems.empty?
-    nrels = groups.values.sum { |d| d['terms'].values.sum { |m| m['rels'].size } }
-    nsubs = groups.values.sum { |d| d['terms'].values.sum { |m| m['subtypes'].size } }
-    puts "ok: #{groups.size} groups, #{terms.size} terms, #{nsubs} subtypes, #{nrels} relations; #{outline_groups.size} groups in the outline, nothing unresolved"
+    nrels = defs.values.sum { |d| d['term']['rels'].size }
+    nsubs = defs.values.sum { |d| d['term']['subtypes'].size }
+    puts "ok: #{defs.size} terms defined, #{nsubs} subtypes, #{nrels} relations; #{outline_files.size} terms in the outline, nothing unresolved"
   else
     puts problems
     exit 1
   end
 
 when 'dot'
-  palette = %w[#e6f3ee #efeaf3 #e8eef6 #fbf1e3 #f3e9e9 #eaf3f6 #f1f3e6 #f6eaf3]
   used, edges = {}, []
-  groups.each_value do |d|
-    d['terms'].each do |t, m|
-      m['rels'].each do |r|
-        next if r['informal']
-        r['to'].each { |x| used[t] = used[x] = true; edges << [t, x, r['rel'], r['card']] }
-      end
+  defs.each_value do |d|
+    t = d['term']['name']
+    d['term']['rels'].each do |r|
+      next if r['informal']
+      r['to'].each { |x| used[t] = used[x] = true; edges << [t, x, r['rel'], r['card']] }
     end
   end
   id = ->(t) { t.gsub(/[^a-z0-9]/, '_') }
@@ -225,28 +195,22 @@ when 'dot'
   puts '  graph [rankdir=LR, fontname="Helvetica", fontsize=11, nodesep=0.35, ranksep=1.1];'
   puts '  node  [fontname="Helvetica", fontsize=10, shape=box, style="rounded,filled", fillcolor=white];'
   puts '  edge  [fontname="Helvetica", fontsize=8, color="#555555", arrowsize=0.6];'
-  order.each_with_index do |g, i|
-    members = groups[g]['group'].select { |t| used[t] }
-    next if members.empty?
-    puts "  subgraph cluster_#{id.call(g)} { label=\"#{g}\"; style=\"rounded,filled\"; color=\"#bbbbbb\"; fillcolor=\"#{palette[i % palette.size]}\"; fontsize=9;"
-    members.each do |t|
-      subs = groups[g]['terms'][t]['subtypes']
-      puts "    #{id.call(t)} [label=\"#{t}#{subs.empty? ? '' : "\\n‹#{subs.join('› ‹')}›"}\"];"
-    end
-    puts '  }'
+  order.each do |f|
+    t = defs[f]['term']['name']
+    next unless used[t]
+    subs = defs[f]['term']['subtypes']
+    puts "  #{id.call(t)} [label=\"#{t}#{subs.empty? ? '' : "\\n‹#{subs.join('› ‹')}›"}\"];"
   end
   edges.each { |a, b, rel, card| puts "  #{id.call(a)} -> #{id.call(b)} [label=\"#{rel} #{card}\"#{rel == 'is-a' ? ', style=dashed' : ''}];" }
   puts '}'
 
 when 'overview'
-  order.each { |g| puts "## #{groups[g]['group'].join(', ')}", '', groups[g]['sections']['Intro'].to_s.strip, '' }
+  order.each { |f| puts "## #{defs[f]['term']['name']}", '', defs[f]['sections']['Intro'].to_s.strip, '' }
 
 when 'terms'
-  order.each do |g|
-    groups[g]['group'].each do |t|
-      subs = groups[g]['terms'][t]['subtypes']
-      puts "#{t}\t#{g}\t#{groups[g]['term_bodies'].dig(t, 'def')}#{subs.empty? ? '' : "\t‹#{subs.join('› ‹')}›"}"
-    end
+  order.each do |f|
+    subs = defs[f]['term']['subtypes']
+    puts "#{defs[f]['term']['name']}\t#{defs[f]['def']}#{subs.empty? ? '' : "\t‹#{subs.join('› ‹')}›"}"
   end
 
 else

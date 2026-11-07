@@ -1,23 +1,19 @@
 ```kdl
-group "bound"
-status provisional
 term "bound" pos=noun pl="-s" {
   synonyms "license"
   avoid "ceiling" "the most a piece could ever earn; a bound is a limit it is given"
   rel of "veritoid" card="{1,1}"
 }
+status provisional
 ```
 
 ## Intro
 
 A «BOUND» is a declared limit on a «veritoid», consulted at a moment and never earned by degrees: what the piece may assert on its own authority, what a reader may do with it, whether it is safe to show an unprimed auditor, which of two conflicting things yields.
 
-## Terms
-
-### «bound»
+## Definition
 
 A declared limit on a veritoid, consulted at a moment and never earned by degrees.
-
 - It is ‹written›, and it is not an answer to any «dimension».
 - It is consulted, not accumulated. There are no degrees of a bound.
 

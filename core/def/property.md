@@ -1,24 +1,20 @@
 ```kdl
-group "property"
-status provisional
 term "property" pos=noun pl="properties" {
   subtypes "written" "computed"
   avoid "field" "a field is how a property may be stored; the property is what is known about the piece"
   avoid "attribute" "a plain measurement with no judgment in it, such as word count or age; defined with the dimension group"
   rel of "veritoid" "segment" card="{1,1}"
 }
+status provisional
 ```
 
 ## Intro
 
 A «PROPERTY» is anything the data store holds about a «veritoid» or a «segment» beside the bare fact of its existence: its content, its «ground», its «bounds|def/bound#bound», its «claimed⸱level», its references, its values, a segment's assembly, a projection's members and order. Every property is one of two kinds, and the line between them is what the rest of the model stands on. A ‹written› property is set by an author and changed only by a «segment⸱changeset». A ‹computed› property is produced by the data store from what has been recorded, as of a «state», and is never set by anyone.
 
-## Terms
-
-### «property»
+## Definition
 
 Anything the data store holds about a veritoid or segment, each either written by an author or computed by the store.
-
 - ‹written›: set by an author, reconciled by the author inside the changeset at one instant, never set by the store. Content, ground, bounds, claimed level, references, a segment's assembly, a projection's members and order.
 - ‹computed›: produced by the store from what has been recorded, as of a state; the same recorded things read in any order give the same answer; never typed. Every «value», every attribute, whether each reference holds, every «roll⸱up».
 - A typed status word is a ‹written› property wearing a ‹computed› one's clothes.
