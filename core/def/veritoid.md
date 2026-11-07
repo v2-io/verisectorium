@@ -1,57 +1,28 @@
----
-term-group:
-- veritoid
-- content
-- veritoid⸱kind
-status: provisional
-terms:
-  veritoid:
-    pos: noun
-    pl: -s
-    avoid:
-      atom: used for this before, and it sounds related to the atomic changeset, which it is not
-      record: used for this and for the whole segment at once
-      statement: too narrow; a question or a note is a veritoid too
-      unit of fate: how a piece fails is one question among several asked of it, not what makes it one piece
-    rels:
-    - rel: of-kind
-      to: veritoid⸱kind
-      card: '{1,1}'
-    - rel: holds
-      to: content
-      card: '{1,1}'
-    - rel: states
-      to: ground
-      card: '{1,N}'
-    - rel: carries
-      to: bound
-      card: '{0,N}'
-    - rel: claims
-      to: claimed⸱level
-      card: '{0,1}'
-    - rel: sits-in
-      to: slot
-      card: '{1,1}'
-      note: one slot of one segment
-  content:
-    pos: noun
-    synonyms:
-    - body
-  veritoid⸱kind:
-    pos: noun
-    pl: veritoid⸱kinds
-    avoid:
-      filename prefix: a kind is declared, never carried in a name
-      speech act: an earlier model individuated kinds by how they fail; here by what is asked of them
-    rels:
-    - rel: allows
-      to: dimension
-      card: '{1,N}'
-      note: which are open for a given veritoid depends on its ground
-    - rel: declares
-      to: move
-      card: '{0,N}'
----
+```kdl
+group "veritoid" "content" "veritoid⸱kind"
+status provisional
+term "veritoid" pos=noun pl="-s" {
+  avoid "atom" "used for this before, and it sounds related to the atomic changeset, which it is not"
+  avoid "record" "used for this and for the whole segment at once"
+  avoid "statement" "too narrow; a question or a note is a veritoid too"
+  avoid "unit of fate" "how a piece fails is one question among several asked of it, not what makes it one piece"
+  rel of-kind "veritoid⸱kind" card="{1,1}"
+  rel holds "content" card="{1,1}"
+  rel states "ground" card="{1,N}"
+  rel carries "bound" card="{0,N}"
+  rel claims "claimed⸱level" card="{0,1}"
+  rel sits-in "slot" card="{1,1}" note="one slot of one segment"
+}
+term "content" pos=noun {
+  synonyms "body"
+}
+term "veritoid⸱kind" pos=noun pl="veritoid⸱kinds" {
+  avoid "filename prefix" "a kind is declared, never carried in a name"
+  avoid "speech act" "an earlier model individuated kinds by how they fail; here by what is asked of them"
+  rel allows "dimension" card="{1,N}" note="which are open for a given veritoid depends on its ground"
+  rel declares "move" card="{0,N}"
+}
+```
 
 ## Intro
 
@@ -66,7 +37,7 @@ One piece of content of a declared kind, together with the answers to the questi
 - It is never changed alone. It changes only inside a «segment⸱changeset».
 - It contains no veritoid. Where its parts stand or fall separately, it is split.
 - It has no «name» of its own; it is reached through its segment.
-- Its content, ground, bounds, claimed level and references are «written». Its answers are «computed».
+- Its content, ground, bounds, claimed level and references are ‹written›. Its answers are ‹computed›.
 
 ### «content»
 

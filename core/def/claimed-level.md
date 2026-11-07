@@ -1,25 +1,16 @@
----
-term-group:
-- claimed⸱level
-status: provisional
-terms:
-  claimed⸱level:
-    pos: noun
-    pl: claimed⸱levels
-    avoid:
-      status: ASF's frontmatter word was a claimed level written as if it were a value
-    rels:
-    - rel: of
-      to: veritoid
-      card: '{1,1}'
-    - rel: compared-with
-      to: value
-      card: '{1,N}'
----
+```kdl
+group "claimed⸱level"
+status provisional
+term "claimed⸱level" pos=noun pl="claimed⸱levels" {
+  avoid "status" "ASF's frontmatter word was a claimed level written as if it were a value"
+  rel of "veritoid" card="{1,1}"
+  rel compared-with "value" card="{1,N}"
+}
+```
 
 ## Intro
 
-A «CLAIMED⸱LEVEL» is what a «veritoid»'s content asserts about its own support: "theorem", "exact under these premises", "conditional", "hypothesis". It is «written», like the content, and it is not a «value». The store's work is to compare it with what has been earned; a claimed level above what the computed values allow is an inconsistency and goes on the «frontier». To *soften* a claimed level is to lower it, or to narrow what the content says; it is honest and it is the easy thing, and its quick calm is often false because of «latent⸱level»s downstream. Softening never leaves a ghost: the body states what is now held, and the former claim is in the «log».
+A «CLAIMED⸱LEVEL» is what a «veritoid»'s content asserts about its own support: "theorem", "exact under these premises", "conditional", "hypothesis". It is ‹written›, like the content, and it is not a «value». The store's work is to compare it with what has been earned; a claimed level above what the computed values allow is an inconsistency and goes on the «frontier». To *soften* a claimed level is to lower it, or to narrow what the content says; it is honest and it is the easy thing, and its quick calm is often false because of «latent⸱level»s downstream. Softening never leaves a ghost: the body states what is now held, and the former claim is in the «log».
 
 ## Terms
 

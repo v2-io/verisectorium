@@ -1,44 +1,22 @@
----
-term-group:
-- steady⸱state
-- working⸱state
-- steady⸱time
-- work⸱time
-status: provisional
-terms:
-  steady⸱state:
-    pos: noun
-    pl: steady⸱states
-    avoid:
-      stable: suggests nothing is moving; a steady store may be under heavy work in work time
-      main: a branch name, one way of holding it
-      fixed point: right as mathematics, wrong as a word for readers
-    rels:
-    - rel: is-a
-      to: state
-      card: '{1,1}'
-    - rel: reached-by
-      to: atomic⸱changeset
-      card: '{0,1}'
-      note: none for the first
-  working⸱state:
-    pos: noun
-    pl: working⸱states
-    avoid:
-      branch: one way of holding it
-      unstable: it is incomplete, not unstable
-    rels:
-    - rel: is-a
-      to: state
-      card: '{1,1}'
-    - rel: belongs-to
-      to: atomic⸱changeset
-      card: '{1,1}'
-  steady⸱time:
-    pos: noun
-  work⸱time:
-    pos: noun
----
+```kdl
+group "steady⸱state" "working⸱state" "steady⸱time" "work⸱time"
+status provisional
+term "steady⸱state" pos=noun pl="steady⸱states" {
+  avoid "stable" "suggests nothing is moving; a steady store may be under heavy work in work time"
+  avoid "main" "a branch name, one way of holding it"
+  avoid "fixed point" "right as mathematics, wrong as a word for readers"
+  rel is-a "state" card="{1,1}"
+  rel reached-by "atomic⸱changeset" card="{0,1}" note="none for the first"
+}
+term "working⸱state" pos=noun pl="working⸱states" {
+  avoid "branch" "one way of holding it"
+  avoid "unstable" "it is incomplete, not unstable"
+  rel is-a "state" card="{1,1}"
+  rel belongs-to "atomic⸱changeset" card="{1,1}"
+}
+term "steady⸱time" pos=noun
+term "work⸱time" pos=noun
+```
 
 ## Intro
 

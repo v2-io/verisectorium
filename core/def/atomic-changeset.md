@@ -1,55 +1,26 @@
----
-term-group:
-- atomic⸱changeset
-- perturbation
-- frontier
-- accepted⸱remainder
-status: provisional
-terms:
-  atomic⸱changeset:
-    pos: noun
-    pl: atomic⸱changesets
-    avoid:
-      episode: an earlier word for the same container
-      commit: one way of holding one
-      atom: atomic means all-or-nothing and has nothing to do with any small unit of content
-    rels:
-    - rel: from
-      to: steady⸱state
-      card: '{1,1}'
-    - rel: to
-      to: steady⸱state
-      card: '{1,1}'
-    - rel: opened-by
-      to: perturbation
-      card: '{1,1}'
-    - rel: holds
-      to: segment⸱changeset
-      card: '{0,N}'
-    - rel: holds
-      to: act
-      card: '{0,N}'
-    - rel: leaves
-      to: accepted⸱remainder
-      card: '{0,1}'
-  perturbation:
-    pos: noun
-    pl: -s
-    synonyms:
-    - motivating perturbation
-  frontier:
-    pos: noun
-    pl: -s
-    avoid:
-      todo list: a frontier is computed, never typed
-    rels:
-    - rel: of
-      to: working⸱state
-      card: '{1,1}'
-  accepted⸱remainder:
-    pos: noun
-    pl: accepted⸱remainders
----
+```kdl
+group "atomic⸱changeset" "perturbation" "frontier" "accepted⸱remainder"
+status provisional
+term "atomic⸱changeset" pos=noun pl="atomic⸱changesets" {
+  avoid "episode" "an earlier word for the same container"
+  avoid "commit" "one way of holding one"
+  avoid "atom" "atomic means all-or-nothing and has nothing to do with any small unit of content"
+  rel from "steady⸱state" card="{1,1}"
+  rel to "steady⸱state" card="{1,1}"
+  rel opened-by "perturbation" card="{1,1}"
+  rel holds "segment⸱changeset" card="{0,N}"
+  rel holds "act" card="{0,N}"
+  rel leaves "accepted⸱remainder" card="{0,1}"
+}
+term "perturbation" pos=noun pl="-s" {
+  synonyms "motivating perturbation"
+}
+term "frontier" pos=noun pl="-s" {
+  avoid "todo list" "a frontier is computed, never typed"
+  rel of "working⸱state" card="{1,1}"
+}
+term "accepted⸱remainder" pos=noun pl="accepted⸱remainders"
+```
 
 ## Intro
 

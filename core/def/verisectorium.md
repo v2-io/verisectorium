@@ -1,24 +1,18 @@
----
-term-group: [verisectorium, truth⸱determinants]
-status: provisional
-terms:
-  verisectorium:
-    pos: noun
-    pl: verisectoria
-    avoid:
-      repository: where files happen to live; a verisectorium may span several or none
-      knowledge base: suggests settled facts; a verisectorium is mostly work in progress, honestly marked
-    rels:
-      - {rel: declares, to: truth⸱determinants, card: "{1,N}"}
-      - {rel: described-by, to: ontology, card: "{1,1}"}
-      - {rel: held-in, to: data⸱store, card: "{1,1}"}
-  truth⸱determinants:
-    pos: noun
-    pl: truth⸱determinants
-    synonyms: [truth aspects]
-    avoid:
-      fitness function: a determinant is what the work must answer to; a fitness function is one way of scoring agreement with it
----
+```kdl
+group "verisectorium" "truth⸱determinants"
+status provisional
+term "verisectorium" pos=noun pl="verisectoria" {
+  avoid "repository" "where files happen to live; a verisectorium may span several or none"
+  avoid "knowledge base" "suggests settled facts; a verisectorium is mostly work in progress, honestly marked"
+  rel declares "truth⸱determinants" card="{1,N}"
+  rel described-by "ontology" card="{1,1}"
+  rel held-in "data⸱store" card="{1,1}"
+}
+term "truth⸱determinants" pos=noun pl="truth⸱determinants" {
+  synonyms "truth aspects"
+  avoid "fitness function" "a determinant is what the work must answer to; a fitness function is one way of scoring agreement with it"
+}
+```
 
 ## Intro
 

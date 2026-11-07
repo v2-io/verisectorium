@@ -1,40 +1,21 @@
----
-term-group:
-- data⸱store
-- log
-- state
-status: provisional
-terms:
-  data⸱store:
-    pos: noun
-    pl: -s
-    avoid:
-      repository: not a git repository and not a directory of files, though it may be held in one
-      database: how it is held is undecided
-    rels:
-    - rel: holds
-      to: verisectorium
-      card: '{1,1}'
-    - rel: governed-by
-      to: ontology
-      card: '{1,1}'
-    - rel: recorded-in
-      to: log
-      card: '{1,1}'
-  log:
-    pos: noun
-    pl: -s
-    avoid:
-      trail: an earlier word for one piece's part of the log, which left no place for an act that spans several pieces
-      history: read from the log, not kept beside it
-  state:
-    pos: noun
-    pl: -s
-    rels:
-    - rel: at-a-point-in
-      to: log
-      card: '{1,1}'
----
+```kdl
+group "data⸱store" "log" "state"
+status provisional
+term "data⸱store" pos=noun pl="-s" {
+  avoid "repository" "not a git repository and not a directory of files, though it may be held in one"
+  avoid "database" "how it is held is undecided"
+  rel holds "verisectorium" card="{1,1}"
+  rel governed-by "ontology" card="{1,1}"
+  rel recorded-in "log" card="{1,1}"
+}
+term "log" pos=noun pl="-s" {
+  avoid "trail" "an earlier word for one piece's part of the log, which left no place for an act that spans several pieces"
+  avoid "history" "read from the log, not kept beside it"
+}
+term "state" pos=noun pl="-s" {
+  rel at-a-point-in "log" card="{1,1}"
+}
+```
 
 ## Intro
 

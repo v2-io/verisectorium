@@ -1,37 +1,19 @@
----
-term-group:
-- ontology
-status: provisional
-terms:
-  ontology:
-    pos: noun
-    pl: -s
-    synonyms:
-    - store definition
-    avoid:
-      system model: used for a flow sketch that declared no dimensions
-      template: the seed a new store is initialized from; a template may supply a definition but is not one
-      schema: right as a comparison, wrong as the word; a definition declares questions and moves, not only shapes
-    rels:
-    - rel: governs
-      to: data⸱store
-      card: '{1,1}'
-    - rel: declares
-      to: veritoid⸱kind
-      card: '{1,N}'
-    - rel: declares
-      to: segment⸱kind
-      card: '{1,N}'
-    - rel: declares
-      to: dimension
-      card: '{1,N}'
-    - rel: declares
-      to: reference⸱kind
-      card: '{0,N}'
-    - rel: declares
-      to: move
-      card: '{0,N}'
----
+```kdl
+group "ontology"
+status provisional
+term "ontology" pos=noun pl="-s" {
+  synonyms "store definition"
+  avoid "system model" "used for a flow sketch that declared no dimensions"
+  avoid "template" "the seed a new store is initialized from; a template may supply a definition but is not one"
+  avoid "schema" "right as a comparison, wrong as the word; a definition declares questions and moves, not only shapes"
+  rel governs "data⸱store" card="{1,1}"
+  rel declares "veritoid⸱kind" card="{1,N}"
+  rel declares "segment⸱kind" card="{1,N}"
+  rel declares "dimension" card="{1,N}"
+  rel declares "reference⸱kind" card="{0,N}"
+  rel declares "move" card="{0,N}"
+}
+```
 
 ## Intro
 

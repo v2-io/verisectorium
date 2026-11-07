@@ -24,3 +24,7 @@
   by: Joseph (intro), then the Fable session
   did: defs moved from YAML to markdown with YAML frontmatter (machine fields in frontmatter; Intro / Terms / Discussion / Examples / Working Notes in the body); core/def/README.md states the shape; bin/defs ported. Joseph's rewrite of the verisectorium intro propagated (three senses; truth-centrism, continual improvement, turnover-resilience; complex-systems list moved to discussion); term renames: definition -> ontology, store -> data⸱store, answers⸱to -> truth⸱determinants; better, answers to, soften are plain English now, not terms; roll-up's terms made nouns (aliased⸱value, derived⸱value, owned⸱value); legend states the nouns rule
   why: prose was being written inside a data format; "definition" collided with the def files; terms are nouns and verbs/adjectives belong to their referent noun (Joseph, 2026-11-07)
+- at: 2026-11-07T01:30-07:00
+  by: Fable session, at Joseph's direction
+  did: def machine block is now a leading ```kdl block (KDL 2.0) instead of YAML frontmatter; subtypes introduced (declared `subtypes "a" "b"` under a term; written ‹sub› beside its noun or alone when unique; «sub⸱noun» as full name); «property» minted with ‹written› and ‹computed›, replacing the written group; roll-up, row, premise-change, recut and value rows restated with subtypes; bin/defs parses KDL and resolves both subtype forms; README and legend updated
+  why: KDL's node shape is udon's, so the retrofit stays a syntax swap; subtypes stop the lexicon minting a noun for every state of a noun (Joseph, 2026-11-07)

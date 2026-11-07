@@ -1,22 +1,12 @@
----
-term-group:
-- theory⸱claim
-- empirical⸱fact
-- proposed⸱model
-status: provisional
-terms:
-  theory⸱claim:
-    pos: noun
-    pl: theory⸱claims
-    avoid:
-      conjecture: a theory claim not yet derived; the regime is the same
-  empirical⸱fact:
-    pos: noun
-    pl: empirical⸱facts
-  proposed⸱model:
-    pos: noun
-    pl: proposed⸱models
----
+```kdl
+group "theory⸱claim" "empirical⸱fact" "proposed⸱model"
+status provisional
+term "theory⸱claim" pos=noun pl="theory⸱claims" {
+  avoid "conjecture" "a theory claim not yet derived; the regime is the same"
+}
+term "empirical⸱fact" pos=noun pl="empirical⸱facts"
+term "proposed⸱model" pos=noun pl="proposed⸱models"
+```
 
 ## Intro
 
