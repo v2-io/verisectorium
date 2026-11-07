@@ -10,11 +10,11 @@ status provisional
 ```
 
 # «Verisectorium»
-A "place for cutting truth." It is a truth-centric system to build a body of work under turnover, the project that defines such systems and their tools, or, when used in this ontology, a concrete instance with its constituent parts.
+A "place for cutting truth." It is a truth-centric, continually improving system for building a body of work under turnover, the project that defines such systems and their tools, or, when used in this ontology, a concrete instance with its constituent parts.
 
 ## Definition(s)
 - (1) A place for dissecting and adjudicating new or existing content, refining it toward agreement with its declared «truth⸱determinants», and reassembling the parts into meaningful coherent results. It is therefore a body of work that is *truth-centric*, exhibits *continual improvement*, and needs to be *resilient to constant turnover* (see Discussion items 3,4, & 5);
-- (2)  This repository and project's name, which describes «verisectoria» generally, gives their meta-«ontology», and provides tooling (`v2`) for initializing and operating instantiations of them (see Discussion item 1 & 2);
+- (2) This repository and project's name, which describes «verisectoria» generally, gives their meta-«ontology», and provides tooling (`v2`) for initializing and operating instantiations of them (see Discussion item 1 & 2);
 - (3) A concrete instance of (1), with its «ontology», the current snapshot of its «data⸱store», and often (as when it is a repository) its history. **This is the primary meaning as a term within this ontology**, (and thus the referent for the invariants, owner of the declared relationships, etc.).
 
 ### Invariants
