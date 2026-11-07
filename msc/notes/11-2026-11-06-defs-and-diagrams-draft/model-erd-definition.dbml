@@ -1,0 +1,123 @@
+// model-erd-definition.dbml
+// JUST the definition: what one verisectorium declares about itself.
+// This is the "domain description". It says what kinds of thing the store may hold,
+// what can be asked of each, and how values may change. It holds no content.
+// For Joseph, 2026-11-06. Not a storage design. Section numbers refer to model-and-lexicon.md.
+
+Project v2_definition {
+  database_type: 'PostgreSQL'
+  Note: 'The definition of one verisectorium. Ten tables. Hand-written for now.'
+}
+
+Enum sustained_by {
+  evidenced [note: 'a truth claim; built by accumulating evidence']
+  decided   [note: 'a choice; built by grounds, consultation, accountability']
+  attested  [note: 'asserted and checkable; the floor']
+  mixed
+}
+
+Enum scale_form {
+  ladder [note: 'ordered rungs']
+  set    [note: 'unordered values']
+  number
+}
+
+Enum slot_cardinality {
+  one
+  at_most_one
+  any_number
+}
+
+Enum segment_value_source {
+  aliased [note: 'the value of one veritoid in one slot']
+  derived [note: 'computed from several veritoids']
+  own     [note: 'asked of the whole, e.g. coherence']
+}
+
+Table dimension [headercolor: #6c5b7b] {
+  id int [pk]
+  name varchar [unique, note: 'e.g. evidence/derivation, decision/accountability, freshness, coherence']
+  question text [note: 'the one question it asks']
+  sustained_by sustained_by
+  scale scale_form
+  Note: '2.2. One independently answerable question.'
+}
+
+Table rung [headercolor: #6c5b7b] {
+  id int [pk]
+  dimension_id int [ref: > dimension.id]
+  ordinal int
+  name varchar [note: 'e.g. sketch, drafted, premises-checked, re-derived']
+  Note: 'A step on a dimension\'s ladder.'
+}
+
+Table veritoid_kind [headercolor: #6c5b7b] {
+  id int [pk]
+  name varchar [unique, note: 'claim, proof-step, explanation, question, regression-guard ...']
+  content_form text
+  Note: '2.1. What form the content takes.'
+}
+
+Table veritoid_kind_dimension [headercolor: #6c5b7b] {
+  veritoid_kind_id int [ref: > veritoid_kind.id]
+  dimension_id int [ref: > dimension.id]
+  opened_by_ground varchar [note: 'which declared ground opens it; null if always open']
+  indexes { (veritoid_kind_id, dimension_id) [pk] }
+  Note: 'Which questions can be asked of content of this kind.'
+}
+
+Table reference_kind [headercolor: #6c5b7b] {
+  id int [pk]
+  name varchar [unique, note: 'predicated-on, narrates, restates, seeded-by, supersedes']
+  what_passes text [note: 'support and level limits; staleness; agreement; non-independence; currency']
+  must_be_acyclic boolean [note: 'true for predicated-on']
+  Note: '2.5. Each exists only because something treats it differently.'
+}
+
+Table segment_kind [headercolor: #6c5b7b] {
+  id int [pk]
+  name varchar [unique, note: 'derived-result, definition, introduction, chapter ...']
+  is_projection boolean [note: 'true when its members are other segments (2.6)']
+  Note: '2.3. Your "template".'
+}
+
+Table slot [headercolor: #6c5b7b] {
+  id int [pk]
+  segment_kind_id int [ref: > segment_kind.id]
+  name varchar [note: 'formal-claim, derivation, description, eli8 ...']
+  ordinal int [note: 'slots are ordered']
+  veritoid_kind_id int [ref: > veritoid_kind.id, note: 'what goes in it']
+  required boolean
+  cardinality slot_cardinality
+  Note: '2.3. A declared place in a segment kind.'
+}
+
+Table inner_dependency [headercolor: #6c5b7b] {
+  dependent_slot_id int [ref: > slot.id, note: 'e.g. eli8']
+  on_slot_id int [ref: > slot.id, note: 'e.g. description']
+  indexes { (dependent_slot_id, on_slot_id) [pk] }
+  Note: '2.3. Why the whole segment must be looked at together when one veritoid in it moves.'
+}
+
+Table segment_dimension [headercolor: #6c5b7b] {
+  id int [pk]
+  segment_kind_id int [ref: > segment_kind.id]
+  dimension_id int [ref: > dimension.id]
+  source segment_value_source
+  alias_slot_id int [ref: > slot.id, note: 'aliased: which slot\'s veritoid']
+  alias_dimension_id int [ref: > dimension.id, note: 'aliased: which of its dimensions']
+  derivation_rule text [note: 'derived: e.g. "the stalest of its veritoids"']
+  Note: '2.3. How a segment gets each of its own values.'
+}
+
+Table move [headercolor: #6c5b7b] {
+  id int [pk]
+  name varchar
+  dimension_id int [ref: > dimension.id, note: 'the one dimension it changes']
+  to_rung_id int [ref: > rung.id]
+  veritoid_kind_id int [ref: > veritoid_kind.id, note: 'when it moves a veritoid\'s value']
+  segment_kind_id int [ref: > segment_kind.id, note: 'when it moves a segment\'s own value']
+  precondition text
+  who_has_standing text
+  Note: 'Part 6. A declared way for a value to change. Who or what performs it is not part of the definition.'
+}

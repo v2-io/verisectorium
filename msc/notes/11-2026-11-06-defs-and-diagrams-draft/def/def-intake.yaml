@@ -1,0 +1,69 @@
+term-group: [source, chunk, crossing, inbox, delivery]
+status: proposed
+
+intro: |
+  A **SOURCE** is anything brought in from outside the @{store}'s settled @{content}: a paper, an audit, a spike, an old file, a transcript. A @{source} is cut, completely, into **CHUNK**s. A **CROSSING** is the @{act} that records where a @{chunk} went. Each @{segment} has an **INBOX**, where @{chunks} that bear on it wait to be dealt with. What leaves for another @{store} is a **DELIVERY**.
+
+terms:
+  source:
+    def: Material brought in from outside the store's settled content.
+    pos: noun
+    pl: -s
+    rels:
+      - {rel: cut-into, to: chunk, card: "{1,N}"}
+    invariants:
+      - The store records whether it has been read, by whom, and how far. Unread is something that can be asked for.
+      - Its chunks must cover all of it. What has not yet been cut is visible as not yet cut.
+      - It is retired when all of it has been cut and every chunk has a final crossing.
+
+  chunk:
+    def: One piece cut from a source.
+    pos: noun
+    pl: -s
+    synonyms: [unit]
+    rels:
+      - {rel: of,  to: source,   card: "{1,1}"}
+      - {rel: has, to: crossing, card: "{0,1}", note: at most one current; none means undecided}
+
+  crossing:
+    def: The act that records where a chunk went.
+    pos: noun
+    pl: -s
+    synonyms: [disposition]
+    rels:
+      - {rel: is-a, to: act,   card: "{1,1}"}
+      - {rel: of,   to: chunk, card: "{1,1}"}
+    invariants:
+      - Its outcome is one of these. It changed an existing veritoid, it became a new veritoid, it was already present, it is one more independent arrival of something present, it was superseded or rejected with a reason, it was delivered elsewhere, or it was passed to a segment's inbox.
+      - Passed to an inbox is not final.
+      - A crossing can be wrong. A later one that disagrees is evidence about whoever crossed, not about the source.
+
+  inbox:
+    def: A segment's own intake, where chunks that bear on it wait.
+    pos: noun
+    pl: -es
+    synonyms: [working notes]
+    avoid:
+      slot: it is not one of the segment kind's slots and holds no veritoids
+    rels:
+      - {rel: of,    to: segment, card: "{1,1}"}
+      - {rel: holds, to: chunk,   card: "{0,N}"}
+    invariants:
+      - It is not part of the segment's written state. Adding to it or emptying it is not a segment changeset and never makes the segment look changed.
+      - Anyone may add to it. A note written straight into it is its own small source.
+
+  delivery:
+    def: Material sent on from one store to another.
+    pos: noun
+    pl: deliveries
+    synonyms: [efflux]
+    avoid:
+      set-aside: a sink word for something that is in fact handed on
+
+discussion:
+  - Joseph called a segment's Working Notes one of the most effective higher-level mechanisms in ASF when used correctly. The reason it works is placement. An open item does its job only if it sits where the mind that should act on it will pass.
+  - The sprint's drains dealt with about two thousand Working Notes items and retired no sources, because the notes lived inside the text they were notes about.
+  - Some things that sat in Working Notes were never intake. A regression guard, an open question with a named closer, a dead end with its reason. Those are veritoids of their own kinds in slots of their own.
+
+working-notes:
+  - Left open. Where an inbox is physically kept.

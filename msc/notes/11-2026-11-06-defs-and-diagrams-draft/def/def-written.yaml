@@ -1,0 +1,64 @@
+term-group: [written, computed, ground, claimed-level, soften, bound]
+status: proposed
+
+intro: |
+  Everything about a @{veritoid} is either **WRITTEN** by an author or **COMPUTED** by the @{store}, and the line between them is what the rest of the model stands on. Its @{content} is @{written}. So are three things an author states beside the @{content}. Its **GROUND** says what it can be supported by, and so which evidence @{dimensions} are open for it. Its **CLAIMED-LEVEL** says what the @{content} asserts about its own support. Its **BOUND**s are limits that are stated and then consulted. Every @{value} is @{computed}. To **SOFTEN** is to lower a @{claimed-level} or to narrow what is said.
+
+terms:
+  written:
+    def: Set by an author, and changed only by a segment changeset.
+    pos: adjective
+    invariants:
+      - A veritoid's content, ground, claimed level, bounds and references are written. So is a segment's assembly, and a projection's list of members and their order.
+
+  computed:
+    def: Produced by the store from what has been recorded, and never set by anyone.
+    pos: adjective
+    invariants:
+      - Every value, every attribute, whether each reference holds, and a segment's aliased and derived values are computed.
+
+  ground:
+    def: What an author states a veritoid can be supported by, which decides which evidence dimensions are open for it.
+    pos: noun
+    pl: -s
+    synonyms: [foundation]
+    invariants:
+      - A dimension that is not open is a recorded fact, not a gap. No value on it will ever pretend that work was done.
+      - The instrument follows the ground. Provable means derive it; measurable means measure it; witnessed means it can only be corroborated.
+
+  claimed-level:
+    def: What a veritoid's content asserts about its own support.
+    pos: noun
+    pl: -s
+    avoid:
+      status: the frontmatter word in ASF was a claimed level written as if it were a value
+    rels:
+      - {rel: of,            to: veritoid, card: "{1,1}"}
+      - {rel: compared-with, to: value,    card: "{1,N}"}
+    invariants:
+      - It is written, like content, and unlike a value.
+      - A claimed level above what the computed values allow is an inconsistency, and goes on the frontier.
+      - There is only ever one. What it used to be is a matter for the log.
+
+  soften:
+    def: To lower a claimed level, or to narrow what the content says.
+    pos: verb
+    invariants:
+      - It is honest and it is the easy thing. Its quick calm is often false, because of latent levels downstream.
+
+  bound:
+    def: A declared limit on a veritoid that is stated and consulted, not earned by degrees.
+    pos: noun
+    pl: -s
+    synonyms: [license]
+    invariants:
+      - It is not a dimension.
+
+examples:
+  - Grounds. Derivable, simulable, measurable in the wild, an instance of a known model, witnessed, carried from outside.
+  - Claimed levels. Theorem. Exact under these premises. Conditional. Hypothesis.
+  - Bounds. What this content may assert on its own authority (nothing new, a summary, a generalization, an original claim). What a reader may do with it (usable as a hypothesis, do not revive). Whether it is safe to show an unprimed auditor.
+
+working-notes:
+  - Left open. Where a claimed level lives. A field beside the content, a word inside the content, a bound, or something the veritoid's kind declares.
+  - Provenance. Ground is the August model's declared foundation. Claimed level is the scratch file's what it claims beside what its trail has established. Bounds are the August model's.

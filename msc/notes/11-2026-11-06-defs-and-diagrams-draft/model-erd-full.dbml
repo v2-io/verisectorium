@@ -1,0 +1,541 @@
+// model-erd.dbml
+// The v2 model of model-and-lexicon.md, pretended into a relational schema.
+// For Joseph, 2026-11-06, to check a concrete understanding of the model against a diagram.
+//
+// This is NOT a storage design. Storage is undecided. Every table here exists only
+// to make one statement of the model concrete: what refers to what, and how many.
+//
+// Reading guide. Five groups of tables:
+//   1. definition  what a store's definition declares (kinds, dimensions, slots, moves)
+//   2. written     what authors write (segments, veritoids, and their versions)
+//   3. recorded    what gets recorded as happening (changesets, acts, steady states)
+//   4. intake      sources, chunks, crossings, inboxes
+//   5. computed    NEVER written by hand. Shown as tables only so the diagram can show
+//                  what they hang off. In a real system these are queries over 1-4.
+//
+// Places where the schema had to choose something the model leaves open are marked OPEN.
+
+Project v2_model {
+  database_type: 'PostgreSQL'
+  Note: '''
+  Sketch of the v2 model as a schema, to accompany preparations/v2/model-and-lexicon.md.
+  Section numbers in notes (e.g. "2.3") refer to that document.
+  '''
+}
+
+// ───────────────────────────── enums ─────────────────────────────
+
+Enum sustained_by {
+  evidenced [note: 'a truth claim; built by accumulating evidence']
+  decided   [note: 'a choice; built by grounds, consultation, accountability']
+  attested  [note: 'asserted and checkable; no chain of evidence kept; the floor']
+  mixed     [note: 'e.g. importance-for: computed reach plus decided stakes']
+}
+
+Enum scale_form {
+  ladder [note: 'ordered rungs']
+  set    [note: 'unordered values']
+  number
+}
+
+Enum value_form {
+  position     [note: 'what has been done; a fact about the record']
+  credence     [note: 'a truth claim with its probability']
+  judged_value [note: 'a judged label with a spread over the scale']
+}
+
+Enum slot_holds {
+  veritoids        [note: 'an ordinary slot']
+  segment_pointers [note: 'a slot of a projection: points at member segments']
+}
+
+Enum slot_cardinality {
+  one
+  at_most_one
+  any_number
+}
+
+Enum segment_value_source {
+  aliased [note: 'the value of one named veritoid in one slot']
+  derived [note: 'computed from several veritoids']
+  own     [note: 'asked of the whole, e.g. coherence']
+}
+
+Enum mechanism_form {
+  rule
+  agent
+  council
+}
+
+Enum atomic_changeset_status {
+  in_progress [note: 'a working state exists; the frontier is not yet empty']
+  complete    [note: 'produced a steady state']
+  abandoned   [note: 'nothing changed']
+}
+
+Enum act_type {
+  check        [note: 're-derivation, re-run, comparison against a source ...']
+  review       [note: 'a whole-read of a segment, a projection, or an entire atomic changeset']
+  decision     [note: 'about the inside of the store, or about where effort goes (3.3)']
+  crossing     [note: 'where a chunk went (Part 5)']
+  affirmation  [note: 'the author says a dependent veritoid is still right (4.1)']
+  rule_firing  [note: 'a declared rule fired at a definite moment']
+  finding      [note: 'something was found broken; often the perturbation']
+  acceptance   [note: 'an owed item is explicitly accepted so a steady state may hold it']
+  external_change [note: 'something outside moved: a simulator version, a date a rule cares about']
+}
+
+Enum crossing_outcome {
+  changed_existing
+  became_new
+  already_present
+  independent_arrival [note: 'evidence, not a duplicate']
+  superseded
+  rejected
+  delivered_elsewhere
+  passed_to_inbox     [note: 'not final']
+}
+
+Enum owed_reason {
+  pointer_target_changed
+  claimed_level_above_earned
+  act_no_longer_binds
+  rule_question            [note: 'a rule asked something only a mind can answer']
+  narrowed_premise_question [note: '"did you rely on what is gone?" (2.5)']
+}
+
+// ───────────────────── 1. definition (hand-written for now) ─────────────────────
+
+Table definition_version [headercolor: #6c5b7b] {
+  id int [pk]
+  recorded_at timestamp
+  summary text
+  Note: 'The definition has versions (4.6). Every kind row below belongs to one. Left off the other definition tables to keep the diagram readable.'
+}
+
+Table dimension [headercolor: #6c5b7b] {
+  id int [pk]
+  name varchar [unique, note: 'namespace is only a prefix in the name, e.g. evidence/derivation']
+  question text [note: 'the one question this dimension asks']
+  sustained_by sustained_by
+  scale scale_form
+  value_form value_form
+  Note: '2.2. One independently answerable question.'
+}
+
+Table rung [headercolor: #6c5b7b] {
+  id int [pk]
+  dimension_id int [ref: > dimension.id]
+  ordinal int [note: 'order on the ladder; null for an unordered set']
+  name varchar
+  Note: 'A step on a ladder, or a member of an unordered set.'
+}
+
+Table veritoid_kind [headercolor: #6c5b7b] {
+  id int [pk]
+  name varchar [unique, note: 'claim, proof-step, explanation, question, regression-guard ...']
+  content_form text
+  Note: '2.1. Says what form the content takes and which dimensions it allows.'
+}
+
+Table veritoid_kind_dimension [headercolor: #6c5b7b] {
+  veritoid_kind_id int [ref: > veritoid_kind.id]
+  dimension_id int [ref: > dimension.id]
+  opened_by_ground varchar [note: 'which declared ground opens it, e.g. "derivable"; null if always open']
+  indexes { (veritoid_kind_id, dimension_id) [pk] }
+  Note: 'Which dimensions a kind ALLOWS. Which are OPEN for a given veritoid depends on its ground (2.2).'
+}
+
+Table reference_kind [headercolor: #6c5b7b] {
+  id int [pk]
+  name varchar [unique, note: 'predicated-on, narrates, restates, seeded-by, supersedes']
+  what_passes text [note: 'support and level limits; staleness; agreement; non-independence; currency']
+  must_be_acyclic boolean [note: 'true for predicated-on']
+}
+
+Table segment_kind [headercolor: #6c5b7b] {
+  id int [pk]
+  name varchar [unique, note: 'derived-result, definition, introduction, chapter ...']
+  is_projection boolean [note: 'true when its slots hold pointers to segments (2.6)']
+  Note: '2.3. Declares slots, inner dependencies, and how the segment gets its own values.'
+}
+
+Table slot [headercolor: #6c5b7b] {
+  id int [pk]
+  segment_kind_id int [ref: > segment_kind.id]
+  name varchar
+  ordinal int [note: 'slots are ordered']
+  holds slot_holds
+  veritoid_kind_id int [ref: > veritoid_kind.id, note: 'null when the slot holds segment pointers']
+  required boolean
+  cardinality slot_cardinality
+  review_reads_of_member text [note: 'projection slots only: what a review of the projection reads of each member, e.g. "headline claim and claimed level" (2.6)']
+}
+
+Table inner_dependency [headercolor: #6c5b7b] {
+  id int [pk]
+  dependent_slot_id int [ref: > slot.id, note: 'e.g. eli8']
+  on_slot_id int [ref: > slot.id, note: 'e.g. description']
+  Note: '2.3. Both slots belong to the same segment kind. The write rule (4.1) follows these.'
+}
+
+Table segment_dimension [headercolor: #6c5b7b] {
+  id int [pk]
+  segment_kind_id int [ref: > segment_kind.id]
+  dimension_id int [ref: > dimension.id]
+  source segment_value_source
+  alias_slot_id int [ref: > slot.id, note: 'aliased: which slot']
+  alias_dimension_id int [ref: > dimension.id, note: 'aliased: which of that veritoid\'s dimensions']
+  derivation_rule text [note: 'derived: e.g. "minimum freshness over all veritoids"']
+  Note: '2.3. Aliased, derived, or own.'
+}
+
+Table move [headercolor: #6c5b7b] {
+  id int [pk]
+  name varchar
+  veritoid_kind_id int [ref: > veritoid_kind.id, note: 'set when the move is on a veritoid\'s dimension']
+  segment_kind_id int [ref: > segment_kind.id, note: 'set when the move is on a segment\'s own dimension']
+  dimension_id int [ref: > dimension.id, note: 'the one dimension this move changes']
+  to_rung_id int [ref: > rung.id]
+  precondition text
+  standing_rule text [note: 'which actors may perform it, e.g. "not the author of the version read" (3.5)']
+  must_record text
+  Note: 'Part 6. A declared way for a value to change through an act.'
+}
+
+Table move_mechanism [headercolor: #6c5b7b] {
+  move_id int [ref: > move.id]
+  mechanism mechanism_form
+  selected_when text [note: 'e.g. "importance-for-target above X"']
+  indexes { (move_id, mechanism) [pk] }
+  Note: 'A queue can be worked by several mechanisms. Nothing here says how a council works inside.'
+}
+
+// ───────────────────── 2. written (changed only by segment changesets) ─────────────────────
+
+Table segment [headercolor: #2a7f62] {
+  id int [pk]
+  segment_kind_id int [ref: > segment_kind.id]
+  follows_definition_version_id int [ref: > definition_version.id]
+  Note: '2.3. The thing that persists. Its written state at any time is a segment_version.'
+}
+
+Table segment_name [headercolor: #2a7f62] {
+  id int [pk]
+  segment_id int [ref: > segment.id]
+  name varchar [unique, note: 'two segments under one name is a failure to surface']
+  is_current boolean [note: 'exactly one current name per segment; old names keep resolving']
+  bound_by_changeset_id int [ref: > segment_changeset.id]
+}
+
+Table veritoid [headercolor: #2a7f62] {
+  id int [pk, note: 'OPEN: this gives a veritoid an identity of its own that survives being moved. The model has not decided this (2.4). The alternative is no such row: a veritoid is only "segment + slot + position".']
+  veritoid_kind_id int [ref: > veritoid_kind.id]
+  Note: '2.1. Its content, ground, claimed level and pointers live on veritoid_version.'
+}
+
+Table veritoid_version [headercolor: #2a7f62] {
+  id int [pk]
+  veritoid_id int [ref: > veritoid.id]
+  written_by_changeset_id int [ref: > segment_changeset.id]
+  content text
+  claimed_level varchar [note: 'OPEN where this lives: here, inside content, or as a bound (Part 9 item 7). "theorem", "exact under premises", "conditional", "hypothesis"']
+  content_hash varchar [note: 'of the normalized form, so a reflow is not a new version']
+  Note: '2.7. Everything an author writes about one veritoid, at one version.'
+}
+
+Table veritoid_ground [headercolor: #2a7f62] {
+  veritoid_version_id int [ref: > veritoid_version.id]
+  ground varchar [note: 'derivable, simulable, measurable, instance-of-model, witnessed, carried']
+  indexes { (veritoid_version_id, ground) [pk] }
+  Note: '2.2. What the author states this can be supported by. Opens evidence dimensions.'
+}
+
+Table veritoid_bound [headercolor: #2a7f62] {
+  id int [pk]
+  veritoid_version_id int [ref: > veritoid_version.id]
+  bound_type varchar [note: 'may-assert, reader-may, auditor-safe']
+  bound_value varchar
+  Note: '3.4. Declared limits: stated and consulted, not earned.'
+}
+
+Table reference [headercolor: #2a7f62] {
+  id int [pk]
+  from_veritoid_version_id int [ref: > veritoid_version.id, note: 'pointers are written, so they belong to a version']
+  reference_kind_id int [ref: > reference_kind.id]
+  to_veritoid_id int [ref: > veritoid.id, note: 'the specific veritoid relied on, not its whole segment']
+  required_dimension_id int [ref: > dimension.id, note: 'optional: "I need this at a level"']
+  required_rung_id int [ref: > rung.id]
+  expects slot_cardinality [note: 'gives an empty result its meaning']
+  Note: '2.5. A written link. Whether it HOLDS is computed (see reference_status).'
+}
+
+Table segment_version [headercolor: #2a7f62] {
+  id int [pk]
+  segment_id int [ref: > segment.id]
+  written_by_changeset_id int [ref: - segment_changeset.id, note: 'one changeset writes exactly one new segment version']
+  Note: 'One whole written state of one segment: which veritoid versions sit in which slots, in what order.'
+}
+
+Table placement [headercolor: #2a7f62] {
+  segment_version_id int [ref: > segment_version.id]
+  slot_id int [ref: > slot.id]
+  position int [note: 'order within a slot that holds several']
+  veritoid_version_id int [ref: > veritoid_version.id]
+  indexes { (segment_version_id, slot_id, position) [pk] }
+  Note: 'A veritoid sits in exactly one slot of exactly one segment.'
+}
+
+Table projection_member [headercolor: #2a7f62] {
+  segment_version_id int [ref: > segment_version.id, note: 'a version of the PROJECTION']
+  slot_id int [ref: > slot.id]
+  position int
+  member_segment_id int [ref: > segment.id, note: 'points at the member segment, not at one version of it']
+  indexes { (segment_version_id, slot_id, position) [pk] }
+  Note: '2.6. Chapters, parts, volumes, the canonical projection. Projections of projections to any depth.'
+}
+
+Table ordering_exception [headercolor: #2a7f62] {
+  id int [pk]
+  projection_segment_id int [ref: > segment.id]
+  earlier_segment_id int [ref: > segment.id]
+  depends_on_later_segment_id int [ref: > segment.id]
+  reason text
+  decided_by_act_id int [ref: > act.id]
+  Note: '2.6. A projection order that disagrees with dependency order on purpose, as a decision with its reason.'
+}
+
+// ───────────────────── 3. recorded (the log; append-only) ─────────────────────
+
+Table actor [headercolor: #b5651d] {
+  id int [pk]
+  harness_key varchar [unique, note: 'read from the harness, never typed (3.5)']
+  parent_actor_id int [ref: > actor.id]
+  model_family varchar [note: 'bears on whether two checks are independent (3.2, open)']
+  is_steward boolean [note: 'OPEN: how "it was Joseph" is attested does not exist yet']
+}
+
+Table steady_state [headercolor: #b5651d] {
+  id int [pk]
+  seq int [unique, note: 'S0, S1, S2 ... steady time']
+  produced_by_atomic_changeset_id int [ref: - atomic_changeset.id]
+  log_seq bigint [note: 'the point in the log this state is "as of"']
+  Note: '3.1. A state the store has actually rested in.'
+}
+
+Table atomic_changeset [headercolor: #b5651d] {
+  id int [pk]
+  from_steady_state_id int [ref: > steady_state.id, note: 'the steady state it started from']
+  status atomic_changeset_status
+  perturbation_act_id int [ref: > act.id, note: 'when the perturbation was an act, e.g. a finding']
+  perturbation_changeset_id int [ref: > segment_changeset.id, note: 'when it was a segment changeset']
+  opened_at timestamp
+  completed_at timestamp
+  Note: '''
+  4.3. Everything that takes the store from one steady state to the next.
+  While in_progress it has a WORKING STATE: from_steady_state plus what is staged in it.
+  OPEN: several can be in_progress at once; what happens when they overlap is undecided (3.1).
+  '''
+}
+
+Table segment_changeset [headercolor: #b5651d] {
+  id int [pk]
+  atomic_changeset_id int [ref: > atomic_changeset.id]
+  segment_id int [ref: > segment.id, note: 'exactly one segment']
+  author_actor_id int [ref: > actor.id]
+  log_seq bigint [unique, note: 'work time: order in the log']
+  staged_at timestamp
+  superseded_by_changeset_id int [ref: > segment_changeset.id, note: 'a later changeset to the same segment in the same atomic changeset; only the last reaches the steady state']
+  Note: '4.1. A whole new written state of one segment. No order among the changes inside it.'
+}
+
+Table act [headercolor: #b5651d] {
+  id int [pk]
+  atomic_changeset_id int [ref: > atomic_changeset.id, note: 'the move it belongs to; an act alone is an atomic changeset of size one']
+  in_segment_changeset_id int [ref: > segment_changeset.id, note: 'only for an affirmation, which travels inside a changeset']
+  act_type act_type
+  move_id int [ref: > move.id, note: 'which declared move this act performs, if any']
+  actor_id int [ref: > actor.id]
+  against_steady_state_id int [ref: > steady_state.id, note: 'set when performed against a steady state; null means against the working state of its atomic changeset']
+  log_seq bigint [unique]
+  performed_at timestamp [note: 'two clocks: when it was done']
+  recorded_at timestamp [note: '... and when it was recorded']
+  criterion text
+  criterion_fixed_before_result boolean [note: 'a check counts only if true (3.2)']
+  outcome text
+  expires_at timestamp [note: 'for a decision about where effort goes']
+  Note: '3.1. One recorded thing an actor did against a state. Never a change of what is written.'
+}
+
+Table act_read [headercolor: #b5651d] {
+  id int [pk]
+  act_id int [ref: > act.id]
+  veritoid_version_id int [ref: > veritoid_version.id, note: 'bound to written content at a version, or ...']
+  segment_version_id int [ref: > segment_version.id, note: '... to a whole segment as written, or ...']
+  relied_on_veritoid_id int [ref: > veritoid.id, note: '... to a VALUE: this veritoid ...']
+  relied_on_segment_id int [ref: > segment.id, note: '... or this segment ...']
+  relied_on_dimension_id int [ref: > dimension.id]
+  relied_on_at_least_rung_id int [ref: > rung.id, note: '... being at least here on this dimension']
+  Note: '''
+  What an act BINDS to: exactly what it read. One act, many rows, across any number of segments.
+  The act no longer binds when any row's target is no longer what the state contains.
+  '''
+}
+
+Table act_seeded_by [headercolor: #b5651d] {
+  act_id int [ref: > act.id]
+  seeded_by_act_id int [ref: > act.id]
+  indexes { (act_id, seeded_by_act_id) [pk] }
+  Note: '3.2. Recorded descent, so that two lines sharing a source count once.'
+}
+
+// ───────────────────── 4. intake ─────────────────────
+
+Table source [headercolor: #3b6ea5] {
+  id int [pk]
+  origin text [note: 'a paper, an audit, a spike, an old ASF file, a transcript; or a note written straight into an inbox']
+  brought_in_by_actor_id int [ref: > actor.id]
+  brought_in_at timestamp
+  fully_cut boolean [note: 'chunks must cover the whole source']
+  Note: 'Part 5. Retired when fully cut and every chunk has a final crossing.'
+}
+
+Table source_reading [headercolor: #3b6ea5] {
+  id int [pk]
+  source_id int [ref: > source.id]
+  actor_id int [ref: > actor.id]
+  extent text [note: 'how much of it, at which version']
+  Note: 'Who has read which source, and how far. "Unread" is a query.'
+}
+
+Table chunk [headercolor: #3b6ea5] {
+  id int [pk]
+  source_id int [ref: > source.id]
+  span text
+  content text
+}
+
+Table crossing [headercolor: #3b6ea5] {
+  act_id int [pk, ref: - act.id, note: 'a crossing is an act']
+  chunk_id int [ref: > chunk.id]
+  outcome crossing_outcome
+  is_current boolean [note: 'at most one current crossing per chunk; a re-crossing replaces it']
+  target_veritoid_id int [ref: > veritoid.id]
+  target_segment_id int [ref: > segment.id]
+  delivered_to_store varchar
+}
+
+Table inbox_item [headercolor: #3b6ea5] {
+  id int [pk]
+  segment_id int [ref: > segment.id, note: 'every segment has one inbox']
+  chunk_id int [ref: - chunk.id]
+  added_by_actor_id int [ref: > actor.id]
+  added_at timestamp
+  Note: 'Part 5. NOT part of the segment\'s written state: no segment_version points here, so adding or emptying never makes the segment look changed.'
+}
+
+// ───────────────────── 5. computed (never written; queries, shown as tables) ─────────────────────
+
+Table value [headercolor: #999999] {
+  veritoid_id int [ref: > veritoid.id, note: 'the subject is a veritoid ...']
+  segment_id int [ref: > segment.id, note: '... or a segment']
+  dimension_id int [ref: > dimension.id]
+  as_of_log_seq bigint [note: 'every value is "as of a state"']
+  rung_id int [ref: > rung.id, note: 'position, or the judged label']
+  credence float [note: 'for a truth claim: P(true)']
+  spread text [note: 'for a judged value: the distribution over the scale']
+  Note: 'COMPUTED from acts that still bind. Never typed. One per subject per open dimension per state.'
+}
+
+Table reference_status [headercolor: #999999] {
+  reference_id int [ref: - reference.id]
+  as_of_log_seq bigint
+  target_exists boolean
+  target_changed_since_checked boolean
+  target_at_required_level boolean
+  Note: 'COMPUTED. Whether a written pointer still holds.'
+}
+
+Table attribute_reading [headercolor: #999999] {
+  veritoid_id int [ref: > veritoid.id]
+  segment_id int [ref: > segment.id]
+  attribute varchar [note: 'word count, age, recency of change, reach ...']
+  as_of_log_seq bigint
+  reading float
+  Note: 'COMPUTED. A plain measurement with no judgment in it.'
+}
+
+Table owed [headercolor: #999999] {
+  atomic_changeset_id int [ref: > atomic_changeset.id, note: 'the FRONTIER of this move\'s working state is all its owed rows']
+  reason owed_reason
+  veritoid_id int [ref: > veritoid.id]
+  segment_id int [ref: > segment.id]
+  reference_id int [ref: > reference.id]
+  lapsed_act_id int [ref: > act.id]
+  accepted_by_act_id int [ref: > act.id, note: 'written, not computed: an acceptance act lets a steady state hold this']
+  Note: 'COMPUTED (except acceptance). The atomic changeset is complete when no row here is unaccepted.'
+}
+
+Table queue_entry [headercolor: #999999] {
+  move_id int [ref: > move.id]
+  veritoid_id int [ref: > veritoid.id]
+  segment_id int [ref: > segment.id]
+  Note: 'COMPUTED. What is waiting for each move.'
+}
+
+// ───────────────────── groups ─────────────────────
+
+TableGroup definition {
+  definition_version
+  dimension
+  rung
+  veritoid_kind
+  veritoid_kind_dimension
+  reference_kind
+  segment_kind
+  slot
+  inner_dependency
+  segment_dimension
+  move
+  move_mechanism
+}
+
+TableGroup written {
+  segment
+  segment_name
+  segment_version
+  placement
+  projection_member
+  ordering_exception
+  veritoid
+  veritoid_version
+  veritoid_ground
+  veritoid_bound
+  reference
+}
+
+TableGroup recorded {
+  actor
+  steady_state
+  atomic_changeset
+  segment_changeset
+  act
+  act_read
+  act_seeded_by
+}
+
+TableGroup intake {
+  source
+  source_reading
+  chunk
+  crossing
+  inbox_item
+}
+
+TableGroup computed {
+  value
+  reference_status
+  attribute_reading
+  owed
+  queue_entry
+}

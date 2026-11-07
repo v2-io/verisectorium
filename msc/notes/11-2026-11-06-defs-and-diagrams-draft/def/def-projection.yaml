@@ -1,0 +1,49 @@
+term-group: [projection, canonical-projection, orphan]
+status: proposed
+
+intro: |
+  A **PROJECTION** is a @{segment} whose @{slots} hold pointers to other @{segments}, in a chosen order, for a purpose: a chapter, a part, a volume, a reading path, a report. It is a @{segment} in every other respect, with a @{name}, possibly @{veritoids} of its own, and its own @{coherence}. A @{projection} may include other @{projections}, to any depth. The **CANONICAL-PROJECTION** is the one that says this is the work, in this order. An **ORPHAN** is a @{segment} it does not reach and that nothing depends on or is depended on by.
+
+terms:
+  projection:
+    def: A segment whose slots hold pointers to other segments in a chosen order, with its own coherence.
+    pos: noun
+    pl: -s
+    avoid:
+      group: says nothing of order or of the claim that it coheres
+      arrangement: an earlier word that denied it any claim of its own
+      composite: did not separate membership, order and coherence
+      outline: an outline is one rendering of a projection
+      computed summary: two earlier documents used projection for any value computed from the record; that is a value here
+    rels:
+      - {rel: is-a,     to: segment, card: "{1,1}"}
+      - {rel: includes, to: segment, card: "{0,N}", note: in order; a member may itself be a projection}
+    invariants:
+      - It is distinct from the dependency graph. Its order may disagree with dependency order on purpose, and each such exception is a decision with its reason.
+      - Its coherence does not lapse on every change beneath it. Its kind declares what a review of it reads of each member, and only a change to that lapses the review.
+
+  canonical-projection:
+    def: The projection that says this is the work, in this order.
+    pos: noun
+    pl: -s
+    rels:
+      - {rel: is-a, to: projection, card: "{1,1}"}
+    invariants:
+      - Every verisectorium so far has ended up with at least one.
+
+  orphan:
+    def: A segment that the canonical projection does not include, directly or through other projections, and that has no predicated-on reference into or out of it.
+    pos: noun
+    pl: -s
+    invariants:
+      - Orphans are allowed. How many there are, and what they hold, is something always worth knowing.
+
+discussion:
+  - The word and this meaning were confirmed by Joseph on 2026-11-05. That a projection is the same sort of thing as a segment is a step he has not confirmed.
+  - Segments into chapters into parts into volumes into one theory, each level needing to cohere, is projections of projections.
+
+examples:
+  - A chapter whose review reads only each member's headline claim and claimed level. A reworded proof step inside a member does not lapse it; a changed headline does.
+
+working-notes:
+  - Provenance. The rule that upward lapse is declared and not automatic is from councils-46's plan.

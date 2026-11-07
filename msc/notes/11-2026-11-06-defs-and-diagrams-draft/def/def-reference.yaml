@@ -1,0 +1,69 @@
+term-group: [reference, reference-kind, predicated-on, dependency-graph, latent-level]
+status: proposed
+
+intro: |
+  A **REFERENCE** is a @{written} pointer from one @{veritoid} to others. Someone declared it, on a date, and it can be wrong. What the @{store} computes about a @{reference} is only whether it still holds. Each @{reference} is of a **REFERENCE-KIND**, and a kind exists only because something treats it differently from the rest. The chief kind is **PREDICATED-ON**: this claim needs those claims. Support travels along it. All the @{predicated-on} @{references} in a @{store} together form the **DEPENDENCY-GRAPH**. A @{reference} may say the level it needs its target to be at. Even when it does not, there is a **LATENT-LEVEL**: nothing can be better supported than what it rests on.
+
+terms:
+  reference:
+    def: A written pointer from one veritoid to others, of a declared kind.
+    pos: noun
+    pl: -s
+    synonyms: [pointer]
+    avoid:
+      edge: suggests an object apart from the veritoid that wrote it
+      depends: the ASF frontmatter word pointed whole segments at whole segments
+    rels:
+      - {rel: from,    to: veritoid,       card: "{1,1}"}
+      - {rel: of-kind, to: reference-kind, card: "{1,1}"}
+      - {rel: to,      to: veritoid,       card: "{0,N}", note: how many it expects is written with it}
+      - {rel: needs,   to: rung,           card: "{0,1}", note: the level it needs its target to be at, when it says}
+    invariants:
+      - It points at the specific veritoid relied on, not at that veritoid's whole segment.
+      - It says how many targets it expects. That gives a miss its meaning. Needs exactly one and found none is a defect; any number and found none is just the answer.
+      - It is written. Whether it holds is computed. Does the target exist, has the target changed since this was last checked against it, is the target at the level needed.
+
+  reference-kind:
+    def: A declared kind of reference, saying what passes along it.
+    pos: noun
+    pl: -s
+    invariants:
+      - It earns its place only when something routes it differently from the others.
+
+  predicated-on:
+    def: The reference kind along which support travels, where this claim needs those claims.
+    pos: adjective
+    synonyms: [rests on]
+    avoid:
+      supports: reads in the opposite direction and has been used both ways
+    invariants:
+      - It is free of cycles. A cycle found means something was cut too coarsely.
+      - It is not the same as appearing earlier in a projection's order.
+
+  dependency-graph:
+    def: All the predicated-on references in a store, taken together.
+    pos: noun
+    pl: -s
+    avoid:
+      outline: an outline is a projection, which is a different structure
+    invariants:
+      - It has no cycles.
+      - It runs between veritoids. A segment's dependence on other segments is a roll-up of it, a fair convenience and not the real graph.
+
+  latent-level:
+    def: The limit a premise's level puts on everything predicated on it, whether or not anyone wrote that level down.
+    pos: noun
+    pl: -s
+    invariants:
+      - When a premise drops, everything downstream is asked whether it can still claim what it claims.
+
+discussion:
+  - Joseph described the main case as an array dimension from a claim atom to those other instances' claim atoms. Here the targets are kept as written and only does it hold is computed. That is a choice he has not confirmed.
+  - An introduction can rest on another segment's explanation for an eight-year-old and not on its formal claim.
+
+examples:
+  - Reference kinds and what passes along each. Predicated-on passes support and limits on level. Narrates (teaching, intros, headlines) passes staleness only. Restates means the two must agree. Seeded-by means two checks are not independent. Supersedes says which one is current.
+
+working-notes:
+  - Left open. Whether a reference to a veritoid survives that veritoid being split, merged or promoted. See the recut group.
+  - Left open by Joseph. How a level requirement composes, which probably depends on the kind of ladder.

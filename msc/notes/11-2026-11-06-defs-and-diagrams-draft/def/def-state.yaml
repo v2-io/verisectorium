@@ -1,0 +1,62 @@
+term-group: [log, state, steady-state, working-state, steady-time, work-time]
+status: proposed
+
+intro: |
+  Everything that happens to a @{store} is recorded in its **LOG**, which is only ever added to. A **STATE** is the @{store} as of a point in the @{log}. A **STEADY-STATE** is a @{state} the @{store} has actually rested in. Between one @{steady-state} and the next there may be a **WORKING-STATE**: the last @{steady-state} plus what has been staged so far. There are two kinds of time and they are kept apart. **STEADY-TIME** is the sequence of @{steady-states}, each move between them happening at one instant, logically. **WORK-TIME** is the hours and days in which minds put such a move together.
+
+terms:
+  log:
+    def: Everything recorded about a store, in order, and only ever added to.
+    pos: noun
+    pl: -s
+    avoid:
+      trail: an earlier model kept a separate trail per record, which left no place for an act that spans several
+    rels:
+      - {rel: of, to: store, card: "{1,1}"}
+    invariants:
+      - Corrections are added beneath; nothing is overwritten.
+
+  state:
+    def: The store as of a point in the log.
+    pos: noun
+    pl: -s
+    rels:
+      - {rel: at-a-point-in, to: log, card: "{1,1}"}
+    invariants:
+      - It is more than which content is current. It includes how segments are assembled, which version of the definition is in force, and what has been recorded as done.
+      - Nothing moves a value silently. When something outside changes, such as a simulator's version or a date a rule cares about, that is recorded at a definite moment.
+
+  steady-state:
+    def: A state the store has rested in, with nothing known inconsistent beyond what has been explicitly accepted.
+    pos: noun
+    pl: -s
+    synonyms: [stable state]
+    rels:
+      - {rel: is-a,        to: state,            card: "{1,1}"}
+      - {rel: produced-by, to: atomic-changeset, card: "{0,1}", note: none for the first}
+
+  working-state:
+    def: The last steady state plus what one atomic changeset in progress has staged.
+    pos: noun
+    pl: -s
+    rels:
+      - {rel: is-a,       to: state,            card: "{1,1}"}
+      - {rel: belongs-to, to: atomic-changeset, card: "{1,1}"}
+    invariants:
+      - It is never the work itself. No reader is told it is the theory.
+
+  steady-time:
+    def: The sequence of steady states, in which each move from one to the next happens at one instant.
+    pos: noun
+
+  work-time:
+    def: The hours and days, with their order and clock times and actors, in which a move is put together.
+    pos: noun
+
+discussion:
+  - Joseph's phrase for the first is simultaneously, logically speaking, and for the second practical sequence.
+  - The August model had a flat list of events each about one record. Its own field trial found the gap. In a flat list, the claim changed and the description was brought into line are two events with a gap between them, and in that gap the store holds something nobody meant.
+
+working-notes:
+  - Left open by Joseph on purpose. More than one atomic changeset can be in progress at once, each with its own working state. What happens when two touch the same things, and whether two that were each completed combine into something steady, is not answered.
+  - Left open. How working states are stored and checkpointed. A branch that merges is one way to meet the need, not the design.

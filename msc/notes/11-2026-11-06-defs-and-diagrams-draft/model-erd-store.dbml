@@ -1,0 +1,70 @@
+// model-erd-store.dbml
+// JUST the store, at rest: what one steady state contains.
+// No history, no versions, no changesets, no acts, no intake.
+// For Joseph, 2026-11-06. Not a storage design. Section numbers refer to model-and-lexicon.md.
+//
+// Kinds, slots, dimensions and reference kinds are DECLARED elsewhere
+// (model-erd-definition.dbml). Here they appear only as names in grey-noted columns.
+
+Project v2_store_at_rest {
+  database_type: 'PostgreSQL'
+  Note: 'The v2 store at one steady state. Seven tables. The last one is computed, never written.'
+}
+
+Table segment [headercolor: #2a7f62] {
+  id int [pk]
+  segment_kind varchar [note: 'declared in the definition: derived-result, definition, chapter ...']
+  Note: '2.3. A named, ordered assembly of veritoids. The unit of naming, of writing, of whole review.'
+}
+
+Table segment_name [headercolor: #2a7f62] {
+  name varchar [pk]
+  segment_id int [ref: > segment.id]
+  is_current boolean [note: 'one current name per segment; old names keep resolving']
+  Note: '2.4. A label the store keeps bound to a segment.'
+}
+
+Table veritoid [headercolor: #2a7f62] {
+  id int [pk, note: 'OPEN: whether a veritoid has an identity of its own, or is only "segment + slot + position" (2.4)']
+  veritoid_kind varchar [note: 'declared in the definition: claim, proof-step, explanation ...']
+  segment_id int [ref: > segment.id, note: 'sits in exactly one segment ...']
+  slot varchar [note: '... in exactly one of its kind\'s slots ...']
+  position int [note: '... at this place, when the slot holds several']
+  content text
+  ground varchar [note: 'what the author says it can be supported by; opens its evidence dimensions (2.2)']
+  claimed_level varchar [note: 'what it asserts of its own support: theorem, conditional, hypothesis ... (2.2)']
+  Note: '2.1. A piece of content of a declared kind. Everything in this table is written by an author.'
+}
+
+Table reference [headercolor: #2a7f62] {
+  id int [pk]
+  from_veritoid_id int [ref: > veritoid.id]
+  reference_kind varchar [note: 'predicated-on, narrates, restates, seeded-by, supersedes']
+  to_veritoid_id int [ref: > veritoid.id, note: 'the specific veritoid relied on, not its whole segment']
+  at_least_level varchar [note: 'optional: "I need this at a level"']
+  Note: '2.5. A written pointer. All predicated-on rows together are the dependency graph (no cycles).'
+}
+
+Table projection_member [headercolor: #2a7f62] {
+  projection_segment_id int [ref: > segment.id, note: 'a segment whose kind is a projection: chapter, part, volume, the canonical projection']
+  position int [note: 'the chosen order']
+  member_segment_id int [ref: > segment.id, note: 'may itself be a projection']
+  indexes { (projection_segment_id, position) [pk] }
+  Note: '2.6. Chosen groupings with an order. Distinct from the dependency graph.'
+}
+
+Table inbox_item [headercolor: #3b6ea5] {
+  id int [pk]
+  segment_id int [ref: > segment.id]
+  note text
+  Note: 'Part 5. Each segment\'s intake. Not part of what the segment says. (Shown here only because it sits beside the segment at rest.)'
+}
+
+Table value [headercolor: #999999] {
+  veritoid_id int [ref: > veritoid.id, note: 'the subject is a veritoid ...']
+  segment_id int [ref: > segment.id, note: '... or a segment (aliased, derived or own, e.g. coherence)']
+  dimension varchar [note: 'declared in the definition']
+  value varchar [note: 'a rung, a label, or a number']
+  how_sure varchar [note: 'kept apart from the value: a probability, or a spread over the scale']
+  Note: 'COMPUTED, never written. One per subject per open dimension. Shown so the picture has somewhere for dimensions to attach.'
+}

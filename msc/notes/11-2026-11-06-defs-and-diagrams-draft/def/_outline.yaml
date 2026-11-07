@@ -1,0 +1,18 @@
+# Reading order of the definition groups. Each leans only on those before it.
+- def-verisectorium
+- def-veritoid
+- def-dimension
+- def-value
+- def-written
+- def-segment
+- def-name
+- def-reference
+- def-premise-change
+- def-projection
+- def-recut
+- def-rendering
+- def-state
+- def-act
+- def-changeset
+- def-move
+- def-intake

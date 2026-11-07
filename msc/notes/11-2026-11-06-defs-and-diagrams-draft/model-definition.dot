@@ -1,0 +1,94 @@
+// model-definition.dot
+// The definition of one verisectorium: what it declares about itself. It holds no content.
+// For Joseph, 2026-11-06. Accompanies model-and-lexicon.md. Not a storage design.
+//
+// Conventions:
+//   - Keys and ids are implicit. A box lists only what the thing itself carries.
+//   - A number at an end of a line says how many of the box AT THAT END go with one of the box at the other end.
+//   - A rounded box is a relationship that carries attributes of its own.
+//
+// Render:  dot -Tsvg model-definition.dot -o model-definition.svg
+
+digraph definition {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=11, nodesep=0.7, ranksep=0.9, labelloc=t,
+         label=<<b>The definition of one verisectorium</b><br/><font point-size="9">A number at one end of a line: how many of the box at that end go with one of the box at the other end.</font>>];
+  node  [fontname="Helvetica", fontsize=10, shape=plain];
+  edge  [fontname="Helvetica", fontsize=9, labelfontsize=10, labelfontname="Helvetica-Bold", labeldistance=1.8, arrowhead=none, color="#444444"];
+
+  SegmentKind [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" bgcolor="#efeaf3">
+      <tr><td bgcolor="#6c5b7b"><font color="white"><b>Segment kind</b></font></td></tr>
+      <tr><td align="left">name<br align="left"/>is it a projection?<br align="left"/></td></tr>
+    </table>>];
+
+  Slot [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" bgcolor="#efeaf3">
+      <tr><td bgcolor="#6c5b7b"><font color="white"><b>Slot</b></font></td></tr>
+      <tr><td align="left">name<br align="left"/>order among the slots<br align="left"/>required?<br align="left"/>how many: one / at most one / any number<br align="left"/><font color="#666666">in a projection kind: holds pointers to segments,<br align="left"/>and says what a review reads of each member</font><br align="left"/></td></tr>
+    </table>>];
+
+  VeritoidKind [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" bgcolor="#efeaf3">
+      <tr><td bgcolor="#6c5b7b"><font color="white"><b>Veritoid kind</b></font></td></tr>
+      <tr><td align="left">name<br align="left"/>form of the content<br align="left"/>which bounds it carries<br align="left"/></td></tr>
+    </table>>];
+
+  Dimension [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" bgcolor="#efeaf3">
+      <tr><td bgcolor="#6c5b7b"><font color="white"><b>Dimension</b></font></td></tr>
+      <tr><td align="left">name<br align="left"/>the question it asks<br align="left"/>sustained by: evidence / decision / attestation / a mix<br align="left"/>scale: ladder / unordered set / number<br align="left"/></td></tr>
+    </table>>];
+
+  Rung [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" bgcolor="#efeaf3">
+      <tr><td bgcolor="#6c5b7b"><font color="white"><b>Rung</b></font></td></tr>
+      <tr><td align="left">name<br align="left"/>place on the ladder<br align="left"/></td></tr>
+    </table>>];
+
+  ReferenceKind [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" bgcolor="#efeaf3">
+      <tr><td bgcolor="#6c5b7b"><font color="white"><b>Reference kind</b></font></td></tr>
+      <tr><td align="left">name<br align="left"/>what passes along it<br align="left"/>must it be free of cycles?<br align="left"/></td></tr>
+    </table>>];
+
+  Move [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" bgcolor="#efeaf3">
+      <tr><td bgcolor="#6c5b7b"><font color="white"><b>Move</b></font></td></tr>
+      <tr><td align="left">name<br align="left"/>what must be true first<br align="left"/>who has standing<br align="left"/></td></tr>
+    </table>>];
+
+  Allows [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#f7f4fa">
+      <tr><td><b>allows</b></td></tr>
+      <tr><td align="left">opened by which ground<br align="left"/></td></tr>
+    </table>>];
+
+  SegmentDimension [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#f7f4fa">
+      <tr><td><b>the segment's own value on</b></td></tr>
+      <tr><td align="left">how it is got: aliased / derived / own<br align="left"/>the rule, when derived<br align="left"/></td></tr>
+    </table>>];
+
+  // segment kinds and their slots
+  SegmentKind -> Slot [taillabel="1", headlabel="1..N", label="  declares, in order"];
+  Slot -> VeritoidKind [taillabel="0..N", headlabel="0..1", label="  is filled by veritoids of\n  (none, in a projection kind)", arrowhead=normal];
+  Slot -> Slot [taillabel="0..N", headlabel="0..N", label="  depends on\n  (within one segment kind)", arrowhead=normal];
+
+  // what can be asked of a veritoid
+  VeritoidKind -> Allows [taillabel="1", headlabel="1..N"];
+  Allows -> Dimension    [taillabel="0..N", headlabel="1", arrowhead=normal];
+  Dimension -> Rung [taillabel="1", headlabel="0..N", label="  has, when its scale is a ladder or a set"];
+
+  // which pointers a veritoid kind may hold
+  VeritoidKind -> ReferenceKind [taillabel="0..N", headlabel="0..N", label="  may hold"];
+
+  // what can be asked of a segment as a whole
+  SegmentKind -> SegmentDimension [taillabel="1", headlabel="0..N"];
+  SegmentDimension -> Dimension   [taillabel="0..N", headlabel="1", arrowhead=normal];
+  SegmentDimension -> Slot        [taillabel="0..N", headlabel="0..1", label="  when aliased:\n  the veritoid in", arrowhead=normal, style=dotted];
+
+  // moves
+  Move -> Dimension    [taillabel="0..N", headlabel="1", label="  changes", arrowhead=normal];
+  Move -> VeritoidKind [taillabel="0..N", headlabel="0..1", label="  on a veritoid of", arrowhead=normal];
+  Move -> SegmentKind  [taillabel="0..N", headlabel="0..1", label="  or on a segment of", arrowhead=normal];
+}

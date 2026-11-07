@@ -1,0 +1,24 @@
+term-group: [rendering]
+status: proposed
+
+intro: |
+  A **RENDERING** is text produced from the @{store} for someone to read: a file, a page, a dashboard, the view put in front of an agent about to write. It is never the thing itself.
+
+terms:
+  rendering:
+    def: Text produced from the store for a reader, as of a state.
+    pos: noun
+    pl: -s
+    synonyms: [view]
+    avoid:
+      manifestation: an earlier word for the same; rendering says it is produced
+      document: has meant both a segment and a file
+      projection: a projection is a chosen grouping in the store, not produced text
+    rels:
+      - {rel: as-of, to: state, card: "{1,1}"}
+    invariants:
+      - A value shown in a rendering is a snapshot with a state on it, never a standing fact.
+      - Nobody edits a rendering to change the store.
+
+discussion:
+  - This is where a tension Joseph named is resolved. What to get in front of an agent that is a whole enough picture, against the independence of the parts. Segments can be as small as truth requires and what is shown can be as wide as the work requires, because the file is not the unit.

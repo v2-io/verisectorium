@@ -1,0 +1,50 @@
+term-group: [verisectorium, store, definition]
+status: proposed
+
+intro: |
+  A **VERISECTORIUM** is a body of written work that is never finished, that is worked on by many minds who each arrive knowing nothing about it, and in which every piece says honestly how well it is supported. A **STORE** is one @{verisectorium}'s contents as the engine holds them. A @{store} is governed by its **DEFINITION**: the declared kinds of thing it may hold, the questions that may be asked of each, and the ways an answer may change. The @{definition} holds no content of its own.
+
+terms:
+  verisectorium:
+    def: A living body of written work whose pieces carry their own honest support.
+    pos: noun
+    pl: verisectoria
+
+  store:
+    def: One verisectorium's contents as the engine holds them.
+    pos: noun
+    pl: -s
+    avoid:
+      repository: a store is not a git repository, and where it is kept is undecided
+      directory: a store is not a tree of files; files are renderings of it
+    rels:
+      - {rel: governed-by, to: definition, card: "{1,1}"}
+      - {rel: holds,       to: segment,    card: "{0,N}"}
+      - {rel: recorded-in, to: log,        card: "{1,1}"}
+    invariants:
+      - Nothing in it is changed by hand. Every change goes through the engine.
+
+  definition:
+    def: The declared kinds, dimensions, reference kinds and moves of one store.
+    pos: noun
+    pl: -s
+    synonyms: [system definition]
+    avoid:
+      system model: that phrase was used for a flow sketch that declared no dimensions
+      template: in the verisectorium plan a template is the seed a new store is initialized from
+    rels:
+      - {rel: declares, to: veritoid-kind,  card: "{1,N}"}
+      - {rel: declares, to: segment-kind,   card: "{1,N}"}
+      - {rel: declares, to: dimension,      card: "{1,N}"}
+      - {rel: declares, to: reference-kind, card: "{0,N}"}
+      - {rel: declares, to: move,           card: "{0,N}"}
+    invariants:
+      - It has versions. Each veritoid and segment follows one version of its kind.
+      - It is written by hand for now. Holding the definition itself as content of a store is deferred.
+
+discussion:
+  - The engine is called v2. It is not a term of the model.
+  - The three sprint failures this model must make impossible or visible are that nobody could see what influx had been looked at, that checks and fixes fed each other, and that no source was ever retired.
+
+working-notes:
+  - Left open on purpose. How a definition changes over time, from cheap and reversible to changes that alter what steady can mean (model-and-lexicon 4.6).

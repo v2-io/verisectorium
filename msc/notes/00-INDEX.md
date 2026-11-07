@@ -1,0 +1,36 @@
+# Working notes on the verisectorium model, in the order they were written
+
+*The files here are frozen copies of working documents from `~/src/aat-v3/preparations/` (and one from this repo's top level), renamed into one sequence on 2026-11-06. They are influx to `core/`, not part of it. The originals stay in aat-v3 under their old names for history; the copies here are the ones to cite from now on. Nothing in a copy was changed. Material about ASF as material (the sprint record, the label census, the missed-error case, Line A) stays in aat-v3 and is pointed at below.*
+
+*A note that has been fully superseded moves to `.archive/`. None has yet: each later file corrects the earlier ones only in part, and the index says which part.*
+
+| # | Created (local; first commit, or file birth where uncommitted) | File | What it is | Superseded in part by |
+|---|---|---|---|---|
+| 01 | 11-04 (written 11-04; committed 11-05 16:17) | `scratch-for-joseph` | councils-46's write-up for Joseph: the five-step plan, the compiler stages, the four layout-bound segments re-cut, and (§7) the first dialog model: claimed vs established, four decision kinds, aspects/attributes/graduation, episodes and the breaker | 02 folds it in; 05–06 replace its unit of fate with atoms and templates |
+| 02 | 11-04 19:25 | `plan` | PLAN.md: the model as of 11-04 (A0–A8), who owns what, steps, assumptions. Part A is mostly superseded; Parts B–D (ownership, steps, the monotone-rule assumption and its counterweight) are still the only written plan | 05–06 on units; 09 on time and change; 12 on what a claim is; 14 on provisional rows |
+| 03 | 11-05 13:41 | `plan-appendix-a` | first candidate kind list for AAT, marked not yet provisional | 04, 09, 12 |
+| 04 | 11-05 13:54 | `appendix-a-feedback-1` | a fresh Fable agent's feedback on 03, grounded in ASF's files: five label surfaces, Working Notes as three things, the write-back failure, the station table, missing kinds. Joseph: "not as well informed as it seems at first glance" (its record = (kind, dimensions, shape, edges) is the model he rejected at 05 21:52Z); its measurements stand | 05 |
+| 05 | 11-05 16:11 | `building-blocks-dialog` | Joseph and councils-46, verbatim: atoms, templates, instances; the instance-isolated and atomic changesets; the honest intermediate; the known-defect mark; canonical grouping; the punted union question | — (primary) |
+| 06 | 11-05 16:12 | `model-building-blocks` | where 05 landed, as a model; terminology locally scoped. Three places it reads councils-46's inference as settled: atom as "unit of fate"; validity/coherence split; two slot-filling cases (see 08, file 07) | 09 |
+| 07 | 11-05 16:15 | `brief-reconciliation-1` | the brief that asked for a reconciliation of 02–04 into 06. The reconciliation was never written; the model moved first | — |
+| 08 | 11-05 18:09–20:22 | `reading-notes-fable/` | the Fable session's experiential reading of 01–06, ASF first-hand, RC1 whole (file 09), Joseph's replies (file 08), and the two earlier versions of 09 (files 11, 12). The RC1 take/leave list is in file 09 | — |
+| 09 | 11-05 19:09 | `model-and-lexicon` | the Fable session's full synthesis: veritoid, segment, dimension, value, reference, projection, two times, three recorded things, intake, lexicon, open items. Pedagogy praised by Joseph. Its value group (2.2) is contradictory (see 12 addendum and 15) | 12, 13, 14, 15 |
+| 10 | 11-05 20:17 | `model-and-lexicon-denovo-1` | a cold review of 09 by a fresh Opus 5.5 agent; most findings were worked into 09 | — |
+| 11 | 11-06 11:07 | `defs-and-diagrams-draft/` | 09 restated as 17 YAML definition groups in the address-theory entry form, with `bin/defs` (check, dot, overview, terms) and the dot/dbml pictures. Form approved by Joseph; content partly superseded, the value group known wrong | 12, 13, 14, 15; `core/def/` as each group is adjudicated |
+| 12 | 11-06 13:32 | `thoughts-math-heavy-model` | the claim as the thing needing structure (context, hypotheses, conclusion, derivation); strength as entailment; a dependency as a use; the one-word status as a computed display. Addendum: Joseph on why the claim is central and on the two regimes | — |
+| 13 | 11-06 14:04 | `thoughts-dsl` | core / pattern library / short store definitions; "every piece of content answers to something"; sketches for seven kinds of store; the Ash/Rowan lead. Joseph: "an excellent, superb higher-level abstraction" | — |
+| 14 | 11-06 14:40 | `joseph-on-provisional-promised-gaps` | Joseph verbatim: provisional, promised and present rows; gaps as a segment kind; the inbox in the core; one canonical projection always; the store true at its steady states | — (primary) |
+| 15 | 11-06 14:40 | `handoff-fable` | the Fable session's handoff: reading order, what is settled, what in 09/11 is known wrong, what is open. Stale in two places: the work was committed (`281ac5e`, `72eac51`); and the outline-as-provisional-skeleton was the session's own inference from 14, not Joseph's answer | — |
+| 16 | 11-06 14:49 | `unasked-questions` | Joseph's last question to that session and the eleven questions it answered with, carved from the transcript; never on disk before | — |
+
+## Still only in transcripts or elsewhere
+
+- **The value exchange (11-06, 12:15–12:30 local):** Joseph's "this is the very heart of all of verisectorium"; the session's three-part principle (what is claimed / what has been done / what is thereby warranted) and its retraction of "the store computes what is warranted"; Joseph's "I may have introduced WoE and numeric truth values prematurely … it is almost all an act+judgment machine". Partly carried in 12's addendum and 15. Session `92e38652`.
+- **Joseph's own messages, 2026-10-28 to 11-05:** `~/src/aat-v3/preparations/research/joseph-messages-2026-10-28--11-05.md`, local only, gitignored there; his messages after 11-05 19:04 are in `~/.claude/history.jsonl`.
+- **The councils dialog up to the kernel draft:** `~/src/aat-v3/preparations/foundations/research/dialog-for-kernel-2026-11-04.md`. Left there: it names the ELI council and has never been public.
+
+## Stays in aat-v3 (about ASF as material)
+
+- `preparations/research/asf-inline-labels-2026-11-06.{md,tsv}`: all 790 inline labels and what they carry; the 62 Epistemic Status sections read.
+- `preparations/research/missed-error-case-2026-11-06.md`: the stopped bound, who passed it, how it was found.
+- `preparations/asf-sprint-2026-10/`, `line-a/`, `foundations/`, `asf-earlier-vsect/`, `asf-system/`, `verisectorium-review/`.

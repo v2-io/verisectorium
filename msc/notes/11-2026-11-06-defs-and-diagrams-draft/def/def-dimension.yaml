@@ -1,0 +1,59 @@
+term-group: [dimension, scale, ladder, rung]
+status: proposed
+
+intro: |
+  A **DIMENSION** is one question that can be asked about a @{veritoid} or a @{segment} and answered independently of every other question. Is it true by derivation? Who stands behind this choice? Is it still current? Does a reader come away understanding it? Each @{dimension} has a **SCALE**, the answers it can take. A @{scale} that is ordered is a **LADDER**, and its steps are **RUNG**s.
+
+terms:
+  dimension:
+    def: One independently answerable question about a veritoid or a segment.
+    pos: noun
+    pl: -s
+    synonyms: [epistemic dimension]
+    avoid:
+      aspect: used for the declared question and for one thing's answer to it at once
+      axis: same looseness
+      facet: same looseness
+      namespace: a prefix such as evidence/ in a dimension's name is organization only and carries no rules
+    rels:
+      - {rel: has,           to: scale, card: "{1,1}"}
+      - {rel: sustained-by,  informal: "evidence | decision | attestation | a mix", card: "{1,1}", note: Joseph's sort by what builds and sustains it}
+      - {rel: changed-by,    to: move,  card: "{0,N}"}
+    invariants:
+      - Two things that can move independently never share a dimension.
+      - No dimension's answer ever stands in for another's. Ruled does not make it true; a fine explanation is not support.
+      - It fails by fusion. The tell is a scale whose steps are combinations of two other scales' steps.
+
+  scale:
+    def: The answers a dimension can take, which are an ordered ladder, an unordered set, or a number.
+    pos: noun
+    pl: -s
+    rels:
+      - {rel: of,    to: dimension, card: "{1,1}"}
+      - {rel: steps, to: rung,      card: "{0,N}", note: none when the scale is a number}
+
+  ladder:
+    def: A scale whose steps are ordered.
+    pos: noun
+    pl: -s
+    avoid:
+      status: a typed status word claimed a place on a ladder without anything having put it there
+      stage: same
+
+  rung:
+    def: One step of a ladder, or one member of an unordered scale.
+    pos: noun
+    pl: -s
+    rels:
+      - {rel: "on", to: scale, card: "{1,1}"}
+
+discussion:
+  - A dimension that is sustained by evidence is a truth claim, built by accumulating evidence. One sustained by decision is a choice at a branch point, built by grounds, consultation and someone accountable. One sustained by attestation is asserted and checkable with no chain of evidence kept, and that is where the chain of what supports the support stops.
+  - Importance is a mix and is always importance for something. It joins what rests on this, which is computed, with how much that something matters, which is decided.
+
+examples:
+  - A ladder for derivation with the rungs sketch, drafted, premises checked, independently re-derived.
+  - A ladder for who stands behind a decision with the rungs proposed, supported, ratified, ruled.
+
+working-notes:
+  - Not settled here. Which particular dimensions AAT needs. The August model's list (evidence lines, decision coordinates, fidelity, freshness, comprehension, efficacy, conviction, disposition) is a set of candidates, plus importance and coherence.

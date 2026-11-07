@@ -1,0 +1,97 @@
+// model-store.dot
+// The v2 store at rest: what one steady state contains. No history, changesets, acts or intake.
+// For Joseph, 2026-11-06. Accompanies model-and-lexicon.md. Not a storage design.
+//
+// Conventions:
+//   - Keys and ids are implicit. A box lists only what the thing itself carries.
+//   - A number at an end of a line says how many of the box AT THAT END go with one of the box at the other end.
+//   - Italic grey attributes are names declared in the definition (model-definition.dot).
+//   - A rounded box is a relationship that carries attributes of its own.
+//   - Dashed grey: computed by the store, never written.
+//
+// Render:  dot -Tsvg model-store.dot -o model-store.svg
+
+digraph store {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=11, nodesep=0.7, ranksep=0.9, labelloc=t,
+         label=<<b>The store at rest</b><br/><font point-size="9">A number at one end of a line: how many of the box at that end go with one of the box at the other end.</font>>];
+  node  [fontname="Helvetica", fontsize=10, shape=plain];
+  edge  [fontname="Helvetica", fontsize=9, labelfontsize=10, labelfontname="Helvetica-Bold", labeldistance=1.8, arrowhead=none, color="#444444"];
+
+  Segment [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" bgcolor="#e6f3ee">
+      <tr><td bgcolor="#2a7f62"><font color="white"><b>Segment</b></font></td></tr>
+      <tr><td align="left"><i><font color="#666666">segment kind</font></i></td></tr>
+    </table>>];
+
+  Name [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" bgcolor="#e6f3ee">
+      <tr><td bgcolor="#2a7f62"><font color="white"><b>Name</b></font></td></tr>
+      <tr><td align="left">text<br align="left"/>current, or an old name<br align="left"/></td></tr>
+    </table>>];
+
+  Veritoid [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" bgcolor="#e6f3ee">
+      <tr><td bgcolor="#2a7f62"><font color="white"><b>Veritoid</b></font></td></tr>
+      <tr><td align="left"><i><font color="#666666">veritoid kind</font></i><br align="left"/>content<br align="left"/>ground<br align="left"/>claimed level<br align="left"/></td></tr>
+    </table>>];
+
+  Placement [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#f4faf7">
+      <tr><td><b>sits in</b></td></tr>
+      <tr><td align="left"><i><font color="#666666">slot</font></i><br align="left"/>position in the slot<br align="left"/></td></tr>
+    </table>>];
+
+  Reference [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#f4faf7">
+      <tr><td><b>Reference</b> (a written pointer)</td></tr>
+      <tr><td align="left"><i><font color="#666666">reference kind</font></i><br align="left"/>how many targets it expects<br align="left"/>needs target at least at level … (optional)<br align="left"/><font color="#888888">does it still hold? (computed)</font><br align="left"/></td></tr>
+    </table>>];
+
+  Membership [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#f4faf7">
+      <tr><td><b>includes</b> (projections only)</td></tr>
+      <tr><td align="left">position in the chosen order<br align="left"/></td></tr>
+    </table>>];
+
+  InboxItem [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" bgcolor="#e8eef6">
+      <tr><td bgcolor="#3b6ea5"><font color="white"><b>Inbox item</b></font></td></tr>
+      <tr><td align="left">a chunk: a note, or a piece of a source<br align="left"/><font color="#666666">not part of what the segment says</font><br align="left"/></td></tr>
+    </table>>];
+
+  Value [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="dashed" color="#888888" bgcolor="#f2f2f2">
+      <tr><td bgcolor="#999999"><font color="white"><b>Value</b> (computed)</font></td></tr>
+      <tr><td align="left"><i><font color="#666666">dimension</font></i><br align="left"/>value<br align="left"/>how sure<br align="left"/></td></tr>
+    </table>>];
+
+  Attribute [label=<
+    <table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="dashed" color="#888888" bgcolor="#f2f2f2">
+      <tr><td bgcolor="#999999"><font color="white"><b>Attribute</b> (computed)</font></td></tr>
+      <tr><td align="left">which measurement: word count, age, reach …<br align="left"/>reading<br align="left"/></td></tr>
+    </table>>];
+
+  // a segment and its names
+  Segment -> Name [taillabel="1", headlabel="1..N", label="  is known by"];
+
+  // a segment and its veritoids
+  Segment -> Placement  [taillabel="1", headlabel="0..N", label="  has, in its slots"];
+  Placement -> Veritoid [taillabel="1", headlabel="1", label="  holds"];
+
+  // veritoids pointing at veritoids
+  Veritoid -> Reference [taillabel="1", headlabel="0..N", label="  is the source of"];
+  Reference -> Veritoid [taillabel="0..N", headlabel="1", label="  points at", arrowhead=normal];
+
+  // projections: segments that include other segments, in order
+  Segment -> Membership [taillabel="1", headlabel="0..N", label="  as a projection"];
+  Membership -> Segment [taillabel="0..N", headlabel="1", label="  member", arrowhead=normal];
+
+  // the inbox
+  Segment -> InboxItem [taillabel="1", headlabel="0..N", label="  collects"];
+
+  // computed values
+  Veritoid -> Value [taillabel="1", headlabel="0..N", label="  has, per open dimension", style=dashed, color="#888888"];
+  Segment  -> Value [taillabel="1", headlabel="0..N", label="  has: aliased, derived, own", style=dashed, color="#888888"];
+  Veritoid -> Attribute [taillabel="1", headlabel="0..N", label="  measured as", style=dashed, color="#888888"];
+  Segment  -> Attribute [taillabel="1", headlabel="0..N", style=dashed, color="#888888"];
+}

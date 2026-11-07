@@ -1,0 +1,68 @@
+term-group: [value, position, credence, judged-value, attribute]
+status: proposed
+
+intro: |
+  A **VALUE** is the answer one @{veritoid} or @{segment} has on one @{dimension}, as of a state of the @{store}. It is never typed in. It is computed from what has been recorded as done. Every @{value} comes with how sure we are of it, held beside it and never folded into it. A @{value} takes one of three forms. A **POSITION** says what has actually been done. A **CREDENCE** is a truth claim with the probability that it is true. A **JUDGED-VALUE** is a label only judgment can give, with a spread over the @{scale}. Separate from all three is the **ATTRIBUTE**: a plain measurement with no judgment in it.
+
+terms:
+  value:
+    def: The computed answer of one veritoid or segment on one dimension, as of a state, with how sure.
+    pos: noun
+    pl: -s
+    avoid:
+      status: suggests a word someone set
+      label: same
+      standing: an earlier plan used it for all of a thing's values together; here standing means something else
+    rels:
+      - {rel: of,        to: [veritoid, segment], card: "{1,1}"}
+      - {rel: "on",      to: dimension,           card: "{1,1}"}
+      - {rel: as-of,     to: state,               card: "{1,1}"}
+      - {rel: rests-on,  to: act,                 card: "{0,N}", note: the acts that still bind}
+    invariants:
+      - It is computed, never written.
+      - The same recorded things read in any order give the same value.
+      - How sure is kept apart from the value itself.
+      - It fails as a label-lie, a value shown as current whose state has passed.
+
+  position:
+    def: The form of a value that says what has actually been done to the content.
+    pos: noun
+    pl: -s
+    invariants:
+      - It is a fact about the record. Either the acts are there and still bind, or they are not.
+
+  credence:
+    def: The form of a value for a truth claim, the probability that it is true as computed from the evidence.
+    pos: noun
+    pl: -s
+    synonyms: [certainty]
+    invariants:
+      - It is never inferred from a position alone, and never typed.
+      - A checker's own stated confidence is testimony about the checker, not the credence.
+
+  judged-value:
+    def: The form of a value that only judgment can read, held as a spread over its scale and not as a point.
+    pos: noun
+    pl: -s
+    invariants:
+      - On an ordered scale the meaningful statements are cumulative, such as at least high with probability 0.8.
+
+  attribute:
+    def: A plain measurement of a veritoid or segment with no judgment in it.
+    pos: noun
+    pl: -s
+    rels:
+      - {rel: of, to: [veritoid, segment], card: "{1,1}"}
+    invariants:
+      - It is not a dimension and has no warrant beyond its formula and the state it was computed at.
+      - A rule may turn attributes into a value. When the rule fires, that is recorded at a definite moment.
+
+examples:
+  - Position. Independently re-derived, against this exact text.
+  - Credence. 0.93 that the claim is true.
+  - Judged value. Novelty is probably high, possibly medium.
+  - Attribute. Word count, age, how recently changed, how many things point here.
+
+working-notes:
+  - Left open. How much credence a small rewording should cost. Positions drop at once and completely; whether credence should fall all the way is not decided.
+  - Left open. The arithmetic by which credence passes along predicated-on.

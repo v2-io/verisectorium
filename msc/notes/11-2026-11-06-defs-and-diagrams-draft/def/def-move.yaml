@@ -1,0 +1,45 @@
+term-group: [move, queue, mechanism]
+status: proposed
+
+intro: |
+  A **MOVE** is a declared way for a @{value} to change through an @{act}. A kind declares its @{moves}: which @{dimension} each changes, what must be true first, and who has @{standing}. Each @{move} has a **QUEUE** of things waiting for it. A @{queue} is worked by one or more **MECHANISM**s: a rule, a single agent, or a council.
+
+terms:
+  move:
+    def: A declared way for a value to change through an act.
+    pos: noun
+    pl: -s
+    avoid:
+      transition: fine in general, but used loosely for content changes too
+      station: used both for a rule firing and for a role in the work
+    rels:
+      - {rel: changes,     to: dimension,                     card: "{1,1}"}
+      - {rel: declared-by, to: [veritoid-kind, segment-kind], card: "{1,1}"}
+    invariants:
+      - It names what must be true first and who has standing.
+      - It says nothing about what performs it.
+
+  queue:
+    def: The things waiting for one move.
+    pos: noun
+    pl: -s
+    rels:
+      - {rel: for, to: move, card: "{1,1}"}
+    invariants:
+      - It is computed.
+      - Every queue is visible, and none can fill unseen.
+
+  mechanism:
+    def: What works a queue, being a rule, a single agent, or a council.
+    pos: noun
+    pl: -s
+    rels:
+      - {rel: works, to: queue, card: "{1,N}"}
+    invariants:
+      - The model does not describe how a mechanism works inside. A council's charter is derived from the move it serves.
+
+discussion:
+  - Joseph's diagnosis of the sprint's loop was a fresh mind landing a checker's findings. The remedy that points to is that a checker's findings go back to the author of the changeset. Independence belongs on the checking side only. The model supports this and does not yet enforce it.
+
+working-notes:
+  - Left for later by Joseph. Who or what keeps queues moving. For now it is whoever is working on the store.

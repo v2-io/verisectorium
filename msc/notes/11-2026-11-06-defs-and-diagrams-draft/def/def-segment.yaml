@@ -1,0 +1,93 @@
+term-group: [segment, segment-kind, slot, inner-dependency, aliased, derived, own, coherence]
+status: proposed
+
+intro: |
+  A **SEGMENT** is a named, ordered assembly of @{veritoids}. It is the unit that has a @{name}, that is written as one whole, and that is reviewed as a whole. A **SEGMENT-KIND** declares the **SLOT**s a @{segment} of that kind has: which @{veritoid-kind} goes in each, whether it is required, and how many it holds. It also declares each **INNER-DEPENDENCY**, where the @{veritoids} in one @{slot} rest on those in another. A @{segment} has @{values} of its own, and its @{segment-kind} says how each is got. An **ALIASED** one is the @{value} of one @{veritoid} in one @{slot}. A **DERIVED** one is computed from several. An **OWN** one is asked of the whole and of no single @{veritoid}, and the chief of these is **COHERENCE**: does it hold together when read as one thing?
+
+terms:
+  segment:
+    def: A named, ordered assembly of veritoids, with some values of its own.
+    pos: noun
+    pl: -s
+    synonyms: [document]
+    avoid:
+      instance: the dialog's local word; in the verisectorium plan an instance is a whole store made from a template
+      record: an earlier model used it for this and for the veritoid at once
+      cluster: an earlier word for one name with typed inner parts that carried no values
+      composite: an earlier word that did not say where membership or coherence lived
+      file: a file is a rendering of a segment, never the segment
+    rels:
+      - {rel: of-kind,  to: segment-kind, card: "{1,1}"}
+      - {rel: known-by, to: name,         card: "{1,N}", note: one current, the rest old names that still resolve}
+      - {rel: holds,    to: veritoid,     card: "{0,N}", note: each in one of its kind's slots, at a position}
+      - {rel: has,      to: value,        card: "{0,N}", note: aliased, derived or own}
+      - {rel: collects, to: inbox,        card: "{1,1}"}
+    invariants:
+      - It is the unit of writing. Its veritoids change only together, in a segment changeset.
+      - It is not one fate. Its veritoids each have their own values, and a core one failing may take others with it.
+
+  segment-kind:
+    def: A declared type of segment, saying which slots it has and how the segment's own values are got.
+    pos: noun
+    pl: -s
+    avoid:
+      template: the dialog's local word; kept free for the seed a new store is initialized from
+    rels:
+      - {rel: declares, to: slot,             card: "{1,N}", note: in order}
+      - {rel: declares, to: inner-dependency, card: "{0,N}"}
+      - {rel: declares, to: move,             card: "{0,N}"}
+
+  slot:
+    def: A declared place in a segment kind, holding one, at most one, or any number of veritoids of one kind.
+    pos: noun
+    pl: -s
+    avoid:
+      section: a section is how a slot's veritoids happen to be rendered in a file
+    rels:
+      - {rel: of,        to: segment-kind,  card: "{1,1}"}
+      - {rel: filled-by, to: veritoid-kind, card: "{0,1}", note: none in a projection kind, where the slot holds pointers to segments}
+    invariants:
+      - It says whether it is required and how many it holds.
+      - A slot that holds several holds them in order, as the steps of a derivation.
+
+  inner-dependency:
+    def: A declared dependence of one slot on another within one segment kind.
+    pos: noun
+    pl: inner-dependencies
+    rels:
+      - {rel: from, to: slot, card: "{1,1}"}
+      - {rel: "on", to: slot, card: "{1,1}"}
+    invariants:
+      - Both slots belong to the same segment kind.
+      - It is not a reference. It is declared once for the kind, not written per veritoid.
+
+  aliased:
+    def: Of a segment's value, taken from one named veritoid's value on one dimension.
+    pos: adjective
+
+  derived:
+    def: Of a segment's value, computed from the values of several of its veritoids.
+    pos: adjective
+
+  own:
+    def: Of a segment's value, asked of the whole and of no single veritoid.
+    pos: adjective
+
+  coherence:
+    def: A segment's own dimension that asks whether it holds together when read as one thing.
+    pos: noun
+    invariants:
+      - It is moved by a review of the whole, and that review binds to what it read.
+
+discussion:
+  - Joseph's words for how a whole gets its values. Often via aliasing a dimension to a specific dimension of one specific atom within the template or instance, plus derived, plus its own that apply to the whole. The three names are councils-46's.
+  - ASF's frontmatter made a whole segment look like one fate and one kind. That was the failing this group corrects.
+  - Segments in ASF are often coarser than they should be, holding independent claims that should each have their own name.
+
+examples:
+  - A derived-result segment kind with the slots formal-claim (one, a claim), derivation (any number, proof steps), description (one, an explanation), eli8 (at most one, an explanation).
+  - Inner dependencies in it. The eli8 rests on the description, which rests on the formal claim.
+  - Aliased. This result's truth is its formal claim's truth. Derived. It is as fresh as its stalest veritoid. Own. Its coherence, its teachability.
+
+working-notes:
+  - Mapping to the dialog. Atom is veritoid, atom kind is veritoid kind, template is segment kind, instance is segment.

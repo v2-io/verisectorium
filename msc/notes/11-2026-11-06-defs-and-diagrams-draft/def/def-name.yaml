@@ -1,0 +1,25 @@
+term-group: [name]
+status: proposed
+
+intro: |
+  A **NAME** is a label the @{store} keeps bound to a @{segment}. A @{segment} has one current @{name} and may have old ones, all of which still reach it. A @{veritoid} has no @{name}; it is reached through its @{segment}.
+
+terms:
+  name:
+    def: A label the store keeps bound to a segment, with a history.
+    pos: noun
+    pl: -s
+    synonyms: [slug]
+    rels:
+      - {rel: reaches, to: segment, card: "{1,1}"}
+    invariants:
+      - It may change. A rename is recorded and the old name keeps resolving.
+      - Uniqueness is upkeep, not an assumption. A name that reaches nothing, and two segments under one name, are failures the store must surface.
+      - Nothing that can honestly change, such as a value or a claimed level, is part of it.
+
+examples:
+  - How a rendering might address a veritoid through its segment. persistence-threshold#formal-claim, or persistence-threshold#derivation[4].
+
+working-notes:
+  - Joseph, 2026-11-04. Slugs need not stay stable; a published mapping is enough. An older broken theory should not inhibit truth.
+  - When the meaning of a named thing changes there are two defensible defaults. The name stays with the thing and every pointer to it is flagged, or the changed meaning gets a new identifier and the old is marked superseded. The lean here is the first.

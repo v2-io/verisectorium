@@ -1,0 +1,65 @@
+term-group: [act, actor, bind, standing, affirmation]
+status: proposed
+
+intro: |
+  An **ACT** is one recorded thing that an **ACTOR** did against a @{state}: a check, a review, a decision, a finding. An @{act} never changes what is @{written}. It **BIND**s to exactly what it read, which is usually some @{content} as it then stood and sometimes a @{value}. When what it read is changed, it no longer binds, and any @{value} that rested on it falls. Whether an @{act} counts at all is a matter of **STANDING**: may this @{actor} do this? One kind of @{act} is carried inside a write: an **AFFIRMATION**, in which the author says that something left unchanged is still right.
+
+terms:
+  act:
+    def: One recorded thing an actor did against a state, binding to what it read.
+    pos: noun
+    pl: -s
+    avoid:
+      event: an earlier model's events were each about one record only
+    rels:
+      - {rel: by,         to: actor,                card: "{1,1}"}
+      - {rel: against,    to: state,                card: "{1,1}", note: steady or working}
+      - {rel: binds-to,   to: [veritoid, segment],  card: "{0,N}", note: content as it stood, or a value relied on; across any number of segments}
+      - {rel: belongs-to, to: atomic-changeset,     card: "{1,1}"}
+      - {rel: performs,   to: move,                 card: "{0,1}"}
+    invariants:
+      - It is not a change of what is written.
+      - It names the criterion it was performed against. A check counts as evidence only if that criterion was fixed before the result was seen.
+      - Recording too little is as dishonest as claiming too much. A deliberate decision not to raise something is itself an act, with its reason.
+
+  actor:
+    def: The attested identity that performed an act or wrote a changeset.
+    pos: noun
+    pl: -s
+    invariants:
+      - It is read from the harness, never typed.
+
+  bind:
+    def: Of an act, to hold exactly as long as what it read is unchanged.
+    pos: verb
+    synonyms: [lapse]
+    invariants:
+      - A review of a whole segment binds to the whole segment. A review of a projection binds only to what its kind says such a review reads of each member.
+
+  standing:
+    def: Whether a given actor's act of a given sort counts at all.
+    pos: noun
+    avoid:
+      independence: a check by the author has standing as a check; it simply adds no independent weight
+    invariants:
+      - It is a yes or no asked before any question of quality. A ruling recorded by someone with no power to rule is not a weak ruling; it is not one.
+
+  affirmation:
+    def: An act by the author of a segment changeset saying that a veritoid left unchanged is still right against what did change.
+    pos: noun
+    pl: -s
+    rels:
+      - {rel: carried-in, to: segment-changeset, card: "{1,1}"}
+    invariants:
+      - It never counts as an independent check. Its job is only that nothing is left as it was without someone having looked.
+
+discussion:
+  - Sorts of act so far. Check, review, decision, finding, crossing, affirmation, acceptance of something owed, a rule firing, a recorded change outside the store.
+  - Two lines of evidence add only to the degree they can be shown not to share a source, and the default assumption is that they do.
+
+examples:
+  - Standing. Only the steward may record a decision as ruled. The mind that revised a thing may not be the one that confirms it.
+
+working-notes:
+  - Left open. What makes two checkers of the same model family independent lines.
+  - Left open. How it was the steward is attested; the harness cannot yet tell his act from his session's.

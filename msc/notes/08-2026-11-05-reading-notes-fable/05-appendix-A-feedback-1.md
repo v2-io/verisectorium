@@ -1,0 +1,45 @@
+# 05 — research/appendix-A-feedback-1.md (read whole, 232 lines)
+
+## Against my predictions
+
+- Mostly wrong, in the report's favor. I predicted it would take ASF's present sections and labels as the ontology. It does not: it applies a failure test ("can this piece fail while that piece stands?") and concludes that Epistemic Status, an OUTLINE row and a Working Notes section are each mixed composites that split. It names the same five label surfaces I found, with counts I did not make (642 inline tags; 16 type values; 8 status values).
+- A discrepancy I should put to Joseph rather than smooth: he described the author as having "just the PLAN under his belt (maybe appendix-A also) and zero of the actual theory". The report's own reading list says it read the five roots whole, six other segments, FORMAT and agents SOPs, `.vsect/kinds.yaml`, RC1 02/03/06/10/11 and SPECIMEN, and more. I have not verified its list against a tool log; its specific quotes from `scope-adaptive-system` and `impl-strategy-structure` are the kind that are hard to produce without reading. I can check two against primaries cheaply. So either Joseph's description is of a different deficiency (it read the *machinery around* the theory and RC1's method, but none of the theory's argument, and none of RC1 01/04/07/08/09), or he was going on the Opus agent's brief to it. Its §7 says the same of itself: "I did not read RC1 01, 04, 07, 08, 09".
+- Right in one respect: "stations" is not stage values. It is the roles in ASF's working loop (author, de-novo audit, gold lift, adjudication, spike, verifier, integrator, confirmer, drain, term cycle, experiment, front door). I had guessed band crossings from the scratch file. Two different things are both being called stations: PLAN's "mechanical stations" (rules firing) and this report's work stations (roles with queues). Terminology collision to flag.
+
+## What surprised me
+
+- **"The six fates are a template, not an accumulation."** The six-slot block in 120 segments was written in two days by one lift event. I had read `def-agent-environment`'s Working Notes (as the scratch and PLAN A1 present them) as the organic case. The report says it is the opposite: a source dialect imposed at intake. I saw the same six headings in the deriv segment and did not draw the inference. This changes what the standing specimen is evidence *of*.
+- **"The sprint's drains disposed 752 + ~1,300 items and retired zero sources"** because the influx is inside the hashed body of the record the membrane protects, so a crossing cannot write back. A measured cause for "macro-structure and practical flow is still wanting". This is a finding about *where things live*, which the model says is undecided; but it is also a logical constraint independent of storage: the local influx cannot be part of what the segment's version is a hash of.
+- vsect 0.1's checks on the roots already bound at lettered-item grain "(Item (b) …)", below the inline tag. And three evidence lines (correspondence, discussion, reading) entered use undeclared within a week.
+- The terminology store is already event-sourced (152 decision dirs; canonicalize / rename / add-alias / nuance-flag / weak).
+- Three crossing outcomes A6 lacks: mint, stays-as-record, joined-as-source (which is an evidence event with descent, not a duplicate).
+
+## Where I think it is weaker than it sounds (my reading, to test against the dialog)
+
+1. **"The fix is columnar, not conceptual."** §1.1 dissolves the three doubts by assertion from RC1: kinds partition records; facets are dimensions; shapes are orthogonal. But its own boundary test, run on its own first example, undoes it. "A definition is a coinage + fit-to-usage: one record, two dimensions. Not a facet problem." Two rows later: "definition / term entry: can one fail while the other stands? yes → two records." So the coinage half is a separate record after all (the term), and "one record, two dimensions" was only true before the test was applied. The test keeps splitting things, and the report never asks what is left when it stops, or what holds the pieces together once they are split. It says "cluster" and moves on.
+2. **It answers "what is a record" with a 4-tuple** (kind, dimensions opened, composition shape, edges declared). That is a description of a row in a registry. It does not say how a *segment-shaped thing with slots* is declared: which parts, of which kinds, how many, which optional, which generated. Its §5 "segment" row lists inner locations with write semantics (body: replace; Working Notes: append, drained; Findings: replace, projected; Claim Record: separate). That list IS a template for a segment, written as prose in a bullet. The concept is used and not named.
+3. **Kinds from stations** is the most original move and may be backwards or only half. "A kind earns its place when some mover minds it differently" is a good admission rule. But the station table is ASF's loop *as it ran*, with its accidents (the gold lift is a station). Deriving kinds from it risks fossilizing one sprint's division of labor. The report marks the table as "a reading, not a measurement". Fair.
+4. **Everything is in RC1's vocabulary** and treats RC1 as the frame to run, not a thing in question. Joseph: "closer to AAT but not really verisectorium-RC1". I read that as: it gets AAT's surfaces right and uses RC1's words, without having RC1's whole model (it skipped 01, 04, 07, 08, 09), so its RC1 is a partial one. I have read *none* of RC1, so I cannot judge this and should not pretend to. This is now my largest known gap for the reconciliation.
+5. Smaller: "kinds are a partition of records (every record has exactly one kind, for its life)". Asserted. `der-directed-separation` is "Derived + Scope" in the outline. Under the boundary test that is two records, fine; but then the *file* has no single kind, and the thing with a slug and a place in the outline is not a "record" in the partitioned sense. Again the missing word for the multi-part thing.
+
+## What I take from it regardless
+
+- The boundary test as the operational definition of the smallest unit.
+- Five label surfaces with value sets: the dialect declaration's input.
+- Working Notes = (influx chunks) + (standing records with no drain: guards, open questions, marked conjectures, dead ends) + (reader evidence outliving its proposal).
+- Write-back obligation; local influx outside the hashed body.
+- Missing kinds with specimens: worked example, experiment vs run vs report, spike-as-episode, account, regression guard, bound/claim-license, placeholder (planned row), objective/KR.
+- Role separation (spiker ≠ verifier ≠ integrator ≠ confirmer) as the only mover constraint ASF has actually needed.
+
+## Wandering
+
+- Count the times this report, PLAN, and the scratch each reach for a multi-part declared shape without a word for it: "cluster … typed parts under one identity, each with its own write rules"; "inner locations"; "six-slot block … imposed as a template"; Claim Record's six fields; Findings' five fields; review's per-check fields; terminology entry's fields; MANIFEST's fields. Every one of these is "a declared arrangement of typed slots, some holding one thing, some many, some generated". If the dialog's "template" is that, then the single biggest thing the model adds is a *name for what all three documents kept using*.
+- And "atom" would then be: what the boundary test bottoms out in.
+- And "instance": one filled template, with identity. A segment is an instance. A claim record entry is an instance. A review is an instance. Is a chapter an instance whose slots hold instances? Then composites are just instances whose atoms... no. Slots hold atoms *or* instances? I do not know. That is the first thing to look for in the model.
+
+## Prediction for the dialog and the model
+
+- The dialog starts from Joseph's dissatisfaction with Appendix A's set-theory footing and the feedback's "columnar" answer. He introduces (or the agent does, pressed by him) atom as the smallest separately-adjudicated piece of content *with its aspects attached*; template as a declared shape of slots; instance as a filled one.
+- "Instance-isolated changeset": a change whose every effect stays inside one instance, so it can be validated against the template alone, without touching neighbors. "Atomic changeset": I now guess this is NOT "changes one atom" but the all-or-nothing episode from PLAN A5 ("The episode is the atomic changeset"), i.e. atomic in the transaction sense, spanning instances. If so the model has two uses of "atom/atomic" with unrelated meanings, and that will need saying.
+- I predict the collision with verisectorium-level "template" (what `v2 init` applies) and "instance" (a realized verisectorium) is either unnoticed or noted as "deliberately local". The brief said "terminology is deliberately local and provisional", so probably noted.
+- I predict the model says little about flow (stations, drains, write-back), since Joseph called it "the practical model" coming together but the feedback's flow findings post-date PLAN and pre-date the dialog only by hours.

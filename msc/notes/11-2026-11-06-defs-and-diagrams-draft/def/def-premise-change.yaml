@@ -1,0 +1,39 @@
+term-group: [refuted, dropped-in-level, narrowed]
+status: proposed
+
+intro: |
+  A premise can change in three ways, and each reaches what is @{predicated-on} it differently. It can be **REFUTED**: shown false. It can be **DROPPED-IN-LEVEL**: a check stopped binding, a @{rung} was lost, its @{credence} fell. Or it can be **NARROWED**: it now says less, or says it under an added condition.
+
+terms:
+  refuted:
+    def: Of a premise, shown false, so that whatever was derived using it has lost that support.
+    pos: adjective
+    synonyms: [rebutted]
+    invariants:
+      - What used it is known-broken until it is re-derived without the premise or is itself found false.
+      - It does not make the conclusion false. It makes it unsupported by that route.
+
+  dropped-in-level:
+    def: Of a premise, lower on a ladder or in credence than it was, with what it says unchanged.
+    pos: adjective
+    synonyms: [undercut, weakened]
+    invariants:
+      - Nothing downstream is thereby wrong. It has less support and a lower latent level.
+      - Where that puts something below its claimed level, it goes on the frontier.
+
+  narrowed:
+    def: Of a premise, now saying less, or saying it under an added condition.
+    pos: adjective
+    invariants:
+      - It puts a question to every dependent. Did you rely on what is gone?
+      - A dependent that did is in the refuted case. One that did not is in the dropped-in-level case or untouched.
+
+discussion:
+  - The August model has two cases, rebut and undercut, and files narrowing with the soft one. Working an example showed that is only right for dependents that did not use the part cut away.
+  - How this meets weight of evidence. Weight of evidence is about how several pieces of evidence for one claim combine. These three cases are about how a change in one claim reaches other claims. They meet in the support a derivation gives its conclusion, which is roughly the chance that all its premises hold together and the derivation itself is valid.
+
+examples:
+  - A claim gains a hypothesis H. That is a narrowing. A result downstream that follows only if H holds must now assume H itself.
+
+working-notes:
+  - Left open. A single credence cannot tell unsupported from shown false unless that is tracked separately.

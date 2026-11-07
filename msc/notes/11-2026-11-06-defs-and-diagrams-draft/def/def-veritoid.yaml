@@ -1,0 +1,60 @@
+term-group: [veritoid, content, veritoid-kind]
+status: proposed
+
+intro: |
+  The @{store} holds pieces of **CONTENT**: a formal statement, a paragraph of explanation, a proof step, a caption, a question, an auditor's note. Every piece of @{content} is of a **VERITOID-KIND**, which says what form the @{content} takes and which questions may be asked of it. A **VERITOID** is a piece of @{content} of a declared @{veritoid-kind}, together with the answers to those questions. A @{veritoid} almost never makes sense alone; it sits in a @{segment} (defined later) with others it depends on.
+
+terms:
+  content:
+    def: The text or data a veritoid holds.
+    pos: noun
+    synonyms: [body]
+
+  veritoid-kind:
+    def: A declared type of veritoid, saying what form its content takes and which dimensions it allows.
+    pos: noun
+    pl: -s
+    avoid:
+      atom kind: the dialog's local word for this, kept only as history
+      speech act: an earlier model individuated kinds by what content does; here a kind is declared by form and by what is asked of it
+    rels:
+      - {rel: allows,   to: dimension,      card: "{1,N}", note: which of these are open for a given veritoid depends on its ground}
+      - {rel: may-hold, to: reference-kind, card: "{0,N}"}
+      - {rel: declares, to: move,           card: "{0,N}"}
+    invariants:
+      - It is not a filename prefix and not a position on any ladder. A veritoid moving up a ladder never changes its kind.
+
+  veritoid:
+    def: A piece of content of a declared kind, together with its values on that kind's dimensions.
+    pos: noun
+    pl: -s
+    avoid:
+      atom: it was used for this and also sounds related to atomic changeset, which it is not
+      record: an earlier model used it both for this and for the whole segment
+      statement: an earlier design's word for this; too narrow, since a question or a note is also a veritoid
+      unit of fate: how content fails is one dimension among several, not what makes it a unit
+    rels:
+      - {rel: of-kind,   to: veritoid-kind, card: "{1,1}"}
+      - {rel: holds,     to: content,       card: "{1,1}"}
+      - {rel: sits-in,   to: slot,          card: "{1,1}", note: one slot of exactly one segment}
+      - {rel: states,    to: ground,        card: "{1,N}"}
+      - {rel: claims,    to: claimed-level, card: "{0,1}"}
+      - {rel: carries,   to: bound,         card: "{0,N}"}
+      - {rel: points-by, to: reference,     card: "{0,N}"}
+      - {rel: has,       to: value,         card: "{0,N}", note: one per open dimension}
+    invariants:
+      - It is never changed alone. It changes only inside a segment changeset.
+      - It contains no veritoid. Where its pieces stand or fall separately it is split.
+      - Its content, ground, claimed level and references are written. Its values are computed.
+
+discussion:
+  - The word veritoid was offered by Joseph, half in jest, as a name with no history. His definition is content with one or more dimensions plus rules.
+  - Two levels of content and only two. Veritoids, and the segments they are assembled into. The decomposition could go further as mathematics; two levels is where practice stops.
+
+examples:
+  - In the ASF files of today a veritoid is usually one second-level section of a segment file, or something smaller inside one, such as one lettered item under a statement.
+  - The formal claim of a derived result. One step of its derivation. Its plain-language description. Its explanation for an eight-year-old.
+
+working-notes:
+  - Left open, and it matters. Whether a veritoid has an identity of its own that survives being moved, or is only its place in a segment. See the recut group.
+  - Not yet confirmed by Joseph. That there are exactly two levels. He said he was still not sure.

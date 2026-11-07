@@ -1,0 +1,45 @@
+term-group: [recut, split, merge, promote, fold-back, retire]
+status: proposed
+
+intro: |
+  To **RECUT** is to change how @{content} is divided among @{veritoids} and @{segments} without changing what it says. There are five ways. **SPLIT** turns one @{veritoid} into several in the same @{slot}. **MERGE** turns several into one. **PROMOTE** moves @{veritoids} out into a @{segment} of their own, with its own @{name}. **FOLD-BACK** is the reverse. **RETIRE** takes a @{veritoid} or @{segment} out of present truth.
+
+terms:
+  recut:
+    def: To change how content is divided among veritoids and segments.
+    pos: verb
+    invariants:
+      - It must never silently break or silently redirect a reference that points in.
+
+  split:
+    def: To turn one veritoid into several in the same slot, each then carrying its own values.
+    pos: verb
+    invariants:
+      - It is called for when a check shows that pieces of one veritoid stand or fall separately.
+
+  merge:
+    def: To turn several veritoids that say one thing into one.
+    pos: verb
+
+  promote:
+    def: To move one or more veritoids out into a segment of their own.
+    pos: verb
+
+  fold-back:
+    def: To move a segment's veritoids back into another segment and retire its name.
+    pos: verb
+
+  retire:
+    def: To take a veritoid or segment out of present truth.
+    pos: verb
+    invariants:
+      - A refuted result is replaced by what is now true, or removed with its name left resolving to what answers in its place.
+      - Nothing refuted stays in the body in softened form.
+
+discussion:
+  - The structure can grow finer and can shrink. A model with only ways to add surface would repeat the sprint's third failure.
+  - Joseph on ASF. Many segments legitimately mix independent claims that should be able to have their own name and their own segment space. That is promote.
+
+working-notes:
+  - Left open, and everything here waits on it. Whether a veritoid has an identity of its own. If veritoids are only places, a split shifts every later place and references land on the wrong step. Either veritoids carry an identity that survives being moved, or every recut must rewrite or flag every reference it touches.
+  - Not read. The address theory, where this is probably treated with care.

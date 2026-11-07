@@ -1,0 +1,66 @@
+term-group: [segment-changeset, atomic-changeset, perturbation, frontier]
+status: proposed
+
+intro: |
+  A **SEGMENT-CHANGESET** is a whole new @{written} state for one @{segment}, replacing the old one at one instant. It is the only way anything @{written} changes. A **PERTURBATION** is whatever first disturbs a @{steady-state}: a finding, a softened claim, a new result. From then on there is a **FRONTIER**: everything still owed before the @{store} is consistent again. An **ATOMIC-CHANGESET** is everything that takes the @{store} from one @{steady-state} to the next, all the @{segment-changesets} and @{acts} that empty the @{frontier}.
+
+terms:
+  segment-changeset:
+    def: A whole new written state for one segment, with no order among the changes inside it.
+    pos: noun
+    pl: -s
+    synonyms: [instance-isolated changeset]
+    rels:
+      - {rel: "on",       to: segment,          card: "{1,1}"}
+      - {rel: by,         to: actor,            card: "{1,1}"}
+      - {rel: belongs-to, to: atomic-changeset, card: "{1,1}"}
+      - {rel: carries,    to: affirmation,      card: "{0,N}"}
+    invariants:
+      - For every veritoid that depends, by an inner dependency, on a changed one, it either changes that veritoid too or carries the author's affirmation of it. A state that does neither is a draft, not a changeset.
+      - What is written is reconciled at once, by the author. Values are not the author's to set; they fall when what they rested on changes and are earned back by later acts.
+      - If a segment is written several times within one atomic changeset, only the last reaches the next steady state.
+      - It may recut the segment and may create new segments.
+
+  atomic-changeset:
+    def: Everything that takes the store from one steady state to the next.
+    pos: noun
+    pl: -s
+    avoid:
+      episode: an earlier word for the same container
+      atom: atomic here means all or nothing and has nothing to do with the old word atom
+    rels:
+      - {rel: from,  to: steady-state,      card: "{1,1}"}
+      - {rel: holds, to: segment-changeset, card: "{0,N}"}
+      - {rel: holds, to: act,               card: "{0,N}"}
+    invariants:
+      - It is complete when, everywhere the perturbation reached, what is written is consistent and every claimed level is either earned again or honestly lowered.
+      - Only a complete one moves the store to its next steady state.
+      - It is usually more than one mind can assemble in one pass, so it is built in stages.
+      - An act alone, such as a confirming check, is an atomic changeset of size one.
+
+  perturbation:
+    def: Whatever first disturbs a steady store.
+    pos: noun
+    pl: -s
+    synonyms: [motivating perturbation]
+    invariants:
+      - Connecting an unconnected segment, by a reference or by placing it in a projection, is a perturbation of its own.
+
+  frontier:
+    def: Everything still owed in a working state.
+    pos: noun
+    pl: -s
+    rels:
+      - {rel: of, to: working-state, card: "{1,1}"}
+    invariants:
+      - It is computed again after each write or act.
+      - It holds references whose target has changed since they were last checked, veritoids whose claimed level is above what is now earned, acts that no longer bind where a value rested on them, and questions a rule has raised that a mind must answer.
+      - If it keeps growing, work stops and a group looks at the whole.
+
+discussion:
+  - Changes near the roots of the dependency graph reach nearly everything and changes at its tips reach nearly nothing. Hence the incentive to make early material solid in proportion to its age and to how much stands on it.
+  - When a defect is found, softening is the natural first response. The methodology, not the engine, then asks what it would take to keep the earlier claimed level. Whether to complete the softening first or to stack the strengthening on it is a decision about where effort goes.
+
+working-notes:
+  - Left open by Joseph. Whether a finding that something is broken may be visible on a steady state before its consequences are worked through. He called it a sort of known honesty, orthogonal to consistency.
+  - Not confirmed by Joseph. The changed-or-affirmed form of the write rule, and the split between what is written and values.
