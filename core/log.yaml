@@ -4,3 +4,15 @@
   by: Fable session (successor to 92e38652), with Joseph
   did: founded core/ with model.outline.md as the canonical projection; every row provisional or gap
   why: consolidation of the 11-04..11-06 model work before any def is adjudicated; the notes it draws on are frozen copies in msc/notes/
+- at: 2026-11-06T17:10-07:00
+  by: Joseph, then the Fable session
+  did: outline tightened; legend, wikilinked groups, terms-defined column, see column (provisional only); propagated to all tables; VI retitled as patterns (not groups), VII reduced to a paragraph, VIII to discussion prompts with "owed" withdrawn; terms use plain hyphens
+  why: Joseph's edit of part I and his notes on VI-VIII; terms are identifiers and must match files, keys and greps
+- at: 2026-11-06T17:40-07:00
+  by: Fable session, at Joseph's direction
+  did: "(inline)" is now a form in the group column rather than a mark, so an inline row can still be provisional; specially defined multi-word terms use a non-breaking hyphen (U+2011) in the terms column and in prose; wikilink targets and ordinary hyphenated words keep ASCII hyphens
+  why: Joseph's two requests after decluttering; the non-breaking hyphen marks the term as a defined term throughout the canon, and keeps table cells from wrapping mid-term
+- at: 2026-11-06T18:20-07:00
+  by: Fable session, at Joseph's direction
+  did: outline reorganized around main terms (verisectorium, store, layers; veritoid, claim, low-fidelity kinds; segment, segment changeset, recut, segment kinds, projection, rendering; reference, premise change; dimension, value, value move; act; intake), dropping the cross-cutting sections "Time and Change" and "Store Growth"; defined terms written «term» or «wording|def/group#term», multi-word terms joined with ⸱ (U+2E31), weak words namespaced (store⸱state, value⸱move, value⸱claimed, reference⸱use, segment⸱name, ...); U+2011 removed; convention and checker rules stated in the legend
+  why: Joseph, 2026-11-06: groups by main term rather than by cross-cutting dimension; weak terms need a namespace; the guillemet-and-⸱ convention renders everywhere in the estate and is a legal word character in udon
