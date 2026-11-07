@@ -6,7 +6,7 @@ term "verisectorium" pos=noun pl="verisectoria" {
   rel described-by term="ontology" card="{1,1}"
   rel persisted-in term="data⸱store" card="{1,1}"
 }
-status provisional
+status decided by="steward-and-lead" on="2026-11-07"
 ```
 
 # «Verisectorium»
