@@ -1,14 +1,14 @@
 ```kdl
-group "verisectorium" "truth⸱determinants"
+group "verisectorium" "truth⸱determinant"
 status provisional
 term "verisectorium" pos=noun pl="verisectoria" {
   avoid "repository" "where files happen to live; a verisectorium may span several or none"
   avoid "knowledge base" "suggests settled facts; a verisectorium is mostly work in progress, honestly marked"
-  rel declares "truth⸱determinants" card="{1,N}"
+  rel declares "truth⸱determinant" card="{1,N}"
   rel described-by "ontology" card="{1,1}"
   rel held-in "data⸱store" card="{1,1}"
 }
-term "truth⸱determinants" pos=noun pl="truth⸱determinants" {
+term "truth⸱determinant" pos=noun pl="truth⸱determinants" {
   synonyms "truth aspects"
   avoid "fitness function" "a determinant is what the work must answer to; a fitness function is one way of scoring agreement with it"
 }
@@ -22,11 +22,14 @@ A «VERISECTORIUM» ("place for cutting truth") indicates one of:
 - (2) The title of this repository and project, which describes verisectoria generally, gives their meta-ontology, and provides tooling (`v2`) for initializing and operating instantiations of them;
 - (3) A concrete instance of (1), with its «ontology», the current snapshot of its «data⸱store», and often (as when it is a repository) its history.
 
-**Truth-centrism.** Aspects of truth (internal coherence, authenticity, factual correctness, completeness, fidelity, and so forth), under stated hypotheses, are being adjudicated, discovered or organized, or are what the work must stay faithful to. Which aspects, and against what, are the verisectorium's declared truth determinants.
+### Truth-centrism
+Aspects of truth (internal coherence, authenticity, factual correctness, completeness, fidelity, and so forth), under stated hypotheses, are being adjudicated, discovered or organized, or are what the work must stay faithful to. Which aspects, and against what, are the verisectorium's declared truth determinants.
 
-**Continual improvement.** The work is rarely considered finished; it is a living body of work, evolved through interaction. Over time it is expected to get *better*, in the sense that it answers better to its truth determinants. That sense of better is what orders the work.
+### Continual improvement
+The work is rarely considered finished; it is a living body of work, evolved through interaction. Over time it is expected to get *better*, in the sense that it answers better to its truth determinants. That sense of better is what orders the work.
 
-**Turnover-resilience.** The work must facilitate being worked on by many minds who do not know it beforehand and who have limited time and attention, capturing their iterative and accumulated contributions without becoming noisy and fractured.
+### Turnover-resilience
+The work must facilitate being worked on by many minds who do not know it beforehand and who have limited time and attention, capturing their iterative and accumulated contributions without becoming noisy and fractured.
 
 ## Terms
 
@@ -38,9 +41,9 @@ A truth-centric, continually improving body of work, resilient to constant turno
 - No piece in it claims more than what has been done to it warrants, and none is left as if nothing had been done when something has.
 - Every piece of its content answers to at least one of its truth determinants; a piece that answers to none is a note about the verisectorium, not content of it.
 
-### «truth⸱determinants»
+### «truth⸱determinant»
 
-The aspects of truth a verisectorium declares that its content answers to, and against what: logic under stated hypotheses; the world, through runs and measurements; a proof checker; cases; its own consistency; an established canon; a source it must stay faithful to.
+One aspect of truth a verisectorium declares that its content answers to, and against what: logic under stated hypotheses; the world, through runs and measurements; a proof checker; cases; its own consistency; an established canon; a source it must stay faithful to.
 
 - They are declared, once, for the verisectorium; every «veritoid⸱kind» says which of them its content answers to.
 - "Better" means answering better to them. Work ordered by anything else is somebody's mood wearing a number.

@@ -13,7 +13,8 @@
 #   defs terms     one line per term: term, group, one-line definition, subtypes
 #
 # Resolution rules (core/model.outline.md legend, core/def/README.md):
-#   «term»                 exactly one def defines it, or the outline promises it; plural per `pl`
+#   «term»                 exactly one def defines it, or the outline promises it; plural per `pl`;
+#                          possessive by 's or ' («veritoid's», «verisectoria'»)
 #   «wording|def/g#term»   group g defines or (if unfiled) the outline promises term
 #   «sub⸱noun»             full name of subtype sub of noun, when sub⸱noun is not itself a term
 #   ‹sub›                  declared subtype of the «noun» that follows or precedes it on the same
@@ -111,7 +112,8 @@ groups.each do |g, d|
   listed.each do |t|
     problems << "#{g}: '#{t}' is already defined in #{terms[t]}" if terms.key?(t)
     terms[t] = g
-    pl = d['terms'].dig(t, 'pl')
+    next unless d['terms'][t]            # already reported above
+    pl = d['terms'][t]['pl']
     plurals[pl.start_with?('-') ? t + pl[1..] : pl] = t if pl
     d['terms'][t]['subtypes'].each { |s| (subtypes[s] ||= []) << t }
   end
@@ -119,7 +121,7 @@ end
 outline_subs.each { |noun, subs| subs.each { |s| (subtypes[s] ||= []) << noun unless (subtypes[s] || []).include?(noun) } }
 
 resolve_term = lambda do |w|
-  w = w.downcase
+  w = w.downcase.sub(/['’]s?\z/, '')          # possessives: «veritoid's», «verisectoria'»
   return w if terms.key?(w) || outline_terms.include?(w)
   return plurals[w] if plurals.key?(w)
   return w.sub(/s\z/, '') if outline_terms.include?(w.sub(/s\z/, ''))
@@ -165,7 +167,8 @@ when 'check'
     (d['sections'].keys - SECTIONS).each { |s| problems << "#{g}: unexpected section '## #{s}'" }
     intro = d['sections']['Intro'].to_s
     d['group'].each do |t|
-      problems << "#{g}: '#{t}' is not introduced as «#{t.upcase}» in ## Intro" unless intro.include?("«#{t.upcase}»")
+      pl = d['terms'].dig(t, 'pl'); plural = pl && (pl.start_with?('-') ? t + pl[1..] : pl)
+      problems << "#{g}: '#{t}' is not introduced as «#{t.upcase}» in ## Intro" unless intro.include?("«#{t.upcase}»") || (plural && intro.include?("«#{plural.upcase}»"))
       problems << "#{g}: '#{t}' has no one-line def under its heading" unless d['term_bodies'].dig(t, 'def')
     end
     check_refs.call(g, d['text'])

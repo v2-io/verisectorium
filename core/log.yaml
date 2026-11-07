@@ -28,3 +28,7 @@
   by: Fable session, at Joseph's direction
   did: def machine block is now a leading ```kdl block (KDL 2.0) instead of YAML frontmatter; subtypes introduced (declared `subtypes "a" "b"` under a term; written ‹sub› beside its noun or alone when unique; «sub⸱noun» as full name); «property» minted with ‹written› and ‹computed›, replacing the written group; roll-up, row, premise-change, recut and value rows restated with subtypes; bin/defs parses KDL and resolves both subtype forms; README and legend updated
   why: KDL's node shape is udon's, so the retrofit stays a syntax swap; subtypes stop the lexicon minting a noun for every state of a noun (Joseph, 2026-11-07)
+- at: 2026-11-07T02:10-07:00
+  by: Joseph, then the Fable session
+  did: truth⸱determinant defined in the singular with pl truth⸱determinants (Joseph); group line, relation target, heading and outline row made to agree; the three defining properties are ### subheadings inside the intro (Joseph); checker accepts a plural «TERMS» as the intro's first mention, resolves possessives, and reports a group/term mismatch instead of crashing; README says terms are defined in the singular
+  why: terms defined in the singular so that pl carries meaning; guillemets take singular, plural or possessive as the sentence requires (Joseph, 2026-11-07)
