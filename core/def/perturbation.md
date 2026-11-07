@@ -5,13 +5,16 @@ term "perturbation" pos=noun pl="-s" {
 status provisional
 ```
 
+# «perturbation»
+Whatever first disturbs a steady store and so opens an atomic changeset.
+
 ## Intro
 
-An «ATOMIC⸱CHANGESET» is everything, writes and acts together, that takes the «data⸱store» from one «steady⸱state» to the next. It opens with a «PERTURBATION», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «FRONTIER» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «ACCEPTED⸱REMAINDER»: what has been left on it by explicit, recorded decision, with its reason.
+An «atomic⸱changeset» is everything, writes and acts together, that takes the «data⸱store» from one «steady⸱state» to the next. It opens with a «perturbation», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «frontier» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «accepted⸱remainder»: what has been left on it by explicit, recorded decision, with its reason.
 
 ## Definition
 
-Whatever first disturbs a steady store and so opens an atomic changeset.
+### Invariants
 - A finding that something is broken is itself a perturbation, before anyone has written a repair.
 - Connecting an unconnected segment into the verisectorium, by a reference or by a place in a projection, is a perturbation of its own, and usually a large one.
 

@@ -3,13 +3,16 @@ term "work⸱time" pos=noun
 status provisional
 ```
 
+# «work⸱time»
+The hours and days in which minds assemble a move, with an order, clock times and actors.
+
 ## Intro
 
-There are two kinds of time, and they are kept apart. In «STEADY⸱TIME» the «data⸱store» moves from one «STEADY⸱STATE» to the next, each move at one logical instant; nothing exists between two steady states, and at each one the «verisectorium» is good or true, with stated conditions. In «WORK⸱TIME» minds assemble such a move over hours and days, with an order, clock times and actors; while they do there is a «WORKING⸱STATE», the last steady state plus whatever has been staged so far, which changes as work proceeds and is never the verisectorium.
+There are two kinds of time, and they are kept apart. In «steady⸱time» the «data⸱store» moves from one «steady⸱state» to the next, each move at one logical instant; nothing exists between two steady states, and at each one the «verisectorium» is good or true, with stated conditions. In «work⸱time» minds assemble such a move over hours and days, with an order, clock times and actors; while they do there is a «working⸱state», the last steady state plus whatever has been staged so far, which changes as work proceeds and is never the verisectorium.
 
 ## Definition
 
-The hours and days in which minds assemble a move, with an order, clock times and actors.
+### Invariants
 - What was done in work time is kept. A check made on a draft later changed is still a record of the checker, though it binds to nothing in the next steady state.
 
 ## Discussion

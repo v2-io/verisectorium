@@ -5,8 +5,7 @@
 #
 #   defs check     every def parses (a leading ```kdl block with one `term` node and a `status`,
 #                  then the body sections); the file is named for its term (- for ⸱); no term
-#                  defined twice; the term appears as «TERM» (or its plural) in ## Intro; the
-#                  ## Definition section opens with a one-line def; every «…» and ‹…› resolves;
+#                  defined twice; the body opens '# «term»' followed by the one-line def; every «…» and ‹…› resolves;
 #                  relation targets are defined or promised terms; cardinalities are {m,n};
 #                  the outline's `def` column agrees with which files exist
 #   defs dot       Graphviz of every term with relations, edges labelled "relation {m,n}"
@@ -23,7 +22,8 @@
 #   term "name" pos=noun pl="-s" { subtypes "a" "b"; synonyms "x"; avoid "word" "why";
 #                                  rel verb term="target" card="{m,n}" note="…" informal=#true }
 #   status provisional
-# Body: optional ## Intro · ## Definition (one line, then bullets, or a ### Invariants subsection) · any free ## sections ·
+# Body: '# «term»' then the one-line def · optional ## Intro · ## Definition or ## Definition(s) (senses or
+#       elaboration, with a ### Invariants subsection) · any free ## sections ·
 #       ## Discussion · ## Examples · ## Working Notes (required)
 
 require 'kdl'
@@ -70,12 +70,15 @@ def parse_def(path)
       sections[current] << line
     end
   end
-  defsec = sections['Definition'] || ''
+  h1 = body[/^# «([^»]+)»\s*\n(.*)$/, 1]
+  h1def = Regexp.last_match && Regexp.last_match(2).to_s.strip
+  defsec = sections['Definition'] || sections['Definition(s)'] || ''
   head, inv = defsec.split(/^### Invariants\s*$/, 2)
+  head ||= ""
   deflines = head.lines.map(&:rstrip).reject(&:empty?)
   invariants = (inv || head).lines.map(&:rstrip).select { |l| l.start_with?('- ') }
-  { 'term' => t, 'status' => status && vals(status).first, 'sections' => sections,
-    'def' => deflines.find { |l| !(l.start_with?('- ') || l.start_with?('#')) }, 'invariants' => invariants, 'text' => text }
+  { 'term' => t, 'status' => status && vals(status).first, 'sections' => sections, 'h1' => h1,
+    'def' => (h1def.to_s.empty? ? deflines.find { |l| !(l.start_with?('- ') || l.start_with?('#')) } : h1def), 'invariants' => invariants, 'text' => text }
 end
 
 problems = []
@@ -155,12 +158,10 @@ when 'check'
   defs.each do |f, d|
     t = d['term']['name']
     problems << "#{f}: status is missing" unless d['status']
-    problems << "#{f}: missing section '## Definition'" unless d['sections'].key?('Definition')
+    problems << "#{f}: missing '# «#{t}»' heading" unless d['h1'] && d['h1'].downcase == t
+    problems << "#{f}: missing section '## Definition' or '## Definition(s)'" unless d['sections'].key?('Definition') || d['sections'].key?('Definition(s)')
     problems << "#{f}: missing '## Working Notes'" unless d['sections'].key?('Working Notes')
-    intro = d['sections']['Intro'].to_s + d['sections']['Definition'].to_s
-    pl = d['term']['pl']; plural = pl && (pl.start_with?('-') ? t + pl[1..] : pl)
-    problems << "#{f}: '#{t}' is not introduced as «#{t.upcase}» in ## Intro or ## Definition" unless intro.include?("«#{t.upcase}»") || (plural && intro.include?("«#{plural.upcase}»"))
-    problems << "#{f}: ## Definition does not open with a one-line def" unless d['def']
+    problems << "#{f}: no one-line def under the '# «#{t}»' heading" unless d['def']
     check_refs.call(f, d['text'])
     d['term']['rels'].each do |r|
       problems << "#{f}: relation '#{r['rel']}' has no cardinality {m,n}" unless r['card'].to_s =~ /\A\{\d+,(\d+|N)\}\z/

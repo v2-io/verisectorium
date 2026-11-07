@@ -7,14 +7,16 @@ term "truth⸱determinant" pos=noun pl="truth⸱determinants" {
 status provisional
 ```
 
+# «truth⸱determinant»
+One aspect of truth a verisectorium declares that its content answers to, and against what.
+
 ## Intro
 
-A «TRUTH⸱DETERMINANT» is one aspect of truth that a «verisectorium» declares its content answers to, and against what: logic under stated hypotheses; the world, through runs and measurements; a proof checker; cases; its own consistency; an established canon; a source it must stay faithful to. A verisectorium declares one or more, once, and every «veritoid⸱kind» in it says which of them its content answers to. "Better" means answering better to them.
+A «truth⸱determinant» is one aspect of truth that a «verisectorium» declares its content answers to, and against what: logic under stated hypotheses; the world, through runs and measurements; a proof checker; cases; its own consistency; an established canon; a source it must stay faithful to. A verisectorium declares one or more, once, and every «veritoid⸱kind» in it says which of them its content answers to. "Better" means answering better to them.
 
 ## Definition
 
-One aspect of truth a verisectorium declares that its content answers to, and against what.
-
+### Invariants
 - They are declared, once, for the verisectorium; every veritoid kind says which of them its content answers to.
 - "Better" means answering better to them. Work ordered by anything else is somebody's mood wearing a number.
 - A piece may answer to more than one. An explanation answers to what it explains and to a reader.

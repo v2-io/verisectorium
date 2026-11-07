@@ -3,13 +3,16 @@ term "empirical⸱fact" pos=noun pl="empirical⸱facts"
 status provisional
 ```
 
+# «empirical⸱fact»
+A piece of content about the world, supported by runs or measurements, adequate by degree and never simply true.
+
 ## Intro
 
-Content comes in two regimes, by which «truth⸱determinants» it answers to and how it settles. A «THEORY⸱CLAIM» aims to be true or false: it is stated flatly, settled by derivation and broken by counterexample, and any doubt about it is a named thing to check, placed beside it and never folded into it. An «EMPIRICAL⸱FACT» or a «PROPOSED⸱MODEL» is not expected to become simply true: it is adequate by degree, can be falsified, and is built on by decision. The two regimes meet at the hypothesis. A theory claim that rests on a proposed model is still a flat if-then; the model's adequacy carries the graded part, and nothing graded leaks into the claim.
+Content comes in two regimes, by which «truth⸱determinants» it answers to and how it settles. A «theory⸱claim» aims to be true or false: it is stated flatly, settled by derivation and broken by counterexample, and any doubt about it is a named thing to check, placed beside it and never folded into it. An «empirical⸱fact» or a «proposed⸱model» is not expected to become simply true: it is adequate by degree, can be falsified, and is built on by decision. The two regimes meet at the hypothesis. A theory claim that rests on a proposed model is still a flat if-then; the model's adequacy carries the graded part, and nothing graded leaks into the claim.
 
 ## Definition
 
-A piece of content about the world, supported by runs or measurements, adequate by degree and never simply true.
+### Invariants
 - It carries what was run or measured, under what, and whether it reproduces.
 - It can be falsified by a run; it cannot be derived.
 

@@ -7,13 +7,16 @@ term "claimed⸱level" pos=noun pl="claimed⸱levels" {
 status provisional
 ```
 
+# «claimed⸱level»
+What a veritoid's content asserts about its own support; written, and compared with what is computed.
+
 ## Intro
 
-A «CLAIMED⸱LEVEL» is what a «veritoid»'s content asserts about its own support: "theorem", "exact under these premises", "conditional", "hypothesis". It is ‹written›, like the content, and it is not a «value». The store's work is to compare it with what has been earned; a claimed level above what the computed values allow is an inconsistency and goes on the «frontier». To *soften* a claimed level is to lower it, or to narrow what the content says; it is honest and it is the easy thing, and its quick calm is often false because of «latent⸱level»s downstream. Softening never leaves a ghost: the body states what is now held, and the former claim is in the «log».
+A «claimed⸱level» is what a «veritoid»'s content asserts about its own support: "theorem", "exact under these premises", "conditional", "hypothesis". It is ‹written›, like the content, and it is not a «value». The store's work is to compare it with what has been earned; a claimed level above what the computed values allow is an inconsistency and goes on the «frontier». To *soften* a claimed level is to lower it, or to narrow what the content says; it is honest and it is the easy thing, and its quick calm is often false because of «latent⸱level»s downstream. Softening never leaves a ghost: the body states what is now held, and the former claim is in the «log».
 
 ## Definition
 
-What a veritoid's content asserts about its own support; written, and compared with what is computed.
+### Invariants
 - There is only ever one. What it used to be is a matter for the «log».
 - A claimed level above what the computed values, or the «latent⸱level» from its premises, allow is an inconsistency on the frontier.
 

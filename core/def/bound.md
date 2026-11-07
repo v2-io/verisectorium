@@ -7,13 +7,16 @@ term "bound" pos=noun pl="-s" {
 status provisional
 ```
 
+# «bound»
+A declared limit on a veritoid, consulted at a moment and never earned by degrees.
+
 ## Intro
 
-A «BOUND» is a declared limit on a «veritoid», consulted at a moment and never earned by degrees: what the piece may assert on its own authority, what a reader may do with it, whether it is safe to show an unprimed auditor, which of two conflicting things yields.
+A «bound» is a declared limit on a «veritoid», consulted at a moment and never earned by degrees: what the piece may assert on its own authority, what a reader may do with it, whether it is safe to show an unprimed auditor, which of two conflicting things yields.
 
 ## Definition
 
-A declared limit on a veritoid, consulted at a moment and never earned by degrees.
+### Invariants
 - It is ‹written›, and it is not an answer to any «dimension».
 - It is consulted, not accumulated. There are no degrees of a bound.
 

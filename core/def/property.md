@@ -9,13 +9,16 @@ term "property" pos=noun pl="properties" {
 status provisional
 ```
 
+# «property»
+Anything the data store holds about a veritoid or segment, each either written by an author or computed by the store.
+
 ## Intro
 
-A «PROPERTY» is anything the data store holds about a «veritoid» or a «segment» beside the bare fact of its existence: its content, its «ground», its «bounds|def/bound#bound», its «claimed⸱level», its references, its values, a segment's assembly, a projection's members and order. Every property is one of two kinds, and the line between them is what the rest of the model stands on. A ‹written› property is set by an author and changed only by a «segment⸱changeset». A ‹computed› property is produced by the data store from what has been recorded, as of a «state», and is never set by anyone.
+A «property» is anything the data store holds about a «veritoid» or a «segment» beside the bare fact of its existence: its content, its «ground», its «bounds|def/bound#bound», its «claimed⸱level», its references, its values, a segment's assembly, a projection's members and order. Every property is one of two kinds, and the line between them is what the rest of the model stands on. A ‹written› property is set by an author and changed only by a «segment⸱changeset». A ‹computed› property is produced by the data store from what has been recorded, as of a «state», and is never set by anyone.
 
 ## Definition
 
-Anything the data store holds about a veritoid or segment, each either written by an author or computed by the store.
+### Invariants
 - ‹written›: set by an author, reconciled by the author inside the changeset at one instant, never set by the store. Content, ground, bounds, claimed level, references, a segment's assembly, a projection's members and order.
 - ‹computed›: produced by the store from what has been recorded, as of a state; the same recorded things read in any order give the same answer; never typed. Every «value», every attribute, whether each reference holds, every «roll⸱up».
 - A typed status word is a ‹written› property wearing a ‹computed› one's clothes.

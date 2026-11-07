@@ -6,13 +6,16 @@ term "frontier" pos=noun pl="-s" {
 status provisional
 ```
 
+# «frontier»
+Everything still owed in a working state; what is known not yet to be consistent, computed afresh after each write or act.
+
 ## Intro
 
-An «ATOMIC⸱CHANGESET» is everything, writes and acts together, that takes the «data⸱store» from one «steady⸱state» to the next. It opens with a «PERTURBATION», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «FRONTIER» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «ACCEPTED⸱REMAINDER»: what has been left on it by explicit, recorded decision, with its reason.
+An «atomic⸱changeset» is everything, writes and acts together, that takes the «data⸱store» from one «steady⸱state» to the next. It opens with a «perturbation», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «frontier» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «accepted⸱remainder»: what has been left on it by explicit, recorded decision, with its reason.
 
 ## Definition
 
-Everything still owed in a working state; what is known not yet to be consistent, computed afresh after each write or act.
+### Invariants
 - It holds references whose target has changed since they were last checked, veritoids whose claimed level is above what is now earned, acts that no longer bind where a value rested on them, and questions a rule has raised that a mind must answer.
 - If it keeps growing instead of shrinking, work stops and the whole is looked at. The usual causes are two ideas treated as one, a genuine tension between two well-supported claims, or a foundation that has moved.
 

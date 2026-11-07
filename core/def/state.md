@@ -5,13 +5,16 @@ term "state" pos=noun pl="-s" {
 status provisional
 ```
 
+# «state»
+The store as of one point in its log.
+
 ## Intro
 
-A «DATA⸱STORE» is a «verisectorium»'s contents as held, whether by an engine or by hand. Everything that happens to it is recorded in its «LOG», which is only ever added to. A «STATE» is the store as of one point in the log: what every piece says, how the pieces are assembled, which version of the «ontology» is in force, and what has been recorded as done.
+A «data⸱store» is a «verisectorium»'s contents as held, whether by an engine or by hand. Everything that happens to it is recorded in its «log», which is only ever added to. A «state» is the store as of one point in the log: what every piece says, how the pieces are assembled, which version of the «ontology» is in force, and what has been recorded as done.
 
 ## Definition
 
-The store as of one point in its log.
+### Invariants
 - It is more than which content is current. It includes how segments are assembled, which version of the definition is in force, and what has been recorded as done.
 - Every computed answer is computed as of a state. There is no untimed answer.
 - The same recorded things, read in any order, give the same state.

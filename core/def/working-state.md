@@ -8,13 +8,16 @@ term "working⸱state" pos=noun pl="working⸱states" {
 status provisional
 ```
 
+# «working⸱state»
+The last steady state plus everything one atomic changeset in progress has staged so far.
+
 ## Intro
 
-There are two kinds of time, and they are kept apart. In «STEADY⸱TIME» the «data⸱store» moves from one «STEADY⸱STATE» to the next, each move at one logical instant; nothing exists between two steady states, and at each one the «verisectorium» is good or true, with stated conditions. In «WORK⸱TIME» minds assemble such a move over hours and days, with an order, clock times and actors; while they do there is a «WORKING⸱STATE», the last steady state plus whatever has been staged so far, which changes as work proceeds and is never the verisectorium.
+There are two kinds of time, and they are kept apart. In «steady⸱time» the «data⸱store» moves from one «steady⸱state» to the next, each move at one logical instant; nothing exists between two steady states, and at each one the «verisectorium» is good or true, with stated conditions. In «work⸱time» minds assemble such a move over hours and days, with an order, clock times and actors; while they do there is a «working⸱state», the last steady state plus whatever has been staged so far, which changes as work proceeds and is never the verisectorium.
 
 ## Definition
 
-The last steady state plus everything one atomic changeset in progress has staged so far.
+### Invariants
 - It is never the verisectorium. Readers of the verisectorium read steady states.
 - Its «frontier» is computable at every moment.
 

@@ -9,13 +9,16 @@ term "data⸱store" pos=noun pl="-s" {
 status provisional
 ```
 
+# «data⸱store»
+A verisectorium's contents as held, by an engine or by hand.
+
 ## Intro
 
-A «DATA⸱STORE» is a «verisectorium»'s contents as held, whether by an engine or by hand. Everything that happens to it is recorded in its «LOG», which is only ever added to. A «STATE» is the store as of one point in the log: what every piece says, how the pieces are assembled, which version of the «ontology» is in force, and what has been recorded as done.
+A «data⸱store» is a «verisectorium»'s contents as held, whether by an engine or by hand. Everything that happens to it is recorded in its «log», which is only ever added to. A «state» is the store as of one point in the log: what every piece says, how the pieces are assembled, which version of the «ontology» is in force, and what has been recorded as done.
 
 ## Definition
 
-A verisectorium's contents as held, by an engine or by hand.
+### Invariants
 - Nothing in it is changed by hand. Where the store cannot express a change, that is how we learn what it lacks.
 
 ## Discussion

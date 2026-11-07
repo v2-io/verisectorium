@@ -13,13 +13,16 @@ term "atomic⸱changeset" pos=noun pl="atomic⸱changesets" {
 status provisional
 ```
 
+# «atomic⸱changeset»
+Everything, writes and acts together, that takes the store from one steady state to the next.
+
 ## Intro
 
-An «ATOMIC⸱CHANGESET» is everything, writes and acts together, that takes the «data⸱store» from one «steady⸱state» to the next. It opens with a «PERTURBATION», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «FRONTIER» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «ACCEPTED⸱REMAINDER»: what has been left on it by explicit, recorded decision, with its reason.
+An «atomic⸱changeset» is everything, writes and acts together, that takes the «data⸱store» from one «steady⸱state» to the next. It opens with a «perturbation», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «frontier» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «accepted⸱remainder»: what has been left on it by explicit, recorded decision, with its reason.
 
 ## Definition
 
-Everything, writes and acts together, that takes the store from one steady state to the next.
+### Invariants
 - Only a complete one moves the store to its next steady state. It is complete when, everywhere the perturbation reached, what is written is consistent and every «claimed⸱level» is either earned again or honestly lowered.
 - It is usually more than one mind can assemble in one pass, so it is built in stages, and at every stage the frontier says what is still owed.
 - An act that changes nothing written and leaves nothing owed, such as a confirming check, is an atomic changeset of size one.

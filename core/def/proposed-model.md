@@ -3,13 +3,16 @@ term "proposed⸱model" pos=noun pl="proposed⸱models"
 status provisional
 ```
 
+# «proposed⸱model»
+A piece of content offered as a representation of something, adequate for a purpose by degree, falsifiable, and built on by decision.
+
 ## Intro
 
-Content comes in two regimes, by which «truth⸱determinants» it answers to and how it settles. A «THEORY⸱CLAIM» aims to be true or false: it is stated flatly, settled by derivation and broken by counterexample, and any doubt about it is a named thing to check, placed beside it and never folded into it. An «EMPIRICAL⸱FACT» or a «PROPOSED⸱MODEL» is not expected to become simply true: it is adequate by degree, can be falsified, and is built on by decision. The two regimes meet at the hypothesis. A theory claim that rests on a proposed model is still a flat if-then; the model's adequacy carries the graded part, and nothing graded leaks into the claim.
+Content comes in two regimes, by which «truth⸱determinants» it answers to and how it settles. A «theory⸱claim» aims to be true or false: it is stated flatly, settled by derivation and broken by counterexample, and any doubt about it is a named thing to check, placed beside it and never folded into it. An «empirical⸱fact» or a «proposed⸱model» is not expected to become simply true: it is adequate by degree, can be falsified, and is built on by decision. The two regimes meet at the hypothesis. A theory claim that rests on a proposed model is still a flat if-then; the model's adequacy carries the graded part, and nothing graded leaks into the claim.
 
 ## Definition
 
-A piece of content offered as a representation of something, adequate for a purpose by degree, falsifiable, and built on by decision.
+### Invariants
 - Building on it is a decision about where effort goes, made on the evidence so far and on how much will rest on it, and reopenable. It is not a determination that the model is true.
 - A theory claim resting on it stays an if-then. The model's adequacy never leaks into the claim.
 

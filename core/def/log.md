@@ -6,13 +6,16 @@ term "log" pos=noun pl="-s" {
 status provisional
 ```
 
+# «log»
+Everything recorded about a store, in order, only ever added to.
+
 ## Intro
 
-A «DATA⸱STORE» is a «verisectorium»'s contents as held, whether by an engine or by hand. Everything that happens to it is recorded in its «LOG», which is only ever added to. A «STATE» is the store as of one point in the log: what every piece says, how the pieces are assembled, which version of the «ontology» is in force, and what has been recorded as done.
+A «data⸱store» is a «verisectorium»'s contents as held, whether by an engine or by hand. Everything that happens to it is recorded in its «log», which is only ever added to. A «state» is the store as of one point in the log: what every piece says, how the pieces are assembled, which version of the «ontology» is in force, and what has been recorded as done.
 
 ## Definition
 
-Everything recorded about a store, in order, only ever added to.
+### Invariants
 - Nothing is removed or overwritten. A mistake is corrected by a further record that says so.
 - When something outside the store changes (a tool's version, a date a rule cares about), that is recorded at a definite moment, and that record is what moves any answer.
 
