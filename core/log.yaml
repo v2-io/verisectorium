@@ -32,3 +32,7 @@
   by: Joseph, then the Fable session
   did: truth⸱determinant defined in the singular with pl truth⸱determinants (Joseph); group line, relation target, heading and outline row made to agree; the three defining properties are ### subheadings inside the intro (Joseph); checker accepts a plural «TERMS» as the intro's first mention, resolves possessives, and reports a group/term mismatch instead of crashing; README says terms are defined in the singular
   why: terms defined in the singular so that pl carries meaning; guillemets take singular, plural or possessive as the sentence requires (Joseph, 2026-11-07)
+- at: 2026-11-07T02:40-07:00
+  by: Fable session, at Joseph's suggestion
+  did: per-term subsections allowed under ### «term» (free-named, or Discussion / Examples / Working Notes); group-level sections kept for what concerns the group as a whole; verisectorium.md restructured so the three defining properties sit under «verisectorium», and each term carries its own discussion, examples and working notes
+  why: the exemplars keep discussion and notes at group level, which blurs once a group has more than one term; the three properties are about the term, not the pair (Joseph, 2026-11-07)

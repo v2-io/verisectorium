@@ -71,8 +71,15 @@ def parse_def(path)
   term_bodies = {}
   (sections['Terms'] || '').split(/^### /).drop(1).each do |chunk|
     head, *rest = chunk.lines
-    lines = rest.map(&:rstrip).reject(&:empty?)
-    term_bodies[head[/«([^»]+)»/, 1]] = { 'def' => lines.find { |l| !l.start_with?('- ') }, 'invariants' => lines.select { |l| l.start_with?('- ') } }
+    top, subs, cur = [], {}, nil
+    rest.each do |l|
+      if l =~ /\A#### (.+?)\s*\z/ then cur = Regexp.last_match(1); subs[cur] = +''
+      elsif cur then subs[cur] << l
+      else top << l.rstrip
+      end
+    end
+    top.reject!(&:empty?)
+    term_bodies[head[/«([^»]+)»/, 1]] = { 'def' => top.find { |l| !l.start_with?('- ') }, 'invariants' => top.select { |l| l.start_with?('- ') }, 'subsections' => subs }
   end
   { 'group' => vals(group), 'status' => status && vals(status).first, 'terms' => terms,
     'sections' => sections, 'term_bodies' => term_bodies, 'text' => text }
@@ -163,7 +170,9 @@ case ARGV[0]
 when 'check'
   groups.each do |g, d|
     problems << "#{g}: status is missing" unless d['status']
-    (SECTIONS - d['sections'].keys).each { |s| problems << "#{g}: missing section '## #{s}'" unless %w[Discussion Examples].include?(s) }
+    (SECTIONS - d['sections'].keys).each { |s| problems << "#{g}: missing section '## #{s}'" unless ['Discussion', 'Examples', 'Working Notes'].include?(s) }
+    has_notes = d['sections'].key?('Working Notes') || d['term_bodies'].values.any? { |b| b['subsections'].key?('Working Notes') }
+    problems << "#{g}: no Working Notes, at group level or under any term" unless has_notes
     (d['sections'].keys - SECTIONS).each { |s| problems << "#{g}: unexpected section '## #{s}'" }
     intro = d['sections']['Intro'].to_s
     d['group'].each do |t|
