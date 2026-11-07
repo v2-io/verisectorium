@@ -1,0 +1,53 @@
+term-group: [verisectorium, answers⸱to, better]
+status: provisional
+
+intro: |
+  A «VERISECTORIUM» is a body of work that is never finished, worked on by many minds who each arrive knowing nothing of it, in which every piece says honestly what it rests on and what has been done to it. Every piece of its content «ANSWERS⸱TO» something: logic under stated hypotheses; the world, through runs and measurements; a proof checker; cases; its own consistency; an established canon; a source it must stay faithful to. To get «BETTER» is to agree better with what one answers to. What better consists of is declared per verisectorium, and it is what decides where work goes.
+
+terms:
+  verisectorium:
+    def: A never-finished body of work, worked on under total turnover, in which every piece carries what it rests on and what has been done to it.
+    pos: noun
+    pl: verisectoria
+    avoid:
+      repository: where files happen to live; a verisectorium may span several or none
+      knowledge base: suggests settled facts; a verisectorium is mostly work in progress, honestly marked
+    rels:
+      - {rel: held-as, to: store, card: "{1,1}"}
+      - {rel: governed-by, to: definition, card: "{1,1}"}
+    invariants:
+      - It is never finished. A «steady⸱state» is a resting point, not an end.
+      - No piece in it claims more than what has been done to it warrants, and none is left as if nothing had been done when something has.
+      - Every piece of its content answers to something; a piece that answers to nothing is a note about the verisectorium, not content of it.
+
+  answers⸱to:
+    def: The relation between a piece of content and the thing its correctness is judged against.
+    pos: verb
+    invariants:
+      - What a piece answers to is declared by its «veritoid⸱kind», not discovered afterwards.
+      - A piece may answer to more than one thing. An explanation answers to what it explains and to a reader.
+
+  better:
+    def: Agreeing better with what one answers to; what it consists of is declared per verisectorium.
+    pos: adjective
+    avoid:
+      more: more segments, more words, more checks are not better unless the declaration says so
+      done: a verisectorium is never done; it is only better or worse than it was
+    invariants:
+      - It is declared once for the verisectorium, and every kind inherits or refines it.
+      - It is what prioritizes work. A queue ordered by anything else is somebody's mood wearing a number.
+
+discussion:
+  - Why "answers to" rather than "truth". What people here have called branches of truth (true of the world; valid; lawful within a canon; faithful to a source; self-consistent) are each agreement with a different thing. One relation, with the other end declared, covers all of them without pretending a novel's world is true in the way a theorem is.
+  - Why "better" is in the root group. A verisectorium is defined by having a direction, not only by having content with honest marks. Without a declared better, nothing says which of two honest states is preferable, and work has no ordering but the clock.
+
+examples:
+  - AAT. Claims answering to logic under named hypotheses; better is stronger claims more firmly established.
+  - A formal specification. Rules answering to their own consistency and to the intent behind them; better is no conflicts, every rule decided and exercised.
+  - A novel's world. Facts answering to the world's own canon and to the author's intent; better is self-consistency and fidelity.
+
+working-notes:
+  - 'Open. Whether "better" is declared once per verisectorium or per kind. Lean: once, with kinds refining it, to be tested on AAT and on udon''s spec, which differ at the centre.'
+  - 'Open. The hard case for answers-to: pedagogy answers to two things at once (what it explains, and a reader), and the two can disagree. Lean: allow more than one, as the invariant says, and let the kind say how they combine.'
+  - 'Open. Whether "stated flatly" (see «theory⸱claim») belongs among this group''s invariants or only the theory regime''s. Lean: the regime''s.'
+  - Adjudicated against msc/notes 09 §1, 11 def-verisectorium, 13, 14.

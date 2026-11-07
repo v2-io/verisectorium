@@ -1,0 +1,31 @@
+term-group: [written, computed]
+status: provisional
+
+intro: |
+  Everything about a «veritoid» or a «segment» is either «WRITTEN» by an author or «COMPUTED» by the «store», and the line between them is what the rest of the model stands on. Content, «ground», «bounds|def/bound#bound», «claimed⸱level» and «references|def/reference#reference» are written, as are a segment's assembly and a «projection»'s members and order. Every «value», every attribute, whether each reference holds, and every roll-up are computed.
+
+terms:
+  written:
+    def: Set by an author, and changed only by a segment changeset.
+    pos: adjective
+    invariants:
+      - What is written is reconciled by the author, inside the changeset, at one instant.
+      - Nothing written is ever set by the store.
+
+  computed:
+    def: Produced by the store from what has been recorded, as of a state, and never set by anyone.
+    pos: adjective
+    invariants:
+      - The same recorded things, read in any order, give the same computed answer.
+      - Nothing computed is ever typed. A typed status word is a claim wearing a value's clothes.
+
+discussion:
+  - The whole discipline of "status is computed from recorded acts, never typed" is this line. Everything the sprint found wrong with hand-set status words follows from their being on the wrong side of it.
+  - 'Values are not the author''s to set: the moment a changeset is staged, every act that read what changed stops binding and the affected values fall; earning them back takes further acts, usually by other minds, in work time.'
+
+examples:
+  - An author rewrites a claim and affirms its description. Both are written. The claim's "independently re-derived" falls at once, and comes back only when a second mind re-derives the new text.
+
+working-notes:
+  - 'Open. Whether "recorded as done" (the acts) is a third kind beside written and computed, as the predecessor once suggested. Lean: acts are recorded, not written; the two-way line is between what an author sets and what the store derives, and acts are the store''s input, neither.'
+  - Adjudicated against msc/notes 09 §2.7 and §4.1, 11 def-written.
