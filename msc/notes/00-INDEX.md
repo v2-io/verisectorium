@@ -2,7 +2,7 @@
 
 *The files here are frozen copies of working documents from `~/src/aat-v3/preparations/` (and one from this repo's top level), renamed into one sequence on 2026-11-06. They are influx to `core/`, not part of it. The originals stay in aat-v3 under their old names for history; the copies here are the ones to cite from now on. Nothing in a copy was changed. Material about ASF as material (the sprint record, the label census, the missed-error case, Line A) stays in aat-v3 and is pointed at below.*
 
-*A note that has been fully superseded moves to `.archive/`. None has yet: each later file corrects the earlier ones only in part, and the index says which part.*
+*A note that has been fully superseded moves to `.archive/`. The two handoffs (15, 17) are there; every other note corrects the earlier ones only in part, and the index says which part.*
 
 | # | Created (local; first commit, or file birth where uncommitted) | File | What it is | Superseded in part by |
 |---|---|---|---|---|
@@ -20,9 +20,9 @@
 | 12 | 11-06 13:32 | `thoughts-math-heavy-model` | the claim as the thing needing structure (context, hypotheses, conclusion, derivation); strength as entailment; a dependency as a use; the one-word status as a computed display. Addendum: Joseph on why the claim is central and on the two regimes | — |
 | 13 | 11-06 14:04 | `thoughts-dsl` | core / pattern library / short store definitions; "every piece of content answers to something"; sketches for seven kinds of store; the Ash/Rowan lead. Joseph: "an excellent, superb higher-level abstraction" | — |
 | 14 | 11-06 14:40 | `joseph-on-provisional-promised-gaps` | Joseph verbatim: provisional, promised and present rows; gaps as a segment kind; the inbox in the core; one canonical projection always; the store true at its steady states | — (primary) |
-| 15 | 11-06 14:40 | `handoff-fable` | the Fable session's handoff: reading order, what is settled, what in 09/11 is known wrong, what is open. Stale in two places: the work was committed (`281ac5e`, `72eac51`); and the outline-as-provisional-skeleton was the session's own inference from 14, not Joseph's answer | — |
+| 15 | 11-06 14:40 | `.archive/handoff-fable` | the Fable session's handoff: reading order, what is settled, what in 09/11 is known wrong, what is open. Stale in two places: the work was committed (`281ac5e`, `72eac51`); and the outline-as-provisional-skeleton was the session's own inference from 14, not Joseph's answer | — |
 | 16 | 11-06 14:49 | `unasked-questions` | Joseph's last question to that session and the eleven questions it answered with, carved from the transcript; never on disk before | — |
-| 17 | 11-07 | `handoff-fable` | the founding session's handoff: reading order, what is settled, the open decisions in order, what no file says plainly | — |
+| 17 | 11-07 | `.archive/handoff-fable` | the founding session's handoff: reading order, what is settled, the open decisions in order, what no file says plainly | — |
 
 ## Still only in transcripts or elsewhere
 

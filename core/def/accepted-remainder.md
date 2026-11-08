@@ -25,7 +25,6 @@ An «atomic⸱changeset» is everything, writes and acts together, that takes th
 ## Examples
 
 - A root claim of AAT found to need an extra hypothesis. The finding is the perturbation; the rewrite of the claim, its derivation and its explanation, the re-derivation by a second mind, and the re-reading of every dependent are the atomic changeset; between those steps the frontier is what is owed; the next steady state is the first in which the claim has the hypothesis and every dependent agrees.
-- This repository's outline: its provisional rows and gap rows are its accepted remainder, declared as such at each commit.
 
 ## Working Notes
 
