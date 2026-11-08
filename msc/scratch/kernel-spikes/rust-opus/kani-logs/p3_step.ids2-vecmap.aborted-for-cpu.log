@@ -1,0 +1,88 @@
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+   Compiling kernel v0.1.0 (/Users/josephwecker-v2/src/verisectorium-wt/rust-opus/msc/scratch/kernel-spikes/rust)
+warning: trailing semicolon in macro used in expression position
+   --> src/proofs.rs:110:21
+    |
+110 |                     assert!(ceil[v] <= *tc)
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: macro invocations at the end of a block are treated as expressions
+    = note: to ignore the value produced by the macro, add a semicolon after the invocation of `assert`
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+    = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+    = note: `#[warn(semicolon_in_expressions_from_non_local_macros)]` (part of `#[warn(future_incompatible)]`) on by default
+    = note: this warning originates in the macro `assert` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+   --> src/proofs.rs:113:21
+    |
+113 |                     assert!(ceil[v] == Rung::Sketch)
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: macro invocations at the end of a block are treated as expressions
+    = note: to ignore the value produced by the macro, add a semicolon after the invocation of `assert`
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+    = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+    = note: this warning originates in the macro `assert` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+   --> src/proofs.rs:333:21
+    |
+333 |                     assert!(ceil[v] <= *tc)
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: macro invocations at the end of a block are treated as expressions
+    = note: to ignore the value produced by the macro, add a semicolon after the invocation of `assert`
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+    = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+    = note: this warning originates in the macro `assert` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+   --> src/proofs.rs:336:21
+    |
+336 |                     assert!(ceil[v] == Rung::Sketch)
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+[... 5490 lines of CBMC symbolic-execution trace elided for the commit ...]
+
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, (model::VeritoidId, state::Held)>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+Unwinding loop _RINvMs0_NtCsbMDO7qkU280_6kernel8smallmapINtB6_6VecMapNtNtB8_5model10VeritoidIdNtNtB8_5state4HeldE4findBP_EB8_.0 iteration 2 file src/smallmap.rs line 44 column 9 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&(model::VeritoidId, state::Held)> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, (model::VeritoidId, state::Held)>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+Unwinding loop _RINvMs0_NtCsbMDO7qkU280_6kernel8smallmapINtB6_6VecMapNtNtB8_5model10VeritoidIdNtNtB8_5state4HeldE4findBP_EB8_.0 iteration 3 file src/smallmap.rs line 44 column 9 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&(model::VeritoidId, state::Held)> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, (model::VeritoidId, state::Held)>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+Unwinding loop _RINvMs0_NtCsbMDO7qkU280_6kernel8smallmapINtB6_6VecMapNtNtB8_5model10VeritoidIdNtNtB8_5state4HeldE4findBP_EB8_.0 iteration 4 file src/smallmap.rs line 44 column 9 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&(model::VeritoidId, state::Held)> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, (model::VeritoidId, state::Held)>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+Unwinding loop _RINvMs0_NtCsbMDO7qkU280_6kernel8smallmapINtB6_6VecMapNtNtB8_5model10VeritoidIdNtNtB8_5state4HeldE4findBP_EB8_.0 iteration 5 file src/smallmap.rs line 44 column 9 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&(model::VeritoidId, state::Held)> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, (model::VeritoidId, state::Held)>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+Unwinding loop _RINvMs0_NtCsbMDO7qkU280_6kernel8smallmapINtB6_6VecMapNtNtB8_5model10VeritoidIdNtNtB8_5state4HeldE4findBP_EB8_.0 iteration 6 file src/smallmap.rs line 44 column 9 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&(model::VeritoidId, state::Held)> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, (model::VeritoidId, state::Held)>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+Unwinding loop _RINvMs0_NtCsbMDO7qkU280_6kernel8smallmapINtB6_6VecMapNtNtB8_5model10VeritoidIdNtNtB8_5state4HeldE4findBP_EB8_.0 iteration 7 file src/smallmap.rs line 44 column 9 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&(model::VeritoidId, state::Held)> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, (model::VeritoidId, state::Held)>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+Not unwinding loop _RINvMs0_NtCsbMDO7qkU280_6kernel8smallmapINtB6_6VecMapNtNtB8_5model10VeritoidIdNtNtB8_5state4HeldE4findBP_EB8_.0 iteration 8 file src/smallmap.rs line 44 column 9 function smallmap::VecMap::<model::VeritoidId, state::Held>::find::<model::VeritoidId> thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/result.rs line 594 column 5 function std::result::Result::<usize, usize>::is_ok thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/control_flow.rs line 116 column 15 function <std::ops::ControlFlow<&model::VeritoidId> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs line 2490 column 21 function <std::slice::Iter<'_, (model::VeritoidId, model::Reference)> as std::iter::Iterator>::try_fold::<(), {closure@std::iter::adapters::map::map_try_fold<'_, &(model::VeritoidId, model::Reference), &model::VeritoidId, (), std::ops::ControlFlow<&model::VeritoidId>, {closure@src/smallmap.rs:99:33: 99:41}, {closure@std::iter::Iterator::find::check<&model::VeritoidId, &mut {closure@src/proofs.rs:193:61: 193:64}>::{closure#0}}>::{closure#0}}, std::ops::ControlFlow<&model::VeritoidId>> thread 0
+Unwinding loop _RINvYINtNtNtCsjpISKbLQvZs_4core5slice4iter4IterTNtNtCsbMDO7qkU280_6kernel5model10VeritoidIdNtBM_9ReferenceEENtNtNtNtBa_4iter6traits8iterator8Iterator8try_folduNCINvNtNtB1O_8adapters3map12map_try_foldRBJ_RBK_uINtNtNtBa_3ops12control_flow11ControlFlowB3f_ENCNvMs0_NtBO_8smallmapINtB4c_6VecMapBK_B1r_E4keys0NCINvNvB1I_4find5checkB3f_QNCNCNCNvNtBO_6proofs13naive_acyclic000E0E0B3k_EBO_.0 iteration 6 file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs line 2489 column 9 function <std::slice::Iter<'_, (model::VeritoidId, model::Reference)> as std::iter::Iterator>::try_fold::<(), {closure@std::iter::adapters::map::map_try_fold<'_, &(model::VeritoidId, model::Reference), &model::VeritoidId, (), std::ops::ControlFlow<&model::VeritoidId>, {closure@src/smallmap.rs:99:33: 99:41}, {closure@std::iter::Iterator::find::check<&model::VeritoidId, &mut {closure@src/proofs.rs:193:61: 193:64}>::{closure#0}}>::{closure#0}}, std::ops::ControlFlow<&model::VeritoidId>> thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file library/kani_core/src/models.rs line 203 column 17 function <usize as kani::rustc_intrinsics::ToISize>::to_isize thread 0
+# Bounded check started (IDS = 2, smallmap::VecMap), aborted for CPU after ~10 min at the coordinator's request, still in CBMC symbolic execution; result unknown.

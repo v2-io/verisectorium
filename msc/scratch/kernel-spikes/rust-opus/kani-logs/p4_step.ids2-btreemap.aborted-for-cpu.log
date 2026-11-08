@@ -1,0 +1,88 @@
+Kani Rust Verifier 0.68.0 (cargo plugin)
+CBMC 6.11.0
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on shared package cache
+    Blocking waiting for file lock on build directory
+   Compiling kernel v0.1.0 (/Users/josephwecker-v2/src/verisectorium-wt/rust-opus/msc/scratch/kernel-spikes/rust)
+warning: trailing semicolon in macro used in expression position
+   --> src/proofs.rs:111:21
+    |
+111 |                     assert!(ceil[v] <= *tc)
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: macro invocations at the end of a block are treated as expressions
+    = note: to ignore the value produced by the macro, add a semicolon after the invocation of `assert`
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+    = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+    = note: `#[warn(semicolon_in_expressions_from_non_local_macros)]` (part of `#[warn(future_incompatible)]`) on by default
+    = note: this warning originates in the macro `assert` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+   --> src/proofs.rs:114:21
+    |
+114 |                     assert!(ceil[v] == Rung::Sketch)
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: macro invocations at the end of a block are treated as expressions
+    = note: to ignore the value produced by the macro, add a semicolon after the invocation of `assert`
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+    = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+    = note: this warning originates in the macro `assert` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+   --> src/proofs.rs:334:21
+    |
+334 |                     assert!(ceil[v] <= *tc)
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: macro invocations at the end of a block are treated as expressions
+    = note: to ignore the value produced by the macro, add a semicolon after the invocation of `assert`
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+    = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+    = note: this warning originates in the macro `assert` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+
+[... 10834 lines of CBMC symbolic-execution trace elided for the commit ...]
+
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&model::VeritoidId> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, model::VeritoidId>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+Not unwinding loop _RINvMs0_NtNtNtCscluX5Yn0uaC_5alloc11collections5btree6searchINtNtB8_4node7NodeRefNtNtBZ_6marker5ImmutNtNtCsbMDO7qkU280_6kernel5model10VeritoidIdNtNtB1F_5state4HeldNtB1j_14LeafOrInternalE14find_key_indexB1B_EB1F_.0 iteration 5 file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/collections/btree/search.rs line 225 column 9 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/collections/btree/search.rs line 203 column 15 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::search_node::<model::VeritoidId> thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/collections/btree/node.rs line 1687 column 15 function alloc::collections::btree::node::Handle::<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>, alloc::collections::btree::node::marker::Edge>::force thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::search_tree::<model::VeritoidId> thread 0
+Unwinding loop _RINvMs_NtNtNtCscluX5Yn0uaC_5alloc11collections5btree6searchINtNtB7_4node7NodeRefNtNtBY_6marker5ImmutNtNtCsbMDO7qkU280_6kernel5model10VeritoidIdNtNtB1E_5state4HeldNtB1i_14LeafOrInternalE11search_treeB1A_EB1E_.0 iteration 4 file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/collections/btree/search.rs line 57 column 9 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::search_tree::<model::VeritoidId> thread 0
+aborting path on assume(false) at file library/kani_core/src/models.rs line 203 column 17 function <usize as kani::rustc_intrinsics::ToISize>::to_isize thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function <usize as kani::rustc_intrinsics::ToISize>::to_isize thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function <usize as kani::rustc_intrinsics::ToISize>::to_isize thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&model::VeritoidId> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, model::VeritoidId>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+Unwinding loop _RINvMs0_NtNtNtCscluX5Yn0uaC_5alloc11collections5btree6searchINtNtB8_4node7NodeRefNtNtBZ_6marker5ImmutNtNtCsbMDO7qkU280_6kernel5model10VeritoidIdNtNtB1F_5state4HeldNtB1j_14LeafOrInternalE14find_key_indexB1B_EB1F_.0 iteration 1 file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/collections/btree/search.rs line 225 column 9 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&model::VeritoidId> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, model::VeritoidId>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+Unwinding loop _RINvMs0_NtNtNtCscluX5Yn0uaC_5alloc11collections5btree6searchINtNtB8_4node7NodeRefNtNtBZ_6marker5ImmutNtNtCsbMDO7qkU280_6kernel5model10VeritoidIdNtNtB1F_5state4HeldNtB1j_14LeafOrInternalE14find_key_indexB1B_EB1F_.0 iteration 2 file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/collections/btree/search.rs line 225 column 9 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&model::VeritoidId> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, model::VeritoidId>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+Unwinding loop _RINvMs0_NtNtNtCscluX5Yn0uaC_5alloc11collections5btree6searchINtNtB8_4node7NodeRefNtNtBZ_6marker5ImmutNtNtCsbMDO7qkU280_6kernel5model10VeritoidIdNtNtB1F_5state4HeldNtB1j_14LeafOrInternalE14find_key_indexB1B_EB1F_.0 iteration 3 file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/collections/btree/search.rs line 225 column 9 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&model::VeritoidId> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, model::VeritoidId>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+Unwinding loop _RINvMs0_NtNtNtCscluX5Yn0uaC_5alloc11collections5btree6searchINtNtB8_4node7NodeRefNtNtBZ_6marker5ImmutNtNtCsbMDO7qkU280_6kernel5model10VeritoidIdNtNtB1F_5state4HeldNtB1j_14LeafOrInternalE14find_key_indexB1B_EB1F_.0 iteration 4 file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/collections/btree/search.rs line 225 column 9 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+aborting path on assume(false) at file library/kani/src/lib.rs line 57 column 1 function kani::mem::cbmc::same_allocation thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs line 2869 column 15 function <std::option::Option<&model::VeritoidId> as std::ops::Try>::branch thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs line 80 column 17 function <std::iter::Enumerate<std::slice::Iter<'_, model::VeritoidId>> as std::iter::Iterator>::next thread 0
+aborting path on assume(false) at file src/lib.rs line 0 column 0 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+Not unwinding loop _RINvMs0_NtNtNtCscluX5Yn0uaC_5alloc11collections5btree6searchINtNtB8_4node7NodeRefNtNtBZ_6marker5ImmutNtNtCsbMDO7qkU280_6kernel5model10VeritoidIdNtNtB1F_5state4HeldNtB1j_14LeafOrInternalE14find_key_indexB1B_EB1F_.0 iteration 5 file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/collections/btree/search.rs line 225 column 9 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<model::VeritoidId> thread 0
+aborting path on assume(false) at file /Users/runner/.rustup/toolchains/nightly-2026-08-21-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/collections/btree/search.rs line 203 column 15 function alloc::collections::btree::search::<impl alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut<'_>, model::VeritoidId, state::Held, alloc::collections::btree::node::marker::LeafOrInternal>>::search_node::<model::VeritoidId> thread 0
+# Bounded check started (IDS = 2, std BTreeMap), aborted for CPU after ~18 min at the coordinator's request, still in CBMC symbolic execution; result unknown.
