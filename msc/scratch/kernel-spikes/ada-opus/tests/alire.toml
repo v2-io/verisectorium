@@ -1,0 +1,24 @@
+name = "kernel_tests"
+description = "Tests for the v2 kernel spike"
+version = "0.1.0-dev"
+
+authors = ["Your Name"]
+maintainers = ["Your Name <example@example.com>"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+executables = ["kernel_tests", "kernel_cli"]
+
+[[depends-on]]
+kernel = "*"
+
+[[pins]]
+kernel = { path='..' }
+
+[[depends-on]]
+aunit = "^26.0.0"
+
+[build-switches]
+"*".ada_version = "Ada2022"
+"*".contracts = "Yes"

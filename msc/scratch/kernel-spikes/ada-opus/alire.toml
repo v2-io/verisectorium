@@ -1,0 +1,22 @@
+name = "kernel"
+description = "v2 kernel spike (see KERNEL-SPEC.md)"
+version = "0.1.0-dev"
+
+authors = ["Your Name"]
+maintainers = ["Your Name <example@example.com>"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+[[depends-on]]
+gnatprove = "=16.1.0"
+
+[build-switches]
+"*".ada_version = "Ada2022"
+"*".contracts = "Yes"
+
+# `alr test` (run here) builds and runs the AUnit suite in tests/.
+[[actions]]
+type = "test"
+command = ["alr", "run", "kernel_tests"]
+directory = "tests"
