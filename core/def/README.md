@@ -8,4 +8,4 @@ One file per term, `<term>.md` with `-` where the term has `⸱`. There are no g
 
 **References** everywhere in core: `«term»`, or `«wording|def/term»` where the wording differs from the term enough to be ambiguous. The wording may be singular or plural (per `pl`) and possessive (`«veritoid's»`), as the sentence requires. A bare `«term»` is valid only while exactly one def defines it or the outline promises it. A subtype is `‹sub›` beside its «noun» on the same line, or alone when unique across the lexicon; `«sub⸱noun»` is its full name and always valid. Inside tables the pipe is escaped: `«…\|def/…»`.
 
-`bin/defs check` verifies all of the above and that the outline's `def` column matches the files. `bin/defs dot`, `overview`, `terms` draw and read the terms in outline order. History of changes to core is in `core/log.yaml` and the commits, never in these files.
+`bin/defs check` verifies all of the above and that the outline's `def` column matches the files. `bin/defs dot`, `overview`, `terms` draw and read the terms in outline order. History of changes to core is in `core/log.kdl` and the commits, never in these files.
