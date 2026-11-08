@@ -1,28 +1,20 @@
-//! Placeholder crate for the kernel spike (see ../KERNEL-SPEC.md).
-//! `saturating_add` exists only to show the build, a unit test and a
-//! property test working; replace it freely.
+//! The smallest kernel of a verisectorium engine (spec: ../KERNEL-SPEC.md).
+//!
+//! An append-only log of records (segment changesets and acts); the state as of
+//! any prefix of it; and five things computed from a state, never stored:
+//! `binds`, `position`, `ceiling`, `frontier`, `steady`. Where this crate
+//! departs from the spec, the departure and its reason are in ../account.md.
 
-/// `x + y`, or `u32::MAX` when that sum would overflow.
-pub fn saturating_add(x: u32, y: u32) -> u32 {
-    x.saturating_add(y)
-}
+pub mod codec;
+pub mod example;
+pub mod log;
+pub mod model;
+pub mod render;
+pub mod state;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use proptest::prelude::*;
+pub use log::Log;
+pub use model::*;
+pub use state::{fold, Held, Outcome, Owed, Refusal, State};
 
-    #[test]
-    fn adds_and_saturates() {
-        assert_eq!(saturating_add(2, 3), 5);
-        assert_eq!(saturating_add(u32::MAX, 1), u32::MAX);
-    }
-
-    proptest! {
-        #[test]
-        fn matches_widened_sum(x: u32, y: u32) {
-            let wide = u64::from(x) + u64::from(y);
-            prop_assert_eq!(u64::from(saturating_add(x, y)), wide.min(u64::from(u32::MAX)));
-        }
-    }
-}
+#[cfg(kani)]
+mod proofs;
