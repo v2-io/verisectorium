@@ -8,7 +8,7 @@ licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
 tags = []
 
-executables = ["kernel_tests"]
+executables = ["kernel_tests", "kernel_cli"]
 
 [[depends-on]]
 kernel = "*"
