@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|---|
 | setup | Opus 5.5 | `spike/kernel-base` | 141,772 | 71 | 8m 16s | done: toolchain + hello-worlds |
 | ada-opus | Opus 5.5 | `spike/kernel-ada-opus` | 293,422 | 91 | 49m 35s | done; 9 commits; 7/8 proved, P8 tested |
-| rust-fable | Fable 5.1 | `spike/kernel-rust-fable` | 188,507 (interim) | 44 (interim) | 23m 30s (interim) | running; waiting on Kani, told to stop |
+| rust-fable | Fable 5.1 | `spike/kernel-rust-fable` | 203,570 | 58 | 58m 24s | done; 2 commits; all 8 tested (proptest), nothing proved; mutation 49/80 caught, 10 missed all in display code; Kani no verdict |
 | rust-opus | Opus 5.5 | `spike/kernel-rust-opus` | 354,371 | 180 | 58m 12s | done; 5 commits; all 8 tested (1024 generated logs vs naive oracle, 20/20 seeded bugs caught), nothing proved; 8 Kani runs aborted for CPU |
 | ada-fable | Fable 5.1 | `spike/kernel-ada-fable` | — | — | — | running |
 
