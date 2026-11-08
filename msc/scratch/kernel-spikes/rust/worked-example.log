@@ -1,0 +1,12 @@
+cs T A 3 c 1 rederived 0 d 1 rederived 1 c drafted 1 e 1 drafted 1 c drafted 1
+cs U C 1 u 1 rederived 1 c rederived 1
+act B rederive check rederived 2 c 1 d 1 2 c d
+act A draft-review check drafted 1 e 1 1 e
+act B rederive check rederived 1 u 1 1 u
+cs T A 3 c 2 rederived 0 d 2 rederived 1 c drafted 2 e 1 drafted 1 c drafted 1
+act A affirm affirm 2 c 2 e 1 1 e
+act B rederive check rederived 2 c 2 d 2 2 c d
+cs T A 3 c 2 rederived 0 d 3 rederived 1 c drafted 2 e 1 drafted 1 c drafted 1
+act B rederive check rederived 2 c 2 d 3 2 c d
+cs U C 1 u 2 rederived 1 c rederived 2
+act B rederive check rederived 1 u 2 1 u

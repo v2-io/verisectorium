@@ -11,6 +11,7 @@ pub mod codec;
 pub mod example;
 pub mod log;
 pub mod model;
+pub mod smallmap;
 #[cfg(not(kani))]
 pub mod render;
 pub mod state;

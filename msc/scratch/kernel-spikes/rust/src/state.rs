@@ -6,7 +6,6 @@
 //! by `apply` and relied on by `ceilings`: the reference graph among held
 //! veritoids is acyclic.
 
-use std::collections::{BTreeMap, BTreeSet};
 use std::fmt;
 
 use crate::model::*;
@@ -72,7 +71,7 @@ impl fmt::Display for Owed {
 /// The store as of one point in its log.
 #[derive(Debug, Clone, PartialEq, Eq, Default)]
 pub struct State {
-    veritoids: BTreeMap<VeritoidId, Held>,
+    veritoids: Map<VeritoidId, Held>,
     /// Every act that took effect, with its log index.
     acts: Vec<(usize, Act)>,
     /// Every record that did not take effect, with its log index and why.
@@ -80,7 +79,7 @@ pub struct State {
     /// The references every `(id, version)` ever applied was written with.
     /// Computed from the log like everything else; it is what lets the kernel
     /// refuse a reused version (`Refusal::VersionReused`).
-    written: BTreeMap<(VeritoidId, Version), BTreeMap<VeritoidId, Reference>>,
+    written: Map<(VeritoidId, Version), Map<VeritoidId, Reference>>,
     /// How many records have been folded.
     folded: usize,
 }
@@ -97,7 +96,7 @@ pub fn fold(records: &[Record]) -> State {
 impl State {
     // ------------------------------------------------------------ reading
 
-    pub fn veritoids(&self) -> &BTreeMap<VeritoidId, Held> {
+    pub fn veritoids(&self) -> &Map<VeritoidId, Held> {
         &self.veritoids
     }
     pub fn acts(&self) -> &[(usize, Act)] {
@@ -113,8 +112,20 @@ impl State {
         self.veritoids.get(id).map(|h| h.written.version)
     }
     /// The ids a segment currently holds.
-    pub fn segment_members(&self, seg: &SegmentId) -> BTreeSet<VeritoidId> {
+    pub fn segment_members(&self, seg: &SegmentId) -> Set<VeritoidId> {
         self.veritoids.iter().filter(|(_, h)| &h.segment == seg).map(|(i, _)| i.clone()).collect()
+    }
+
+    /// Proof harnesses only: a state built from parts rather than by folding,
+    /// so that a harness can start from an *arbitrary* pre-state (a superset
+    /// of the reachable ones) and prove a one-step property for all of them.
+    #[cfg(kani)]
+    pub(crate) fn from_parts(
+        veritoids: Map<VeritoidId, Held>,
+        acts: Vec<(usize, Act)>,
+        written: Map<(VeritoidId, Version), Map<VeritoidId, Reference>>,
+    ) -> State {
+        State { veritoids, acts, refusals: Vec::new(), written, folded: 0 }
     }
 
     // ------------------------------------------------------------ folding
@@ -188,8 +199,8 @@ impl State {
 
     /// Positions of every held veritoid: the greatest rung among binding
     /// `check` acts that concern it; `sketch` if none.
-    pub fn positions(&self) -> BTreeMap<VeritoidId, Rung> {
-        let mut pos: BTreeMap<VeritoidId, Rung> =
+    pub fn positions(&self) -> Map<VeritoidId, Rung> {
+        let mut pos: Map<VeritoidId, Rung> =
             self.veritoids.keys().map(|k| (k.clone(), Rung::BOTTOM)).collect();
         for (_, a) in &self.acts {
             if let ActKind::Check { rung } = a.kind
@@ -214,16 +225,16 @@ impl State {
     /// ceiling(v) = min(position(v), min over references r of ceiling(r.target)),
     /// where a reference to a target that is not held contributes `sketch`
     /// (nothing can rest on what is not there).
-    pub fn ceilings(&self) -> BTreeMap<VeritoidId, Rung> {
+    pub fn ceilings(&self) -> Map<VeritoidId, Rung> {
         let pos = self.positions();
-        let mut memo: BTreeMap<VeritoidId, Rung> = BTreeMap::new();
+        let mut memo: Map<VeritoidId, Rung> = Map::new();
         for id in self.veritoids.keys() {
             self.ceiling_into(id, &pos, &mut memo);
         }
         memo
     }
 
-    fn ceiling_into(&self, id: &VeritoidId, pos: &BTreeMap<VeritoidId, Rung>, memo: &mut BTreeMap<VeritoidId, Rung>) -> Rung {
+    fn ceiling_into(&self, id: &VeritoidId, pos: &Map<VeritoidId, Rung>, memo: &mut Map<VeritoidId, Rung>) -> Rung {
         if let Some(c) = memo.get(id) {
             return *c;
         }
@@ -261,9 +272,9 @@ impl State {
     }
 
     /// (4) frontier(state): every owed item.
-    pub fn frontier(&self) -> BTreeSet<Owed> {
+    pub fn frontier(&self) -> Set<Owed> {
         let ceil = self.ceilings();
-        let mut out = BTreeSet::new();
+        let mut out = Set::new();
         for (v, h) in &self.veritoids {
             if h.written.claimed > ceil[v] {
                 out.insert(Owed::Overclaim { v: v.clone() });
@@ -289,13 +300,13 @@ impl State {
 
 /// A cycle in the reference graph among `held` (edges only to held targets),
 /// as a path whose first id is repeated at the end; `None` if acyclic.
-pub fn find_cycle(held: &BTreeMap<VeritoidId, Held>) -> Option<Vec<VeritoidId>> {
+pub fn find_cycle(held: &Map<VeritoidId, Held>) -> Option<Vec<VeritoidId>> {
     #[derive(Clone, Copy, PartialEq)]
     enum Mark {
         Open,
         Done,
     }
-    let mut mark: BTreeMap<&VeritoidId, Mark> = BTreeMap::new();
+    let mut mark: Map<&VeritoidId, Mark> = Map::new();
     for root in held.keys() {
         if mark.contains_key(root) {
             continue;

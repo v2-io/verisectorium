@@ -11,6 +11,45 @@
 use crate::model::Record;
 use crate::state::{fold, Outcome, State};
 
+/// An append-only log.
+///
+/// P2, as far as the compiler checks it. Each `compile_fail` block below is
+/// a doctest that passes only if the snippet is *rejected*. Each is paired with
+/// a block that compiles and differs only in the violating line, so that a
+/// typo cannot make a rejection vacuous.
+///
+/// Reading is fine:
+/// ```
+/// let log = kernel::Log::new();
+/// let n = log.records().len();
+/// let _ = (n, log.state().steady());
+/// ```
+/// The record vector is private:
+/// ```compile_fail
+/// let mut log = kernel::Log::new();
+/// log.records.clear();
+/// ```
+/// Records are reachable only through a shared slice:
+/// ```compile_fail
+/// let log = kernel::Log::new();
+/// let r: &mut [kernel::Record] = log.records();
+/// ```
+/// The head state is reachable only by shared reference:
+/// ```compile_fail
+/// let log = kernel::Log::new();
+/// let s: &mut kernel::State = log.state();
+/// ```
+/// A state cannot be advanced except by folding records into it:
+/// ```
+/// let mut s = kernel::State::default();
+/// s = kernel::fold(&[]);
+/// let _ = s;
+/// ```
+/// ```compile_fail
+/// let mut s = kernel::State::default();
+/// let r = kernel::Record::Changeset(kernel::SegmentChangeset::new("T", "A"));
+/// s.apply(&r);
+/// ```
 #[derive(Debug, Clone, PartialEq, Eq, Default)]
 pub struct Log {
     records: Vec<Record>,

@@ -4,7 +4,13 @@
 //! computed; the computed things (binds, position, ceiling, frontier, steady)
 //! live in `state.rs` and are never stored.
 
-use std::collections::{BTreeMap, BTreeSet};
+/// The kernel's map and set: std's B-trees, except under `cargo kani`, where
+/// they are the sorted-`Vec` versions in `smallmap.rs` (see that file and
+/// account.md, proof section).
+#[cfg(not(kani))]
+pub use std::collections::{BTreeMap as Map, BTreeSet as Set};
+#[cfg(kani)]
+pub use crate::smallmap::{VecMap as Map, VecSet as Set};
 use std::fmt;
 
 /// The one ladder of the one dimension: `sketch < drafted < checked < rederived`.
@@ -106,7 +112,7 @@ pub struct Reference {
 pub struct Written {
     pub version: Version,
     pub claimed: Rung,
-    pub references: BTreeMap<VeritoidId, Reference>,
+    pub references: Map<VeritoidId, Reference>,
 }
 
 /// A whole new written state of one segment, replacing the old one at one
@@ -118,7 +124,7 @@ pub struct SegmentChangeset {
     /// Who wrote it. Not in the spec's tuple; carried because an affirmation is
     /// "by the segment's author" and the record should say who that was.
     pub author: String,
-    pub veritoids: BTreeMap<VeritoidId, Written>,
+    pub veritoids: Map<VeritoidId, Written>,
 }
 
 /// What kind of act. The spec's tuple gives every act a rung; an affirmation
@@ -143,8 +149,8 @@ pub struct Act {
     pub actor: String,
     pub criterion: String,
     pub kind: ActKind,
-    pub reads: BTreeMap<VeritoidId, Version>,
-    pub concerns: BTreeSet<VeritoidId>,
+    pub reads: Map<VeritoidId, Version>,
+    pub concerns: Set<VeritoidId>,
 }
 
 /// One entry of the log.
@@ -167,7 +173,7 @@ pub fn sid(s: &str) -> SegmentId {
 
 impl Written {
     pub fn new(version: u64, claimed: Rung) -> Written {
-        Written { version: Version(version), claimed, references: BTreeMap::new() }
+        Written { version: Version(version), claimed, references: Map::new() }
     }
     #[cfg(not(kani))]
     /// Builder: add a reference to `target`, needed at `needed`, written against `seen`.
@@ -180,7 +186,7 @@ impl Written {
 #[cfg(not(kani))]
 impl SegmentChangeset {
     pub fn new(segment: &str, author: &str) -> SegmentChangeset {
-        SegmentChangeset { segment: sid(segment), author: author.to_string(), veritoids: BTreeMap::new() }
+        SegmentChangeset { segment: sid(segment), author: author.to_string(), veritoids: Map::new() }
     }
     pub fn with(mut self, id: &str, w: Written) -> SegmentChangeset {
         self.veritoids.insert(vid(id), w);
@@ -192,13 +198,13 @@ impl SegmentChangeset {
 impl Act {
     /// A check at `rung` reading `reads` and attesting all of them.
     pub fn check(actor: &str, criterion: &str, rung: Rung, reads: &[(&str, u64)]) -> Act {
-        let reads: BTreeMap<_, _> = reads.iter().map(|(i, v)| (vid(i), Version(*v))).collect();
+        let reads: Map<_, _> = reads.iter().map(|(i, v)| (vid(i), Version(*v))).collect();
         let concerns = reads.keys().cloned().collect();
         Act { actor: actor.into(), criterion: criterion.into(), kind: ActKind::Check { rung }, reads, concerns }
     }
     /// An affirmation that `subject@version` is still right against the other reads.
     pub fn affirmation(actor: &str, criterion: &str, subject: (&str, u64), against: &[(&str, u64)]) -> Act {
-        let mut reads: BTreeMap<_, _> = against.iter().map(|(i, v)| (vid(i), Version(*v))).collect();
+        let mut reads: Map<_, _> = against.iter().map(|(i, v)| (vid(i), Version(*v))).collect();
         reads.insert(vid(subject.0), Version(subject.1));
         let concerns = [vid(subject.0)].into_iter().collect();
         Act { actor: actor.into(), criterion: criterion.into(), kind: ActKind::Affirmation, reads, concerns }
