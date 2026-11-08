@@ -66,6 +66,55 @@ package Kernel.Store with SPARK_Mode => On is
    end record;
 
    ---------------------------------------------------------------------
+   --  Canonical records
+   ---------------------------------------------------------------------
+
+   --  Bounded arrays have slots past their counts.  Nothing the kernel
+   --  computes reads them, but equality of values does, so every record is
+   --  stored with those slots reset: equal meaning is then equal value,
+   --  which is what replay (P8) compares.
+
+   function Canonical (R : Reference_Array; N : Ref_Count)
+      return Reference_Array
+   is ([for I in Ref_Index => (if I <= N then R (I) else (others => <>))]);
+
+   function Canonical (It : Item) return Item is
+     ((Id       => It.Id,
+       Ver      => It.Ver,
+       Claimed  => It.Claimed,
+       N_Refs   => It.N_Refs,
+       Refs     => Canonical (It.Refs, It.N_Refs),
+       Affirmed => It.Affirmed));
+
+   function Canonical (CS : Changeset) return Changeset is
+     ((Author  => CS.Author,
+       Segment => CS.Segment,
+       N_Items => CS.N_Items,
+       Items   =>
+         [for I in Item_Index =>
+            (if I <= CS.N_Items then Canonical (CS.Items (I))
+             else (others => <>))]));
+
+   function Canonical (A : Act) return Act is
+     ((Actor     => A.Actor,
+       Criterion => A.Criterion,
+       Kind      => A.Kind,
+       N_Reads   => A.N_Reads,
+       Reads     =>
+         [for I in Read_Index =>
+            (if I <= A.N_Reads then A.Reads (I) else (others => <>))],
+       Level     => A.Level));
+
+   --  A record keeps only the payload its kind uses.
+   function Canonical (E : Log_Entry) return Log_Entry is
+     ((Kind   => E.Kind,
+       CS     => (if E.Kind = Changeset_Record then Canonical (E.CS)
+                  else (others => <>)),
+       A      => (if E.Kind = Act_Record then Canonical (E.A)
+                  else (others => <>)),
+       Result => E.Result));
+
+   ---------------------------------------------------------------------
    --  Applying a changeset to a table
    ---------------------------------------------------------------------
 
@@ -108,7 +157,7 @@ package Kernel.Store with SPARK_Mode => On is
                 and then New_Table'Result (V)
                          = To_Veritoid (CS.Segment, CS.Items (I)))
            elsif In_Segment (T, CS.Segment, V) then
-             not New_Table'Result (V).Present
+             New_Table'Result (V) = (others => <>)
            else New_Table'Result (V) = T (V)));
 
    --  "The changeset changed or removed (V, its current version)."
@@ -256,9 +305,10 @@ package Kernel.Store with SPARK_Mode => On is
    with Post => Valid (Empty_Store'Result)
                 and then Length (Empty_Store'Result.L) = 0;
 
-   --  Append one record.  P2: the old records are untouched and the log
-   --  grows by exactly the new one (a refusal included), or, if the log is
-   --  full, nothing changes and Log_Full is reported.
+   --  Append one record, in canonical form.  P2: the old records are
+   --  untouched and the log grows by exactly the new one (a refusal
+   --  included), or, if the log is full, nothing changes and Log_Full is
+   --  reported.
    procedure Append
      (St     : in out Store;
       Kind   : Record_Kind;
@@ -276,12 +326,15 @@ package Kernel.Store with SPARK_Mode => On is
           else
             Length (St.L) = Length (St.L'Old) + 1
             and then Same_Prefix (St.L, St.L'Old, Length (St.L'Old))
-            and then Get (St.L, Length (St.L)).Kind = Kind
-            and then Get (St.L, Length (St.L)).CS = CS
-            and then Get (St.L, Length (St.L)).A = A
-            and then Get (St.L, Length (St.L)).Result = Result
-            and then Result = Try (St'Old.Cur, Kind, CS, A).Result
-            and then St.Cur = Try (St'Old.Cur, Kind, CS, A).Next);
+            and then Same_Entry
+                       (Get (St.L, Length (St.L)),
+                        Canonical
+                          (Log_Entry'(Kind => Kind, CS => CS, A => A,
+                                      Result => Result)))
+            and then Result
+                     = Try (St'Old.Cur, Kind,
+                            Get (St.L, Length (St.L)).CS,
+                            Get (St.L, Length (St.L)).A).Result);
 
    --  Build a log from records read back from a file, keeping each
    --  record's recorded result.  Used by replay (P8).
@@ -293,7 +346,7 @@ package Kernel.Store with SPARK_Mode => On is
         else
           Ok and then Length (L) = Length (L'Old) + 1
           and then Same_Prefix (L, L'Old, Length (L'Old))
-          and then Get (L, Length (L)) = E);
+          and then Same_Entry (Get (L, Length (L)), Canonical (E)));
 
    ---------------------------------------------------------------------
    --  P3, P4, P5

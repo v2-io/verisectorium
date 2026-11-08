@@ -29,12 +29,12 @@ package body Kernel.Store with SPARK_Mode => On is
    begin
       for V in Veritoid_Id loop
          if In_Segment (T, CS.Segment, V) then
-            Result (V).Present := False;
+            Result (V) := (others => <>);
          end if;
          pragma Loop_Invariant
            (for all W in 1 .. V =>
               (if In_Segment (T, CS.Segment, W)
-               then not Result (W).Present
+               then Result (W) = (others => <>)
                else Result (W) = T (W)));
          pragma Loop_Invariant
            (for all W in V + 1 .. Max_Veritoids => Result (W) = T (W));
@@ -50,7 +50,7 @@ package body Kernel.Store with SPARK_Mode => On is
            (for all W in Veritoid_Id =>
               (if not (for some J in 1 .. I => CS.Items (J).Id = W) then
                  (if In_Segment (T, CS.Segment, W)
-                  then not Result (W).Present
+                  then Result (W) = (others => <>)
                   else Result (W) = T (W))));
       end loop;
       return Result;
@@ -184,17 +184,20 @@ package body Kernel.Store with SPARK_Mode => On is
       Old_L : constant Log := St.L with Ghost;
       N     : constant Natural := St.L.Len;
       TR    : Try_Result;
+      E     : Log_Entry;
    begin
       if N = Max_Log then
          Result := Log_Full;
          return;
       end if;
 
-      TR := Try (St.Cur, Kind, CS, A);
+      E := Canonical (Log_Entry'(Kind => Kind, CS => CS, A => A,
+                                 Result => Accepted));
+      TR := Try (St.Cur, Kind, E.CS, E.A);
       Result := TR.Result;
+      E.Result := TR.Result;
       St.L.Len := N + 1;
-      St.L.Items (N + 1) :=
-        (Kind => Kind, CS => CS, A => A, Result => TR.Result);
+      St.L.Items (N + 1) := E;
 
       Lemma_Prefix (St.L, Old_L, N);
       pragma Assert (Same (State_At (St.L, N), St.Cur));
@@ -208,7 +211,7 @@ package body Kernel.Store with SPARK_Mode => On is
          return;
       end if;
       L.Len := L.Len + 1;
-      L.Items (L.Len) := E;
+      L.Items (L.Len) := Canonical (E);
       Ok := True;
    end Push;
 
