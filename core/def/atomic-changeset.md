@@ -41,6 +41,6 @@ An «atomic⸱changeset» is everything, writes and acts together, that takes th
 ## Working Notes
 
 - Intro, discussion and examples shared verbatim with former group-mates (perturbation, frontier, accepted⸱remainder); to be rewritten for this term alone when adjudicated.
-- Open. Whether the frontier's four kinds of item are complete. The list is from working one example.
+- From the kernel spikes: whether a refused write is recorded in the log or only reported is a decision the four kernels split on two against two; the reasons and a lean are under «segment⸱changeset».
 - Open. What an agent will do to make the frontier empty: affirmations and accepted remainders are both cheap exits, and any marker of "done" becomes a target.
 - Adjudicated against msc/notes 05 (22:19Z), 09 §4.3, 11 def-changeset.

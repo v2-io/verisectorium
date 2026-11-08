@@ -42,7 +42,7 @@ The «data⸱store» holds pieces of «content»: a formal statement, a step of 
 ## Working Notes
 
 - Intro, discussion and examples shared verbatim with former group-mates (content, veritoid⸱kind); to be rewritten for this term alone when adjudicated.
-- Open, and it matters. Whether a veritoid has an identity of its own that survives being moved, or is only its place in a segment. See «recut». Every split, promote and inbox drain hits this.
+- Open, and it matters. Whether a veritoid has an identity of its own that survives being moved, or is only its place in a segment. See «recut». Every split, promote and inbox drain hits this. From the kernel spikes: all four kernels met this gap and took the same safe rule, an id belongs for life to the segment that introduced it and a changeset naming another segment's id is refused; Ada/Fable needed that rule to prove lapse exactness at all. Recorded under «segment⸱changeset»; the recut question is unchanged.
 - Not confirmed. That there are exactly two levels. Joseph said he was still not sure; the discussion's lean is a reading of his "practical granularity".
 - Open. Whether the word survives. Joseph offered it half in jest, for having no history; "content+dimensions" was his other candidate.
 - Adjudicated against msc/notes 05 (21:52Z), 08/06, 08/07, 08/08, 09 §2.1, 11 def-veritoid.

@@ -33,4 +33,5 @@ A «claimed⸱level» is what a «veritoid»'s content asserts about its own sup
 
 - Open. Where a claimed level lives: a field beside the content, a word inside the content ("Theorem"), a bound, or something the veritoid's kind declares. Lean: a field, so that the comparison with values is mechanical.
 - Open. Whether "claimed level" is one field or several. ASF's labels say what is asserted is several separate things: conditions, sharpness, forced or chosen, kind of support, whose. See «claim».
+- From the kernel spikes. The comparison a claimed level is held to is the *ceiling* (the piece's own position capped by what it rests on, the «latent⸱level»), and the spikes found the spec's statement of that cap too weak: "ceiling ≤ position and ≤ every target's ceiling" is satisfied by rating everything at the bottom rung; the real contract is the defining equation, ceiling = min(position, min over targets), which both Ada kernels proved, with uniqueness on an acyclic graph (Ada/Opus). When the ceiling is written into «value» or «latent⸱level», it should be the equation, not the bound.
 - Adjudicated against msc/notes 01 §7, 09 §2.2, 11 def-written, 12.

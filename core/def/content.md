@@ -6,7 +6,7 @@ status provisional
 ```
 
 # «content»
-The text or data a veritoid holds, at a version.
+The text or data a veritoid holds, at a «version».
 
 ## Intro
 
@@ -15,7 +15,7 @@ The «data⸱store» holds pieces of «content»: a formal statement, a step of 
 ## Definition
 
 ### Invariants
-- Two contents are the same version when they are the same after normalization. A reflow mints no version.
+- Two contents are the same «version» when they are the same after normalization. A reflow mints no version.
 
 ## Discussion
 
@@ -31,6 +31,7 @@ The «data⸱store» holds pieces of «content»: a formal statement, a step of 
 
 - Intro, discussion and examples shared verbatim with former group-mates (veritoid, veritoid⸱kind); to be rewritten for this term alone when adjudicated.
 - Open, and it matters. Whether a veritoid has an identity of its own that survives being moved, or is only its place in a segment. See «recut». Every split, promote and inbox drain hits this.
+- From the kernel spikes. "At a version" was carrying a decision the model had not made: whether a version is a content hash or a counter is kernel-visible (binding on `(veritoid, version)` makes a restored version re-bind old acts). «version» now has its own stub with the finding and a lean.
 - Not confirmed. That there are exactly two levels. Joseph said he was still not sure; the discussion's lean is a reading of his "practical granularity".
 - Open. Whether the word survives. Joseph offered it half in jest, for having no history; "content+dimensions" was his other candidate.
 - Adjudicated against msc/notes 05 (21:52Z), 08/06, 08/07, 08/08, 09 §2.1, 11 def-veritoid.
