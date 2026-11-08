@@ -1,5 +1,7 @@
 # Kernel spikes: the toolchain base
 
+> **In main (2026-11-07):** the four spikes grew out of these crates and now live side by side as `rust-opus/`, `rust-fable/`, `ada-opus/` and `ada-fable/`, each merged from its `spike/kernel-*` branch. The hello-world `ada/` and `rust/` crates described below were not merged; they remain on `spike/kernel-base`. The toolchain notes below apply unchanged to the four spike directories (read `rust/` as either Rust spike and `ada/` as either Ada spike). `COMPARISON.md` lays the four accounts side by side; `RUNS.md` has each agent's spend.
+
 The spec is `KERNEL-SPEC.md`, in this directory. `ada/` and `rust/` are hello-world crates that already build, test and (for Ada) prove, so a spike can start on the kernel itself. `Kernel.Hello` / `saturating_add` and their tests are placeholders and can be deleted. Set up 2026-11-07 on macOS 27.0.1, arm64.
 
 ## Rust (`rust/`)

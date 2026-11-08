@@ -13,7 +13,7 @@
 | `tests/src/example_tests.adb` | no | The worked example; the literal reading of it; refusals; reverted content; replay. |
 | `tests/src/property_tests.adb` | no | Randomized P1–P8 against oracles written separately (a plain recursive ceiling, DFS cycle detection, a frontier computed straight from §3). |
 
-Commands, from `ada/`: `alr build`, `alr gnatprove` (418 checks, about 27 s wall clock from clean on this machine), `alr test` (6 tests; the property test defaults to 60 trials, `KERNEL_TRIALS=400 alr test` for the full run, which took about ten minutes because every kernel contract is also executed at run time).
+Commands, from `ada-opus/`: `alr build`, `alr gnatprove` (418 checks, about 27 s wall clock from clean on this machine), `alr test` (6 tests; the property test defaults to 60 trials, `KERNEL_TRIALS=400 alr test` for the full run, which took about ten minutes because every kernel contract is also executed at run time).
 
 The kernel's ids are small integers, and every collection is a bounded array: 32 veritoids, 4 references each, 4 reads per act, 64 acts, 8 items per changeset, 128 records. Running out of room is a recorded refusal (`Act_Capacity`), or a reported one when the log itself is full (`Log_Full`); nothing is silently truncated. I re-proved the whole library with 1000 veritoids, 16 references, 10,000 acts, 64 items and 100,000 records, and everything still proved. So the proofs do not depend on the small numbers. They do depend on the data structures being fixed-size arrays.
 

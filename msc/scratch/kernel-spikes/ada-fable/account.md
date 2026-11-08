@@ -17,7 +17,7 @@
 `tests/` is a separate Alire crate: an AUnit suite (6 tests, 4 s) and `kernel_cli LOGFILE [INDEX]`, which loads a log, folds it, and prints state and frontier. `examples/worked-example.log` is spec §6, written by the test that replays it.
 
 ```sh
-cd ada && alr build && alr test && alr gnatprove      # all three pass
+cd ada-fable && alr build && alr test && alr gnatprove      # all three pass
 cd tests && ./bin/kernel_cli ../examples/worked-example.log 6   # the state after the perturbation
 ```
 

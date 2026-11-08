@@ -48,7 +48,7 @@ What it did not give me, on this machine and this afternoon, was a single comple
 
 ## What was built
 
-`msc/scratch/kernel-spikes/rust/`, crate `kernel`, zero runtime dependencies.
+`msc/scratch/kernel-spikes/rust-opus/`, crate `kernel`, zero runtime dependencies.
 
 | file | what |
 |---|---|
@@ -66,7 +66,7 @@ What it did not give me, on this machine and this afternoon, was a single comple
 | `tests/properties.rs` | P1–P8 and five further properties, 1024 generated logs each, a differential oracle, a coverage test |
 
 ```sh
-cd msc/scratch/kernel-spikes/rust
+cd msc/scratch/kernel-spikes/rust-opus
 cargo test                               # 36: 2 lib, 17 properties, 11 worked example, 6 doctests (4 compile_fail)
 cargo run -q --bin kernel -- example     # the worked example, stage by stage
 cargo run -q --bin kernel -- example --write /tmp/ex.log && cargo run -q --bin kernel -- show /tmp/ex.log --at 7
