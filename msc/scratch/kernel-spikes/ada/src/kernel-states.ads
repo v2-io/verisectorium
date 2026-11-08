@@ -255,7 +255,6 @@ package Kernel.States with SPARK_Mode => On is
       Duplicate_Id,  --  the changeset names an id twice
       Foreign_Id,    --  it names an id another segment owns
       Cycle,         --  it would create a reference cycle (P5)
-      Exhausted,     --  ranking ran out of passes; see the account
       Unknown_Id,    --  an act reads an id never introduced
       Full);         --  a spike bound was hit
 
@@ -313,14 +312,13 @@ package Kernel.States with SPARK_Mode => On is
    --  Layered Kahn: pass P ranks every present veritoid whose present
    --  targets were all ranked in earlier passes. Succeeds exactly when
    --  the present reference graph is acyclic; on a cycle, the unranked
-   --  set is returned as the witness.
+   --  set is returned as the witness. There is no third outcome.
    function Rank_All (T : Veritoid_Table) return Ranking
    with Post =>
      (case Rank_All'Result.Why is
         when Accepted  => Well_Ranked (T, Rank_All'Result.Ranks),
         when Cycle     => Nonempty (Rank_All'Result.Culprits)
                           and then Closed (T, Rank_All'Result.Culprits),
-        when Exhausted => True,
         when others    => False);
 
    --  Act A read some (id, version) that C changes or removes.

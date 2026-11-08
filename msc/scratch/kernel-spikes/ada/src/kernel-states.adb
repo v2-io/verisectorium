@@ -317,12 +317,73 @@ package body Kernel.States with SPARK_Mode => On is
         (if T (Target_Of (T, V, I)).Present
          then R (Target_Of (T, V, I)) in 1 .. P - 1));
 
+   --  How many of the first N veritoids are ranked. Ghost, so that the
+   --  pass count can be bounded: a pass that makes progress ranks one
+   --  more, so Max_Veritoids passes rank everything there is.
+   --  An expression function on purpose: a postcondition that restated
+   --  the recursion would call Count_Ranked again on every call, and
+   --  with contracts on at run time that doubles the work per level
+   --  (2**24 per count; measured as a test run that did not finish).
+   function Count_Ranked (R : Rank_Array; N : Natural) return Natural
+   with Ghost,
+        Pre  => N <= Max_Veritoids,
+        Post => Count_Ranked'Result <= N,
+        Subprogram_Variant => (Decreases => N);
+
+   function Count_Ranked (R : Rank_Array; N : Natural) return Natural is
+     (if N = 0 then 0
+      else Count_Ranked (R, N - 1)
+           + (if R (Veritoid_Id (N)) /= 0 then 1 else 0));
+
+   --  Ranking one unranked veritoid raises the count by one.
+   procedure Lemma_Count_Update
+     (Old_R, New_R : Rank_Array; V : Veritoid_Id; N : Natural)
+   with Ghost,
+        Pre  => N <= Max_Veritoids
+                and then Old_R (V) = 0 and then New_R (V) /= 0
+                and then (for all W in Veritoid_Id =>
+                            (if W /= V then New_R (W) = Old_R (W))),
+        Post => Count_Ranked (New_R, N)
+                = Count_Ranked (Old_R, N)
+                  + (if Natural (V) <= N then 1 else 0),
+        Subprogram_Variant => (Decreases => N);
+
+   procedure Lemma_Count_Update
+     (Old_R, New_R : Rank_Array; V : Veritoid_Id; N : Natural)
+   is
+      --  Calls in code, so that Count_Ranked's postcondition is in hand.
+      A : constant Natural := Count_Ranked (Old_R, N) with Unreferenced;
+      B : constant Natural := Count_Ranked (New_R, N) with Unreferenced;
+   begin
+      if N > 0 then
+         Lemma_Count_Update (Old_R, New_R, V, N - 1);
+      end if;
+   end Lemma_Count_Update;
+
+   --  A full count means every one of the first N is ranked.
+   procedure Lemma_Count_Full (R : Rank_Array; N : Natural)
+   with Ghost,
+        Pre  => N <= Max_Veritoids and then Count_Ranked (R, N) = N,
+        Post => (for all W in 1 .. N => R (Veritoid_Id (W)) /= 0),
+        Subprogram_Variant => (Decreases => N);
+
+   procedure Lemma_Count_Full (R : Rank_Array; N : Natural) is
+      C : constant Natural := Count_Ranked (R, N) with Unreferenced;
+   begin
+      if N > 0 then
+         Lemma_Count_Full (R, N - 1);
+      end if;
+   end Lemma_Count_Full;
+
    function Rank_All (T : Veritoid_Table) return Ranking is
       R        : Rank_Array := [others => 0];
       Progress : Boolean;
       Culprits : Id_Set;
+      Ranked   : Natural := 0 with Ghost;
    begin
       for P in Rank_T range 1 .. Rank_T'Last loop
+         pragma Loop_Invariant (Ranked = Count_Ranked (R, Max_Veritoids));
+         pragma Loop_Invariant (Ranked >= Natural (P) - 1);
          pragma Loop_Invariant
            (for all V in Veritoid_Id =>
               (if R (V) /= 0 then T (V).Present and then R (V) < P));
@@ -337,6 +398,9 @@ package body Kernel.States with SPARK_Mode => On is
          begin
             Progress := False;
             for V in Veritoid_Id loop
+               pragma Loop_Invariant (Ranked = Count_Ranked (R, Max_Veritoids));
+               pragma Loop_Invariant (Ranked >= Natural (P) - 1);
+               pragma Loop_Invariant (if Progress then Ranked >= Natural (P));
                pragma Loop_Invariant
                  (for all W in Veritoid_Id =>
                     (if R (W) /= 0 then T (W).Present and then R (W) <= P));
@@ -365,7 +429,13 @@ package body Kernel.States with SPARK_Mode => On is
                if T (V).Present and then R (V) = 0
                  and then Rankable (T, R, V, P)
                then
-                  R (V) := P;
+                  declare
+                     Old_R : constant Rank_Array := R with Ghost;
+                  begin
+                     R (V) := P;
+                     Lemma_Count_Update (Old_R, R, V, Max_Veritoids);
+                     Ranked := Ranked + 1;
+                  end;
                   Progress := True;
                end if;
             end loop;
@@ -384,7 +454,13 @@ package body Kernel.States with SPARK_Mode => On is
             end if;
          end;
       end loop;
-      return (Why => Exhausted, Ranks => R, Culprits => No_Ids);
+      --  Every pass made progress, so everything is ranked: the table
+      --  is well ranked after all. (Not reachable in fact, since the
+      --  all-ranked test above would have returned; the prover does
+      --  not need to know that.)
+      pragma Assert (Ranked >= Max_Veritoids);
+      Lemma_Count_Full (R, Max_Veritoids);
+      return (Why => Accepted, Ranks => R, Culprits => No_Ids);
    end Rank_All;
 
    procedure Apply
