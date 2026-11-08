@@ -69,6 +69,7 @@ string_newtype!(
 /// `Ord` is derived, and the derivation follows declaration order, so the
 /// order of these variants *is* the ladder.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
+#[cfg_attr(kani, derive(kani::Arbitrary))]
 #[serde(rename_all = "lowercase")]
 pub enum Rung {
     Sketch,
@@ -133,6 +134,7 @@ impl Read {
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
+#[cfg_attr(kani, derive(kani::Arbitrary))]
 #[serde(rename_all = "lowercase")]
 pub enum ActKind {
     /// Counts toward `position` of everything it read, while it binds.
@@ -664,3 +666,6 @@ fn act<const N: usize>(actor: &str, criterion: &str, kind: ActKind, rung: Rung, 
 }
 
 pub mod example;
+
+#[cfg(kani)]
+mod kani_proofs;
