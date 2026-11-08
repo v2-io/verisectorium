@@ -154,16 +154,14 @@ impl State {
 
     fn apply_changeset(&mut self, cs: &SegmentChangeset) -> Outcome {
         for (id, w) in &cs.veritoids {
-            if let Some(h) = self.veritoids.get(id) {
-                if h.segment != cs.segment {
+            if let Some(h) = self.veritoids.get(id)
+                && h.segment != cs.segment {
                     return Outcome::Refused(Refusal::ForeignVeritoid { id: id.clone(), owner: h.segment.clone() });
                 }
-            }
-            if let Some(refs) = self.written.get(&(id.clone(), w.version)) {
-                if *refs != w.references {
+            if let Some(refs) = self.written.get(&(id.clone(), w.version))
+                && *refs != w.references {
                     return Outcome::Refused(Refusal::VersionReused { id: id.clone(), version: w.version });
                 }
-            }
         }
         let mut next = self.veritoids.clone();
         next.retain(|_, h| h.segment != cs.segment);

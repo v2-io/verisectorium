@@ -5,10 +5,13 @@
 //! `binds`, `position`, `ceiling`, `frontier`, `steady`. Where this crate
 //! departs from the spec, the departure and its reason are in ../account.md.
 
+#[cfg(not(kani))]
 pub mod codec;
+#[cfg(not(kani))]
 pub mod example;
 pub mod log;
 pub mod model;
+#[cfg(not(kani))]
 pub mod render;
 pub mod state;
 

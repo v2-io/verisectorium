@@ -43,13 +43,23 @@ impl fmt::Display for Rung {
     }
 }
 
+/// What ids are made of. A `String` everywhere except under `cargo kani`,
+/// where it is a `u8` so that the bounded model checker is not spending its
+/// effort inside string comparison. The fold and the computed things
+/// (`state.rs`, `log.rs`) use ids only through `Eq`, `Ord` and `Clone`, so they
+/// are the same source under either; see account.md, proof section.
+#[cfg(not(kani))]
+pub type Name = String;
+#[cfg(kani)]
+pub type Name = u8;
+
 /// A veritoid's id. Unique across the whole store (not per segment).
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
-pub struct VeritoidId(pub String);
+pub struct VeritoidId(pub Name);
 
 /// A segment's id.
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
-pub struct SegmentId(pub String);
+pub struct SegmentId(pub Name);
 
 /// A content version. Opaque: the kernel only ever asks whether two versions
 /// are *equal*. (`Ord` is derived so versions can sit in ordered containers;
@@ -61,12 +71,12 @@ pub struct Version(pub u64);
 
 impl fmt::Display for VeritoidId {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        f.write_str(&self.0)
+        write!(f, "{}", self.0)
     }
 }
 impl fmt::Display for SegmentId {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        f.write_str(&self.0)
+        write!(f, "{}", self.0)
     }
 }
 impl fmt::Display for Version {
@@ -146,9 +156,11 @@ pub enum Record {
 
 // ---- small constructors, used by the example, the CLI and the tests ----
 
+#[cfg(not(kani))]
 pub fn vid(s: &str) -> VeritoidId {
     VeritoidId(s.to_string())
 }
+#[cfg(not(kani))]
 pub fn sid(s: &str) -> SegmentId {
     SegmentId(s.to_string())
 }
@@ -157,6 +169,7 @@ impl Written {
     pub fn new(version: u64, claimed: Rung) -> Written {
         Written { version: Version(version), claimed, references: BTreeMap::new() }
     }
+    #[cfg(not(kani))]
     /// Builder: add a reference to `target`, needed at `needed`, written against `seen`.
     pub fn refs(mut self, target: &str, needed: Rung, seen: u64) -> Written {
         self.references.insert(vid(target), Reference { needed, seen: Version(seen) });
@@ -164,6 +177,7 @@ impl Written {
     }
 }
 
+#[cfg(not(kani))]
 impl SegmentChangeset {
     pub fn new(segment: &str, author: &str) -> SegmentChangeset {
         SegmentChangeset { segment: sid(segment), author: author.to_string(), veritoids: BTreeMap::new() }
@@ -174,6 +188,7 @@ impl SegmentChangeset {
     }
 }
 
+#[cfg(not(kani))]
 impl Act {
     /// A check at `rung` reading `reads` and attesting all of them.
     pub fn check(actor: &str, criterion: &str, rung: Rung, reads: &[(&str, u64)]) -> Act {

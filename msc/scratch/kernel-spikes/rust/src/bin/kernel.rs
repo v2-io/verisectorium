@@ -3,15 +3,22 @@
 //!   kernel show LOGFILE [--at N]    fold LOGFILE (or its first N records), print state and frontier
 //!   kernel example [--write FILE]   run the spec's worked example stage by stage (and write its log)
 
+#![cfg_attr(kani, allow(unused))]
+
 use std::process::ExitCode;
 
+#[cfg(not(kani))]
 use kernel::{codec, example, render::render_state, Log};
+
+#[cfg(kani)]
+fn main() {}
 
 fn usage() -> ExitCode {
     eprintln!("usage: kernel show LOGFILE [--at N]\n       kernel example [--write FILE]");
     ExitCode::from(2)
 }
 
+#[cfg(not(kani))]
 fn main() -> ExitCode {
     let args: Vec<String> = std::env::args().skip(1).collect();
     match args.first().map(String::as_str) {

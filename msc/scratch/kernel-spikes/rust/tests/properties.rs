@@ -626,3 +626,28 @@ proptest! {
         }
     }
 }
+
+proptest! {
+    #![proptest_config(ProptestConfig { cases: 1024, ..ProptestConfig::default() })]
+
+    /// A spec observation, pinned: whenever `needed <= claimed(v)`,
+    /// unmet-need(v, t) already implies overclaim(v) (ceiling(v) <= ceiling(t)
+    /// < needed <= claimed(v)). So `needed` carries information of its own only
+    /// when it exceeds v's own claim. See account.md.
+    #[test]
+    fn unmet_need_is_subsumed_unless_needed_exceeds_claim(ops in ops()) {
+        let log = build(&ops);
+        for (_, s) in every_prefix(&log) {
+            let f = s.frontier();
+            for item in &f {
+                if let Owed::UnmetNeed { v, target } = item {
+                    let w = &s.veritoids()[v].written;
+                    if w.references[target].needed <= w.claimed {
+                        let overclaim = Owed::Overclaim { v: v.clone() };
+                        prop_assert!(f.contains(&overclaim));
+                    }
+                }
+            }
+        }
+    }
+}
