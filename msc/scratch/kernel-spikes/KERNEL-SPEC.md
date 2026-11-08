@@ -47,7 +47,12 @@ In your spike directory only:
 
 - the kernel as a library, with the operations: append record; state as of index; `position`, `ceiling`, `frontier`, `steady`; a serialization of the log; and a small CLI (or test harness) that loads a log, prints the state and the frontier, and exercises the worked example below;
 - tests, and for Ada the SPARK contracts with the `gnatprove` level reached; be exact about what was proven, what was tested, and what was neither;
-- **`account.md`**: the account we actually want. What the language made easy; where you fought the tool; what you could not express or prove and why; what you'd want in the model that this spec lacks; how much of the time went to the language versus the kernel. Felt time is fine marked as such; `git log` carries measured time;
+- **`account.md`**: the account we actually want. What the language made easy; where you fought the tool; what you'd want in the model that this spec lacks; how much of the time went to the language versus the kernel (felt time is fine marked as such; `git log` carries measured time). And a section on **proof**, answered the same way by all four spikes so they can be laid side by side:
+  - for each of P1–P8: *proven* (by what: a prover, and at what level), *tested* (how: unit, property, model-checked), or *neither*, with the reason;
+  - what you believe your solution could prove, in this language and toolchain, that you did not reach, and what it would have cost;
+  - what cannot be stated as a contract at all in this language, and whether that is the language, the toolchain, or the spec being imprecise; where a property could be stated but not discharged, say which;
+  - what the language's verification story buys the model that the other language's would not, as honestly as you can judge from one side. For Rust: whether you reached for a verification tool (Kani, Creusot, Prusti, Verus, or property testing only) and what it gave; for Ada/SPARK: what gnatprove discharged automatically, what needed ghost code, lemmas or loop invariants, and what remained a check rather than a proof;
+  - the one property whose proof would most change your confidence in the kernel, and whether you got it;
 - **`debrief.md`** for Joseph, as the spike template describes.
 
 Commit to your worktree branch at every clean checkpoint (the base commit already builds, tests and proves a hello-world in your language, so your first commit can be the kernel's first real contract).
