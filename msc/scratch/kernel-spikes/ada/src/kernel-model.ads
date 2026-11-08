@@ -130,6 +130,46 @@ package Kernel.Model with SPARK_Mode => On is
 
    function Well_Formed (S : State) return Boolean is (Ranked (S.V, S.Rank));
 
+   --  Equality of states as the prover's logical equality (the annotation
+   --  is itself proved), so that equal states give equal results of any
+   --  function applied to them.  Predefined "=" on a record with array
+   --  components is not that by default.
+   --  Built layer by layer, as the SPARK user guide does it; each layer's
+   --  annotation is proved from the one below.
+   function Eq (X, Y : Reference) return Boolean is (X = Y)
+   with Annotate => (GNATprove, Logical_Equal);
+   function Eq (X, Y : Reference_Array) return Boolean is
+     (for all I in Ref_Index => Eq (X (I), Y (I)))
+   with Annotate => (GNATprove, Logical_Equal);
+   function Eq (X, Y : Veritoid) return Boolean is
+     (X.Present = Y.Present and then X.Segment = Y.Segment
+      and then X.Ver = Y.Ver and then X.Claimed = Y.Claimed
+      and then X.N_Refs = Y.N_Refs and then Eq (X.Refs, Y.Refs))
+   with Annotate => (GNATprove, Logical_Equal);
+   function Eq (X, Y : Veritoid_Table) return Boolean is
+     (for all I in Veritoid_Id => Eq (X (I), Y (I)))
+   with Annotate => (GNATprove, Logical_Equal);
+   function Eq (X, Y : Read_Entry) return Boolean is (X = Y)
+   with Annotate => (GNATprove, Logical_Equal);
+   function Eq (X, Y : Read_Array) return Boolean is
+     (for all I in Read_Index => Eq (X (I), Y (I)))
+   with Annotate => (GNATprove, Logical_Equal);
+   function Eq (X, Y : Act) return Boolean is
+     (X.Actor = Y.Actor and then X.Criterion = Y.Criterion
+      and then X.Kind = Y.Kind and then X.N_Reads = Y.N_Reads
+      and then Eq (X.Reads, Y.Reads) and then X.Level = Y.Level)
+   with Annotate => (GNATprove, Logical_Equal);
+   function Eq (X, Y : Act_Array) return Boolean is
+     (for all I in Act_Index => Eq (X (I), Y (I)))
+   with Annotate => (GNATprove, Logical_Equal);
+   function Eq (X, Y : Rank_Array) return Boolean is
+     (for all I in Veritoid_Id => X (I) = Y (I))
+   with Annotate => (GNATprove, Logical_Equal);
+   function Same (X, Y : State) return Boolean is
+     (Eq (X.V, Y.V) and then X.N_Acts = Y.N_Acts
+      and then Eq (X.Acts, Y.Acts) and then Eq (X.Rank, Y.Rank))
+   with Annotate => (GNATprove, Logical_Equal);
+
    ---------------------------------------------------------------------
    --  1. binds
    ---------------------------------------------------------------------
