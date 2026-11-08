@@ -18,5 +18,5 @@ gnatprove = "=16.1.0"
 # `alr test` (run here) builds and runs the AUnit suite in tests/.
 [[actions]]
 type = "test"
-command = ["alr", "run"]
+command = ["alr", "run", "kernel_tests"]
 directory = "tests"
