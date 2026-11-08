@@ -405,15 +405,19 @@ package Kernel.Store with SPARK_Mode => On is
 
    --  P4.  Monotone under acts.  Appending a check never lowers any
    --  position; positions of veritoids it does not read are unchanged;
-   --  a read veritoid rises to at most the act's level.
+   --  a read veritoid rises to at most the act's level.  Appending an
+   --  affirmation changes no position at all.
    procedure Lemma_Monotone (S : State; A : Act)
    with
      Ghost,
      Global => null,
-     Pre    => S.N_Acts < Max_Acts and then A.Kind = Check,
+     Pre    => S.N_Acts < Max_Acts,
      Post   =>
        (for all V in Veritoid_Id =>
           Position (Append_Act (S, A), V) >= Position (S, V)
+          and then
+            (if A.Kind /= Check then
+               Position (Append_Act (S, A), V) = Position (S, V))
           and then
             (if not Reads_Id (A, V) then
                Position (Append_Act (S, A), V) = Position (S, V))
