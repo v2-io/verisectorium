@@ -89,7 +89,7 @@ pub struct Reference {
 ///
 /// `references` are part of what the content version covers: a changeset may
 /// not change a veritoid's references while keeping its version (refused as
-/// `Refusal::ReferencesChangedWithoutNewVersion`). `claimed` is not covered: a
+/// `Refusal::VersionReused`, checked against every earlier writing of that version). `claimed` is not covered: a
 /// claimed level may be lowered (softened) or raised without a new version,
 /// and the frontier compares it with what is computed either way.
 #[derive(Debug, Clone, PartialEq, Eq)]

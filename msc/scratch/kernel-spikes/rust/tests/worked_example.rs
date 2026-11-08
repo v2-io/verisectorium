@@ -236,7 +236,7 @@ fn other_refusals() {
                 .with("d", Written::new(3, Rederived).refs("c", Drafted, 2))
                 .with("e", Written::new(1, Drafted).refs("c", Drafted, 2))
         )),
-        Outcome::Refused(Refusal::ReferencesChangedWithoutNewVersion { .. })
+        Outcome::Refused(Refusal::VersionReused { .. })
     ));
     // Softening (lowering a claimed level) at the same version is allowed.
     assert_eq!(

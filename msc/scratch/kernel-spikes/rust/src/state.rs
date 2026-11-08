@@ -26,8 +26,11 @@ pub enum Refusal {
     /// The changeset names a veritoid another segment holds. (Moving a
     /// veritoid between segments is the model's open "identity under recut".)
     ForeignVeritoid { id: VeritoidId, owner: SegmentId },
-    /// The changeset keeps a veritoid's version but changes its references.
-    ReferencesChangedWithoutNewVersion { id: VeritoidId },
+    /// The changeset writes `id@version` with references different from those
+    /// `id@version` was written with before, anywhere earlier in the log (held
+    /// now or not). A version names one written content, references included;
+    /// reusing it for something else would revive acts that read the old one.
+    VersionReused { id: VeritoidId, version: Version },
     /// The changeset would make the reference graph cyclic. `cycle` lists the
     /// ids around one cycle, first repeated at the end.
     Cycle { cycle: Vec<VeritoidId> },
@@ -74,6 +77,10 @@ pub struct State {
     acts: Vec<(usize, Act)>,
     /// Every record that did not take effect, with its log index and why.
     refusals: Vec<(usize, Refusal)>,
+    /// The references every `(id, version)` ever applied was written with.
+    /// Computed from the log like everything else; it is what lets the kernel
+    /// refuse a reused version (`Refusal::VersionReused`).
+    written: BTreeMap<(VeritoidId, Version), BTreeMap<VeritoidId, Reference>>,
     /// How many records have been folded.
     folded: usize,
 }
@@ -151,8 +158,10 @@ impl State {
                 if h.segment != cs.segment {
                     return Outcome::Refused(Refusal::ForeignVeritoid { id: id.clone(), owner: h.segment.clone() });
                 }
-                if h.written.version == w.version && h.written.references != w.references {
-                    return Outcome::Refused(Refusal::ReferencesChangedWithoutNewVersion { id: id.clone() });
+            }
+            if let Some(refs) = self.written.get(&(id.clone(), w.version)) {
+                if *refs != w.references {
+                    return Outcome::Refused(Refusal::VersionReused { id: id.clone(), version: w.version });
                 }
             }
         }
@@ -163,6 +172,9 @@ impl State {
         }
         if let Some(cycle) = find_cycle(&next) {
             return Outcome::Refused(Refusal::Cycle { cycle });
+        }
+        for (id, w) in &cs.veritoids {
+            self.written.entry((id.clone(), w.version)).or_insert_with(|| w.references.clone());
         }
         self.veritoids = next;
         Outcome::Applied
