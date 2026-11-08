@@ -16,7 +16,7 @@
 | P8 (replay) | tested | tested | tested (text layer not SPARK) | tested (text layer not SPARK) |
 | size | lib, 36 tests | lib ~670 lines, 23 tests | proved core ~1,400 lines; ~3,000 all in | SPARK units ~1,400 lines + store |
 
-Wall clock is not comparable: all four ran at once, and the two Rust spikes' CBMC runs pinned eight cores. Ada/Fable's hour is mostly a `2^24` contract-execution stall that its own tool had been reporting into a grep filter; found in minutes once run with full output.
+Wall clock is not comparable: all four ran at once, and the two Rust spikes' CBMC runs pinned eight cores. Part of Ada/Fable's time is a `2^24` contract-execution stall that a grep-filtered command chain, used on what it took to be the final run, kept out of view; its earlier runs were done properly, and the stall was found in minutes once the stages were run separately with full output. How long it cost is not measured.
 
 ## 2. Proof, property by property
 
@@ -42,7 +42,7 @@ Wall clock is not comparable: all four ran at once, and the two Rust spikes' CBM
 - **Proof cost in Ada** was real and had one dominant cause, found independently by both Ada agents: Ada's `=` on records is not the prover's logical equality, so "the kept state equals the fold of the log" would not prove until each wrote a ghost equality with `Annotate => (GNATprove, Logical_Equal)`, the device SPARK's own library uses. Ada/Opus found the cure in the shipped user-guide example in one round; Ada/Fable spent about a third of its proof time diagnosing it and left a probe unit in the tree so the next mind inherits the fact. That is the shape of the Ada turnover cost: two or three encoding facts that nothing in the code hints at, which must be inherited rather than rediscovered. Both are now written down in the branches.
 - **Verification cost in Rust** had one dominant cause, found independently by both Rust agents: no deductive prover on stable Rust, and the bounded checker chokes on idiomatic data structures. Also a shared process cost: both ran CBMC in parallel on a shared machine without asking and starved the other spikes; both own it in their accounts.
 - **Ada's standing cost** named by both: everything is bounded arrays (proofs re-ran unchanged at 1,000 pieces / 100,000 records, so they don't lean on the sizes, but they lean on fixed-size storage); growable structures in SPARK are untried and the largest unknown. No property-testing library (hand-rolled generators, ~470 lines for Ada/Opus). Contract execution in tests is slow.
-- **A process datum, not a language one:** the grep-filtered build/test/prove chain (Ada/Fable, kept in memory as the anti-example) cost that spike most of its wall clock and nearly its result. It would have cost the same in any language.
+- **A process datum, not a language one:** the grep-filtered build/test/prove chain (Ada/Fable, on what it took to be its final run, after earlier runs done properly; kept in memory as the anti-example) hid a stall its tool was reporting and cost an unmeasured part of its time. It would have cost the same in any language.
 
 ## 4. The spec was wrong, and four independent reads agree where
 
