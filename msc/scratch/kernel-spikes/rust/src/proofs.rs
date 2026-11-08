@@ -1,10 +1,14 @@
 //! Kani proof harnesses: bounded model checking of the kernel's own code
-//! (`state.rs`, `log.rs`), not of a re-model of it. Each harness proves its
-//! assertion for *every* input within its stated bounds; CBMC also checks
+//! (`state.rs`, `log.rs`), not of a re-model of it. A harness that passes
+//! proves its assertion for *every* input within its stated bounds; CBMC also checks
 //! every panic, overflow and out-of-bounds index on the way. Under kani, ids
 //! are `u8` (see `model::Name`). Run: `cargo kani --harness <name>`.
 //!
-//! The bounds (the honest scope of "proved" here): ids drawn from IDS = 2 values,
+//! STATUS (2026-11-07): no harness here has completed a run; every attempt
+//! was stopped unfinished (kani-logs/, named by how each ended). Nothing in
+//! this file is a result yet.
+//!
+//! The bounds (the scope a passing run would have): ids drawn from IDS = 2 values,
 //! segments from 2, versions from {1, 2}; a changeset holds at most 2
 //! veritoids with at most 2 references each; an act reads at most 2 ids and
 //! concerns any subset of them; logs of the lengths each harness states.
@@ -14,7 +18,8 @@ use crate::model::*;
 use crate::state::*;
 
 /// Ids drawn from 0..IDS. At 3, the smallest step harness had not finished
-/// after ~6.5 minutes (kani-logs/p5_step.ids3.*); at 2 they do.
+/// after ~6.5 minutes (kani-logs/p5_step.ids3.*). At 2 they were still running
+/// after 10-18 minutes when stopped for CPU; result unknown.
 const IDS: u8 = 2;
 
 fn any_rung() -> Rung {
@@ -245,7 +250,7 @@ fn any_history(m: &Map<VeritoidId, Held>) -> Map<(VeritoidId, Version), Map<Veri
 /// Up to 3 recorded acts. At IDS = 2 this realizes every computed value a
 /// state can have (positions need at most one check per id; at most one
 /// (v, target) pair can be reconciled, since a<->b would be a cycle), so a
-/// property of computed values proved here holds whatever the act count.
+/// property of computed values proved here would hold whatever the act count.
 /// (That reduction is an argument in account.md, not machine-checked.)
 fn any_acts() -> Vec<(usize, Act)> {
     let mut acts = Vec::new();

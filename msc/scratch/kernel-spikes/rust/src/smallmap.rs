@@ -282,7 +282,7 @@ mod tests {
             prop_assert_eq!(a.is_subset(&a2), b.is_subset(&b2));
             prop_assert_eq!(a.len(), b.len());
             for p in 0u8..8 { prop_assert_eq!(a.contains(&p), b.contains(&p)); }
-            prop_assert_eq!((a == a2), (b == b2));
+            prop_assert_eq!(a == a2, b == b2);
         }
     }
 }
