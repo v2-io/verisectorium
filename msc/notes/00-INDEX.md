@@ -22,6 +22,7 @@
 | 14 | 11-06 14:40 | `joseph-on-provisional-promised-gaps` | Joseph verbatim: provisional, promised and present rows; gaps as a segment kind; the inbox in the core; one canonical projection always; the store true at its steady states | — (primary) |
 | 15 | 11-06 14:40 | `handoff-fable` | the Fable session's handoff: reading order, what is settled, what in 09/11 is known wrong, what is open. Stale in two places: the work was committed (`281ac5e`, `72eac51`); and the outline-as-provisional-skeleton was the session's own inference from 14, not Joseph's answer | — |
 | 16 | 11-06 14:49 | `unasked-questions` | Joseph's last question to that session and the eleven questions it answered with, carved from the transcript; never on disk before | — |
+| 17 | 11-07 | `handoff-fable` | the founding session's handoff: reading order, what is settled, the open decisions in order, what no file says plainly | — |
 
 ## Still only in transcripts or elsewhere
 

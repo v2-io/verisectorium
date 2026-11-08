@@ -6,7 +6,7 @@ This repository is itself a bespoke verisectorium, kept by hand, with the workin
 
 - **`core/`** — the currently known truth about the model. `core/model.outline.md` is the canonical projection, a lexicon-shaped outline whose rows are marked present, promised, provisional or gap. `core/def/*.yaml` holds only the definition groups that have been adjudicated (steward and lead, unanimous); a def may be a stub. `core/log.yaml` is the append-only record of changes to core, so core carries no history of its own.
 - **`msc/notes/`** — frozen copies of the working documents the model was worked out in, in the order written; `00-INDEX.md` says what each is and what supersedes what. Fully superseded notes move to `msc/notes/.archive/`.
-- **`msc/scratch/`** — concrete attempts: DSL sketches, spikes, censuses, trial runs (for example `aat-run/`). Experimental, and never confused with core.
+- **`msc/scratch/`** — concrete attempts: DSL sketches, spikes, censuses, trial runs. Experimental, and never confused with core. `kernel-spikes/` holds the four kernels built from one spec in Rust and Ada/SPARK (2026-11-07) with `COMPARISON.md` and `RUNS.md`.
 - **`.archive/`** — the earlier work with its git history, as influx: `prior-incarnation/` (the verisectorium as it grew in `arch`, 2026-08-05 to 11-04, with the theory store and RC1 at `theory/influx/segments-model-rc1/`) and `prior-vsect/` (vsect 0.1).
 
 The first store the model is written for is AAT, at `~/src/aat-v3/`; its store definition lives there. Where something in core may be AAT's rather than the core's, it is marked as such; nothing is generalized before a second and third instance (udon's spec, an essay-centric store, vivarium) have been tried.
