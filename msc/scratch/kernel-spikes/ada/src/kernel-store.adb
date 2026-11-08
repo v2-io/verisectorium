@@ -75,11 +75,54 @@ package body Kernel.Store with SPARK_Mode => On is
                       and then R (T (W).Refs (Q).Target) < R (W)))))
    with Ghost;
 
-   function Compute_Rank (T : Veritoid_Table) return Rank_Result is
-      R     : Rank_Array := [others => 0];
-      Ready : Boolean;
+   --  Termination measure for the layering: how many are ranked.
+   function Count_Ranked (R : Rank_Array; N : Natural) return Natural is
+     (if N = 0 then 0
+      else Count_Ranked (R, N - 1) + (if R (N) /= 0 then 1 else 0))
+   with
+     Ghost,
+     Pre                => N <= Max_Veritoids,
+     Post               => Count_Ranked'Result <= N,
+     Subprogram_Variant => (Decreases => N);
+
+   procedure Lemma_Count (A, B : Rank_Array; N : Natural)
+   with
+     Ghost,
+     Global             => null,
+     Pre                =>
+       N <= Max_Veritoids
+       and then (for all I in 1 .. N => (if A (I) /= 0 then B (I) /= 0)),
+     Post               =>
+       Count_Ranked (B, N) >= Count_Ranked (A, N)
+       and then
+         (if (for some I in 1 .. N => A (I) = 0 and then B (I) /= 0)
+          then Count_Ranked (B, N) > Count_Ranked (A, N))
+       and then
+         (if (for some I in 1 .. N => A (I) = 0)
+          then Count_Ranked (A, N) < N),
+     Subprogram_Variant => (Decreases => N);
+
+   procedure Lemma_Count (A, B : Rank_Array; N : Natural) is
    begin
-      for Pass in 1 .. Max_Veritoids loop
+      if N > 0 then
+         Lemma_Count (A, B, N - 1);
+      end if;
+   end Lemma_Count;
+
+   function Compute_Rank (T : Veritoid_Table) return Rank_Result is
+      R       : Rank_Array := [others => 0];
+      Old     : Rank_Array;
+      Pass    : Positive := 1;
+      Ready   : Boolean;
+      Changed : Boolean;
+   begin
+      loop
+         Old := R;
+         Changed := False;
+         --  Every unranked id leaves room: Pass cannot pass Max_Veritoids
+         --  while something is still unranked.
+         Lemma_Count (Old, Old, Max_Veritoids);
+
          for V in Veritoid_Id loop
             if T (V).Present and then R (V) = 0 then
                Ready := True;
@@ -99,20 +142,66 @@ package body Kernel.Store with SPARK_Mode => On is
                              and then R (T (V).Refs (Z).Target) < Pass)));
                end loop;
                if Ready then
+                  pragma Assert (Pass <= Max_Veritoids);
                   R (V) := Pass;
+                  Changed := True;
                end if;
             end if;
             pragma Loop_Invariant (Partial_Ranked (T, R, Pass));
+            pragma Loop_Invariant
+              (for all W in Veritoid_Id =>
+                 (if Old (W) /= 0 then R (W) = Old (W)));
+            pragma Loop_Invariant
+              (for all W in V + 1 .. Max_Veritoids => R (W) = Old (W));
+            pragma Loop_Invariant
+              (for all W in Veritoid_Id =>
+                 (if R (W) = Pass then Old (W) = 0 and then Changed));
+            pragma Loop_Invariant
+              (Changed
+               = (for some W in 1 .. V => Old (W) = 0 and then R (W) /= 0));
+            --  Every id seen and left unranked has a present target that
+            --  is unranked or was ranked in this pass.
+            pragma Loop_Invariant
+              (for all W in 1 .. V =>
+                 (if T (W).Present and then R (W) = 0 then
+                    (for some Q in 1 .. T (W).N_Refs =>
+                       T (T (W).Refs (Q).Target).Present
+                       and then
+                         (R (T (W).Refs (Q).Target) = 0
+                          or else R (T (W).Refs (Q).Target) = Pass))));
          end loop;
-         pragma Loop_Invariant (Partial_Ranked (T, R, Pass));
+
+         exit when not Changed;
+
+         Lemma_Count (Old, R, Max_Veritoids);
+         Pass := Pass + 1;
+         pragma Loop_Invariant (Partial_Ranked (T, R, Pass - 1));
+         pragma Loop_Invariant (Count_Ranked (R, Max_Veritoids) >= Pass - 1);
+         pragma Loop_Variant
+           (Increases => Count_Ranked (R, Max_Veritoids));
       end loop;
 
+      --  Nothing was ranked in the last pass, so no rank equals Pass.
       return
         (Ok   =>
            (for all V in Veritoid_Id =>
               (if T (V).Present then R (V) /= 0)),
          Rank => R);
    end Compute_Rank;
+
+   procedure Lemma_Rank_Complete (T : Veritoid_Table; W : Rank_Array) is
+      R : constant Rank_Array := Compute_Rank (T).Rank;
+   begin
+      for K in 1 .. Max_Veritoids loop
+         pragma Loop_Invariant
+           (for all V in Veritoid_Id =>
+              (if T (V).Present and then W (V) < K then R (V) /= 0));
+      end loop;
+      pragma Assert
+        (for all V in Veritoid_Id =>
+           (if T (V).Present and then W (V) <= Max_Veritoids
+            then R (V) /= 0));
+   end Lemma_Rank_Complete;
 
    ---------------------------------------------------------------------
    --  One step
@@ -230,6 +319,14 @@ package body Kernel.Store with SPARK_Mode => On is
               and then not In_Items (CS, A.Reads (I).Id)
             then T2 (A.Reads (I).Id) = S.V (A.Reads (I).Id)));
    end Lemma_Lapse_Exact;
+
+   procedure Lemma_Cycle_Exact (S : State; CS : Changeset; W : Rank_Array) is
+   begin
+      if Ranked (New_Table (S.V, CS), W) then
+         Lemma_Rank_Complete (New_Table (S.V, CS), W);
+         pragma Assert (False);
+      end if;
+   end Lemma_Cycle_Exact;
 
    procedure Lemma_Monotone (S : State; A : Act) is
       S2 : constant State := Append_Act (S, A);

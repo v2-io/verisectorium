@@ -177,11 +177,33 @@ package Kernel.Store with SPARK_Mode => On is
       Rank : Rank_Array := [others => 0];
    end record;
 
-   --  Kahn-style layering.  Soundness is proved: Ok means the ranking is
-   --  valid, so the graph is acyclic.
+   --  Every present unranked id has a present unranked target: the
+   --  layering ran to its fixpoint.
+   function Closed (T : Veritoid_Table; R : Rank_Array) return Boolean is
+     (for all V in Veritoid_Id =>
+        (if T (V).Present and then R (V) = 0 then
+           (for some Q in 1 .. T (V).N_Refs =>
+              T (T (V).Refs (Q).Target).Present
+              and then R (T (V).Refs (Q).Target) = 0)));
+
+   --  Kahn-style layering, run to its fixpoint.  Sound (Ok gives a valid
+   --  ranking) and, with Lemma_Rank_Complete, complete: if any ranking
+   --  exists, Ok.  So Ok holds exactly when the graph has no cycle.
    function Compute_Rank (T : Veritoid_Table) return Rank_Result
-   with Post => (if Compute_Rank'Result.Ok then
-                   Ranked (T, Compute_Rank'Result.Rank));
+   with Post =>
+     (Compute_Rank'Result.Ok
+      = (for all V in Veritoid_Id =>
+           (if T (V).Present then Compute_Rank'Result.Rank (V) /= 0)))
+     and then Closed (T, Compute_Rank'Result.Rank)
+     and then (if Compute_Rank'Result.Ok then
+                 Ranked (T, Compute_Rank'Result.Rank));
+
+   procedure Lemma_Rank_Complete (T : Veritoid_Table; W : Rank_Array)
+   with
+     Ghost,
+     Global => null,
+     Pre    => Ranked (T, W),
+     Post   => Compute_Rank (T).Ok;
 
    ---------------------------------------------------------------------
    --  One step
@@ -214,6 +236,10 @@ package Kernel.Store with SPARK_Mode => On is
        Well_Formed (Try'Result.Next)
        and then Try'Result.Result /= Log_Full
        and then
+         (if Try'Result.Result = Cycle then
+            Kind = Changeset_Record and then No_Duplicates (CS)
+            and then not Compute_Rank (New_Table (S.V, CS)).Ok)
+       and then
          (if Try'Result.Result /= Accepted then Same (Try'Result.Next, S)
           elsif Kind = Act_Record then
             S.N_Acts < Max_Acts
@@ -221,6 +247,7 @@ package Kernel.Store with SPARK_Mode => On is
           else
             No_Duplicates (CS)
             and then No_Foreign (S.V, CS)
+            and then Compute_Rank (New_Table (S.V, CS)).Ok
             and then Try'Result.Next.V = New_Table (S.V, CS)
             and then Try'Result.Next.N_Acts = S.N_Acts
             and then Try'Result.Next.Acts = S.Acts);
@@ -394,7 +421,18 @@ package Kernel.Store with SPARK_Mode => On is
             Position (Append_Act (S, A), V)
             <= Rung'Max (Position (S, V), A.Level));
 
-   --  P5 is Try's postcondition: an accepted changeset leaves a state
+   --  P5, both directions.  A changeset refused as a cycle leaves a table
+   --  that has no ranking at all, i.e. it truly has a cycle.
+   procedure Lemma_Cycle_Exact (S : State; CS : Changeset; W : Rank_Array)
+   with
+     Ghost,
+     Global => null,
+     Pre    =>
+       Well_Formed (S)
+       and then Try (S, Changeset_Record, CS, (others => <>)).Result = Cycle,
+     Post   => not Ranked (New_Table (S.V, CS), W);
+
+   --  P5 (soundness) is Try's postcondition: an accepted changeset leaves a state
    --  that carries a valid ranking (Well_Formed), so the graph is acyclic;
    --  a changeset whose graph has no ranking is refused with Cycle and the
    --  refusal is recorded in the log by Append.
