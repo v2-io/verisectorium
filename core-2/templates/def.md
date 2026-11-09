@@ -24,7 +24,7 @@ The elaboration or the senses. Present tense, present truth, standing alone.
 - Why it is cut this way. May lean outward with care; a discussion that comes to rest on a pointer belongs in History.
 
 ## Examples
-- Concrete cases, named plainly. Standing alone: an estate store may be named as an example, a file path may not be cited as the example's warrant.
+- Concrete cases, named plainly. Standing alone: an estate verisectorium may be named as an example, a file path may not be cited as the example's warrant.
 
 ## History
 How this def came to be as it is: what it replaced and why, what was tried. Revisable prose, faithful to `log.kdl`. Optional.

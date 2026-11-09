@@ -5,7 +5,7 @@ status: provisional
 narrates: [actor, act, dimension, checkpoint, frontier, changeset, segment, kind]
 ---
 
-# The minds that turn over, and what the store knows about them
+# The minds that turn over, and what the verisectorium knows about them
 
 *Provisional. Written 2026-11-09; what it was adjudicated against is in the Working Notes at the end.*
 
@@ -21,23 +21,23 @@ In the model's words: the summary is a **source**. It is influx to the new actor
 
 ## Orientation gets its purpose from the frontier
 
-Without a steady-time distinction, a store has to guess what an arriving mind is: cold, or resuming something in progress. The two want different things to read, and one list cannot serve both; a list weighted toward what moved recently hands the resuming mind what it needs and hands the cold mind the predecessor's momentum instead of the roots.
+Without a steady-time distinction, a verisectorium has to guess what an arriving mind is: cold, or resuming something in progress. The two want different things to read, and one list cannot serve both; a list weighted toward what moved recently hands the resuming mind what it needs and hands the cold mind the predecessor's momentum instead of the roots.
 
-With the distinction, the guess goes away. An actor arriving at a «checkpoint» orients to the canonical projection and the checkpoint's stated conditions; that is the cold case, and it wants the roots: the segments most depended on, the determinant dimensions, the ontology's own norms. An actor arriving mid-changeset orients to the «frontier» it is there to clear and to what the perturbation touched; that is the resuming case, and it wants the tip. Which case holds is a fact about the store's state, not a default about the mind, and a tool can compute both sets from the log.
+With the distinction, the guess goes away. An actor arriving at a «checkpoint» orients to the canonical projection and the checkpoint's stated conditions; that is the cold case, and it wants the roots: the segments most depended on, the determinant dimensions, the ontology's own norms. An actor arriving mid-changeset orients to the «frontier» it is there to clear and to what the perturbation touched; that is the resuming case, and it wants the tip. Which case holds is a fact about the verisectorium's state, not a default about the mind, and a tool can compute both sets from the acta.
 
 ## The actor's record, and standing
 
-What the store can know about an actor divides at a line. Above it is the **situation**, which is not the actor's property: the state of the store when it arrives, and its **assignment**, what it is for, an attestation by whoever dispatched it. Below it is the actor's **own record**: the underlying model or instrument at a version (the thing with propensities, early capabilities, and capabilities known to be emergeable by observation); its system prompt and initial context; its orientation to the engine, to the domain, and to the pieces its job touches; its consortia, the other actors available to it; and its experience, how much this actor has actually done.
+What the verisectorium can know about an actor divides at a line. Above it is the **situation**, which is not the actor's property: the state of the verisectorium when it arrives, and its **assignment**, what it is for, an attestation by whoever dispatched it. Below it is the actor's **own record**: the underlying model or instrument at a version (the thing with propensities, early capabilities, and capabilities known to be emergeable by observation); its system prompt and initial context; its orientation to the engine, to the domain, and to the pieces its job touches; its consortia, the other actors available to it; and its experience, how much this actor has actually done.
 
 Those are not one kind of thing. The model and the prompt are **attested** from the harness. The three orientations are **warrants earned by checks** on the actor, bound to what it read, lapsing when the actor ends. Consortia are **references** from actor to actors. Experience is **computed**. And **standing is a gate a dimension declares over that record**: whose acts count, yes or no, before any question of quality, read from the actor's warrants rather than typed. "Validity is produced by a re-derivation from a mind whose domain orientation is warranted and who is not the author."
 
 ## Reading is checked, not attested
 
-An actor's own word about what it has read is the least trustworthy act in the store, for the reason above: across a compaction, introspection returns a confident yes. So an orientation dimension's producer is a **check**, one the actor cannot pass by reading during the check: the pieces sealed, the projection left open (so that knowing the index cannot pass for knowing the content), a sample of units weighted toward what matters, completion from memory, a grade. The three ways this has been done without a check, in the estate's own experience, all failed the same way: a hand-kept orientation file that was cited as law, an attested digest of what was read, and a fixed quiz that was learnable. Each was a written or attested thing standing in for a checked one.
+An actor's own word about what it has read is the least trustworthy act in the acta, for the reason above: across a compaction, introspection returns a confident yes. So an orientation dimension's producer is a **check**, one the actor cannot pass by reading during the check: the pieces sealed, the projection left open (so that knowing the index cannot pass for knowing the content), a sample of units weighted toward what matters, completion from memory, a grade. The three ways this has been done without a check, in the estate's own experience, all failed the same way: a hand-kept orientation file that was cited as law, an attested digest of what was read, and a fixed quiz that was learnable. Each was a written or attested thing standing in for a checked one.
 
-## The pass is an act in the log
+## The pass is an act in the acta
 
-An orientation pass has exactly the act's shape: the actor; the state it was proven against; what it read, the sampled pieces at their versions; the criterion fixed first; the outcome; and nothing new. Recording it in the log, rather than holding a token outside the store, means the project *knows* a mind was brought to the point where it may act and knows what it read, and an attested actor cannot quietly have a pass minted by another. The refusal (no write by an actor without a binding pass) is then computed from the record. A middle grade, enough right to proceed with a promise to read what was missed, is an acceptance with a stated condition applied to a mind, and belongs in the record the same way.
+An orientation pass has exactly the act's shape: the actor; the state it was proven against; what it read, the sampled pieces at their versions; the criterion fixed first; the outcome; and nothing new. Recording it in the acta, rather than holding a token outside the acta, means the project *knows* a mind was brought to the point where it may act and knows what it read, and an attested actor cannot quietly have a pass minted by another. The refusal (no write by an actor without a binding pass) is then computed from the record. A middle grade, enough right to proceed with a promise to read what was missed, is an acceptance with a stated condition applied to a mind, and belongs in the record the same way.
 
 Two further things fall out. The sampling cuts pieces into units, and a unit a well-read mind cannot complete is badly cut or ambiguous, which is a finding about the piece: the orientation check is a grain detector. And the same act that measures the mind can warrant the piece on comprehension, if it is recorded as concerning the sampled veritoids.
 
@@ -47,7 +47,7 @@ A check that gates writing becomes a target, and the first instance is innocent:
 
 ## Heat, placed
 
-Heat as "where attention has been" is a **rendering** over the log and the reference graph, for a reader: not written, not a warrant, answering no declared question of a piece. Recently written, recently acted on, how much rests on it, referenced by many, consulted by minds are all readable from the log, so a store needs nothing outside its record to compute it. Marks a tool writes onto the canonical projection from a computation are snapshots with a state on them and should carry one. Heat as "what has moved under a number" is machinery the model already has: an act reading an instrument at a version, lapsing when it moves.
+Heat as "where attention has been" is a **rendering** over the acta and the reference graph, for a reader: not written, not a warrant, answering no declared question of a piece. Recently written, recently acted on, how much rests on it, referenced by many, consulted by minds are all readable from the acta, so a verisectorium needs nothing outside its acta to compute it. Marks a tool writes onto the canonical projection from a computation are snapshots with a state on them and should carry one. Heat as "what has moved under a number" is machinery the model already has: an act reading an instrument at a version, lapsing when it moves.
 
 ## Open
 

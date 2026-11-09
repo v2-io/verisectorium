@@ -12,7 +12,7 @@ status provisional
 Everything owed in a working state: every violated constraint, computed fresh after each write or act, each item naming its cause and who can clear it.
 
 ## Definition
-After every write or act in an ‹atomic·changeset›, the store recomputes which constraints fail in the working state. The items are:
+After every write or act in an ‹atomic·changeset›, the frontier is recomputed: which constraints fail in the working state. The items are:
 
 | item | the constraint it violates | cleared by |
 |---|---|---|
@@ -30,7 +30,7 @@ Each item carries its cause (which write or act made it owed) and, through the �
 - It is computed, never kept. The same recorded things read in any order give the same frontier.
 - Only a checkpoint has an empty frontier, or one whose every item is accepted.
 - A broken check or a finding adds an item the moment it is recorded, before any repair.
-- Uncrossed chunks in an inbox are not owed; an inbox may be full at a checkpoint. A source not yet retired is not owed either; retirement is a state of the source, not a constraint on the store.
+- Uncrossed chunks in an inbox are not owed; an inbox may be full at a checkpoint. A source not yet retired is not owed either; retirement is a state of the source, not a constraint on the verisectorium.
 - If the frontier keeps growing instead of shrinking as a changeset is staged, work stops and the whole is looked at: two ideas treated as one, a genuine tension between two well-supported claims, or a foundation that has moved.
 
 ## Discussion

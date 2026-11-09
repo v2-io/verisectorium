@@ -9,7 +9,7 @@ narrates: [dimension, frontier, reference, kind, checkpoint]
 
 *Moved from the first-iteration overview (`MODEL.md`, Fable 5.1, 2026-11-08) into a segment of its own on Joseph's suggestion, so that it narrates the defs it rests on and lapses when they change. Provisional. Where a thing is Joseph's it says so; [M] marks the least tested.*
 
-A «dimension» is one question that can be asked of a piece. The ontology declares each one with five things, plus an optional sixth, and the census of what the estate's stores actually adjudicate is why there are five and not two:
+A «dimension» is one question that can be asked of a piece. The ontology declares each one with five things, plus an optional sixth, and the census of what the estate's verisectoria actually adjudicate is why there are five and not two:
 
 | The declaration says | For example |
 |---|---|
@@ -24,7 +24,7 @@ A dimension with no producer is a wish, and the ontology checker refuses it. "Ne
 
 For each piece and each dimension its kind opens there are two things, kept apart:
 
-- Its **assertion**: what the content says about itself on that question, written by the author. ASF's "exact", "conditional on (S1)–(S5)", "axiomatic", "ratified", "faithful to §4" are assertions. A dimension says whether pieces may assert on it and in what form. There is only ever one; the former ones are in the log.
+- Its **assertion**: what the content says about itself on that question, written by the author. ASF's "exact", "conditional on (S1)–(S5)", "axiomatic", "ratified", "faithful to §4" are assertions. A dimension says whether pieces may assert on it and in what form. There is only ever one; the former ones are in the acta.
 - Its **warrant**: what the acts that still bind warrant, read as the dimension declares. A piece's *own* warrant is read from the acts that concern it; its *effective* warrant is the own warrant lowered by whatever caps along its references (nothing is warranted above what it rests on). The constraint below compares the assertion with the effective warrant; own above effective is information a working agent wants to see (a well-checked claim on an unchecked premise), not a violation. A warrant can be *never asked*, which is a value and not a gap, and a dimension not opened for a piece's kind is a fact and not a gap.
 
 The **constraint** is: assertion ≤ warrant, on the dimension's own ordering. Where it fails the piece is **overclaimed** and that is owed. This is the whole honesty rule. It dissolves "claimed level" as a term (an assertion on one dimension), "one current epistemic label" (one assertion per dimension), and "softening" (replacing an assertion by a weaker one, or narrowing the content so a weaker assertion is true of it). ASF's one-word `status:` was several assertions on several dimensions of several veritoids, typed once on the file; the model has nowhere to put that word except as a rendering of per-veritoid assertions, which is where it should have been.

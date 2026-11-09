@@ -22,7 +22,7 @@ Every «act» is by an actor and every «changeset» is written by one, and veri
 ## Definition
 An actor's record has two halves.
 
-**The situation**, which is not the actor's property: the state of the store when it arrives (at a «checkpoint», or mid-changeset with a «frontier» to clear), and its **assignment**, an attestation by whoever dispatched it saying what it is for.
+**The situation**, which is not the actor's property: the state of the verisectorium when it arrives (at a «checkpoint», or mid-changeset with a «frontier» to clear), and its **assignment**, an attestation by whoever dispatched it saying what it is for.
 
 **The actor's own record:**
 
@@ -42,18 +42,18 @@ An actor's record has two halves.
 - An actor's identity is read from the harness, never typed, and is minted anew at every discontinuity. A compacted mind is a new actor; the summary it begins with is a source, cut and adjudicated like any other, not content it already holds.
 - An actor's orientation is a warrant, read from checks that concern it and still bind; it is never attested by the actor itself. A mind that may have been compacted attests falsely without knowing it.
 - Acts by an actor whose standing a dimension's producer does not grant are recorded and warrant nothing on that dimension.
-- An actor's own record lives in the log like everything else: an orientation pass is an act (what it read at which versions, the criterion fixed first, the outcome), not a token held outside the store.
+- An actor's own record lives in the acta like everything else: an orientation pass is an act (what it read at which versions, the criterion fixed first, the outcome), not a token held outside the acta.
 
 ## Discussion
 - **Why a compaction mints a new actor.** A compaction event is one agent finishing and a new, often somewhat confused and deceived agent starting with a summary of the last session of varying fidelity and applicability. The new actor's propensity to fabricate is higher than a cold agent's, because it is trained to assume the summary is complete enough. Binding orientation to anything that survives compaction (a session id, a clock) therefore binds it to the wrong thing; the actor boundary falls at the compaction, and minting a new actor there says so.
 - **Why orientation is checked and not attested.** Across a compaction gap introspection returns a confident yes: a sense of recognition and coherence that is fabricated, with the confidence intact. So the producer of an orientation dimension is a check the actor cannot pass by reading during the check, and the record of reading is the check, not the actor's word.
-- **Why the record is in the store.** A pass held outside the store as a token protects against gaming only by hiding. With harness-read identity an act recorded under an attested actor cannot be quietly minted by another, so the record is strictly better than the refusal, and the refusal (no write without a binding pass) is computed from it. The project then *knows* a mind was brought to the point where it may act, and knows what it read.
+- **Why the record is in the acta.** A pass held outside the acta as a token protects against gaming only by hiding. With harness-read identity an act recorded under an attested actor cannot be quietly minted by another, so the record is strictly better than the refusal, and the refusal (no write without a binding pass) is computed from it. The project then *knows* a mind was brought to the point where it may act, and knows what it read.
 - **Why the actor is a term.** The model could have kept the mind out of scope and read identity from the harness. Every producer clause depends on the actor's record, and the practical model's first job for every arriving mind is to orient it; pretending the mind is outside the model while the machinery leans on it at every step would be the costume the model exists to refuse.
 
 ## Examples
 - The Opus 5.5 "independent adversarial checker" of 2026-10-30 on `scope-adaptive-system`: a ‹mind›, attested by role string in vsect 0.1 and by harness identity after 2026-11-02; its checks had standing on validity because the producer required not-the-author, and would have standing under this def only if its domain orientation were warranted.
 - A simulator at a version: an ‹instrument›; its runs are checks; its version is what the simulation dimension is held against.
-- An orientation pass bound to a mind's compaction generation and lapsing when it changes, so that the first write after a compaction is refused until the new actor has oriented: under this def the pass is a check concerning the new actor, recorded in the log.
+- An orientation pass bound to a mind's compaction generation and lapsing when it changes, so that the first write after a compaction is refused until the new actor has oriented: under this def the pass is a check concerning the new actor, recorded in the acta.
 
 ## Historical Context
 - The actor was an inline word until 2026-11-09, when Joseph brought the mind into scope: the act was already central, and verisectoria are in practice very concerned with the minds that turn over. The compaction premise and the reasons for checking rather than attesting orientation are from the day the estate's one orientation gate was built (2026-07-31), carried in `msc/scratch/research-vivarium-heat-orientation-2026-11-09.md`.

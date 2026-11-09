@@ -2,7 +2,7 @@
 term "segment" pos=noun pl="-s" {
   subtypes "projection" "source"
   synonyms "document"
-  avoid "instance" "the dialog's local word; in the verisectorium plan an instance is a whole store made from a template"
+  avoid "instance" "the dialog's local word; in the verisectorium plan an instance is a whole verisectorium made from a template"
   avoid "file" "a file is a rendering of a segment, never the segment"
   avoid "composite" "did not say where membership, order or coherence lived"
   rel of term="kind" card="{1,1}" note="a segment kind"
@@ -30,8 +30,8 @@ A «veritoid» almost never makes sense alone. Its fate is intertwined with its 
 
 ## Discussion
 - Why a segment is not one kind and not one fate. ASF's frontmatter made a whole segment look like one fate and one kind; its `status:` word was five questions' worth of assertions on heterogeneous veritoids, typed once. Many ASF segments are also coarser than they should be, holding independent claims that should each have their own name; promotion is the recut for that.
-- Why Working Notes were three things. Inbox chunks (uncrossed material bearing on the segment); standing content mis-shelved (regression guards, open questions with closers, dead ends with reasons, each a veritoid of its own kind in a slot of its own); and in-place fate markers written as prose, which are crossings that never became acts. The first is the inbox; the second is content; the third is the log.
-- Four places a record can go, and which the segment owns. The log (what was done; the store's, not the segment's), the history of renderings (outside the store), the inbox (influx bearing on the segment, outside its written state), and history (written prose kept with the segment about how it came to be as it is: a slot of account veritoids, revisable, faithful to the log, and the one place a segment may point outward as breadcrumbs). A body states present truth and stands alone; history says how it got there; the inbox holds what is not yet adjudicated; the log holds what was done. A sentence of history inside a claim is a claim that has stopped standing on its own.
+- Why Working Notes were three things. Inbox chunks (uncrossed material bearing on the segment); standing content mis-shelved (regression guards, open questions with closers, dead ends with reasons, each a veritoid of its own kind in a slot of its own); and in-place fate markers written as prose, which are crossings that never became acts. The first is the inbox; the second is content; the third is the acta.
+- Four places a record can go, and which the segment owns. The acta (what was done; the verisectorium's, not the segment's), the history of renderings (outside the verisectorium), the inbox (influx bearing on the segment, outside its written state), and history (written prose kept with the segment about how it came to be as it is: a slot of account veritoids, revisable, faithful to the acta, and the one place a segment may point outward as breadcrumbs). A body states present truth and stands alone; history says how it got there; the inbox holds what is not yet adjudicated; the acta hold what was done. A sentence of history inside a claim is a claim that has stopped standing on its own.
 - Why projections nest without a third level. A chapter is a segment whose slots hold references to segments; a part holds chapters; the theory holds parts. That is gathering, not content inside content, so the two-level rule stands.
 
 ## Examples

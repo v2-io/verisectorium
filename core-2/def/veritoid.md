@@ -16,11 +16,11 @@ status provisional
 One piece of content of a declared kind, together with what it asserts about itself and what the acts that still bind warrant for it.
 
 ## Intro
-The store holds pieces of content: a formal statement, a step of a derivation, a paragraph of explanation, a caption, a question, an auditor's note, a chunk cut from a source. Every piece is of a declared ‹veritoid·kind›, which says what form its content takes, which «dimensions|def/dimension» may be asked of it, which assertions it may carry, and which «references|def/reference» it may hold. A veritoid is one such piece with its assertions and its warrants. It almost never makes sense alone: it sits in a «segment» with others it depends on, and the segment is where it is written and reviewed. Joseph's words: "content with one or more dimensions + rules".
+The corpus holds pieces of content: a formal statement, a step of a derivation, a paragraph of explanation, a caption, a question, an auditor's note, a chunk cut from a source. Every piece is of a declared ‹veritoid·kind›, which says what form its content takes, which «dimensions|def/dimension» may be asked of it, which assertions it may carry, and which «references|def/reference» it may hold. A veritoid is one such piece with its assertions and its warrants. It almost never makes sense alone: it sits in a «segment» with others it depends on, and the segment is where it is written and reviewed. Joseph's words: "content with one or more dimensions + rules".
 
 ## Definition
 ### Invariants
-- It has an id the store minted and never reuses, and no name; a rendering reaches it through its segment.
+- It has an id minted at creation and never reused, and no name; a rendering reaches it through its segment.
 - It is never changed alone. It changes only inside a ‹segment·changeset›.
 - It contains no veritoid. Where an act confirms part of it and breaks the rest, it is split: its id is retired and new ids are minted with recorded descent.
 - Its content, assertions and references are written; its warrants are computed. Its version is the hash of its written state.

@@ -86,7 +86,7 @@ Versions in the record: `12ea0186` (text before the 10-30 integration), `5e61363
 
 ## 4. What this run says about the model
 
-- Every piece of the file found a place: a slot, an assertion, a reference, a chunk, or a crossing. Nothing needed a term the model lacks. The one awkward piece is the frontmatter `status:`, which the model can only render, not store, and that is the point.
+- Every piece of the file found a place: a slot, an assertion, a reference, a chunk, or a crossing. Nothing needed a term the model lacks. The one awkward piece is the frontmatter `status:`, which the model can only render, not hold, and that is the point.
 - The **split signal** fired twice in real acts (C3 on (c); check-4 on the Discussion paragraph), and both times the integrator did in prose what the model calls a split or a promote. Grain discovered by adjudication is how this segment actually evolved.
 - **Independence by producer** did real work: nineteen of the confirmed checks are the integrator's own and would raise nothing; the warrants come from the independent re-reader, the adversarial checker, the fourth reader and check 8. The record already names roles; the model only reads them.
 - **Binding as a unit** (C5 concerning six items) is honest and expensive, as the act def says. The check-8 author's practice of one criterion per item is what the model rewards.

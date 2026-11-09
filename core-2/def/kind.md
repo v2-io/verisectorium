@@ -1,7 +1,7 @@
 ```kdl
 term "kind" pos=noun pl="-s" {
   subtypes "veritoid·kind" "segment·kind"
-  avoid "template" "the dialog's local word for a segment kind; kept free for the seed a new store is initialized from"
+  avoid "template" "the dialog's local word for a segment kind; kept free for the seed a new verisectorium is initialized from"
   avoid "type" "suggests a filename prefix or a stage; a kind is a declaration of content shape and questions"
   rel opens term="dimension" card="{1,N}"
   rel allows term="reference" card="{0,N}" note="by reference kind, for a veritoid kind" informal=#true
@@ -24,19 +24,19 @@ A ‹veritoid·kind› declares: the shape its content takes; the «dimensions|d
 ## Discussion
 - Why kind does both jobs under one word. The 11-05 dialog separated "atom kind" from "template" because the earlier "kind" had said nothing about what content pieces a thing has. Both are declarations of what a thing holds and what may be asked of it, at the two levels; one word with two subtypes keeps the lexicon from doubling.
 - Why kinds are not individuated by how they fail. That was RC1's cut, and it drove the record ever finer without saying what the pieces were for. A kind here is individuated by what it holds and what is asked of it; failure is one of the dimensions.
-- What goes in a store's ontology and not here. The claim shape for a theory store (context, hypotheses, conclusion, derivation), the low-fidelity kinds (sketch, hypothesis, idea, anecdote), the statement subkinds (definition, scope, postulate, no-go) are kinds AAT declares. The core only says what a kind declaration consists of.
+- What goes in a verisectorium's ontology and not here. The claim shape for a theory (context, hypotheses, conclusion, derivation), the low-fidelity kinds (sketch, hypothesis, idea, anecdote), the statement subkinds (definition, scope, postulate, no-go) are kinds AAT declares. The core only says what a kind declaration consists of.
 
 ## Examples
 - AAT's `derived-result` segment kind: slots formal-claim (one, claim), derivation (any number, proof-step), description (one, explanation), eli8 (at most one, explanation), questions (any number), guards (any number); inner dependencies eli8 → description → formal-claim; truth aliased to the formal claim's validity; freshness derived as the minimum; coherence own.
 - AAT's `claim` veritoid kind: content is a statement with its hypotheses and conclusion; opens validity, simulation, imported; may assert on validity ("exact", "conditional on …", "hypothesis"); may hold predicated-on and restates references.
 - A `chunk` veritoid kind: content is a span; opens where-did-it-go; holds one bears-on reference.
-- An `account` veritoid kind: prose about how a segment came to be as it is; opens fidelity to the log; may hold references outward to sources and notes; sits in a history slot where the segment kind declares one.
+- An `account` veritoid kind: prose about how a segment came to be as it is; opens fidelity to the acta; may hold references outward to sources and notes; sits in a history slot where the segment kind declares one.
 
 ## Historical Context
 - Adjudicated against msc/notes 05 (21:52Z–22:19Z), 06 §2, 09 §2.3, 12, 13, 19 §2.
 
 ## Working Notes
-- Open. Whether the ontology itself may one day be content of a store (the compiler bootstrap). Deferred by Joseph: not at first.
-- Open. Where an ontology change is recorded (cold read §2.7). It is neither written content nor an act on content, and ‹outside·change› is for things the store does not hold. Either the ontology becomes content of a special segment (deferred by Joseph) or the log has a third record kind beside writes and acts. A gap row carries it.
+- Open. Whether the ontology itself may one day be content of its own corpus (the compiler bootstrap). Deferred by Joseph: not at first.
+- Open. Where an ontology change is recorded (cold read §2.7). It is neither written content nor an act on content, and ‹outside·change› is for things neither corpus nor acta hold. Either the ontology becomes content of a special segment (deferred by Joseph) or the acta have a third record kind beside writes and acts. A gap row carries it.
 - Open. Whether a kind declares the references its pieces are expected to hold (a claim: at least one predicated-on; a decision: what it rests on), as it declares slots, so that a missing one is owed at the kind's grain. Lean: yes; it is the same declaration as a required slot, for references. See «reference».
 - Open. What a kind change does to recorded acts whose reads are still intact. An act binds to versions, not to kinds, so a kind change lapses nothing by itself; whether it should is a decision for the first real migration.

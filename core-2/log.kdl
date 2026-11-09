@@ -57,3 +57,8 @@ entry at="2026-11-09T17:00-07:00" by="Fable 5.1 session, at Joseph's direction" 
   did "sop.outline.md and sop/working-on-core.md added: the one procedure for changing core-2 by hand (orient as a new actor; know the surface; terms earn their place; design before words, provenance out of bodies; the gate; the log; commit; cold read before adjudication; decisions unanimous), with its reasons and historical context; templates/sop.md; README points at them"
   why "Joseph, 2026-11-09: without v2 this store needs an SOP outline and at least one basic working-on-core segment"
 }
+
+entry at="2026-11-09T18:30-07:00" by="Fable 5.1 session, at Joseph's decision" {
+  did #"renamed across core-2: the data store is the corpus (what was written), with canon as its stable subset reached by the canonical projection; the log is the acta (what was done), one entry an actum; store used for a whole verisectorium is now verisectorium; inline rows for corpus, canon, acta and actum; ontology and act kept. log.kdl keeps its filename for now and is named as this verisectorium's acta."#
+  why #"Joseph, 2026-11-09: store and log are so generic they cannot be told from their collisions; corpus (with canon) and acta (with actum) are precise and antique in the spirit of verisectorium and veritoid; ontology stays. Actus for act was offered and not taken: act has not collided here and its subtypes are plain English."#
+}

@@ -65,5 +65,5 @@ Now the record, as acts:
 
 - The honesty constraint (assertion ≤ warrant) did the work, not any special dimension. That is the simplest result in the two examples and the one I most want tested on a second segment.
 - *Concerns ⊆ reads* and per-veritoid grain are load-bearing. Without them the model collapses to vsect 0.1, which could not have recorded a broken check at all before 10-30 and binds at the file.
-- A recommendation, a digest, a prose "RESOLVED" and a quiz answer are each things the model refuses to count as validity acts. That refusal is where the model protects a store from its own authors' confidence.
+- A recommendation, a digest, a prose "RESOLVED" and a quiz answer are each things the model refuses to count as validity acts. That refusal is where the model protects a verisectorium from its own authors' confidence.
 - The one place the model is silent is the one that matters most: whether a confirming check was *right*. It can only make the question it answered countable. That is the gap "independence of acts" in the outline, and it is not closed here.
