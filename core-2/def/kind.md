@@ -18,7 +18,7 @@ A ‹veritoid·kind› declares: the shape its content takes; the «dimensions|d
 ### Invariants
 - A kind fixes what questions can be asked; it is not a position on any ladder. A veritoid moving up a dimension never changes its kind.
 - A dimension not opened for a kind is a fact about pieces of that kind, not a gap in their record.
-- Every veritoid kind opens at least one dimension. A question opens *answered* (produced by its closer's attestation); a regression guard opens *still false* (a check); a non-claim opens *fidelity* (does the text indeed not claim it). Content whose kind opens none is a note about the verisectorium, not content of it.
+- Every veritoid kind opens at least one dimension. A question opens *answered* (produced by its closer's attestation); a regression guard opens *still false* (a check); a non-claim opens *fidelity* (does the text indeed not claim it); a chunk opens *where did it go*; an account opens *fidelity to the acta*. Content whose kind opens none is a note about the verisectorium, not content of it. This invariant is a design choice that follows from the purpose, not a necessity of the machinery: nothing breaks if a kind opens no dimension, but pieces of that kind could never be adjudicated, owed or warranted, and the corpus is for what can be.
 - A kind has versions, and every piece follows one version of its kind. Adding a required slot to a segment kind makes every existing segment of that kind owe something; the ontology change is a perturbation like any other.
 
 ## Discussion
@@ -42,5 +42,6 @@ Plain English, kept over *type* (which the estate's files used for a filename pr
 ## Working Notes
 - Open. Whether the ontology itself may one day be content of its own corpus (the compiler bootstrap). Deferred by Joseph: not at first.
 - Open. Where an ontology change is recorded (cold read §2.7). It is neither written content nor an act on content, and ‹outside·change› is for things neither corpus nor acta hold. Either the ontology becomes content of a special segment (deferred by Joseph) or the acta have a third record kind beside writes and acts. A gap row carries it.
+- On "every kind opens at least one dimension" (Joseph's question, 2026-11-09: forced, or a choice?). A choice, following from what the corpus is for. Every kind met so far opens something; the nearest exception, a claimless structural heading, is a slot name or a projection's assembly here and not a veritoid. If a verisectorium ever wants pure packaging as content, the relaxation is "every kind that may carry an assertion opens at least one dimension," at no cost to the machinery.
 - Open. Whether a kind declares the references its pieces are expected to hold (a claim: at least one predicated-on; a decision: what it rests on), as it declares slots, so that a missing one is owed at the kind's grain. Lean: yes; it is the same declaration as a required slot, for references. See «reference».
 - Open. What a kind change does to recorded acts whose reads are still intact. An act binds to versions, not to kinds, so a kind change lapses nothing by itself; whether it should is a decision for the first real migration.

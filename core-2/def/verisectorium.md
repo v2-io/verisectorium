@@ -25,7 +25,7 @@ Two things are defined here and must not be confused. The **machinery** is the m
 - At each of its steady states, no piece asserts more about itself than what has been done to it warrants, every reference holds, and whatever is still owed is owed by recorded acceptance with its reason.
 - At least one of its projections is canonical, however experimental or nascent, and it is true as stated (for example, as initial untested hypotheses) at every steady state.
 - A "provisional" segment of any kind is, to canon, only a claim that the suggestion for such a segment (etc.) exists.
-- Every piece of its content is of a declared kind, and every kind opens at least one dimension. Content that answers to no dimension is a note about the verisectorium, not content of it.
+- Every piece of its content is of a declared «kind». Content that no dimension can be asked of is a note about the verisectorium, not content of it (why every kind opens a dimension is the kind's own invariant, and a choice).
 - Nothing in its corpus is changed by hand, and nothing in its acta is typed. Every change goes through a «changeset», and where the engine cannot express a change, that is how the engine's gap is found.
 
 ## Discussion
@@ -43,7 +43,7 @@ Two things are defined here and must not be confused. The **machinery** is the m
 
 ## Historical Context
 ### Etymology
-*Verisectorium*: a place (*-orium*, as in auditorium, sanatorium) for cutting (*secare*, whence section, dissect) truth (*veritas*). Coined by Joseph before any of this model existed, for the estate's living bodies of work, and the literal image, a dissection table for truth, turned out to be the operational definition: influx is cut until its pieces can stand alone. Nothing ancient names the thing; *corpus* names only what it holds.
+*Verisectorium*: a place (*-orium*, as in auditorium, sanatorium) for cutting (*secare*, whence section, dissect) truth (*veritas*). Coined by Joseph before any of this model existed, for the estate's living bodies of work, and the literal image, a dissection table for truth, turned out to be the operational definition: influx is cut until its pieces can stand alone. Nothing ancient that we know of names the thing; *corpus* names only what it holds.
 
 ### Adjudication
 - The model this def heads was worked out in `msc/notes/` 01–19 (2026-11-04 to 11-08) and the sessions behind them; `msc/notes/00-INDEX.md` says what each note is and what supersedes what. The term itself was first decided in `core/def/verisectorium.md` on 2026-11-07 and restated here on 11-08 after Joseph combined its senses (1) and (3) and found the aspect × standard carve of "truth determinant" unprincipled (see «dimension»'s Historical Context). The operational purpose leading the def is his correction of 2026-11-08: the first core-2 draft had led with the machinery.

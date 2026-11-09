@@ -70,9 +70,12 @@ The canonical projection of `core-2/`: everything the model consists of, in depe
 | provisional | impl | [[src/impl-stopped-bound\|The stopped bound]] |  | Prop A.1S(i), false for six months under fourteen passes, read through the model: caught by grain and by concerns-within-reads. |
 | provisional | disc | [[src/disc-what-would-show-this-wrong\|What would show this wrong]] |  | The falsifiers, the five things one AAT root is expected to strain, and the four decisions the first cold read showed the model had not made. |
 
-## Part II. Deliberately not carried from `core/`
+## Working Notes
+- Run one more real root, from a different volume, before adding any term.
+- Which of the inline rows wants to be a term? The rule: it becomes one when its Working Notes would hold a decision nobody else's file can hold.
 
-Not rows; a record of what was left out so a reader does not think it was forgotten, with the reasons.
+### Deliberately not carried from `core/`
+*(Not rows; a record of what was left out so a reader does not think it was forgotten, with the reasons.)*
 
 Carried as plain words or subtypes, not terms: ontology, corpus, canon, acta, actum, praxis, attribute, state, version, identity, name, actor, criterion, content, slot, inner dependency, inbox, chunk, crossing, rendering, projection, row, source, affirmation, acceptance. They are defined once in the outline's inline rows and used without guillemets. Also dissolved without a word of their own: *standing* (a dimension's *produced by* says whose acts count), *bind* (what every act does), *coherence* (a segment's own dimension), *orphan* and *order·exception* (facts about a projection, computed or recorded), *delivery* (a crossing outcome), *planned·segment* and *gap·segment* (a promised row whose segment has declared-owed slots).
 
@@ -84,7 +87,3 @@ Not carried, on your word: everything the kernel spikes fed into `core/`'s stubs
 
 Still open, and listed as gaps in the outline: several atomic changesets in flight and whether the union of two steady verisectoria is steady; independence of same-model checkers; steward attestation; the recording cost; and whether some constraints are better answered by a refusal than by a record.
 
-## Part III. Questions a cold reader should ask of this
-
-- Run one more real root, from a different volume, before adding any term.
-- Which of the inline rows wants to be a term? The rule: it becomes one when its Working Notes would hold a decision nobody else's file can hold.
