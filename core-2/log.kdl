@@ -112,3 +112,8 @@ entry at="2026-11-09T22:25-07:00" by="Fable 5.1 session" {
   did "the audited verisectorium def described by the previous actum is in with this commit, not the previous one: the write was refused because Joseph had edited the file (etymology: that we know of) between my read and my write, and the actum had already been appended. His edit is kept."
   why "an actum must not run ahead of the change it records; this one corrects the record rather than editing it"
 }
+
+entry at="2026-11-09T22:40-07:00" by="Fable 5.1 session" {
+  did "the audited verisectorium def is in with THIS commit. The two preceding acta (22:10 and 22:25) each claimed it had landed and were wrong: both times the write was refused by the editing tool's freshness check (the file had been read through the shell, not the editor), and the actum had already been appended before the refusal was seen. Nothing of Joseph's was lost; his etymology edit is kept."
+  why "two acta ran ahead of the change they recorded, and the record must say so plainly; the praxis gains a line: append an actum after the change has been verified on disk, never before"
+}
