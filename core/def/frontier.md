@@ -50,6 +50,7 @@ From *frons*, the front: the line where settled territory ends. What is still ow
 - Adjudicated against msc/notes 05 (22:19Z), 09 §4.3, 10 §1.1, 19 §5, and Joseph's 11-08 "dimensions as constraints".
 
 ## Working Notes
+- From the first core's "steady·state", whose one-line definition ended "and no rule that would fire": a *raised* item here covers a rule firing that happened; nothing covers a rule that is due and has not been run. Lean: a steady state is computed with every declared rule evaluated as of that state, so "due and unrun" cannot arise; to be said in «steady·state» once decided.
 - Open. Whether the item kinds above are complete. The kernels needed three; the notes add broken and raised; an ontology adds its own.
 - The frontier is as complete as the references; see «reference»'s notes on detection. And a computed frontier nobody is shown silts exactly like a kept list: it has to be rendered where every changeset opens and closes, and the message that reaches the steward from it should carry only what the steward alone can weigh.
 - The twin of the open question below: what agents will refuse to do because a mark reads as a lock. Any changeset may lower or replace any assertion with a recorded reason; ruled, ratified and exact are assertions, not locks, and the practical model should say so plainly.

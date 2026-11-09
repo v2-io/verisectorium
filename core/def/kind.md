@@ -40,6 +40,7 @@ Plain English, kept over *type* (which the estate's files used for a filename pr
 - Adjudicated against msc/notes 05 (21:52Z–22:19Z), 06 §2, 09 §2.3, 12, 13, 19 §2.
 
 ## Working Notes
+- From the first core's "veritoid·kind", not carried: the admission rule, "a kind earns its place when some question is asked of its veritoids that is asked of no other kind's", or when something treats them differently. «reference» states the same rule for reference kinds; kinds of content have none here. Lean: an invariant of this def.
 - Open. Whether the ontology itself may one day be content of its own corpus (the compiler bootstrap). Deferred by Joseph: not at first.
 - Open. Where an ontology change is recorded (cold read §2.7). It is neither written content nor an act on content, and ‹outside·change› is for things neither corpus nor acta hold. Either the ontology becomes content of a special segment (deferred by Joseph) or the acta have a third record kind beside writes and acts. A gap row carries it.
 - On "every kind opens at least one dimension" (Joseph's question, 2026-11-09: forced, or a choice?). A choice, following from what the corpus is for. Every kind met so far opens something; the nearest exception, a claimless structural heading, is a slot name or a projection's assembly here and not a veritoid. If a verisectorium ever wants pure packaging as content, the relaxation is "every kind that may carry an assertion opens at least one dimension," at no cost to the machinery.

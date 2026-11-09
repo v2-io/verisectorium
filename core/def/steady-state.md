@@ -15,7 +15,7 @@ status provisional
 A state whose frontier is empty, or every item on it is covered by an acceptance with a reason; the acceptances, and the determinant dimensions never asked, are its stated conditions. A verisectorium at a steady state is *stationary*: the adjective for the noun.
 
 ## Definition
-There are two kinds of time. In **steady time** the verisectorium moves from one steady state to the next, each move at one logical instant; nothing exists between two steady states, and at each one the verisectorium is good or true, with stated conditions. In **work time** minds assemble that move over hours and days; while they do there is a working state, the last steady state plus what has been staged, and it is never the theory. A steady state is reached when an ‹atomic·changeset› closes: its «frontier» is empty, or what remains on it is covered by acceptances.
+There are two kinds of time. In **steady time** the verisectorium moves from one steady state to the next, each move at one logical instant; nothing exists between two steady states, and at each one the verisectorium is good or true, with stated conditions. In **work time** minds assemble that move over hours and days; while they do there is a working state, the last steady state plus what has been staged, and it is never the verisectorium. A steady state is reached when an ‹atomic·changeset› closes: its «frontier» is empty, or what remains on it is covered by acceptances.
 
 The steady state's **stated conditions** are: every acceptance covering an owed item, with its reason and its actor; and, for the ‹determinant› dimensions, every piece whose warrant is *never asked*. A rendering of a steady state carries them; a reader who sees a steady state sees what it is not yet claiming.
 
