@@ -25,7 +25,8 @@
 #   status provisional | status decided by="steward-and-lead" on="YYYY-MM-DD"
 # Body: '# «term»' then the one-line def · optional ## Intro · ## Definition or ## Definition(s) (senses or
 #       elaboration, with a ### Invariants subsection) · any free ## sections ·
-#       ## Discussion · ## Examples · ## Working Notes (required)
+#       ## Discussion · ## Examples · optional ## History, ## Historical Context · ## Working Notes (required)
+#       The one-line def, Definition, Invariants and Examples stand alone: no paths or note numbers.
 
 require 'kdl'
 
@@ -186,6 +187,12 @@ when 'check'
     problems << "#{f}: missing section '## Definition' or '## Definition(s)'" unless d['sections'].key?('Definition') || d['sections'].key?('Definition(s)')
     problems << "#{f}: missing '## Working Notes'" unless d['sections'].key?('Working Notes')
     problems << "#{f}: no one-line def under the '# «#{t}»' heading" unless d['def']
+    # standing alone: the one-line def, Definition, Invariants and Examples point nowhere outside the def
+    standalone = [d['def'].to_s, d['sections']['Definition'].to_s, d['sections']['Definition(s)'].to_s, d['sections']['Examples'].to_s].join("\n")
+    standalone.gsub(/`[^`]*`/) { |code| code =~ %r{msc/|\.\./|~/|/src/|\.archive|\.md\b} ? code : '' }
+    if standalone =~ %r{msc/notes|msc/scratch|\.\./|~/src|\.archive/|\bnote \d\d\b|see [^.]*\bfor the (full )?derivation}
+      problems << "#{f}: a standalone section (definition, invariants or examples) points outside the def: #{$~[0]}"
+    end
     check_refs.call(f, d['text'])
     d['term']['rels'].each do |r|
       problems << "#{f}: relation '#{r['rel']}' has no cardinality {m,n}" unless r['card'].to_s =~ /\A\{\d+,(\d+|N)\}\z/

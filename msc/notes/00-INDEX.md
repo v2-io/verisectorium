@@ -1,6 +1,6 @@
 # Working notes on the verisectorium model, in the order they were written
 
-*The files here are frozen copies of working documents from `~/src/aat-v3/preparations/` (and one from this repo's top level), renamed into one sequence on 2026-11-06. They are influx to `core/`, not part of it. The originals stay in aat-v3 under their old names for history; the copies here are the ones to cite from now on. Nothing in a copy was changed. Material about ASF as material (the sprint record, the label census, the missed-error case, Line A) stays in aat-v3 and is pointed at below.*
+*The files here are frozen copies of working documents from `~/src/aat-v3/preparations/` (and one from this repo's top level), renamed into one sequence on 2026-11-06. They are influx to `core/`, not part of it. The originals stay in aat-v3 under their old names for history; the copies here are the ones to cite from now on. Nothing in a copy was changed above its last original line; a note may take a dated appendix at its bottom (a correction, a later finding), and 02, 08/09 and 18 carry one as of 2026-11-09. Material about ASF as material (the sprint record, the label census, the missed-error case, Line A) stays in aat-v3 and is pointed at below.*
 
 *A note that has been fully superseded moves to `.archive/`. The two handoffs (15, 17) are there; every other note corrects the earlier ones only in part, and the index says which part.*
 
@@ -29,7 +29,7 @@
 
 ## Corrections to what the notes carry
 
-- Notes 02 (A8) and 08/09 describe live_docs as having signed reviews that decay on later edits, queues surfaced at session close, and a signer-not-author check. A whole read of the project (`msc/scratch/research-live-docs-2026-11-09.md` §6) found those three were proposals in the August design document, not live_docs behaviour; the WAL as unit of change, per-doc history as a projection, the two-pass cascade, and navigation kept apart from dependency are accurate. The notes are frozen; this line is the correction.
+- Notes 02 (A8) and 08/09 describe live_docs as having signed reviews that decay on later edits, queues surfaced at session close, and a signer-not-author check. A whole read of the project (`msc/scratch/research-live-docs-2026-11-09.md` §6) found those three were proposals in the August design document, not live_docs behaviour; the WAL as unit of change, per-doc history as a projection, the two-pass cascade, and navigation kept apart from dependency are accurate. Dated correction appendices are at the bottom of 02 and of 08/09.
 
 ## Also in `msc/scratch/`
 
