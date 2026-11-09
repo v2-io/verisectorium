@@ -20,6 +20,7 @@ The corpus holds pieces of content: a formal statement, a step of a derivation, 
 
 ## Definition
 ### Invariants
+- It is of exactly one declared ‹veritoid·kind›.
 - It has an id minted at creation and never reused, and no name; a rendering reaches it through its segment.
 - It is never changed alone. It changes only inside a ‹segment·changeset›.
 - It contains no veritoid. Where an act confirms part of it and breaks the rest, it is split: its id is retired and new ids are minted with recorded descent.
@@ -43,4 +44,5 @@ The corpus holds pieces of content: a formal statement, a step of a derivation, 
 
 ## Working Notes
 - Not yet confirmed by Joseph: exactly two levels (veritoid, segment). He said on 11-05 he was still not sure; the lean is the reading of his "practical granularity".
+- Open, from the first core's terms "content" and "version": a version is of content *after normalization*, so that a reflow or an unwrap mints no version and lapses nothing. The version row here says "the hash of a veritoid's written state" and does not say normalized. Lean: say it; what normalization is belongs to the kind's content shape.
 - [M] Minted identity with recorded descent. The kernel spikes took the safe rule that an id belongs to the segment that introduced it; this is stronger and simpler, and was reached from the notes (09 §2.4's five recuts, 10 §1.5) rather than from the spikes.

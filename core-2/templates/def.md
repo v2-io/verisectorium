@@ -18,7 +18,7 @@ Optional. How the term sits among its neighbours, for a cold reader. Terms as «
 The elaboration or the senses. Present tense, present truth, standing alone.
 
 ### Invariants
-- What must always hold, including how the thing fails.
+- What must always hold, including how the thing fails. Only invariants whose failure breaks *this* term; another term's invariant is named, not restated.
 
 ## Discussion
 - Why it is cut this way. May lean outward with care; a discussion that comes to rest on a pointer belongs in History.
