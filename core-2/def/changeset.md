@@ -21,7 +21,7 @@ A ‹segment·changeset› is a whole new written state of one «segment», repl
 An ‹atomic·changeset› is everything, segment changesets and acts together, that takes the verisectorium from one «steady·state» to the next. It opens with whatever first disturbs the steady state (a finding, a softened assertion, a new result, a rule firing, an outside change) and closes when the «frontier» is empty or every item on it is accepted. It is usually more than one mind can assemble in one pass, so it is staged; after every stage the frontier says what is owed. Only the last write to each segment reaches the next steady state. Joseph's "atomic changeset", "simultaneously, logically speaking".
 
 ### Invariants
-- An atom of content never changes alone; only a segment changeset writes.
+- A «veritoid» never changes alone; only a segment changeset writes.
 - A segment changeset is refused, not owed, when an inner dependent is neither changed nor affirmed, when it would make predicated-on cyclic, or when it names an id it does not hold and is not moving.
 - What is written is reconciled by the author at one instant. Warrants are not the author's to set: the moment a changeset is staged, every act that read what changed lapses, and earning the warrant back takes further acts, usually by other minds, in work time.
 - An affirmation never counts as an independent check. Its job is only that nothing was left as it was without someone having looked.
