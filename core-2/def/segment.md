@@ -23,6 +23,7 @@ A «veritoid» almost never makes sense alone. Its fate is intertwined with its 
 - It has a minted id and one current name; old names keep resolving.
 - It is the unit of writing: its veritoids change only together, in one ‹segment·changeset›.
 - It is not one fate. Each veritoid has its own warrants; the segment has its own dimensions, chiefly coherence (does it hold together read as one thing), read from a review of the whole.
+- A ‹projection› may declare, over segment kind × determinant, the weight each pair carries for its purpose, with reach within it as a multiplier; that declaration is what makes the projection's sense of better, and the canonical projection's is the verisectorium's default.
 - A ‹projection›'s rows carry two states kept apart, commitment (provisional, or promised by a decision) and existence (absent, or present), and a projection is true as stated at every «steady·state» because a provisional row claims only that the suggestion exists; its coherence lapses only on what its kind says a review of it reads of each member (headline and assertion, not every proof step), so one edit does not lapse the whole theory.
 - At least one projection in every verisectorium is canonical. A segment reached by no canonical projection and by no predicated-on reference in or out is an orphan; orphans are allowed and counted.
 - A ‹source› is cut completely into chunks; it is retired, computed, when every chunk has a final crossing.
