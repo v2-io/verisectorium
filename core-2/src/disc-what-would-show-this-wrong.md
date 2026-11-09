@@ -9,7 +9,7 @@ narrates: [verisectorium, veritoid, segment, kind, dimension, reference, act, ch
 
 *Moved from the first-iteration overview (`MODEL.md`, Fable 5.1, 2026-11-08) into a segment of its own on Joseph's suggestion, so that it narrates the defs it rests on and lapses when they change. Provisional. Where a thing is Joseph's it says so; [M] marks the least tested.*
 
-The model is wrong if a real store needs a thing that is neither written, done nor computed; if a warrant cannot be read from acts without someone typing it after all; or if the ten terms have to multiply back toward eighty to do real work.
+The model is wrong if a real store needs a thing that is neither written, done nor computed; if a warrant cannot be read from acts without someone typing it after all; or if the terms (ten at first, eleven once the actor was brought into scope) have to multiply back toward eighty to do real work.
 
 Before any more material, my guess at what one AAT root will strain, in order:
 

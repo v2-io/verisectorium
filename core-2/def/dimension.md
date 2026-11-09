@@ -19,9 +19,9 @@ One question asked of a piece, declared with what it asks, of which kinds, again
 The ontology declares each dimension with five things:
 
 1. **asks**: the question, in plain words.
-2. **of**: which «kinds|def/kind» it is opened for.
+2. **of**: which «kinds|def/kind» it is opened for; a dimension may be of an «actor» (its orientations) as well as of a piece.
 3. **against**: what a piece is held to. Where that is the same for every piece (logic; the world; the store's own canon) it is named once. Where it varies per piece (the source this quotes; the segment this explains; the party accountable for this decision; the target this is important for) the dimension says how a piece names it, usually by a «reference» of a declared kind. An act answering the dimension reads what fills this slot, which is why a change in it lapses the answer.
-4. **produced by**: what sort of «act» answers it, and whose acts have standing: a ‹check› by a mind re-deriving, not the author; a script comparing two texts; a run against an instrument at a version; a reader of a stated kind; an ‹attestation› by the accountable party; a ‹rule·firing› over attributes; the graph.
+4. **produced by**: what sort of «act» answers it, and whose acts have standing, read from the «actor»'s record (orientation warranted; not the author; a ‹mind› rather than an ‹instrument›, or the reverse): a ‹check› by a mind re-deriving, not the author; a script comparing two texts; a run against an instrument at a version; a reader of a stated kind; an ‹attestation› by the accountable party; a ‹rule·firing› over attributes; the graph.
 5. **read as**: how the warrant for a piece is read from the acts that still bind and concern it: the highest rung a confirming check reached, broken winning; the latest outcome; a conjunction of named checks; the latest word of the entitled party; a count; a declared numeric projection (a credence, where a store wants one).
 
 And optionally **passes along**: for each reference kind, what this dimension does to pieces that reference the piece. Validity *caps* along predicated-on (nothing is warranted above what it rests on); freshness *stales* along narrates; most dimensions pass nothing.
@@ -62,5 +62,6 @@ The first four and the fifth are determinants in AAT's sketch; the last two orga
 - [M] The five-part declaration is mine, assembled from Joseph's "what builds/founds/sustains this axis" (11-04), the census's second-argument and producer findings (18), and note 19 §3. Untested on a declared ontology.
 - Open. Whether *against* can carry every second argument, or whether some (importance for a target; comprehension by a reader) belong to the act rather than the dimension. Lean: the dimension names how a piece fills it; the act reads what fills it.
 - Open. Whether a dimension that a ‹finding› answers (something is broken, no criterion) is the same dimension the checks answer. Lean: yes; a finding is a broken outcome without weight as a confirmation.
+- From the vivarium research read (2026-11-09): an orientation dimension is of an actor, produced by a check concerning the actor; whether the three orientations Joseph named are one dimension with a varying *against* or three is open, lean one. See «actor».
 - Open. Whether prerequisite, precedence and veto among dimensions are core machinery or only something the ontology may state. Lean: stated only, until a store needs the engine to enforce one.
 - Adjudicated against msc/notes 02 A0–A2, 08/09 (RC1's dimension), 09 §2.2, 12, 18 families A–G and findings 1–8, 19 §3, and Joseph's 11-08 turns on aspect × standard, on dimensions as constraints, and on determinants as a subset.
