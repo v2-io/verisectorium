@@ -25,6 +25,12 @@
 | 17 | 11-07 | `.archive/handoff-fable` | the founding session's handoff: reading order, what is settled, the open decisions in order, what no file says plainly | — |
 | 18 | 11-08 | `dimension-census` | a Fable 5.1 synthesis of what the estate's verisectoria adjudicate, from ten reports in `msc/scratch/census-*.md`, replacing an earlier first pass kept at `msc/scratch/census-first-pass-2026-11-08.md`. Written here, not copied from aat-v3. Quotes Joseph's gitignored messages file | — |
 | 19 | 11-08 | `holistic-model` | the Opus 5.5 session's whole model in seven working terms, with intake folded in and the stopped-bound error worked through it; a proposal, untested, with a written guess of what a real root will strain | — |
+| 20 | 11-08 | `current-state` | the Fable 5.1 session's first summary after an experiential read of notes 01–19 (predictions and findings for 01–08 are in `msc/scratch/experiential-read-2026-11-08/`): how the model evolved, a three-sentence spine, where it does not hold, and the recommendation that became `core-2/`. Pasted in by Joseph | `core-2/` |
+
+## Also in `msc/scratch/`
+
+- `core-2-MODEL-draft-2026-11-08.md`: the one-page first iteration of core-2, retired once its content moved into `core-2/src/` segments.
+- `core-2-denovo-1.md`: a cold read of core-2 by a fresh Fable agent with a two-line brief; its accepted fixes and the four decisions it surfaced are logged in `core-2/log.kdl`.
 
 ## Still only in transcripts or elsewhere
 
