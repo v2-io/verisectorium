@@ -1,5 +1,6 @@
 ```kdl
 term "steady·state" pos=noun pl="steady·states" {
+  synonyms "stationary"
   avoid "checkpoint" "a place passed through on the way somewhere else, and a moment of verification; a verisectorium at a steady state is not on the way anywhere, and the state is not the moment it was reached"
   avoid "stable" "suggests nothing is moving; a verisectorium at a steady state may be under heavy work in work time"
   avoid "main" "a branch name, one way of holding one"
@@ -11,7 +12,7 @@ status provisional
 ```
 
 # «steady·state»
-A state whose frontier is empty, or every item on it is covered by an acceptance with a reason; the acceptances, and the determinant dimensions never asked, are its stated conditions.
+A state whose frontier is empty, or every item on it is covered by an acceptance with a reason; the acceptances, and the determinant dimensions never asked, are its stated conditions. A verisectorium at a steady state is *stationary*: the adjective for the noun.
 
 ## Definition
 There are two kinds of time. In **steady time** the verisectorium moves from one steady state to the next, each move at one logical instant; nothing exists between two steady states, and at each one the verisectorium is good or true, with stated conditions. In **work time** minds assemble that move over hours and days; while they do there is a working state, the last steady state plus what has been staged, and it is never the theory. A steady state is reached when an ‹atomic·changeset› closes: its «frontier» is empty, or what remains on it is covered by acceptances.
@@ -43,6 +44,7 @@ From dynamical systems: a state that persists until something perturbs it, whate
 - Adjudicated against msc/notes 05 (22:53Z), 08/10, 09 §3.1 and §4.4, 14, 19 §5 and §7, and Joseph's 11-08 words on frontier versus stable steady states.
 
 ## Working Notes
+- Note on wording. "Stationary between changes" in «verisectorium»'s one-line def: a working state between two segment changesets of one atomic changeset is between changes and not stationary; "whenever stationary" or "between atomic changesets" says it exactly. Joseph's wording is kept as written, provisionally.
 - Open (Joseph's, punted). Whether two steady states reached independently in two working copies combine into a steady state. The model says nothing.
 - Open. Whether a working state is held as a branch, a separate corpus, or otherwise. The requirements are: steady states along the way, a diff against the last steady state, the frontier, a merge only when the frontier is empty or accepted, and detection of overlapping changesets before merge. Git gives the first two for files.
 - The acceptance-warrants-nothing invariant was added 2026-11-09 from the estate's own experience of minds reading a signature or a ratified mark as a lock on content (`msc/scratch/research-live-docs-2026-11-09.md` §2.2 and §3 carry the production specimens).
