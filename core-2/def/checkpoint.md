@@ -34,9 +34,12 @@ The checkpoint's **stated conditions** are: every acceptance covering an owed it
 - `scope-adaptive-system` on 2026-10-31 after check 8: validity warrants confirmed on every item at `9fde935e`; one narrowed check (C11, the cold-reader clause) and two findings (F1, corrected by its author; F5, small points) owed. A checkpoint there needs three acceptances or three repairs, and its conditions would name them.
 - `deriv-sector-condition` at the pre-integration tag, under this model: no checkpoint from 2026-04-22 on without an acceptance of Prop A.1S(i)'s overclaim, which nobody would have written, because writing it is what would have prompted the check.
 
+## Historical Context
+- The two kinds of time were Joseph's correction of 2026-11-05 ("practical sequentialness but logical simultaneity") to a draft whose log was a flat list of single-piece acts; `msc/notes/08/10` carries the correction and its worked table. The known-defect mark he weighed that day became the acceptance here once the frontier was computed.
+- Adjudicated against msc/notes 05 (22:53Z), 08/10, 09 §3.1 and §4.4, 14, 19 §5 and §7, and Joseph's 11-08 words on frontier versus stable checkpoints.
+
 ## Working Notes
 - Open (Joseph's, punted). Whether two checkpoints reached independently in two working copies combine into a checkpoint. The model says nothing.
 - Open. Whether a working state is held as a branch, a separate store, or otherwise. The requirements are: checkpoints along the way, a diff against the last checkpoint, the frontier, a merge only when the frontier is empty or accepted, and detection of overlapping changesets before merge. Git gives the first two for files.
 - The acceptance-warrants-nothing invariant was added 2026-11-09 from the estate's own experience of minds reading a signature or a ratified mark as a lock on content (`msc/scratch/research-live-docs-2026-11-09.md` §2.2 and §3 carry the production specimens).
 - Open. How much warrant a small rewording should cost. Here acts lapse completely on any change to what they read; a store wanting a graded fall declares a *read as* that gives one.
-- Adjudicated against msc/notes 05 (22:53Z), 08/10, 09 §3.1 and §4.4, 14, 19 §5 and §7, and Joseph's 11-08 words on frontier versus stable checkpoints.

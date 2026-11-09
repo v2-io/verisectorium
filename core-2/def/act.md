@@ -44,10 +44,12 @@ A run is a ‹check› whose actor is an instrument at a version. Reading is rec
 - "RESOLVED in canon — do not re-open", in a Working Note: not an act. Closure is an attestation with an actor and a way to reopen, and a sentence in prose closes nothing.
 - "Only Joseph may record a decision as ruled": an attestation whose standing the dimension restricts to one actor, and which the harness cannot yet attest (a gap).
 
+## Historical Context
+- Adjudicated against msc/notes 09 §3.1–3.5, 10 §1.11, 18 findings 2 and 8, 19 §4, and asf's recorded acts (`vsect why segment:scope-adaptive-system`, `segment:deriv-sector-condition`).
+
 ## Working Notes
 - Open. Whether a broken ‹check› and a ‹finding› are one subtype or two. Lean: two, as above, because a finding may have had no criterion and so carries no weight as a confirmation.
 - Open. Whether an act may answer more than one dimension. Lean: no; record two acts.
 - From the vivarium research read (2026-11-09): reading moved from attestation-only to attested-or-checked per producer, with the check the default for a possibly-compacted mind; an orientation pass is an act in the log, not a token outside it. See «actor» and `disc-actor`.
 - Open. What makes two acts independent when both actors are instances of one model family. The dimension's producer can require a different actor; it cannot yet require a different failure mode.
 - From the first cold read (`msc/scratch/core-2-denovo-1.md` §2.3, §2.6, §2.9): warrant reads lapsing only on a fall, run and reader event placed, and reads of an assertion alone, all adopted above; the projection-review invariant in «segment» now rests on something this def states rather than leaves open.
-- Adjudicated against msc/notes 09 §3.1–3.5, 10 §1.11, 18 findings 2 and 8, 19 §4, and asf's recorded acts (`vsect why segment:scope-adaptive-system`, `segment:deriv-sector-condition`).

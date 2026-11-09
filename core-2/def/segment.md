@@ -31,6 +31,7 @@ A «veritoid» almost never makes sense alone. Its fate is intertwined with its 
 ## Discussion
 - Why a segment is not one kind and not one fate. ASF's frontmatter made a whole segment look like one fate and one kind; its `status:` word was five questions' worth of assertions on heterogeneous veritoids, typed once. Many ASF segments are also coarser than they should be, holding independent claims that should each have their own name; promotion is the recut for that.
 - Why Working Notes were three things. Inbox chunks (uncrossed material bearing on the segment); standing content mis-shelved (regression guards, open questions with closers, dead ends with reasons, each a veritoid of its own kind in a slot of its own); and in-place fate markers written as prose, which are crossings that never became acts. The first is the inbox; the second is content; the third is the log.
+- Four places a record can go, and which the segment owns. The log (what was done; the store's, not the segment's), the history of renderings (outside the store), the inbox (influx bearing on the segment, outside its written state), and history (written prose kept with the segment about how it came to be as it is: a slot of account veritoids, revisable, faithful to the log, and the one place a segment may point outward as breadcrumbs). A body states present truth and stands alone; history says how it got there; the inbox holds what is not yet adjudicated; the log holds what was done. A sentence of history inside a claim is a claim that has stopped standing on its own.
 - Why projections nest without a third level. A chapter is a segment whose slots hold references to segments; a part holds chapters; the theory holds parts. That is gathering, not content inside content, so the two-level rule stands.
 
 ## Examples
@@ -38,10 +39,12 @@ A «veritoid» almost never makes sense alone. Its fate is intertwined with its 
 - `01-aat-core/OUTLINE.md`: a canonical projection with nine `--GAP--` rows and six `missing` cells, which are provisional rows and make the outline no less true.
 - `audits/AUDIT-WORKING-193847/`: a source, cut into chunks by the 2026-05-30 lift, most of which bear on one segment each.
 
+## Historical Context
+- Adjudicated against msc/notes 05 (21:52Z), 09 §2.3 and §2.6, 10 §1.4, 14, 19 §2 and §6.
+
 ## Working Notes
 - Open. Whether a projection's members may also be veritoids (a chapter preface written inline) or only references to segments. Lean: a projection kind may declare content slots of its own beside its member slot; the preface is then its veritoid.
 - A ‹source› and its chunks are written once and never changed; a ‹crossing› concerns a chunk and writes nothing in it; so the changeset that lands a source has no inner dependents to affirm, and a changeset touching a source's chunks is refused. Stated here so the first real intake does not meet it as a surprise.
 - Churn is a second grain detector beside adjudication: a segment whose history is long and whose change notes are about different things is carrying two claims. Cheap, and computed.
 - A restates reference means agreement with the piece that owns the claim; two pieces restating a third that disagree with each other are repaired by ceasing to restate (a reference to the owner), never by reconciling the two copies.
 - Open. Whether "source" and "projection" are subtypes of segment or kinds declared by every ontology. Lean: subtypes, because every verisectorium has both and the engine treats them specially (the inbox; the canonical projection).
-- Adjudicated against msc/notes 05 (21:52Z), 09 §2.3 and §2.6, 10 §1.4, 14, 19 §2 and §6.

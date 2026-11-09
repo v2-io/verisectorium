@@ -35,6 +35,9 @@ A reference **holds** when its target exists (its id is not retired), the target
 - An introduction's narrates reference to another segment's eli8 and not to its formal claim.
 - A chunk from the 2026-05-30 gold lift with bears-on `scope-adaptive-system`.
 
+## Historical Context
+- Adjudicated against msc/notes 05 (21:52Z), 09 §2.5, 10 §1.5–1.7, 19 §2 and §5; the live_docs read `msc/scratch/research-live-docs-2026-11-09.md` §§2.3, 2.4, 2.6 for the three notes above it.
+
 ## Working Notes
 - Open. Whether *needed* on a reference is the author's assertion about what the dependent relies on (and so a constraint the author owns) or something the capping dimension consults. Lean: the author's, stated, and the cap is computed separately; the two agree in the common case and differ exactly where the author relied on more than the premise's warrant, which is worth seeing.
 - Open. Whether a reference may itself carry a warrant (is it true that A rests on B?). Lean: no; contest it by a finding on the referencing veritoid.
@@ -43,4 +46,3 @@ A reference **holds** when its target exists (its id is not retired), the target
 - Open (practical model). The frontier is exactly as complete as the written references, and references are systematically incomplete in the direction that matters: the piece that contradicts a change but shares none of its vocabulary, which no author wrote a reference to and no search finds. Propagation along references is the well-understood half; detection of the unwritten reference is where real stores fail. The practical answer is a judgment walk over the changed segment's projection neighbours on every substantive change, writing the references it finds so the frontier reaches them next time, and treating a root changed with nothing lapsed as suspicious. Machinery needs nothing new; the review's default read set does.
 - Open. Whether the expected references of a piece should be declared on its kind (every claim expects at least one predicated-on; every decision expects what it rests on) rather than only per reference instance, so that a missing why is owed without an author having to write a dangling reference. Lean: both; the kind-level form is what makes a promised row's missing support computable. See «kind».
 - A reference-kind list is better derived than listed: name each kind by what it does (what passes along it, which direction, whether it caps, whether it is acyclic, whether its target may be outside the store) and collapse kinds with identical behaviour. Narrates and restates may collapse under that test; bears-on may not.
-- Adjudicated against msc/notes 05 (21:52Z), 09 §2.5, 10 §1.5–1.7, 19 §2 and §5; the live_docs read `msc/scratch/research-live-docs-2026-11-09.md` §§2.3, 2.4, 2.6 for the three notes above it.

@@ -34,8 +34,10 @@ The store holds pieces of content: a formal statement, a step of a derivation, a
 - In `scope-adaptive-system`: the intro paragraphs (explanation); the law definition; the scope predicate; each lettered item (a)–(h′) of the membership result, each a claim; the housing result; each "Not claimed" sentence of the Epistemic Status (a non-claim); each named Discussion paragraph; each open item of the integration record (a question with a closer); each gold-lift bullet (a chunk of the source "audit gold lift 2026-05-30", bearing on this segment).
 - In `deriv-sector-condition`: Prop A.1S(i) as a claim, and the steps of its proof as separate veritoids in the derivation slot. That separation is what lets the model show (i) was never asked (`examples/stopped-bound.md`).
 
+## Historical Context
+- Adjudicated against msc/notes 05 (21:52Z), 08/06–08, 09 §2.1, 09 §2.4, 10 §1.5, 19 §2.
+
 ## Working Notes
 - Open. Whether the word survives. Joseph offered it half in jest, for having no history. Kept here because renaming it would be churn for nothing until the model settles.
 - Not yet confirmed by Joseph: exactly two levels (veritoid, segment). He said on 11-05 he was still not sure; the lean is the reading of his "practical granularity".
 - [M] Minted identity with recorded descent. The kernel spikes took the safe rule that an id belongs to the segment that introduced it; this is stronger and simpler, and was reached from the notes (09 §2.4's five recuts, 10 §1.5) rather than from the spikes.
-- Adjudicated against msc/notes 05 (21:52Z), 08/06–08, 09 §2.1, 09 §2.4, 10 §1.5, 19 §2.

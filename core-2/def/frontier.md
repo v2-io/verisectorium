@@ -42,9 +42,11 @@ Each item carries its cause (which write or act made it owed) and, through the �
 - `scope-adaptive-system` at `12ea0186`, after review reread-1: broken (item (c)'s decay claim, by C3), broken (item (h)'s support claim, by C4), overclaim ((h): asserted exact, warrant broken), and five findings F1–F5. The integrator's changeset `5e613630` lapsed every reread act and cleared the two broken items; the new text then owed its own warrant until integration-2 and check-4 earned it.
 - `deriv-sector-condition` under this model, from 2026-04-22 to 10-30: overclaim (Prop A.1S(i), validity: asserted exact, warrant never asked), because every recorded pass concerned a proof step and not the statement. See `examples/stopped-bound.md`.
 
+## Historical Context
+- Adjudicated against msc/notes 05 (22:19Z), 09 §4.3, 10 §1.1, 19 §5, and Joseph's 11-08 "dimensions as constraints".
+
 ## Working Notes
 - Open. Whether the item kinds above are complete. The kernels needed three; the notes add broken and raised; an ontology adds its own.
 - The frontier is as complete as the references; see «reference»'s notes on detection. And a computed frontier nobody is shown silts exactly like a kept list: it has to be rendered where every changeset opens and closes, and the message that reaches the steward from it should carry only what the steward alone can weigh.
 - The twin of the open question below: what agents will refuse to do because a mark reads as a lock. Any changeset may lower or replace any assertion with a recorded reason; ruled, ratified and exact are assertions, not locks, and the practical model should say so plainly.
 - Open. What agents will do to make the frontier empty. Affirmations and acceptances are both cheap exits, and any marker of done becomes a target. The model's only answer is that both are attestations with reasons, visible at every checkpoint.
-- Adjudicated against msc/notes 05 (22:19Z), 09 §4.3, 10 §1.1, 19 §5, and Joseph's 11-08 "dimensions as constraints".
