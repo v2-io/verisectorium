@@ -1,108 +1,154 @@
-// Append-only log of changes to core/. Newest entry last. One entry per act on core;
-// what each entry says is what changed and why, so that core itself carries no history.
-// KDL 2.0. A value containing " is a raw string, #"like this"#, so that its text stays as written.
+// Append-only log of changes to core/ (named core-2/ until 2026-11-09; earlier entries say so). Newest entry last. One entry per act on core;
+// what each entry says is what changed and why, so that core carries no history of its own.
+// KDL 2.0. A value containing " is a raw string, #"like this"#.
+// The `by` here is typed, against the model's own rule that an actor is read from the harness; this log predates any tool that could read it.
 
-entry at="2026-11-06T16:30-07:00" by="Fable session (successor to 92e38652), with Joseph" {
-  did "founded core/ with model.outline.md as the canonical projection; every row provisional or gap"
-  why "consolidation of the 11-04..11-06 model work before any def is adjudicated; the notes it draws on are frozen copies in msc/notes/"
+entry at="2026-11-08T21:30-07:00" by="Fable 5.1 session, with Joseph" {
+  did #"founded core-2/: README, MODEL.md (the spine in five sentences and twelve sections), model.outline.md (ten terms with files, nineteen inline words, five gaps), def/ for verisectorium, veritoid, segment, kind, dimension, reference, act, changeset, frontier, checkpoint, two worked examples from asf's recorded acts (scope-adaptive-system; the stopped bound), and bin/defs taking a core directory argument"#
+  why #"Joseph, 2026-11-08: build the spine right in a new core-2/ carrying core/'s discipline and none of its terms by inheritance, after the experiential read of every note, his turns on term multiplication, on the aspect-by-standard carve of truth-determinant, on dimensions as constraints, on intake being in definition (1), and on the kernel spikes having no bearing on the ontology. Everything provisional."#
 }
 
-entry at="2026-11-06T17:10-07:00" by="Joseph, then the Fable session" {
-  did #"outline tightened; legend, wikilinked groups, terms-defined column, see column (provisional only); propagated to all tables; VI retitled as patterns (not groups), VII reduced to a paragraph, VIII to discussion prompts with "owed" withdrawn; terms use plain hyphens"#
-  why "Joseph's edit of part I and his notes on VI-VIII; terms are identifiers and must match files, keys and greps"
+entry at="2026-11-08T21:45-07:00" by="Fable 5.1 session, at Joseph's remark" {
+  did #"MODEL.md §1 sentence 1 no longer says the store "never holds truth"; it says every statement about standing is read from the record and never typed from outside it, and that the store holds true sentences without a verdict on them beyond what the acts warrant"#
+  why #"Joseph, watching the file land: "That's a very bold absolute." It was, and it conflated holding true sentences with holding a certificate of truth."#
 }
 
-entry at="2026-11-06T17:40-07:00" by="Fable session, at Joseph's direction" {
-  did #""(inline)" is now a form in the group column rather than a mark, so an inline row can still be provisional; specially defined multi-word terms use a non-breaking hyphen (U+2011) in the terms column and in prose; wikilink targets and ordinary hyphenated words keep ASCII hyphens"#
-  why "Joseph's two requests after decluttering; the non-breaking hyphen marks the term as a defined term throughout the canon, and keeps table cells from wrapping mid-term"
+entry at="2026-11-08T22:40-07:00" by="Fable 5.1 session, from the first cold read" {
+  did #"after msc/scratch/core-2-denovo-1.md: own and effective warrant (capped is information, overclaim compares with effective); a warrant read lapses only on a fall; reads may be of an assertion alone; a run is a check by an instrument, a reader event an attestation; row carries commitment and existence as two states; kinds that seemed to open no dimension given theirs; two gap rows (write-time addressing; ontology change record); the scope example's vsect claim corrected (13 checks hold at HEAD, not none; hash 4dd77b14) and MODEL §10 rewritten to say the count is not yet done; the stopped-bound example now says which reading of "exact" its result depends on; consistency slips (nineteen inline words; sixth optional slot; the eight dissolved words §12 had not named; coherent wholes). Four decisions left for Joseph in Working Notes: which assertions compare with warrants; whether reconciliation is a write; write-time addressing; the ontology change record"#
+  why "a cold read with a two-line brief found one false claim about the record, one contradiction (capped vs overclaim), one invariant that broke on good news, and the fused row, and named the four decisions the model had quietly not made; the quantitative claim had been carried into MODEL.md with less hedging than the example gave it"
 }
 
-entry at="2026-11-06T18:20-07:00" by="Fable session, at Joseph's direction" {
-  did #"outline reorganized around main terms (verisectorium, store, layers; veritoid, claim, low-fidelity kinds; segment, segment changeset, recut, segment kinds, projection, rendering; reference, premise change; dimension, value, value move; act; intake), dropping the cross-cutting sections "Time and Change" and "Store Growth"; defined terms written «term» or «wording|def/group#term», multi-word terms joined with ⸱ (U+2E31), weak words namespaced (store⸱state, value⸱move, value⸱claimed, reference⸱use, segment⸱name, ...); U+2011 removed; convention and checker rules stated in the legend"#
-  why "Joseph, 2026-11-06: groups by main term rather than by cross-cutting dimension; weak terms need a namespace; the guillemet-and-⸱ convention renders everywhere in the estate and is a legal word character in udon"
+entry at="2026-11-08T23:05-07:00" by="Fable 5.1 session, at Joseph's question" {
+  did "MODEL.md reconciled against the defs it was written before: §3 rows carry commitment and existence, reviews lapse on declared reads, members may be promised; §6 reads may be of an assertion or a warrant alone, a warrant read lapses only on a fall, a run is a check by an instrument, a reader event an attestation; frontier.md's note no longer names capped as an item"
+  why "Joseph asked whether MODEL.md was still a high-fidelity recapitulation of the segments; it was not in two sections, and it is meant to be the first file read"
 }
 
-entry at="2026-11-06T19:30-07:00" by="Fable session, with Joseph" {
-  did "outline regrouped along the address-theory exemplars' seams (a group only where its terms are co-defined; 34 groups, most of 1-4 terms); `def` column added, orthogonal to `mark` (–, inline, stub, present); definition, written/computed, recut (verb) and dimension's sustained-by sort restored from the predecessor's defs; eleven provisional defs filed as stubs (verisectorium, regime, definition, store, steady, atomic-changeset, veritoid, written, ground, bound, claimed-level), each updated against notes 12-16 and the 11-06 transcript, each carrying its open questions and leans in working-notes; bin/defs rewritten for «term», «wording|def/group#term» and ⸱, with promised-but-unfiled terms allowed"
-  why "Joseph, 2026-11-06, after the exemplar read; the predecessor's defs predate notes 12-16 and the point of filing them is to carry that newer understanding"
+entry at="2026-11-08T23:40-07:00" by="Fable 5.1 session, at Joseph's suggestion" {
+  did #"MODEL.md retired to msc/scratch/core-2-MODEL-draft-2026-11-08.md; its sections became nine prose segments in src/ (intro-spine; disc-written-done-computed, disc-pieces-and-identity, disc-dimensions-as-constraints, disc-better, disc-what-would-show-this-wrong; impl-intake, and the two example runs as impl-scope-adaptive-system and impl-stopped-bound, with examples/ removed), each with frontmatter naming the defs it narrates, interspersed in the outline where they belong; §§5–7 (references, acts, change) dropped as recapitulations of their defs; §12 moved into the outline's Part II with its reasons; the defs' three pointers into MODEL.md inlined (crossing outcomes in act; better and the intrinsic constraints in verisectorium); bin/defs checks src/ frontmatter, narrates targets, references and outline rows; README reading order is now the outline in row order"#
+  why "Joseph: MODEL.md was the right way to get a first iteration down before the segments; now that the segments exist, nothing novel should live only in it, and the pedagogical and persuasive prose belongs in intro-, disc- and impl- segments interspersed in the outline, with their predicate defs named so a change cascades"
 }
 
-entry at="2026-11-07T00:40-07:00" by="Joseph (intro), then the Fable session" {
-  did "defs moved from YAML to markdown with YAML frontmatter (machine fields in frontmatter; Intro / Terms / Discussion / Examples / Working Notes in the body); core/def/README.md states the shape; bin/defs ported. Joseph's rewrite of the verisectorium intro propagated (three senses; truth-centrism, continual improvement, turnover-resilience; complex-systems list moved to discussion); term renames: definition -> ontology, store -> data⸱store, answers⸱to -> truth⸱determinants; better, answers to, soften are plain English now, not terms; roll-up's terms made nouns (aliased⸱value, derived⸱value, owned⸱value); legend states the nouns rule"
-  why #"prose was being written inside a data format; "definition" collided with the def files; terms are nouns and verbs/adjectives belong to their referent noun (Joseph, 2026-11-07)"#
+entry at="2026-11-09T00:05-07:00" by="Fable 5.1 session, at Joseph's correction" {
+  did "verisectorium def and intro-spine led by the operational purpose: influx dissected until pieces contribute on their own, adjudicated, refined, reassembled into results others build on and read; new results built on adjudicated ones as how discovery and decision proceed; the machinery-versus-practical-model distinction stated inside the term; examples say where each estate verisectorium's influx came from and what it delivers; outline rows match"
+  why "Joseph: the operational purpose had been re-lost in favour of the machinery, in the five sentences and in the def itself; every verisectorium in the estate starts as influx cut up until the truths are independently contributory, and the literal image of dissection is apt; the machinery is fine as the meta-ontology, with the practical model and its affordances distinguished from it in the definition"
 }
 
-entry at="2026-11-07T01:30-07:00" by="Fable session, at Joseph's direction" {
-  did #"def machine block is now a leading ```kdl block (KDL 2.0) instead of YAML frontmatter; subtypes introduced (declared `subtypes "a" "b"` under a term; written ‹sub› beside its noun or alone when unique; «sub⸱noun» as full name); «property» minted with ‹written› and ‹computed›, replacing the written group; roll-up, row, premise-change, recut and value rows restated with subtypes; bin/defs parses KDL and resolves both subtype forms; README and legend updated"#
-  why "KDL's node shape is udon's, so the retrofit stays a syntax swap; subtypes stop the lexicon minting a noun for every state of a noun (Joseph, 2026-11-07)"
+entry at="2026-11-09T13:30-07:00" by="Fable 5.1 session, with Joseph, after the vivarium research read" {
+  did #"actor brought into scope as the eleventh term (def/actor.md: minted anew at every discontinuity, compaction included, as a new actor with a source; a record of its own: model and prompt attested, three orientations as warrants earned by checks, consortia as references, experience computed; standing as a gate a dimension's producer declares over that record; subtypes mind and instrument); act gains by and concerns-actor relations and reading as attested-or-checked per producer with the check the default for a possibly-compacted mind; dimension may be of an actor and its producer reads the actor's record; disc-actor segment written; outline, README and counts updated"#
+  why #"Joseph, 2026-11-09: a compaction is not a new version of an actor but a new, often confused and deceived actor starting with a summary of varying fidelity; the frontier/checkpoint separation gives orientation a purpose vivarium had to guess at; his list of what an actor is (state of the store and intended role above the line; LLM, system prompt, v2/domain/segment orientation, consortia, experience below) ending in "standing?"; and his decision that the mind belongs in scope since the act is central and verisectoria are in practice very concerned with the minds that turn over. The research read at msc/scratch/research-vivarium-heat-orientation-2026-11-09.md is the evidence."#
 }
 
-entry at="2026-11-07T02:10-07:00" by="Joseph, then the Fable session" {
-  did "truth⸱determinant defined in the singular with pl truth⸱determinants (Joseph); group line, relation target, heading and outline row made to agree; the three defining properties are ### subheadings inside the intro (Joseph); checker accepts a plural «TERMS» as the intro's first mention, resolves possessives, and reports a group/term mismatch instead of crashing; README says terms are defined in the singular"
-  why "terms defined in the singular so that pl carries meaning; guillemets take singular, plural or possessive as the sentence requires (Joseph, 2026-11-07)"
+entry at="2026-11-09T15:10-07:00" by="Fable 5.1 session, at Joseph's correction, after reading both research reports whole" {
+  did #"disc-actor and actor rewritten so the body states the design and names no other project as argument; what they were adjudicated against moved to Working Notes. From the live_docs read, working notes added where it bears on a term (reference: whether acyclicity belongs to the capping kind rather than to dependence in general; detection of unwritten references as the practical gap; expected references declared on the kind; deriving reference kinds by behaviour; kind: expected references as a kind-level declaration; segment: sources never rewritten, churn as a grain detector, restates agrees with the owner; frontier: completeness bounded by references, must be shown where changesets open and close, marks are not locks; actor: the steward's word written by proxy with a required reference, as a decision for Joseph) and one invariant to checkpoint: an acceptance warrants nothing about content, silence is not ratification. msc/notes/00-INDEX.md carries the correction that three live_docs behaviours the notes inherited were proposals."#
+  why "Joseph, 2026-11-09: core-2 is the core model and should not reference live_docs or anything else as provenance; text changes only because the design changed, and the estate's own experience is reason enough for signer not author and the like. Provenance belongs in working notes and this log."
 }
 
-entry at="2026-11-07T02:40-07:00" by="Fable session, at Joseph's suggestion" {
-  did "per-term subsections allowed under ### «term» (free-named, or Discussion / Examples / Working Notes); group-level sections kept for what concerns the group as a whole; verisectorium.md restructured so the three defining properties sit under «verisectorium», and each term carries its own discussion, examples and working notes"
-  why "the exemplars keep discussion and notes at group level, which blurs once a group has more than one term; the three properties are about the term, not the pair (Joseph, 2026-11-07)"
+entry at="2026-11-09T16:20-07:00" by="Fable 5.1 session, at Joseph's direction" {
+  did #"disc-record-surfaces written: the log, the history of renderings, working notes as inbox, and history as written account prose kept with a segment, with historical context as a form of history and the standalone rule for the body; outline row added; segment gains a discussion item on the four surfaces; kind names an account veritoid kind; disc-written-done-computed places history in the written row and the inbox outside all three; def/README states the History and Historical Context sections and the standing-alone rule; every def's adjudicated-against line moved from Working Notes into a Historical Context section, with fuller context written for verisectorium, dimension, checkpoint and actor; bin/defs refuses a path or note reference inside a def's one-line definition, Definition, Invariants or Examples"#
+  why #"Joseph, 2026-11-09: the four surfaces are a common need and deserve a disc segment; this bespoke store's own evidence and reasoning trails deserve a first-class, protected place (History, Historical Context) as the revisable high-level warrant for the model, with breadcrumbs to the notes, while no core definition may rely on pointing to another file, because formal claims pointing at spikes for their derivations was the recurring failure in ASF and AAT and is the agentic default"#
 }
 
-entry at="2026-11-07T03:30-07:00" by="Fable session, at Joseph's direction" {
-  did "one term per def file; every former group split (24 term files), each a kdl block with a single term node, then Intro / Definition / free sections / Discussion / Examples / Working Notes; split files carry a working note that their intro and discussion are still shared verbatim with former group-mates; outline rows one per term (87), with a subtypes column in place of terms-defined; checker, README and legend updated"
-  why "the co-definition test was a judgment call made twice over the same material; one term per file has no judgment in it, and no file is named for something that is not a term (Joseph, 2026-11-07)"
+entry at="2026-11-09T16:40-07:00" by="Fable 5.1 session, at Joseph's direction" {
+  did "templates/ added: README and one template per segment kind this store uses (def, intro, disc, impl), each showing its sections in order, which stand alone, and which may point outside; verisectorium's example about this store no longer names a path (the new standalone check caught it)"
+  why "Joseph, 2026-11-09: where the ontology has segment kinds, this bespoke store needs their basic predecessor, the proto-segment-kind as a template file per kind"
 }
 
-entry at="2026-11-07T04:10-07:00" by="Joseph (verisectorium.md), then the Fable session (tooling)" {
-  did #"Joseph reworked verisectorium.md (intro folded into the definition; invariants as a subsection with a caveat; the three properties as discussion items; rel targets as term="…"); the checker and README follow: rel term= property on every def, Intro optional, a ### Invariants subsection recognized; 40 relations"#
-  why "his form of the file is the one to adjudicate against; the tooling bends to the file, not the file to the tooling"
+entry at="2026-11-09T17:00-07:00" by="Fable 5.1 session, at Joseph's direction" {
+  did "sop.outline.md and sop/working-on-core.md added: the one procedure for changing core-2 by hand (orient as a new actor; know the surface; terms earn their place; design before words, provenance out of bodies; the gate; the log; commit; cold read before adjudication; decisions unanimous), with its reasons and historical context; templates/sop.md; README points at them"
+  why "Joseph, 2026-11-09: without v2 this store needs an SOP outline and at least one basic working-on-core segment"
 }
 
-entry at="2026-11-07T04:40-07:00" by="Joseph (verisectorium.md), then the Fable session" {
-  did "def body opens '# «term»' with the one-line definition under it; the «TERM» capitalized first mention is retired; '## Definition' or '## Definition(s)' holds senses or elaboration with a '### Invariants' subsection; propagated to all 24 defs; verisectorium's first invariant scoped to its steady states (the fix Joseph asked for); checker and README follow"
-  why "Joseph's latest shape for verisectorium.md; the caps form no longer did work once one term per file made the first mention obvious"
+entry at="2026-11-09T18:30-07:00" by="Fable 5.1 session, at Joseph's decision" {
+  did #"renamed across core-2: the data store is the corpus (what was written), with canon as its stable subset reached by the canonical projection; the log is the acta (what was done), one entry an actum; store used for a whole verisectorium is now verisectorium; inline rows for corpus, canon, acta and actum; ontology and act kept. log.kdl keeps its filename for now and is named as this verisectorium's acta."#
+  why #"Joseph, 2026-11-09: store and log are so generic they cannot be told from their collisions; corpus (with canon) and acta (with actum) are precise and antique in the spirit of verisectorium and veritoid; ontology stays. Actus for act was offered and not taken: act has not collided here and its subtypes are plain English."#
 }
 
-entry at="2026-11-07T05:00-07:00" by="Joseph and the Fable session" {
-  did "verisectorium decided: steward-and-lead, unanimous. status decided in its def; its outline row marked present, see cleared. The first non-provisional term in core."
-  why #"adjudicated together on 2026-11-06/07 from Joseph's rewritten intro and three passes over its shape; the four pre-conditions named by the lead (a one-line definition, the first invariant scoped to steady states, sense (3) named as the referent of relations and invariants, "toward agreement with" its determinants) are met"#
+entry at="2026-11-09T19:00-07:00" by="Fable 5.1 session, at Joseph's decision" {
+  did "sop renamed praxis throughout (praxes.outline.md, praxes/, templates/praxis.md, README, the root CLAUDE.md import); praxis defined in the verisectorium def and as an inline row as the dual of the engine's affordances, what is expected of a mind that no tool enforces; every def's Historical Context now opens with an Etymology subsection saying what the word is, why it was chosen and what it was chosen over, with the adjudication record under its own subheading; veritoid's may-not-survive note dropped"
+  why "Joseph, 2026-11-09: praxis, both here and in concrete verisectoria, as the dual to the CLI, describing for agents what is neither the domain nor automated away; veritoid stays because it is distinct enough to mean exactly what is said where atom, claim, doc and decision collide; and all terms should carry their etymology in historical context"
 }
 
-entry at="2026-11-07T05:40-07:00" by="Joseph (legend, Part I order, mark renamed accepted), then the Fable session" {
-  did "outline reordered by dependence, each term after what it is built on (Joseph's Part I; Part II continued the same way); core, pattern⸱library and aspect removed as not part of the model (an SoP verisectorium may hold them later); log and state placed after data-store, property after veritoid-kind; gaps placed beside the term they concern; section numbers replaced by Part I-V; patterns note no longer leans on a pattern library; 84 terms"
-  why "a lexicon-shaped outline should let a reader meet no word before its parts; the earlier order was by scale, not dependence (Joseph, 2026-11-07)"
+entry at="2026-11-09T19:20-07:00" by="Fable 5.1 session, at Joseph's suggestion" {
+  did "the praxis/ directory is praxes/, to carry the plural beside praxes.outline.md; every path updated"
+  why "Joseph, 2026-11-09"
 }
 
-entry at="2026-11-07T20:30-07:00" by="Fable session (fork), from the four kernel spikes" {
-  did #"five stubs filed from the spikes' findings (version, act, affirmation, reference, segment⸱changeset), each with the finding, which kernels found it, and a lean; version added to the outline as a term; notes added to frontier (only writes add owed items; three item kinds; frontier-list exactness is the real "steady means honest"; one cause many items), content, veritoid (identity rule met in practice), claimed-level (the ceiling is the equation, not the bound), atomic-changeset (refusals recorded vs reported); act's subtypes check/decision/crossing; recut gap row notes the rule all four took"#
-  why "four independent kernels built from one spec agreed where the model was silent or wrong (worked-example frontier, inert affirmation, hash vs counter, missing-target ceiling, identity under recut) and split where it must decide (refusals recorded or reported; what the version covers; the affirmation's effect); the stubs carry those as inbox items so the decisions are made where they belong"
+entry at="2026-11-09T19:45-07:00" by="Fable 5.1 session, at Joseph's decision" {
+  did "checkpoint renamed steady·state as the term (def/steady-state.md), every reference and plain use with it, including the spine's third sentence; checkpoint on the avoid list with the reason; etymology rewritten"
+  why "Joseph, 2026-11-09: a checkpoint indicates an intermediate spot on the way to the actual destination; a verisectorium at a steady state is not on the way anywhere, and the word also names a moment of verification rather than a state"
 }
 
-entry at="2026-11-08T10:10-07:00" by="Opus 5.5 session, with Joseph's standing go-ahead on provisional segments" {
-  did #"act gains the sorts of act the notes had named (review, finding, acceptance, rule firing, outside change) and an invariant that a broken check or a finding goes on the record and adds to the frontier; an act may bind to a value it relied on as well as to content, restored from msc/notes 09 §3.1 and 10 §1.4; "only a changeset adds to the frontier" removed from segment⸱changeset and scoped in the working notes to the kernels' own log; the changed-or-affirmed rule stated as following inner dependencies; affirmation's invariants now state what msc/notes 09 §4.1 gave it, not reference reconciliation; "the spec" in core's working notes now says KERNEL-SPEC.md; the example calling provisional rows an accepted remainder removed from four defs"#
-  why "kernel results had been written into core that held only for the spike's simplified log, against notes 09 and 11; a provisional row owes nothing (msc/notes 14), so it is no remainder; core is the spec, so a spike's target must not share the word (Joseph, 2026-11-08)"
+entry at="2026-11-09T20:05-07:00" by="Joseph (verisectorium one-line def), then the Fable 5.1 session" {
+  did "verisectorium's one-line definition revised by Joseph (results for others to comprehend and build on; worked on under high turnover; true as stated, with its conditions, when stationary between changes); stationary declared as the adjective of steady state in its def, with a wording note on between changes"
+  why "Joseph, 2026-11-09; stationary collides with nothing in the model and agrees with its sense in AAT's own mathematics"
 }
 
-entry at="2026-11-08T10:30-07:00" by="Opus 5.5 session (general-purpose agent), at Joseph's direction" {
-  did "core/log.yaml converted to core/log.kdl (KDL 2.0); every entry's text unchanged"
-  why "KDL's node shape is udon's, as with the defs' machine blocks; the log never parsed as YAML (Joseph, 2026-11-08)"
+entry at="2026-11-09T20:15-07:00" by="Joseph (verisectorium one-line def), then the Fable 5.1 session" {
+  did "verisectorium's one-line def now ends whenever stationary; the wording note removed (it had been filed under steady·state, where the question did not belong, instead of under verisectorium)"
+  why "Joseph took the suggestion and asked that the note go; a note about a def's wording belongs in that def's Working Notes"
 }
 
-entry at="2026-11-08T11:40-07:00" by="Opus 5.5 session, at Joseph's direction" {
-  did "outline Part I is now the foundational spine in a considered order (44 terms, 4 gaps), and everything else moved to Part II in three rough neighbourhoods with no claim of order; value, position, judgment now follow act and bind; term labels in one casing with the middle dot; stale group-style paths and the retired capitals convention removed from rows and legend. Relations marked provisional=#true where the target is not decided and the def's own text does not say plainly what the relation consists of (29 marked, 31 kept, by per-relation judgment); bin/defs counts them and draws them dotted"
-  why "Joseph, 2026-11-08 - only the order of the first table is claimed, and a relation to an undefined term is provisional unless its definition is very clear about it; verisectorium included"
+entry at="2026-11-09T20:40-07:00" by="Fable 5.1 session, confirming Joseph's statement" {
+  did "attribute given an inline row (a plain measurement with no judgment and no warrant; meets dimensions only where a rule reads attributes to raise a question); dimension's def states the aggregate: determinants are in aggregate the truth factors a verisectorium adjudicates, other dimensions are fitness, the mark is set per dimension by the ontology"
+  why "Joseph, 2026-11-09: dimensions orthogonal, distinct from attributes, with determinants the subset that determine rightness and in aggregate the truth factors adjudicated, distinct from any other fitness dimension; the word attribute had been used four times with no definition"
 }
 
-entry at="2026-11-08T11:45-07:00" by="Opus 5.5 session, from a cold read, for Joseph to adjudicate" {
-  did "truth⸱determinant reworked. Two parts, aspect and standard; the standard is what content must agree with, not the means of finding out; a standard may be named by role and filled per piece; answering to a determinant means being in the service of it; better includes being shown more firmly; completeness added to AAT's illustrative determinants; the question-and-note collision withdrawn; synonym truth aspects replaced by determinant. Status stays provisional. ontology now says it declares determinants"
-  why "the de novo read at msc/scratch/truth-determinant-denovo-1.md found better could not produce AAT's own sense of it, held-against mixed the standard with the instrument, and per-piece standards were unaccounted for; Joseph, 2026-11-08, on a question or note being in the service of a determinant"
+entry at="2026-11-09T21:10-07:00" by="Fable 5.1 session, at Joseph's point" {
+  did "better weighted: a projection declares over segment kind x determinant how much each pair weighs for its purpose, with reach as a multiplier, the canonical projection's declaration the verisectorium's default and a paper's projection its own; the mark says only that a question is about rightness; a weight is never a property of a piece; stated in verisectorium (truth-centric, continually improving), dimension, segment (projection) and disc-better. Joseph's own edits to verisectorium (however experimental or nascent; initial untested hypotheses; a provisional segment claims only that the suggestion exists) were already committed."
+  why "Joseph, 2026-11-09: what the verisectorium claims as better as a whole is made from determinants but not in equal part; in AAT correctness under stated conditions, fruitfulness and novelty of primary claims far outweigh notational coherence or citation fidelity, and a paper carved from a subgraph reweights them; so the weight is on segment kind x determinant and depends on the purpose"
 }
 
-entry at="2026-11-08T12:05-07:00" by="Opus 5.5 session, at Joseph's request" {
-  did "the separator in multi-word terms changed from U+2E31 to U+00B7 throughout core, bin/defs and the legend; earlier entries in this log keep the character they were written with"
-  why "it renders better in Lora and the fonts Joseph reads in (2026-11-08); U+00B7 is also XID_Continue, so a term is a legal bare name under udon's rule, which U+2E31 is not"
+entry at="2026-11-09T21:40-07:00" by="Fable 5.1 session, at Joseph's question" {
+  did "the invariant that every kind opens at least one dimension moved from verisectorium to kind alone (verisectorium keeps that every piece is of a declared kind and that content no dimension can be asked of is a note), and marked in kind as a design choice following from the purpose rather than a necessity of the machinery, with the relaxation named"
+  why "Joseph, 2026-11-09: the invariant belongs with kind, and is it forced, a design choice, or forced by the definition of content? It is a choice; nothing in the machinery breaks without it, and the corpus is for what can be adjudicated"
 }
 
-entry at="2026-11-08T19:35-07:00" by="Opus 5.5 session, at Joseph's request" {
-  did "committed truth·determinant as it stands in Joseph's working copy, mid-revision, with the separator made uniform; its status stays provisional and bin/defs check reports its declared-by relation as having no cardinality"
-  why "Joseph, 2026-11-08, asked that everything uncommitted be committed; the revision is his and in progress"
+entry at="2026-11-09T22:10-07:00" by="Fable 5.1 session, at Joseph's direction" {
+  did #"verisectorium def audited: the Definition pared to what it defines (the five verbs; the concrete parts, praxes now among them; the machinery/practical-model distinction); the influx catalogue and the discovery-engine sentence moved to Discussion; the parenthetical on kinds removed from the invariant; the engine's-gap clause moved from invariant to Discussion; each invariant now has its reason in Discussion (self-consistency; the canonical projection and provisional claiming only the suggestion; nothing by hand); the determinant relation's {1,N} justified; the hope that the machinery reduces moved to Working Notes; the third invariant's placement noted as open"#
+  why "Joseph, 2026-11-09: a parenthetical about something not asserted here needs no justification here; move Definition prose that is really discussion; check every invariant and relation for claims that belong elsewhere or are not justified, with reasons in Discussion or, if unsettled, in Working Notes"
+}
+
+entry at="2026-11-09T22:25-07:00" by="Fable 5.1 session" {
+  did "the audited verisectorium def described by the previous actum is in with this commit, not the previous one: the write was refused because Joseph had edited the file (etymology: that we know of) between my read and my write, and the actum had already been appended. His edit is kept."
+  why "an actum must not run ahead of the change it records; this one corrects the record rather than editing it"
+}
+
+entry at="2026-11-09T22:40-07:00" by="Fable 5.1 session" {
+  did "the audited verisectorium def is in with THIS commit. The two preceding acta (22:10 and 22:25) each claimed it had landed and were wrong: both times the write was refused by the editing tool's freshness check (the file had been read through the shell, not the editor), and the actum had already been appended before the refusal was seen. Nothing of Joseph's was lost; his etymology edit is kept."
+  why "two acta ran ahead of the change they recorded, and the record must say so plainly; the praxis gains a line: append an actum after the change has been verified on disk, never before"
+}
+
+entry at="2026-11-09T15:51-07:00" by="Fable 5.2 session (a new actor, oriented from core-2 read whole and msc/notes 01-08, 12-14, 16, 19-21), at Joseph's go-ahead" {
+  did #"three defs' Examples no longer point at examples/ (veritoid, segment, frontier): that directory went away on 11-08 when the runs became src/impl- segments, and a def is narrated by those segments, never points at them, so the pointers were dropped and not re-aimed; bin/defs now refuses a path into this verisectorium's own directories (examples/, src/, def/, praxes/, templates/) inside a standalone section, and its dead line (a gsub whose result was discarded) is removed; the typed term and inline-word counts are gone from README.md, core-2/README.md and the outline's Part I note"#
+  why #"the gate had passed with three dangling pointers in sections it says stand alone, because its pattern named only msc/, ~/src and .archive; and three files gave three different counts (ten and nineteen; eleven and eighteen; ten) against eleven terms and twenty-three inline rows, a count being a computed thing that had been typed, which the gate already prints. Tested: the new gate fails on the defs as they were at cee22a4, naming each pointer, and passes now. Left alone and raised with Joseph instead: the verisectorium def's body still says eleven terms."#
+}
+
+entry at="2026-11-09T15:56-07:00" by="Fable 5.2 session, at Joseph's direction" {
+  did "the verisectorium def's Machinery paragraph no longer counts its terms (eleven terms became its terms)"
+  why "Joseph, 2026-11-09: make the def's body evergreen; a count typed into a Definition goes false at the next term, and the gate prints the real one"
+}
+
+entry at="2026-11-09T15:57-07:00" by="Fable 5.2 session, at Joseph's direction" {
+  did #"correction to the record, editing nothing: the at= values of the first twenty-three entries (2026-11-08T21:30 through 2026-11-09T22:40, all marked -07:00) were estimated by the session that wrote them, not read from a clock. Against the commits that carried them: the entry marked 11-09T00:05 was committed 11-08 22:27 local; the one marked 13:30 at 12:27; the three marked 22:10, 22:25 and 22:40 at 14:37, 14:38 and 14:39. The typed times run ahead of the commits by one to eight hours, growing through the day, so they are neither local nor UTC. What holds for those entries: their order in this file, and for each the commit that first carried it as a latest-possible time (git log -- core-2/log.kdl). Entries from 2026-11-09T15:51-07:00 on are read from the clock, which is why that entry reads as earlier than the four before it. The praxis's step 6 now says at= is read from the clock, never estimated."#
+  why #"Joseph, 2026-11-09: correct the acta. A mind has no clock; a time it writes unprompted is a felt duration in a timestamp's clothes, and the acta are the one record everything else is read from."#
+}
+
+entry at="2026-11-09T15:58-07:00" by="Fable 5.2 session, orienting, under Joseph's leave to modify what is provisional" {
+  did #"changeset's first invariant says a veritoid never changes alone (it said "an atom of content", the word its own avoid list rules out); reference gains a working note that core/'s gap "mutual definition" was neither carried nor listed as dropped, with this def set named as a specimen of co-definition and a lean"#
+  why "found while reading core/'s outline against core-2's: an avoided word inside an invariant, and a gap that fell out between the two cores without a decision"
+}
+
+entry at="2026-11-09T16:21-07:00" by="Fable 5.2 session, at Joseph's question whether everything needed from the first core is carried" {
+  did #"after reading the first core's outline and its twenty-nine def files (ten of them for invariants and working notes only), five things it held that were neither in these defs nor in their working notes are now working notes: kind (ground was per piece, so a kind-level opening leaves a never-simulable claim reading never-asked forever; two of the four bounds are not non-claims), veritoid (a version is of normalized content), changeset (connecting an unconnected segment is a large perturbation of its own; roots reach everything, tips nothing), steady·state (the known-defect mark's lean was to inhibit new reliance, where an acceptance only shows), dimension (whether one determinant must be held against something no write here can change). With the mutual-definition note already on reference, that is what I found; kernel-spike material was left behind on purpose, as before."#
+  why "Joseph, 2026-11-09: is everything necessary from core/ integrated or in working notes, before core/ moves to the notes"
+}
+
+entry at="2026-11-09T16:21-07:00" by="Fable 5.2 session, at Joseph's objection" {
+  did #"verisectorium's invariants cut to the three that are true of the whole and of none of its parts: its ontology declares at least one determinant (until now only a relation note), and Joseph's two (one canonical projection, true as stated; provisional claims only the suggestion). Removed as other terms' business: assertion within warrant at a steady state (steady·state's), every piece of a declared kind (now stated in veritoid and in segment, each of exactly one kind), nothing changed by hand (changeset's). Segment no longer restates the canonical-projection invariant. The rule is written into def/README and the def template: an invariant is stated once, in the def of the thing that is broken when it fails."#
+  why #"Joseph, 2026-11-09: the def "still states invariants that it has no business stating. I don't want to have to hunt all over the definitions and segments to figure out where the 'content has a kind' invariant is." A def that restates its parts' invariants is the restates failure the segment def's own notes warn of: repaired by ceasing to restate, not by keeping copies in step."#
+}
+
+entry at="2026-11-09T16:23-07:00" by="Fable 5.2 session, at Joseph's direction" {
+  did #"the first core moved whole to msc/notes/17b-2026-11-07-first-core/ and this directory, core-2/ until now, is core/. Every live reference follows: the gate is bin/defs check core; README.md, CLAUDE.md, this directory's README, both outlines, the praxis, the def and template READMEs and relevant-mental-models.md say core/; references to the first core in Historical Context and Working Notes point at its place in the notes; msc/notes/00-INDEX.md gains rows 17b and 21. Entries above this one say core-2/ and are left as written."#
+  why "Joseph, 2026-11-09: with what the first core held either integrated or in working notes, move it to the notes and make core-2 the core"
 }

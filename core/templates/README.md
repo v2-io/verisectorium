@@ -1,6 +1,6 @@
-# core-2/templates — this verisectorium's segment kinds, in proto form
+# core/templates — this verisectorium's segment kinds, in proto form
 
-A verisectorium's ontology declares its segment kinds: which slots a segment has, in what order, which are required, and which veritoid kind fills each. This verisectorium is bespoke and kept in markdown by hand, so its segment kinds exist first as **templates**: one file per kind, showing the sections in order with a line on what each holds, which sections must stand alone, and which may point outside. They are the proto-form of what `kind.md` calls a ‹segment·kind›, written for this verisectorium's own content, and they are what `bin/defs check core-2` enforces where it can.
+A verisectorium's ontology declares its segment kinds: which slots a segment has, in what order, which are required, and which veritoid kind fills each. This verisectorium is bespoke and kept in markdown by hand, so its segment kinds exist first as **templates**: one file per kind, showing the sections in order with a line on what each holds, which sections must stand alone, and which may point outside. They are the proto-form of what `kind.md` calls a ‹segment·kind›, written for this verisectorium's own content, and they are what `bin/defs check core` enforces where it can.
 
 | template | the segment kind | lives in |
 |---|---|---|

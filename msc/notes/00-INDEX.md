@@ -23,9 +23,11 @@
 | 15 | 11-06 14:40 | `.archive/handoff-fable` | the Fable session's handoff: reading order, what is settled, what in 09/11 is known wrong, what is open. Stale in two places: the work was committed (`281ac5e`, `72eac51`); and the outline-as-provisional-skeleton was the session's own inference from 14, not Joseph's answer | — |
 | 16 | 11-06 14:49 | `unasked-questions` | Joseph's last question to that session and the eleven questions it answered with, carved from the transcript; never on disk before | — |
 | 17 | 11-07 | `.archive/handoff-fable` | the founding session's handoff: reading order, what is settled, the open decisions in order, what no file says plainly | — |
+| 17b | 11-06/07, moved here 11-09 | `first-core/` | the first `core/`: the model as consolidated from notes 01–16 into a lexicon-shaped outline of eighty-five rows (`model.outline.md`), twenty-nine def files (most of them stubs fed by the kernel spikes), and its own `log.kdl`. One term was decided (`verisectorium`) and later judged wrong by Joseph. Moved here whole, with its history, when `core-2/` became `core/`; paths inside it that say `core/` mean itself | `core/` (the second core); what it held that was not carried is in the Working Notes of `core/def/` kind, veritoid, changeset, steady-state, dimension and reference |
 | 18 | 11-08 | `dimension-census` | a Fable 5.1 synthesis of what the estate's verisectoria adjudicate, from ten reports in `msc/scratch/census-*.md`, replacing an earlier first pass kept at `msc/scratch/census-first-pass-2026-11-08.md`. Written here, not copied from aat-v3. Quotes Joseph's gitignored messages file | — |
 | 19 | 11-08 | `holistic-model` | the Opus 5.5 session's whole model in seven working terms, with intake folded in and the stopped-bound error worked through it; a proposal, untested, with a written guess of what a real root will strain | — |
-| 20 | 11-08 | `current-state` | the Fable 5.1 session's first summary after an experiential read of notes 01–19 (predictions and findings for 01–08 are in `msc/scratch/experiential-read-2026-11-08/`): how the model evolved, a three-sentence spine, where it does not hold, and the recommendation that became `core-2/`. Pasted in by Joseph | `core-2/` |
+| 20 | 11-08 | `current-state` | the Fable 5.1 session's first summary after an experiential read of notes 01–19 (predictions and findings for 01–08 are in `msc/scratch/experiential-read-2026-11-08/`): how the model evolved, a three-sentence spine, where it does not hold, and the recommendation that became `core-2/`, now `core/`. Pasted in by Joseph | `core/` |
+| 21 | 11-09 | `later-state` | the same Fable 5.1 session's closing remark at the end of 11-09: the state of `core-2/` (now `core/`) in one paragraph and the decisions left waiting for Joseph. Pasted in by Joseph | — |
 
 ## Corrections to what the notes carry
 
@@ -33,8 +35,8 @@
 
 ## Also in `msc/scratch/`
 
-- `core-2-MODEL-draft-2026-11-08.md`: the one-page first iteration of core-2, retired once its content moved into `core-2/src/` segments.
-- `core-2-denovo-1.md`: a cold read of core-2 by a fresh Fable agent with a two-line brief; its accepted fixes and the four decisions it surfaced are logged in `core-2/log.kdl`.
+- `core-2-MODEL-draft-2026-11-08.md`: the one-page first iteration of core-2 (now `core/`), retired once its content moved into `core/src/` segments.
+- `core-2-denovo-1.md`: a cold read of core-2 (now `core/`) by a fresh Fable agent with a two-line brief; its accepted fixes and the four decisions it surfaced are logged in `core/log.kdl`.
 
 ## Still only in transcripts or elsewhere
 

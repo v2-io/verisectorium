@@ -1,39 +1,56 @@
 ```kdl
 term "frontier" pos=noun pl="-s" {
-  avoid "todo list" "a frontier is computed, never typed"
-  rel of term="working·state" card="{1,1}" provisional=#true
+  avoid "todo list" "a frontier is computed, never typed, and lies only as much as the state it is computed from"
+  avoid "obligations" "an earlier word; the items are violated constraints, each with a clearer"
+  rel of term="changeset" card="{1,1}" note="the atomic changeset in progress whose working state it is computed over"
+  rel names term="dimension" card="{0,N}" note="per item: the dimension whose constraint is violated and whose producer can clear it" informal=#true
 }
 status provisional
 ```
 
 # «frontier»
-Everything still owed in a working state; what is known not yet to be consistent, computed afresh after each write or act.
-
-## Intro
-
-An «atomic·changeset» is everything, writes and acts together, that takes the «data·store» from one «steady·state» to the next. It opens with a «perturbation», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «frontier» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «accepted·remainder»: what has been left on it by explicit, recorded decision, with its reason.
+Everything owed in a working state: every violated constraint, computed fresh after each write or act, each item naming its cause and who can clear it.
 
 ## Definition
+After every write or act in an ‹atomic·changeset›, the frontier is recomputed: which constraints fail in the working state. The items are:
+
+| item | the constraint it violates | cleared by |
+|---|---|---|
+| **overclaim** (piece, dimension) | assertion ≤ warrant | the dimension's producer raising the warrant, or the author lowering the assertion or narrowing the content |
+| **stale** (reference) | the target is at the version the reference saw | the author reconciling or re-pointing it, after answering "did I rely on what changed?" |
+| **dangling** (reference) | the target exists | re-pointing to a descendant, or dropping |
+| **unmet** (reference) | the target's warrant ≥ what the reference needs | the target earning it, or the author needing less |
+| **broken** (piece, act) | what a check or finding found broken has been dealt with | a repair that lapses the breaking act, or an acceptance |
+| **raised** (piece, dimension) | a question a rule firing or outside change put to a piece has been answered | the dimension's producer |
+| whatever the ontology's own constraints add | | |
+
+Each item carries its cause (which write or act made it owed) and, through the «dimension»'s *produced by*, who can clear it. The frontier is addressed to someone. Beside the owed items it shows, as information and not as owed, every piece whose *own* warrant exceeds its *effective* one: a well-checked claim resting on an unchecked premise. The cap is part of how the effective warrant is computed, so an assertion above it is already an overclaim; the cap itself is never a violation.
 
 ### Invariants
-- It holds references whose target has changed since they were last checked, veritoids whose claimed level is above what is now earned, what a ‹finding› or a broken ‹check› has said is broken, acts that no longer bind where a value rested on them, and questions a rule has raised that a mind must answer.
-- If it keeps growing instead of shrinking, work stops and the whole is looked at. The usual causes are two ideas treated as one, a genuine tension between two well-supported claims, or a foundation that has moved.
+- It is computed, never kept. The same recorded things read in any order give the same frontier.
+- Only a steady state has an empty frontier, or one whose every item is accepted.
+- A broken check or a finding adds an item the moment it is recorded, before any repair.
+- Uncrossed chunks in an inbox are not owed; an inbox may be full at a steady state. A source not yet retired is not owed either; retirement is a state of the source, not a constraint on the verisectorium.
+- If the frontier keeps growing instead of shrinking as a changeset is staged, work stops and the whole is looked at: two ideas treated as one, a genuine tension between two well-supported claims, or a foundation that has moved.
 
 ## Discussion
-
-- Changes near the roots of the dependency graph reach nearly everything and changes at its tips reach nearly nothing. Hence the incentive to make early material solid in proportion to its age and to how much stands on it.
-- When a defect is found, softening is the natural first response. The methodology, not the model, then asks what it would take to keep the earlier claimed level; that is a second perturbation, often larger. Whether to complete the softening first or to stack the strengthening on it is a decision about where effort goes, made with the time available. The model allows both.
-- Why the frontier is computed and not kept. A kept list goes stale and lies about its own currency. A computed frontier is only ever as wrong as the state it is computed from.
+- Why the frontier is the first thing a working agent looks at. The kind tables of the earlier notes said what records can be; the frontier says what is not yet true around what I just changed, and that is the question a mind at work actually has. Joseph's "clear delineation of the frontier vs stable steady states" is the critical thing this model adds over the ad hoc verisectoria.
+- Why one cause can make many items. One softened root makes a stale reference, an unmet need and a cap on every dependent. The raw set is what a stranger can recompute; grouping by cause is a rendering.
+- Why the known-defect mark needs no machinery. A broken item still on the frontier when a steady state is wanted is either repaired or accepted with a reason, and the acceptance is visible in the steady state's conditions. That is the mark, as Joseph described it: "a known defect probably lowers this; not yet worked through; do not rely in the meantime".
 
 ## Examples
+- `scope-adaptive-system` at `12ea0186`, after review reread-1: broken (item (c)'s decay claim, by C3), broken (item (h)'s support claim, by C4), overclaim ((h): asserted exact, warrant broken), and five findings F1–F5. The integrator's changeset `5e613630` lapsed every reread act and cleared the two broken items; the new text then owed its own warrant until integration-2 and check-4 earned it.
+- `deriv-sector-condition` under this model, from 2026-04-22 to 10-30: overclaim (Prop A.1S(i), validity: asserted exact, warrant never asked), because every recorded pass concerned a proof step and not the statement.
 
-- A root claim of AAT found to need an extra hypothesis. The finding is the perturbation; the rewrite of the claim, its derivation and its explanation, the re-derivation by a second mind, and the re-reading of every dependent are the atomic changeset; between those steps the frontier is what is owed; the next steady state is the first in which the claim has the hypothesis and every dependent agrees.
+## Historical Context
+### Etymology
+From *frons*, the front: the line where settled territory ends. What is still owed in a working state, computed, addressed to someone. Kept over *obligations* (the plan's word) and *todo list* (which is typed) because a frontier moves as work advances and is never kept by hand.
+
+### Adjudication
+- Adjudicated against msc/notes 05 (22:19Z), 09 §4.3, 10 §1.1, 19 §5, and Joseph's 11-08 "dimensions as constraints".
 
 ## Working Notes
-
-- Intro, discussion and examples shared verbatim with former group-mates (atomic·changeset, perturbation, accepted·remainder); to be rewritten for this term alone when adjudicated.
-- From the kernel spikes (`msc/scratch/kernel-spikes/COMPARISON.md` §4). Four independent kernels computed the frontier from the definitions and all four found the worked example in `KERNEL-SPEC.md` under-counted it (three owed items missing, all of the same kind: the fall of a root reaching what rests on it). Three further facts, each tested or proved in at least one kernel, and each true of those kernels' log of changesets and positive checks: (i) only a write adds an owed item, which does not carry over to this model (see «act»); (ii) the kinds of item the kernels needed were three, `overclaim(v)`, `stale-reference(v, r)`, `unmet-need(v, r)`; a lapsed act is not an item of its own, it shows only through the overclaim it causes, and Rust/Fable reads that narrowing as right, since a lapsed act nothing rested on is not owed; (iii) **"steady means honest" has no content beyond the frontier's definition** (Ada/Fable); the fact worth asking for, and proved there, is that the computed frontier list is exactly the set the predicates define.
-- Open, from the spikes. **One cause, many items.** One changed root produced nine or ten owed items with one cause (Ada/Opus, Rust/Fable). The kernel should keep the raw set, since that is what a stranger can recompute; grouping by cause is porcelain, and the model may want a word for "owed because of" so the porcelain has something to compute.
-- Open. Whether the kinds of item above are complete. The four kernels needed three, but their log had no ‹finding›, no rule and no narrowing. msc/notes 11's `owed_reason` also has the question a narrowed premise puts to each dependent.
-- Open. What an agent will do to make the frontier empty: affirmations and accepted remainders are both cheap exits, and any marker of "done" becomes a target.
-- Adjudicated against msc/notes 05 (22:19Z), 09 §4.3, 11 def-changeset.
+- Open. Whether the item kinds above are complete. The kernels needed three; the notes add broken and raised; an ontology adds its own.
+- The frontier is as complete as the references; see «reference»'s notes on detection. And a computed frontier nobody is shown silts exactly like a kept list: it has to be rendered where every changeset opens and closes, and the message that reaches the steward from it should carry only what the steward alone can weigh.
+- The twin of the open question below: what agents will refuse to do because a mark reads as a lock. Any changeset may lower or replace any assertion with a recorded reason; ruled, ratified and exact are assertions, not locks, and the practical model should say so plainly.
+- Open. What agents will do to make the frontier empty. Affirmations and acceptances are both cheap exits, and any marker of done becomes a target. The model's only answer is that both are attestations with reasons, visible at every steady state.

@@ -1,0 +1,108 @@
+// Append-only log of changes to core/. Newest entry last. One entry per act on core;
+// what each entry says is what changed and why, so that core itself carries no history.
+// KDL 2.0. A value containing " is a raw string, #"like this"#, so that its text stays as written.
+
+entry at="2026-11-06T16:30-07:00" by="Fable session (successor to 92e38652), with Joseph" {
+  did "founded core/ with model.outline.md as the canonical projection; every row provisional or gap"
+  why "consolidation of the 11-04..11-06 model work before any def is adjudicated; the notes it draws on are frozen copies in msc/notes/"
+}
+
+entry at="2026-11-06T17:10-07:00" by="Joseph, then the Fable session" {
+  did #"outline tightened; legend, wikilinked groups, terms-defined column, see column (provisional only); propagated to all tables; VI retitled as patterns (not groups), VII reduced to a paragraph, VIII to discussion prompts with "owed" withdrawn; terms use plain hyphens"#
+  why "Joseph's edit of part I and his notes on VI-VIII; terms are identifiers and must match files, keys and greps"
+}
+
+entry at="2026-11-06T17:40-07:00" by="Fable session, at Joseph's direction" {
+  did #""(inline)" is now a form in the group column rather than a mark, so an inline row can still be provisional; specially defined multi-word terms use a non-breaking hyphen (U+2011) in the terms column and in prose; wikilink targets and ordinary hyphenated words keep ASCII hyphens"#
+  why "Joseph's two requests after decluttering; the non-breaking hyphen marks the term as a defined term throughout the canon, and keeps table cells from wrapping mid-term"
+}
+
+entry at="2026-11-06T18:20-07:00" by="Fable session, at Joseph's direction" {
+  did #"outline reorganized around main terms (verisectorium, store, layers; veritoid, claim, low-fidelity kinds; segment, segment changeset, recut, segment kinds, projection, rendering; reference, premise change; dimension, value, value move; act; intake), dropping the cross-cutting sections "Time and Change" and "Store Growth"; defined terms written «term» or «wording|def/group#term», multi-word terms joined with ⸱ (U+2E31), weak words namespaced (store⸱state, value⸱move, value⸱claimed, reference⸱use, segment⸱name, ...); U+2011 removed; convention and checker rules stated in the legend"#
+  why "Joseph, 2026-11-06: groups by main term rather than by cross-cutting dimension; weak terms need a namespace; the guillemet-and-⸱ convention renders everywhere in the estate and is a legal word character in udon"
+}
+
+entry at="2026-11-06T19:30-07:00" by="Fable session, with Joseph" {
+  did "outline regrouped along the address-theory exemplars' seams (a group only where its terms are co-defined; 34 groups, most of 1-4 terms); `def` column added, orthogonal to `mark` (–, inline, stub, present); definition, written/computed, recut (verb) and dimension's sustained-by sort restored from the predecessor's defs; eleven provisional defs filed as stubs (verisectorium, regime, definition, store, steady, atomic-changeset, veritoid, written, ground, bound, claimed-level), each updated against notes 12-16 and the 11-06 transcript, each carrying its open questions and leans in working-notes; bin/defs rewritten for «term», «wording|def/group#term» and ⸱, with promised-but-unfiled terms allowed"
+  why "Joseph, 2026-11-06, after the exemplar read; the predecessor's defs predate notes 12-16 and the point of filing them is to carry that newer understanding"
+}
+
+entry at="2026-11-07T00:40-07:00" by="Joseph (intro), then the Fable session" {
+  did "defs moved from YAML to markdown with YAML frontmatter (machine fields in frontmatter; Intro / Terms / Discussion / Examples / Working Notes in the body); core/def/README.md states the shape; bin/defs ported. Joseph's rewrite of the verisectorium intro propagated (three senses; truth-centrism, continual improvement, turnover-resilience; complex-systems list moved to discussion); term renames: definition -> ontology, store -> data⸱store, answers⸱to -> truth⸱determinants; better, answers to, soften are plain English now, not terms; roll-up's terms made nouns (aliased⸱value, derived⸱value, owned⸱value); legend states the nouns rule"
+  why #"prose was being written inside a data format; "definition" collided with the def files; terms are nouns and verbs/adjectives belong to their referent noun (Joseph, 2026-11-07)"#
+}
+
+entry at="2026-11-07T01:30-07:00" by="Fable session, at Joseph's direction" {
+  did #"def machine block is now a leading ```kdl block (KDL 2.0) instead of YAML frontmatter; subtypes introduced (declared `subtypes "a" "b"` under a term; written ‹sub› beside its noun or alone when unique; «sub⸱noun» as full name); «property» minted with ‹written› and ‹computed›, replacing the written group; roll-up, row, premise-change, recut and value rows restated with subtypes; bin/defs parses KDL and resolves both subtype forms; README and legend updated"#
+  why "KDL's node shape is udon's, so the retrofit stays a syntax swap; subtypes stop the lexicon minting a noun for every state of a noun (Joseph, 2026-11-07)"
+}
+
+entry at="2026-11-07T02:10-07:00" by="Joseph, then the Fable session" {
+  did "truth⸱determinant defined in the singular with pl truth⸱determinants (Joseph); group line, relation target, heading and outline row made to agree; the three defining properties are ### subheadings inside the intro (Joseph); checker accepts a plural «TERMS» as the intro's first mention, resolves possessives, and reports a group/term mismatch instead of crashing; README says terms are defined in the singular"
+  why "terms defined in the singular so that pl carries meaning; guillemets take singular, plural or possessive as the sentence requires (Joseph, 2026-11-07)"
+}
+
+entry at="2026-11-07T02:40-07:00" by="Fable session, at Joseph's suggestion" {
+  did "per-term subsections allowed under ### «term» (free-named, or Discussion / Examples / Working Notes); group-level sections kept for what concerns the group as a whole; verisectorium.md restructured so the three defining properties sit under «verisectorium», and each term carries its own discussion, examples and working notes"
+  why "the exemplars keep discussion and notes at group level, which blurs once a group has more than one term; the three properties are about the term, not the pair (Joseph, 2026-11-07)"
+}
+
+entry at="2026-11-07T03:30-07:00" by="Fable session, at Joseph's direction" {
+  did "one term per def file; every former group split (24 term files), each a kdl block with a single term node, then Intro / Definition / free sections / Discussion / Examples / Working Notes; split files carry a working note that their intro and discussion are still shared verbatim with former group-mates; outline rows one per term (87), with a subtypes column in place of terms-defined; checker, README and legend updated"
+  why "the co-definition test was a judgment call made twice over the same material; one term per file has no judgment in it, and no file is named for something that is not a term (Joseph, 2026-11-07)"
+}
+
+entry at="2026-11-07T04:10-07:00" by="Joseph (verisectorium.md), then the Fable session (tooling)" {
+  did #"Joseph reworked verisectorium.md (intro folded into the definition; invariants as a subsection with a caveat; the three properties as discussion items; rel targets as term="…"); the checker and README follow: rel term= property on every def, Intro optional, a ### Invariants subsection recognized; 40 relations"#
+  why "his form of the file is the one to adjudicate against; the tooling bends to the file, not the file to the tooling"
+}
+
+entry at="2026-11-07T04:40-07:00" by="Joseph (verisectorium.md), then the Fable session" {
+  did "def body opens '# «term»' with the one-line definition under it; the «TERM» capitalized first mention is retired; '## Definition' or '## Definition(s)' holds senses or elaboration with a '### Invariants' subsection; propagated to all 24 defs; verisectorium's first invariant scoped to its steady states (the fix Joseph asked for); checker and README follow"
+  why "Joseph's latest shape for verisectorium.md; the caps form no longer did work once one term per file made the first mention obvious"
+}
+
+entry at="2026-11-07T05:00-07:00" by="Joseph and the Fable session" {
+  did "verisectorium decided: steward-and-lead, unanimous. status decided in its def; its outline row marked present, see cleared. The first non-provisional term in core."
+  why #"adjudicated together on 2026-11-06/07 from Joseph's rewritten intro and three passes over its shape; the four pre-conditions named by the lead (a one-line definition, the first invariant scoped to steady states, sense (3) named as the referent of relations and invariants, "toward agreement with" its determinants) are met"#
+}
+
+entry at="2026-11-07T05:40-07:00" by="Joseph (legend, Part I order, mark renamed accepted), then the Fable session" {
+  did "outline reordered by dependence, each term after what it is built on (Joseph's Part I; Part II continued the same way); core, pattern⸱library and aspect removed as not part of the model (an SoP verisectorium may hold them later); log and state placed after data-store, property after veritoid-kind; gaps placed beside the term they concern; section numbers replaced by Part I-V; patterns note no longer leans on a pattern library; 84 terms"
+  why "a lexicon-shaped outline should let a reader meet no word before its parts; the earlier order was by scale, not dependence (Joseph, 2026-11-07)"
+}
+
+entry at="2026-11-07T20:30-07:00" by="Fable session (fork), from the four kernel spikes" {
+  did #"five stubs filed from the spikes' findings (version, act, affirmation, reference, segment⸱changeset), each with the finding, which kernels found it, and a lean; version added to the outline as a term; notes added to frontier (only writes add owed items; three item kinds; frontier-list exactness is the real "steady means honest"; one cause many items), content, veritoid (identity rule met in practice), claimed-level (the ceiling is the equation, not the bound), atomic-changeset (refusals recorded vs reported); act's subtypes check/decision/crossing; recut gap row notes the rule all four took"#
+  why "four independent kernels built from one spec agreed where the model was silent or wrong (worked-example frontier, inert affirmation, hash vs counter, missing-target ceiling, identity under recut) and split where it must decide (refusals recorded or reported; what the version covers; the affirmation's effect); the stubs carry those as inbox items so the decisions are made where they belong"
+}
+
+entry at="2026-11-08T10:10-07:00" by="Opus 5.5 session, with Joseph's standing go-ahead on provisional segments" {
+  did #"act gains the sorts of act the notes had named (review, finding, acceptance, rule firing, outside change) and an invariant that a broken check or a finding goes on the record and adds to the frontier; an act may bind to a value it relied on as well as to content, restored from msc/notes 09 §3.1 and 10 §1.4; "only a changeset adds to the frontier" removed from segment⸱changeset and scoped in the working notes to the kernels' own log; the changed-or-affirmed rule stated as following inner dependencies; affirmation's invariants now state what msc/notes 09 §4.1 gave it, not reference reconciliation; "the spec" in core's working notes now says KERNEL-SPEC.md; the example calling provisional rows an accepted remainder removed from four defs"#
+  why "kernel results had been written into core that held only for the spike's simplified log, against notes 09 and 11; a provisional row owes nothing (msc/notes 14), so it is no remainder; core is the spec, so a spike's target must not share the word (Joseph, 2026-11-08)"
+}
+
+entry at="2026-11-08T10:30-07:00" by="Opus 5.5 session (general-purpose agent), at Joseph's direction" {
+  did "core/log.yaml converted to core/log.kdl (KDL 2.0); every entry's text unchanged"
+  why "KDL's node shape is udon's, as with the defs' machine blocks; the log never parsed as YAML (Joseph, 2026-11-08)"
+}
+
+entry at="2026-11-08T11:40-07:00" by="Opus 5.5 session, at Joseph's direction" {
+  did "outline Part I is now the foundational spine in a considered order (44 terms, 4 gaps), and everything else moved to Part II in three rough neighbourhoods with no claim of order; value, position, judgment now follow act and bind; term labels in one casing with the middle dot; stale group-style paths and the retired capitals convention removed from rows and legend. Relations marked provisional=#true where the target is not decided and the def's own text does not say plainly what the relation consists of (29 marked, 31 kept, by per-relation judgment); bin/defs counts them and draws them dotted"
+  why "Joseph, 2026-11-08 - only the order of the first table is claimed, and a relation to an undefined term is provisional unless its definition is very clear about it; verisectorium included"
+}
+
+entry at="2026-11-08T11:45-07:00" by="Opus 5.5 session, from a cold read, for Joseph to adjudicate" {
+  did "truth⸱determinant reworked. Two parts, aspect and standard; the standard is what content must agree with, not the means of finding out; a standard may be named by role and filled per piece; answering to a determinant means being in the service of it; better includes being shown more firmly; completeness added to AAT's illustrative determinants; the question-and-note collision withdrawn; synonym truth aspects replaced by determinant. Status stays provisional. ontology now says it declares determinants"
+  why "the de novo read at msc/scratch/truth-determinant-denovo-1.md found better could not produce AAT's own sense of it, held-against mixed the standard with the instrument, and per-piece standards were unaccounted for; Joseph, 2026-11-08, on a question or note being in the service of a determinant"
+}
+
+entry at="2026-11-08T12:05-07:00" by="Opus 5.5 session, at Joseph's request" {
+  did "the separator in multi-word terms changed from U+2E31 to U+00B7 throughout core, bin/defs and the legend; earlier entries in this log keep the character they were written with"
+  why "it renders better in Lora and the fonts Joseph reads in (2026-11-08); U+00B7 is also XID_Continue, so a term is a legal bare name under udon's rule, which U+2E31 is not"
+}
+
+entry at="2026-11-08T19:35-07:00" by="Opus 5.5 session, at Joseph's request" {
+  did "committed truth·determinant as it stands in Joseph's working copy, mid-revision, with the separator made uniform; its status stays provisional and bin/defs check reports its declared-by relation as having no cardinality"
+  why "Joseph, 2026-11-08, asked that everything uncommitted be committed; the revision is his and in progress"
+}

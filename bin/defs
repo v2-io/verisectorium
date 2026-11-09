@@ -3,7 +3,7 @@
 #
 # defs — check, draw and read the term definitions in core/def/*.md (one term per file)
 #
-#   defs check [DIR]  (DIR defaults to core; core-2 is the second core)
+#   defs check [DIR]  (DIR defaults to core)
 #                  every def parses (a leading ```kdl block with one `term` node and a `status`,
 #                  then the body sections); the file is named for its term (- for ·); no term
 #                  defined twice; the body opens '# «term»' followed by the one-line def; every «…» and ‹…› resolves;
@@ -31,7 +31,7 @@
 require 'kdl'
 
 ROOT    = File.expand_path('..', __dir__)
-CORE    = ARGV[1] || 'core'          # which core to check: `defs check core-2`
+CORE    = ARGV[1] || 'core'          # which directory to check
 DEF_DIR = File.join(ROOT, CORE, 'def')
 OUTLINE = File.join(ROOT, CORE, 'model.outline.md')
 SEP     = "·"

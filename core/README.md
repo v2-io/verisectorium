@@ -1,0 +1,11 @@
+# core
+
+The model's spine. Begun 2026-11-08 as `core-2/` by a Fable 5.1 session with Joseph, after reading every note in `msc/notes/` in order and the two real ASF segments the notes keep pointing at; it became `core/` on 2026-11-09, when the first core moved to `msc/notes/17b-2026-11-07-first-core/`. It carries the first core's **discipline** (one term per def file, the KDL block and body shape, a canonical outline with marks, prose segments that narrate the defs they rest on, append-only acta (`log.kdl`), `bin/defs check core` as the gate) and none of its **terms** by inheritance: every word here had to earn its place again, and most of the first core's eighty-five did not. What the first core held that is not yet placed here is in the Working Notes of the def it concerns.
+
+`praxes.outline.md` and `praxes/` say what is expected of a mind working here that no tool enforces; read `praxes/working-on-core.md` before changing anything. `templates/` holds this verisectorium's own segment kinds in proto form (def, intro, disc, impl, praxis): the sections each has, which stand alone, and which may point outside. Read in this order:
+
+1. `model.outline.md`: the canonical projection, read in row order. The terms with files, the plain words defined inline, the gaps, and the intro, discussion and implication segments interspersed where they belong. Its first row, `src/intro-spine.md`, is the five sentences the model rests on.
+2. `src/*.md` as the outline reaches them: pedagogy and persuasion, each narrating the defs it rests on (named in its frontmatter), so a def change says which prose to re-read. The two `impl-` runs are real ASF segments read through the model from the acts recorded in asf's `.vsect/`; they are the test of the model and the place it is most likely to be wrong.
+3. `def/*.md` as the outline reaches them. Each stands alone for a cold reader and ends with its Working Notes, which are its inbox.
+
+Everything here is **provisional** until Joseph and the lead accept it together; the outline's `mark` column says which rows are. Nothing in it has authority beyond being true. `log.kdl` records every change to this directory (its entries before the rename say `core-2/`), so the files carry no history of their own.
