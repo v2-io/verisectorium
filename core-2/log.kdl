@@ -52,3 +52,8 @@ entry at="2026-11-09T16:40-07:00" by="Fable 5.1 session, at Joseph's direction" 
   did "templates/ added: README and one template per segment kind this store uses (def, intro, disc, impl), each showing its sections in order, which stand alone, and which may point outside; verisectorium's example about this store no longer names a path (the new standalone check caught it)"
   why "Joseph, 2026-11-09: where the ontology has segment kinds, this bespoke store needs their basic predecessor, the proto-segment-kind as a template file per kind"
 }
+
+entry at="2026-11-09T17:00-07:00" by="Fable 5.1 session, at Joseph's direction" {
+  did "sop.outline.md and sop/working-on-core.md added: the one procedure for changing core-2 by hand (orient as a new actor; know the surface; terms earn their place; design before words, provenance out of bodies; the gate; the log; commit; cold read before adjudication; decisions unanimous), with its reasons and historical context; templates/sop.md; README points at them"
+  why "Joseph, 2026-11-09: without v2 this store needs an SOP outline and at least one basic working-on-core segment"
+}
