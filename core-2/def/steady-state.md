@@ -44,7 +44,6 @@ From dynamical systems: a state that persists until something perturbs it, whate
 - Adjudicated against msc/notes 05 (22:53Z), 08/10, 09 §3.1 and §4.4, 14, 19 §5 and §7, and Joseph's 11-08 words on frontier versus stable steady states.
 
 ## Working Notes
-- Note on wording. "Stationary between changes" in «verisectorium»'s one-line def: a working state between two segment changesets of one atomic changeset is between changes and not stationary; "whenever stationary" or "between atomic changesets" says it exactly. Joseph's wording is kept as written, provisionally.
 - Open (Joseph's, punted). Whether two steady states reached independently in two working copies combine into a steady state. The model says nothing.
 - Open. Whether a working state is held as a branch, a separate corpus, or otherwise. The requirements are: steady states along the way, a diff against the last steady state, the frontier, a merge only when the frontier is empty or accepted, and detection of overlapping changesets before merge. Git gives the first two for files.
 - The acceptance-warrants-nothing invariant was added 2026-11-09 from the estate's own experience of minds reading a signature or a ratified mark as a lock on content (`msc/scratch/research-live-docs-2026-11-09.md` §2.2 and §3 carry the production specimens).
