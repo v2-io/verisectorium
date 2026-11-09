@@ -56,6 +56,10 @@ An actor's record has two halves.
 - An orientation pass bound to a mind's compaction generation and lapsing when it changes, so that the first write after a compaction is refused until the new actor has oriented: under this def the pass is a check concerning the new actor, recorded in the acta.
 
 ## Historical Context
+### Etymology
+From *agere*: the one who acts. Minds and instruments both. Kept over *agent* (the estate's word for a mind in a role, too narrow and too loaded), *user* (a person not modelled) and *session* (a harness unit that outlives a compaction, which an actor does not).
+
+### Adjudication
 - The actor was an inline word until 2026-11-09, when Joseph brought the mind into scope: the act was already central, and verisectoria are in practice very concerned with the minds that turn over. The compaction premise and the reasons for checking rather than attesting orientation are from the day the estate's one orientation gate was built (2026-07-31), carried in `msc/scratch/research-vivarium-heat-orientation-2026-11-09.md`.
 - Adjudicated against Joseph's 2026-11-09 turns; `msc/scratch/research-vivarium-heat-orientation-2026-11-09.md` §§4, 7, 8, 9; msc/notes 09 §3.5, 18 family G and finding 2.
 

@@ -33,6 +33,10 @@ A ‹veritoid·kind› declares: the shape its content takes; the «dimensions|d
 - An `account` veritoid kind: prose about how a segment came to be as it is; opens fidelity to the acta; may hold references outward to sources and notes; sits in a history slot where the segment kind declares one.
 
 ## Historical Context
+### Etymology
+Plain English, kept over *type* (which the estate's files used for a filename prefix and a stage) and *template* (the 11-05 dialog's word, now freed for the seed a new verisectorium is initialized from). A kind says what a thing holds and what may be asked of it; *genus* was considered and declined as pretentious for so ordinary a role.
+
+### Adjudication
 - Adjudicated against msc/notes 05 (21:52Z–22:19Z), 06 §2, 09 §2.3, 12, 13, 19 §2.
 
 ## Working Notes

@@ -38,6 +38,10 @@ An ‹atomic·changeset› is everything, segment changesets and acts together, 
 - The 2026-10-30 integrations of `scope-adaptive-system`: four revise acts (`5e613630`, `26a703b0`, …, `9fde935e`), each a segment changeset, inside one atomic changeset that closed with check 8.
 
 ## Historical Context
+### Etymology
+English, from version control, where it means a set of changes applied as one. Kept because that is the exact sense: a whole new written state at one logical instant. Joseph's own phrases, *instance-isolated changeset* and *atomic changeset*, are its two sizes; *episode* (the plan's word for the second) and *commit* (one way of holding one) were declined.
+
+### Adjudication
 - Adjudicated against msc/notes 05 (22:19Z–23:11Z), 08/10, 09 §3.1 and §4, 19 §5.
 
 ## Working Notes

@@ -40,6 +40,10 @@ A «veritoid» almost never makes sense alone. Its fate is intertwined with its 
 - `audits/AUDIT-WORKING-193847/`: a source, cut into chunks by the 2026-05-30 lift, most of which bear on one segment each.
 
 ## Historical Context
+### Etymology
+English, from *segmentum*, a piece cut off (*secare* again, the same root as the *-sect-* in verisectorium): what the cutting produces. It has been the estate's everyday word for the unit a mind writes and reviews since ASF's first files, and the model keeps it with that sense sharpened: the unit of writing and of naming, not of fate.
+
+### Adjudication
 - Adjudicated against msc/notes 05 (21:52Z), 09 §2.3 and §2.6, 10 §1.4, 14, 19 §2 and §6.
 
 ## Working Notes

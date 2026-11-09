@@ -8,7 +8,7 @@ A verisectorium's ontology declares its segment kinds: which slots a segment has
 | `intro.md` | an introduction a cold mind reads first | `src/intro-<slug>.md` |
 | `disc.md` | a discussion that narrates defs | `src/disc-<slug>.md` |
 | `impl.md` | an implication or worked run that exercises defs | `src/impl-<slug>.md` |
-| `sop.md` | a standard operating procedure for this verisectorium | `sop/<slug>.md`, projected by `sop.outline.md` |
+| `praxis.md` | a praxis: what is expected of a mind here that no tool enforces | `praxis/<slug>.md`, projected by `praxes.outline.md` |
 
 The slots common to every kind here: a standalone body that states present truth and points nowhere outside the segment (the one-line definition, Definition, Invariants, Examples for a def; the argument for a prose segment), `## Discussion` (careful; may lean outward but should not come to rest on a pointer), `## History` (how the segment came to be as it is, revisable, faithful to `log.kdl`), `## Historical Context` (where it came from; breadcrumbs to notes, sources, spikes, other projects), and `## Working Notes` (the inbox: open items with leans, drained). The four record surfaces and the reason for the standalone rule are in `src/disc-record-surfaces.md`.
 

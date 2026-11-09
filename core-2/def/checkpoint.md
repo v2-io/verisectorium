@@ -35,6 +35,10 @@ The checkpoint's **stated conditions** are: every acceptance covering an owed it
 - `deriv-sector-condition` at the pre-integration tag, under this model: no checkpoint from 2026-04-22 on without an acceptance of Prop A.1S(i)'s overclaim, which nobody would have written, because writing it is what would have prompted the check.
 
 ## Historical Context
+### Etymology
+English, a point at which a state is verified before proceeding. Joseph's own "stable checkpoints / states" from the 11-05 dialog; chosen over *steady state* (kept as a synonym; too quiet for a thing that may be under heavy work), *fixed point* (right as mathematics, wrong for readers) and *main* (a branch name).
+
+### Adjudication
 - The two kinds of time were Joseph's correction of 2026-11-05 ("practical sequentialness but logical simultaneity") to a draft whose acta were a flat list of single-piece acts; `msc/notes/08/10` carries the correction and its worked table. The known-defect mark he weighed that day became the acceptance here once the frontier was computed.
 - Adjudicated against msc/notes 05 (22:53Z), 08/10, 09 §3.1 and §4.4, 14, 19 §5 and §7, and Joseph's 11-08 words on frontier versus stable checkpoints.
 

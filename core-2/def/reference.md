@@ -36,6 +36,10 @@ A reference **holds** when its target exists (its id is not retired), the target
 - A chunk from the 2026-05-30 gold lift with bears-on `scope-adaptive-system`.
 
 ## Historical Context
+### Etymology
+From *referre*, to carry back: a pointer carries the reader back to what a piece rests on. Kept over *edge* (which suggests an object apart from the veritoid that wrote it) and *link*; the estate's address theory uses the same word with the same shape, a written proxy whose referents are resolved as of a moment.
+
+### Adjudication
 - Adjudicated against msc/notes 05 (21:52Z), 09 §2.5, 10 §1.5–1.7, 19 §2 and §5; the live_docs read `msc/scratch/research-live-docs-2026-11-09.md` §§2.3, 2.4, 2.6 for the three notes above it.
 
 ## Working Notes

@@ -45,6 +45,10 @@ A run is a ‹check› whose actor is an instrument at a version. Reading is rec
 - "Only Joseph may record a decision as ruled": an attestation whose standing the dimension restricts to one actor, and which the harness cannot yet attest (a gap).
 
 ## Historical Context
+### Etymology
+From *agere*, *actus*: a thing done. One recorded deed by an actor, as against what was written. Its kin: the *acta* are the record of acts, an *actum* one entry, the *actor* the one who acts. *Actus* for the term itself was offered on 2026-11-09 and not taken: *act* had collided with nothing here and its subtypes (check, finding, attestation) are plain English. *Event*, the August model's word, was dropped because its events were each about one record.
+
+### Adjudication
 - Adjudicated against msc/notes 09 §3.1–3.5, 10 §1.11, 18 findings 2 and 8, 19 §4, and asf's recorded acts (`vsect why segment:scope-adaptive-system`, `segment:deriv-sector-condition`).
 
 ## Working Notes

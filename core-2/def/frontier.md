@@ -43,6 +43,10 @@ Each item carries its cause (which write or act made it owed) and, through the �
 - `deriv-sector-condition` under this model, from 2026-04-22 to 10-30: overclaim (Prop A.1S(i), validity: asserted exact, warrant never asked), because every recorded pass concerned a proof step and not the statement. See `examples/stopped-bound.md`.
 
 ## Historical Context
+### Etymology
+From *frons*, the front: the line where settled territory ends. What is still owed in a working state, computed, addressed to someone. Kept over *obligations* (the plan's word) and *todo list* (which is typed) because a frontier moves as work advances and is never kept by hand.
+
+### Adjudication
 - Adjudicated against msc/notes 05 (22:19Z), 09 §4.3, 10 §1.1, 19 §5, and Joseph's 11-08 "dimensions as constraints".
 
 ## Working Notes
