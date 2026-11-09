@@ -74,16 +74,5 @@ The canonical projection of `core/`: everything the model consists of, in depend
 - Run one more real root, from a different volume, before adding any term.
 - Which of the inline rows wants to be a term? The rule: it becomes one when its Working Notes would hold a decision nobody else's file can hold.
 
-### Deliberately not carried from the first core
-*(Not rows; a record of what was left out so a reader does not think it was forgotten, with the reasons.)*
-
-Carried as plain words or subtypes, not terms: ontology, corpus, canon, acta, actum, praxis, attribute, state, version, identity, name, actor, criterion, content, slot, inner dependency, inbox, chunk, crossing, rendering, projection, row, source, affirmation, acceptance. They are defined once in the outline's inline rows and used without guillemets. Also dissolved without a word of their own: *standing* (a dimension's *produced by* says whose acts count), *bind* (what every act does), *coherence* (a segment's own dimension), *orphan* and *order·exception* (facts about a projection, computed or recorded), *delivery* (a crossing outcome), *planned·segment* and *gap·segment* (a promised row whose segment has declared-owed slots).
-
-Dissolved into the model: *truth·determinant* (a role of dimensions); *claimed·level* (an assertion on a dimension); *value*, *position*, *judgment*, *credence*, *ceiling*, *latent·level*, *roll·up* (warrants and their declared reading); *scale*, *ladder*, *rung* (the shape of a reading); *property* (the written/done/computed table); *ground* and *bound* (a kind's declaration of which dimensions it opens, and non-claims as content); *perturbation*, *working·state*, *steady·state*, *steady·time*, *work·time*, *accepted·remainder* (§7); *premise·change* (what passes along a reference, per dimension); *recut* and its five verbs (§3); *move*, *queue*, *mechanism* (a dimension's producer, and the frontier addressed to someone).
-
-One verisectorium's choices, not the core: *claim*, *context*, *hypotheses*, *conclusion*, *derivation*, *strength*, *sharpness*, *forced*, and the low-fidelity kinds. They belong in AAT's ontology, where the examples sketch them.
-
-Not carried, on your word: everything the kernel spikes fed into the first core's stubs, except what §3 and §6 re-derive from the notes themselves (minted identity; reads versus concerns). Where a spike and the notes agreed, the notes are the source.
-
-Still open, and listed as gaps in the outline: several atomic changesets in flight and whether the union of two steady verisectoria is steady; independence of same-model checkers; steward attestation; the recording cost; and whether some constraints are better answered by a refusal than by a record.
-
+## Historical Context
+This outline does not descend from the first core (`msc/notes/17b-2026-11-07-first-core/`, eighty-five rows). Its terms were earned again from the notes and from two worked runs, and a word from the first core is here only where the model needed it. Nothing was left out as a class: an idea from the first core, or from the kernel spikes that fed its stubs, is in or out on whether the model is better with it, and the ones still being weighed are in the Working Notes of the def they concern. The claim shape for a theory (context, hypotheses, conclusion, derivation, strength, sharpness, forced) and the low-fidelity kinds are one verisectorium's choices and belong in AAT's ontology.

@@ -53,7 +53,6 @@ From *agere*, *actus*: a thing done. One recorded deed by an actor, as against w
 
 ## Working Notes
 - Open. Whether a broken ‹check› and a ‹finding› are one subtype or two. Lean: two, as above, because a finding may have had no criterion and so carries no weight as a confirmation.
-- From the first core's "work·time", not said here: "A check made on a draft later changed is still a record of the checker, though it binds to nothing in the next steady state." A lapsed act warrants nothing about the piece and is still evidence about the «actor».
 - Open. Whether an act may answer more than one dimension. Lean: no; record two acts.
 - From the vivarium research read (2026-11-09): reading moved from attestation-only to attested-or-checked per producer, with the check the default for a possibly-compacted mind; an orientation pass is an act in the acta, not a token outside it. See «actor» and `disc-actor`.
 - Open. What makes two acts independent when both actors are instances of one model family. The dimension's producer can require a different actor; it cannot yet require a different failure mode.
