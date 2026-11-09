@@ -2,7 +2,7 @@
 slug: disc-record-surfaces
 form: disc
 status: provisional
-narrates: [segment, veritoid, kind, act, changeset, frontier, checkpoint]
+narrates: [segment, veritoid, kind, act, changeset, frontier, steady·state]
 ---
 
 # Four places a record can go, and which is which
@@ -15,7 +15,7 @@ Every verisectorium in the estate has kept, somewhere, a record of what happened
 
 ## The four
 
-**The acta.** The record of what was *done*: every «act» and every «changeset», append-only, machine-shaped, corrected only by a later entry and never edited. Everything computed (warrants, whether references hold, the «frontier», whether a state is a «checkpoint») is read from it. It is complete and it is not prose; nobody orients by reading it, and anything a mind needs to understand from it is rendered, not read raw.
+**The acta.** The record of what was *done*: every «act» and every «changeset», append-only, machine-shaped, corrected only by a later entry and never edited. Everything computed (warrants, whether references hold, the «frontier», whether a state is a «steady·state») is read from it. It is complete and it is not prose; nobody orients by reading it, and anything a mind needs to understand from it is rendered, not read raw.
 
 **The history of renderings.** Where the corpus's files live under version control, that system keeps the history of the files. It is outside the verisectorium. The model leans on nothing in it: a commit message is not an act, a diff is not a changeset, and a verisectorium that can only be understood by reading its commit history has failed to record what it knew. It remains useful as a rendering's history and as evidence when the acta are doubted.
 

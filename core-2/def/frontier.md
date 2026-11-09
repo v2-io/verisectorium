@@ -28,15 +28,15 @@ Each item carries its cause (which write or act made it owed) and, through the �
 
 ### Invariants
 - It is computed, never kept. The same recorded things read in any order give the same frontier.
-- Only a checkpoint has an empty frontier, or one whose every item is accepted.
+- Only a steady state has an empty frontier, or one whose every item is accepted.
 - A broken check or a finding adds an item the moment it is recorded, before any repair.
-- Uncrossed chunks in an inbox are not owed; an inbox may be full at a checkpoint. A source not yet retired is not owed either; retirement is a state of the source, not a constraint on the verisectorium.
+- Uncrossed chunks in an inbox are not owed; an inbox may be full at a steady state. A source not yet retired is not owed either; retirement is a state of the source, not a constraint on the verisectorium.
 - If the frontier keeps growing instead of shrinking as a changeset is staged, work stops and the whole is looked at: two ideas treated as one, a genuine tension between two well-supported claims, or a foundation that has moved.
 
 ## Discussion
-- Why the frontier is the first thing a working agent looks at. The kind tables of the earlier notes said what records can be; the frontier says what is not yet true around what I just changed, and that is the question a mind at work actually has. Joseph's "clear delineation of the frontier vs stable checkpoints" is the critical thing this model adds over the ad hoc verisectoria.
+- Why the frontier is the first thing a working agent looks at. The kind tables of the earlier notes said what records can be; the frontier says what is not yet true around what I just changed, and that is the question a mind at work actually has. Joseph's "clear delineation of the frontier vs stable steady states" is the critical thing this model adds over the ad hoc verisectoria.
 - Why one cause can make many items. One softened root makes a stale reference, an unmet need and a cap on every dependent. The raw set is what a stranger can recompute; grouping by cause is a rendering.
-- Why the known-defect mark needs no machinery. A broken item still on the frontier when a checkpoint is wanted is either repaired or accepted with a reason, and the acceptance is visible in the checkpoint's conditions. That is the mark, as Joseph described it: "a known defect probably lowers this; not yet worked through; do not rely in the meantime".
+- Why the known-defect mark needs no machinery. A broken item still on the frontier when a steady state is wanted is either repaired or accepted with a reason, and the acceptance is visible in the steady state's conditions. That is the mark, as Joseph described it: "a known defect probably lowers this; not yet worked through; do not rely in the meantime".
 
 ## Examples
 - `scope-adaptive-system` at `12ea0186`, after review reread-1: broken (item (c)'s decay claim, by C3), broken (item (h)'s support claim, by C4), overclaim ((h): asserted exact, warrant broken), and five findings F1–F5. The integrator's changeset `5e613630` lapsed every reread act and cleared the two broken items; the new text then owed its own warrant until integration-2 and check-4 earned it.
@@ -53,4 +53,4 @@ From *frons*, the front: the line where settled territory ends. What is still ow
 - Open. Whether the item kinds above are complete. The kernels needed three; the notes add broken and raised; an ontology adds its own.
 - The frontier is as complete as the references; see «reference»'s notes on detection. And a computed frontier nobody is shown silts exactly like a kept list: it has to be rendered where every changeset opens and closes, and the message that reaches the steward from it should carry only what the steward alone can weigh.
 - The twin of the open question below: what agents will refuse to do because a mark reads as a lock. Any changeset may lower or replace any assertion with a recorded reason; ruled, ratified and exact are assertions, not locks, and the practical model should say so plainly.
-- Open. What agents will do to make the frontier empty. Affirmations and acceptances are both cheap exits, and any marker of done becomes a target. The model's only answer is that both are attestations with reasons, visible at every checkpoint.
+- Open. What agents will do to make the frontier empty. Affirmations and acceptances are both cheap exits, and any marker of done becomes a target. The model's only answer is that both are attestations with reasons, visible at every steady state.

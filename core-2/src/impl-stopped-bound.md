@@ -2,7 +2,7 @@
 slug: impl-stopped-bound
 form: impl
 status: provisional
-narrates: [veritoid, dimension, act, frontier, checkpoint]
+narrates: [veritoid, dimension, act, frontier, steady·state]
 ---
 
 # The stopped bound through the model
@@ -53,7 +53,7 @@ Now the record, as acts:
 
 ## 3. What the model would have shown, and what it would not
 
-**Shown, from 2026-04-22 on:** either an overclaim on (i) or a never-asked determinant in every checkpoint's conditions, depending on a decision the model has not yet made (`dimension.md` Working Notes: whether "exact" asserts *standing*, comparable with a warrant, or *content scope*, what is claimed). Under the first reading (i) is owed; under the second it is visible beside every checkpoint. Either way it is visible, because its assertion was *exact* and no act ever concerned it on validity. Every pass that verified a step concerned that step. This does not need a separate dimension for "does the derivation deliver the statement?" (note 19's assumption). It needs two things the model has anyway: derivation steps are veritoids distinct from the claim they prove, and an act concerns only what it concerns. ASF's own Formal Expression already writes statements and proofs apart; the record's own criteria already name steps. What was missing was a place where "nobody has asked whether (i) follows" could be seen.
+**Shown, from 2026-04-22 on:** either an overclaim on (i) or a never-asked determinant in every steady state's conditions, depending on a decision the model has not yet made (`dimension.md` Working Notes: whether "exact" asserts *standing*, comparable with a warrant, or *content scope*, what is claimed). Under the first reading (i) is owed; under the second it is visible beside every steady state. Either way it is visible, because its assertion was *exact* and no act ever concerned it on validity. Every pass that verified a step concerned that step. This does not need a separate dimension for "does the derivation deliver the statement?" (note 19's assumption). It needs two things the model has anyway: derivation steps are veritoids distinct from the claim they prove, and an act concerns only what it concerns. ASF's own Formal Expression already writes statements and proofs apart; the record's own criteria already name steps. What was missing was a place where "nobody has asked whether (i) follows" could be seen.
 
 **Also shown:** the spike's reference to (i) as *unmet* before the verifier opened the file; the "RESOLVED" note as inert; the adjudication's criterion as about (iii), not (i).
 

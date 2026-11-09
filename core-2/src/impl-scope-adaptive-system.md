@@ -2,7 +2,7 @@
 slug: impl-scope-adaptive-system
 form: impl
 status: provisional
-narrates: [veritoid, segment, kind, dimension, reference, act, frontier, checkpoint]
+narrates: [veritoid, segment, kind, dimension, reference, act, frontier, steady·state]
 ---
 
 # A real root through the model: `scope-adaptive-system`
@@ -80,7 +80,7 @@ Versions in the record: `12ea0186` (text before the 10-30 integration), `5e61363
 | later 10-30 | check-4 integrator confirms (g), (g′), the guard, the ES counterexample, the Discussion numbers; a fourth reader (bare brief) confirms (a), (d), (e), (f), (g′), (c), (g) | the fourth reader's are independent and raise warrants; the integrator's are not. |
 | 10-31 03:28 | check 8 **C1–C8** confirmed on `9fde935e`; **C11 narrowed** (the KR A.1 cold-reader clause); **F1**, **F5** findings; F1 corrected by its own author at 03:31 | every item re-derived at the current version by an independent checker, read sets recorded ("read set: segment:scope-adaptive-system, segment:def-action-transition, …"). C11 concerns a different thing: a key result in the projection (KR A.1), not this segment; it is a narrowing of a promise, owed at the projection. F1: a ‹finding› with an attestation of correction by its author; still owed. F5: owed. |
 
-**What the frontier holds at HEAD, under the model:** F1 (corrected, open), F5 (small points, open), C11's narrowing on KR A.1, and whatever the two import references (Clarke–Barron; Ferguson) owe on *source*, since no read-check on them is in the record. No overclaim: every item's validity is re-derived by an independent checker at `9fde935e`. A checkpoint would need three or four acceptances with reasons, and its conditions would name them.
+**What the frontier holds at HEAD, under the model:** F1 (corrected, open), F5 (small points, open), C11's narrowing on KR A.1, and whatever the two import references (Clarke–Barron; Ferguson) owe on *source*, since no read-check on them is in the record. No overclaim: every item's validity is re-derived by an independent checker at `9fde935e`. A steady state would need three or four acceptances with reasons, and its conditions would name them.
 
 **What vsect 0.1 shows instead:** `vsect read` at HEAD holds 13 checks (check 8's eight and five round-7 integrator confirmations, all recorded at `9fde935e`, which is HEAD), and marks the other 50 lapsed, "stale: own text changed", because 0.1 binds a check to the whole segment's text and the segment moved through nine versions on 10-30. Under this model an act lapses only when a veritoid it read is rewritten. The final reword (`4dd77b14` on `main`) touched only (c)'s lemma and the Epistemic Status imports, so acts recorded just before it on other items would survive it; but (b), (e), (g), (g′), (h) and (h′) were themselves rewritten during the 10-30 integrations, so reread-1's and check-4's acts on them lapse under this model too. The honest form of the result: fewer acts lapse than vsect lapses, more than zero survive, and the count needs a per-item diff per version pair, which I have not done. (A cold read, `msc/scratch/core-2-denovo-1.md` §3, corrected an earlier version of this paragraph that said all 162 were stale and cited a hash not on `main`.)
 

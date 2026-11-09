@@ -2,7 +2,7 @@
 slug: disc-what-would-show-this-wrong
 form: disc
 status: provisional
-narrates: [verisectorium, veritoid, segment, kind, dimension, reference, act, changeset, frontier, checkpoint]
+narrates: [verisectorium, veritoid, segment, kind, dimension, reference, act, changeset, frontier, steady·state]
 ---
 
 # What would show this wrong, and what I expect to strain
@@ -17,7 +17,7 @@ Before any more material, my guess at what one AAT root will strain, in order:
 2. **What a derivation step reads.** Honest reads include the premises; then every premise change lapses every dependent's checks, which is right and expensive. A verisectorium may want *reads* to distinguish "relied on at a warrant" from "read the text".
 3. **Attestations of the steward.** "Only Joseph may rule" has no mechanism while his session and an agent in it look alike to the harness.
 4. **Whether *against* carries the census's second argument everywhere**, or whether importance-for-a-target and comprehension-by-a-reader need the target as content of the act rather than of the dimension.
-5. **Acceptance as a cheap exit.** Any marker of done becomes a target; acceptances are attestations with reasons, visible at every checkpoint, and that is all the model offers against gaming.
+5. **Acceptance as a cheap exit.** Any marker of done becomes a target; acceptances are attestations with reasons, visible at every steady state, and that is all the model offers against gaming.
 
 Four decisions the first cold read (`msc/scratch/core-2-denovo-1.md`) showed the model has not yet made, each a sentence in a def and not a new term; they are recorded in the defs' Working Notes for Joseph:
 

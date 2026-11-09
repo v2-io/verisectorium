@@ -72,3 +72,8 @@ entry at="2026-11-09T19:20-07:00" by="Fable 5.1 session, at Joseph's suggestion"
   did "the praxis/ directory is praxes/, to carry the plural beside praxes.outline.md; every path updated"
   why "Joseph, 2026-11-09"
 }
+
+entry at="2026-11-09T19:45-07:00" by="Fable 5.1 session, at Joseph's decision" {
+  did "checkpoint renamed steady·state as the term (def/steady-state.md), every reference and plain use with it, including the spine's third sentence; checkpoint on the avoid list with the reason; etymology rewritten"
+  why "Joseph, 2026-11-09: a checkpoint indicates an intermediate spot on the way to the actual destination; a verisectorium at a steady state is not on the way anywhere, and the word also names a moment of verification rather than a state"
+}

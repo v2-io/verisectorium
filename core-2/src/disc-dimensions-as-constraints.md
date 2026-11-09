@@ -2,7 +2,7 @@
 slug: disc-dimensions-as-constraints
 form: disc
 status: provisional
-narrates: [dimension, frontier, reference, kind, checkpoint]
+narrates: [dimension, frontier, reference, kind, steady·state]
 ---
 
 # Dimensions are constraints

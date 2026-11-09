@@ -2,7 +2,7 @@
 slug: disc-actor
 form: disc
 status: provisional
-narrates: [actor, act, dimension, checkpoint, frontier, changeset, segment, kind]
+narrates: [actor, act, dimension, steady·state, frontier, changeset, segment, kind]
 ---
 
 # The minds that turn over, and what the verisectorium knows about them
@@ -23,7 +23,7 @@ In the model's words: the summary is a **source**. It is influx to the new actor
 
 Without a steady-time distinction, a verisectorium has to guess what an arriving mind is: cold, or resuming something in progress. The two want different things to read, and one list cannot serve both; a list weighted toward what moved recently hands the resuming mind what it needs and hands the cold mind the predecessor's momentum instead of the roots.
 
-With the distinction, the guess goes away. An actor arriving at a «checkpoint» orients to the canonical projection and the checkpoint's stated conditions; that is the cold case, and it wants the roots: the segments most depended on, the determinant dimensions, the ontology's own norms. An actor arriving mid-changeset orients to the «frontier» it is there to clear and to what the perturbation touched; that is the resuming case, and it wants the tip. Which case holds is a fact about the verisectorium's state, not a default about the mind, and a tool can compute both sets from the acta.
+With the distinction, the guess goes away. An actor arriving at a «steady·state» orients to the canonical projection and the steady state's stated conditions; that is the cold case, and it wants the roots: the segments most depended on, the determinant dimensions, the ontology's own norms. An actor arriving mid-changeset orients to the «frontier» it is there to clear and to what the perturbation touched; that is the resuming case, and it wants the tip. Which case holds is a fact about the verisectorium's state, not a default about the mind, and a tool can compute both sets from the acta.
 
 ## The actor's record, and standing
 
