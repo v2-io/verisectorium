@@ -1,0 +1,34 @@
+// Append-only log of changes to core-2/. Newest entry last. One entry per act on core-2;
+// what each entry says is what changed and why, so that core-2 carries no history of its own.
+// KDL 2.0. A value containing " is a raw string, #"like this"#.
+// The `by` here is typed, against the model's own rule that an actor is read from the harness; this log predates any tool that could read it.
+
+entry at="2026-11-08T21:30-07:00" by="Fable 5.1 session, with Joseph" {
+  did #"founded core-2/: README, MODEL.md (the spine in five sentences and twelve sections), model.outline.md (ten terms with files, nineteen inline words, five gaps), def/ for verisectorium, veritoid, segment, kind, dimension, reference, act, changeset, frontier, checkpoint, two worked examples from asf's recorded acts (scope-adaptive-system; the stopped bound), and bin/defs taking a core directory argument"#
+  why #"Joseph, 2026-11-08: build the spine right in a new core-2/ carrying core/'s discipline and none of its terms by inheritance, after the experiential read of every note, his turns on term multiplication, on the aspect-by-standard carve of truth-determinant, on dimensions as constraints, on intake being in definition (1), and on the kernel spikes having no bearing on the ontology. Everything provisional."#
+}
+
+entry at="2026-11-08T21:45-07:00" by="Fable 5.1 session, at Joseph's remark" {
+  did #"MODEL.md §1 sentence 1 no longer says the store "never holds truth"; it says every statement about standing is read from the record and never typed from outside it, and that the store holds true sentences without a verdict on them beyond what the acts warrant"#
+  why #"Joseph, watching the file land: "That's a very bold absolute." It was, and it conflated holding true sentences with holding a certificate of truth."#
+}
+
+entry at="2026-11-08T22:40-07:00" by="Fable 5.1 session, from the first cold read" {
+  did #"after msc/scratch/core-2-denovo-1.md: own and effective warrant (capped is information, overclaim compares with effective); a warrant read lapses only on a fall; reads may be of an assertion alone; a run is a check by an instrument, a reader event an attestation; row carries commitment and existence as two states; kinds that seemed to open no dimension given theirs; two gap rows (write-time addressing; ontology change record); the scope example's vsect claim corrected (13 checks hold at HEAD, not none; hash 4dd77b14) and MODEL §10 rewritten to say the count is not yet done; the stopped-bound example now says which reading of "exact" its result depends on; consistency slips (nineteen inline words; sixth optional slot; the eight dissolved words §12 had not named; coherent wholes). Four decisions left for Joseph in Working Notes: which assertions compare with warrants; whether reconciliation is a write; write-time addressing; the ontology change record"#
+  why "a cold read with a two-line brief found one false claim about the record, one contradiction (capped vs overclaim), one invariant that broke on good news, and the fused row, and named the four decisions the model had quietly not made; the quantitative claim had been carried into MODEL.md with less hedging than the example gave it"
+}
+
+entry at="2026-11-08T23:05-07:00" by="Fable 5.1 session, at Joseph's question" {
+  did "MODEL.md reconciled against the defs it was written before: §3 rows carry commitment and existence, reviews lapse on declared reads, members may be promised; §6 reads may be of an assertion or a warrant alone, a warrant read lapses only on a fall, a run is a check by an instrument, a reader event an attestation; frontier.md's note no longer names capped as an item"
+  why "Joseph asked whether MODEL.md was still a high-fidelity recapitulation of the segments; it was not in two sections, and it is meant to be the first file read"
+}
+
+entry at="2026-11-08T23:40-07:00" by="Fable 5.1 session, at Joseph's suggestion" {
+  did #"MODEL.md retired to msc/scratch/core-2-MODEL-draft-2026-11-08.md; its sections became nine prose segments in src/ (intro-spine; disc-written-done-computed, disc-pieces-and-identity, disc-dimensions-as-constraints, disc-better, disc-what-would-show-this-wrong; impl-intake, and the two example runs as impl-scope-adaptive-system and impl-stopped-bound, with examples/ removed), each with frontmatter naming the defs it narrates, interspersed in the outline where they belong; §§5–7 (references, acts, change) dropped as recapitulations of their defs; §12 moved into the outline's Part II with its reasons; the defs' three pointers into MODEL.md inlined (crossing outcomes in act; better and the intrinsic constraints in verisectorium); bin/defs checks src/ frontmatter, narrates targets, references and outline rows; README reading order is now the outline in row order"#
+  why "Joseph: MODEL.md was the right way to get a first iteration down before the segments; now that the segments exist, nothing novel should live only in it, and the pedagogical and persuasive prose belongs in intro-, disc- and impl- segments interspersed in the outline, with their predicate defs named so a change cascades"
+}
+
+entry at="2026-11-09T00:05-07:00" by="Fable 5.1 session, at Joseph's correction" {
+  did "verisectorium def and intro-spine led by the operational purpose: influx dissected until pieces contribute on their own, adjudicated, refined, reassembled into results others build on and read; new results built on adjudicated ones as how discovery and decision proceed; the machinery-versus-practical-model distinction stated inside the term; examples say where each estate verisectorium's influx came from and what it delivers; outline rows match"
+  why "Joseph: the operational purpose had been re-lost in favour of the machinery, in the five sentences and in the def itself; every verisectorium in the estate starts as influx cut up until the truths are independently contributory, and the literal image of dissection is apt; the machinery is fine as the meta-ontology, with the practical model and its affordances distinguished from it in the definition"
+}

@@ -3,7 +3,8 @@
 #
 # defs — check, draw and read the term definitions in core/def/*.md (one term per file)
 #
-#   defs check     every def parses (a leading ```kdl block with one `term` node and a `status`,
+#   defs check [DIR]  (DIR defaults to core; core-2 is the second core)
+#                  every def parses (a leading ```kdl block with one `term` node and a `status`,
 #                  then the body sections); the file is named for its term (- for ·); no term
 #                  defined twice; the body opens '# «term»' followed by the one-line def; every «…» and ‹…› resolves;
 #                  relation targets are defined or promised terms; cardinalities are {m,n};
@@ -29,8 +30,9 @@
 require 'kdl'
 
 ROOT    = File.expand_path('..', __dir__)
-DEF_DIR = File.join(ROOT, 'core', 'def')
-OUTLINE = File.join(ROOT, 'core', 'model.outline.md')
+CORE    = ARGV[1] || 'core'          # which core to check: `defs check core-2`
+DEF_DIR = File.join(ROOT, CORE, 'def')
+OUTLINE = File.join(ROOT, CORE, 'model.outline.md')
 SEP     = "·"
 
 def file_for(term) = term.tr(SEP, '-')
@@ -153,6 +155,28 @@ check_refs = lambda do |where, text|
   end
 end
 
+# src/ segments (intro-, disc-, impl-): YAML frontmatter with slug, form, status, narrates: [terms]
+SRC_DIR = File.join(ROOT, CORE, 'src')
+src_files = Dir.exist?(SRC_DIR) ? Dir[File.join(SRC_DIR, '*.md')].map { |f| File.basename(f, '.md') }.sort : []
+outline_src = outline.scan(/\[\[src\/([^\\|\]]+)\\\|/).flatten.uniq
+src_files.each do |f|
+  text = File.read(File.join(SRC_DIR, "#{f}.md"))
+  unless text =~ /\A---\n(.*?)\n---\n(.*)\z/m
+    problems << "src/#{f}: no YAML frontmatter"; next
+  end
+  fm, body = Regexp.last_match(1), Regexp.last_match(2)
+  slug = fm[/^slug:\s*(\S+)/, 1]; form = fm[/^form:\s*(\S+)/, 1]
+  narr = fm[/^narrates:\s*\[([^\]]*)\]/, 1].to_s.split(',').map(&:strip).reject(&:empty?)
+  problems << "src/#{f}: slug '#{slug}' does not match the filename" unless slug == f
+  problems << "src/#{f}: form '#{form}' is not intro, disc or impl" unless %w[intro disc impl].include?(form)
+  problems << "src/#{f}: form '#{form}' does not match the filename prefix" unless f.start_with?("#{form}-")
+  problems << "src/#{f}: narrates nothing; a prose segment must name the defs it rests on" if narr.empty?
+  narr.each { |t| problems << "src/#{f}: narrates '#{t}', which is not a defined term" unless terms.key?(t) }
+  check_refs.call("src/#{f}", body)
+  problems << "src/#{f}: has a file but no row in the outline" unless outline_src.include?(f)
+end
+(outline_src - src_files).each { |f| problems << "outline: row for src/#{f} but no file #{CORE}/src/#{f}.md" }
+
 case ARGV[0]
 when 'check'
   defs.each do |f, d|
@@ -183,7 +207,7 @@ when 'check'
     nrels = defs.values.sum { |d| d['term']['rels'].size }
     nsubs = defs.values.sum { |d| d['term']['subtypes'].size }
     nprov = defs.values.sum { |d| d['term']['rels'].count { |r| r['provisional'] } }
-    puts "ok: #{defs.size} terms defined, #{nsubs} subtypes, #{nrels} relations (#{nprov} provisional); #{outline_files.size} terms in the outline, nothing unresolved"
+    puts "ok: #{defs.size} terms defined, #{nsubs} subtypes, #{nrels} relations (#{nprov} provisional); #{outline_files.size} terms in the outline; #{src_files.size} prose segments narrating; nothing unresolved"
   else
     puts problems
     exit 1

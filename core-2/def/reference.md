@@ -1,0 +1,42 @@
+```kdl
+term "reference" pos=noun pl="-s" {
+  synonyms "pointer"
+  avoid "edge" "suggests an object apart from the veritoid that wrote it"
+  avoid "depends" "ASF's frontmatter word pointed whole segments at whole segments"
+  rel from term="veritoid" card="{1,1}"
+  rel to term="veritoid" card="{0,N}" note="or a segment; how many it expects is written with it"
+  rel to term="segment" card="{0,N}" note="a projection's members; a chunk's bears-on"
+}
+status provisional
+```
+
+# «reference»
+A written pointer from a veritoid to veritoids or segments, of a declared kind, carrying the target version it was last reconciled against and optionally the warrant it needs its target to have; someone wrote it, it can be wrong, and the store computes only whether it holds.
+
+## Definition
+A reference is written content: it is part of its veritoid's version, so re-pointing or reconciling one is a write. Its **kind** says what passes along it, and a kind exists only because some «dimension» treats it differently from the rest. Kinds so far: **predicated-on** (this claim needs those; support travels along it and validity caps along it; acyclic), **narrates** (this talks about that; staleness only), **restates** (the two must agree), **seeded-by** (two acts are not independent), **supersedes** (which is current), **bears-on** (what a chunk concerns). The ontology may add kinds and their behaviour.
+
+A reference **holds** when its target exists (its id is not retired), the target's version is the one the reference last saw, and the target's warrant on the dimension the reference names is at least what the reference needs, where it says. A reference that does not hold is owed on the «frontier»: *stale*, *dangling* or *unmet*, each a different repair.
+
+### Invariants
+- It points at the specific veritoid relied on, not at that veritoid's whole segment, except where its kind is about segments (a projection's members; bears-on when the chunk concerns a whole segment).
+- It says how many targets it expects; that gives a miss its meaning. Zero against exactly-one is a defect; zero against any-number is just the answer.
+- A reference to a piece that does not yet exist is allowed and owed, so a projection can point at promised work and a derivation at a result not yet written.
+- A reference to a retired id is never silently redirected; it is owed until re-pointed to a descendant or dropped.
+- The predicated-on graph has no cycles. A cycle found is something cut too coarsely.
+
+## Discussion
+- Why a reference is content and not a value. Joseph described the dependency as an array dimension on the claim atom. Here the targets are written by the author and only *does it hold* is computed, because a derivation that now uses a different premise is a different derivation, and a check of the old one should not bind to the new.
+- Why the version seen is part of the reference. It is what makes staleness computable, and what lets an author reconcile a reference against a moved target without changing a word of content; that reconciliation is still a write and still mints a version, which is right.
+- What a premise change does downstream is the referencing dimension's business, not the reference's. A refuted premise leaves what rested on it unsupported by that route, not false. A premise that dropped in warrant lowers the cap. A narrowed premise puts a question to every dependent: did you rely on what is gone? That question is a frontier item raised on each dependent, and the dependent's author answers it by changing or affirming.
+
+## Examples
+- `scope-adaptive-system` item (b) predicated-on `example-kalman`'s random-walk tracker, at the version it last saw; (c) predicated-on `def-action-transition`'s Markov commitment, which is one veritoid of that segment and not the segment.
+- An introduction's narrates reference to another segment's eli8 and not to its formal claim.
+- A chunk from the 2026-05-30 gold lift with bears-on `scope-adaptive-system`.
+
+## Working Notes
+- Open. Whether *needed* on a reference is the author's assertion about what the dependent relies on (and so a constraint the author owns) or something the capping dimension consults. Lean: the author's, stated, and the cap is computed separately; the two agree in the common case and differ exactly where the author relied on more than the premise's warrant, which is worth seeing.
+- Open. Whether a reference may itself carry a warrant (is it true that A rests on B?). Lean: no; contest it by a finding on the referencing veritoid.
+- **Decide (Joseph).** Whether reconciling a reference to the same target at a new version is a write. As written, seen-versions are inside the referencer's version hash, so clearing one stale reference mints a version, lapses every act that read the referencer, and stales every reference to it, transitively through the graph, with no content changed (cold read §2.4). The argument given ("a different derivation") covers re-pointing to a different id, not re-reconciling to the same one. Alternative, inside the model's own words: the version hashes content, assertions and reference *targets*; seen-versions are carried beside it; reconciliation to the same id is an affirmation ("I looked; I still rely on it"), which never counts as a check and lapses nothing downstream. Staleness stays computable. Lean: the alternative; the second-order collapse on a 1,234-record store is the larger cost. Not changed in the text pending his call.
+- Adjudicated against msc/notes 05 (21:52Z), 09 §2.5, 10 §1.5–1.7, 19 §2 and §5.
