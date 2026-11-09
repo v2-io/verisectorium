@@ -23,12 +23,16 @@
 | 15 | 11-06 14:40 | `.archive/handoff-fable` | the Fable session's handoff: reading order, what is settled, what in 09/11 is known wrong, what is open. Stale in two places: the work was committed (`281ac5e`, `72eac51`); and the outline-as-provisional-skeleton was the session's own inference from 14, not Joseph's answer | — |
 | 16 | 11-06 14:49 | `unasked-questions` | Joseph's last question to that session and the eleven questions it answered with, carved from the transcript; never on disk before | — |
 | 17 | 11-07 | `.archive/handoff-fable` | the founding session's handoff: reading order, what is settled, the open decisions in order, what no file says plainly | — |
+| 18 | 11-08 | `dimension-census` | a Fable 5.1 synthesis of what the estate's verisectoria adjudicate, from ten reports in `msc/scratch/census-*.md`, replacing an earlier first pass kept at `msc/scratch/census-first-pass-2026-11-08.md`. Written here, not copied from aat-v3. Quotes Joseph's gitignored messages file | — |
+| 19 | 11-08 | `holistic-model` | the Opus 5.5 session's whole model in seven working terms, with intake folded in and the stopped-bound error worked through it; a proposal, untested, with a written guess of what a real root will strain | — |
 
 ## Still only in transcripts or elsewhere
 
 - **The value exchange (11-06, 12:15–12:30 local):** Joseph's "this is the very heart of all of verisectorium"; the session's three-part principle (what is claimed / what has been done / what is thereby warranted) and its retraction of "the store computes what is warranted"; Joseph's "I may have introduced WoE and numeric truth values prematurely … it is almost all an act+judgment machine". Partly carried in 12's addendum and 15. Session `92e38652`.
 - **Joseph's own messages, 2026-10-28 to 11-05:** `~/src/aat-v3/preparations/research/joseph-messages-2026-10-28--11-05.md`, local only, gitignored there; his messages after 11-05 19:04 are in `~/.claude/history.jsonl`.
 - **The councils dialog up to the kernel draft:** `~/src/aat-v3/preparations/foundations/research/dialog-for-kernel-2026-11-04.md`. Left there: it names the ELI council and has never been public.
+
+- **The status-word table (11-06, 19:57Z, session `92e38652`):** each of ASF's eight `status:` words mapped to the question it was really answering, then seven separate questions (role, forcedness, sharpness, conditions, kind of support, how far the support has gone, credence). Note 15's "eight words answering five questions" refers to it.
 
 ## Stays in aat-v3 (about ASF as material)
 
