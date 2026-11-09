@@ -33,5 +33,5 @@ status: provisional
 Written 2026-11-09, the second day of `core-2/`, from how the work actually went: a first iteration written in one file and then moved into segments; a cold read that corrected one false claim and found four unmade decisions; Joseph's corrections on purpose before machinery, on provenance out of bodies, and on the four record surfaces. The earlier handoffs in `msc/notes/` (15, 17) and the notes themselves are the specimen of what this procedure replaces.
 
 ## Working Notes
-- Open. Whether the praxes want their own checker rules (the gate does not read `praxis/` yet).
+- Open. Whether the praxes want their own checker rules (the gate does not read `praxes/` yet).
 - Open. Whether step 7's "do not push" belongs in a praxis or only in the session's standing instructions.

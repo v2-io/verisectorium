@@ -64,6 +64,11 @@ entry at="2026-11-09T18:30-07:00" by="Fable 5.1 session, at Joseph's decision" {
 }
 
 entry at="2026-11-09T19:00-07:00" by="Fable 5.1 session, at Joseph's decision" {
-  did "sop renamed praxis throughout (praxes.outline.md, praxis/, templates/praxis.md, README, the root CLAUDE.md import); praxis defined in the verisectorium def and as an inline row as the dual of the engine's affordances, what is expected of a mind that no tool enforces; every def's Historical Context now opens with an Etymology subsection saying what the word is, why it was chosen and what it was chosen over, with the adjudication record under its own subheading; veritoid's may-not-survive note dropped"
+  did "sop renamed praxis throughout (praxes.outline.md, praxes/, templates/praxis.md, README, the root CLAUDE.md import); praxis defined in the verisectorium def and as an inline row as the dual of the engine's affordances, what is expected of a mind that no tool enforces; every def's Historical Context now opens with an Etymology subsection saying what the word is, why it was chosen and what it was chosen over, with the adjudication record under its own subheading; veritoid's may-not-survive note dropped"
   why "Joseph, 2026-11-09: praxis, both here and in concrete verisectoria, as the dual to the CLI, describing for agents what is neither the domain nor automated away; veritoid stays because it is distinct enough to mean exactly what is said where atom, claim, doc and decision collide; and all terms should carry their etymology in historical context"
+}
+
+entry at="2026-11-09T19:20-07:00" by="Fable 5.1 session, at Joseph's suggestion" {
+  did "the praxis/ directory is praxes/, to carry the plural beside praxes.outline.md; every path updated"
+  why "Joseph, 2026-11-09"
 }
