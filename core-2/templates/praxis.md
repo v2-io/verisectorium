@@ -1,6 +1,6 @@
 ---
 slug: <slug>
-form: sop
+form: praxis
 status: provisional
 ---
 
