@@ -23,7 +23,8 @@ Two things are defined here and must not be confused. The **machinery** is the m
 
 ### Invariants
 - At each of its steady states, no piece asserts more about itself than what has been done to it warrants, every reference holds, and whatever is still owed is owed by recorded acceptance with its reason.
-- At least one of its projections is canonical, however experimental, and it is true as stated at every steady state, because a provisional row claims only that the suggestion exists.
+- At least one of its projections is canonical, however experimental or nascent, and it is true as stated (for example, as initial untested hypotheses) at every steady state.
+- A "provisional" segment of any kind is, to canon, only a claim that the suggestion for such a segment (etc.) exists.
 - Every piece of its content is of a declared kind, and every kind opens at least one dimension. Content that answers to no dimension is a note about the verisectorium, not content of it.
 - Nothing in its corpus is changed by hand, and nothing in its acta is typed. Every change goes through a «changeset», and where the engine cannot express a change, that is how the engine's gap is found.
 
