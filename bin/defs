@@ -4,7 +4,7 @@
 # defs — check, draw and read the term definitions in core/def/*.md (one term per file)
 #
 #   defs check     every def parses (a leading ```kdl block with one `term` node and a `status`,
-#                  then the body sections); the file is named for its term (- for ⸱); no term
+#                  then the body sections); the file is named for its term (- for ·); no term
 #                  defined twice; the body opens '# «term»' followed by the one-line def; every «…» and ‹…› resolves;
 #                  relation targets are defined or promised terms; cardinalities are {m,n};
 #                  the outline's `def` column agrees with which files exist
@@ -16,7 +16,7 @@
 #   «term»                 exactly one def defines it, or the outline promises it; plural per `pl`;
 #                          possessive by 's or ' («veritoid's», «verisectoria'»)
 #   «wording|def/term»     that def (or, if unfiled, the outline) defines the term
-#   «sub⸱noun»             full name of subtype sub of noun, when sub⸱noun is not itself a term
+#   «sub·noun»             full name of subtype sub of noun, when sub·noun is not itself a term
 #   ‹sub›                  declared subtype of the «noun» on the same line, or unique across the lexicon
 # KDL 2.0 (gem kdl >= 2.0). Block shape:
 #   term "name" pos=noun pl="-s" { subtypes "a" "b"; synonyms "x"; avoid "word" "why";
@@ -31,7 +31,7 @@ require 'kdl'
 ROOT    = File.expand_path('..', __dir__)
 DEF_DIR = File.join(ROOT, 'core', 'def')
 OUTLINE = File.join(ROOT, 'core', 'model.outline.md')
-SEP     = "⸱"
+SEP     = "·"
 
 def file_for(term) = term.tr(SEP, '-')
 def vals(node) = node.arguments.map(&:value)
@@ -171,7 +171,7 @@ when 'check'
     end
     d['term']['subtypes'].each { |s| problems << "#{f}: subtype '#{s}' is also a term (#{terms[s]})" if terms.key?(s) }
   end
-  check_refs.call('outline', outline.sub(/\A.*?\n## I\./m, ''))
+  check_refs.call('outline', outline.sub(/\A.*?\n## Part I\b/m, ''))
   outline.each_line.with_index(1) do |line, n|
     next unless line =~ /\A\| *(provisional|promised|present|accepted|gap) *\| *([^|]+?) *\| *\[\[def\/([^\\|\]]+)\\\|/
     defcol, f = $2.strip, $3
@@ -182,7 +182,8 @@ when 'check'
   if problems.empty?
     nrels = defs.values.sum { |d| d['term']['rels'].size }
     nsubs = defs.values.sum { |d| d['term']['subtypes'].size }
-    puts "ok: #{defs.size} terms defined, #{nsubs} subtypes, #{nrels} relations; #{outline_files.size} terms in the outline, nothing unresolved"
+    nprov = defs.values.sum { |d| d['term']['rels'].count { |r| r['provisional'] } }
+    puts "ok: #{defs.size} terms defined, #{nsubs} subtypes, #{nrels} relations (#{nprov} provisional); #{outline_files.size} terms in the outline, nothing unresolved"
   else
     puts problems
     exit 1
@@ -194,7 +195,7 @@ when 'dot'
     t = d['term']['name']
     d['term']['rels'].each do |r|
       next if r['informal']
-      r['to'].each { |x| used[t] = used[x] = true; edges << [t, x, r['rel'], r['card']] }
+      r['to'].each { |x| used[t] = used[x] = true; edges << [t, x, r['rel'], r['card'], r['provisional']] }
     end
   end
   id = ->(t) { t.gsub(/[^a-z0-9]/, '_') }
@@ -209,7 +210,10 @@ when 'dot'
     subs = defs[f]['term']['subtypes']
     puts "  #{id.call(t)} [label=\"#{t}#{subs.empty? ? '' : "\\n‹#{subs.join('› ‹')}›"}\"];"
   end
-  edges.each { |a, b, rel, card| puts "  #{id.call(a)} -> #{id.call(b)} [label=\"#{rel} #{card}\"#{rel == 'is-a' ? ', style=dashed' : ''}];" }
+  edges.each do |a, b, rel, card, prov|
+    style = prov ? ', style=dotted, color="#aaaaaa", fontcolor="#888888"' : (rel == 'is-a' ? ', style=dashed' : '')
+    puts "  #{id.call(a)} -> #{id.call(b)} [label=\"#{rel} #{card}\"#{style}];"
+  end
   puts '}'
 
 when 'overview'

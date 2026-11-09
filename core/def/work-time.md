@@ -1,14 +1,14 @@
 ```kdl
-term "work⸱time" pos=noun
+term "work·time" pos=noun
 status provisional
 ```
 
-# «work⸱time»
+# «work·time»
 The hours and days in which minds assemble a move, with an order, clock times and actors.
 
 ## Intro
 
-There are two kinds of time, and they are kept apart. In «steady⸱time» the «data⸱store» moves from one «steady⸱state» to the next, each move at one logical instant; nothing exists between two steady states, and at each one the «verisectorium» is good or true, with stated conditions. In «work⸱time» minds assemble such a move over hours and days, with an order, clock times and actors; while they do there is a «working⸱state», the last steady state plus whatever has been staged so far, which changes as work proceeds and is never the verisectorium.
+There are two kinds of time, and they are kept apart. In «steady·time» the «data·store» moves from one «steady·state» to the next, each move at one logical instant; nothing exists between two steady states, and at each one the «verisectorium» is good or true, with stated conditions. In «work·time» minds assemble such a move over hours and days, with an order, clock times and actors; while they do there is a «working·state», the last steady state plus whatever has been staged so far, which changes as work proceeds and is never the verisectorium.
 
 ## Definition
 
@@ -26,7 +26,7 @@ There are two kinds of time, and they are kept apart. In «steady⸱time» the �
 
 ## Working Notes
 
-- Intro, discussion and examples shared verbatim with former group-mates (steady⸱state, working⸱state, steady⸱time); to be rewritten for this term alone when adjudicated.
+- Intro, discussion and examples shared verbatim with former group-mates (steady·state, working·state, steady·time); to be rewritten for this term alone when adjudicated.
 - Open. Whether a finding that breaks something may show on the steady line before its consequences are worked through, as a mark on a value that says "a known defect probably lowers this; not yet worked through; do not rely on it". Joseph would accept such marks if they are rare and nearly always what is being worked on. A steady state would then promise two different things, consistent and honestly current. Lean: allow the mark, and have it inhibit anything new from binding at the marked level rather than capping how many may exist.
 - Open. Several working states at once, and whether the union of two independently steady stores is itself steady. Punted by Joseph, who is alone in charge of workflow for now.
 - Open. Whether a working state is held as a branch, a separate store, or something else. An architectural decision; the requirements are checkpoints, a diff against the starting steady state, the frontier, a merge only when the frontier is empty or accepted, and detection of overlapping changesets before merge.

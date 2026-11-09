@@ -81,3 +81,28 @@ entry at="2026-11-08T10:10-07:00" by="Opus 5.5 session, with Joseph's standing g
   did #"act gains the sorts of act the notes had named (review, finding, acceptance, rule firing, outside change) and an invariant that a broken check or a finding goes on the record and adds to the frontier; an act may bind to a value it relied on as well as to content, restored from msc/notes 09 §3.1 and 10 §1.4; "only a changeset adds to the frontier" removed from segment⸱changeset and scoped in the working notes to the kernels' own log; the changed-or-affirmed rule stated as following inner dependencies; affirmation's invariants now state what msc/notes 09 §4.1 gave it, not reference reconciliation; "the spec" in core's working notes now says KERNEL-SPEC.md; the example calling provisional rows an accepted remainder removed from four defs"#
   why "kernel results had been written into core that held only for the spike's simplified log, against notes 09 and 11; a provisional row owes nothing (msc/notes 14), so it is no remainder; core is the spec, so a spike's target must not share the word (Joseph, 2026-11-08)"
 }
+
+entry at="2026-11-08T10:30-07:00" by="Opus 5.5 session (general-purpose agent), at Joseph's direction" {
+  did "core/log.yaml converted to core/log.kdl (KDL 2.0); every entry's text unchanged"
+  why "KDL's node shape is udon's, as with the defs' machine blocks; the log never parsed as YAML (Joseph, 2026-11-08)"
+}
+
+entry at="2026-11-08T11:40-07:00" by="Opus 5.5 session, at Joseph's direction" {
+  did "outline Part I is now the foundational spine in a considered order (44 terms, 4 gaps), and everything else moved to Part II in three rough neighbourhoods with no claim of order; value, position, judgment now follow act and bind; term labels in one casing with the middle dot; stale group-style paths and the retired capitals convention removed from rows and legend. Relations marked provisional=#true where the target is not decided and the def's own text does not say plainly what the relation consists of (29 marked, 31 kept, by per-relation judgment); bin/defs counts them and draws them dotted"
+  why "Joseph, 2026-11-08 - only the order of the first table is claimed, and a relation to an undefined term is provisional unless its definition is very clear about it; verisectorium included"
+}
+
+entry at="2026-11-08T11:45-07:00" by="Opus 5.5 session, from a cold read, for Joseph to adjudicate" {
+  did "truth⸱determinant reworked. Two parts, aspect and standard; the standard is what content must agree with, not the means of finding out; a standard may be named by role and filled per piece; answering to a determinant means being in the service of it; better includes being shown more firmly; completeness added to AAT's illustrative determinants; the question-and-note collision withdrawn; synonym truth aspects replaced by determinant. Status stays provisional. ontology now says it declares determinants"
+  why "the de novo read at msc/scratch/truth-determinant-denovo-1.md found better could not produce AAT's own sense of it, held-against mixed the standard with the instrument, and per-piece standards were unaccounted for; Joseph, 2026-11-08, on a question or note being in the service of a determinant"
+}
+
+entry at="2026-11-08T12:05-07:00" by="Opus 5.5 session, at Joseph's request" {
+  did "the separator in multi-word terms changed from U+2E31 to U+00B7 throughout core, bin/defs and the legend; earlier entries in this log keep the character they were written with"
+  why "it renders better in Lora and the fonts Joseph reads in (2026-11-08); U+00B7 is also XID_Continue, so a term is a legal bare name under udon's rule, which U+2E31 is not"
+}
+
+entry at="2026-11-08T19:35-07:00" by="Opus 5.5 session, at Joseph's request" {
+  did "committed truth·determinant as it stands in Joseph's working copy, mid-revision, with the separator made uniform; its status stays provisional and bin/defs check reports its declared-by relation as having no cardinality"
+  why "Joseph, 2026-11-08, asked that everything uncommitted be committed; the revision is his and in progress"
+}

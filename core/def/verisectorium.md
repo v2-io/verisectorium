@@ -2,9 +2,9 @@
 term "verisectorium" pos=noun pl="verisectoria" {
   avoid "repository" "where files happen to live; a verisectorium may span several or none"
   avoid "knowledge base" "suggests settled facts; a verisectorium is mostly work in progress, honestly marked"
-  rel declares     term="truth⸱determinant" card="{1,N}"
-  rel described-by term="ontology" card="{1,1}"
-  rel persisted-in term="data⸱store" card="{1,1}"
+  rel declares     term="truth·determinant" card="{1,N}"
+  rel described-by term="ontology" card="{1,1}" provisional=#true
+  rel persisted-in term="data·store" card="{1,1}" provisional=#true
 }
 status decided by="steward-and-lead" on="2026-11-07"
 ```
@@ -13,15 +13,15 @@ status decided by="steward-and-lead" on="2026-11-07"
 A "place for cutting truth." It is a truth-centric, continually improving system for building a body of work under turnover, the project that defines such systems and their tools, or, when used in this ontology, a concrete instance with its constituent parts.
 
 ## Definition(s)
-- (1) A place for dissecting and adjudicating new or existing content, refining it toward agreement with its declared «truth⸱determinants», and reassembling the parts into meaningful coherent results. It is therefore a body of work that is *truth-centric*, exhibits *continual improvement*, and needs to be *resilient to constant turnover* (see Discussion items 3,4, & 5);
+- (1) A place for dissecting and adjudicating new or existing content, refining it toward agreement with its declared «truth·determinants», and reassembling the parts into meaningful coherent results. It is therefore a body of work that is *truth-centric*, exhibits *continual improvement*, and needs to be *resilient to constant turnover* (see Discussion items 3,4, & 5);
 - (2) This repository and project's name, which describes «verisectoria» generally, gives their meta-«ontology», and provides tooling (`v2`) for initializing and operating instantiations of them (see Discussion item 1 & 2);
-- (3) A concrete instance of (1), with its «ontology», the current snapshot of its «data⸱store», and often (as when it is a repository) its history. **This is the primary meaning as a term within this ontology**, (and thus the referent for the invariants, owner of the declared relationships, etc.).
+- (3) A concrete instance of (1), with its «ontology», the current snapshot of its «data·store», and often (as when it is a repository) its history. **This is the primary meaning as a term within this ontology**, (and thus the referent for the invariants, owner of the declared relationships, etc.).
 
 ### Invariants
 *(These are loose approximations. The more detailed components of the «verisectorium» definitions specify these invariants authoritatively.)*
 
-- At each of its «steady⸱states», no piece in it claims more than what has been done to it warrants, and none is left as if nothing had been done when something has.
-- Every piece of its content answers to at least one of its «truth⸱determinants»; a piece that answers to none is a note about the verisectorium, not content of it.
+- At each of its «steady·states», no piece in it claims more than what has been done to it warrants, and none is left as if nothing had been done when something has.
+- Every piece of its content answers to at least one of its «truth·determinants»; a piece that answers to none is a note about the verisectorium, not content of it.
 
 ## Discussion
 1. Sense (2) is kept in the definition because the rest of the estate already refers to this repository as the place where verisectoria are defined and the tool that helps.
@@ -40,5 +40,5 @@ A "place for cutting truth." It is a truth-centric, continually improving system
 - (This repository's core, as described in the Discussion).
 
 ## Working Notes
-- Open. Whether "stated flatly" (see «theory⸱claim») is a property of truth-centric work generally or only of the theory regime. Lean: the regime's.
+- Open. Whether "stated flatly" (see «theory·claim») is a property of truth-centric work generally or only of the theory regime. Lean: the regime's.
 - When later segments (projections, etc.) are finished, consider forward-referencing them better from here.

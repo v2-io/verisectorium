@@ -1,19 +1,20 @@
 ```kdl
-term "veritoid⸱kind" pos=noun pl="veritoid⸱kinds" {
+term "veritoid·kind" pos=noun pl="veritoid·kinds" {
   avoid "filename prefix" "a kind is declared, never carried in a name"
   avoid "speech act" "an earlier model individuated kinds by how they fail; here by what is asked of them"
-  rel allows term="dimension" card="{1,N}" note="which are open for a given veritoid depends on its ground"
-  rel declares term="move" card="{0,N}"
+  rel answers-to term="truth·determinant" card="{1,N}"
+  rel allows term="dimension" card="{1,N}" note="which are open for a given veritoid depends on its ground" provisional=#true
+  rel declares term="move" card="{0,N}" provisional=#true
 }
 status provisional
 ```
 
-# «veritoid⸱kind»
+# «veritoid·kind»
 A declared type of veritoid, saying what form its content takes, what it answers to, and which questions may be asked of it.
 
 ## Intro
 
-The «data⸱store» holds pieces of «content»: a formal statement, a step of a derivation, a paragraph of explanation, a caption, a question, an auditor's note. Every piece of content is of a declared «veritoid⸱kind», which says what form the content takes, which «truth⸱determinants» it answers to, and which questions may be asked of it. A «veritoid» is one piece of content of a declared kind, together with the answers to those questions. A veritoid almost never makes sense alone; it sits in a «segment» with others it depends on, and the segment is where it is written and reviewed.
+The «data·store» holds pieces of «content»: a formal statement, a step of a derivation, a paragraph of explanation, a caption, a question, an auditor's note. Every piece of content is of a declared «veritoid·kind», which says what form the content takes, which «truth·determinants» it answers to, and which questions may be asked of it. A «veritoid» is one piece of content of a declared kind, together with the answers to those questions. A veritoid almost never makes sense alone; it sits in a «segment» with others it depends on, and the segment is where it is written and reviewed.
 
 ## Definition
 

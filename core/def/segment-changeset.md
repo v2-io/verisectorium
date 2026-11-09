@@ -1,15 +1,15 @@
 ```kdl
-term "segment⸱changeset" pos=noun pl="segment⸱changesets" {
+term "segment·changeset" pos=noun pl="segment·changesets" {
   synonyms "instance-isolated changeset"
   rel "on" term="segment" card="{1,1}"
-  rel by term="actor" card="{1,1}"
-  rel belongs-to term="atomic⸱changeset" card="{1,1}"
+  rel by term="actor" card="{1,1}" provisional=#true
+  rel belongs-to term="atomic·changeset" card="{1,1}" provisional=#true
   rel carries term="affirmation" card="{0,N}"
 }
 status provisional
 ```
 
-# «segment⸱changeset»
+# «segment·changeset»
 The unit of writing: a whole new written state for one segment, replacing the old one at one logical instant, every inner dependent either changed or carried with the author's affirmation.
 
 ## Definition
@@ -18,7 +18,7 @@ The unit of writing: a whole new written state for one segment, replacing the ol
 - A segment state with a part that is neither changed nor affirmed is a draft, not a changeset.
 - What is written is reconciled by the author, inside the changeset, at one instant. Values are not the author's to set; they fall when what they rested on changes and are earned back by later acts.
 - A changeset that would make the reference graph cyclic, or that names an id another segment holds, is refused.
-- The changed-or-affirmed rule follows each «inner⸱dependency». A «reference» reaching out of the segment or into it is not part of that rule; what a change does to one goes on the «frontier».
+- The changed-or-affirmed rule follows each «inner·dependency». A «reference» reaching out of the segment or into it is not part of that rule; what a change does to one goes on the «frontier».
 
 ## Working Notes
 

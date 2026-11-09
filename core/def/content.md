@@ -10,7 +10,7 @@ The text or data a veritoid holds, at a «version».
 
 ## Intro
 
-The «data⸱store» holds pieces of «content»: a formal statement, a step of a derivation, a paragraph of explanation, a caption, a question, an auditor's note. Every piece of content is of a declared «veritoid⸱kind», which says what form the content takes, which «truth⸱determinants» it answers to, and which questions may be asked of it. A «veritoid» is one piece of content of a declared kind, together with the answers to those questions. A veritoid almost never makes sense alone; it sits in a «segment» with others it depends on, and the segment is where it is written and reviewed.
+The «data·store» holds pieces of «content»: a formal statement, a step of a derivation, a paragraph of explanation, a caption, a question, an auditor's note. Every piece of content is of a declared «veritoid·kind», which says what form the content takes, which «truth·determinants» it answers to, and which questions may be asked of it. A «veritoid» is one piece of content of a declared kind, together with the answers to those questions. A veritoid almost never makes sense alone; it sits in a «segment» with others it depends on, and the segment is where it is written and reviewed.
 
 ## Definition
 
@@ -29,7 +29,7 @@ The «data⸱store» holds pieces of «content»: a formal statement, a step of 
 
 ## Working Notes
 
-- Intro, discussion and examples shared verbatim with former group-mates (veritoid, veritoid⸱kind); to be rewritten for this term alone when adjudicated.
+- Intro, discussion and examples shared verbatim with former group-mates (veritoid, veritoid·kind); to be rewritten for this term alone when adjudicated.
 - Open, and it matters. Whether a veritoid has an identity of its own that survives being moved, or is only its place in a segment. See «recut». Every split, promote and inbox drain hits this.
 - From the kernel spikes. "At a version" was carrying a decision the model had not made: whether a version is a content hash or a counter is kernel-visible (binding on `(veritoid, version)` makes a restored version re-bind old acts). «version» now has its own stub with the finding and a lean.
 - Not confirmed. That there are exactly two levels. Joseph said he was still not sure; the discussion's lean is a reading of his "practical granularity".

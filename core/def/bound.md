@@ -2,7 +2,7 @@
 term "bound" pos=noun pl="-s" {
   synonyms "license"
   avoid "ceiling" "the most a piece could ever earn; a bound is a limit it is given"
-  rel of term="veritoid" card="{1,1}"
+  rel of term="veritoid" card="{1,1}" provisional=#true
 }
 status provisional
 ```

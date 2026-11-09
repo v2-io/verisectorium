@@ -1,13 +1,13 @@
 ```kdl
 term "act" pos=noun pl="-s" {
-  subtypes "check" "review" "finding" "decision" "crossing" "acceptance" "rule⸱firing" "outside⸱change"
+  subtypes "check" "review" "finding" "decision" "crossing" "acceptance" "rule·firing" "outside·change"
   avoid "event" "an earlier model's events were each about one record only"
   rel by term="actor" card="{1,1}"
   rel against term="state" card="{1,1}"
   rel reads term="veritoid" card="{0,N}" note="each at a version; what the act binds to"
   rel reads term="value" card="{0,N}" note="a value it relied on, read at a level; also what the act binds to"
   rel concerns term="veritoid" card="{0,N}" note="what the act attests; a subset of what it reads"
-  rel under term="criterion" card="{0,1}"
+  rel under term="criterion" card="{0,1}" provisional=#true
 }
 status provisional
 ```
@@ -31,7 +31,7 @@ One recorded thing an attested actor did against a state, binding to exactly wha
 - **Acts read only introduced ids** (Ada/Fable, needed to prove P3 exactly as written; Ada/Opus found the matching qualifier). Without it an act can *start* binding when a version it read appears later, which with counters is "a guess dressed as a check" (Rust/Opus, who allowed it and flagged it). Lean: adopt.
 - **Multi-read acts lapse as a unit** (all four, as a consequence of binding). B's re-derivation of `(c@2, d@2)` stops counting for `c` when only `d` moves. Honest (an act is one judgement), but it pushes actors toward acts that read as little as possible (Ada/Opus finding 8). Whether an act should declare which reads it is about and which it merely relied on is the same question as `concerns`.
 - **Acts are never refused** (Rust/Fable): an act whose reads are already stale when recorded simply does not bind; the log records what happened, whether it was useful is computed. Rust/Opus refuses an act that concerns something it did not read. Both consistent with the relations above if `concerns ⊆ reads` is checked at the seam.
-- "Only writing ever adds an owed item; acts only remove" was tested (Rust/Opus) and in part proved (Ada/Opus, an affirmation moves no position) of a log holding only changesets and positive checks, which is all `KERNEL-SPEC.md` gave them. Position there is the greatest binding rung, so nothing could record a failure. It is not true of this model, where a ‹finding›, a ‹rule⸱firing› and an ‹outside⸱change› can each add something owed (msc/notes 09 §3.1, §4.2 at 08:30, §4.3; 11 def-act and `act_type`). The four kernels agreeing here is one spec's omission four times, not independent evidence.
+- "Only writing ever adds an owed item; acts only remove" was tested (Rust/Opus) and in part proved (Ada/Opus, an affirmation moves no position) of a log holding only changesets and positive checks, which is all `KERNEL-SPEC.md` gave them. Position there is the greatest binding rung, so nothing could record a failure. It is not true of this model, where a ‹finding›, a ‹rule·firing› and an ‹outside·change› can each add something owed (msc/notes 09 §3.1, §4.2 at 08:30, §4.3; 11 def-act and `act_type`). The four kernels agreeing here is one spec's omission four times, not independent evidence.
 - Open. Whether a broken ‹check› and a ‹finding› are one subtype or two. Lean: two, since a ‹finding› may have had no criterion fixed in advance and so carries no weight as a check. vsect 0.1 has only the first (`--outcome broken`), and that is how the stopped-bound error was recorded (`~/src/aat-v3/preparations/research/missed-error-case-2026-11-06.md`).
-- Open. Whether a refuted premise, a premise dropped in level and a narrowed premise («premise⸱change») need different records or only different computation.
+- Open. Whether a refuted premise, a premise dropped in level and a narrowed premise («premise·change») need different records or only different computation.
 - The subtypes above are the sorts of act the model has named so far, restored from msc/notes 09 and 11; «affirmation» has its own working notes because the spikes found it under-defined.

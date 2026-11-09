@@ -1,7 +1,7 @@
 ```kdl
 term "frontier" pos=noun pl="-s" {
   avoid "todo list" "a frontier is computed, never typed"
-  rel of term="working⸱state" card="{1,1}"
+  rel of term="working·state" card="{1,1}" provisional=#true
 }
 status provisional
 ```
@@ -11,7 +11,7 @@ Everything still owed in a working state; what is known not yet to be consistent
 
 ## Intro
 
-An «atomic⸱changeset» is everything, writes and acts together, that takes the «data⸱store» from one «steady⸱state» to the next. It opens with a «perturbation», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «frontier» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «accepted⸱remainder»: what has been left on it by explicit, recorded decision, with its reason.
+An «atomic·changeset» is everything, writes and acts together, that takes the «data·store» from one «steady·state» to the next. It opens with a «perturbation», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «frontier» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «accepted·remainder»: what has been left on it by explicit, recorded decision, with its reason.
 
 ## Definition
 
@@ -31,7 +31,7 @@ An «atomic⸱changeset» is everything, writes and acts together, that takes th
 
 ## Working Notes
 
-- Intro, discussion and examples shared verbatim with former group-mates (atomic⸱changeset, perturbation, accepted⸱remainder); to be rewritten for this term alone when adjudicated.
+- Intro, discussion and examples shared verbatim with former group-mates (atomic·changeset, perturbation, accepted·remainder); to be rewritten for this term alone when adjudicated.
 - From the kernel spikes (`msc/scratch/kernel-spikes/COMPARISON.md` §4). Four independent kernels computed the frontier from the definitions and all four found the worked example in `KERNEL-SPEC.md` under-counted it (three owed items missing, all of the same kind: the fall of a root reaching what rests on it). Three further facts, each tested or proved in at least one kernel, and each true of those kernels' log of changesets and positive checks: (i) only a write adds an owed item, which does not carry over to this model (see «act»); (ii) the kinds of item the kernels needed were three, `overclaim(v)`, `stale-reference(v, r)`, `unmet-need(v, r)`; a lapsed act is not an item of its own, it shows only through the overclaim it causes, and Rust/Fable reads that narrowing as right, since a lapsed act nothing rested on is not owed; (iii) **"steady means honest" has no content beyond the frontier's definition** (Ada/Fable); the fact worth asking for, and proved there, is that the computed frontier list is exactly the set the predicates define.
 - Open, from the spikes. **One cause, many items.** One changed root produced nine or ten owed items with one cause (Ada/Opus, Rust/Fable). The kernel should keep the raw set, since that is what a stranger can recompute; grouping by cause is porcelain, and the model may want a word for "owed because of" so the porcelain has something to compute.
 - Open. Whether the kinds of item above are complete. The four kernels needed three, but their log had no ‹finding›, no rule and no narrowing. msc/notes 11's `owed_reason` also has the question a narrowed premise puts to each dependent.

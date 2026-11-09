@@ -1,14 +1,14 @@
 ```kdl
-term "accepted⸱remainder" pos=noun pl="accepted⸱remainders"
+term "accepted·remainder" pos=noun pl="accepted·remainders"
 status provisional
 ```
 
-# «accepted⸱remainder»
+# «accepted·remainder»
 What is left on the frontier at the close of an atomic changeset by explicit, recorded decision, with its reason.
 
 ## Intro
 
-An «atomic⸱changeset» is everything, writes and acts together, that takes the «data⸱store» from one «steady⸱state» to the next. It opens with a «perturbation», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «frontier» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «accepted⸱remainder»: what has been left on it by explicit, recorded decision, with its reason.
+An «atomic·changeset» is everything, writes and acts together, that takes the «data·store» from one «steady·state» to the next. It opens with a «perturbation», whatever first disturbs a steady store: a finding, a softened claim, a new result, a rule firing because a date passed. While it is assembled, the «frontier» is everything still owed, computed afresh after each further write or act. It closes when the frontier is empty, or holds only an «accepted·remainder»: what has been left on it by explicit, recorded decision, with its reason.
 
 ## Definition
 
@@ -28,7 +28,7 @@ An «atomic⸱changeset» is everything, writes and acts together, that takes th
 
 ## Working Notes
 
-- Intro, discussion and examples shared verbatim with former group-mates (atomic⸱changeset, perturbation, frontier); to be rewritten for this term alone when adjudicated.
+- Intro, discussion and examples shared verbatim with former group-mates (atomic·changeset, perturbation, frontier); to be rewritten for this term alone when adjudicated.
 - Open. Whether the frontier's four kinds of item are complete. The list is from working one example.
 - Open. What an agent will do to make the frontier empty: affirmations and accepted remainders are both cheap exits, and any marker of "done" becomes a target.
 - Adjudicated against msc/notes 05 (22:19Z), 09 §4.3, 11 def-changeset.

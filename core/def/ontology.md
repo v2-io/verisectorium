@@ -4,22 +4,23 @@ term "ontology" pos=noun pl="-s" {
   avoid "system model" "used for a flow sketch that declared no dimensions"
   avoid "template" "the seed a new store is initialized from; a template may supply a definition but is not one"
   avoid "schema" "right as a comparison, wrong as the word; a definition declares questions and moves, not only shapes"
-  rel governs term="data⸱store" card="{1,1}"
-  rel declares term="veritoid⸱kind" card="{1,N}"
-  rel declares term="segment⸱kind" card="{1,N}"
-  rel declares term="dimension" card="{1,N}"
-  rel declares term="reference⸱kind" card="{0,N}"
-  rel declares term="move" card="{0,N}"
+  rel governs term="data·store" card="{1,1}" provisional=#true
+  rel declares term="truth·determinant" card="{1,N}" provisional=#true
+  rel declares term="veritoid·kind" card="{1,N}" provisional=#true
+  rel declares term="segment·kind" card="{1,N}" provisional=#true
+  rel declares term="dimension" card="{1,N}" provisional=#true
+  rel declares term="reference·kind" card="{0,N}" provisional=#true
+  rel declares term="move" card="{0,N}" provisional=#true
 }
 status provisional
 ```
 
 # «ontology»
-The declared kinds, dimensions, reference kinds and moves of one store; versioned; holding no content.
+The declared truth determinants, kinds, dimensions, reference kinds and moves of one store; versioned; holding no content.
 
 ## Intro
 
-An «ontology» governs a «data⸱store»: it declares the kinds of thing the store may hold, the questions that may be asked of each, the references that may run between them, and the ways an answer may change. It holds no content of its own. It has versions, and every piece in the store follows one version of its kind.
+An «ontology» governs a «data·store»: it declares the «truth·determinants» the store's content answers to, the kinds of thing the store may hold, the questions that may be asked of each, the references that may run between them, and the ways an answer may change. It holds no content of its own. It has versions, and every piece in the store follows one version of its kind.
 
 ## Definition
 
