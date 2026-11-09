@@ -13,7 +13,7 @@ The canonical projection of `core-2/`: everything the model consists of, in depe
 ## Part I
 
 > [!NOTE]
-> The spine, in a considered order. Ten terms with files, the plain words they lean on as inline rows beside them, and the gaps beside the term they concern. Nothing else is in the model until it earns a row.
+> The spine, in a considered order. The terms with files, the plain words they lean on as inline rows beside them, and the gaps beside the term they concern. Nothing else is in the model until it earns a row.
 
 | mark | def | term | subtypes | description |
 |---|---|---|---|---|

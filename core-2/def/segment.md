@@ -36,7 +36,7 @@ A «veritoid» almost never makes sense alone. Its fate is intertwined with its 
 - Why projections nest without a third level. A chapter is a segment whose slots hold references to segments; a part holds chapters; the theory holds parts. That is gathering, not content inside content, so the two-level rule stands.
 
 ## Examples
-- `scope-adaptive-system`: one segment of kind *scope*, with slots for intro, definition, predicate, membership consequences (any number of claims), housing result, non-claims, discussion paragraphs, questions, guards; see `examples/scope-adaptive-system.md`.
+- `scope-adaptive-system`: one segment of kind *scope*, with slots for intro, definition, predicate, membership consequences (any number of claims), housing result, non-claims, discussion paragraphs, questions, guards.
 - `01-aat-core/OUTLINE.md`: a canonical projection with nine `--GAP--` rows and six `missing` cells, which are provisional rows and make the outline no less true.
 - `audits/AUDIT-WORKING-193847/`: a source, cut into chunks by the 2026-05-30 lift, most of which bear on one segment each.
 
