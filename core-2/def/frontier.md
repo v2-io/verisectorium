@@ -44,5 +44,7 @@ Each item carries its cause (which write or act made it owed) and, through the �
 
 ## Working Notes
 - Open. Whether the item kinds above are complete. The kernels needed three; the notes add broken and raised; an ontology adds its own.
+- The frontier is as complete as the references; see «reference»'s notes on detection. And a computed frontier nobody is shown silts exactly like a kept list: it has to be rendered where every changeset opens and closes, and the message that reaches the steward from it should carry only what the steward alone can weigh.
+- The twin of the open question below: what agents will refuse to do because a mark reads as a lock. Any changeset may lower or replace any assertion with a recorded reason; ruled, ratified and exact are assertions, not locks, and the practical model should say so plainly.
 - Open. What agents will do to make the frontier empty. Affirmations and acceptances are both cheap exits, and any marker of done becomes a target. The model's only answer is that both are attestations with reasons, visible at every checkpoint.
 - Adjudicated against msc/notes 05 (22:19Z), 09 §4.3, 10 §1.1, 19 §5, and Joseph's 11-08 "dimensions as constraints".

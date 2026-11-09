@@ -27,6 +27,10 @@
 | 19 | 11-08 | `holistic-model` | the Opus 5.5 session's whole model in seven working terms, with intake folded in and the stopped-bound error worked through it; a proposal, untested, with a written guess of what a real root will strain | — |
 | 20 | 11-08 | `current-state` | the Fable 5.1 session's first summary after an experiential read of notes 01–19 (predictions and findings for 01–08 are in `msc/scratch/experiential-read-2026-11-08/`): how the model evolved, a three-sentence spine, where it does not hold, and the recommendation that became `core-2/`. Pasted in by Joseph | `core-2/` |
 
+## Corrections to what the notes carry
+
+- Notes 02 (A8) and 08/09 describe live_docs as having signed reviews that decay on later edits, queues surfaced at session close, and a signer-not-author check. A whole read of the project (`msc/scratch/research-live-docs-2026-11-09.md` §6) found those three were proposals in the August design document, not live_docs behaviour; the WAL as unit of change, per-doc history as a projection, the two-pass cascade, and navigation kept apart from dependency are accurate. The notes are frozen; this line is the correction.
+
 ## Also in `msc/scratch/`
 
 - `core-2-MODEL-draft-2026-11-08.md`: the one-page first iteration of core-2, retired once its content moved into `core-2/src/` segments.

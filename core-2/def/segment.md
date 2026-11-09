@@ -40,5 +40,8 @@ A «veritoid» almost never makes sense alone. Its fate is intertwined with its 
 
 ## Working Notes
 - Open. Whether a projection's members may also be veritoids (a chapter preface written inline) or only references to segments. Lean: a projection kind may declare content slots of its own beside its member slot; the preface is then its veritoid.
+- A ‹source› and its chunks are written once and never changed; a ‹crossing› concerns a chunk and writes nothing in it; so the changeset that lands a source has no inner dependents to affirm, and a changeset touching a source's chunks is refused. Stated here so the first real intake does not meet it as a surprise.
+- Churn is a second grain detector beside adjudication: a segment whose history is long and whose change notes are about different things is carrying two claims. Cheap, and computed.
+- A restates reference means agreement with the piece that owns the claim; two pieces restating a third that disagree with each other are repaired by ceasing to restate (a reference to the owner), never by reconciling the two copies.
 - Open. Whether "source" and "projection" are subtypes of segment or kinds declared by every ontology. Lean: subtypes, because every verisectorium has both and the engine treats them specially (the inbox; the canonical projection).
 - Adjudicated against msc/notes 05 (21:52Z), 09 §2.3 and §2.6, 10 §1.4, 14, 19 §2 and §6.

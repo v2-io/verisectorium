@@ -23,6 +23,7 @@ The checkpoint's **stated conditions** are: every acceptance covering an owed it
 - The checkpoints form a line. None exists between two neighbours. Only the last write to each segment in an atomic changeset is in the checkpoint it reaches.
 - An acceptance is an attestation by an actor the ontology gives standing to accept, with a reason; it is visible in the conditions of every checkpoint while the item stays owed, and it is cleared by the repair that clears the item.
 - A confirming check on a checkpoint reaches a new checkpoint at once, since nothing becomes owed.
+- An acceptance is about the owed item it covers and warrants nothing about any piece's content; a steward's act covering a changeset is not a ratification of what the changeset says. Silence is not ratification either.
 
 ## Discussion
 - Why "good or true, with stated conditions" needs the conditions. A store that only promised consistency could be consistent and silent about a known defect. The acceptances are where honesty about the not-yet lives; they are Joseph's known-defect mark and his "known honesty orthogonal to internal consistency" at once. A checkpoint promises two things, consistent and honestly current, and the conditions are what makes the second true.
@@ -36,5 +37,6 @@ The checkpoint's **stated conditions** are: every acceptance covering an owed it
 ## Working Notes
 - Open (Joseph's, punted). Whether two checkpoints reached independently in two working copies combine into a checkpoint. The model says nothing.
 - Open. Whether a working state is held as a branch, a separate store, or otherwise. The requirements are: checkpoints along the way, a diff against the last checkpoint, the frontier, a merge only when the frontier is empty or accepted, and detection of overlapping changesets before merge. Git gives the first two for files.
+- The acceptance-warrants-nothing invariant was added 2026-11-09 from the estate's own experience of minds reading a signature or a ratified mark as a lock on content (`msc/scratch/research-live-docs-2026-11-09.md` §2.2 and §3 carry the production specimens).
 - Open. How much warrant a small rewording should cost. Here acts lapse completely on any change to what they read; a store wanting a graded fall declares a *read as* that gives one.
 - Adjudicated against msc/notes 05 (22:53Z), 08/10, 09 §3.1 and §4.4, 14, 19 §5 and §7, and Joseph's 11-08 words on frontier versus stable checkpoints.
