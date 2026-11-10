@@ -32,7 +32,7 @@ The most common item is a reopened acceptance. A piece is in canon by a decision
 
 Any item may be covered by a **waiver** instead of cleared: it stays owed, and stays shown.
 
-Each item carries its cause (which write or act made it owed, and so which open changeset it belongs to) and who can clear it: for a found-out dimension whoever its *produced by* gives standing, the piece's last author first where a repair is wanted; for a decision, its party. The frontier is addressed to someone. Only canon owes, settled or unsettled: what a provisional segment says inside itself is shown and not owed. Beside the owed items the frontier shows, as information, every piece whose own warrant exceeds its effective one: a well-checked claim resting on an unchecked premise.
+Each item carries its cause (which write or act made it owed, and so which open changeset it belongs to) and who can clear it: for a found-out dimension whoever its *produced by* gives standing, the piece's last author first where a repair is wanted; for a decision, its party. The frontier is addressed to someone. Only canon owes, settled or unsettled: what a provisional segment says inside itself is shown and not owed. Unsettledness spreads only along what rests on what; an assembly is not unsettled by holding or pointing at an unsettled part. Beside the owed items the frontier shows, as information, every piece whose own warrant exceeds its effective one: a well-checked claim resting on an unchecked premise.
 
 ### Invariants
 - It is computed, never kept. The same recorded things read in any order give the same frontier, with every declared rule evaluated as of the state.

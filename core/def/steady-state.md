@@ -19,7 +19,7 @@ There are two kinds of time. In **steady time** a part of the verisectorium move
 
 Steadiness is said of a place. Each atomic changeset has a scope, the segments its disturbance reaches, and several may be open at once. The verisectorium is steady **outside** the open scopes: nothing there is owed, and nothing there rests on anything that is. A steady state of the whole is the case where none is open, and with several minds at work it may be uncommon; nothing needs it. What a reader or a builder is promised is about the segments they are using.
 
-The steady state's **stated conditions** are: every waiver covering an owed item, with its reason and its party; for the ‹determinant› dimensions, every piece in canon whose warrant is *never asked*, by dimension and by declared means; and the gaps its canonical projection shows. A rendering of a steady state carries them; a reader who sees a steady state sees what it is not yet claiming.
+The steady state's **stated conditions** are: every waiver covering an owed item, with its reason and its party; for the ‹determinant› dimensions, every piece in canon whose warrant is *never asked*, by dimension and by declared means; the gaps its canonical projection shows; the questions left open in canon; and every provisional piece the canonical projection reaches, with whatever has been recorded against it. That last keeps a strict standard for canon from making a steady state look cleaner than the work is. A rendering of a steady state carries them; a reader who sees a steady state sees what it is not yet claiming.
 
 ### Invariants
 - At a steady state nothing in canon outruns the record: no accepted piece is contradicted or overclaimed, every decision canon rests on stands, every reference from canon holds, and no promise is unkept, except by recorded waiver.
@@ -52,5 +52,5 @@ Joseph, 2026-11-05, weighing a marker on a value: "There is now a known defect t
 ## Working Notes
 - Open. Whether a working state is held as a branch, a separate corpus, or otherwise. The requirements are: steady states along the way, a diff against the last steady state, the frontier, a merge only when the frontier is empty or waived, and detection of overlapping changesets before merge.
 - Open. Whether a verisectorium may want a graded fall in warrant on a small rewording where nobody has carried the checks. Lean: no; carrying is the mechanism, and an uncarried check has lapsed.
-- Waivers are meant to be rare: for a known defect knowingly left, never for work that is merely elsewhere. Scopes are what keep them so.
+- Waivers are meant to be rare: for a known defect knowingly left, never for work that is merely elsewhere. Scopes are what keep them so, and so is the fact that nothing obliges a changeset to close: one that waits on something outside (a tool to be fixed in another project) stays open and says so, and the verisectorium is steady around it.
 - Open. Whether suggested slots are shown with a steady state's conditions or only counted.
