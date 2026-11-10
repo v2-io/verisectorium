@@ -50,7 +50,7 @@ At S1 the gap in slot 4 is still a gap. It is shown with the steady state as a k
 5. **A reading path that goes stale.** At step 5, P's slot pointing at D is stale. P is not canon and asserts nothing about D. Lean: shown to whoever reads P, owed by nobody.
 6. **Who may promise, and who may accept.** Step 1 says A may promise because A is in the work; step 4 says only the steward and the lead accept. Both are standing, and neither is declared anywhere yet.
 
-**What it did not exercise.** A piece three levels deep by holding (a derivation held inside a result, with steps held inside it); a slot whose kind fixes it, such as a result's required claim, being promised; a gap being resolved into slots.
+**What it did not exercise.** The inbox, which is the other main place a segment says what it wants and intends: here every intention arrived already shaped as a slot, where in practice most arrive as a note beside the segment, and the adviser's vague idea at S0 was more honestly a note on O than a suggested slot. A piece three levels deep by holding (a derivation held inside a result, with steps held inside it); a slot whose kind fixes it, such as a result's required claim, being promised; a gap being resolved into slots.
 
 ## Working Notes
 - The six points above are the decisions this move puts to «segment», «veritoid», «kind», «reference» and «act» together. None is written into a def.
