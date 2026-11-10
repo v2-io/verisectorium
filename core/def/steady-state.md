@@ -50,6 +50,7 @@ Joseph, 2026-11-05, weighing a marker on a value: "There is now a known defect t
 - Adjudicated against msc/notes 05 (22:53Z), 08/10, 09 §3.1 and §4.4, 14, 19 §5 and §7, and Joseph's 11-08 words on frontier versus stable steady states.
 
 ## Working Notes
+- From the second real root, on better: two versions of one segment each had things known wrong, neither set containing the other, so "less of what canon asserts is known to be wrong" left them incomparable without a measure. Unresolved.
 - Open. Whether a working state is held as a branch, a separate corpus, or otherwise. The requirements are: steady states along the way, a diff against the last steady state, the frontier, a merge only when the frontier is empty or waived, and detection of overlapping changesets before merge.
 - Open. Whether a verisectorium may want a graded fall in warrant on a small rewording where nobody has carried the checks. Lean: no; carrying is the mechanism, and an uncarried check has lapsed.
 - Waivers are meant to be rare: for a known defect knowingly left, never for work that is merely elsewhere. Scopes are what keep them so, and so is the fact that nothing obliges a changeset to close: one that waits on something outside (a tool to be fixed in another project) stays open and says so, and the verisectorium is steady around it.

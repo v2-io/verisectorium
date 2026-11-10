@@ -30,7 +30,7 @@ D is held by O and changes only when O is written. R1 is written on its own. At 
 
 | step | what happens | what kind of thing it is | the frontier afterwards |
 |---|---|---|---|
-| 1 | Agent A, at work on what follows R1, sees that a result R2 is needed and says so: slot 3 goes from suggested to **promised**, with the kind and name it will have. | a decision by A, who has standing in O; a write to O | **promised**: slot 3 has nothing accepted in it. The last whole read of O read its slots, which changed: lapsed, and O's acceptance is **reopened**. |
+| 1 | Agent A, at work on what follows R1, sees that a result R2 is needed and says so: slot 3 goes from suggested to **promised**, with the kind and name it will have. | a decision by A, who has standing in O; a write to O | **unfilled**: promised slot 3 has nothing accepted in it. The last whole read of O read its slots, which changed: lapsed, and O's acceptance is **reopened**. |
 | 2 | A writes R2 (a claim c2, predicated on c1 and on D; an explanation) and fills slot 3 by pointing at it. | a new segment; a write to O | The slot is filled. R2 is provisional, so nothing it says inside itself is owed. The promise is still owed. |
 | 3 | B, who did not write it, re-derives c2. | a check concerning c2 | c2 has a warrant. It is still provisional: a piece is checked before it is accepted, not after. |
 | 4 | The steward and the lead accept R2. They name one assumption, written into R2 as an open question: that X is finite, which c2 uses and nobody has shown. | a small write to R2 (the question); then a decision made of two assents, basis recorded | R2 is canon; the promise is kept. Owed: a whole read of O. |

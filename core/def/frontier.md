@@ -17,15 +17,16 @@ The frontier is computed for any state, and recomputed after every write or act 
 
 | item | what has outrun the record | cleared by |
 |---|---|---|
-| **contradicted** (piece, act) | a piece in canon asserts an answer that a check says is wrong | the contradiction being answered after a repair, or overturned when contested |
+| **contradicted** or **narrowed** (piece, act) | a piece in canon asserts an answer that a check says is wrong, or right only in part or under more than it states | the contradiction being answered after a repair, or overturned when contested |
 | **found** (piece, act) | a finding against a piece in canon has not been answered | an answer, or being overturned when contested |
 | **overclaimed** (piece, dimension) | content says more about how well a piece stands than that piece's warrant gives | evidence that raises the warrant, or the author saying less |
 | **reopened** («decision») | a decision's basis has failed: what it read was rewritten, a ground fell, an assumption failed, more rests on it than it was decided at | its party sustaining it on the new basis, or deciding again |
 | **stale** (reference) | the target is no longer at the version the reference saw | the author affirming it against the new version, or re-pointing, after answering "did I rely on what changed?" |
 | **dangling** (reference) | the target does not exist: not yet written, or its id retired | the target being written, re-pointing to a descendant, or dropping |
 | **unmet** (reference) | the target's warrant is below what the reference needs | the target earning it, or the author needing less |
-| **promised** (slot) | a promised slot has nothing accepted in it | writing and accepting what fills it, or the promise being withdrawn |
-| **raised** (piece, dimension) | a question put to a piece has no answer: by a rule, by a narrowed premise, or by a check on the piece itself that came back narrowed (does it want splitting?) | the dimension's producer, or the author |
+| **unfilled** (slot) | a promised slot, or one a kind requires, has nothing accepted in it | writing and accepting what fills it, or the promise being withdrawn |
+| **unbacked** (piece) | content reports a decision that is not on record | the party making it, or the content saying less |
+| **raised** (piece, dimension) | a question put to a piece has no answer: by a rule, by a narrowed premise, or by a decision about the work that assigns it to a seat ("run the cheapest falsifier on this") | the dimension's producer, or the seat it was assigned to |
 | whatever the ontology's own constraints add | | |
 
 The most common item is a reopened acceptance. A piece is in canon by a decision whose basis is the piece at its version, the warrants the ontology asks of it, and everything it rests on being accepted. Rewrite the piece, lapse a check it needed, or unsettle a premise, and its acceptance is reopened: the piece is **unsettled** until its party, or the rule that stands in for one, accepts it again. An unsettled piece is still in canon. Reopening is not reversal, and that is why it owes.

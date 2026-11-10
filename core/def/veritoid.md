@@ -19,7 +19,7 @@ The corpus is made of pieces of content: a formal statement, a step of a derivat
 
 ## Definition
 ### Invariants
-- It holds content and no segment. Where an act confirms part of it and contradicts the rest, it is split: its id is retired and new ids are minted with recorded descent.
+- It holds content and no segment. Where an act confirms part of it and contradicts the rest, it is split: its id is retired and new ids are minted with recorded descent. What stood against the retired piece unanswered stands against its descendants; replacing a piece wholesale is a recut like any other and sheds nothing.
 - It has no name of its own unless it is freestanding; a rendering reaches a held veritoid through what holds it.
 - Its content and references are written. Its version is the hash of its content, normalized as its kind declares, and of its references as written (kind, target id, what each needs); a reflow mints nothing, and restoring earlier content restores the earlier version and every act that read it.
 - Its warrants are computed and never written.
