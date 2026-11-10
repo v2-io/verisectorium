@@ -35,7 +35,7 @@ An ‹atomic·changeset› is everything, segment changesets and acts together, 
 
 ## Examples
 - `33cfb14c` (2026-10-30 16:29): one segment changeset on `deriv-sector-condition` ((i) becomes the killed moment, (iii) splits, A.1S-τ arrives), part of an atomic changeset that also rewrote `result-contraction-template`, re-read four consumers, and moved a headline in the introduction; the broken check at 15:50 was its opening and the independent confirmation at 22:58Z part of its close.
-- The 2026-10-30 integrations of `scope-adaptive-system`: four revise acts (`5e613630`, `26a703b0`, …, `9fde935e`), each a segment changeset, inside one atomic changeset that closed with check 8.
+- The 2026-10-30 integrations of `scope-adaptive-system`: eight revise acts (`5e613630`, `26a703b0`, …, `9fde935e`), each a segment changeset, inside one atomic changeset that closed with check 8.
 
 ## Historical Context
 ### Etymology

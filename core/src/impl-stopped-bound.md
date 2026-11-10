@@ -7,63 +7,62 @@ narrates: [veritoid, dimension, act, frontier, steady·state]
 
 # The stopped bound through the model
 
-*Moved from `examples/` (Fable 5.1, 2026-11-08) into a segment that narrates the defs it exercises. Provisional. The one-paragraph result below is what the run showed about the model; the run itself follows.*
+*Provisional. Rewritten 2026-11-09 after a cold audit showed the first version read the record more kindly to the model than the record allows; see Historical Context.*
 
-**What this run showed.** **The stopped bound is caught by grain, not by a dimension list.** Note 19 needed the ontology to declare "does the derivation deliver the statement?" as a separate dimension from "is each step right?". Here it falls out of two things the model already has: derivation steps are veritoids separate from the claim they prove (ASF's Formal Expression already writes them apart), and an act concerns only what it concerns. Fourteen checks that each concerned a step leave the claim's validity *never asked*, while its assertion says *exact*: owed from the first day, as an overclaim with a named clearer. The "RESOLVED — do not re-open" sentence closes nothing, because closure is an act.
+**What this run shows.** **The model would not have caught the stopped bound. It would have shown how thin its support was, and only if an act records what kind of question it asked.** Prop A.1S(i) was false for six months. During that time at least three minds who were not its author affirmed the statement itself, in so many words, and the model would have recorded each as a confirming «act» concerning the claim: its validity warranted, no overclaim, nothing owed. What every one of those passes did was follow the written proof. What broke the claim was a different question, put by a mind checking something else: does this statement survive collision with its neighbour? The record that could have shown the gap is not "who checked" but "by what means", and that is a declaration the «dimension» has to make.
 
-*Fable 5.1, 2026-11-08. The case is Prop A.1S(i) in `~/src/arch/asf/01-aat-core/src/deriv-sector-condition.md`, as `~/src/aat-v3/preparations/research/missed-error-case-2026-11-06.md` records it; I read that report whole and the segment's vsect record, not the segment at the tag. The point is what the model would have recorded, and what it would have shown, between 2026-04-22 when the stopped Grönwall form entered and 2026-10-30 when it was found false.*
+## 1. The case
 
-## 1. The case in one paragraph
+Prop A.1S(i), in AAT's sector-condition derivation, said the stopped second moment $\mathbb E[\lVert\delta(t\wedge\tau_R)\rVert^2]$ decays to $n\sigma_w^2/(2\alpha)$. Under the segment's own condition (ii) that is false by three lines from the segment's own Corollary A.1S.1: on exit the stopped path sits on the sphere, the mass frozen there does not decay, and the corollary says exit happens. The proof's steps (Itô correction, Grönwall algebra, optional stopping) are each legitimate. The false step is an unstated identification of the killed moment with the stopped one, between them.
 
-Prop A.1S(i) said the stopped second moment $\mathbb E[\lVert\delta(t\wedge\tau_R)\rVert^2]$ decays to $n\sigma_w^2/(2\alpha)$. Under condition (ii) that is false by three lines from the segment's own Corollary A.1S.1: the mass frozen on the sphere at exit does not decay. The proof's steps (Itô correction, Grönwall algebra, optional stopping) are each legitimate; the false step is an unstated identification of the killed moment with the stopped one, between them. Fourteen or so passes over six months, in audit prose and commit messages (none a recorded check: vsect begins on 2026-10-30), verified steps. Two April audits that broke the neighbouring (iii) recommended (i) as the safe fallback, and the May repair leaned on it. A Working Note said "RESOLVED in canon — do not re-open". An Opus 5.5 verifier with a bare brief, checking a *new* claim placed beside (i), re-derived from what was written and broke (i) at 15:50 on 2026-10-30. Three independent minds confirmed the break.
+## 2. The record, as its words read
 
-## 2. Under the model
-
-Sketch of the relevant content, in AAT's `derived-result` segment kind:
-
-| slot | veritoid | asserts (validity) |
-|---|---|---|
-| formal-claim | Prop A.1S (i), the stopped bound | exact |
-| formal-claim | (ii), (iii′), (iv) | exact |
-| derivation | step: Itô correction | — |
-| derivation | step: Grönwall algebra | — |
-| derivation | step: stopping-time localization ("Replacing $t$ with $t \wedge \tau_R$ makes the argument valid … The stopped Grönwall bound (i) follows") | — |
-| … | Cor A.1S.1 | exact |
-
-Validity, as in the other example: asks whether the statement as written follows from its premises; produced by a check from a mind other than the author; read as highest confirmed rung, broken wins; caps along predicated-on. Derivation steps open their own validity ("is this step right?"); the claim's validity is a different piece's question.
-
-Now the record, as acts:
+None of these was a recorded act when it happened; they are audit prose, adjudications and commit messages. The right-hand column is what each would have been under the model, recorded as its own words read and not as hindsight would like.
 
 | when | what the record holds | under the model |
 |---|---|---|
-| 2026-04-22 | the stopped form lands, `80b40d28` | a segment changeset. (i) asserts *exact*. No act concerns (i). **Overclaim owed from this day:** (i) validity *never asked*, assertion *exact*. |
-| 04-25 | audit 584721: "the stopped Grönwall bound holds … Markov on the steady-state second moment ✓ … Math is sound throughout" | an act, if recorded, concerning the Grönwall step and the Markov step. If it concerned (i) itself as a check of the statement, it would be a confirmed check at that version and the overclaim would clear. The audit's own words are about steps; recorded honestly it concerns steps. |
-| 04-25 | audits 742613, 613842 break the old (iii) and recommend (i) as the safe fallback | a broken check concerning (iii); a *recommendation* is not an act concerning (i). **(i) earns nothing.** |
-| 04-28 | 829314: "stopping-time localization … highly mature and exact application of Khasminskii" | concerns the localization step. Not (i). |
-| 05-16 | repair `3d582e9b`: (iii) → (iii′), (iv); "(i)/(ii)/(iii′)/(iv) each exact" | a segment changeset asserting *exact* on four claims. (iii′) and (iv) are new; never asked. (i) still never asked. **Three overclaims owed.** |
-| 05-16 | adjudication 628401: "The stopped bound (i) and (ii) are fine — the defect is localized to (iii)" | if recorded as a check concerning (i): confirmed, and the overclaim clears. Here the model does not catch it: a mind said (i) is fine and had standing to say so. What the model records that prose does not is *which question it answered*: its criterion was "is the defect localized to (iii)?", which is a different question from "does (i) follow?". The honest record concerns (iii) and the localization. |
-| 05-20 | digests: "First-hand verified extensively"; "Cascade verified clean" | attestations about the author's own pass; no independent weight. |
-| 05-xx | Working Note: "**Prop A.1S non-exit probability (RESOLVED in canon — do not re-open).**" | a chunk in the inbox, or a guard veritoid if someone promotes it. It is not an act; it closes nothing and inhibits nothing. The frontier still shows (i) owed. |
-| 07-02 | audit 731548 (Fable 5): "stopping-time localization legitimate (optional stopping on L²-bounded martingale) ✓" | concerns the optional-stopping step. Not (i). The same audit found case B in the same file and recorded it; that is a finding, owed. |
-| 07-20 | quiz corpus gives the stopped bound as a correct answer | a comprehension act on readers, not a validity act on (i). |
-| 10-30 15:13 | spike `56fc3178` (Fable 5.1) lists the stopped bound as what canon holds | a reference from the spike's claim to (i), needing *exact*. **Unmet** owed: (i)'s warrant is never asked. The spike author would have seen this before writing. |
-| 10-30 15:50 | `c1-exit-time-verify-1#C1` (Opus 5.5): rederive, criterion "Does Prop A.1S(i) … hold, and does (iii′)'s stated limit follow from it?", outcome **broken** | a check concerning (i) and (iii′), answering validity. **Broken** owed; the overclaim that was already owed now has a cause a reader can see. The perturbation of the atomic changeset that follows. |
-| 16:29 | `33cfb14c`: (i) → the killed moment; (iii) split; A.1S-τ lands; `result-contraction-template` CT-S rewritten; four consumers re-read; a headline narrowed | one atomic changeset of several segment changesets. Acts reading the old (i) lapse. Dependents of (i) are asked whether they relied on what is gone (the decay term): `#result-adversarial-exponent-regimes` was "unchecked" and "not re-derived", so it stays owed. |
-| 22:58Z | Part I round-2 checker (Opus 5.5) confirms the killed bound and that the stopped form is false under (ii) | independent; (i) re-derived at the new version. |
+| 04-22 | the stopped form lands; (i) asserts *exact* | a segment changeset. (i): validity never asked. |
+| 04-25 | an audit: "the stopped Grönwall bound holds. … ✓", "Math is sound throughout" | a ‹check› by a mind not the author, **concerning (i)**, confirmed. The same pass also passed the neighbouring (iii), which another audit broke that day. |
+| 04-25 | two audits break (iii); one says of (i) "plausible", "The stopped bound can remain", and both recommend it as the safe fallback | a broken check concerning (iii). The words on (i) are a second confirmation, or at least an attestation; the recommendation is not an act, and nothing records that the repair leaned on it. |
+| 04-28 to 05-10 | three audits: the "stopping-time localization" is "highly mature and exact", "correct" | checks concerning the localization step. |
+| 05-16 | adjudication: "The *stopped bound* (i) and the *mean-square persistence* (ii) are fine — the defect is localized to (iii)" | a check concerning (i), confirmed, by a third mind. |
+| 05-16 | repair: (iii) becomes (iii′) and (iv); "each exact" | a segment changeset; acts that read the old text lapse; (iii′) and (iv) never asked. |
+| 05-28 | an audit of the segment: "textbook-perfect"; "What would I change? Nothing." | a confirmation of the whole, a fourth model family. |
+| May on | Working Note: "RESOLVED in canon — do not re-open" | not an act. It closes nothing in the model; in the files it told later readers not to look, and one said the segment "pre-answered my strongest planned attack". |
+| 07-02 | an audit: "stopping-time localization legitimate … ✓"; it finds a different false statement in the same segment | a check concerning the step; a finding on the other statement. |
+| 10-30 15:13 | a new result is drafted beside (i), listing (i) as what canon holds | a predicated-on reference to (i). It holds: (i) is warranted. |
+| 10-30 15:50 | a verifier of the new result, told to re-derive from what is written, tests (i) against Corollary A.1S.1 and a simulation: **broken** | a check concerning (i), answering validity, by a different *means*. Broken wins. The perturbation of the changeset that follows. |
+| 10-30 | (i) becomes the killed moment; (iii) is split; the new result becomes the replacement; four consumers are re-read; three minds confirm the break | one atomic changeset. One dependent is left "unchecked" and "not re-derived": owed, or accepted with a reason. |
 
-## 3. What the model would have shown, and what it would not
+## 3. What the model shows, and what it does not
 
-**Shown, from 2026-04-22 on:** either an overclaim on (i) or a never-asked determinant in every steady state's conditions, depending on a decision the model has not yet made (`dimension.md` Working Notes: whether "exact" asserts *standing*, comparable with a warrant, or *content scope*, what is claimed). Under the first reading (i) is owed; under the second it is visible beside every steady state. Either way it is visible, because its assertion was *exact* and no act ever concerned it on validity. Every pass that verified a step concerned that step. This does not need a separate dimension for "does the derivation deliver the statement?" (note 19's assumption). It needs two things the model has anyway: derivation steps are veritoids distinct from the claim they prove, and an act concerns only what it concerns. ASF's own Formal Expression already writes statements and proofs apart; the record's own criteria already name steps. What was missing was a place where "nobody has asked whether (i) follows" could be seen.
+**It does not show (i) as owed.** From the third day (i) has a confirming check by a mind other than its author, and by late May it has several, across model families. Assertion *exact*, warrant confirmed. A steady state. The spike author who relied on (i) on 10-30 would have been told, correctly by the record, that it stood.
 
-**Also shown:** the spike's reference to (i) as *unmet* before the verifier opened the file; the "RESOLVED" note as inert; the adjudication's criterion as about (iii), not (i).
+**Grain and concerns-within-reads are not what was missing.** They make the record more legible: the three audits that only praised the localization step would be seen to concern the step. But the statement itself was affirmed, more than once, and no rule about what an act concerns turns "the stopped bound holds ✓" into a check of something else.
 
-**Not shown, honestly:** if the 05-16 adjudicator had recorded a confirming check *concerning (i)* with the criterion "(i) holds", the overclaim would have cleared on a wrong confirmation, and the model would carry a warranted falsehood until 10-30. The model does not make checks right; it makes what each check answered visible, so that a later reader can see that one mind confirmed (i) in passing while adjudicating (iii), and weigh it. The census's finding 8 is the same point: checks have standing too, and the record barely holds it.
+**What was missing is the means.** Every confirmation followed the written proof. None put the statement against the segment's other results; none built an instance. The break did both. Two things already in the model bear on this, and neither is yet stated strongly enough to have helped:
 
-**What the error cost that the model prices differently:** fourteen acts concerning steps were not wasted; they are the warrants of the steps, and most survived the 10-30 rewrite because the steps did not change. Under segment-grain binding every one of them is now "stale: own text changed".
+- A dimension's *read as* may be "a conjunction of named checks". If AAT's validity read *exact* only when a re-derivation, a collision against the segment's own results, and a constructed instance each bind, (i) would have been owed until someone ran the collision, and the collision is what broke it. That is the ontology's declaration to make, and it would have had to be made before anyone knew which means mattered.
+- Agreement adds only where descent is shown cut. Several minds following one written proof are one line of evidence said several times. A reading that counted lines and not acts would have shown (i) with one line of support, however many confirmations.
+
+So an «act» needs to say not only which dimension it answers and what it concerns, but by what means, in words the dimension declares; and the criterion fixed first is where that is written. With that, a later reader sees: confirmed four times, always by following the proof, never against its neighbours, never instantiated. Without it they see: confirmed four times.
+
+**Also not shown.** That the audits which broke (iii) named (i) as the fallback, and the repair then leaned on it: a refutation of one claim acted as support for its neighbour and nothing records the leaning. That an act which confirmed two claims and was broken on one of them the same day still counts in full for the other. And whether any confirming check was right; the model makes what it asked countable and no more.
+
+**What the model does change.** "RESOLVED — do not re-open" would be inert, and the file would not have told four later auditors to stop. The 10-30 break is on the record before any repair. The dependent left unchecked stays visible. The step checks are kept as the steps' warrants and survive the rewrite, where binding at the file lapsed them all.
 
 ## 4. What this says about the model
 
-- The honesty constraint (assertion ≤ warrant) did the work, not any special dimension. That is the simplest result in the two examples and the one I most want tested on a second segment.
-- *Concerns ⊆ reads* and per-veritoid grain are load-bearing. Without them the model collapses to vsect 0.1, which could not have recorded a broken check at all before 10-30 and binds at the file.
-- A recommendation, a digest, a prose "RESOLVED" and a quiz answer are each things the model refuses to count as validity acts. That refusal is where the model protects a verisectorium from its own authors' confidence.
-- The one place the model is silent is the one that matters most: whether a confirming check was *right*. It can only make the question it answered countable. That is the gap "independence of acts" in the outline, and it is not closed here.
+- The honesty constraint is necessary and was not sufficient here. (i) did not claim more than its acts warranted; its acts warranted too much.
+- "Which of the several questions under *valid* did this check ask" has to be something the ontology declares and an act records. One dimension called validity, read as "highest confirmed rung", reproduces this failure exactly as it happened.
+- Independence of acts is not a side gap. Four model families agreed, by one means, and were one line.
+- The cheapest thing that would have found it was never scheduled: nobody was asked to check (i). It was found as a side effect of verifying a new claim placed beside it. A dimension whose producer never fires on a piece is visible only if never-asked-by-this-means is.
+
+## Historical Context
+
+The case is recorded in `~/src/aat-v3/preparations/research/missed-error-case-2026-11-06.md`, read whole for this version; every quotation above is from its §2.4 and §2.5, which quote the audits' own files. The first version of this segment (2026-11-08) concluded that the model caught the error "by grain, not by a dimension list": that fourteen checks each concerned a step, so (i)'s validity was never asked and its *exact* was owed from the first day. It reached that by reading the 04-25 pass as concerning steps and by supplying the 05-16 adjudication with a criterion it never recorded. The primary's own summary is that the passing checks "mostly verified a different thing"; a cold audit (`msc/scratch/core-denovo-2.md` §1) set the quotations beside the claim. The earlier holistic sketch (`msc/notes/19` §8) had it nearer right: the gap shows "only because the ontology split those two questions".
+
+## Working Notes
+- Open. Whether "means" is a slot of the dimension (the named checks its *read as* conjoins), a property of the criterion, or a kind of line of descent that the independence rule counts. Lean: the dimension names its means; an act's criterion says which one; *read as* may require several. To be tried by declaring AAT's validity whole.
+- Open. Whether an act broken on one of the things it concerns should lose weight on the others. The 04-25 audit passed (i) and the false (iii) in one breath.
+- Open. Where "the repair leaned on it" is recorded: the 05-16 changeset rested (iii′) on (i) because two audits called (i) safe. A predicated-on reference from (iii′) to (i) would have carried it; nothing asked for one.

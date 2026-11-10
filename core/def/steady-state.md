@@ -33,7 +33,7 @@ The steady state's **stated conditions** are: every acceptance covering an owed 
 
 ## Examples
 - `scope-adaptive-system` on 2026-10-31 after check 8: validity warrants confirmed on every item at `9fde935e`; one narrowed check (C11, the cold-reader clause) and two findings (F1, corrected by its author; F5, small points) owed. A steady state there needs three acceptances or three repairs, and its conditions would name them.
-- `deriv-sector-condition` at the pre-integration tag, under this model: no steady state from 2026-04-22 on without an acceptance of Prop A.1S(i)'s overclaim, which nobody would have written, because writing it is what would have prompted the check.
+- AAT's sector-condition derivation from May to October 2026, under this model: a steady state, with Prop A.1S(i) asserted exact and confirmed. It was false. A steady state promises that nothing is asserted beyond what was done, and does not promise that what was done was enough.
 
 ## Historical Context
 ### Etymology

@@ -28,7 +28,7 @@ A run is a ‹check› whose actor is an instrument at a version. Reading is rec
 ### Invariants
 - It never changes what is written.
 - It binds to exactly what it read, and lapses when any of it changes (a warrant read: when it falls). Reading a premise without concerning it is how a re-derivation reads its context honestly without certifying it.
-- It answers one dimension, named. A record that says only "checked, passed" cannot be told from one that answered a different question, and that is how the stopped bound survived fourteen passes.
+- It answers one dimension, named, and its criterion says by what means. A record that says only "checked, passed" cannot be told from one that asked a different question, or the same question the same way as every check before it.
 - A broken ‹check› or a ‹finding› goes on the record when it happens, before anyone has written a repair, and owes an item on the «frontier».
 - Whose acts count is the dimension's *produced by*, read from the «actor»'s record (its orientations, its kind, whether it authored what it concerns): yes or no before any question of quality. The author's check has standing as a check and no weight as an independent one.
 - Recording too little is as dishonest as claiming too much. A deliberate decision not to raise something is itself an attestation, with its reason.

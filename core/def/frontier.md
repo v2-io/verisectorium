@@ -40,7 +40,7 @@ Each item carries its cause (which write or act made it owed) and, through the Â
 
 ## Examples
 - `scope-adaptive-system` at `12ea0186`, after review reread-1: broken (item (c)'s decay claim, by C3), broken (item (h)'s support claim, by C4), overclaim ((h): asserted exact, warrant broken), and five findings F1â€“F5. The integrator's changeset `5e613630` lapsed every reread act and cleared the two broken items; the new text then owed its own warrant until integration-2 and check-4 earned it.
-- `deriv-sector-condition` under this model, from 2026-04-22 to 10-30: overclaim (Prop A.1S(i), validity: asserted exact, warrant never asked), because every recorded pass concerned a proof step and not the statement.
+- AAT's Prop A.1S(i) on 2026-10-30: a check by a new means (collision with the segment's own corollary) comes back broken on a claim whose validity had been confirmed several times. From that moment: broken (the claim, by that act), and an overclaim (asserted exact, warrant broken), each owed before any repair is written; and a question raised on every piece predicated on it.
 
 ## Historical Context
 ### Etymology

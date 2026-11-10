@@ -33,7 +33,7 @@ The corpus holds pieces of content: a formal statement, a step of a derivation, 
 
 ## Examples
 - In `scope-adaptive-system`: the intro paragraphs (explanation); the law definition; the scope predicate; each lettered item (a)–(h′) of the membership result, each a claim; the housing result; each "Not claimed" sentence of the Epistemic Status (a non-claim); each named Discussion paragraph; each open item of the integration record (a question with a closer); each gold-lift bullet (a chunk of the source "audit gold lift 2026-05-30", bearing on this segment).
-- In `deriv-sector-condition`: Prop A.1S(i) as a claim, and the steps of its proof as separate veritoids in the derivation slot. That separation is what lets the model show (i) was never asked.
+- In `deriv-sector-condition`: Prop A.1S(i) as a claim, and the steps of its proof as separate veritoids in the derivation slot, so that a check of a step is seen to concern the step and a check of the statement the statement.
 
 ## Historical Context
 ### Etymology
