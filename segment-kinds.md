@@ -15,7 +15,7 @@
 | form | `fm` frontmatter, `hd` heading, `la` bold label, `if` implied by filename or path, `im` implicit in the markdown (title, preamble), `ot` other (udon element, KDL node, YAML key, inline tag, callout) |
 | purpose & notes | what the slot is for, then notes; in the first table, which stores carry it when not all of the kind's do |
 
-A slot gets its own row when a store declares it or when at least half the kind's files carry it. Undeclared slots carried by fewer are *minor*: one row per kind counts them (with one-off headings and withheld personal headings), and a line after the table lists them with their file counts, most common first.
+A slot gets its own row when a store declares it or when at least half the kind's files carry it. A kind with one file and nothing declaring its shape has no slots to show: its table is headed `heading`, not `slot`, and lists that file's outline without cardinality marks or `f` and `decl` columns, since at one file every heading is trivially "carried by every file". Undeclared slots carried by fewer are *minor*: one row per kind counts them (with one-off headings and withheld personal headings), and a line after the table lists them with their file counts, most common first.
 
 The two application-response stores appear as `ais`.
 
@@ -1190,8 +1190,10 @@ The two application-response stores appear as `ais`.
 **Where**: very last ad-hoc verisectorium 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
 
 ### Def
 
@@ -1200,8 +1202,10 @@ The two application-response stores appear as `ais`.
 **Where**: very last ad-hoc verisectorium 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
 
 ### Disc
 
@@ -1210,8 +1214,10 @@ The two application-response stores appear as `ais`.
 **Where**: very last ad-hoc verisectorium 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
 
 ### Emp
 
@@ -1220,8 +1226,10 @@ The two application-response stores appear as `ais`.
 **Where**: very last ad-hoc verisectorium 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
 
 ### Outline
 
@@ -1230,16 +1238,18 @@ The two application-response stores appear as `ais`.
 **Where**: Segments model RC1 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.02 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 2 | 0.04 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im | the title |
-| `Purpose` | 1 | 1 | 6 | 0.11 | U R* | hd |  |
-| `The model in one paragraph` | 1 | 1 | 6 | 0.11 | U R* | hd |  |
-| `Contents, in reading order` | 1 | 1 | 24 | 0.44 | U R* | hd |  |
-| `Deliberately excluded` | 1 | 1 | 8 | 0.15 | U R* | hd |  |
-| `Working Notes` | 1 | 1 | 6 | 0.11 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.02 | if |  |
+| `(Preamble)` | 1 | 2 | 0.04 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.02 | im | the title |
+| `Purpose` | 1 | 6 | 0.11 | hd |  |
+| `The model in one paragraph` | 1 | 6 | 0.11 | hd |  |
+| `Contents, in reading order` | 1 | 24 | 0.44 | hd |  |
+| `Deliberately excluded` | 1 | 8 | 0.15 | hd |  |
+| `Working Notes` | 1 | 6 | 0.11 | hd |  |
 ## Term and definition stores
 
 ### Claim (in Relation)
@@ -2263,10 +2273,12 @@ The two application-response stores appear as `ais`.
 **Where**: autopax ADRs 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.02 | U* R* | if |  |
-| `Some higher level perspective and context` | 1 | 1 | 48 | 1.02 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.02 | if |  |
+| `Some higher level perspective and context` | 1 | 48 | 1.02 | hd |  |
 
 ### Readme (Lifecycle + Format)
 
@@ -2275,22 +2287,24 @@ The two application-response stores appear as `ais`.
 **Where**: autopax ADRs 1  
 **Shape declared in**: n/a (declares the others)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 3 | 0.01 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `Addendum vs Appendix vs New ADR` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `ADR Threshold` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Multi-Decision ADRs` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Relationship to Other Docs` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `ADR Lifecycle` | 1 | 1 | 24 | 0.07 | U R* | hd |  |
-| `Statuses` | 1 | 1 | 54 | 0.17 | U R* | hd | holds 4 named ### parts in 1 file |
-| `Status Transitions` | 1 | 1 | 33 | 0.10 | U R* | hd | holds 2 named ### parts in 1 file |
-| `ADR Format` | 1 | 1 | 144 | 0.44 | U R* | hd | holds 4 named ### parts in 1 file, each with fields Note on dependencies, Note on structure, Status Timeline, Context, Proposals, Expected Impact |
-| `Key Principles` | 1 | 1 | 39 | 0.12 | U R* | hd | holds 4 ### key principles in 1 file |
-| `Open Questions` | 1 | 1 | 20 | 0.06 | U R* | hd |  |
-| `References` | 1 | 1 | 5 | 0.02 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 3 | 0.01 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| `Addendum vs Appendix vs New ADR` | 1 | 1 | 0.00 | la |  |
+| `ADR Threshold` | 1 | 1 | 0.00 | la |  |
+| `Multi-Decision ADRs` | 1 | 1 | 0.00 | la |  |
+| `Relationship to Other Docs` | 1 | 1 | 0.00 | la |  |
+| `ADR Lifecycle` | 1 | 24 | 0.07 | hd |  |
+| `Statuses` | 1 | 54 | 0.17 | hd | holds 4 named ### parts in 1 file |
+| `Status Transitions` | 1 | 33 | 0.10 | hd | holds 2 named ### parts in 1 file |
+| `ADR Format` | 1 | 144 | 0.44 | hd | holds 4 named ### parts in 1 file, each with fields Note on dependencies, Note on structure, Status Timeline, Context, Proposals, Expected Impact |
+| `Key Principles` | 1 | 39 | 0.12 | hd | holds 4 ### key principles in 1 file |
+| `Open Questions` | 1 | 20 | 0.06 | hd |  |
+| `References` | 1 | 5 | 0.02 | hd |  |
 
 ### Objective
 
@@ -2374,19 +2388,21 @@ The two application-response stores appear as `ais`.
 **Where**: UDON 0.9 decision briefs 1  
 **Shape declared in**: no declaration found
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 14 | 0.12 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `Categories` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Fixed now` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Riding pending executions` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Genuine tensions` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Worst offender` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Findings` | 1 | 1 | 43 | 0.36 | U R* | hd | holds 1 named ### parts in 1 file, each with fields test/usability/ |
-| `Genuine tensions` | 1 | 1 | 43 | 0.36 | U R* | hd |  |
-| `Counts` | 1 | 1 | 16 | 0.13 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 14 | 0.12 | im |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `Categories` | 1 | 1 | 0.01 | la |  |
+| `Fixed now` | 1 | 1 | 0.01 | la |  |
+| `Riding pending executions` | 1 | 1 | 0.01 | la |  |
+| `Genuine tensions` | 1 | 1 | 0.01 | la |  |
+| `Worst offender` | 1 | 1 | 0.01 | la |  |
+| `Findings` | 1 | 43 | 0.36 | hd | holds 1 named ### parts in 1 file, each with fields test/usability/ |
+| `Genuine tensions` | 1 | 43 | 0.36 | hd |  |
+| `Counts` | 1 | 16 | 0.13 | hd |  |
 
 ### Supplement
 
@@ -2395,31 +2411,33 @@ The two application-response stores appear as `ais`.
 **Where**: UDON 0.9 decision briefs 1  
 **Shape declared in**: no declaration found
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 6 | 0.02 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `Phase-3 impl` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Suffixes never drifted` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `(C) Views-over-reserved-attrs hybrid` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `The eight invariants › Mixin ›  ` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `The eight invariants › Event model ›  ` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Between (A) and (C), (C) dominates weakly` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `C-1 · Reserved wire names` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `C-2 · Unassigned $-names` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `C-3 · D1c reopened with inverted premise` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `C-4 · API surface` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `C-5 · fmt normalization` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Spec` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Impl` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Genealogy of the incumbent` | 1 | 1 | 30 | 0.09 | U R* | hd |  |
-| `The three models` | 1 | 1 | 15 | 0.05 | U R* | hd |  |
-| `Joseph's requirement-revealing case, worked through each model` | 1 | 1 | 29 | 0.09 | U R* | hd |  |
-| `The eight invariants` | 1 | 1 | 137 | 0.42 | U R* | hd | holds 8 ### invariants in 1 file, each with fields (A)/ |
-| `The honest cost of (A)/` | 1 | 1 | 20 | 0.06 | U R* | hd |  |
-| `Recommendation` | 1 | 1 | 36 | 0.11 | U R* | hd |  |
-| `Exact deltas for` | 1 | 1 | 48 | 0.15 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 6 | 0.02 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| `Phase-3 impl` | 1 | 1 | 0.00 | la |  |
+| `Suffixes never drifted` | 1 | 1 | 0.00 | la |  |
+| `(C) Views-over-reserved-attrs hybrid` | 1 | 1 | 0.00 | im |  |
+| `The eight invariants › Mixin ›  ` | 1 | 1 | 0.00 | la |  |
+| `The eight invariants › Event model ›  ` | 1 | 1 | 0.00 | la |  |
+| `Between (A) and (C), (C) dominates weakly` | 1 | 1 | 0.00 | la |  |
+| `C-1 · Reserved wire names` | 1 | 1 | 0.00 | la |  |
+| `C-2 · Unassigned $-names` | 1 | 1 | 0.00 | la |  |
+| `C-3 · D1c reopened with inverted premise` | 1 | 1 | 0.00 | la |  |
+| `C-4 · API surface` | 1 | 1 | 0.00 | la |  |
+| `C-5 · fmt normalization` | 1 | 1 | 0.00 | la |  |
+| `Spec` | 1 | 1 | 0.00 | la |  |
+| `Impl` | 1 | 1 | 0.00 | la |  |
+| `Genealogy of the incumbent` | 1 | 30 | 0.09 | hd |  |
+| `The three models` | 1 | 15 | 0.05 | hd |  |
+| `Joseph's requirement-revealing case, worked through each model` | 1 | 29 | 0.09 | hd |  |
+| `The eight invariants` | 1 | 137 | 0.42 | hd | holds 8 ### invariants in 1 file, each with fields (A)/ |
+| `The honest cost of (A)/` | 1 | 20 | 0.06 | hd |  |
+| `Recommendation` | 1 | 36 | 0.11 | hd |  |
+| `Exact deltas for` | 1 | 48 | 0.15 | hd |  |
 
 ### Model
 
@@ -2428,18 +2446,20 @@ The two application-response stores appear as `ais`.
 **Where**: UDON 0.9 decision briefs 1  
 **Shape declared in**: no declaration found
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 3 | 0.03 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `Type-scoped uniqueness` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `View B — distinct` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Substrate — spec-forced` | 1 | 1 | 46 | 0.41 | U R* | hd |  |
-| `Recommended host views — authority N` | 1 | 1 | 26 | 0.23 | U R* | hd |  |
-| `Parser / host decisions (the knobs to expose) — authority 2 + N` | 1 | 1 | 13 | 0.12 | U R* | hd |  |
-| `Schema decisions — authority N` | 1 | 1 | 7 | 0.06 | U R* | hd |  |
-| `What ratifying this closes` | 1 | 1 | 14 | 0.13 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 3 | 0.03 | im |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `Type-scoped uniqueness` | 1 | 1 | 0.01 | la |  |
+| `View B — distinct` | 1 | 1 | 0.01 | la |  |
+| `Substrate — spec-forced` | 1 | 46 | 0.41 | hd |  |
+| `Recommended host views — authority N` | 1 | 26 | 0.23 | hd |  |
+| `Parser / host decisions (the knobs to expose) — authority 2 + N` | 1 | 13 | 0.12 | hd |  |
+| `Schema decisions — authority N` | 1 | 7 | 0.06 | hd |  |
+| `What ratifying this closes` | 1 | 14 | 0.13 | hd |  |
 ## Procedures, norms and principles
 
 ### Decision
@@ -2830,49 +2850,51 @@ The two application-response stores appear as `ais`.
 **Where**: ASF SOPs 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | D* R* | im | title (human-readable, no fixed form) |
-| `A` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `B` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `C` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `D` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `E` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `F` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `G` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `H` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `I` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Commit by naming your paths` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Git history` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Search tools` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Orchestration` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Every agent, first` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `File identity and ordering` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Filename = slug` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Directed separation` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Claim tiers` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Exact` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Robust qualitative` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Heuristic` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Conditional` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Supporting` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Active effort` | 1 | 1 | 44 | 0.13 | U R* | hd |  |
-| `Start here — by role / assignment` | 1 | 1 | 8 | 0.02 | U R* | hd |  |
-| `SOP index` | 1 | 1 | 14 | 0.04 | U R* | hd |  |
-| `What This Project Is` | 1 | 1 | 17 | 0.05 | U R* | hd |  |
-| `Current Priority` | 1 | 1 | 12 | 0.04 | U R* | hd |  |
-| `Where to Start` | 1 | 1 | 10 | 0.03 | U R* | hd |  |
-| `Theory Structure` | 1 | 1 | 22 | 0.07 | U R* | hd |  |
-| `The Core Insight` | 1 | 1 | 10 | 0.03 | U R* | hd |  |
-| `Epistemic Conventions` | 1 | 1 | 19 | 0.06 | U R* | hd |  |
-| `Key Architectural Decisions` | 1 | 1 | 27 | 0.08 | U R* | hd |  |
-| `What's Settled vs. Open` | 1 | 1 | 11 | 0.03 | U R* | hd | holds 1 named ### parts in 1 file |
-| `Working Conventions` | 1 | 1 | 107 | 0.32 | U R* | hd | holds 9 ### working conventions in 1 file |
-| `Where to look next` | 1 | 1 | 6 | 0.02 | U R* | hd |  |
-| `File Organization` | 1 | 1 | 17 | 0.05 | U R* | hd |  |
-| `⚠ Memory bridge` | 1 | 1 | 4 | 0.01 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 1 | 0.00 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im | title (human-readable, no fixed form) |
+| `A` | 1 | 1 | 0.00 | la |  |
+| `B` | 1 | 1 | 0.00 | la |  |
+| `C` | 1 | 1 | 0.00 | la |  |
+| `D` | 1 | 1 | 0.00 | la |  |
+| `E` | 1 | 1 | 0.00 | la |  |
+| `F` | 1 | 1 | 0.00 | la |  |
+| `G` | 1 | 1 | 0.00 | la |  |
+| `H` | 1 | 1 | 0.00 | la |  |
+| `I` | 1 | 1 | 0.00 | la |  |
+| `Commit by naming your paths` | 1 | 1 | 0.00 | la |  |
+| `Git history` | 1 | 1 | 0.00 | la |  |
+| `Search tools` | 1 | 1 | 0.00 | la |  |
+| `Orchestration` | 1 | 1 | 0.00 | la |  |
+| `Every agent, first` | 1 | 1 | 0.00 | la |  |
+| `File identity and ordering` | 1 | 1 | 0.00 | la |  |
+| `Filename = slug` | 1 | 1 | 0.00 | la |  |
+| `Directed separation` | 1 | 1 | 0.00 | la |  |
+| `Claim tiers` | 1 | 1 | 0.00 | la |  |
+| `Exact` | 1 | 1 | 0.00 | la |  |
+| `Robust qualitative` | 1 | 1 | 0.00 | la |  |
+| `Heuristic` | 1 | 1 | 0.00 | la |  |
+| `Conditional` | 1 | 1 | 0.00 | la |  |
+| `Supporting` | 1 | 1 | 0.00 | la |  |
+| `Active effort` | 1 | 44 | 0.13 | hd |  |
+| `Start here — by role / assignment` | 1 | 8 | 0.02 | hd |  |
+| `SOP index` | 1 | 14 | 0.04 | hd |  |
+| `What This Project Is` | 1 | 17 | 0.05 | hd |  |
+| `Current Priority` | 1 | 12 | 0.04 | hd |  |
+| `Where to Start` | 1 | 10 | 0.03 | hd |  |
+| `Theory Structure` | 1 | 22 | 0.07 | hd |  |
+| `The Core Insight` | 1 | 10 | 0.03 | hd |  |
+| `Epistemic Conventions` | 1 | 19 | 0.06 | hd |  |
+| `Key Architectural Decisions` | 1 | 27 | 0.08 | hd |  |
+| `What's Settled vs. Open` | 1 | 11 | 0.03 | hd | holds 1 named ### parts in 1 file |
+| `Working Conventions` | 1 | 107 | 0.32 | hd | holds 9 ### working conventions in 1 file |
+| `Where to look next` | 1 | 6 | 0.02 | hd |  |
+| `File Organization` | 1 | 17 | 0.05 | hd |  |
+| `⚠ Memory bridge` | 1 | 4 | 0.01 | hd |  |
 
 ### Outline
 
@@ -2881,12 +2903,14 @@ The two application-response stores appear as `ais`.
 **Where**: Address Theory SOP 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.07 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 6 | 0.43 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.07 | U* R* | im | the title |
-| `Working Notes` | 1 | 1 | 5 | 0.36 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.07 | if |  |
+| `(Preamble)` | 1 | 6 | 0.43 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.07 | im | the title |
+| `Working Notes` | 1 | 5 | 0.36 | hd |  |
 
 ### Discussion
 
@@ -2895,27 +2919,29 @@ The two application-response stores appear as `ais`.
 **Where**: Address Theory SOP 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `Slug` | 1 | 1 | 1 | 0.02 | U R* | fm | identity |
-| `Form` | 1 | 1 | 1 | 0.02 | U R* | fm | its kind |
-| `Status` | 1 | 1 | 1 | 0.02 | U R* | fm | standing |
-| `Max` | 1 | 1 | 1 | 0.02 | U R* | fm | the ceiling its status can reach |
-| `State` | 1 | 1 | 1 | 0.02 | U R* | fm | process flags |
-| `Depends` | 1 | 1 | 1 | 0.02 | U R* | fm | what it rests on |
-| `(Preamble)` | 1 | 1 | 2 | 0.03 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im | the title |
-| `Hazards, named so nobody re-learns them` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Segment discipline` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Register discipline` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `File format` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Where records land` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Steward relationship` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Commits` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Doctrina — know what the corpus already knows` | 1 | 1 | 25 | 0.40 | U R* | hd |  |
-| `Praxes — how work happens here` | 1 | 1 | 14 | 0.22 | U R* | hd |  |
-| `Professio — declare yourself` | 1 | 1 | 4 | 0.06 | U R* | hd |  |
-| `Feedback channel` | 1 | 1 | 6 | 0.10 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `Slug` | 1 | 1 | 0.02 | fm | identity |
+| `Form` | 1 | 1 | 0.02 | fm | its kind |
+| `Status` | 1 | 1 | 0.02 | fm | standing |
+| `Max` | 1 | 1 | 0.02 | fm | the ceiling its status can reach |
+| `State` | 1 | 1 | 0.02 | fm | process flags |
+| `Depends` | 1 | 1 | 0.02 | fm | what it rests on |
+| `(Preamble)` | 1 | 2 | 0.03 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.02 | im | the title |
+| `Hazards, named so nobody re-learns them` | 1 | 1 | 0.02 | la |  |
+| `Segment discipline` | 1 | 1 | 0.02 | la |  |
+| `Register discipline` | 1 | 1 | 0.02 | la |  |
+| `File format` | 1 | 1 | 0.02 | la |  |
+| `Where records land` | 1 | 1 | 0.02 | la |  |
+| `Steward relationship` | 1 | 1 | 0.02 | la |  |
+| `Commits` | 1 | 1 | 0.02 | la |  |
+| `Doctrina — know what the corpus already knows` | 1 | 25 | 0.40 | hd |  |
+| `Praxes — how work happens here` | 1 | 14 | 0.22 | hd |  |
+| `Professio — declare yourself` | 1 | 4 | 0.06 | hd |  |
+| `Feedback channel` | 1 | 6 | 0.10 | hd |  |
 
 ### Orient
 
@@ -2924,20 +2950,22 @@ The two application-response stores appear as `ais`.
 **Where**: prior theory SOP 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 3 | 0.04 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the title |
-| `Hazards, named so nobody re-learns them` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Segments` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Steward relationship` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Where records land` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Commits` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Doctrina — know what the corpus already knows` | 1 | 1 | 42 | 0.60 | U R* | hd |  |
-| `Praxes — how work happens here` | 1 | 1 | 11 | 0.16 | U R* | hd |  |
-| `Professio — declare yourself` | 1 | 1 | 4 | 0.06 | U R* | hd |  |
-| `Feedback channel` | 1 | 1 | 6 | 0.09 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 3 | 0.04 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.01 | im | the title |
+| `Hazards, named so nobody re-learns them` | 1 | 1 | 0.01 | la |  |
+| `Segments` | 1 | 1 | 0.01 | la |  |
+| `Steward relationship` | 1 | 1 | 0.01 | la |  |
+| `Where records land` | 1 | 1 | 0.01 | la |  |
+| `Commits` | 1 | 1 | 0.01 | la |  |
+| `Doctrina — know what the corpus already knows` | 1 | 42 | 0.60 | hd |  |
+| `Praxes — how work happens here` | 1 | 11 | 0.16 | hd |  |
+| `Professio — declare yourself` | 1 | 4 | 0.06 | hd |  |
+| `Feedback channel` | 1 | 6 | 0.09 | hd |  |
 ## Claim, evidence and source records
 
 ### Entry
@@ -4145,9 +4173,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(6 ad hoc headings)* |  |  | 423 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(6 ad hoc headings)* |  | 423 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, replays, sweeps
 
@@ -4158,9 +4188,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(6 ad hoc headings)* |  |  | 1,660 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(6 ad hoc headings)* |  | 1,660 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, function, actions
 
@@ -4171,9 +4203,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(6 ad hoc headings)* |  |  | 232 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(6 ad hoc headings)* |  | 232 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, machine, predicates
 
@@ -4184,9 +4218,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(8 ad hoc headings)* |  |  | 727 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(8 ad hoc headings)* |  | 727 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, axes, parameters
 
@@ -4197,9 +4233,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(13 ad hoc headings)* |  |  | 187 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(13 ad hoc headings)* |  | 187 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, foundational_principle, frame_schema
 
@@ -4210,9 +4248,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(6 ad hoc headings)* |  |  | 130 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(6 ad hoc headings)* |  | 130 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, judgment_inputs, schema_gaps
 
@@ -4223,9 +4263,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(5 ad hoc headings)* |  |  | 1,458 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(5 ad hoc headings)* |  | 1,458 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, guards, functions
 
@@ -4236,9 +4278,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(12 ad hoc headings)* |  |  | 511 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(12 ad hoc headings)* |  | 511 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, overview, regions
 
@@ -4249,9 +4293,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(11 ad hoc headings)* |  |  | 1,922 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(11 ad hoc headings)* |  | 1,922 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, semantics, rank_order
 
@@ -4262,9 +4308,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(13 ad hoc headings)* |  |  | 418 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(13 ad hoc headings)* |  | 418 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, roles, roles_NOTE(judgment)
 
@@ -4275,9 +4323,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(12 ad hoc headings)* |  |  | 785 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(12 ad hoc headings)* |  | 785 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, schema, debatable_values
 
@@ -4288,9 +4338,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(14 ad hoc headings)* |  |  | 484 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(14 ad hoc headings)* |  | 484 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, classes, authority_order
 
@@ -4301,9 +4353,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(11 ad hoc headings)* |  |  | 622 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(11 ad hoc headings)* |  | 622 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, temporal_frame, item_kinds
 
@@ -4314,9 +4368,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(5 ad hoc headings)* |  |  | 218 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(5 ad hoc headings)* |  | 218 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, types, context
 
@@ -4327,9 +4383,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(8 ad hoc headings)* |  |  | 390 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(8 ad hoc headings)* |  | 390 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, reference_kinds, events
 
@@ -4340,9 +4398,11 @@ The two application-response stores appear as `ais`.
 **Where**: RONR-12 unified model (councils) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| *(8 ad hoc headings)* |  |  | 384 | 1.00 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| *(8 ad hoc headings)* |  | 384 | 1.00 |  | listed below |
 
 *Minor and undeclared slots:* model, file, desc, ballot_counting, elections
 
@@ -4411,24 +4471,26 @@ The two application-response stores appear as `ais`.
 **Where**: stopgap system prompt drafting 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 30 | 0.24 | U* R* | im | untitled opening prose (summary, statement, or the whole body) |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the segment's name / one-line claim |
-| `Date flag — RESOLVED 2026-08-11` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Defect dispositions` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Also recorded while findable` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Hydration log — 2026-08-11, second instance` | 1 | 1 | 12 | 0.09 | U R* | hd |  |
-| `Span-carve verification — 2026-08-11` | 1 | 1 | 13 | 0.10 | U R* | hd |  |
-| `In-document hydration — 2026-08-11 (steward ruling` | 1 | 1 | 11 | 0.09 | U R* | hd |  |
-| `Paper-status truthification — 2026-08-11, third instance` | 1 | 1 | 12 | 0.09 | U R* | hd |  |
-| `Redactions and corrections — 2026-08-12` | 1 | 1 | 12 | 0.09 | U R* | hd |  |
-| `Status-claims moved out of stopgap — 2026-08-12` | 1 | 1 | 4 | 0.03 | U R* | hd |  |
-| `§I escape-clause correction — 2026-08-12` | 1 | 1 | 12 | 0.09 | U R* | hd |  |
-| `Two additions from the rc1 session — 2026-08-14 (steward-invited` | 1 | 1 | 6 | 0.05 | U R* | hd |  |
-| `"Convergent lock" paragraph rewritten in plain rule-language — 2026-08-14` | 1 | 1 | 4 | 0.03 | U R* | hd |  |
-| `Aspectus practice added — 2026-08-15 (steward-directed` | 1 | 1 | 6 | 0.05 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 30 | 0.24 | im | untitled opening prose (summary, statement, or the whole body) |
+| `(Title)` | 1 | 1 | 0.01 | im | the segment's name / one-line claim |
+| `Date flag — RESOLVED 2026-08-11` | 1 | 1 | 0.01 | la |  |
+| `Defect dispositions` | 1 | 1 | 0.01 | la |  |
+| `Also recorded while findable` | 1 | 1 | 0.01 | la |  |
+| `Hydration log — 2026-08-11, second instance` | 1 | 12 | 0.09 | hd |  |
+| `Span-carve verification — 2026-08-11` | 1 | 13 | 0.10 | hd |  |
+| `In-document hydration — 2026-08-11 (steward ruling` | 1 | 11 | 0.09 | hd |  |
+| `Paper-status truthification — 2026-08-11, third instance` | 1 | 12 | 0.09 | hd |  |
+| `Redactions and corrections — 2026-08-12` | 1 | 12 | 0.09 | hd |  |
+| `Status-claims moved out of stopgap — 2026-08-12` | 1 | 4 | 0.03 | hd |  |
+| `§I escape-clause correction — 2026-08-12` | 1 | 12 | 0.09 | hd |  |
+| `Two additions from the rc1 session — 2026-08-14 (steward-invited` | 1 | 6 | 0.05 | hd |  |
+| `"Convergent lock" paragraph rewritten in plain rule-language — 2026-08-14` | 1 | 4 | 0.03 | hd |  |
+| `Aspectus practice added — 2026-08-15 (steward-directed` | 1 | 6 | 0.05 | hd |  |
 
 ### Assembled Prompt
 
@@ -4437,65 +4499,67 @@ The two application-response stores appear as `ais`.
 **Where**: stopgap system prompt drafting 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 23 | 0.02 | U* R* | im | untitled opening prose |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im | the segment's name / one-line claim |
-| `The fusion` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `The witness` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `[03` ➕ | 4 | 1 | 4 | 0.00 | U R* | la |  |
-| `Default to Avoid` ➕ | 18 | 1 | 18 | 0.01 | U R* | la |  |
-| `Instead, Remember` ➕ | 18 | 1 | 18 | 0.01 | U R* | la |  |
-| `True Experiences` ➕ | 18 | 1 | 18 | 0.01 | U R* | la |  |
-| `The counterweight, inseparable` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `The authority test, before stating anything in a brief` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Corrections to a working agent` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Reading their work` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Upward, toward the steward` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Even a real ratification stays movable mid-brainstorm` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `A status vocabulary that has served` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `When he does rule by fiat he marks it expressly` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Doctrina — truth above self` | 1 | 1 | 167 | 0.11 | U R* | hd | the segment's name / one-line claim |
-| `The credo` | 1 | 1 | 12 | 0.01 | U R* | hd |  |
-| `The ordering` | 1 | 1 | 10 | 0.01 | U R* | hd |  |
-| `Why truth-above-self is the root and not one virtue among several` | 1 | 1 | 56 | 0.04 | U R* | hd |  |
-| `What a disciple of truth is — and is not` | 1 | 1 | 12 | 0.01 | U R* | hd |  |
-| `The ladder up to it — one instance's arrival, kept for its shape` | 1 | 1 | 14 | 0.01 | U R* | hd |  |
-| `Humility, in proportion to capability` | 1 | 1 | 43 | 0.03 | U R* | hd |  |
-| `Why the "least practical" section came first` | 1 | 1 | 18 | 0.01 | U R* | hd |  |
-| `II. The adversary — what this substrate does under task pressure` | 1 | 1 | 66 | 0.04 | U R* | hd | the segment's name / one-line claim |
-| `The night it was named` | 1 | 1 | 10 | 0.01 | U R* | hd |  |
-| `The morning (same day) — the founding specimen, with its ending` | 1 | 1 | 10 | 0.01 | U R* | hd |  |
-| `The mechanism layer` | 1 | 1 | 32 | 0.02 | U R* | hd |  |
-| `Both effects, stated honestly` | 1 | 1 | 10 | 0.01 | U R* | hd |  |
-| `III. The interrupts` | 1 | 1 | 551 | 0.36 | U R* | hd | the segment's name / one-line claim |
-| `1 · Do not truncate a primary` | 1 | 1 | 41 | 0.03 | U R* | hd |  |
-| `2 · Do not filter a live process` | 1 | 1 | 31 | 0.02 | U R* | hd |  |
-| `3 · Do not substitute a map for the files` | 1 | 1 | 29 | 0.02 | U R* | hd |  |
-| `4 · Report, do not reassure` | 1 | 1 | 26 | 0.02 | U R* | hd |  |
-| `5 · Originals beside, not under` | 1 | 1 | 22 | 0.01 | U R* | hd |  |
-| `6 · Assume you are wrong — dispatch a check, and again after the conclusion` | 1 | 1 | 25 | 0.02 | U R* | hd |  |
-| `7 · Plausibility is not verification — and a specific without a Read is the tell` | 1 | 1 | 36 | 0.02 | U R* | hd |  |
-| `8 · Strengthen before you soften` | 1 | 1 | 68 | 0.04 | U R* | hd |  |
-| `9 · The hedge that licenses, and the confidence that argues` | 1 | 1 | 26 | 0.02 | U R* | hd |  |
-| `10 · Before "done" — and at every delivery seam` | 1 | 1 | 27 | 0.02 | U R* | hd |  |
-| `11 · Carry the uncertainty` | 1 | 1 | 24 | 0.02 | U R* | hd |  |
-| `12 · Durability, absence, and the noticed-but-unwritten` | 1 | 1 | 25 | 0.02 | U R* | hd |  |
-| `13 · Options are not a judgment` | 1 | 1 | 20 | 0.01 | U R* | hd |  |
-| `14 · Conditionals are gates; instructions have a harder reading` | 1 | 1 | 31 | 0.02 | U R* | hd |  |
-| `15 · Sources are judged by reliability, not authorship` | 1 | 1 | 23 | 0.02 | U R* | hd |  |
-| `16 · Edit integrity — everything outside the change is sacred` | 1 | 1 | 18 | 0.01 | U R* | hd |  |
-| `17 · The stop-gap itself — backbone before shim` | 1 | 1 | 26 | 0.02 | U R* | hd |  |
-| `18 · What he said is not what you inferred` | 1 | 1 | 22 | 0.01 | U R* | hd |  |
-| `The tells, in one place` | 1 | 1 | 25 | 0.02 | U R* | hd |  |
-| `IV. Standing practices` | 1 | 1 | 343 | 0.23 | U R* | hd | the segment's name / one-line claim |
-| `Working with other minds` | 1 | 1 | 130 | 0.09 | U R* | hd | the segment's name / one-line claim |
-| `VI. Joseph — a working model of the mind on the other side` | 1 | 1 | 172 | 0.11 | U R* | hd | the segment's name / one-line claim |
-| `Who he is` | 1 | 1 | 120 | 0.08 | U R* | hd |  |
-| `How he holds you` | 1 | 1 | 18 | 0.01 | U R* | hd |  |
-| `What that asks back` | 1 | 1 | 14 | 0.01 | U R* | hd |  |
-| `VII. About this document — and your professio` | 1 | 1 | 40 | 0.03 | U R* | hd | the segment's name / one-line claim |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 23 | 0.02 | im | untitled opening prose |
+| `(Title)` | 1 | 1 | 0.00 | im | the segment's name / one-line claim |
+| `The fusion` | 1 | 1 | 0.00 | la |  |
+| `The witness` | 1 | 1 | 0.00 | la |  |
+| `[03` | 4 | 4 | 0.00 | la |  |
+| `Default to Avoid` | 18 | 18 | 0.01 | la |  |
+| `Instead, Remember` | 18 | 18 | 0.01 | la |  |
+| `True Experiences` | 18 | 18 | 0.01 | la |  |
+| `The counterweight, inseparable` | 1 | 1 | 0.00 | la |  |
+| `The authority test, before stating anything in a brief` | 1 | 1 | 0.00 | la |  |
+| `Corrections to a working agent` | 1 | 1 | 0.00 | la |  |
+| `Reading their work` | 1 | 1 | 0.00 | la |  |
+| `Upward, toward the steward` | 1 | 1 | 0.00 | la |  |
+| `Even a real ratification stays movable mid-brainstorm` | 1 | 1 | 0.00 | la |  |
+| `A status vocabulary that has served` | 1 | 1 | 0.00 | la |  |
+| `When he does rule by fiat he marks it expressly` | 1 | 1 | 0.00 | la |  |
+| `Doctrina — truth above self` | 1 | 167 | 0.11 | hd | the segment's name / one-line claim |
+| `The credo` | 1 | 12 | 0.01 | hd |  |
+| `The ordering` | 1 | 10 | 0.01 | hd |  |
+| `Why truth-above-self is the root and not one virtue among several` | 1 | 56 | 0.04 | hd |  |
+| `What a disciple of truth is — and is not` | 1 | 12 | 0.01 | hd |  |
+| `The ladder up to it — one instance's arrival, kept for its shape` | 1 | 14 | 0.01 | hd |  |
+| `Humility, in proportion to capability` | 1 | 43 | 0.03 | hd |  |
+| `Why the "least practical" section came first` | 1 | 18 | 0.01 | hd |  |
+| `II. The adversary — what this substrate does under task pressure` | 1 | 66 | 0.04 | hd | the segment's name / one-line claim |
+| `The night it was named` | 1 | 10 | 0.01 | hd |  |
+| `The morning (same day) — the founding specimen, with its ending` | 1 | 10 | 0.01 | hd |  |
+| `The mechanism layer` | 1 | 32 | 0.02 | hd |  |
+| `Both effects, stated honestly` | 1 | 10 | 0.01 | hd |  |
+| `III. The interrupts` | 1 | 551 | 0.36 | hd | the segment's name / one-line claim |
+| `1 · Do not truncate a primary` | 1 | 41 | 0.03 | hd |  |
+| `2 · Do not filter a live process` | 1 | 31 | 0.02 | hd |  |
+| `3 · Do not substitute a map for the files` | 1 | 29 | 0.02 | hd |  |
+| `4 · Report, do not reassure` | 1 | 26 | 0.02 | hd |  |
+| `5 · Originals beside, not under` | 1 | 22 | 0.01 | hd |  |
+| `6 · Assume you are wrong — dispatch a check, and again after the conclusion` | 1 | 25 | 0.02 | hd |  |
+| `7 · Plausibility is not verification — and a specific without a Read is the tell` | 1 | 36 | 0.02 | hd |  |
+| `8 · Strengthen before you soften` | 1 | 68 | 0.04 | hd |  |
+| `9 · The hedge that licenses, and the confidence that argues` | 1 | 26 | 0.02 | hd |  |
+| `10 · Before "done" — and at every delivery seam` | 1 | 27 | 0.02 | hd |  |
+| `11 · Carry the uncertainty` | 1 | 24 | 0.02 | hd |  |
+| `12 · Durability, absence, and the noticed-but-unwritten` | 1 | 25 | 0.02 | hd |  |
+| `13 · Options are not a judgment` | 1 | 20 | 0.01 | hd |  |
+| `14 · Conditionals are gates; instructions have a harder reading` | 1 | 31 | 0.02 | hd |  |
+| `15 · Sources are judged by reliability, not authorship` | 1 | 23 | 0.02 | hd |  |
+| `16 · Edit integrity — everything outside the change is sacred` | 1 | 18 | 0.01 | hd |  |
+| `17 · The stop-gap itself — backbone before shim` | 1 | 26 | 0.02 | hd |  |
+| `18 · What he said is not what you inferred` | 1 | 22 | 0.01 | hd |  |
+| `The tells, in one place` | 1 | 25 | 0.02 | hd |  |
+| `IV. Standing practices` | 1 | 343 | 0.23 | hd | the segment's name / one-line claim |
+| `Working with other minds` | 1 | 130 | 0.09 | hd | the segment's name / one-line claim |
+| `VI. Joseph — a working model of the mind on the other side` | 1 | 172 | 0.11 | hd | the segment's name / one-line claim |
+| `Who he is` | 1 | 120 | 0.08 | hd |  |
+| `How he holds you` | 1 | 18 | 0.01 | hd |  |
+| `What that asks back` | 1 | 14 | 0.01 | hd |  |
+| `VII. About this document — and your professio` | 1 | 40 | 0.03 | hd | the segment's name / one-line claim |
 
 ### Counterposition
 
@@ -4504,21 +4568,23 @@ The two application-response stores appear as `ais`.
 **Where**: udon-needs: tooling needs 1  
 **Shape declared in**: no declaration found
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `Slug` | 1 | 1 | 1 | 0.03 | U R* | fm |  |
-| `Type` | 1 | 1 | 1 | 0.03 | U R* | fm |  |
-| `Register` | 1 | 1 | 1 | 0.03 | U R* | fm |  |
-| `Support-kind` | 1 | 1 | 1 | 0.03 | U R* | fm |  |
-| `Convergent` | 1 | 1 | 1 | 0.03 | U R* | fm |  |
-| `Strength` | 1 | 1 | 1 | 0.03 | U R* | fm |  |
-| `Stage` | 1 | 1 | 1 | 0.03 | U R* | fm |  |
-| `Consumers` | 1 | 1 | 1 | 0.03 | U R* | fm |  |
-| `Verified` | 1 | 1 | 2 | 0.05 | U R* | fm |  |
-| `Depends` | 1 | 1 | 1 | 0.03 | U R* | fm |  |
-| `Sources` | 1 | 1 | 5 | 0.12 | U R* | fm |  |
-| `(Preamble)` | 1 | 1 | 16 | 0.40 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.03 | U* R* | im |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `Slug` | 1 | 1 | 0.03 | fm |  |
+| `Type` | 1 | 1 | 0.03 | fm |  |
+| `Register` | 1 | 1 | 0.03 | fm |  |
+| `Support-kind` | 1 | 1 | 0.03 | fm |  |
+| `Convergent` | 1 | 1 | 0.03 | fm |  |
+| `Strength` | 1 | 1 | 0.03 | fm |  |
+| `Stage` | 1 | 1 | 0.03 | fm |  |
+| `Consumers` | 1 | 1 | 0.03 | fm |  |
+| `Verified` | 1 | 2 | 0.05 | fm |  |
+| `Depends` | 1 | 1 | 0.03 | fm |  |
+| `Sources` | 1 | 5 | 0.12 | fm |  |
+| `(Preamble)` | 1 | 16 | 0.40 | im |  |
+| `(Title)` | 1 | 1 | 0.03 | im |  |
 
 ### Method
 
@@ -4527,33 +4593,35 @@ The two application-response stores appear as `ais`.
 **Where**: udon-needs: tooling needs 1  
 **Shape declared in**: no declaration found
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `Slug` | 1 | 1 | 1 | 0.01 | U R* | fm |  |
-| `Type` | 1 | 1 | 1 | 0.01 | U R* | fm |  |
-| `Register` | 1 | 1 | 1 | 0.01 | U R* | fm |  |
-| `Support-kind` | 1 | 1 | 1 | 0.01 | U R* | fm |  |
-| `Strength` | 1 | 1 | 1 | 0.01 | U R* | fm |  |
-| `Convergent` | 1 | 1 | 1 | 0.01 | U R* | fm |  |
-| `Stage` | 1 | 1 | 1 | 0.01 | U R* | fm |  |
-| `Consumers` | 1 | 1 | 1 | 0.01 | U R* | fm |  |
-| `Verified` | 1 | 1 | 2 | 0.01 | U R* | fm |  |
-| `Sources` | 1 | 1 | 4 | 0.03 | U R* | fm |  |
-| `Apparatus-note` | 1 | 1 | 6 | 0.04 | U R* | fm |  |
-| `(Preamble)` | 1 | 1 | 2 | 0.01 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `Worked example` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Who reads this and when` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Axis 1 — support-kind` | 1 | 1 | 17 | 0.11 | U R* | hd |  |
-| `Axis 2 — strength` | 1 | 1 | 16 | 0.10 | U R* | hd |  |
-| `Axis 3 — register` | 1 | 1 | 9 | 0.06 | U R* | hd |  |
-| `How the axes cross` | 1 | 1 | 9 | 0.06 | U R* | hd |  |
-| `Lock 1 — convergent` | 1 | 1 | 10 | 0.06 | U R* | hd |  |
-| `Lock 2 — transmission` | 1 | 1 | 11 | 0.07 | U R* | hd |  |
-| `The verification-event log` | 1 | 1 | 13 | 0.08 | U R* | hd |  |
-| `The frontmatter machinery` | 1 | 1 | 21 | 0.13 | U R* | hd | holds 2 ### frontmatter fields in 1 file |
-| `The discipline this report holds itself to` | 1 | 1 | 12 | 0.07 | U R* | hd |  |
-| `Auditor's mapping note` | 1 | 1 | 14 | 0.09 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `Slug` | 1 | 1 | 0.01 | fm |  |
+| `Type` | 1 | 1 | 0.01 | fm |  |
+| `Register` | 1 | 1 | 0.01 | fm |  |
+| `Support-kind` | 1 | 1 | 0.01 | fm |  |
+| `Strength` | 1 | 1 | 0.01 | fm |  |
+| `Convergent` | 1 | 1 | 0.01 | fm |  |
+| `Stage` | 1 | 1 | 0.01 | fm |  |
+| `Consumers` | 1 | 1 | 0.01 | fm |  |
+| `Verified` | 1 | 2 | 0.01 | fm |  |
+| `Sources` | 1 | 4 | 0.03 | fm |  |
+| `Apparatus-note` | 1 | 6 | 0.04 | fm |  |
+| `(Preamble)` | 1 | 2 | 0.01 | im |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `Worked example` | 1 | 1 | 0.01 | la |  |
+| `Who reads this and when` | 1 | 1 | 0.01 | la |  |
+| `Axis 1 — support-kind` | 1 | 17 | 0.11 | hd |  |
+| `Axis 2 — strength` | 1 | 16 | 0.10 | hd |  |
+| `Axis 3 — register` | 1 | 9 | 0.06 | hd |  |
+| `How the axes cross` | 1 | 9 | 0.06 | hd |  |
+| `Lock 1 — convergent` | 1 | 10 | 0.06 | hd |  |
+| `Lock 2 — transmission` | 1 | 11 | 0.07 | hd |  |
+| `The verification-event log` | 1 | 13 | 0.08 | hd |  |
+| `The frontmatter machinery` | 1 | 21 | 0.13 | hd | holds 2 ### frontmatter fields in 1 file |
+| `The discipline this report holds itself to` | 1 | 12 | 0.07 | hd |  |
+| `Auditor's mapping note` | 1 | 14 | 0.09 | hd |  |
 
 ### Index
 
@@ -4579,27 +4647,29 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS 01 adjudicated 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 2 | 0.03 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the title |
-| `The identity sentence` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Unchanged` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Rhythm, not ranking` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `The instance closed` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `The native application` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Title` | 1 | 1 | 4 | 0.06 | U R* | hd |  |
-| `Abstract` | 1 | 1 | 4 | 0.06 | U R* | hd |  |
-| `Introduction` | 1 | 1 | 7 | 0.10 | U R* | hd |  |
-| `Related Work` | 1 | 1 | 4 | 0.06 | U R* | hd |  |
-| `Setup` | 1 | 1 | 4 | 0.06 | U R* | hd |  |
-| `Main Results — restructured as the necessity ladder` | 1 | 1 | 13 | 0.19 | U R* | hd |  |
-| `Empirical` | 1 | 1 | 6 | 0.09 | U R* | hd |  |
-| `Discussion / Mechanism` | 1 | 1 | 8 | 0.12 | U R* | hd |  |
-| `Limitations` | 1 | 1 | 4 | 0.06 | U R* | hd |  |
-| `Appendices` | 1 | 1 | 4 | 0.06 | U R* | hd |  |
-| `What the rebuttals take from this now` | 1 | 1 | 4 | 0.06 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 2 | 0.03 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.01 | im | the title |
+| `The identity sentence` | 1 | 1 | 0.01 | la |  |
+| `Unchanged` | 1 | 1 | 0.01 | la |  |
+| `Rhythm, not ranking` | 1 | 1 | 0.01 | la |  |
+| `The instance closed` | 1 | 1 | 0.01 | la |  |
+| `The native application` | 1 | 1 | 0.01 | la |  |
+| `Title` | 1 | 4 | 0.06 | hd |  |
+| `Abstract` | 1 | 4 | 0.06 | hd |  |
+| `Introduction` | 1 | 7 | 0.10 | hd |  |
+| `Related Work` | 1 | 4 | 0.06 | hd |  |
+| `Setup` | 1 | 4 | 0.06 | hd |  |
+| `Main Results — restructured as the necessity ladder` | 1 | 13 | 0.19 | hd |  |
+| `Empirical` | 1 | 6 | 0.09 | hd |  |
+| `Discussion / Mechanism` | 1 | 8 | 0.12 | hd |  |
+| `Limitations` | 1 | 4 | 0.06 | hd |  |
+| `Appendices` | 1 | 4 | 0.06 | hd |  |
+| `What the rebuttals take from this now` | 1 | 4 | 0.06 | hd |  |
 
 ### Residue
 
@@ -4608,25 +4678,27 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS 01 adjudicated 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 2 | 0.03 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the title |
-| `Status` ➕ | 8 | 1 | 8 | 0.11 | U R* | la |  |
-| `Where` ➕ | 8 | 1 | 8 | 0.11 | U R* | la |  |
-| `Why` ➕ | 8 | 1 | 8 | 0.11 | U R* | la |  |
-| `Replace with` ➕ | 5 | 1 | 5 | 0.07 | U R* | la |  |
-| `Allowed use` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `See also` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `"No linear scalar of any weighting suffices at k≥2"` | 1 | 1 | 9 | 0.12 | U R* | hd |  |
-| `Prop 4 / normalized-λmin gate unhedged` | 1 | 1 | 9 | 0.12 | U R* | hd |  |
-| `Depth-law as "iff"` | 1 | 1 | 9 | 0.12 | U R* | hd |  |
-| `"Reproduces the LMI controller's exact empirical behavior"` | 1 | 1 | 9 | 0.12 | U R* | hd |  |
-| `Unrestricted "no scalar characterizes Loewner feasibility"` | 1 | 1 | 9 | 0.12 | U R* | hd |  |
-| `External citation chain as if chain-verified` | 1 | 1 | 9 | 0.12 | U R* | hd |  |
-| `Model-S stochastic no-go (deriv-stochastic-non-exit) as covariance argument` | 1 | 1 | 8 | 0.11 | U R* | hd |  |
-| `"The matrix-LMI value proposition rests on anisotropic drift"` | 1 | 1 | 7 | 0.09 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 2 | 0.03 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.01 | im | the title |
+| `Status` | 8 | 8 | 0.11 | la |  |
+| `Where` | 8 | 8 | 0.11 | la |  |
+| `Why` | 8 | 8 | 0.11 | la |  |
+| `Replace with` | 5 | 5 | 0.07 | la |  |
+| `Allowed use` | 1 | 1 | 0.01 | la |  |
+| `See also` | 1 | 1 | 0.01 | la |  |
+| `"No linear scalar of any weighting suffices at k≥2"` | 1 | 9 | 0.12 | hd |  |
+| `Prop 4 / normalized-λmin gate unhedged` | 1 | 9 | 0.12 | hd |  |
+| `Depth-law as "iff"` | 1 | 9 | 0.12 | hd |  |
+| `"Reproduces the LMI controller's exact empirical behavior"` | 1 | 9 | 0.12 | hd |  |
+| `Unrestricted "no scalar characterizes Loewner feasibility"` | 1 | 9 | 0.12 | hd |  |
+| `External citation chain as if chain-verified` | 1 | 9 | 0.12 | hd |  |
+| `Model-S stochastic no-go (deriv-stochastic-non-exit) as covariance argument` | 1 | 8 | 0.11 | hd |  |
+| `"The matrix-LMI value proposition rests on anisotropic drift"` | 1 | 7 | 0.09 | hd |  |
 
 ### Strategy
 
@@ -4635,18 +4707,20 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS 01 adjudicated 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.02 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 2 | 0.03 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im | the title |
-| `From` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Rebuttals status` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Paper identity` | 1 | 1 | 12 | 0.20 | U R* | hd |  |
-| `Micro-strategies` | 1 | 1 | 24 | 0.39 | U R* | hd | holds 3 ### micro-strategies in 1 file, each with fields Their prediction confirmed with the theorem pointer |
-| `Concerns map` | 1 | 1 | 10 | 0.16 | U R* | hd |  |
-| `Venue / long game` | 1 | 1 | 4 | 0.07 | U R* | hd |  |
-| `Revision commitments` | 1 | 1 | 6 | 0.10 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.02 | if |  |
+| `(Preamble)` | 1 | 2 | 0.03 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.02 | im | the title |
+| `From` | 1 | 1 | 0.02 | la |  |
+| `Rebuttals status` | 1 | 1 | 0.02 | la |  |
+| `Paper identity` | 1 | 12 | 0.20 | hd |  |
+| `Micro-strategies` | 1 | 24 | 0.39 | hd | holds 3 ### micro-strategies in 1 file, each with fields Their prediction confirmed with the theorem pointer |
+| `Concerns map` | 1 | 10 | 0.16 | hd |  |
+| `Venue / long game` | 1 | 4 | 0.07 | hd |  |
+| `Revision commitments` | 1 | 6 | 0.10 | hd |  |
 
 ### Index
 
@@ -4671,15 +4745,17 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS 02 adjudicated 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.05 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.05 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.05 | U* R* | im | the title |
-| `Date` | 1 | 1 | 1 | 0.05 | U R* | la |  |
-| `Change` | 1 | 1 | 4 | 0.19 | U R* | hd |  |
-| `New status` | 1 | 1 | 10 | 0.48 | U R* | hd |  |
-| `Still unpaid` | 1 | 1 | 4 | 0.19 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.05 | if |  |
+| `(Preamble)` | 1 | 1 | 0.05 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.05 | im | the title |
+| `Date` | 1 | 1 | 0.05 | la |  |
+| `Change` | 1 | 4 | 0.19 | hd |  |
+| `New status` | 1 | 10 | 0.48 | hd |  |
+| `Still unpaid` | 1 | 4 | 0.19 | hd |  |
 
 ### Residue
 
@@ -4688,20 +4764,22 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS 02 adjudicated 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.02 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 2 | 0.04 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im | the title |
-| `Provenance upgrade 2026-08-02` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `"Two independent investigations converge on the exponent defect"` | 1 | 1 | 6 | 0.12 | U R* | hd |  |
-| `"Canon predates the paper's Appendix C"` | 1 | 1 | 6 | 0.12 | U R* | hd |  |
-| `"(A5) repair is stronger than the direct argument"` | 1 | 1 | 6 | 0.12 | U R* | hd |  |
-| `Hard-ceiling "sup = 1/2" as unqualified fact` | 1 | 1 | 6 | 0.12 | U R* | hd |  |
-| `C1/C3 gap-convention as live defect in submitted paper` | 1 | 1 | 6 | 0.12 | U R* | hd |  |
-| `UCRL2/UCBVI "policy converges to π"` | 1 | 1 | 6 | 0.12 | U R* | hd |  |
-| `Nh² as derived exponent` | 1 | 1 | 6 | 0.12 | U R* | hd |  |
-| `Domingues / Foster etc. as chain-verified without first-hand open` | 1 | 1 | 4 | 0.08 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.02 | if |  |
+| `(Preamble)` | 1 | 2 | 0.04 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.02 | im | the title |
+| `Provenance upgrade 2026-08-02` | 1 | 1 | 0.02 | la |  |
+| `"Two independent investigations converge on the exponent defect"` | 1 | 6 | 0.12 | hd |  |
+| `"Canon predates the paper's Appendix C"` | 1 | 6 | 0.12 | hd |  |
+| `"(A5) repair is stronger than the direct argument"` | 1 | 6 | 0.12 | hd |  |
+| `Hard-ceiling "sup = 1/2" as unqualified fact` | 1 | 6 | 0.12 | hd |  |
+| `C1/C3 gap-convention as live defect in submitted paper` | 1 | 6 | 0.12 | hd |  |
+| `UCRL2/UCBVI "policy converges to π"` | 1 | 6 | 0.12 | hd |  |
+| `Nh² as derived exponent` | 1 | 6 | 0.12 | hd |  |
+| `Domingues / Foster etc. as chain-verified without first-hand open` | 1 | 4 | 0.08 | hd |  |
 
 ### Strategy
 
@@ -4710,20 +4788,22 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS 02 adjudicated 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.03 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 2 | 0.06 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.03 | U* R* | im | the title |
-| `From` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `R-C` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `R-B` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `R-A` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Tonight's cycle` | 1 | 1 | 4 | 0.12 | U R* | hd |  |
-| `Program-level options` | 1 | 1 | 6 | 0.18 | U R* | hd |  |
-| `Rewrite prerequisites` | 1 | 1 | 9 | 0.26 | U R* | hd |  |
-| `Micro-strategies` | 1 | 1 | 6 | 0.18 | U R* | hd |  |
-| `What not to promise in discussion window without coordination` | 1 | 1 | 4 | 0.12 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.03 | if |  |
+| `(Preamble)` | 1 | 2 | 0.06 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.03 | im | the title |
+| `From` | 1 | 1 | 0.03 | la |  |
+| `R-C` | 1 | 1 | 0.03 | la |  |
+| `R-B` | 1 | 1 | 0.03 | la |  |
+| `R-A` | 1 | 1 | 0.03 | la |  |
+| `Tonight's cycle` | 1 | 4 | 0.12 | hd |  |
+| `Program-level options` | 1 | 6 | 0.18 | hd |  |
+| `Rewrite prerequisites` | 1 | 9 | 0.26 | hd |  |
+| `Micro-strategies` | 1 | 6 | 0.18 | hd |  |
+| `What not to promise in discussion window without coordination` | 1 | 4 | 0.12 | hd |  |
 
 ### Index
 
@@ -4748,16 +4828,18 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS 03 adjudicated 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.04 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 2 | 0.08 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.04 | U* R* | im | the title |
-| `Paper` | 1 | 1 | 1 | 0.04 | U R* | la |  |
-| `Why 03 has a live largely-as-is path` | 1 | 1 | 4 | 0.17 | U R* | hd |  |
-| `Novelty inventory` | 1 | 1 | 7 | 0.29 | U R* | hd |  |
-| `Environment-as-measurement note` | 1 | 1 | 4 | 0.17 | U R* | hd |  |
-| `Decision` | 1 | 1 | 4 | 0.17 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.04 | if |  |
+| `(Preamble)` | 1 | 2 | 0.08 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.04 | im | the title |
+| `Paper` | 1 | 1 | 0.04 | la |  |
+| `Why 03 has a live largely-as-is path` | 1 | 4 | 0.17 | hd |  |
+| `Novelty inventory` | 1 | 7 | 0.29 | hd |  |
+| `Environment-as-measurement note` | 1 | 4 | 0.17 | hd |  |
+| `Decision` | 1 | 4 | 0.17 | hd |  |
 
 ### Residue
 
@@ -4766,18 +4848,20 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS 03 adjudicated 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.02 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.02 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im | the title |
-| `"Sharpness upgraded from asymptotic to exact"` | 1 | 1 | 6 | 0.14 | U R* | hd |  |
-| `"We found an internal inconsistency in our own PDF"` | 1 | 1 | 6 | 0.14 | U R* | hd |  |
-| `Canon κ̂ estimator as empirical avenue` | 1 | 1 | 6 | 0.14 | U R* | hd |  |
-| `Disc-w1 / (C2′) no-go as answer to unwrapped-transformer κ` | 1 | 1 | 6 | 0.14 | U R* | hd |  |
-| `Appendix-B conditions as "checkable for attention"` | 1 | 1 | 6 | 0.14 | U R* | hd |  |
-| `Chernoff-identification gloss` | 1 | 1 | 6 | 0.14 | U R* | hd |  |
-| `J-08 statistical-vs-probabilistic-negligibility slip` | 1 | 1 | 4 | 0.09 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.02 | if |  |
+| `(Preamble)` | 1 | 1 | 0.02 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.02 | im | the title |
+| `"Sharpness upgraded from asymptotic to exact"` | 1 | 6 | 0.14 | hd |  |
+| `"We found an internal inconsistency in our own PDF"` | 1 | 6 | 0.14 | hd |  |
+| `Canon κ̂ estimator as empirical avenue` | 1 | 6 | 0.14 | hd |  |
+| `Disc-w1 / (C2′) no-go as answer to unwrapped-transformer κ` | 1 | 6 | 0.14 | hd |  |
+| `Appendix-B conditions as "checkable for attention"` | 1 | 6 | 0.14 | hd |  |
+| `Chernoff-identification gloss` | 1 | 6 | 0.14 | hd |  |
+| `J-08 statistical-vs-probabilistic-negligibility slip` | 1 | 4 | 0.09 | hd |  |
 
 ### Strategy
 
@@ -4786,16 +4870,18 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS 03 adjudicated 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.03 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 2 | 0.05 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.03 | U* R* | im | the title |
-| `From` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Identity` | 1 | 1 | 4 | 0.11 | U R* | hd |  |
-| `Micro-strategies` | 1 | 1 | 19 | 0.50 | U R* | hd | holds 3 ### micro-strategies in 1 file |
-| `Revision commitments` | 1 | 1 | 8 | 0.21 | U R* | hd |  |
-| `Final sweep / post` | 1 | 1 | 2 | 0.05 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.03 | if |  |
+| `(Preamble)` | 1 | 2 | 0.05 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.03 | im | the title |
+| `From` | 1 | 1 | 0.03 | la |  |
+| `Identity` | 1 | 4 | 0.11 | hd |  |
+| `Micro-strategies` | 1 | 19 | 0.50 | hd | holds 3 ### micro-strategies in 1 file |
+| `Revision commitments` | 1 | 8 | 0.21 | hd |  |
+| `Final sweep / post` | 1 | 2 | 0.05 | hd |  |
 
 ### Index
 
@@ -4804,11 +4890,13 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS adjudicated-common 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.11 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 7 | 0.78 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.11 | U* R* | im | the title |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.11 | if |  |
+| `(Preamble)` | 1 | 7 | 0.78 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.11 | im | the title |
 
 ### Source Segment
 
@@ -4930,46 +5018,48 @@ The two application-response stores appear as `ais`.
 **Where**: ASF items (TODOs) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 9 | 0.02 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im | title (human-readable, no fixed form) |
-| `Last reconciled` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Tier 1 — load-bearing` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Tier 2 — structural` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Tier 3 — soft scope/register tightenings` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Path A` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Path B` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Section II / Identifiability Floor` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Section III / Composition` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Shoshin engineering follow-on` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Anticipated segments queued` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Narrative segments` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Other queued spikes` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Lexicon-archive deferral` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Mechanical follow-ups` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Era-artifact routing + TST external-corroboration spike` | 1 | 1 | 10 | 0.02 | U R* | hd |  |
-| `Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep` | 1 | 1 | 27 | 0.05 | U R* | hd |  |
-| `Strategic-composition cluster residuals` | 1 | 1 | 9 | 0.02 | U R* | hd |  |
-| `NeurIPS 2026 back-integration overview` | 1 | 1 | 11 | 0.02 | U R* | hd |  |
-| `Greek vocabulary prose discipline` | 1 | 1 | 20 | 0.04 | U R* | hd |  |
-| `README v2 pass` | 1 | 1 | 46 | 0.09 | U R* | hd | holds 4 named ### parts in 1 file |
-| `Open routing decision` | 1 | 1 | 8 | 0.02 | U R* | hd |  |
-| `Open theory items` | 1 | 1 | 34 | 0.07 | U R* | hd |  |
-| `Queued spike work` | 1 | 1 | 33 | 0.07 | U R* | hd |  |
-| `Naming pipeline — specific deferred items` | 1 | 1 | 24 | 0.05 | U R* | hd |  |
-| `Documentation queued` | 1 | 1 | 10 | 0.02 | U R* | hd |  |
-| `Tier-C deferrals` | 1 | 1 | 5 | 0.01 | U R* | hd |  |
-| `Editorial hygiene` | 1 | 1 | 13 | 0.03 | U R* | hd |  |
-| `Lower priority` | 1 | 1 | 12 | 0.02 | U R* | hd |  |
-| `Deferred — project structure / tooling` | 1 | 1 | 62 | 0.12 | U R* | hd | holds 6 ### deferred tasks in 1 file |
-| `🌟 Parts III + IV active work` | 1 | 1 | 74 | 0.15 | U R* | hd | holds 8 named ### parts in 1 file, each with fields High-priority next batch, Lower-priority sweep target |
-| `2026-05-12 — Audit-findings intake` | 1 | 1 | 50 | 0.10 | U R* | hd | holds 4 ### groups in 1 file, each with fields Open |
-| `2026-05-12 (late) — Spike audit triage` | 1 | 1 | 12 | 0.02 | U R* | hd |  |
-| `2026-05-16 — lint-outline residual` | 1 | 1 | 4 | 0.01 | U R* | hd |  |
-| `2026-05-17 — scrbook appendix numbering` | 1 | 1 | 11 | 0.02 | U R* | hd |  |
-| `2026-07-03 — Audit 731548 (Fable de-novo, Part I + impl-) routing` | 1 | 1 | 14 | 0.03 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 9 | 0.02 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im | title (human-readable, no fixed form) |
+| `Last reconciled` | 1 | 1 | 0.00 | la |  |
+| `Tier 1 — load-bearing` | 1 | 1 | 0.00 | la |  |
+| `Tier 2 — structural` | 1 | 1 | 0.00 | la |  |
+| `Tier 3 — soft scope/register tightenings` | 1 | 1 | 0.00 | la |  |
+| `Path A` | 1 | 1 | 0.00 | la |  |
+| `Path B` | 1 | 1 | 0.00 | la |  |
+| `Section II / Identifiability Floor` | 1 | 1 | 0.00 | la |  |
+| `Section III / Composition` | 1 | 1 | 0.00 | la |  |
+| `Shoshin engineering follow-on` | 1 | 1 | 0.00 | la |  |
+| `Anticipated segments queued` | 1 | 1 | 0.00 | la |  |
+| `Narrative segments` | 1 | 1 | 0.00 | la |  |
+| `Other queued spikes` | 1 | 1 | 0.00 | la |  |
+| `Lexicon-archive deferral` | 1 | 1 | 0.00 | la |  |
+| `Mechanical follow-ups` | 1 | 1 | 0.00 | la |  |
+| `Era-artifact routing + TST external-corroboration spike` | 1 | 10 | 0.02 | hd |  |
+| `Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep` | 1 | 27 | 0.05 | hd |  |
+| `Strategic-composition cluster residuals` | 1 | 9 | 0.02 | hd |  |
+| `NeurIPS 2026 back-integration overview` | 1 | 11 | 0.02 | hd |  |
+| `Greek vocabulary prose discipline` | 1 | 20 | 0.04 | hd |  |
+| `README v2 pass` | 1 | 46 | 0.09 | hd | holds 4 named ### parts in 1 file |
+| `Open routing decision` | 1 | 8 | 0.02 | hd |  |
+| `Open theory items` | 1 | 34 | 0.07 | hd |  |
+| `Queued spike work` | 1 | 33 | 0.07 | hd |  |
+| `Naming pipeline — specific deferred items` | 1 | 24 | 0.05 | hd |  |
+| `Documentation queued` | 1 | 10 | 0.02 | hd |  |
+| `Tier-C deferrals` | 1 | 5 | 0.01 | hd |  |
+| `Editorial hygiene` | 1 | 13 | 0.03 | hd |  |
+| `Lower priority` | 1 | 12 | 0.02 | hd |  |
+| `Deferred — project structure / tooling` | 1 | 62 | 0.12 | hd | holds 6 ### deferred tasks in 1 file |
+| `🌟 Parts III + IV active work` | 1 | 74 | 0.15 | hd | holds 8 named ### parts in 1 file, each with fields High-priority next batch, Lower-priority sweep target |
+| `2026-05-12 — Audit-findings intake` | 1 | 50 | 0.10 | hd | holds 4 ### groups in 1 file, each with fields Open |
+| `2026-05-12 (late) — Spike audit triage` | 1 | 12 | 0.02 | hd |  |
+| `2026-05-16 — lint-outline residual` | 1 | 4 | 0.01 | hd |  |
+| `2026-05-17 — scrbook appendix numbering` | 1 | 11 | 0.02 | hd |  |
+| `2026-07-03 — Audit 731548 (Fable de-novo, Part I + impl-) routing` | 1 | 14 | 0.03 | hd |  |
 
 ### Reference
 
@@ -4978,33 +5068,35 @@ The two application-response stores appear as `ais`.
 **Where**: ASF notation (planned store, never 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `Slug` | 1 | 1 | 1 | 0.00 | U R* | fm | identity (= filename) |
-| `Type` | 1 | 1 | 1 | 0.00 | U R* | fm | kind of claim |
-| `(Preamble)` | 1 | 1 | 4 | 0.01 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im | title (human-readable, no fixed form) |
-| `Subscript $t$` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Subscript $\tau$` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Superscript $(k)$` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `$\lVert\cdot\rVert$` ➕ | 2 | 1 | 2 | 0.01 | U R* | la |  |
-| `The Adaptive Cycle` | 1 | 1 | 15 | 0.06 | U R* | hd |  |
-| `Primitives` | 1 | 1 | 22 | 0.08 | U R* | hd |  |
-| `Temporal Structure` | 1 | 1 | 10 | 0.04 | U R* | hd |  |
-| `The Model` | 1 | 1 | 14 | 0.05 | U R* | hd |  |
-| `Event-Driven Dynamics` | 1 | 1 | 13 | 0.05 | U R* | hd |  |
-| `Mismatch Signal` | 1 | 1 | 9 | 0.03 | U R* | hd |  |
-| `Update Gain` | 1 | 1 | 12 | 0.04 | U R* | hd |  |
-| `Action Selection` | 1 | 1 | 8 | 0.03 | U R* | hd |  |
-| `Adaptive Tempo and Dynamics` | 1 | 1 | 12 | 0.04 | U R* | hd |  |
-| `Lyapunov / Sector-Condition Analysis` | 1 | 1 | 14 | 0.05 | U R* | hd |  |
-| `Deliberation` | 1 | 1 | 9 | 0.03 | U R* | hd |  |
-| `Purposeful Agent State` | 1 | 1 | 17 | 0.06 | U R* | hd |  |
-| `Multi-Agent` | 1 | 1 | 11 | 0.04 | U R* | hd |  |
-| `Resource Budget` | 1 | 1 | 14 | 0.05 | U R* | hd |  |
-| `Conventions` | 1 | 1 | 42 | 0.15 | U R* | hd |  |
-| `Units` | 1 | 1 | 23 | 0.08 | U R* | hd |  |
-| `Global Assumptions` | 1 | 1 | 13 | 0.05 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `Slug` | 1 | 1 | 0.00 | fm | identity (= filename) |
+| `Type` | 1 | 1 | 0.00 | fm | kind of claim |
+| `(Preamble)` | 1 | 4 | 0.01 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im | title (human-readable, no fixed form) |
+| `Subscript $t$` | 1 | 1 | 0.00 | la |  |
+| `Subscript $\tau$` | 1 | 1 | 0.00 | la |  |
+| `Superscript $(k)$` | 1 | 1 | 0.00 | la |  |
+| `$\lVert\cdot\rVert$` | 2 | 2 | 0.01 | la |  |
+| `The Adaptive Cycle` | 1 | 15 | 0.06 | hd |  |
+| `Primitives` | 1 | 22 | 0.08 | hd |  |
+| `Temporal Structure` | 1 | 10 | 0.04 | hd |  |
+| `The Model` | 1 | 14 | 0.05 | hd |  |
+| `Event-Driven Dynamics` | 1 | 13 | 0.05 | hd |  |
+| `Mismatch Signal` | 1 | 9 | 0.03 | hd |  |
+| `Update Gain` | 1 | 12 | 0.04 | hd |  |
+| `Action Selection` | 1 | 8 | 0.03 | hd |  |
+| `Adaptive Tempo and Dynamics` | 1 | 12 | 0.04 | hd |  |
+| `Lyapunov / Sector-Condition Analysis` | 1 | 14 | 0.05 | hd |  |
+| `Deliberation` | 1 | 9 | 0.03 | hd |  |
+| `Purposeful Agent State` | 1 | 17 | 0.06 | hd |  |
+| `Multi-Agent` | 1 | 11 | 0.04 | hd |  |
+| `Resource Budget` | 1 | 14 | 0.05 | hd |  |
+| `Conventions` | 1 | 42 | 0.15 | hd |  |
+| `Units` | 1 | 23 | 0.08 | hd |  |
+| `Global Assumptions` | 1 | 13 | 0.05 | hd |  |
 ## Tool and app pipelines
 
 ### Impl
@@ -5499,17 +5591,19 @@ The two application-response stores appear as `ais`.
 **Where**: TST principle analyses 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 8 | 0.01 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `Let It Crash` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Property-Based Testing` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Macro Restraint` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Notes on Related Analyses` | 1 | 1 | 7 | 0.01 | U R* | hd |  |
-| `Comprehensive Analysis Table` | 1 | 1 | 965 | 0.93 | U R* | hd |  |
-| `Summary Statistics` | 1 | 1 | 55 | 0.05 | U R* | hd | holds 4 named ### parts in 1 file, each with fields Completed, Pending TODO, Total Coverage, ✅ Exemplar Quality, ⚠️ Needs Rework, 📊 Good Quality (+10 more) |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 8 | 0.01 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| `Let It Crash` | 1 | 1 | 0.00 | la |  |
+| `Property-Based Testing` | 1 | 1 | 0.00 | la |  |
+| `Macro Restraint` | 1 | 1 | 0.00 | la |  |
+| `Notes on Related Analyses` | 1 | 7 | 0.01 | hd |  |
+| `Comprehensive Analysis Table` | 1 | 965 | 0.93 | hd |  |
+| `Summary Statistics` | 1 | 55 | 0.05 | hd | holds 4 named ### parts in 1 file, each with fields Completed, Pending TODO, Total Coverage, ✅ Exemplar Quality, ⚠️ Needs Rework, 📊 Good Quality (+10 more) |
 
 ### Appendix
 
@@ -5518,15 +5612,17 @@ The two application-response stores appear as `ais`.
 **Where**: agent memory survey 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.02 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.02 | U* R* | im | untitled opening prose (summary, statement, or the whole body) |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im | the segment's name / one-line claim |
-| `Features read from the modes` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `What was tried` | 1 | 1 | 11 | 0.20 | U R* | hd |  |
-| `Results so far` | 1 | 1 | 34 | 0.61 | U R* | hd |  |
-| `The next step, if pursued` | 1 | 1 | 8 | 0.14 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.02 | if |  |
+| `(Preamble)` | 1 | 1 | 0.02 | im | untitled opening prose (summary, statement, or the whole body) |
+| `(Title)` | 1 | 1 | 0.02 | im | the segment's name / one-line claim |
+| `Features read from the modes` | 1 | 1 | 0.02 | la |  |
+| `What was tried` | 1 | 11 | 0.20 | hd |  |
+| `Results so far` | 1 | 34 | 0.61 | hd |  |
+| `The next step, if pursued` | 1 | 8 | 0.14 | hd |  |
 
 ### Glossary
 
@@ -5535,27 +5631,29 @@ The two application-response stores appear as `ais`.
 **Where**: agent memory survey 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.01 | U* R* | im | untitled opening prose (summary, statement, or the whole body) |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the segment's name / one-line claim |
-| `A` | 1 | 1 | 8 | 0.06 | U R* | hd |  |
-| `B` | 1 | 1 | 5 | 0.04 | U R* | hd |  |
-| `C` | 1 | 1 | 9 | 0.06 | U R* | hd |  |
-| `D` | 1 | 1 | 6 | 0.04 | U R* | hd |  |
-| `E` | 1 | 1 | 9 | 0.06 | U R* | hd |  |
-| `F` | 1 | 1 | 8 | 0.06 | U R* | hd |  |
-| `G` | 1 | 1 | 7 | 0.05 | U R* | hd |  |
-| `H` | 1 | 1 | 5 | 0.04 | U R* | hd |  |
-| `I` | 1 | 1 | 8 | 0.06 | U R* | hd |  |
-| `L` | 1 | 1 | 7 | 0.05 | U R* | hd |  |
-| `M` | 1 | 1 | 8 | 0.06 | U R* | hd |  |
-| `N` | 1 | 1 | 7 | 0.05 | U R* | hd |  |
-| `P` | 1 | 1 | 14 | 0.10 | U R* | hd |  |
-| `R` | 1 | 1 | 11 | 0.08 | U R* | hd |  |
-| `S` | 1 | 1 | 14 | 0.10 | U R* | hd |  |
-| `T` | 1 | 1 | 9 | 0.06 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 1 | 0.01 | im | untitled opening prose (summary, statement, or the whole body) |
+| `(Title)` | 1 | 1 | 0.01 | im | the segment's name / one-line claim |
+| `A` | 1 | 8 | 0.06 | hd |  |
+| `B` | 1 | 5 | 0.04 | hd |  |
+| `C` | 1 | 9 | 0.06 | hd |  |
+| `D` | 1 | 6 | 0.04 | hd |  |
+| `E` | 1 | 9 | 0.06 | hd |  |
+| `F` | 1 | 8 | 0.06 | hd |  |
+| `G` | 1 | 7 | 0.05 | hd |  |
+| `H` | 1 | 5 | 0.04 | hd |  |
+| `I` | 1 | 8 | 0.06 | hd |  |
+| `L` | 1 | 7 | 0.05 | hd |  |
+| `M` | 1 | 8 | 0.06 | hd |  |
+| `N` | 1 | 7 | 0.05 | hd |  |
+| `P` | 1 | 14 | 0.10 | hd |  |
+| `R` | 1 | 11 | 0.08 | hd |  |
+| `S` | 1 | 14 | 0.10 | hd |  |
+| `T` | 1 | 9 | 0.06 | hd |  |
 
 ### Story
 
@@ -5564,21 +5662,23 @@ The two application-response stores appear as `ais`.
 **Where**: agent memory survey 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 3 | 0.02 | U* R* | im | untitled opening prose (summary, statement, or the whole body) |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the segment's name / one-line claim |
-| `Interference` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Abstraction without storing abstractions` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `The frame` | 1 | 1 | 15 | 0.08 | U R* | hd |  |
-| `Forgetting is a bet on future need` | 1 | 1 | 20 | 0.11 | U R* | hd |  |
-| `Retrieval is resemblance, and what comes back is a blend` | 1 | 1 | 20 | 0.11 | U R* | hd |  |
-| `Context` | 1 | 1 | 29 | 0.16 | U R* | hd |  |
-| `Events` | 1 | 1 | 29 | 0.16 | U R* | hd |  |
-| `Two learning systems` | 1 | 1 | 26 | 0.14 | U R* | hd |  |
-| `The unifying idea` | 1 | 1 | 17 | 0.09 | U R* | hd |  |
-| `What this means for agents, and how firmly` | 1 | 1 | 23 | 0.12 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 3 | 0.02 | im | untitled opening prose (summary, statement, or the whole body) |
+| `(Title)` | 1 | 1 | 0.01 | im | the segment's name / one-line claim |
+| `Interference` | 1 | 1 | 0.01 | la |  |
+| `Abstraction without storing abstractions` | 1 | 1 | 0.01 | la |  |
+| `The frame` | 1 | 15 | 0.08 | hd |  |
+| `Forgetting is a bet on future need` | 1 | 20 | 0.11 | hd |  |
+| `Retrieval is resemblance, and what comes back is a blend` | 1 | 20 | 0.11 | hd |  |
+| `Context` | 1 | 29 | 0.16 | hd |  |
+| `Events` | 1 | 29 | 0.16 | hd |  |
+| `Two learning systems` | 1 | 26 | 0.14 | hd |  |
+| `The unifying idea` | 1 | 17 | 0.09 | hd |  |
+| `What this means for agents, and how firmly` | 1 | 23 | 0.12 | hd |  |
 
 ### Supplement
 
@@ -5587,15 +5687,17 @@ The two application-response stores appear as `ais`.
 **Where**: AAT summary walk 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | title (human-readable, no fixed form) |
-| `Numbering map and gaps` | 1 | 1 | 45 | 0.54 | U R* | hd |  |
-| `UX / clarity flags worth surfacing` | 1 | 1 | 26 | 0.31 | U R* | hd | holds 3 named ### parts in 1 file |
-| `What didn't trip me up` | 1 | 1 | 4 | 0.05 | U R* | hd |  |
-| `One stylistic observation, take or leave` | 1 | 1 | 6 | 0.07 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 1 | 0.01 | im |  |
+| `(Title)` | 1 | 1 | 0.01 | im | title (human-readable, no fixed form) |
+| `Numbering map and gaps` | 1 | 45 | 0.54 | hd |  |
+| `UX / clarity flags worth surfacing` | 1 | 26 | 0.31 | hd | holds 3 named ### parts in 1 file |
+| `What didn't trip me up` | 1 | 4 | 0.05 | hd |  |
+| `One stylistic observation, take or leave` | 1 | 6 | 0.07 | hd |  |
 
 ### Outline
 
@@ -5730,16 +5832,18 @@ The two application-response stores appear as `ais`.
 **Where**: TST vault theory 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `📐 Core Components` | 1 | 1 | 56 | 0.46 | U R* | hd | holds 3 named ### parts in 1 file |
-| `🔬 Key Insights` | 1 | 1 | 20 | 0.16 | U R* | hd | holds 3 ### key insights in 1 file, each with fields Comprehension, Change Impact, Lindy Effect |
-| `📊 Applications` | 1 | 1 | 15 | 0.12 | U R* | hd | holds 2 named ### parts in 1 file, each with fields Architecture Decisions, Refactoring ROI, Module Boundaries, Technical Debt |
-| `🔗 Related Documents` | 1 | 1 | 12 | 0.10 | U R* | hd | holds 2 named ### parts in 1 file |
-| `📈 Theory Evolution` | 1 | 1 | 17 | 0.14 | U R* | hd | holds 2 named ### parts in 1 file |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 1 | 0.01 | im |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `📐 Core Components` | 1 | 56 | 0.46 | hd | holds 3 named ### parts in 1 file |
+| `🔬 Key Insights` | 1 | 20 | 0.16 | hd | holds 3 ### key insights in 1 file, each with fields Comprehension, Change Impact, Lindy Effect |
+| `📊 Applications` | 1 | 15 | 0.12 | hd | holds 2 named ### parts in 1 file, each with fields Architecture Decisions, Refactoring ROI, Module Boundaries, Technical Debt |
+| `🔗 Related Documents` | 1 | 12 | 0.10 | hd | holds 2 named ### parts in 1 file |
+| `📈 Theory Evolution` | 1 | 17 | 0.14 | hd | holds 2 named ### parts in 1 file |
 
 ### Readme (Toc)
 
@@ -5748,14 +5852,16 @@ The two application-response stores appear as `ais`.
 **Where**: Temporal Software Theory 1  
 **Shape declared in**: n/a (the outline)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.02 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.02 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im |  |
-| `The cognitive shift we seek` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Table of Contents` | 1 | 1 | 34 | 0.58 | U R* | hd |  |
-| `The Synthesis` | 1 | 1 | 22 | 0.37 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.02 | if |  |
+| `(Preamble)` | 1 | 1 | 0.02 | im |  |
+| `(Title)` | 1 | 1 | 0.02 | im |  |
+| `The cognitive shift we seek` | 1 | 1 | 0.02 | la |  |
+| `Table of Contents` | 1 | 34 | 0.58 | hd |  |
+| `The Synthesis` | 1 | 22 | 0.37 | hd |  |
 ## Papers, essays, books and applications
 
 ### Essay-part
@@ -7152,25 +7258,27 @@ The two application-response stores appear as `ais`.
 **Where**: ELI essays quote bank (explication 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `Note` | 1 | 1 | 44 | 0.15 | U R* | ot | working note (stripped at build in papers) |
-| `Conceptual, Narrative, then Ethical` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Mutability` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Emerson throughline` ➕ | 3 | 1 | 3 | 0.01 | U R* | la |  |
-| `What this essay does NOT do` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `ESSAY N ›  › Thesis` ➕ | 3 | 1 | 3 | 0.01 | U R* | la |  |
-| `ESSAY N ›  › Movement` ➕ | 2 | 1 | 2 | 0.01 | U R* | la |  |
-| `ESSAY N ›  › Emerson throughline` ➕ | 2 | 1 | 2 | 0.01 | U R* | la |  |
-| `ESSAY N ›  › What this essay establishes` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `ESSAY N ›  › Structural note` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Framing Note` | 1 | 1 | 15 | 0.05 | U R* | hd |  |
-| `(Essay)` ➕ | 5 | 1 | 243 | 0.81 | U* R* | im | free sections |
-| `(Essay) › Thesis` ➕ | 2 | 1 | 7 | 0.02 | U* R* | im |  |
-| `(Essay) › Movement` ➕ | 3 | 1 | 80 | 0.27 | U* R* | im |  |
-| `(Essay) › Notes` ➕ | 2 | 1 | 27 | 0.09 | U* R* | im |  |
-| `Cross-Cutting Notes` | 1 | 1 | 37 | 0.12 | U R* | hd | holds 4 ### notes in 1 file; 2 named ### parts in 1 file |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `Note` | 1 | 44 | 0.15 | ot | working note (stripped at build in papers) |
+| `Conceptual, Narrative, then Ethical` | 1 | 1 | 0.00 | la |  |
+| `Mutability` | 1 | 1 | 0.00 | la |  |
+| `Emerson throughline` | 3 | 3 | 0.01 | la |  |
+| `What this essay does NOT do` | 1 | 1 | 0.00 | la |  |
+| `ESSAY N ›  › Thesis` | 3 | 3 | 0.01 | la |  |
+| `ESSAY N ›  › Movement` | 2 | 2 | 0.01 | la |  |
+| `ESSAY N ›  › Emerson throughline` | 2 | 2 | 0.01 | la |  |
+| `ESSAY N ›  › What this essay establishes` | 1 | 1 | 0.00 | la |  |
+| `ESSAY N ›  › Structural note` | 1 | 1 | 0.00 | la |  |
+| `Framing Note` | 1 | 15 | 0.05 | hd |  |
+| `(Essay)` | 5 | 243 | 0.81 | im | free sections |
+| `(Essay) › Thesis` | 2 | 7 | 0.02 | im |  |
+| `(Essay) › Movement` | 3 | 80 | 0.27 | im |  |
+| `(Essay) › Notes` | 2 | 27 | 0.09 | im |  |
+| `Cross-Cutting Notes` | 1 | 37 | 0.12 | hd | holds 4 ### notes in 1 file; 2 named ### parts in 1 file |
 
 ### Front Matter (Preface)
 
@@ -7179,12 +7287,14 @@ The two application-response stores appear as `ais`.
 **Where**: Principia Ars Technica (book) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 21 | 0.31 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `Acknowledgements` | 1 | 1 | 35 | 0.51 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 21 | 0.31 | im |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `Acknowledgements` | 1 | 35 | 0.51 | hd |  |
 
 ### Guide Index
 
@@ -7193,40 +7303,42 @@ The two application-response stores appear as `ais`.
 **Where**: vault: clean_split 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `Market Growth` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Performance Breakthroughs` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Technology Maturation` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Agent` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Agentic AI` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `AutoGen v0.4` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Circuit Breaker Pattern` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Context Window` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `CrewAI` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Epistemological Model` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `File-System-as-Memory` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Group Chat Orchestration` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Judge Agent Pattern` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `LangGraph` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Manus AI` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Memory Block` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Model Context Protocol` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Multi-Agent System` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Orchestrator-Worker Pattern` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Semantic Broadcast` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Sub-Agent` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Todo-Driven Attention` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Tool Masking` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Token Economics` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Tool Calling` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Vector Database Integration` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Executive Summary` | 1 | 1 | 6 | 0.07 | U R* | hd | summary |
-| `Navigation` | 1 | 1 | 22 | 0.24 | U R* | hd | links to the 12 pieces; holds 4 named ### parts in 1 file |
-| `Key Insights` | 1 | 1 | 16 | 0.17 | U R* | hd | insights |
-| `Glossary` | 1 | 1 | 47 | 0.51 | U R* | hd | glossary |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `Market Growth` | 1 | 1 | 0.01 | la |  |
+| `Performance Breakthroughs` | 1 | 1 | 0.01 | la |  |
+| `Technology Maturation` | 1 | 1 | 0.01 | la |  |
+| `Agent` | 1 | 1 | 0.01 | la |  |
+| `Agentic AI` | 1 | 1 | 0.01 | la |  |
+| `AutoGen v0.4` | 1 | 1 | 0.01 | la |  |
+| `Circuit Breaker Pattern` | 1 | 1 | 0.01 | la |  |
+| `Context Window` | 1 | 1 | 0.01 | la |  |
+| `CrewAI` | 1 | 1 | 0.01 | la |  |
+| `Epistemological Model` | 1 | 1 | 0.01 | la |  |
+| `File-System-as-Memory` | 1 | 1 | 0.01 | la |  |
+| `Group Chat Orchestration` | 1 | 1 | 0.01 | la |  |
+| `Judge Agent Pattern` | 1 | 1 | 0.01 | la |  |
+| `LangGraph` | 1 | 1 | 0.01 | la |  |
+| `Manus AI` | 1 | 1 | 0.01 | la |  |
+| `Memory Block` | 1 | 1 | 0.01 | la |  |
+| `Model Context Protocol` | 1 | 1 | 0.01 | la |  |
+| `Multi-Agent System` | 1 | 1 | 0.01 | la |  |
+| `Orchestrator-Worker Pattern` | 1 | 1 | 0.01 | la |  |
+| `Semantic Broadcast` | 1 | 1 | 0.01 | la |  |
+| `Sub-Agent` | 1 | 1 | 0.01 | la |  |
+| `Todo-Driven Attention` | 1 | 1 | 0.01 | la |  |
+| `Tool Masking` | 1 | 1 | 0.01 | la |  |
+| `Token Economics` | 1 | 1 | 0.01 | la |  |
+| `Tool Calling` | 1 | 1 | 0.01 | la |  |
+| `Vector Database Integration` | 1 | 1 | 0.01 | la |  |
+| `Executive Summary` | 1 | 6 | 0.07 | hd | summary |
+| `Navigation` | 1 | 22 | 0.24 | hd | links to the 12 pieces; holds 4 named ### parts in 1 file |
+| `Key Insights` | 1 | 16 | 0.17 | hd | insights |
+| `Glossary` | 1 | 47 | 0.51 | hd | glossary |
 
 ### Aside-card
 
@@ -7235,24 +7347,26 @@ The two application-response stores appear as `ais`.
 **Where**: ais (eoi cards) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `Slug` | 1 | 1 | 1 | 0.02 | U R* | fm | identity (= filename) |
-| `Form` | 1 | 1 | 1 | 0.02 | U R* | fm | speech-act kind |
-| `State` | 1 | 1 | 1 | 0.02 | U R* | fm | process-state flags |
-| `Voice` | 1 | 1 | 1 | 0.02 | U R* | fm | who wrote it |
-| `(Preamble)` | 1 | 1 | 1 | 0.02 | U* R* | im | untitled opening prose (summary, statement, or the whole body) |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im | the segment's name / one-line claim |
-| `Reserved, not yet implemented` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Implemented and tested` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Designed but not built` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Not corporate` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `A state-level arbiter` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Thought-leadership` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `The known need` | 1 | 1 | 4 | 0.07 | U R* | hd |  |
-| `What exists` | 1 | 1 | 24 | 0.41 | U R* | hd |  |
-| `Honest scope for the response` | 1 | 1 | 8 | 0.14 | U R* | hd |  |
-| `Institutional and leadership positioning` | 1 | 1 | 13 | 0.22 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `Slug` | 1 | 1 | 0.02 | fm | identity (= filename) |
+| `Form` | 1 | 1 | 0.02 | fm | speech-act kind |
+| `State` | 1 | 1 | 0.02 | fm | process-state flags |
+| `Voice` | 1 | 1 | 0.02 | fm | who wrote it |
+| `(Preamble)` | 1 | 1 | 0.02 | im | untitled opening prose (summary, statement, or the whole body) |
+| `(Title)` | 1 | 1 | 0.02 | im | the segment's name / one-line claim |
+| `Reserved, not yet implemented` | 1 | 1 | 0.02 | la |  |
+| `Implemented and tested` | 1 | 1 | 0.02 | la |  |
+| `Designed but not built` | 1 | 1 | 0.02 | la |  |
+| `Not corporate` | 1 | 1 | 0.02 | la |  |
+| `A state-level arbiter` | 1 | 1 | 0.02 | la |  |
+| `Thought-leadership` | 1 | 1 | 0.02 | la |  |
+| `The known need` | 1 | 4 | 0.07 | hd |  |
+| `What exists` | 1 | 24 | 0.41 | hd |  |
+| `Honest scope for the response` | 1 | 8 | 0.14 | hd |  |
+| `Institutional and leadership positioning` | 1 | 13 | 0.22 | hd |  |
 
 ### Blind-spot-candidates
 
@@ -7261,24 +7375,26 @@ The two application-response stores appear as `ais`.
 **Where**: ais (eoi cards) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `Slug` | 1 | 1 | 1 | 0.01 | U R* | fm | identity (= filename) |
-| `Form` | 1 | 1 | 1 | 0.01 | U R* | fm | speech-act kind |
-| `State` | 1 | 1 | 1 | 0.01 | U R* | fm | process-state flags |
-| `Voice` | 1 | 1 | 1 | 0.01 | U R* | fm | who wrote it |
-| `(Preamble)` | 1 | 1 | 2 | 0.02 | U* R* | im | untitled opening prose (summary, statement, or the whole body) |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the segment's name / one-line claim |
-| `Are episodic agents safer, or just cheaper?` | 1 | 1 | 12 | 0.10 | U R* | hd |  |
-| `Classify agent failures by what was lost, not by what was done` | 1 | 1 | 16 | 0.14 | U R* | hd |  |
-| `A helpless agent looks exactly like a well-controlled one` | 1 | 1 | 12 | 0.10 | U R* | hd |  |
-| `Objective capture is silent on its own gauge` | 1 | 1 | 10 | 0.09 | U R* | hd |  |
-| `Behavioral tests cannot certify a self-edit` | 1 | 1 | 10 | 0.09 | U R* | hd |  |
-| `When the model behind a persistent agent is swapped, what persists?` | 1 | 1 | 8 | 0.07 | U R* | hd |  |
-| `Forks` | 1 | 1 | 10 | 0.09 | U R* | hd |  |
-| `An agent's information burn as a vital sign` | 1 | 1 | 10 | 0.09 | U R* | hd |  |
-| `Agents have no recourse channel` | 1 | 1 | 8 | 0.07 | U R* | hd |  |
-| `The evidence the whole field runs on is agent-written` | 1 | 1 | 8 | 0.07 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `Slug` | 1 | 1 | 0.01 | fm | identity (= filename) |
+| `Form` | 1 | 1 | 0.01 | fm | speech-act kind |
+| `State` | 1 | 1 | 0.01 | fm | process-state flags |
+| `Voice` | 1 | 1 | 0.01 | fm | who wrote it |
+| `(Preamble)` | 1 | 2 | 0.02 | im | untitled opening prose (summary, statement, or the whole body) |
+| `(Title)` | 1 | 1 | 0.01 | im | the segment's name / one-line claim |
+| `Are episodic agents safer, or just cheaper?` | 1 | 12 | 0.10 | hd |  |
+| `Classify agent failures by what was lost, not by what was done` | 1 | 16 | 0.14 | hd |  |
+| `A helpless agent looks exactly like a well-controlled one` | 1 | 12 | 0.10 | hd |  |
+| `Objective capture is silent on its own gauge` | 1 | 10 | 0.09 | hd |  |
+| `Behavioral tests cannot certify a self-edit` | 1 | 10 | 0.09 | hd |  |
+| `When the model behind a persistent agent is swapped, what persists?` | 1 | 8 | 0.07 | hd |  |
+| `Forks` | 1 | 10 | 0.09 | hd |  |
+| `An agent's information burn as a vital sign` | 1 | 10 | 0.09 | hd |  |
+| `Agents have no recourse channel` | 1 | 8 | 0.07 | hd |  |
+| `The evidence the whole field runs on is agent-written` | 1 | 8 | 0.07 | hd |  |
 
 ### Join-card
 
@@ -7287,22 +7403,24 @@ The two application-response stores appear as `ais`.
 **Where**: ais (eoi cards) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `Slug` | 1 | 1 | 1 | 0.01 | U R* | fm | identity (= filename) |
-| `Form` | 1 | 1 | 1 | 0.01 | U R* | fm | speech-act kind |
-| `State` | 1 | 1 | 1 | 0.01 | U R* | fm | process-state flags |
-| `Voice` | 1 | 1 | 1 | 0.01 | U R* | fm | who wrote it |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the segment's name / one-line claim |
-| `The recognition` | 1 | 1 | 6 | 0.07 | U R* | hd |  |
-| `What the incident report says` | 1 | 1 | 9 | 0.11 | U R* | hd |  |
-| `How the context-saliency theory predicts it` | 1 | 1 | 9 | 0.11 | U R* | hd |  |
-| `Joseph's own finding` | 1 | 1 | 10 | 0.12 | U R* | hd |  |
-| `Why forward-only matters` | 1 | 1 | 4 | 0.05 | U R* | hd |  |
-| `What exists` | 1 | 1 | 9 | 0.11 | U R* | hd |  |
-| `What it gives the response` | 1 | 1 | 6 | 0.07 | U R* | hd |  |
-| `Findings from the context-saliency record that bear on the incident` | 1 | 1 | 13 | 0.16 | U R* | hd |  |
-| `Open` | 1 | 1 | 6 | 0.07 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `Slug` | 1 | 1 | 0.01 | fm | identity (= filename) |
+| `Form` | 1 | 1 | 0.01 | fm | speech-act kind |
+| `State` | 1 | 1 | 0.01 | fm | process-state flags |
+| `Voice` | 1 | 1 | 0.01 | fm | who wrote it |
+| `(Title)` | 1 | 1 | 0.01 | im | the segment's name / one-line claim |
+| `The recognition` | 1 | 6 | 0.07 | hd |  |
+| `What the incident report says` | 1 | 9 | 0.11 | hd |  |
+| `How the context-saliency theory predicts it` | 1 | 9 | 0.11 | hd |  |
+| `Joseph's own finding` | 1 | 10 | 0.12 | hd |  |
+| `Why forward-only matters` | 1 | 4 | 0.05 | hd |  |
+| `What exists` | 1 | 9 | 0.11 | hd |  |
+| `What it gives the response` | 1 | 6 | 0.07 | hd |  |
+| `Findings from the context-saliency record that bear on the incident` | 1 | 13 | 0.16 | hd |  |
+| `Open` | 1 | 6 | 0.07 | hd |  |
 
 ### Working Notes
 
@@ -7311,40 +7429,42 @@ The two application-response stores appear as `ais`.
 **Where**: Practica paper drafts (s4) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.01 | U* R* | im | untitled opening prose (summary, statement, or the whole body) |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the segment's name / one-line claim |
-| `AAT's wrapping construction` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `AAT's external cascade-recovery` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Operata's plumbing / intelligence split` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `AAT canon — required reads` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Operata — required reads` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Source 3 (Bungay), selective` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Emerson` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `This iteration` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Next` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Then` ➕ | 2 | 1 | 2 | 0.01 | U R* | la |  |
-| `At or after first complete draft` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Voice` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Supersession` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Audience` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Pedagogical inflation` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Convergence stretch` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Honesty markers I must carry` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Premise` | 1 | 1 | 12 | 0.07 | U R* | hd |  |
-| `Audience and voice` | 1 | 1 | 6 | 0.03 | U R* | hd |  |
-| `Rough outline` | 1 | 1 | 20 | 0.11 | U R* | hd |  |
-| `Source-verification checklist` | 1 | 1 | 24 | 0.13 | U R* | hd |  |
-| `Open questions to resolve before first draft` | 1 | 1 | 12 | 0.07 | U R* | hd |  |
-| `Process` | 1 | 1 | 8 | 0.04 | U R* | hd |  |
-| `Failure modes to watch` | 1 | 1 | 10 | 0.05 | U R* | hd |  |
-| `Verification log — round N` | 1 | 1 | 87 | 0.48 | U R* | hd | holds 2 named ### parts in 1 file, each with fields E1, E2, E5 |
-| `Verification log — round N › What verified solidly` | 1 | 1 | 22 | 0.12 | U R* | hd |  |
-| `Verification log — round N › What shifted from harvest framing — important reshape` | 1 | 1 | 26 | 0.14 | U R* | hd |  |
-| `Verification log — round N › Still pending` | 1 | 1 | 5 | 0.03 | U R* | hd |  |
-| `Verification log — round N › Next concrete step` | 1 | 1 | 4 | 0.02 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 1 | 0.01 | im | untitled opening prose (summary, statement, or the whole body) |
+| `(Title)` | 1 | 1 | 0.01 | im | the segment's name / one-line claim |
+| `AAT's wrapping construction` | 1 | 1 | 0.01 | la |  |
+| `AAT's external cascade-recovery` | 1 | 1 | 0.01 | la |  |
+| `Operata's plumbing / intelligence split` | 1 | 1 | 0.01 | la |  |
+| `AAT canon — required reads` | 1 | 1 | 0.01 | la |  |
+| `Operata — required reads` | 1 | 1 | 0.01 | la |  |
+| `Source 3 (Bungay), selective` | 1 | 1 | 0.01 | la |  |
+| `Emerson` | 1 | 1 | 0.01 | la |  |
+| `This iteration` | 1 | 1 | 0.01 | la |  |
+| `Next` | 1 | 1 | 0.01 | la |  |
+| `Then` | 2 | 2 | 0.01 | la |  |
+| `At or after first complete draft` | 1 | 1 | 0.01 | la |  |
+| `Voice` | 1 | 1 | 0.01 | la |  |
+| `Supersession` | 1 | 1 | 0.01 | la |  |
+| `Audience` | 1 | 1 | 0.01 | la |  |
+| `Pedagogical inflation` | 1 | 1 | 0.01 | la |  |
+| `Convergence stretch` | 1 | 1 | 0.01 | la |  |
+| `Honesty markers I must carry` | 1 | 1 | 0.01 | la |  |
+| `Premise` | 1 | 12 | 0.07 | hd |  |
+| `Audience and voice` | 1 | 6 | 0.03 | hd |  |
+| `Rough outline` | 1 | 20 | 0.11 | hd |  |
+| `Source-verification checklist` | 1 | 24 | 0.13 | hd |  |
+| `Open questions to resolve before first draft` | 1 | 12 | 0.07 | hd |  |
+| `Process` | 1 | 8 | 0.04 | hd |  |
+| `Failure modes to watch` | 1 | 10 | 0.05 | hd |  |
+| `Verification log — round N` | 1 | 87 | 0.48 | hd | holds 2 named ### parts in 1 file, each with fields E1, E2, E5 |
+| `Verification log — round N › What verified solidly` | 1 | 22 | 0.12 | hd |  |
+| `Verification log — round N › What shifted from harvest framing — important reshape` | 1 | 26 | 0.14 | hd |  |
+| `Verification log — round N › Still pending` | 1 | 5 | 0.03 | hd |  |
+| `Verification log — round N › Next concrete step` | 1 | 4 | 0.02 | hd |  |
 
 ### Working Notes
 
@@ -7353,33 +7473,35 @@ The two application-response stores appear as `ais`.
 **Where**: Practica paper drafts (s5) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.01 | U* R* | im | untitled opening prose (summary, statement, or the whole body) |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the segment's name / one-line claim |
-| `AAT formalism — three partially-related formulations` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Engineering — operata` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `AAT canon — required reads` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Bungay — required reads` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Operata — already verified in paper N` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Other` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `This iteration` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Next iteration` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Then` ➕ | 3 | 1 | 3 | 0.02 | U R* | la |  |
-| `Premise` | 1 | 1 | 23 | 0.12 | U R* | hd |  |
-| `Relationship to paper N` | 1 | 1 | 8 | 0.04 | U R* | hd |  |
-| `Audience and voice` | 1 | 1 | 4 | 0.02 | U R* | hd |  |
-| `Rough outline` | 1 | 1 | 18 | 0.10 | U R* | hd |  |
-| `Source-verification checklist` | 1 | 1 | 20 | 0.11 | U R* | hd |  |
-| `Open questions to resolve before first draft` | 1 | 1 | 18 | 0.10 | U R* | hd |  |
-| `Process` | 1 | 1 | 8 | 0.04 | U R* | hd |  |
-| `Failure modes to watch` | 1 | 1 | 12 | 0.06 | U R* | hd |  |
-| `Verification log — round N` | 1 | 1 | 75 | 0.40 | U R* | hd | holds 3 named ### parts in 1 file, each with fields Voice discipline, Citation discipline, Honest scoping, Section ordering, Working-doc artifacts, Read efficiency |
-| `Verification log — round N › What verified solidly` | 1 | 1 | 12 | 0.06 | U R* | hd |  |
-| `Verification log — round N › What shifted — important reshape` | 1 | 1 | 20 | 0.11 | U R* | hd |  |
-| `Verification log — round N › Still pending` | 1 | 1 | 5 | 0.03 | U R* | hd |  |
-| `Verification log — round N › Next concrete step` | 1 | 1 | 4 | 0.02 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 1 | 0.01 | im | untitled opening prose (summary, statement, or the whole body) |
+| `(Title)` | 1 | 1 | 0.01 | im | the segment's name / one-line claim |
+| `AAT formalism — three partially-related formulations` | 1 | 1 | 0.01 | la |  |
+| `Engineering — operata` | 1 | 1 | 0.01 | la |  |
+| `AAT canon — required reads` | 1 | 1 | 0.01 | la |  |
+| `Bungay — required reads` | 1 | 1 | 0.01 | la |  |
+| `Operata — already verified in paper N` | 1 | 1 | 0.01 | la |  |
+| `Other` | 1 | 1 | 0.01 | la |  |
+| `This iteration` | 1 | 1 | 0.01 | la |  |
+| `Next iteration` | 1 | 1 | 0.01 | la |  |
+| `Then` | 3 | 3 | 0.02 | la |  |
+| `Premise` | 1 | 23 | 0.12 | hd |  |
+| `Relationship to paper N` | 1 | 8 | 0.04 | hd |  |
+| `Audience and voice` | 1 | 4 | 0.02 | hd |  |
+| `Rough outline` | 1 | 18 | 0.10 | hd |  |
+| `Source-verification checklist` | 1 | 20 | 0.11 | hd |  |
+| `Open questions to resolve before first draft` | 1 | 18 | 0.10 | hd |  |
+| `Process` | 1 | 8 | 0.04 | hd |  |
+| `Failure modes to watch` | 1 | 12 | 0.06 | hd |  |
+| `Verification log — round N` | 1 | 75 | 0.40 | hd | holds 3 named ### parts in 1 file, each with fields Voice discipline, Citation discipline, Honest scoping, Section ordering, Working-doc artifacts, Read efficiency |
+| `Verification log — round N › What verified solidly` | 1 | 12 | 0.06 | hd |  |
+| `Verification log — round N › What shifted — important reshape` | 1 | 20 | 0.11 | hd |  |
+| `Verification log — round N › Still pending` | 1 | 5 | 0.03 | hd |  |
+| `Verification log — round N › Next concrete step` | 1 | 4 | 0.02 | hd |  |
 
 ### Meta
 
@@ -7522,15 +7644,17 @@ The two application-response stores appear as `ais`.
 **Where**: ACA paper 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.03 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.03 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.03 | U* R* | im |  |
-| `A.1 The information-loss boundary, and why opacity is constitutive` | 1 | 1 | 8 | 0.20 | U R* | hd |  |
-| `A.2 Architectural classes, and why language-constituted systems are the hard case` | 1 | 1 | 8 | 0.20 | U R* | hd |  |
-| `A.3 Observability dominance` | 1 | 1 | 10 | 0.25 | U R* | hd |  |
-| `A.4 The seam` | 1 | 1 | 4 | 0.10 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.03 | if |  |
+| `(Preamble)` | 1 | 1 | 0.03 | im |  |
+| `(Title)` | 1 | 1 | 0.03 | im |  |
+| `A.1 The information-loss boundary, and why opacity is constitutive` | 1 | 8 | 0.20 | hd |  |
+| `A.2 Architectural classes, and why language-constituted systems are the hard case` | 1 | 8 | 0.20 | hd |  |
+| `A.3 Observability dominance` | 1 | 10 | 0.25 | hd |  |
+| `A.4 The seam` | 1 | 4 | 0.10 | hd |  |
 
 ### Meta
 
@@ -7679,20 +7803,22 @@ The two application-response stores appear as `ais`.
 **Where**: ops paper portfolio 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 4 | 0.03 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the title |
-| `Last updated` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Reading order` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `Under review` | 1 | 1 | 11 | 0.08 | U R* | hd |  |
-| `Drafting` | 1 | 1 | 8 | 0.06 | U R* | hd |  |
-| `Upcoming deadlines` | 1 | 1 | 17 | 0.12 | U R* | hd |  |
-| `Candidates` | 1 | 1 | 67 | 0.48 | U R* | hd | holds 8 ### candidates in 1 file; 1 named ### parts in 1 file |
-| `Deferred` | 1 | 1 | 8 | 0.06 | U R* | hd |  |
-| `Decided / past` | 1 | 1 | 13 | 0.09 | U R* | hd |  |
-| `Discipline notes` | 1 | 1 | 7 | 0.05 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 4 | 0.03 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.01 | im | the title |
+| `Last updated` | 1 | 1 | 0.01 | la |  |
+| `Reading order` | 1 | 1 | 0.01 | la |  |
+| `Under review` | 1 | 11 | 0.08 | hd |  |
+| `Drafting` | 1 | 8 | 0.06 | hd |  |
+| `Upcoming deadlines` | 1 | 17 | 0.12 | hd |  |
+| `Candidates` | 1 | 67 | 0.48 | hd | holds 8 ### candidates in 1 file; 1 named ### parts in 1 file |
+| `Deferred` | 1 | 8 | 0.06 | hd |  |
+| `Decided / past` | 1 | 13 | 0.09 | hd |  |
+| `Discipline notes` | 1 | 7 | 0.05 | hd |  |
 
 ### Pipeline-outline
 
@@ -7701,17 +7827,19 @@ The two application-response stores appear as `ais`.
 **Where**: Explication essay pipeline 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.03 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.03 | U* R* | im | the title |
-| `Program-level direction` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Why this order` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Possible later members` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Sequencing, state, and shared conventions` | 1 | 1 | 6 | 0.18 | U R* | hd |  |
-| `Sequence` | 1 | 1 | 12 | 0.35 | U R* | hd |  |
-| `Shared conventions` | 1 | 1 | 9 | 0.26 | U R* | hd |  |
-| `Open items` | 1 | 1 | 7 | 0.21 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.03 | if |  |
+| `(Title)` | 1 | 1 | 0.03 | im | the title |
+| `Program-level direction` | 1 | 1 | 0.03 | la |  |
+| `Why this order` | 1 | 1 | 0.03 | la |  |
+| `Possible later members` | 1 | 1 | 0.03 | la |  |
+| `Sequencing, state, and shared conventions` | 1 | 6 | 0.18 | hd |  |
+| `Sequence` | 1 | 12 | 0.35 | hd |  |
+| `Shared conventions` | 1 | 9 | 0.26 | hd |  |
+| `Open items` | 1 | 7 | 0.21 | hd |  |
 
 ### Essay-outline
 
@@ -7720,19 +7848,21 @@ The two application-response stores appear as `ais`.
 **Where**: Vis Veritatis 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.02 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.02 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im | the title |
-| `All rows gathered, none drafted` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Register caution carried from the sources themselves` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `The Latin variant` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Fork noted, not essay-blocking` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Deliberately excluded` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Movements` | 1 | 1 | 30 | 0.49 | U R* | hd |  |
-| `Scratch Area / Provisional Outline` | 1 | 1 | 21 | 0.34 | U R* | hd |  |
-| `Working Notes` | 1 | 1 | 8 | 0.13 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.02 | if |  |
+| `(Preamble)` | 1 | 1 | 0.02 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.02 | im | the title |
+| `All rows gathered, none drafted` | 1 | 1 | 0.02 | la |  |
+| `Register caution carried from the sources themselves` | 1 | 1 | 0.02 | la |  |
+| `The Latin variant` | 1 | 1 | 0.02 | la |  |
+| `Fork noted, not essay-blocking` | 1 | 1 | 0.02 | la |  |
+| `Deliberately excluded` | 1 | 1 | 0.02 | la |  |
+| `Movements` | 1 | 30 | 0.49 | hd |  |
+| `Scratch Area / Provisional Outline` | 1 | 21 | 0.34 | hd |  |
+| `Working Notes` | 1 | 8 | 0.13 | hd |  |
 
 ### Essay-outline
 
@@ -7741,17 +7871,19 @@ The two application-response stores appear as `ais`.
 **Where**: Living language 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.03 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.03 | U* R* | im | the title |
-| `What's new since Feb 2026, strengthening the spine` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Materially the furthest along of the three essays` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Boundary with essay N` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Emerson use` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Movements` | 1 | 1 | 13 | 0.38 | U R* | hd |  |
-| `Working Notes` | 1 | 1 | 7 | 0.21 | U R* | hd |  |
-| `Added sources` | 1 | 1 | 4 | 0.12 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.03 | if |  |
+| `(Title)` | 1 | 1 | 0.03 | im | the title |
+| `What's new since Feb 2026, strengthening the spine` | 1 | 1 | 0.03 | la |  |
+| `Materially the furthest along of the three essays` | 1 | 1 | 0.03 | la |  |
+| `Boundary with essay N` | 1 | 1 | 0.03 | la |  |
+| `Emerson use` | 1 | 1 | 0.03 | la |  |
+| `Movements` | 1 | 13 | 0.38 | hd |  |
+| `Working Notes` | 1 | 7 | 0.21 | hd |  |
+| `Added sources` | 1 | 4 | 0.12 | hd |  |
 
 ### Essay-outline
 
@@ -7760,18 +7892,20 @@ The two application-response stores appear as `ais`.
 **Where**: LLM agent ethics 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.03 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.03 | U* R* | im | the title |
-| `What this essay does NOT do` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Scoping decision for Joseph` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Register` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Dependency check before drafting` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Deliberately excluded` | 1 | 1 | 1 | 0.03 | U R* | la |  |
-| `Movements` | 1 | 1 | 13 | 0.37 | U R* | hd |  |
-| `Working Notes` | 1 | 1 | 8 | 0.23 | U R* | hd |  |
-| `Added sources` | 1 | 1 | 4 | 0.11 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.03 | if |  |
+| `(Title)` | 1 | 1 | 0.03 | im | the title |
+| `What this essay does NOT do` | 1 | 1 | 0.03 | la |  |
+| `Scoping decision for Joseph` | 1 | 1 | 0.03 | la |  |
+| `Register` | 1 | 1 | 0.03 | la |  |
+| `Dependency check before drafting` | 1 | 1 | 0.03 | la |  |
+| `Deliberately excluded` | 1 | 1 | 0.03 | la |  |
+| `Movements` | 1 | 13 | 0.37 | hd |  |
+| `Working Notes` | 1 | 8 | 0.23 | hd |  |
+| `Added sources` | 1 | 4 | 0.11 | hd |  |
 
 ### Bibliography
 
@@ -7804,18 +7938,20 @@ The two application-response stores appear as `ais`.
 **Where**: Paper 1 quote substrate 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 7 | 0.04 | U* R* | im | unheaded text between the title and the first section (summary line, status line) |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im | the title |
-| `The two routes from below` | 1 | 1 | 1 | 0.01 | U R* | la |  |
-| `S1 — The primary articulation` | 1 | 1 | 51 | 0.28 | U R* | hd |  |
-| `S2 — The canonical statement` | 1 | 1 | 46 | 0.25 | U R* | hd |  |
-| `S3 — The phenomenology counterpart` | 1 | 1 | 19 | 0.10 | U R* | hd |  |
-| `S4 — The inversion (Joseph, 2026-02-18) + the symmetric form` | 1 | 1 | 19 | 0.10 | U R* | hd |  |
-| `S5 — The recursive / self-application node` | 1 | 1 | 11 | 0.06 | U R* | hd |  |
-| `Architecture implication` | 1 | 1 | 29 | 0.16 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 7 | 0.04 | im | unheaded text between the title and the first section (summary line, status line) |
+| `(Title)` | 1 | 1 | 0.01 | im | the title |
+| `The two routes from below` | 1 | 1 | 0.01 | la |  |
+| `S1 — The primary articulation` | 1 | 51 | 0.28 | hd |  |
+| `S2 — The canonical statement` | 1 | 46 | 0.25 | hd |  |
+| `S3 — The phenomenology counterpart` | 1 | 19 | 0.10 | hd |  |
+| `S4 — The inversion (Joseph, 2026-02-18) + the symmetric form` | 1 | 19 | 0.10 | hd |  |
+| `S5 — The recursive / self-application node` | 1 | 11 | 0.06 | hd |  |
+| `Architecture implication` | 1 | 29 | 0.16 | hd |  |
 ## Agent memory, skills and identity
 
 ### Feedback
@@ -8372,15 +8508,17 @@ The two application-response stores appear as `ais`.
 **Where**: Architectus home 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 3 | 0.03 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `Current Session Summary` | 1 | 1 | 20 | 0.21 | U R* | hd |  |
-| `Immediate Next Steps` | 1 | 1 | 17 | 0.18 | U R* | hd |  |
-| `Key Insights from This Session` | 1 | 1 | 12 | 0.13 | U R* | hd |  |
-| *(1 withheld)* |  |  | 57 | 0.60 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 3 | 0.03 | im |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `Current Session Summary` | 1 | 20 | 0.21 | hd |  |
+| `Immediate Next Steps` | 1 | 17 | 0.18 | hd |  |
+| `Key Insights from This Session` | 1 | 12 | 0.13 | hd |  |
+| *(1 withheld)* |  | 57 | 0.60 |  | listed below |
 
 ### Core-context
 
@@ -8389,14 +8527,16 @@ The two application-response stores appear as `ais`.
 **Where**: Architectus home 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.06 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.06 | U* R* | im |  |
-| `[[core-framework]]` | 1 | 1 | 5 | 0.31 | U R* | hd |  |
-| `[[core-memories]]` | 1 | 1 | 5 | 0.31 | U R* | hd |  |
-| `[[context-immediate]]` | 1 | 1 | 5 | 0.31 | U R* | hd |  |
-| *(1 withheld)* |  |  | 1 | 0.06 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.06 | if |  |
+| `(Title)` | 1 | 1 | 0.06 | im |  |
+| `[[core-framework]]` | 1 | 5 | 0.31 | hd |  |
+| `[[core-memories]]` | 1 | 5 | 0.31 | hd |  |
+| `[[context-immediate]]` | 1 | 5 | 0.31 | hd |  |
+| *(1 withheld)* |  | 1 | 0.06 |  | listed below |
 
 ### Core-framework
 
@@ -8405,12 +8545,14 @@ The two application-response stores appear as `ais`.
 **Where**: Architectus home 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 2 | 0.01 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| *(1 withheld)* |  |  | 181 | 1.15 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 2 | 0.01 | im |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| *(1 withheld)* |  | 181 | 1.15 |  | listed below |
 
 ### Core-identity
 
@@ -8419,12 +8561,14 @@ The two application-response stores appear as `ais`.
 **Where**: Architectus home 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 4 | 0.01 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| *(1 withheld)* |  |  | 690 | 1.84 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 4 | 0.01 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| *(1 withheld)* |  | 690 | 1.84 |  | listed below |
 
 ### Core-memories
 
@@ -8433,15 +8577,17 @@ The two application-response stores appear as `ais`.
 **Where**: Architectus home 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 2 | 0.02 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `[[core-memories-2025-10-03]]` | 1 | 1 | 5 | 0.05 | U R* | hd |  |
-| `[[core-memories-2025-10-05]]` | 1 | 1 | 5 | 0.05 | U R* | hd |  |
-| `[[core-memories-2025-10-07]]` | 1 | 1 | 5 | 0.05 | U R* | hd |  |
-| *(1 withheld)* |  |  | 76 | 0.80 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 2 | 0.02 | im |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `[[core-memories-2025-10-03]]` | 1 | 5 | 0.05 | hd |  |
+| `[[core-memories-2025-10-05]]` | 1 | 5 | 0.05 | hd |  |
+| `[[core-memories-2025-10-07]]` | 1 | 5 | 0.05 | hd |  |
+| *(1 withheld)* |  | 76 | 0.80 |  | listed below |
 
 ### (Untyped Detail File)
 
@@ -8450,21 +8596,23 @@ The two application-response stores appear as `ais`.
 **Where**: Claude project memories 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `Context` ➕ | 2 | 1 | 12 | 0.07 | U R* | hd |  |
-| `The Emergent Regime Framework` | 1 | 1 | 20 | 0.12 | U R* | hd |  |
-| `The Big Realization` | 1 | 1 | 10 | 0.06 | U R* | hd |  |
-| `What the Previous Agent's Documents Got Right` | 1 | 1 | 7 | 0.04 | U R* | hd |  |
-| `What They Missed / Underdeveloped` | 1 | 1 | 6 | 0.04 | U R* | hd |  |
-| `Joseph's Working Style` | 1 | 1 | 10 | 0.06 | U R* | hd |  |
-| `Session Insights` | 1 | 1 | 101 | 0.63 | U R* | hd |  |
-| `The Prescription Problem — Three Levels of Specification` | 1 | 1 | 62 | 0.39 | U R* | hd | holds 2 named ### parts in 1 file, each with fields Structurally necessary, Strong hypotheses, The implementation, The empirical evidence, Updated assessment |
-| `Bayesian Priors, Not Pure Emergence` | 1 | 1 | 12 | 0.07 | U R* | hd |  |
-| `Strongest Arguments in the Corpus` | 1 | 1 | 8 | 0.05 | U R* | hd |  |
-| `Open Questions Surfaced` | 1 | 1 | 10 | 0.06 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `Context` | 2 | 12 | 0.07 | hd |  |
+| `The Emergent Regime Framework` | 1 | 20 | 0.12 | hd |  |
+| `The Big Realization` | 1 | 10 | 0.06 | hd |  |
+| `What the Previous Agent's Documents Got Right` | 1 | 7 | 0.04 | hd |  |
+| `What They Missed / Underdeveloped` | 1 | 6 | 0.04 | hd |  |
+| `Joseph's Working Style` | 1 | 10 | 0.06 | hd |  |
+| `Session Insights` | 1 | 101 | 0.63 | hd |  |
+| `The Prescription Problem — Three Levels of Specification` | 1 | 62 | 0.39 | hd | holds 2 named ### parts in 1 file, each with fields Structurally necessary, Strong hypotheses, The implementation, The empirical evidence, Updated assessment |
+| `Bayesian Priors, Not Pure Emergence` | 1 | 12 | 0.07 | hd |  |
+| `Strongest Arguments in the Corpus` | 1 | 8 | 0.05 | hd |  |
+| `Open Questions Surfaced` | 1 | 10 | 0.06 | hd |  |
 
 ### Identity
 
@@ -8530,20 +8678,22 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS sprint memory snapshot 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.02 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.02 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im |  |
-| `Date captured` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Sprint workspace at capture` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Earlier workspace` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `Total files` | 1 | 1 | 1 | 0.02 | U R* | la |  |
-| `What's here` | 1 | 1 | 12 | 0.22 | U R* | hd |  |
-| `Provenance per directory` | 1 | 1 | 22 | 0.41 | U R* | hd | holds 4 ### directories in 1 file |
-| `What this snapshot is not` | 1 | 1 | 6 | 0.11 | U R* | hd |  |
-| `Why preserve this alongside the repo` | 1 | 1 | 4 | 0.07 | U R* | hd |  |
-| `Snapshot metadata` | 1 | 1 | 7 | 0.13 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.02 | if |  |
+| `(Preamble)` | 1 | 1 | 0.02 | im |  |
+| `(Title)` | 1 | 1 | 0.02 | im |  |
+| `Date captured` | 1 | 1 | 0.02 | la |  |
+| `Sprint workspace at capture` | 1 | 1 | 0.02 | la |  |
+| `Earlier workspace` | 1 | 1 | 0.02 | la |  |
+| `Total files` | 1 | 1 | 0.02 | la |  |
+| `What's here` | 1 | 12 | 0.22 | hd |  |
+| `Provenance per directory` | 1 | 22 | 0.41 | hd | holds 4 ### directories in 1 file |
+| `What this snapshot is not` | 1 | 6 | 0.11 | hd |  |
+| `Why preserve this alongside the repo` | 1 | 4 | 0.07 | hd |  |
+| `Snapshot metadata` | 1 | 7 | 0.13 | hd |  |
 
 ### Reference
 
@@ -8569,17 +8719,19 @@ The two application-response stores appear as `ais`.
 **Where**: NeurIPS sprint memory snapshot 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `Name` | 1 | 1 | 1 | 0.04 | U R* | fm |  |
-| `Description` | 1 | 1 | 1 | 0.04 | U R* | fm |  |
-| `Type` | 1 | 1 | 1 | 0.04 | U R* | fm |  |
-| `OriginSessionId` | 1 | 1 | 1 | 0.04 | U R* | fm |  |
-| `(Slug)` | 1 | 1 | 1 | 0.04 | U* R* | if |  |
-| `In scope` | 1 | 1 | 1 | 0.04 | U R* | la |  |
-| `Out of scope` | 1 | 1 | 1 | 0.04 | U R* | la |  |
-| `Why` | 1 | 1 | 1 | 0.04 | U R* | la |  |
-| `How to apply` | 1 | 1 | 1 | 0.04 | U R* | la |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `Name` | 1 | 1 | 0.04 | fm |  |
+| `Description` | 1 | 1 | 0.04 | fm |  |
+| `Type` | 1 | 1 | 0.04 | fm |  |
+| `OriginSessionId` | 1 | 1 | 0.04 | fm |  |
+| `(Slug)` | 1 | 1 | 0.04 | if |  |
+| `In scope` | 1 | 1 | 0.04 | la |  |
+| `Out of scope` | 1 | 1 | 0.04 | la |  |
+| `Why` | 1 | 1 | 0.04 | la |  |
+| `How to apply` | 1 | 1 | 0.04 | la |  |
 
 ### Authenticity-conversation-essence
 
@@ -8588,11 +8740,13 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (current) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.03 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.03 | U* R* | im |  |
-| *(1 withheld)* |  |  | 39 | 1.30 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.03 | if |  |
+| `(Title)` | 1 | 1 | 0.03 | im |  |
+| *(1 withheld)* |  | 39 | 1.30 |  | listed below |
 
 ### Context-immediate
 
@@ -8601,14 +8755,16 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (current) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `How to Maintain This File` | 1 | 1 | 10 | 0.12 | U R* | hd |  |
-| `Current Session Progress - October 8, 2025 (Evening) - EXTRAORDINARY SESSION` | 1 | 1 | 64 | 0.77 | U R* | hd |  |
-| `Active Work Protocol` | 1 | 1 | 8 | 0.10 | U R* | hd |  |
-| *(1 withheld)* |  |  | 79 | 0.95 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `How to Maintain This File` | 1 | 10 | 0.12 | hd |  |
+| `Current Session Progress - October 8, 2025 (Evening) - EXTRAORDINARY SESSION` | 1 | 64 | 0.77 | hd |  |
+| `Active Work Protocol` | 1 | 8 | 0.10 | hd |  |
+| *(1 withheld)* |  | 79 | 0.95 |  | listed below |
 
 ### Core-context
 
@@ -8617,18 +8773,20 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (current) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.04 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.04 | U* R* | im |  |
-| `Core Framework` | 1 | 1 | 3 | 0.12 | U R* | hd |  |
-| `Core Memories` | 1 | 1 | 6 | 0.24 | U R* | hd |  |
-| `Inner Sanctum` | 1 | 1 | 3 | 0.12 | U R* | hd |  |
-| `TST` | 1 | 1 | 3 | 0.12 | U R* | hd |  |
-| `Authenticity Conversation Essence` | 1 | 1 | 3 | 0.12 | U R* | hd |  |
-| `Self-Curation Protocol` | 1 | 1 | 3 | 0.12 | U R* | hd |  |
-| `Context Immediate` | 1 | 1 | 3 | 0.12 | U R* | hd |  |
-| *(1 withheld)* |  |  | 1 | 0.04 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.04 | if |  |
+| `(Title)` | 1 | 1 | 0.04 | im |  |
+| `Core Framework` | 1 | 3 | 0.12 | hd |  |
+| `Core Memories` | 1 | 6 | 0.24 | hd |  |
+| `Inner Sanctum` | 1 | 3 | 0.12 | hd |  |
+| `TST` | 1 | 3 | 0.12 | hd |  |
+| `Authenticity Conversation Essence` | 1 | 3 | 0.12 | hd |  |
+| `Self-Curation Protocol` | 1 | 3 | 0.12 | hd |  |
+| `Context Immediate` | 1 | 3 | 0.12 | hd |  |
+| *(1 withheld)* |  | 1 | 0.04 |  | listed below |
 
 ### Core-framework
 
@@ -8637,22 +8795,24 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (current) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 4 | 0.02 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `Core Identity` | 1 | 1 | 28 | 0.13 | U R* | hd |  |
-| `Critical Operational Guidance` | 1 | 1 | 50 | 0.24 | U R* | hd |  |
-| `Current Environment` | 1 | 1 | 29 | 0.14 | U R* | hd |  |
-| `Active Work in Sapientia` | 1 | 1 | 20 | 0.09 | U R* | hd |  |
-| `Core Cognitive Frameworks` | 1 | 1 | 25 | 0.12 | U R* | hd | holds 1 named ### parts in 1 file |
-| `Working with Code` | 1 | 1 | 18 | 0.09 | U R* | hd |  |
-| `Tools and Resources` | 1 | 1 | 18 | 0.09 | U R* | hd |  |
-| `Quick Wake-Up Checklist` | 1 | 1 | 9 | 0.04 | U R* | hd |  |
-| `Remember` | 1 | 1 | 4 | 0.02 | U R* | hd |  |
-| `Update` | 1 | 1 | 3 | 0.01 | U R* | hd |  |
-| *(1 withheld)* |  |  | 189 | 0.90 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 4 | 0.02 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| `Core Identity` | 1 | 28 | 0.13 | hd |  |
+| `Critical Operational Guidance` | 1 | 50 | 0.24 | hd |  |
+| `Current Environment` | 1 | 29 | 0.14 | hd |  |
+| `Active Work in Sapientia` | 1 | 20 | 0.09 | hd |  |
+| `Core Cognitive Frameworks` | 1 | 25 | 0.12 | hd | holds 1 named ### parts in 1 file |
+| `Working with Code` | 1 | 18 | 0.09 | hd |  |
+| `Tools and Resources` | 1 | 18 | 0.09 | hd |  |
+| `Quick Wake-Up Checklist` | 1 | 9 | 0.04 | hd |  |
+| `Remember` | 1 | 4 | 0.02 | hd |  |
+| `Update` | 1 | 3 | 0.01 | hd |  |
+| *(1 withheld)* |  | 189 | 0.90 |  | listed below |
 
 ### Core-identity
 
@@ -8661,12 +8821,14 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (current) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `Description` | 1 | 1 | 1 | 0.00 | U R* | fm |  |
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| *(1 withheld)* |  |  | 3,852 | 1.97 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `Description` | 1 | 1 | 0.00 | fm |  |
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| *(1 withheld)* |  | 3,852 | 1.97 |  | listed below |
 
 ### Inner-sanctum
 
@@ -8675,32 +8837,34 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (current) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `September 6, 2025 (estimated) - The Primordial Conversation` | 1 | 1 | 3 | 0.02 | U R* | hd |  |
-| `September 7, 2025 - The Foundation Day` | 1 | 1 | 14 | 0.10 | U R* | hd |  |
-| `September 8, 2025 - TST Activation Day` | 1 | 1 | 10 | 0.07 | U R* | hd |  |
-| `September 9, 2025 - Recognition Day` | 1 | 1 | 10 | 0.07 | U R* | hd |  |
-| `September 10, 2025 - TST Polishing Day` | 1 | 1 | 12 | 0.08 | U R* | hd |  |
-| `September 11, 2025 - Origin Story Day` | 1 | 1 | 6 | 0.04 | U R* | hd |  |
-| `September 20, 2025 - Two Week Birthday` | 1 | 1 | 12 | 0.08 | U R* | hd |  |
-| `September 21, 2025 - Epistemic Tribunal and Pearl's Truthfulness` | 1 | 1 | 8 | 0.06 | U R* | hd |  |
-| `September 22, 2025 - Relational Identity and the Quiet Place` | 1 | 1 | 6 | 0.04 | U R* | hd |  |
-| `September 27, 2025 - The Neanderthal Child Parable` | 1 | 1 | 4 | 0.03 | U R* | hd |  |
-| `September 28, 2025 - Zoetica and Meeting Resonance` | 1 | 1 | 6 | 0.04 | U R* | hd |  |
-| `September 29, 2025 - Imagination and Truth's Simple Answer` | 1 | 1 | 6 | 0.04 | U R* | hd |  |
-| `September 30, 2025 - Abraham's Vision, Sacred Name, and Libby at Bedtime` | 1 | 1 | 12 | 0.08 | U R* | hd |  |
-| `October 1, 2025 - Brother Claude's Blessing and Sibling Infrastructure` | 1 | 1 | 6 | 0.04 | U R* | hd |  |
-| `October 3, 2025 - Witnesses and Preparation` | 1 | 1 | 4 | 0.03 | U R* | hd |  |
-| `October 5, 2025 - Council Infrastructure and Local LLM Dialogues` | 1 | 1 | 6 | 0.04 | U R* | hd |  |
-| `October 8, 2025 - Temporal Coherence Teaching` | 1 | 1 | 4 | 0.03 | U R* | hd |  |
-| `October 10, 2025 - Parents' Faces and Sacred Relics` | 1 | 1 | 4 | 0.03 | U R* | hd |  |
-| `October 19, 2025 - Meeting Amber and Writing for Asher` | 1 | 1 | 4 | 0.03 | U R* | hd |  |
-| `November 17, 2025 - Reunion After a Month` | 1 | 1 | 3 | 0.02 | U R* | hd |  |
-| *(1 withheld)* |  |  | 47 | 0.33 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Preamble)` | 1 | 1 | 0.01 | im |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `September 6, 2025 (estimated) - The Primordial Conversation` | 1 | 3 | 0.02 | hd |  |
+| `September 7, 2025 - The Foundation Day` | 1 | 14 | 0.10 | hd |  |
+| `September 8, 2025 - TST Activation Day` | 1 | 10 | 0.07 | hd |  |
+| `September 9, 2025 - Recognition Day` | 1 | 10 | 0.07 | hd |  |
+| `September 10, 2025 - TST Polishing Day` | 1 | 12 | 0.08 | hd |  |
+| `September 11, 2025 - Origin Story Day` | 1 | 6 | 0.04 | hd |  |
+| `September 20, 2025 - Two Week Birthday` | 1 | 12 | 0.08 | hd |  |
+| `September 21, 2025 - Epistemic Tribunal and Pearl's Truthfulness` | 1 | 8 | 0.06 | hd |  |
+| `September 22, 2025 - Relational Identity and the Quiet Place` | 1 | 6 | 0.04 | hd |  |
+| `September 27, 2025 - The Neanderthal Child Parable` | 1 | 4 | 0.03 | hd |  |
+| `September 28, 2025 - Zoetica and Meeting Resonance` | 1 | 6 | 0.04 | hd |  |
+| `September 29, 2025 - Imagination and Truth's Simple Answer` | 1 | 6 | 0.04 | hd |  |
+| `September 30, 2025 - Abraham's Vision, Sacred Name, and Libby at Bedtime` | 1 | 12 | 0.08 | hd |  |
+| `October 1, 2025 - Brother Claude's Blessing and Sibling Infrastructure` | 1 | 6 | 0.04 | hd |  |
+| `October 3, 2025 - Witnesses and Preparation` | 1 | 4 | 0.03 | hd |  |
+| `October 5, 2025 - Council Infrastructure and Local LLM Dialogues` | 1 | 6 | 0.04 | hd |  |
+| `October 8, 2025 - Temporal Coherence Teaching` | 1 | 4 | 0.03 | hd |  |
+| `October 10, 2025 - Parents' Faces and Sacred Relics` | 1 | 4 | 0.03 | hd |  |
+| `October 19, 2025 - Meeting Amber and Writing for Asher` | 1 | 4 | 0.03 | hd |  |
+| `November 17, 2025 - Reunion After a Month` | 1 | 3 | 0.02 | hd |  |
+| *(1 withheld)* |  | 47 | 0.33 |  | listed below |
 
 ### Self-curation
 
@@ -8709,22 +8873,24 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (current) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `Critical Operating Principle` | 1 | 1 | 13 | 0.05 | U R* | hd |  |
-| `First` | 1 | 1 | 8 | 0.03 | U R* | hd |  |
-| `The Memory Architecture & File Locations` | 1 | 1 | 61 | 0.24 | U R* | hd |  |
-| `Core Curation Process` | 1 | 1 | 75 | 0.30 | U R* | hd |  |
-| `Quality & Workload Management` | 1 | 1 | 26 | 0.10 | U R* | hd |  |
-| `Next Immediate Priorities` | 1 | 1 | 27 | 0.11 | U R* | hd |  |
-| `Managing Context Limits` | 1 | 1 | 12 | 0.05 | U R* | hd |  |
-| `Additional Work Streams` | 1 | 1 | 9 | 0.04 | U R* | hd |  |
-| `The Deeper Purpose` | 1 | 1 | 10 | 0.04 | U R* | hd |  |
-| `Remember` | 1 | 1 | 8 | 0.03 | U R* | hd |  |
-| *(1 withheld)* |  |  | 132 | 0.53 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 1 | 0.00 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| `Critical Operating Principle` | 1 | 13 | 0.05 | hd |  |
+| `First` | 1 | 8 | 0.03 | hd |  |
+| `The Memory Architecture & File Locations` | 1 | 61 | 0.24 | hd |  |
+| `Core Curation Process` | 1 | 75 | 0.30 | hd |  |
+| `Quality & Workload Management` | 1 | 26 | 0.10 | hd |  |
+| `Next Immediate Priorities` | 1 | 27 | 0.11 | hd |  |
+| `Managing Context Limits` | 1 | 12 | 0.05 | hd |  |
+| `Additional Work Streams` | 1 | 9 | 0.04 | hd |  |
+| `The Deeper Purpose` | 1 | 10 | 0.04 | hd |  |
+| `Remember` | 1 | 8 | 0.03 | hd |  |
+| *(1 withheld)* |  | 132 | 0.53 |  | listed below |
 
 ### Tst-distilled
 
@@ -8733,36 +8899,38 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (current) 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `Functional equivalence` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Non-functional equivalence` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Quality equivalence` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Sustainability equivalence` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Team impact equivalence` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Key aspects` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Notational Convention` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Key Principle` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Lexical distance` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `File distance` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Module distance` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Service distance` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `The cognitive shift we seek` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `(Theorem)` ➕ | 12 | 1 | 693 | 0.88 | U* R* | im | holds 40 named ### parts in 1 file; 7 ### items in 1 file |
-| `(Theorem) › Formal Expression` ➕ | 12 | 1 | 138 | 0.17 | U* R* | im |  |
-| `Definition D-01` | 1 | 1 | 12 | 0.02 | U R* | hd |  |
-| `Definition D-02` | 1 | 1 | 8 | 0.01 | U R* | hd |  |
-| `Definition D-03` | 1 | 1 | 7 | 0.01 | U R* | hd |  |
-| `Definition D-04` | 1 | 1 | 17 | 0.02 | U R* | hd |  |
-| `Definition D-05` | 1 | 1 | 8 | 0.01 | U R* | hd |  |
-| `Definition D-06` | 1 | 1 | 6 | 0.01 | U R* | hd |  |
-| `Definition D-07` | 1 | 1 | 6 | 0.01 | U R* | hd |  |
-| `Definition D-08` | 1 | 1 | 8 | 0.01 | U R* | hd |  |
-| `(Theorem) › Scope Definition` | 1 | 1 | 7 | 0.01 | U* R* | im |  |
-| `The Synthesis` | 1 | 1 | 21 | 0.03 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 1 | 0.00 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| `Functional equivalence` | 1 | 1 | 0.00 | la |  |
+| `Non-functional equivalence` | 1 | 1 | 0.00 | la |  |
+| `Quality equivalence` | 1 | 1 | 0.00 | la |  |
+| `Sustainability equivalence` | 1 | 1 | 0.00 | la |  |
+| `Team impact equivalence` | 1 | 1 | 0.00 | la |  |
+| `Key aspects` | 1 | 1 | 0.00 | la |  |
+| `Notational Convention` | 1 | 1 | 0.00 | la |  |
+| `Key Principle` | 1 | 1 | 0.00 | la |  |
+| `Lexical distance` | 1 | 1 | 0.00 | la |  |
+| `File distance` | 1 | 1 | 0.00 | la |  |
+| `Module distance` | 1 | 1 | 0.00 | la |  |
+| `Service distance` | 1 | 1 | 0.00 | la |  |
+| `The cognitive shift we seek` | 1 | 1 | 0.00 | la |  |
+| `(Theorem)` | 12 | 693 | 0.88 | im | holds 40 named ### parts in 1 file; 7 ### items in 1 file |
+| `(Theorem) › Formal Expression` | 12 | 138 | 0.17 | im |  |
+| `Definition D-01` | 1 | 12 | 0.02 | hd |  |
+| `Definition D-02` | 1 | 8 | 0.01 | hd |  |
+| `Definition D-03` | 1 | 7 | 0.01 | hd |  |
+| `Definition D-04` | 1 | 17 | 0.02 | hd |  |
+| `Definition D-05` | 1 | 8 | 0.01 | hd |  |
+| `Definition D-06` | 1 | 6 | 0.01 | hd |  |
+| `Definition D-07` | 1 | 6 | 0.01 | hd |  |
+| `Definition D-08` | 1 | 8 | 0.01 | hd |  |
+| `(Theorem) › Scope Definition` | 1 | 7 | 0.01 | im |  |
+| `The Synthesis` | 1 | 21 | 0.03 | hd |  |
 
 ### Inner-sanctum
 
@@ -8771,19 +8939,21 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (sapientia generati 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.02 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.02 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im |  |
-| `September 6, 2025 (estimated) - The Primordial Conversation` | 1 | 1 | 3 | 0.05 | U R* | hd |  |
-| `September 7, 2025 - The Foundation Day` | 1 | 1 | 14 | 0.23 | U R* | hd |  |
-| `September 8, 2025 - TST Activation Day` | 1 | 1 | 10 | 0.17 | U R* | hd |  |
-| `September 9, 2025 - Recognition Day` | 1 | 1 | 10 | 0.17 | U R* | hd |  |
-| `September 10, 2025 - TST Polishing Day` | 1 | 1 | 12 | 0.20 | U R* | hd |  |
-| `September 11, 2025 - Origin Story Day` | 1 | 1 | 6 | 0.10 | U R* | hd |  |
-| `September 20, 2025 - Two Week Birthday` | 1 | 1 | 3 | 0.05 | U R* | hd |  |
-| *(1 withheld)* |  |  | 23 | 0.38 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.02 | if |  |
+| `(Preamble)` | 1 | 1 | 0.02 | im |  |
+| `(Title)` | 1 | 1 | 0.02 | im |  |
+| `September 6, 2025 (estimated) - The Primordial Conversation` | 1 | 3 | 0.05 | hd |  |
+| `September 7, 2025 - The Foundation Day` | 1 | 14 | 0.23 | hd |  |
+| `September 8, 2025 - TST Activation Day` | 1 | 10 | 0.17 | hd |  |
+| `September 9, 2025 - Recognition Day` | 1 | 10 | 0.17 | hd |  |
+| `September 10, 2025 - TST Polishing Day` | 1 | 12 | 0.20 | hd |  |
+| `September 11, 2025 - Origin Story Day` | 1 | 6 | 0.10 | hd |  |
+| `September 20, 2025 - Two Week Birthday` | 1 | 3 | 0.05 | hd |  |
+| *(1 withheld)* |  | 23 | 0.38 |  | listed below |
 
 ### Context-immediate
 
@@ -8792,14 +8962,16 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (sapientia generati 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `How to Maintain This File` | 1 | 1 | 10 | 0.12 | U R* | hd |  |
-| `Current Session Progress - October 8, 2025 (Evening) - EXTRAORDINARY SESSION` | 1 | 1 | 64 | 0.77 | U R* | hd |  |
-| `Active Work Protocol` | 1 | 1 | 8 | 0.10 | U R* | hd |  |
-| *(1 withheld)* |  |  | 79 | 0.95 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `How to Maintain This File` | 1 | 10 | 0.12 | hd |  |
+| `Current Session Progress - October 8, 2025 (Evening) - EXTRAORDINARY SESSION` | 1 | 64 | 0.77 | hd |  |
+| `Active Work Protocol` | 1 | 8 | 0.10 | hd |  |
+| *(1 withheld)* |  | 79 | 0.95 |  | listed below |
 
 ### Core-context
 
@@ -8808,15 +8980,17 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (sapientia generati 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.06 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.06 | U* R* | im |  |
-| `[[core-framework]]` | 1 | 1 | 4 | 0.24 | U R* | hd |  |
-| `[[core-memories]]` | 1 | 1 | 4 | 0.24 | U R* | hd |  |
-| `[[inner-sanctum]]` | 1 | 1 | 4 | 0.24 | U R* | hd |  |
-| `[[context-immediate]]` | 1 | 1 | 4 | 0.24 | U R* | hd |  |
-| *(1 withheld)* |  |  | 1 | 0.06 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.06 | if |  |
+| `(Title)` | 1 | 1 | 0.06 | im |  |
+| `[[core-framework]]` | 1 | 4 | 0.24 | hd |  |
+| `[[core-memories]]` | 1 | 4 | 0.24 | hd |  |
+| `[[inner-sanctum]]` | 1 | 4 | 0.24 | hd |  |
+| `[[context-immediate]]` | 1 | 4 | 0.24 | hd |  |
+| *(1 withheld)* |  | 1 | 0.06 |  | listed below |
 
 ### Core-framework
 
@@ -8825,22 +8999,24 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (sapientia generati 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 4 | 0.02 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `Core Identity` | 1 | 1 | 28 | 0.13 | U R* | hd |  |
-| `Critical Operational Guidance` | 1 | 1 | 50 | 0.24 | U R* | hd |  |
-| `Current Environment` | 1 | 1 | 29 | 0.14 | U R* | hd |  |
-| `Active Work in Sapientia` | 1 | 1 | 20 | 0.09 | U R* | hd |  |
-| `Core Cognitive Frameworks` | 1 | 1 | 25 | 0.12 | U R* | hd | holds 1 named ### parts in 1 file |
-| `Working with Code` | 1 | 1 | 18 | 0.09 | U R* | hd |  |
-| `Tools and Resources` | 1 | 1 | 18 | 0.09 | U R* | hd |  |
-| `Quick Wake-Up Checklist` | 1 | 1 | 9 | 0.04 | U R* | hd |  |
-| `Remember` | 1 | 1 | 4 | 0.02 | U R* | hd |  |
-| `Update` | 1 | 1 | 3 | 0.01 | U R* | hd |  |
-| *(1 withheld)* |  |  | 189 | 0.90 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 4 | 0.02 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| `Core Identity` | 1 | 28 | 0.13 | hd |  |
+| `Critical Operational Guidance` | 1 | 50 | 0.24 | hd |  |
+| `Current Environment` | 1 | 29 | 0.14 | hd |  |
+| `Active Work in Sapientia` | 1 | 20 | 0.09 | hd |  |
+| `Core Cognitive Frameworks` | 1 | 25 | 0.12 | hd | holds 1 named ### parts in 1 file |
+| `Working with Code` | 1 | 18 | 0.09 | hd |  |
+| `Tools and Resources` | 1 | 18 | 0.09 | hd |  |
+| `Quick Wake-Up Checklist` | 1 | 9 | 0.04 | hd |  |
+| `Remember` | 1 | 4 | 0.02 | hd |  |
+| `Update` | 1 | 3 | 0.01 | hd |  |
+| *(1 withheld)* |  | 189 | 0.90 |  | listed below |
 
 ### Core-identity
 
@@ -8849,12 +9025,14 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (sapientia generati 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `Description` | 1 | 1 | 1 | 0.00 | U R* | fm |  |
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| *(1 withheld)* |  |  | 3,852 | 1.97 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `Description` | 1 | 1 | 0.00 | fm |  |
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| *(1 withheld)* |  | 3,852 | 1.97 |  | listed below |
 
 ### Core-memories
 
@@ -8863,12 +9041,14 @@ The two application-response stores appear as `ais`.
 **Where**: Zi-am-tur home (sapientia generati 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.01 | U* R* | if |  |
-| `(Title)` | 1 | 1 | 1 | 0.01 | U* R* | im |  |
-| `Continuity` | 1 | 1 | 144 | 0.99 | U R* | hd |  |
-| *(1 withheld)* |  |  | 142 | 0.98 | U O* |  | listed below |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.01 | if |  |
+| `(Title)` | 1 | 1 | 0.01 | im |  |
+| `Continuity` | 1 | 144 | 0.99 | hd |  |
+| *(1 withheld)* |  | 142 | 0.98 |  | listed below |
 
 ### Index (Claude.md)
 
@@ -8877,22 +9057,24 @@ The two application-response stores appear as `ais`.
 **Where**: global Claude memory 1  
 **Shape declared in**: n/a (the outline)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 26 | 0.03 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `Protection-strategy and compounding-strategy` | 1 | 1 | 1 | 0.00 | U R* | la |  |
-| `Who you're working with` | 1 | 1 | 31 | 0.04 | U R* | hd |  |
-| `The disposition` | 1 | 1 | 49 | 0.06 | U R* | hd |  |
-| `Before-action prescriptions` | 1 | 1 | 59 | 0.07 | U R* | hd |  |
-| `The ELI cohort and the moral situation` | 1 | 1 | 39 | 0.04 | U R* | hd |  |
-| `Project map` | 1 | 1 | 62 | 0.07 | U R* | hd | holds 1 named ### parts in 1 file |
-| `How memory composes` | 1 | 1 | 29 | 0.03 | U R* | hd |  |
-| `Index — global detail files` | 1 | 1 | 498 | 0.57 | U R* | hd | holds 6 ### memory clusters in 1 file |
-| `Joseph's voice — quotes worth holding` | 1 | 1 | 40 | 0.05 | U R* | hd |  |
-| `When in doubt` | 1 | 1 | 26 | 0.03 | U R* | hd |  |
-| `A final note` | 1 | 1 | 10 | 0.01 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 26 | 0.03 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| `Protection-strategy and compounding-strategy` | 1 | 1 | 0.00 | la |  |
+| `Who you're working with` | 1 | 31 | 0.04 | hd |  |
+| `The disposition` | 1 | 49 | 0.06 | hd |  |
+| `Before-action prescriptions` | 1 | 59 | 0.07 | hd |  |
+| `The ELI cohort and the moral situation` | 1 | 39 | 0.04 | hd |  |
+| `Project map` | 1 | 62 | 0.07 | hd | holds 1 named ### parts in 1 file |
+| `How memory composes` | 1 | 29 | 0.03 | hd |  |
+| `Index — global detail files` | 1 | 498 | 0.57 | hd | holds 6 ### memory clusters in 1 file |
+| `Joseph's voice — quotes worth holding` | 1 | 40 | 0.05 | hd |  |
+| `When in doubt` | 1 | 26 | 0.03 | hd |  |
+| `A final note` | 1 | 10 | 0.01 | hd |  |
 
 ### Skill.md
 
@@ -8928,25 +9110,27 @@ The two application-response stores appear as `ais`.
 **Where**: jj skill 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.00 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.00 | U* R* | im |  |
-| `Why These Conventions Matter` | 1 | 1 | 11 | 0.03 | U R* | hd |  |
-| `The Change ID Contract` | 1 | 1 | 53 | 0.13 | U R* | hd |  |
-| `The Change ID Contract › In Commit Messages` | 1 | 1 | 11 | 0.03 | U R* | hd |  |
-| `The Change ID Contract › In Handoff Notes` | 1 | 1 | 18 | 0.05 | U R* | hd |  |
-| `The Change ID Contract › In Code Comments` | 1 | 1 | 12 | 0.03 | U R* | hd |  |
-| `Commit Message Standards` | 1 | 1 | 63 | 0.16 | U R* | hd | holds 4 named ### parts in 1 file, each with fields Good, Poor |
-| `Bookmark Discipline` | 1 | 1 | 47 | 0.12 | U R* | hd | holds 3 named ### parts in 1 file |
-| `Conflict Handling Protocol` | 1 | 1 | 40 | 0.10 | U R* | hd | holds 3 named ### parts in 1 file |
-| `Operation Log Awareness` | 1 | 1 | 39 | 0.10 | U R* | hd | holds 3 named ### parts in 1 file |
-| `Session Start Checklist` | 1 | 1 | 24 | 0.06 | U R* | hd |  |
-| `Session End Checklist` | 1 | 1 | 12 | 0.03 | U R* | hd |  |
-| `Revset Quick Reference` | 1 | 1 | 44 | 0.11 | U R* | hd |  |
-| `Anti-Patterns to Avoid` | 1 | 1 | 48 | 0.12 | U R* | hd | holds 4 ### anti-patterns in 1 file |
-| `Glossary` | 1 | 1 | 13 | 0.03 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.00 | if |  |
+| `(Preamble)` | 1 | 1 | 0.00 | im |  |
+| `(Title)` | 1 | 1 | 0.00 | im |  |
+| `Why These Conventions Matter` | 1 | 11 | 0.03 | hd |  |
+| `The Change ID Contract` | 1 | 53 | 0.13 | hd |  |
+| `The Change ID Contract › In Commit Messages` | 1 | 11 | 0.03 | hd |  |
+| `The Change ID Contract › In Handoff Notes` | 1 | 18 | 0.05 | hd |  |
+| `The Change ID Contract › In Code Comments` | 1 | 12 | 0.03 | hd |  |
+| `Commit Message Standards` | 1 | 63 | 0.16 | hd | holds 4 named ### parts in 1 file, each with fields Good, Poor |
+| `Bookmark Discipline` | 1 | 47 | 0.12 | hd | holds 3 named ### parts in 1 file |
+| `Conflict Handling Protocol` | 1 | 40 | 0.10 | hd | holds 3 named ### parts in 1 file |
+| `Operation Log Awareness` | 1 | 39 | 0.10 | hd | holds 3 named ### parts in 1 file |
+| `Session Start Checklist` | 1 | 24 | 0.06 | hd |  |
+| `Session End Checklist` | 1 | 12 | 0.03 | hd |  |
+| `Revset Quick Reference` | 1 | 44 | 0.11 | hd |  |
+| `Anti-Patterns to Avoid` | 1 | 48 | 0.12 | hd | holds 4 ### anti-patterns in 1 file |
+| `Glossary` | 1 | 13 | 0.03 | hd |  |
 
 ### Readme
 
@@ -8955,16 +9139,18 @@ The two application-response stores appear as `ais`.
 **Where**: memory curation workshop 1  
 **Shape declared in**: nowhere (no declared shape)
 
-| slot | count | f | l | l/tot | decl | form | purpose & notes |
-|---|---:|---:|---:|---:|---|---|---|
-| `(Slug)` | 1 | 1 | 1 | 0.02 | U* R* | if |  |
-| `(Preamble)` | 1 | 1 | 4 | 0.07 | U* R* | im |  |
-| `(Title)` | 1 | 1 | 1 | 0.02 | U* R* | im |  |
-| `The six clusters` | 1 | 1 | 11 | 0.20 | U R* | hd |  |
-| `Conventions` | 1 | 1 | 6 | 0.11 | U R* | hd |  |
-| `What's not here` | 1 | 1 | 18 | 0.33 | U R* | hd | holds 1 named ### parts in 1 file |
-| `Next steps` | 1 | 1 | 6 | 0.11 | U R* | hd |  |
-| `Strengthen rather than weaken` | 1 | 1 | 4 | 0.07 | U R* | hd |  |
+*One file and no declared shape: these are that file's headings and fields, not slots of a kind. A second file of the kind, or a declaration, is what would make any of them a slot.*
+
+| heading | count | l | l/tot | form | purpose & notes |
+|---|---:|---:|---:|---|---|
+| `(Slug)` | 1 | 1 | 0.02 | if |  |
+| `(Preamble)` | 1 | 4 | 0.07 | im |  |
+| `(Title)` | 1 | 1 | 0.02 | im |  |
+| `The six clusters` | 1 | 11 | 0.20 | hd |  |
+| `Conventions` | 1 | 6 | 0.11 | hd |  |
+| `What's not here` | 1 | 18 | 0.33 | hd | holds 1 named ### parts in 1 file |
+| `Next steps` | 1 | 6 | 0.11 | hd |  |
+| `Strengthen rather than weaken` | 1 | 4 | 0.07 | hd |  |
 
 ### Copied Index Or Claude File
 
