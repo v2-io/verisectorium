@@ -217,3 +217,8 @@ entry at="2026-11-09T20:03-07:00" by="Fable 5.2 session, at Joseph's correction"
   did "segment's working note says suggested and promised are not dimensions but written states of a slot, part of the assembly of the segment that has the slot, and flags that the inline word attribute means a computed measurement, which a slot's state is not"
   why "Joseph, 2026-11-09: we had been treating as dimensions a few things that are actually attributes on slots, not dimensions on segments"
 }
+
+entry at="2026-11-09T20:05-07:00" by="Fable 5.2 session, with Joseph's leave to proceed" {
+  did "impl-an-outline-fills-in written and given a row: an invented outline taken through six steps on the reading that a segment is a veritoid or an assembly of slots and that suggested and promised are written states of a slot. It kept wanted-here apart from accepted at every step, and found six choices the model has not made: what discharges a promise; that acceptance, run as an ordinary act, lapses when the accepted piece is edited; what an assembly's version covers; that held against pointed-at came down to whether a piece is written with its parent; whether a stale reading path is owed; and who may promise and accept."
+  why "to test, on something with no domain to fall into, whether the model can say what is owed at each moment once slot states are separated from acceptance, before veritoid, segment and kind are rewritten"
+}
