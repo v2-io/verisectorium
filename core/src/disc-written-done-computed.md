@@ -7,8 +7,6 @@ narrates: [veritoid, segment, act, frontier, steady·state]
 
 # Written, done, computed
 
-*Moved from the first-iteration overview (`MODEL.md`, Fable 5.1, 2026-11-08) into a segment of its own on Joseph's suggestion, so that it narrates the defs it rests on and lapses when they change. Provisional. Where a thing is Joseph's it says so; [M] marks the least tested.*
-
 | | What | Who sets it | How it changes |
 |---|---|---|---|
 | **written** | a veritoid's content, its assertions, its references; a segment's assembly (which veritoids, in which slots, in what order); a projection's members; a segment's history, where its kind has a slot for it | an author | only by a segment changeset |

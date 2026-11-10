@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+# nutshell — assemble a reading path from an outline whose rows point at parts of core's files.
+#
+#   nutshell [OUTLINE]         print the assembled text      (default core/nutshell.outline.md)
+#   nutshell check [OUTLINE]   every row resolves; report the size of what a reader would read
+#
+# A row's first link says what to pull:  [[def/term#one-line]]  the sentence under the def's heading
+#                                        [[def/term#intro]]     a named section (any ## or ### heading)
+#                                        [[src/slug]]           a whole prose segment, minus frontmatter,
+#                                                               Historical Context and Working Notes
+#                                        [[nutshell/slug]]      a segment that lives only in this path
+# Nothing is copied into the outline, so the path cannot drift from what it draws on.
+ROOT = File.expand_path('..', __dir__)
+check = ARGV[0] == 'check'
+ARGV.shift if check
+outline = File.join(ROOT, ARGV[0] || 'core/nutshell.outline.md')
+base = File.dirname(outline)
+problems = []; parts = []
+
+def section(text, name)
+  lines = text.lines
+  i = lines.index { |l| l =~ /^(#+)\s+#{Regexp.escape(name)}\s*$/i } or return nil
+  depth = lines[i][/^#+/].size
+  body = lines[(i + 1)..].take_while { |l| !(l =~ /^(#+)\s/ && $1.size <= depth) }
+  body.join.strip
+end
+
+File.readlines(outline).each do |row|
+  next unless row.start_with?('|') && row =~ /\[\[([^\]|\\#]+)(?:#([^\]|\\]+))?/
+  path, sec = $1, $2
+  file = File.join(base, "#{path}.md")
+  unless File.exist?(file)
+    problems << "#{path}: no such file"; next
+  end
+  text = File.read(file)
+  text = text.sub(/\A---\n.*?\n---\n/m, '').sub(/\A```kdl\n.*?\n```\n/m, '')
+  title = text[/^# (.+)$/, 1].to_s.delete('«»')
+  out =
+    case sec
+    when nil
+      text.sub(/^## (Historical Context|Working Notes|History)\b.*\z/m, '').sub(/^# .+\n/, '').strip
+    when 'one-line'
+      text[/^# .+\n+(.+)$/, 1]
+    else
+      section(text, sec.tr('-', ' '))
+    end
+  if out.nil? || out.strip.empty?
+    problems << "#{path}##{sec}: nothing there"; next
+  end
+  heading = sec.nil? ? "## #{title}" : (sec == 'one-line' ? "## #{title}" : nil)
+  parts << [heading, out].compact.join("\n\n")
+end
+
+text = parts.join("\n\n")
+if check
+  problems.each { |p| warn p }
+  puts "#{parts.size} parts, #{text.lines.size} lines, #{text.split.size} words" 
+  exit(problems.empty? ? 0 : 1)
+end
+abort problems.join("\n") unless problems.empty?
+puts text

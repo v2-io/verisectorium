@@ -7,8 +7,6 @@ narrates: [dimension, frontier, reference, kind, steady·state]
 
 # Dimensions are constraints
 
-*Moved from the first-iteration overview (`MODEL.md`, Fable 5.1, 2026-11-08) into a segment of its own on Joseph's suggestion, so that it narrates the defs it rests on and lapses when they change. Provisional. Where a thing is Joseph's it says so; [M] marks the least tested.*
-
 A «dimension» is one question that can be asked of a piece. The ontology declares each one with five things, plus an optional sixth, and the census of what the estate's verisectoria actually adjudicate is why there are five and not two:
 
 | The declaration says | For example |

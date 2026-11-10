@@ -7,8 +7,6 @@ narrates: [veritoid, segment, kind, dimension, reference, act, frontier, steadyÂ
 
 # A real root through the model: `scope-adaptive-system`
 
-*Moved from `examples/` (Fable 5.1, 2026-11-08) into a segment that narrates the defs it exercises. Provisional. The one-paragraph result below is what the run showed about the model; the run itself follows.*
-
 **What this run showed.** **Binding per veritoid keeps more of the record alive, by an amount not yet counted.** vsect 0.1 binds a check to the whole segment's text, so the segment's nine versions on 10-30 left 50 of its 63 confirming checks lapsed. Under this model an act lapses only when a veritoid it read is rewritten; the last reword touched only item (c) and the imports, so acts on other items recorded just before it survive. But several items were rewritten earlier the same day, so the earlier reviews' acts lapse under this model too. The cold read corrected my first count; the true number needs a per-item diff per version pair. It is also where the recording cost will bite: an act must say which veritoids it read.
 
 *Fable 5.1, 2026-11-08. The segment is `~/src/arch/asf/01-aat-core/src/scope-adaptive-system.md` at HEAD (`v:9fde935e` in vsect 0.1). The acts are the 162 that vsect 0.1 recorded on it between 2026-10-30 20:19Z and 10-31 03:31Z (`vsect why segment:scope-adaptive-system`); I read the whole list and quote criteria from it. The ontology below is a sketch of AAT's, invented for this exercise and marked so; nothing in `core/` depends on it. What this tests is whether the model's words have anywhere to put what is actually in the file and the record, and what it would have shown that vsect 0.1 does not.*
