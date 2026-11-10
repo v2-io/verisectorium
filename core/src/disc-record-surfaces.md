@@ -7,8 +7,6 @@ narrates: [segment, veritoid, kind, act, changeset, frontier, steady·state]
 
 # Four places a record can go, and which is which
 
-*Provisional, 2026-11-09. The Working Notes at the end say what this was adjudicated against.*
-
 ## The confusion this settles
 
 Every verisectorium in the estate has kept, somewhere, a record of what happened to its content. Every one of them has mixed four different things into whatever surface was nearest: a commit message carrying a design decision, a Working Notes bullet carrying the only account of why a claim was narrowed, a segment body narrating its own revisions, a hand-kept changelog standing in for acta that were never recorded. Each of the four has a different reader, a different discipline, and a different relation to the model, and they only work when kept apart.
@@ -45,7 +43,9 @@ While a verisectorium is bespoke and its segments are files edited by hand, the 
 
 The precedent matters more than the convenience: a verisectorium that begins with pure, standalone, present-tense segments and then admits the messy material in protected places keeps the line; one that begins mixed never finds it.
 
+## Historical Context
+Adjudicated against Joseph's 2026-11-09 distinction of the four surfaces and his account of what went wrong in ASF and AAT when derivations in formal claims pointed at spikes ("see ../spike-a1233/ for the full derivation"), which he names as the agentic default propensity; and against `segment.md`'s existing split of Working Notes into inbox, standing content and prose fate markers.
+
 ## Working Notes
-- Adjudicated against Joseph's 2026-11-09 distinction of the four surfaces and his account of what went wrong in ASF and AAT when derivations in formal claims pointed at spikes ("see ../spike-a1233/ for the full derivation"), which he names as the agentic default propensity; and against `segment.md`'s existing split of Working Notes into inbox, standing content and prose fate markers.
 - Open. Whether `account` is a core veritoid kind (every verisectorium has history) or one each ontology declares. Lean: the core names it and says what it answers to; whether a segment kind has a history slot is the ontology's.
 - Open. Whether an account may itself carry an assertion ("this derivation was independently checked before it was narrowed") or only point at the acts that did. Lean: point only; an account that asserts is a claim in costume.

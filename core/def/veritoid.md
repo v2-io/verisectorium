@@ -15,13 +15,13 @@ status provisional
 A «segment» with content and no slots: one piece of content of a declared kind, the smallest thing a question is asked of.
 
 ## Intro
-The corpus is made of pieces of content: a formal statement, a step of a derivation, a paragraph of explanation, a question, the wording of a design choice, a chunk cut from a source. Each is a veritoid, of a declared ‹veritoid·kind› that says what form its content takes, which «dimensions|def/dimension» may be asked of it, and which «references|def/reference» it may hold. It almost never makes sense alone: it is held in an assembly with others it depends on, and that is where it is written and reviewed. Joseph's words: "content with one or more dimensions + rules".
+The corpus is made of pieces of content: a formal statement, a step of a derivation, a paragraph of explanation, a question, the wording of a design choice, a chunk cut from a source. Each is a veritoid, of a declared ‹veritoid·kind› that says what form its content takes, which «dimensions|def/dimension» may be asked of it, and which «references|def/reference» it may hold. It almost never makes sense alone: it is held in an assembly with others it depends on, and that is where it is written and reviewed.
 
 ## Definition
 ### Invariants
 - It holds content and no segment. Where an act confirms part of it and contradicts the rest, it is split: its id is retired and new ids are minted with recorded descent.
 - It has no name of its own unless it is freestanding; a rendering reaches a held veritoid through what holds it.
-- Its content and references are written. Its version is the hash of its content, normalized as its kind declares, and of the ids its references point at; a reflow mints nothing, and restoring earlier content restores the earlier version and every act that read it.
+- Its content and references are written. Its version is the hash of its content, normalized as its kind declares, and of its references as written (kind, target id, what each needs); a reflow mints nothing, and restoring earlier content restores the earlier version and every act that read it.
 - Its warrants are computed and never written.
 
 ## Discussion
@@ -39,6 +39,7 @@ The corpus is made of pieces of content: a formal statement, a step of a derivat
 *Veri-* for truth and *-oid* for "shaped like, held to": a veritoid is a thing held to truth, not truth itself, which is the right scope for a piece that may be a claim, a question, a guard or a chunk. Joseph offered it half in jest on 2026-11-05 because it carried no history; it stayed because every ancient candidate collided or fell short: *atom* (vsect 0.1, and the atomic changeset), *record* (two things in the August model), *statement* (excludes what does not assert), *dictum* (legal, and the same exclusion), *locus* (address theory), *membrum* (a projection's members). It means exactly what this def says and nothing else anywhere in the estate.
 
 ### Adjudication
+- Joseph's first description of it, 2026-11-05: "content with one or more dimensions + rules".
 - Adjudicated against msc/notes 05 (21:52Z), 08/06–08, 09 §2.1, 09 §2.4, 10 §1.5, 19 §2. That a veritoid is the leaf segment is Joseph's suggestion of 2026-11-09, quoted in «segment»'s Historical Context; what its version covers was decided here on 2026-11-10 from three notes that had each leaned the same way.
 
 ## Working Notes

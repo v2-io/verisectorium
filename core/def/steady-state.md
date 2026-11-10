@@ -51,6 +51,6 @@ Joseph, 2026-11-05, weighing a marker on a value: "There is now a known defect t
 
 ## Working Notes
 - Open. Whether a working state is held as a branch, a separate corpus, or otherwise. The requirements are: steady states along the way, a diff against the last steady state, the frontier, a merge only when the frontier is empty or waived, and detection of overlapping changesets before merge.
-- Open. How much warrant a small rewording should cost. Here acts lapse completely on any change to what they read; a verisectorium wanting a graded fall declares a *read as* that gives one.
+- Open. Whether a verisectorium may want a graded fall in warrant on a small rewording where nobody has carried the checks. Lean: no; carrying is the mechanism, and an uncarried check has lapsed.
 - Waivers are meant to be rare: for a known defect knowingly left, never for work that is merely elsewhere. Scopes are what keep them so.
 - Open. Whether suggested slots are shown with a steady state's conditions or only counted.

@@ -7,8 +7,6 @@ narrates: [term, term]
 
 # Title
 
-*Status and date line.*
-
 ## The question this settles
 Why the discussion exists.
 

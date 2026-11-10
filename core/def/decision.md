@@ -4,7 +4,7 @@ term "decision" pos=noun pl="-s" {
   avoid "ruling" "one strength of backing among several, and it suggests a lock"
   avoid "authority" "who may decide is standing, read from the record; the word invites citing who decided in place of why"
   rel is term="act" card="{1,1}" note="an act of making so"
-  rel by term="actor" card="{1,N}" note="whoever holds the seats of its accountable party when it is made"
+  rel by term="actor" card="{1,1}" note="whoever holds the deciding seat; where several seats must agree, each assents by an act of its own"
   rel answers term="dimension" card="{0,1}" note="a decided dimension, when the decision is about a piece"
   rel concerns term="segment" card="{0,N}" note="or a slot, a chunk, an owed item, the work, the ontology"
 }
@@ -21,19 +21,19 @@ Two kinds of statement are adjudicated in a verisectorium, and everything else i
 A decision is an «act» of making so. It records:
 
 - **What was decided, and about what.** A piece (accepted into canon; kept as it was beside a change), a slot (promised), a chunk (where it goes), an owed item (waived), the work (where effort goes, and until when), the ontology (how this verisectorium works), or the subject itself (a modelling or design choice). When the subject itself is decided, the wording of the choice is content, a veritoid of a decision kind, and this act answers the «dimension» that asks who stands behind it.
-- **Who decided.** The accountable party: one or more seats (the steward, the lead, the author of a piece, a council) with standing to decide it, each held at that moment by an «actor». Where the ontology asks for unity, all of them. A seat outlasts the actors that hold it, so a decision is sustained, reopened to, and changed by its seat.
+- **Who decided.** The accountable party: one or more seats (the steward, the lead, the author of a piece, a council) with standing to decide it, each held at that moment by an «actor». Where the ontology asks for several seats to agree, each **assents** by an act of its own on the one stated basis, and the decision stands when the ontology's rule for agreement is met. A seat outlasts the actors that hold it, so a decision is sustained, reopened to, and changed by its seat.
 - **Its basis.** What it rests on, recorded as what it read: pieces at their versions, the truth claims taken as grounds, each at the warrant it then had, the assumptions it names, and any condition it states for reopening. A basis element reopens the decision by computation only if it is a piece or a warrant; an assumption worth naming is written as a piece, a claim or a question, so that a check against it reaches the decision.
 - **The importance it was decided at.** How much rested on it, and for what, when it was made.
 
 It may also record the alternatives weighed, who was consulted, and who was told.
 
-A decision **stands** while its basis holds and its party has not said otherwise. When something in the basis fails (a ground falls or is contradicted, a piece it read is rewritten, a named assumption is shown false, a reopening condition is met, or more comes to rest on it than it was decided at) the decision is **reopened**. A reopened decision backs nothing: what it backed is owed on the «frontier», addressed to its party, who sustains it on the new basis or decides again. Reopening is not reversal; what was decided stays written until a decision changes it.
+A decision **stands** while its basis holds and its party has not said otherwise. When something in the basis fails (a ground falls or is contradicted, a piece it read is rewritten, a named assumption is shown false, a reopening condition is met, or more comes to rest on it than it was decided at) the decision is **reopened**. A reopened decision backs nothing: what it backed is owed on the «frontier», addressed to its party, who sustains it on the new basis, decides again, or withdraws it. Reopening is not reversal; what was decided stays written until a decision changes it. A decision made by rule is reopened whenever the rule would not now make it, and is withdrawn only as the ontology says, never merely by failing.
 
 A decision made in advance for a class of cases, and applied by an ‹instrument›, is a **rule**. The ontology holds the rules. Applying a rule is computed; the rule is a decision like any other, with a party and a basis, and an automated action is a decision someone made earlier.
 
 ### Invariants
 - Who held each seat when it was made is read from the harness, never typed. A decision recorded in another's name is a false record of a person; where one mind records what another decided, it records its own ‹testimony› that they said so, with their words. Only its party corrects a decision, or someone shows it was never made.
-- It is reopened exactly when its recorded basis fails. A change that leaves the basis standing reopens nothing, however large; a change to the basis reopens it, however small.
+- It is reopened exactly when its recorded basis fails. A change that leaves the basis standing reopens nothing, however large; a change to the basis reopens it, however small, unless the decided dimension allows carrying and a carrying check finds the change left unchanged what the decision relied on. A rule's applications carry freely; whether a party's decision may be carried without going back to the party is the ontology's to say, and the default is that it may not.
 - It warrants nothing about whether what it concerns is true. A decision about a truth claim decides what to do in light of the evidence (count it, build on the claim, hold it out of canon); the evidence stays recorded as evidence.
 - It is not a lock. Any actor may put a reasoned case for deciding otherwise to its party; a decision cited as a reason not to think is being misused.
 - Who has standing to make it, and how much agreement it needs, are the ontology's to declare, and may rise with importance.
@@ -47,7 +47,7 @@ A decision made in advance for a class of cases, and applied by an ‹instrument
 - **Decisions about the subject and decisions inside the work.** A syntax choice in a specification is content with a decision behind it; keeping an assertion after a rewording is a decision with no content of its own. Where the verisectorium is the project, the two are sometimes one act, and nothing here requires telling them apart beyond recording what was decided.
 
 ## Examples
-- Accepting a definition into canon in a verisectorium whose ontology asks for the steward and the lead in unity: one decision, two parties, basis the definition at its version and the definitions it uses being accepted. Reword the definition and the decision is reopened.
+- Accepting a definition into canon in a verisectorium whose ontology asks for the steward and the lead in unity: one decision made of two assents, basis the definition at its version and the definitions it uses being accepted. Reword the definition and the decision is reopened.
 - A theory's rule that a derived claim is accepted once a mind other than its author has re-derived it and a second means has been tried: a decision made once, in the ontology, applied by an instrument to every claim.
 - A steady state reached with three small findings still open: three waivers, each a decision with its reason, shown in the steady state's conditions.
 - A chunk of an audit marked "already present in the result it bears on": a decision about where the chunk goes, with the result's current version in its basis.

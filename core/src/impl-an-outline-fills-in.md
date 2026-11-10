@@ -22,7 +22,7 @@ An outline O, which is canonical. It is an assembly whose slots are an ordered l
 3. **suggested**, empty: "a result about X is probably wanted here", left by an adviser who is not working on this.
 4. a **gap**: "something is missing between this and whatever follows; not known what".
 
-A reading path P, not canonical, with two slots: one pointing at R1, one pointing at D.
+A reading path P, not canonical, with two slots: one pointing at R1, one pointing at D by its id, though D is held by O.
 
 D is held by O and changes only when O is written. R1 is written on its own. At S0 nothing is owed. The suggested slot and the gap are there, and S0 is still a steady state.
 
@@ -33,7 +33,7 @@ D is held by O and changes only when O is written. R1 is written on its own. At 
 | 1 | Agent A, at work on what follows R1, sees that a result R2 is needed and says so: slot 3 goes from suggested to **promised**, with the kind and name it will have. | a decision by A, who has standing in O; a write to O | **promised**: slot 3 has nothing accepted in it. The last whole read of O read its slots, which changed: lapsed, and O's acceptance is **reopened**. |
 | 2 | A writes R2 (a claim c2, predicated on c1 and on D; an explanation) and fills slot 3 by pointing at it. | a new segment; a write to O | The slot is filled. R2 is provisional, so nothing it says inside itself is owed. The promise is still owed. |
 | 3 | B, who did not write it, re-derives c2. | a check concerning c2 | c2 has a warrant. It is still provisional: a piece is checked before it is accepted, not after. |
-| 4 | The steward and the lead accept R2. They name one assumption, written into R2 as an open question: that X is finite, which c2 uses and nobody has shown. | a decision, two parties, basis recorded | R2 is canon; the promise is kept. Owed: a whole read of O. |
+| 4 | The steward and the lead accept R2. They name one assumption, written into R2 as an open question: that X is finite, which c2 uses and nobody has shown. | a small write to R2 (the question); then a decision made of two assents, basis recorded | R2 is canon; the promise is kept. Owed: a whole read of O. |
 | 5 | A rewords D. | a write to O, since O holds D | D's acceptance read the old D: **reopened**. R1 and R2 were accepted on D being accepted: both **reopened**, c1 and c2 unsettled with them. B's re-derivation of c2 read D: lapsed. Their references to D are **stale**. O has been unsettled since step 1 and still wants its whole read. P's slot pointing at D is stale too, and P is not canon, so that is shown and owed by nobody. |
 | 6 | The steward and the lead accept the new D. B re-derives c2; someone other than its author re-reads c1 against the new D. The authors affirm their references. R1 and R2 are accepted again. O is read whole and accepted. | decisions and checks | Empty. **S1.** |
 | 7 | Later, a check elsewhere shows X is not finite in one case. | a check, contradicting the named assumption | R2's acceptance is **reopened**, though not a word of R2 or of anything it references has changed. The item names the failed assumption and is addressed to the steward and the lead. |

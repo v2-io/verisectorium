@@ -14,7 +14,7 @@ status provisional
 ```
 
 # «act»
-One recorded thing an attested actor did against a state: it reads things at their versions, concerns a subset of them, answers one dimension, and counts while what it read still holds.
+One recorded thing an attested actor did against a state: it reads things at their versions and concerns a subset of them; it is evidence on one dimension or it is a decision, and how long it counts depends on which.
 
 ## Definition
 Every act records: its «actor» (read from the harness, never typed); the state it was performed against; what it **read**, each at its version: a piece's whole written state, or only its assertion on a dimension, or only its warrant on a dimension when that is all the act relied on; what it **concerns**, a subset of what it read; the «dimension» it **answers**; and its outcome. A lapsed or reopened act warrants nothing. The warrant of a piece on a dimension is read, as the dimension declares, from the acts that still count and concern it.
@@ -30,7 +30,7 @@ A confirmation **binds** while every one of its reads is unchanged; the moment o
 
 Three acts of finding out concern an earlier act, and all three ask a mind other than the one with an interest in the outcome:
 - **answering**: does the piece as it now reads still have what the finding or contradiction found? Asked by someone other than the author of the repair. *Answered* clears it; *not answered* leaves it owed.
-- **carrying**: did this edit leave unchanged what that earlier act relied on? Asked by someone other than the editor. *Equivalent* lets the earlier act bind at the new version; *not equivalent* leaves it lapsed. This is how a small rewording keeps the checks, and the decisions resting on them, that it did not disturb.
+- **carrying**: did this edit leave unchanged what that earlier act relied on? Asked by someone other than the editor, who needs to know which act is being carried and its criterion, and nothing of what the editor expects. *Equivalent* lets the earlier act bind at the new version; *not equivalent* leaves it lapsed. This is how a small rewording keeps the checks, and the decisions resting on them, that it did not disturb.
 - **contesting**: was the earlier act itself wrong? A check concerning a check. A contradiction contested and overturned stops counting; so does a confirmation.
 
 **Making so** is a «decision»: accepting a piece, promising a slot, routing a chunk, waiving an owed item, affirming an unchanged piece beside a change, choosing where effort goes. It is made by a party with standing, on a basis, and it **stands** while that basis holds; when the basis fails it is **reopened**. Only its party changes it.
@@ -52,7 +52,7 @@ Three acts of finding out concern an earlier act, and all three ask a mind other
 - **Why testimony is the floor.** That a check was run, by whom, against which versions, is itself a truth claim, and its evidence is the harness's testimony. Carrying a trail beneath that would never end; the floor is where a verisectorium decides to stop, and it stays correctable.
 
 ## Examples
-- An independent re-reader's line-by-line re-derivation of one item of a scope segment, criterion fixed first, outcome confirmed, having read the item and the example it leans on: a ‹check›, by the means *re-derivation*, concerning the item, answering validity.
+- An independent re-reader's line-by-line re-derivation of one item of a scope segment, criterion fixed first, outcome confirmed, having read the item and the example it leans on: a ‹check›, by the means *following the derivation*, concerning the item, answering validity.
 - A verifier of a new result who sets an old proposition against its own segment's corollary and finds they cannot both hold: a ‹check› by the means *collision*, outcome contradicted, on the record before any repair.
 - An auditor's remark that a paragraph hides a derivation: a ‹finding›.
 - "Only the steward may record this as ruled": a «decision» whose standing the dimension gives to one actor.
@@ -66,8 +66,8 @@ From *agere*, *actus*: a thing done. One recorded deed by an actor, as against w
 - Adjudicated against msc/notes 09 §3.1–3.5, 10 §1.11, 18 findings 2 and 8, 19 §4, and asf's recorded acts (`vsect why segment:scope-adaptive-system`, `segment:deriv-sector-condition`).
 
 ## Working Notes
-- Untested on an invented move: answering, carrying and contesting. Contesting has no specimen yet in the one real record read; its "corrections" were partial answers and narrowings of an act's own text. They came from reading a real record against the model (acts about acts were 44 of 162 there) and from a cold read's finding that any edit cleared any contradiction.
-- Evidence that arrives as prose (an old audit's "this claim is false") is routed into the acta as a ‹finding› on the router's ‹testimony› that the source says so; the source's author is not an attested actor and its confirmations count for nothing until re-run. The criteria of old checks are worth carrying as checks owed. Lean: say this in the Definition once an intake has been run.
+- Contesting has no specimen yet in the one real record read; its "corrections" were partial answers and narrowings of an act's own text. They came from reading a real record against the model (acts about acts were 44 of 162 there) and from a cold read's finding that any edit cleared any contradiction.
+- Evidence that arrives as prose (an old audit's "this claim is false") is routed into the acta as a ‹finding› on the router's ‹testimony› that the source says so; the source's author is not an attested actor and its confirmations count for nothing until re-run. The criteria of old checks are worth carrying as checks owed.
 - Open. Whether a contradicting ‹check› and a ‹finding› are one subtype or two. Lean: two, because a finding had no criterion and so carries no weight as a confirmation.
 - Open. Whether an act may answer more than one dimension. Lean: no; record two acts.
 - Open. Whether an act contradicted on one of the things it concerns should lose weight on the others it confirmed in the same breath. One real audit passed a false claim and its neighbour together.

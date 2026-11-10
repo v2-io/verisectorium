@@ -13,7 +13,7 @@ narrates: [act, decision, dimension, actor, frontier, changeset, segment, steady
 
 ## The material
 
-The ontology's rule for canon: a claim is accepted while a mind outside its author's lineage has re-derived it and no finding or contradiction stands against it unanswered; a document is accepted while its claims are, nothing unanswered stands against anything it holds, and someone outside its author's lineage has read it whole.
+The ontology's rule for canon: a claim is accepted while a mind that inherited nothing from its author has re-derived it and no finding or contradiction stands against it unanswered; a document is accepted while its claims are, nothing unanswered stands against anything it holds, and someone who inherited nothing from its author has read it whole.
 
 Steady state S0. T is a result written by A. It holds a claim c, which carries a hypothesis H (n is at least 1), a derivation d, and an explanation e that depends on c. B re-derived c by way of d. G read T whole. T and c are accepted.
 
@@ -22,9 +22,9 @@ Steady state S0. T is a result written by A. It holds a claim c, which carries a
 | step | what happens | the frontier afterwards |
 |---|---|---|
 | 1 | A rewords c: the same statement in a clearer order. One changeset on T; d and e carried with A's affirmation. | B's re-derivation read the old c: lapsed, so c's acceptance is **reopened**. G's whole read lapsed: T's acceptance is **reopened**. |
-| 2 | C, who is not of A's lineage, sets the two versions of c beside B's criterion and records that the edit left unchanged what B's check relied on: *equivalent*. C does the same for G's whole read. | B's check and G's read are carried and bind at the new version. The rule accepts c and T. Empty. **S1**, at the cost of two judgments on a diff. |
+| 2 | C, dispatched with a brief that names the two versions and B's criterion and nothing of what A expects, sets the two versions of c beside B's criterion and records that the edit left unchanged what B's check relied on: *equivalent*. C does the same for G's whole read. | B's check and G's read are carried and bind at the new version. The rule accepts c and T. Empty. **S1**, at the cost of two judgments on a diff. |
 | 3 | An auditor D records a ‹finding›: "c fails at n = 0." | **found**: c. An unanswered finding stands against c, so the rule no longer accepts it: c and T are **reopened**. |
-| 4 | A thinks the finding is wrong, since H excludes n = 0. A cannot clear it: there is no repair to answer, and A is the author. E, of neither A's lineage nor D's, checks the finding itself, criterion fixed first ("does c as written assert anything at n = 0?"), and records that it does not. E also records a finding of its own: e never mentions H, and a reader takes c to cover n = 0. | D's finding is overturned and stops counting; c is accepted again, untouched. **found**: e, by E. T stays **reopened**. |
+| 4 | A thinks the finding is wrong, since H excludes n = 0. A cannot clear it: there is no repair to answer, and A is the author. E, who has inherited nothing from A or from D, checks the finding itself, criterion fixed first ("does c as written assert anything at n = 0?"), and records that it does not. E also records a finding of its own: e never mentions H, and a reader takes c to cover n = 0. | D's finding is overturned and stops counting; c is accepted again, untouched. **found**: e, by E. T stays **reopened**. |
 | 5 | A rewrites e to state H. One changeset on T; c and d untouched. | G's whole read, which read e, has lapsed. E's finding does not lapse with the text it read. |
 | 6 | D reads the new e against E's finding and records it *answered*. G reads T whole again; nobody offers to carry that read, since e changed in substance. | Empty. **S2.** |
 

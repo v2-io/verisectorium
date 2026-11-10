@@ -7,7 +7,7 @@ term "changeset" pos=noun pl="-s" {
   rel "on" term="segment" card="{1,1}" note="for a segment changeset"
   rel holds term="act" card="{0,N}" note="for an atomic changeset, with its segment changesets"
   rel from term="steady·state" card="{1,1}" note="for an atomic changeset: its scope as it stood settled"
-  rel to term="steady·state" card="{1,1}" note="for an atomic changeset: its scope settled again"
+  rel to term="steady·state" card="{0,1}" note="for an atomic changeset once closed: its scope settled again"
 }
 status provisional
 ```
