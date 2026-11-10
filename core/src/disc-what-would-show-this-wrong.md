@@ -2,12 +2,12 @@
 slug: disc-what-would-show-this-wrong
 form: disc
 status: provisional
-narrates: [verisectorium, veritoid, segment, kind, dimension, reference, act, decision, changeset, frontier, steady·state]
+narrates: [verisectorium, segment, dimension, act, decision, changeset, steady·state]
 ---
 
 # What would show this wrong, and what I expect to strain
 
-**The practical test.** Three things the October sprint on ASF showed, that the model has to make impossible or at least visible. (1) Nobody could see which influx had been looked at, by whom, or how far; the sprint could not tell "found everything" from "found something". (2) Checks and fixes fed each other; almost half of the claims "fixed" had only been written earlier in the same sprint. (3) No source was ever retired; every pass left more surface than it removed. The model answers (1) with sources cut completely and crossings, and (3) with the inbox outside the segment and computed retirement; (2) it only permits an answer to (a checker's findings go back to the piece's author; see «changeset»). A first real intake is judged by these three.
+**The practical test.** Three things the October sprint on ASF showed, that the model has to make impossible or at least visible. (1) Nobody could see which influx had been looked at, by whom, or how far; the sprint could not tell "found everything" from "found something". (2) Checks and fixes fed each other; almost half of the claims "fixed" had only been written earlier in the same sprint. (3) No source was ever retired; every pass left more surface than it removed. The model answers (1) with sources cut completely and a routing decision for every chunk, and (3) with the inbox outside the segment and computed retirement; (2) it only permits an answer to (a checker's findings go back to the piece's author; see «changeset»). A first real intake is judged by these three.
 
 The model is wrong if a real verisectorium needs a thing that is neither written, done nor computed; if something it adjudicates is neither a truth claim standing by evidence nor a «decision» standing by backing, nor built from those; if a warrant cannot be read from acts without someone typing it after all; or if the terms have to multiply back toward eighty to do real work.
 

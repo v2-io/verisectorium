@@ -2,7 +2,7 @@
 slug: impl-stopped-bound
 form: impl
 status: provisional
-narrates: [veritoid, dimension, act, frontier, steady·state]
+narrates: [veritoid, dimension, act, changeset, frontier, steady·state]
 ---
 
 # The stopped bound through the model
@@ -24,10 +24,10 @@ None of these was a recorded act when it happened; they are audit prose, adjudic
 | 04-22 | the stopped form lands; (i) asserts *exact* | a segment changeset. (i): validity never asked. |
 | 04-25 | an audit: "the stopped Grönwall bound holds. … ✓", "Math is sound throughout" | a ‹check› by a mind not the author, **concerning (i)**, confirmed. The same pass also passed the neighbouring (iii), which another audit broke that day. |
 | 04-25 | two audits break (iii); one says of (i) "plausible", "The stopped bound can remain", and both recommend it as the safe fallback | a contradicting check concerning (iii). The words on (i) are a second confirmation, or at least a testimony; the recommendation is not an act, and nothing records that the repair leaned on it. |
-| 04-28 to 05-10 | three audits: the "stopping-time localization" is "highly mature and exact", "correct" | checks concerning the localization step. |
+| 04-28 to 05-10 | two audits: the "stopping-time localization" is "highly mature and exact", "correct"; a third audit in the window says nothing on the bound | checks concerning the localization step. |
 | 05-16 | adjudication: "The *stopped bound* (i) and the *mean-square persistence* (ii) are fine — the defect is localized to (iii)" | a check concerning (i), confirmed, by a third mind. |
 | 05-16 | repair: (iii) becomes (iii′) and (iv); "each exact" | a segment changeset; acts that read the old text lapse; (iii′) and (iv) never asked. |
-| 05-28 | an audit of the segment: "textbook-perfect"; "What would I change? Nothing." | a confirmation of the whole, a fourth model family. |
+| 05-28 | an audit of the segment: "textbook-perfect"; "What would I change? Nothing." | a confirmation of the whole, by a model family that had already spoken on 04-28. |
 | May on | Working Note: "RESOLVED in canon — do not re-open" | not an act. It closes nothing in the model; in the files it told later readers not to look, and one said the segment "pre-answered my strongest planned attack". |
 | 07-02 | an audit: "stopping-time localization legitimate … ✓"; it finds a different false statement in the same segment | a check concerning the step; a finding on the other statement. |
 | 10-30 15:13 | a new result is drafted beside (i), listing (i) as what canon holds | a predicated-on reference to (i). It holds: (i) is warranted. |
@@ -38,7 +38,7 @@ None of these was a recorded act when it happened; they are audit prose, adjudic
 
 **It does not show (i) as owed.** From the third day (i) has a confirming check by a mind other than its author, and by late May it has several, across model families. Its asserted answer stands confirmed, and a rule that accepts a claim on one independent confirmation accepts it. A steady state. The spike author who relied on (i) on 10-30 would have been told, correctly by the record, that it stood.
 
-**Grain and concerns-within-reads are not what was missing.** They make the record more legible: the three audits that only praised the localization step would be seen to concern the step. But the statement itself was affirmed, more than once, and no rule about what an act concerns turns "the stopped bound holds ✓" into a check of something else.
+**Grain and concerns-within-reads are not what was missing.** They make the record more legible: the audits that only praised the localization step would be seen to concern the step. But the statement itself was affirmed, more than once, and no rule about what an act concerns turns "the stopped bound holds ✓" into a check of something else.
 
 **What was missing is the means.** Every confirmation followed the written proof. None put the statement against the segment's other results; none built an instance. The break did both. Two things in the model bear on this, and both were stated only after this case was read:
 
@@ -49,20 +49,22 @@ So a ‹check› says not only which dimension it answers and what it concerns, 
 
 **Also not shown.** That the audits which broke (iii) named (i) as the fallback, and the repair then leaned on it: a refutation of one claim acted as support for its neighbour and nothing records the leaning. That an act which confirmed two claims and was contradicted on one of them the same day still counts in full for the other. And whether any confirming check was right; the model makes what it asked countable and no more.
 
-**What the model does change.** "RESOLVED — do not re-open" would be inert, and the file would not have told four later auditors to stop. The 10-30 break is on the record before any repair. The dependent left unchecked stays visible. The step checks are kept as the steps' warrants and survive the rewrite, where binding at the file lapsed them all.
+**What the model does change.** "RESOLVED — do not re-open" would be inert, and the file would not have told later auditors to stop. The 10-30 break is on the record before any repair. The dependent left unchecked stays visible. The step checks are kept as the steps' warrants and survive the rewrite, where binding at the file lapsed them all.
 
 ## 4. What this says about the model
 
 - The honesty constraint is necessary and was not sufficient here. (i) did not outrun its record; its record was one line of evidence that looked like four.
 - "Which of the several questions under *valid* did this check ask" has to be something the ontology declares and an act records. One dimension called validity, read as "highest confirmed rung", reproduces this failure exactly as it happened.
-- Independence of acts is not a side gap. Four model families agreed, by one means, and were one line.
+- Independence of acts is not a side gap. Minds of three model families agreed, each having read the same written proof, and were one line.
 - The cheapest thing that would have found it was never scheduled: nobody was asked to check (i). It was found as a side effect of verifying a new claim placed beside it. A dimension whose producer never fires on a piece is visible only if never-asked-by-this-means is.
 
 ## Historical Context
 
-The case is recorded in `~/src/aat-v3/preparations/research/missed-error-case-2026-11-06.md`, read whole for this version; every quotation above is from its §2.4 and §2.5, which quote the audits' own files. The first version of this segment (2026-11-08) concluded that the model caught the error "by grain, not by a dimension list": that fourteen checks each concerned a step, so (i)'s validity was never asked and its *exact* was owed from the first day. It reached that by reading the 04-25 pass as concerning steps and by supplying the 05-16 adjudication with a criterion it never recorded. The primary's own summary is that the passing checks "mostly verified a different thing"; a cold audit (`msc/scratch/core-denovo-2.md` §1) set the quotations beside the claim. The earlier holistic sketch (`msc/notes/19` §8) had it nearer right: the gap shows "only because the ontology split those two questions".
+The case is recorded in `~/src/aat-v3/preparations/research/missed-error-case-2026-11-06.md`, read whole for this version; the quotations above are from its §2.4 and §2.5, which quote the audits' own files, except "unchecked" and "not re-derived", which are from its §2.7. The first version of this segment (2026-11-08) concluded that the model caught the error "by grain, not by a dimension list": that fourteen checks each concerned a step, so (i)'s validity was never asked and its *exact* was owed from the first day. It reached that by reading the 04-25 pass as concerning steps and by supplying the 05-16 adjudication with a criterion it never recorded. The primary's own summary is that the passing checks "mostly verified a different thing"; a cold audit (`msc/scratch/core-denovo-2.md` §1) set the quotations beside the claim. The earlier holistic sketch (`msc/notes/19` §8) had it nearer right: the gap shows "only because the ontology split those two questions".
 
 ## Working Notes
+- Not re-run since the model was rebuilt (2026-11-10), only re-worded. Two things it would now have to say: the collision check that contradicted (i) would have stayed owed through any rewording until answered, where before it would have lapsed at the first edit; and none of the audit passes in §2 was a recorded act, so under the model each enters as a ‹finding›, or as nothing, on the testimony of whoever routes the audit, and the confirmations among them count for nothing until re-run.
+- Corrected 2026-11-10 against the primary after a cold audit (`msc/scratch/core-denovo-3.md` §2.2): two audits in the 04-28 to 05-10 window, not three; three model families by the primary's naming, not four; no count of later auditors.
 - Taken into «dimension» and «act» on 2026-11-10: the dimension names its means, a check's criterion says which one, and *read as* may require several. Still to be tried by declaring AAT's validity whole, which is where it will be seen whether the means can be named before it is known which one matters.
 - Open. Whether an act contradicted on one of the things it concerns should lose weight on the others. The 04-25 audit passed (i) and the false (iii) in one breath.
 - Open. Where "the repair leaned on it" is recorded: the 05-16 changeset rested (iii′) on (i) because two audits called (i) safe. A predicated-on reference from (iii′) to (i) would have carried it; nothing asked for one.

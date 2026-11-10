@@ -4,8 +4,8 @@ term "decision" pos=noun pl="-s" {
   avoid "ruling" "one strength of backing among several, and it suggests a lock"
   avoid "authority" "who may decide is standing, read from the record; the word invites citing who decided in place of why"
   rel is term="act" card="{1,1}" note="an act of making so"
-  rel by term="actor" card="{1,N}" note="its accountable party; several where the ontology asks for unity"
-  rel answers term="dimension" card="{1,1}" note="a decided dimension"
+  rel by term="actor" card="{1,N}" note="whoever holds the seats of its accountable party when it is made"
+  rel answers term="dimension" card="{0,1}" note="a decided dimension, when the decision is about a piece"
   rel concerns term="segment" card="{0,N}" note="or a slot, a chunk, an owed item, the work, the ontology"
 }
 status provisional
@@ -21,8 +21,8 @@ Two kinds of statement are adjudicated in a verisectorium, and everything else i
 A decision is an «act» of making so. It records:
 
 - **What was decided, and about what.** A piece (accepted into canon; kept as it was beside a change), a slot (promised), a chunk (where it goes), an owed item (waived), the work (where effort goes, and until when), the ontology (how this verisectorium works), or the subject itself (a modelling or design choice). When the subject itself is decided, the wording of the choice is content, a veritoid of a decision kind, and this act answers the «dimension» that asks who stands behind it.
-- **Who decided.** The accountable party: one or more «actors|def/actor» with standing to decide it. Where the ontology asks for unity, all of them.
-- **Its basis.** What it rests on, recorded as what it read: pieces at their versions, the truth claims taken as grounds, each at the warrant it then had, the assumptions it names, and any condition it states for reopening.
+- **Who decided.** The accountable party: one or more seats (the steward, the lead, the author of a piece, a council) with standing to decide it, each held at that moment by an «actor». Where the ontology asks for unity, all of them. A seat outlasts the actors that hold it, so a decision is sustained, reopened to, and changed by its seat.
+- **Its basis.** What it rests on, recorded as what it read: pieces at their versions, the truth claims taken as grounds, each at the warrant it then had, the assumptions it names, and any condition it states for reopening. A basis element reopens the decision by computation only if it is a piece or a warrant; an assumption worth naming is written as a piece, a claim or a question, so that a check against it reaches the decision.
 - **The importance it was decided at.** How much rested on it, and for what, when it was made.
 
 It may also record the alternatives weighed, who was consulted, and who was told.
@@ -32,7 +32,7 @@ A decision **stands** while its basis holds and its party has not said otherwise
 A decision made in advance for a class of cases, and applied by an ‹instrument›, is a **rule**. The ontology holds the rules. Applying a rule is computed; the rule is a decision like any other, with a party and a basis, and an automated action is a decision someone made earlier.
 
 ### Invariants
-- Its party is read from the harness, never typed. A decision recorded in another's name is a false record of a person, and only that party corrects a decision, or someone shows it was never made.
+- Who held each seat when it was made is read from the harness, never typed. A decision recorded in another's name is a false record of a person; where one mind records what another decided, it records its own ‹testimony› that they said so, with their words. Only its party corrects a decision, or someone shows it was never made.
 - It is reopened exactly when its recorded basis fails. A change that leaves the basis standing reopens nothing, however large; a change to the basis reopens it, however small.
 - It warrants nothing about whether what it concerns is true. A decision about a truth claim decides what to do in light of the evidence (count it, build on the claim, hold it out of canon); the evidence stays recorded as evidence.
 - It is not a lock. Any actor may put a reasoned case for deciding otherwise to its party; a decision cited as a reason not to think is being misused.

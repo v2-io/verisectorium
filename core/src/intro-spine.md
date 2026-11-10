@@ -2,7 +2,7 @@
 slug: intro-spine
 form: intro
 status: provisional
-narrates: [verisectorium, dimension, decision, act, steady·state, changeset, veritoid, segment]
+narrates: [verisectorium, dimension, decision, act, frontier, steady·state, changeset, veritoid, segment]
 ---
 
 # The whole thing, first

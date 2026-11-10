@@ -22,7 +22,7 @@
 # KDL 2.0 (gem kdl >= 2.0). Block shape:
 #   term "name" pos=noun pl="-s" { subtypes "a" "b"; synonyms "x"; avoid "word" "why";
 #                                  rel verb term="target" card="{m,n}" note="…" informal=#true }
-#   status provisional | status decided by="steward-and-lead" on="YYYY-MM-DD"
+#   status provisional | status accepted by="steward-and-lead" on="YYYY-MM-DD"
 # Body: '# «term»' then the one-line def · optional ## Intro · ## Definition or ## Definition(s) (senses or
 #       elaboration, with a ### Invariants subsection) · any free ## sections ·
 #       ## Discussion · ## Examples · optional ## History, ## Historical Context · ## Working Notes (required)

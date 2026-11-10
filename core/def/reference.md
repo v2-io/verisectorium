@@ -10,17 +10,17 @@ status provisional
 ```
 
 # «reference»
-A written pointer from a segment to segments, of a declared kind, with the target version it was last reconciled against carried beside it and optionally the warrant it needs its target to have; someone wrote it, it can be wrong, and only whether it holds is computed.
+A written pointer from a segment to segments, of a declared kind, with the target version its author last saw read from the acta, and optionally the warrant it needs its target to have; someone wrote it, it can be wrong, and only whether it holds is computed.
 
 ## Definition
-A reference is written content: what it points at is part of its segment's version, so re-pointing one is a write. The version it last saw is carried beside it; reconciling it against the same target at a new version is the author's affirmation ("I looked; I still rely on it"), which mints no version and lapses nothing. Its **kind** says what passes along it, and a kind exists only because some «dimension» treats it differently from the rest. Kinds so far: **predicated-on** (this claim needs those; support travels along it and validity caps along it), **narrates** (this talks about that; staleness only), **restates** (the two must agree), **seeded-by** (two acts are not independent), **supersedes** (which is current), **bears-on** (what a chunk concerns), and the pointing of an assembly's slot at the segment that fills it. The ontology may add kinds and their behaviour.
+A reference is written content: what it points at is part of its segment's version, so re-pointing one is a write. The version it last saw is not written: it is read from the acta, as the target's version at the write or at the author's latest affirmation of the reference ("I looked; I still rely on it"), a decision that mints no version and lapses nothing. Its **kind** says what passes along it, and a kind exists only because some «dimension» treats it differently from the rest. Kinds so far: **predicated-on** (this claim needs those; support travels along it and validity caps along it), **narrates** (this talks about that; staleness only), **restates** (the two must agree), **supersedes** (which is current), **bears-on** (what a chunk concerns), and the pointing of an assembly's slot at the segment that fills it. The ontology may add kinds and their behaviour.
 
 A reference **holds** when its target exists (its id is not retired), the target's version is the one the reference last saw, and the target's warrant on the dimension the reference names is at least what the reference needs, where it says. A reference that does not hold is owed on the «frontier»: *stale*, *dangling* or *unmet*, each a different repair.
 
 ### Invariants
 - It points at the specific segment relied on, at the grain relied on: the claim used and not the document that holds it, unless the whole is what is meant.
 - It says how many targets it expects; that gives a miss its meaning. Zero against exactly-one is a defect; zero against any-number is just the answer.
-- A reference to a piece that does not yet exist is allowed and owed, so a projection can point at promised work and a derivation at a result not yet written.
+- A reference to a piece that does not yet exist is allowed and owed (dangling), so a projection can point at promised work and a derivation at a result not yet written.
 - A reference to a retired id is never silently redirected; it is owed until re-pointed to a descendant or dropped.
 - A reference kind that some dimension caps along has no cycles, since the cap has one solution only on an acyclic graph; a cycle found there is something cut too coarsely. Kinds nothing caps along (terms that define one another; two choices that each presuppose the other) may form cycles, and their members are reviewed and accepted together.
 
