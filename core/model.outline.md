@@ -81,7 +81,7 @@ The canonical projection of `core/`: everything the model consists of, in a cons
 | provisional | inline | inbox |  | A segment's intake, computed: the chunks bearing on it that no decision has routed for good. Adding to or draining it never changes the segment. |
 | provisional | inline | rendering |  | Text produced from the corpus and acta for a reader, as of a state: a file, a page, a dashboard, the view put before an agent about to write. Never the thing itself; a status word in it is a snapshot with a state on it. |
 | provisional | inline | praxis |  | What is expected of a mind working in a verisectorium that no tool there enforces: how to orient, which surface to write in, when to seek a cold read. The dual of the engine's affordances. |
-| provisional | impl | [[src/impl-intake\|Intake needs no machinery of its own]] |  | Source, chunk, routing decision and inbox as segments and acts; what ASF's Working Notes were. |
+| provisional | impl | [[src/impl-intake\|An audit comes in]] |  | An invented intake: a five-bullet audit cut into chunks, routed five ways (a finding, a testimony, already present, a new provisional piece, delivered elsewhere) and retired; then un-retired when a later edit drops what one chunk had delivered. Four choices it surfaces. |
 | provisional | impl | [[src/impl-scope-adaptive-system\|A real root: scope-adaptive-system]] |  | ASF's broadest scope segment cut under a sketch ontology and read through the 162 acts vsect 0.1 recorded on it. |
 | provisional | impl | [[src/impl-stopped-bound\|The stopped bound]] |  | A proposition false for six months and affirmed by several minds, read through the model: not caught; what was missing was by what means each check asked. |
 | provisional | disc | [[src/disc-what-would-show-this-wrong\|What would show this wrong]] |  | The falsifiers, and what one real root is expected to strain. |
@@ -94,7 +94,7 @@ The canonical projection of `core/`: everything the model consists of, in a cons
 - The outline's gap rows are open questions, which the model would cut as veritoids of a question kind, not gaps in its own sense (a slot whose kind is unknown).
 - Run one more real root, from a different volume, before adding any term.
 - Which of the inline rows wants to be a term? The rule: it becomes one when its Working Notes would hold a decision nobody else's file can hold.
-- Still untested by any move: an intake, as a small invented move (a source cut into chunks, routed, an inbox drained, the source retired), and a delivery (a paper's projection with its own weighting). The purpose leads the definition and has the least-exercised machinery.
+- Still untested by any move: a delivery (a paper's projection with its own weighting, and a rendering sent out and pinned at a state). An intake has now been run. The purpose leads the definition, and delivery is now its least-exercised half.
 
 - On size and register. The whole model was once explained top to bottom, each word introduced before use, with one running example and one picture, in about three hundred and fifty lines. This core should end no larger than that in what a reader must read to hold it, and simpler; it is not there yet (it has no single picture).
 

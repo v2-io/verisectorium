@@ -42,7 +42,7 @@ A ‹projection› is an assembly whose slots mostly point: a chapter, a volume,
 - A promised slot is owed until what fills it is accepted.
 - Nothing inside a provisional segment is owed. An accepted segment that rests on a provisional or unsettled one is unsettled, unless all it relies on is that the suggestion exists.
 - A segment reached by no canonical projection and by no predicated-on reference in or out is an orphan; orphans are allowed and counted.
-- A ‹source› is cut completely into chunks and never rewritten; it is retired, computed, when every chunk has been routed for good.
+- A ‹source› is cut completely into chunks. Its text is never rewritten; its cut, and what each chunk bears on, may be refined as routing shows the grain. It is retired, computed, while every chunk has a routing decision that stands.
 - Adding to or draining a segment's inbox never changes the segment.
 
 ## Discussion
