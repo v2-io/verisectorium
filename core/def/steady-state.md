@@ -12,16 +12,18 @@ status provisional
 ```
 
 # «steady·state»
-A state whose frontier is empty, or every item on it is covered by a waiver with a reason; the waivers, and the determinant dimensions never asked of accepted pieces, are its stated conditions. A verisectorium at a steady state is *stationary*: the adjective for the noun.
+A state, of the whole or of the part outside every open changeset, in which nothing is owed, or every owed item is covered by a waiver with a reason; the waivers, and the determinant dimensions never asked of accepted pieces, are its stated conditions. A verisectorium at a steady state is *stationary*: the adjective for the noun.
 
 ## Definition
-There are two kinds of time. In **steady time** the verisectorium moves from one steady state to the next, each move at one logical instant; nothing exists between two steady states, and at each one the verisectorium is good or true, with stated conditions. In **work time** minds assemble that move over hours and days; while they do there is a working state, the last steady state plus what has been staged, and it is never the verisectorium. A steady state is reached when an ‹atomic·changeset› closes: its «frontier» is empty, or what remains on it is covered by waivers. A **waiver** is a «decision», by a party the ontology gives standing, that an owed item is knowingly left owed, with its reason.
+There are two kinds of time. In **steady time** a part of the verisectorium moves from settled to settled, each move at one logical instant; nothing exists in between, and at each one the verisectorium is good or true, with stated conditions. In **work time** minds assemble that move over hours and days; while they do there is a working state, the last steady state plus what has been staged, and it is never the verisectorium. A steady state is reached when an ‹atomic·changeset› closes: its «frontier» is empty, or what remains on it is covered by waivers. A **waiver** is a «decision», by a party the ontology gives standing, that an owed item is knowingly left owed, with its reason.
+
+Steadiness is said of a place. Each atomic changeset has a scope, the segments its disturbance reaches, and several may be open at once. The verisectorium is steady **outside** the open scopes: nothing there is owed, and nothing there rests on anything that is. A steady state of the whole is the case where none is open, and with several minds at work it may be uncommon; nothing needs it. What a reader or a builder is promised is about the segments they are using.
 
 The steady state's **stated conditions** are: every waiver covering an owed item, with its reason and its party; for the ‹determinant› dimensions, every piece in canon whose warrant is *never asked*, by dimension and by declared means; and the gaps its canonical projection shows. A rendering of a steady state carries them; a reader who sees a steady state sees what it is not yet claiming.
 
 ### Invariants
 - At a steady state nothing in canon outruns the record: no accepted piece is contradicted or overclaimed, every decision canon rests on stands, every reference from canon holds, and no promise is unkept, except by recorded waiver.
-- The steady states form a line. None exists between two neighbours. Only the last write to each segment in an atomic changeset is in the steady state it reaches.
+- Closed atomic changesets are ordered only where one read what another wrote; unrelated ones have no order and need none. Within one, nothing exists between its opening and its close: only the last write to each segment is in what it reaches.
 - A waiver is visible in the conditions of every steady state while its item stays owed, and it ends with the repair that clears the item.
 - A confirming check on a steady state reaches a new steady state at once, since nothing becomes owed.
 - A rendering of a steady state made while a later move is under way shows every contradiction and finding recorded since against a piece in it. The steady state is still what the verisectorium says; a reader about to build on a piece is told what is already known against it.
@@ -48,8 +50,7 @@ Joseph, 2026-11-05, weighing a marker on a value: "There is now a known defect t
 - Adjudicated against msc/notes 05 (22:53Z), 08/10, 09 §3.1 and §4.4, 14, 19 §5 and §7, and Joseph's 11-08 words on frontier versus stable steady states.
 
 ## Working Notes
-- Open (Joseph's, punted). Whether two steady states reached independently in two working copies combine into a steady state. The model says nothing.
 - Open. Whether a working state is held as a branch, a separate corpus, or otherwise. The requirements are: steady states along the way, a diff against the last steady state, the frontier, a merge only when the frontier is empty or waived, and detection of overlapping changesets before merge.
 - Open. How much warrant a small rewording should cost. Here acts lapse completely on any change to what they read; a verisectorium wanting a graded fall declares a *read as* that gives one.
-- Waivers are meant to be rare. With one steady line for the whole verisectorium and several minds at work, some finding somewhere is nearly always open, so closing any move would mean waiving whatever is unrelated to it, and the waiver would become the ordinary way to close. That makes the gap "parallel changesets" part of the first real verisectorium and not something behind it. Lean: an atomic changeset has a scope (the segments it disturbs and what in canon rests on them), a state is steady over a scope, and moves with disjoint scopes proceed side by side; Joseph's 2026-11-04 picture was of "the entire store / graph / isolated subgraph" entering the unstable state. Untested; needs an invented move with two findings in unrelated places.
+- Waivers are meant to be rare: for a known defect knowingly left, never for work that is merely elsewhere. Scopes are what keep them so.
 - Open. Whether suggested slots are shown with a steady state's conditions or only counted.

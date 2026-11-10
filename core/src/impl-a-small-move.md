@@ -13,7 +13,7 @@ narrates: [steady·state, changeset, frontier, act, decision, reference, veritoi
 
 ## The material
 
-The ontology has one rule for canon: a claim is accepted when a mind other than its author has re-derived it and it rests only on accepted pieces; a document is accepted when its claims are and someone other than its author has read it whole. The rule is a «decision» made once and applied by an instrument.
+The ontology has one rule for canon: a claim is accepted while a mind other than its author has re-derived it, nothing unanswered stands against it, and it rests only on accepted pieces; a document is accepted when its claims are and someone other than its author has read it whole. The rule is a «decision» made once and applied by an instrument.
 
 Steady state S0. T is a derived result, an assembly holding four veritoids: a claim c, its derivation d, a description e, and a plain-language paragraph k. Its kind says e and k depend on c. Agent B, who did not write it, has re-derived c by way of d. T has been read whole. So c and T are accepted. U holds a claim u that is predicated on c; B has re-derived u, U has been read whole, and u and U are accepted. Nothing else refers to T or U.
 
@@ -21,10 +21,10 @@ Steady state S0. T is a derived result, an assembly holding four veritoids: a cl
 
 | work time | what happens | the frontier afterwards |
 |---|---|---|
-| 08:30 | An auditor finds c false as stated: it needs a further hypothesis H. The ‹finding› is recorded. | S0 is disturbed. **contradicted**: c, by this finding. Contradicted wins over the earlier re-derivation, so the rule no longer accepts c: **reopened**. u was accepted on c being accepted: **reopened**. |
+| 08:30 | An auditor finds c false as stated: it needs a further hypothesis H. The ‹finding› is recorded. | S0 is disturbed. **found**: c, by this finding. An unanswered finding stands against c, so the rule no longer accepts it: **reopened**. u was accepted on c being accepted: **reopened**. |
 | 09:00 | Agent A drafts: adds H to the claim, reworks the derivation, re-reads e and finds it still right, rewrites k. | Unchanged. A draft is not a changeset. |
-| 09:25 | A writes a ‹segment·changeset› on T: c and d and k changed, e carried with A's affirmation. One instant; no order among the four. | The finding does not lapse with the text it read: c stays **contradicted** until someone other than A says the finding is answered. B's re-derivation read the old c and d and has lapsed. T's whole read has lapsed: T's acceptance is **reopened**. u's reference to c is **stale**, and because c was narrowed a question is **raised** on u: did it rely on what is gone? |
-| 11:00 | B reads the finding against the new c and records it answered, then re-derives the new c by way of the new d. | *Contradicted* is cleared, and the rule accepts c again. Owed: T's whole read; u's stale reference, its question and its acceptance. |
+| 09:25 | A writes a ‹segment·changeset› on T: c and d and k changed, e carried with A's affirmation. One instant; no order among the four. | The finding does not lapse with the text it read: it stays owed until someone other than A says it is answered. B's re-derivation read the old c and d and has lapsed. T's whole read has lapsed: T's acceptance is **reopened**. u's reference to c is **stale**, and because c was narrowed a question is **raised** on u: did it rely on what is gone? |
+| 11:00 | B reads the finding against the new c and records it answered, then re-derives the new c by way of the new d. | The finding is cleared, and the rule accepts c again. Owed: T's whole read; u's stale reference, its question and its acceptance. |
 | 11:30 | A finds an error in step 3 of d and writes a second changeset on T: d changed again. | B's 11:00 check read the d that is gone. It has lapsed. c is unsettled again. |
 | 12:00 | B re-derives c by way of the corrected d. | c accepted again. |
 | 13:00 | Agent C answers the question to U: u holds only if U also assumes H. C writes a changeset on U: u changed, its reference pointing at c as before, now seen at c's new version. | u's reference holds. B's old re-derivation of u has lapsed, so the rule does not accept the new u: still **reopened**. |

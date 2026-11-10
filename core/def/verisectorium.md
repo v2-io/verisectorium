@@ -5,7 +5,7 @@ term "verisectorium" pos=noun pl="verisectoria" {
   rel declares term="dimension" card="{1,N}" note="of which at least one is a determinant"
   rel declares term="kind" card="{1,N}"
   rel holds term="segment" card="{0,N}" note="its sources and projections among them"
-  rel rests-at term="steady·state" card="{0,N}" note="its history on the steady line"
+  rel rests-at term="steady·state" card="{0,N}" note="its history"
 }
 status provisional
 ```
@@ -16,7 +16,7 @@ A place for cutting truth: a body of work where material brought in is dissected
 ## Definition
 A verisectorium takes in **influx**, material from outside its settled content, and **cuts** it until the pieces are independently contributory: each able to be right or wrong, decided or open, on its own. The pieces are **adjudicated** by minds and instruments whose acts are recorded; what is adjudicated is always one of two kinds of statement, a truth claim, which stands by evidence, or a «decision», which stands by the backing of its party. They are **refined** toward agreement with what the work is held to. And they are **reassembled** into coherent results that readers and downstream builders use and build on.
 
-Concretely a verisectorium is: an **ontology** (the kinds of thing it may hold, the «dimensions|def/dimension» asked of them, and which of those are ‹determinant›s); a **corpus** of everything written in it; its **acta** of everything done to it; a **history**, the line of its «steady·states|def/steady-state»; and its **praxes**, what is expected of a mind working in it that no tool enforces. The word also names this repository and project, which describes verisectoria generally and builds the tooling (`v2`) for them; that sense is kept because the estate uses it, and it is not the referent of the relations above.
+Concretely a verisectorium is: an **ontology** (the kinds of thing it may hold, the «dimensions|def/dimension» asked of them, and which of those are ‹determinant›s); a **corpus** of everything written in it; its **acta** of everything done to it; a **history**, the changesets that have closed and the «steady·states|def/steady-state» they reached; and its **praxes**, what is expected of a mind working in it that no tool enforces. The word also names this repository and project, which describes verisectoria generally and builds the tooling (`v2`) for them; that sense is kept because the estate uses it, and it is not the referent of the relations above.
 
 ### Machinery and practical model
 Two things are defined in this outline and must not be confused. The **machinery** is the meta-ontology the rest of the outline gives: its terms, under which content divides without end in principle and stops in practice at a few scales: the «veritoid», the document-like «segments|def/segment» veritoids are written in, and the projections that gather those. The **practical model** is what a mind at work actually meets: an outline with marked slots, document-like segments rendered as markdown, an inbox beside each segment, a frontier to read, a steady state to reach, and the affordances each of those wants. The practical model is built on the machinery and is not the same thing as it; a tool may give an outline affordances a bare projection does not name without the machinery changing. Where the outline speaks of both, it says which. What the practical model cannot embed deterministically is written for the mind as a **praxis**: the engine enforces what it can, and the praxes say what is expected beyond that.

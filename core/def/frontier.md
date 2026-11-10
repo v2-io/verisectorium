@@ -2,7 +2,7 @@
 term "frontier" pos=noun pl="-s" {
   avoid "todo list" "a frontier is computed, never typed, and lies only as much as the state it is computed from"
   avoid "obligations" "an earlier word; the items are violated constraints, each with a clearer"
-  rel of term="changeset" card="{1,1}" note="the atomic changeset in progress whose working state it is computed over"
+  rel of term="changeset" card="{0,N}" note="the open atomic changesets; every item belongs to the one that caused it"
   rel names term="dimension" card="{0,N}" note="per item: the dimension whose producer can clear it" informal=#true
   rel names term="decision" card="{0,N}" note="per reopened item: the decision and its party" informal=#true
 }
@@ -30,7 +30,7 @@ The frontier is computed for any state, and recomputed after every write or act 
 
 The most common item is a reopened acceptance. A piece is in canon by a decision whose basis is the piece at its version, the warrants the ontology asks of it, and everything it rests on being accepted. Rewrite the piece, lapse a check it needed, or unsettle a premise, and its acceptance is reopened: the piece is **unsettled** until its party, or the rule that stands in for one, accepts it again. An unsettled piece is still in canon. Reopening is not reversal, and that is why it owes.
 
-Each item carries its cause (which write or act made it owed) and who can clear it: for a found-out dimension whoever its *produced by* gives standing, the piece's last author first where a repair is wanted; for a decision, its party. The frontier is addressed to someone. Only canon owes, settled or unsettled: what a provisional segment says inside itself is shown and not owed. Beside the owed items the frontier shows, as information, every piece whose own warrant exceeds its effective one: a well-checked claim resting on an unchecked premise.
+Each item carries its cause (which write or act made it owed, and so which open changeset it belongs to) and who can clear it: for a found-out dimension whoever its *produced by* gives standing, the piece's last author first where a repair is wanted; for a decision, its party. The frontier is addressed to someone. Only canon owes, settled or unsettled: what a provisional segment says inside itself is shown and not owed. Beside the owed items the frontier shows, as information, every piece whose own warrant exceeds its effective one: a well-checked claim resting on an unchecked premise.
 
 ### Invariants
 - It is computed, never kept. The same recorded things read in any order give the same frontier, with every declared rule evaluated as of the state.
