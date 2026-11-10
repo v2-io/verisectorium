@@ -5,5 +5,5 @@ The canonical projection of this verisectorium's praxes: what is expected of a m
 | mark | def | praxis | description |
 |---|---|---|---|
 | provisional | present | [[praxes/working-on-core\|Working on core]] | The one procedure every mind touching `core/` follows: orient, change in the right surface, run the gate, log, commit; what provisional means here and who decides; when a word becomes a term; when to launch a cold read. |
-| gap | – | releasing a decision | How a def goes from provisional to decided between steward and lead, and what is recorded. Not yet needed; nothing is decided. |
+| gap | – | accepting a segment | How a def goes from provisional to accepted between steward and lead, and what is recorded as the decision's basis. Not yet needed; nothing is accepted. |
 | gap | – | handoff | What a session leaves for the next mind beyond the acta and the commit; whether this verisectorium wants a handoff praxis at all, given that handoffs in `msc/notes/` went stale twice. |

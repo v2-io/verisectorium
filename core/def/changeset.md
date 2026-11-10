@@ -16,15 +16,15 @@ status provisional
 A change at one logical instant: a whole new written state of one segment, or everything that takes the verisectorium from one steady state to the next.
 
 ## Definition
-A ‹segment·changeset› is a whole new written state of one «segment», replacing the old one at one instant, with no order among the changes inside it. For every veritoid that depends, by an inner dependency of the segment's kind, on a veritoid that changed, it either changes that veritoid too or carries the author's affirmation of it; otherwise the write is refused as a draft. It may change content, assertions and references; recut (split, merge); move veritoids in or out (promote, fold back); and mint new segments. Joseph's "instance-isolated changeset".
+A ‹segment·changeset› is a whole new written state of one freestanding «segment» and everything it holds, replacing the old one at one instant, with no order among the changes inside it. For every held segment that depends, by an inner dependency of the kind, on one that changed, it either changes that one too or carries the author's **affirmation** of it, a «decision» to keep it as it is beside the change; otherwise the write is refused as a draft. It may change content and references; change slots and their states; recut (split, merge); move held segments in or out (promote, fold back); and mint new segments. Joseph's "instance-isolated changeset".
 
-An ‹atomic·changeset› is everything, segment changesets and acts together, that takes the verisectorium from one «steady·state» to the next. It opens with whatever first disturbs the steady state (a finding, a softened assertion, a new result, a rule firing, an outside change) and closes when the «frontier» is empty or every item on it is accepted. It is usually more than one mind can assemble in one pass, so it is staged; after every stage the frontier says what is owed. Only the last write to each segment reaches the next steady state. Joseph's "atomic changeset", "simultaneously, logically speaking".
+An ‹atomic·changeset› is everything, segment changesets and acts together, that takes the verisectorium from one «steady·state» to the next. It opens with whatever first disturbs the steady state (a finding, a narrowed claim, a new result, a rule applying, word that something outside has moved) and closes when the «frontier» is empty or every item on it is waived. It is usually more than one mind can assemble in one pass, so it is staged; after every stage the frontier says what is owed. Only the last write to each segment reaches the next steady state. Joseph's "atomic changeset", "simultaneously, logically speaking".
 
 ### Invariants
-- A «veritoid» never changes alone; only a segment changeset writes.
-- A segment changeset is refused, not owed, when an inner dependent is neither changed nor affirmed, when it would make predicated-on cyclic, or when it names an id it does not hold and is not moving.
-- What is written is reconciled by the author at one instant. Warrants are not the author's to set: the moment a changeset is staged, every act that read what changed lapses, and earning the warrant back takes further acts, usually by other minds, in work time.
-- An affirmation never counts as an independent check. Its job is only that nothing was left as it was without someone having looked.
+- Nothing held changes alone; only a segment changeset writes.
+- A segment changeset is refused, not owed, when an inner dependent is neither changed nor affirmed, when it would make a cycle along a reference kind some dimension caps along, or when it names an id it does not hold and is not moving.
+- What is written is reconciled by the author at one instant. Warrants are not the author's to set: the moment a changeset is staged, every check that read what changed lapses and every decision that rested on it is reopened, and earning them back takes further acts, usually by other minds, in work time.
+- An affirmation is the author's decision and never evidence. Its job is only that nothing was left as it was without someone having looked.
 - An act alone, such as a confirming check on a steady state, is an atomic changeset of size one.
 - Whether a refused write is recorded in the acta or only reported is an architectural choice; the model requires only that the acta hold what happened to the verisectorium.
 
@@ -34,8 +34,8 @@ An ‹atomic·changeset› is everything, segment changesets and acts together, 
 - The soften-then-strengthen choice is methodology, not engine. Softening an assertion is the cheapest way back to a steady state and often a false calm, because of what caps along predicated-on. Whether to complete the softening first and take up the strengthening after, or to stack them and complete once, is a decision about where effort goes. The model allows both and prefers neither.
 
 ## Examples
-- `33cfb14c` (2026-10-30 16:29): one segment changeset on `deriv-sector-condition` ((i) becomes the killed moment, (iii) splits, A.1S-τ arrives), part of an atomic changeset that also rewrote `result-contraction-template`, re-read four consumers, and moved a headline in the introduction; the broken check at 15:50 was its opening and the independent confirmation at 22:58Z part of its close.
-- The 2026-10-30 integrations of `scope-adaptive-system`: eight revise acts (`5e613630`, `26a703b0`, …, `9fde935e`), each a segment changeset, inside one atomic changeset that closed with check 8.
+- A theory's proposition found false by a check in the afternoon: one segment changeset rewrites its document (the proposition restated, a neighbour split, a replacement result added), inside an atomic changeset that also rewrites the template result built on it, re-reads four consumers and moves a headline in the introduction. The contradicting check opened it; an independent confirmation that night was part of its close.
+- One day's integration of a scope segment: eight rewrites, each a segment changeset, inside one atomic changeset that closed with the eighth round of checks.
 
 ## Historical Context
 ### Etymology

@@ -2,7 +2,7 @@
 slug: disc-actor
 form: disc
 status: provisional
-narrates: [actor, act, dimension, steady·state, frontier, changeset, segment, kind]
+narrates: [actor, act, decision, dimension, steady·state, frontier, changeset, segment, kind]
 ---
 
 # The minds that turn over, and what the verisectorium knows about them
@@ -27,17 +27,17 @@ With the distinction, the guess goes away. An actor arriving at a «steady·stat
 
 ## The actor's record, and standing
 
-What the verisectorium can know about an actor divides at a line. Above it is the **situation**, which is not the actor's property: the state of the verisectorium when it arrives, and its **assignment**, what it is for, an attestation by whoever dispatched it. Below it is the actor's **own record**: the underlying model or instrument at a version (the thing with propensities, early capabilities, and capabilities known to be emergeable by observation); its system prompt and initial context; its orientation to the engine, to the domain, and to the pieces its job touches; its consortia, the other actors available to it; and its experience, how much this actor has actually done.
+What the verisectorium can know about an actor divides at a line. Above it is the **situation**, which is not the actor's property: the state of the verisectorium when it arrives, and its **assignment**, what it is for, a «decision» by whoever dispatched it. Below it is the actor's **own record**: the underlying model or instrument at a version (the thing with propensities, early capabilities, and capabilities known to be emergeable by observation); its system prompt and initial context; its orientation to the engine, to the domain, and to the pieces its job touches; its consortia, the other actors available to it; and its experience, how much this actor has actually done.
 
 Those are not one kind of thing. The model and the prompt are **attested** from the harness. The three orientations are **warrants earned by checks** on the actor, bound to what it read, lapsing when the actor ends. Consortia are **references** from actor to actors. Experience is **computed**. And **standing is a gate a dimension declares over that record**: whose acts count, yes or no, before any question of quality, read from the actor's warrants rather than typed. "Validity is produced by a re-derivation from a mind whose domain orientation is warranted and who is not the author."
 
-## Reading is checked, not attested
+## Reading is checked, not taken on the reader's word
 
-An actor's own word about what it has read is the least trustworthy act in the acta, for the reason above: across a compaction, introspection returns a confident yes. So an orientation dimension's producer is a **check**, one the actor cannot pass by reading during the check: the pieces sealed, the projection left open (so that knowing the index cannot pass for knowing the content), a sample of units weighted toward what matters, completion from memory, a grade. The three ways this has been done without a check, in the estate's own experience, all failed the same way: a hand-kept orientation file that was cited as law, an attested digest of what was read, and a fixed quiz that was learnable. Each was a written or attested thing standing in for a checked one.
+An actor's own testimony about what it has read is the least trustworthy act in the acta, for the reason above: across a compaction, introspection returns a confident yes. So an orientation dimension's producer is a **check**, one the actor cannot pass by reading during the check: the pieces sealed, the projection left open (so that knowing the index cannot pass for knowing the content), a sample of units weighted toward what matters, completion from memory, a grade. The three ways this has been done without a check, in the estate's own experience, all failed the same way: a hand-kept orientation file that was cited as law, a self-reported digest of what was read, and a fixed quiz that was learnable. Each was a written thing, or a mind's own testimony, standing in for a check.
 
 ## The pass is an act in the acta
 
-An orientation pass has exactly the act's shape: the actor; the state it was proven against; what it read, the sampled pieces at their versions; the criterion fixed first; the outcome; and nothing new. Recording it in the acta, rather than holding a token outside the acta, means the project *knows* a mind was brought to the point where it may act and knows what it read, and an attested actor cannot quietly have a pass minted by another. The refusal (no write by an actor without a binding pass) is then computed from the record. A middle grade, enough right to proceed with a promise to read what was missed, is an acceptance with a stated condition applied to a mind, and belongs in the record the same way.
+An orientation pass has exactly the act's shape: the actor; the state it was proven against; what it read, the sampled pieces at their versions; the criterion fixed first; the outcome; and nothing new. Recording it in the acta, rather than holding a token outside the acta, means the project *knows* a mind was brought to the point where it may act and knows what it read, and an attested actor cannot quietly have a pass minted by another. The refusal (no write by an actor without a binding pass) is then computed from the record. A middle grade, enough right to proceed with a promise to read what was missed, is a waiver with a stated condition, applied to a mind, and belongs in the record the same way.
 
 Two further things fall out. The sampling cuts pieces into units, and a unit a well-read mind cannot complete is badly cut or ambiguous, which is a finding about the piece: the orientation check is a grain detector. And the same act that measures the mind can warrant the piece on comprehension, if it is recorded as concerning the sampled veritoids.
 

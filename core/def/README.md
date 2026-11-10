@@ -8,6 +8,6 @@ Body, in order: `# «term»` with the one-line definition under it; optional `##
 
 **Standing alone.** The one-line definition, `## Definition`, `### Invariants` and `## Examples` state present truth and rest on nothing outside the def's own «references»: no path, no note number, no "see X for the derivation". Only History, Historical Context, Working Notes and, carefully, Discussion may point outside. `bin/defs check` refuses a path or a note reference inside the standalone sections.
 
-References: `«term»` for a term with a file; `‹subtype›` for a declared subtype. Plain words defined by the outline's inline rows (ontology, corpus, canon, acta, actum, attribute, praxis, state, content, identity, version, assertion, warrant, name, slot, inner dependency, row, criterion, affirmation, acceptance, chunk, inbox, rendering) are written plainly, without guillemets, and mean what the outline says.
+References: `«term»` for a term with a file; `‹subtype›` for a declared subtype. Plain words defined by the outline's inline rows (truth claim, corpus, canon, ontology, acta, actum, state, content, identity, version, name, slot, inner dependency, assertion, warrant, attribute, criterion, evidence, acceptance, affirmation, waiver, chunk, inbox, rendering, praxis) are written plainly, without guillemets, and mean what the outline says.
 
 `bin/defs check core` is the gate.
