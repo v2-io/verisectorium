@@ -1,0 +1,7 @@
+=== acyclic: a named assumption upstream (all stable models)
+  good(before,dec1) owed(after,c4_finding(v2),x) owed(after,c5_acceptance_not_good,r2) stationary(before) 
+  SATISFIABLE 
+=== with the loop (x rests on r2): all stable models, the 'before' row only
+  owed(before,c5_acceptance_not_good,r2) owed(before,c5_rests_on_fault(r2),x) 
+  good(before,dec1) stationary(before) 
+  SATISFIABLE 

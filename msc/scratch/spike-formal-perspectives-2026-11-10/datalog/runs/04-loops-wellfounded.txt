@@ -1,0 +1,11 @@
+p1 question on own consistency: fault(p)                  undefined
+p2 crossed questions: fault(a)                            undefined
+p2 crossed questions: fault(b)                            undefined
+p3 ring, by fault: fault(a)                               false
+p3 ring, literal: consistent(a)                           undefined
+p4 waiver on own consistency: waived                      undefined
+p4 waiver on own consistency: fault(p)                    undefined
+p5 condition upstream: good(d)                            true
+p5 condition upstream: fault(r2)                          false
+p6 condition loops back: good(d)                          undefined
+p6 condition loops back: fault(r2)                        undefined

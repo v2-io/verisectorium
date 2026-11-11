@@ -1,0 +1,5 @@
+.decl stands(q:symbol)  .decl owed(p:symbol)  .decl fault(p:symbol)
+stands("q") :- !fault("p").
+owed("p")   :- stands("q").
+fault("p")  :- owed("p").
+.output fault

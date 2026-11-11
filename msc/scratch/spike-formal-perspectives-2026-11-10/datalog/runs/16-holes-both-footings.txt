@@ -1,0 +1,18 @@
+=== clock footing (m0.lp)
+  owed(d_checked_first,c4_guard(fc),c)
+  owed(e_old_pass,c4_guard(fc),c)
+  SATISFIABLE
+  stationary(a_fork1)
+  stationary(a_fork2)
+  stationary(a_union)
+  stationary(c_roundtrip)
+  stationary(f_rewound)
+=== causal footing (causal/m0-causal.lp)
+  owed(a_union,c0_two_versions(ca,cb),c)
+  owed(c_roundtrip,c4_guard(fc),c)
+  owed(e_old_pass,c4_guard(fc),c)
+  SATISFIABLE
+  stationary(a_fork1)
+  stationary(a_fork2)
+  stationary(d_checked_first)
+  stationary(f_rewound)

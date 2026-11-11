@@ -1,0 +1,21 @@
+// A cut of M0 for one row of the story (11:30, after d3 is written), to show what
+// Souffle's provenance gives for a frontier item. The line's selection is given as facts
+// here; in m0.lp it is derived from events.
+.decl sel(p:symbol, v:symbol)
+.decl evidence(e:symbol, p:symbol, v:symbol, crit:symbol, outcome:symbol)
+.decl reads(e:symbol, q:symbol, w:symbol)
+.decl asks_valid(p:symbol)
+.decl read_bad(e:symbol)
+.decl applies(e:symbol)
+.decl checked(p:symbol)
+.decl owed_unchecked(p:symbol)
+sel("c","c2"). sel("d","d3"). sel("e","e1"). sel("k","k2"). sel("u","u1").
+asks_valid("c"). asks_valid("u").
+evidence("E1","c","c1","valid","holds"). reads("E1","d","d1").
+evidence("E7","c","c2","valid","holds"). reads("E7","d","d2").
+evidence("E8","c","c2","casex","holds").
+read_bad(E) :- reads(E,Q,W), !sel(Q,W).
+applies(E)  :- evidence(E,P,V,_,_), sel(P,V), !read_bad(E).
+checked(P)  :- applies(E), evidence(E,P,_,"valid","holds").
+owed_unchecked(P) :- asks_valid(P), !checked(P).
+.output owed_unchecked

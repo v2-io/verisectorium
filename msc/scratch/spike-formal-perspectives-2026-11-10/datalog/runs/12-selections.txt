@@ -1,0 +1,14 @@
+=== as of time 20: stationary selections among versions written so far
+  sel(c,c1) sel(d,d1) sel(e,e1) sel(k,k1) sel(o,o1) sel(t,t1) sel(u,u1) sel(uu,uu1) 
+  (SATISFIABLE)
+=== as of time 35: stationary selections among versions written so far
+  (UNSATISFIABLE)
+=== as of time 75: stationary selections among versions written so far
+  (UNSATISFIABLE)
+=== as of time 95: stationary selections among versions written so far
+  (UNSATISFIABLE)
+=== as of time 106: stationary selections among versions written so far
+  (UNSATISFIABLE)
+=== as of time 115: stationary selections among versions written so far
+  sel(c,c2) sel(d,d3) sel(e,e1) sel(k,k2) sel(o,o1) sel(t,t1) sel(u,u2) sel(uu,uu1) 
+  (SATISFIABLE)

@@ -1,0 +1,5 @@
+clingo version 5.8.3
+----------------------------------------------------------------------------
+Version: 2.5
+SWI-Prolog version 10.0.2 for arm64-darwin
+Python 3.11.14

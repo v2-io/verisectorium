@@ -1,0 +1,30 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by kodkod.engine.satlab.SATFactory in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+00. run   anotherFixedPoint        0    1/1     SAT
+01. run   anotherFixedPointNoSelfLoop     0    1/1     SAT
+02. check closedFormIsFixed        0       UNSAT
+03. check closedFormIsGreatest     0       UNSAT
+04. check stationaryIgnoresRecursion     0       UNSAT
+05. run   noFixedPoint             0    1/1     SAT
+06. run   noGreatest               0    1/1     SAT
+07. run   noGreatestQuestionsOnly     0    1/1     SAT
+08. check unconditionalIsPart1     0       UNSAT
+09. run   noFixedPointDirect   !Type error in /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/alloy/fixpoints.als at line 109 column 41:
+Analysis cannot be performed since it requires higher-order quantification that could not be skolemized.
+Error
+  0. [TranslateAlloyToKodkod.execute_commandFromBook] command noFixedPointDirect could not be solved: Type error in /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/alloy/fixpoints.als at line 109 column 41:
+Analysis cannot be performed since it requires higher-order quantification that could not be skolemized.
+c last restart ## conflicts  :  126 598 
+c last restart ## conflicts  :  0 602 
+c last restart ## conflicts  :  41 935 
+c last restart ## conflicts  :  0 1016 
+c last restart ## conflicts  :  31 908 
+c last restart ## conflicts  :  0 900 
+c last restart ## conflicts  :  170 1541 
+c last restart ## conflicts  :  1 1628 
+c last restart ## conflicts  :  175 1288 
+c last restart ## conflicts  :  0 1361 
+exit=1

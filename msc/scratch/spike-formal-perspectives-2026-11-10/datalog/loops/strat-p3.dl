@@ -1,0 +1,7 @@
+// the ring, by fault: positive recursion only. Accepted.
+.decl rests(p:symbol,q:symbol) .decl owed(p:symbol) .decl fault(p:symbol) .decl piece(p:symbol) .decl ok(p:symbol)
+piece("a"). piece("b"). rests("a","b"). rests("b","a").
+fault(P) :- owed(P).
+fault(P) :- rests(P,Q), fault(Q).
+ok(P) :- piece(P), !fault(P).
+.output ok(IO=stdout)

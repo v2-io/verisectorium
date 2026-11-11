@@ -1,0 +1,22 @@
+rules read from: m0.lp, reading-write-looks.lp
+derived relations: 36  stored relations: 17
+cycles through negation: none (the program is stratified)
+
+polarity of each stored relation toward `owed`:
+  affirm           -   can only remove
+  asks_valid       +   can only add
+  evidence         +-  either
+  inner            +   can only add
+  markroot         +-  either
+  pred             +   can only add
+  raise            +-  either
+  reads            +-  either
+  result           +   can only add
+  same             +-  either
+  setaside         +-  either
+  slot             +-  either
+  view             +-  either
+  vis              +-  either
+  waive            -   can only remove
+  write            +-  either
+  wrote_against    -   can only remove

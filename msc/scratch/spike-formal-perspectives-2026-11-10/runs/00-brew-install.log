@@ -1,0 +1,53 @@
+Warning: The following taps are not trusted:
+  terrastruct/tap
+
+Homebrew is currently ignoring formulae, casks and commands
+from these taps because tap trust is required.
+Prefer trusting only the specific formulae, casks or commands you need.
+Trust installed formulae from these taps with:
+  brew trust --formula terrastruct/tap/tala
+Trust other specific casks and commands with:
+  brew trust --cask <user>/<tap>/<cask>
+  brew trust --command <user>/<tap>/<command>
+Whole-tap trust is broader and includes all current and future formulae,
+casks and commands from the listed taps. Trust whole taps with:
+  brew trust terrastruct/tap
+Untap them with:
+  brew untap terrastruct/tap
+For more information, see:
+  https://docs.brew.sh/Tap-Trust
+
+==> Downloading bottle manifests
+✔︎ Bottle Manifest elan-init (4.2.4)
+✔︎ Bottle Manifest clingo (5.8.3)
+✔︎ Bottle Manifest souffle (2.5)
+✔︎ Bottle Manifest openjdk (27.0.1.0.3)
+==> Fetching downloads for: elan-init, clingo, souffle and openjdk
+✔︎ Bottle elan-init (4.2.4)
+✔︎ Bottle clingo (5.8.3)
+✔︎ Bottle souffle (2.5)
+✔︎ Bottle openjdk (27.0.1.0.3)
+==> Pouring elan-init--4.2.4.arm64_golden_gate.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/elan-init/4.2.4: 21 files, 5.9MB
+==> Pouring clingo--5.8.3.arm64_golden_gate.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/clingo/5.8.3: 42 files, 7.9MB
+==> Pouring souffle--2.5.arm64_golden_gate.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/souffle/2.5: 207 files, 20MB
+==> Pouring openjdk--27.0.1.0.3.arm64_golden_gate.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/openjdk/27.0.1.0.3: 535 files, 391.3MB
+==> Caveats
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> openjdk
+For the system Java wrappers to find this JDK, symlink it with
+  sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+
+openjdk is keg-only, which means it was not symlinked into /opt/homebrew,
+because macOS provides similar software and installing this software in
+parallel can cause all kinds of trouble.
+
+If you need to have openjdk first in your PATH, run:
+  printf '%s\n' export\ PATH\=/opt/homebrew/opt/openjdk/bin:\$PATH >> ~/.zshrc
+
+For compilers to find openjdk you may need to set:
+  export CPPFLAGS=-I/opt/homebrew/opt/openjdk/include

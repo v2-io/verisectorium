@@ -1,0 +1,21 @@
+ℹ [2/7] Replayed Vk.Fault
+info: Vk/Fault.lean:272:0: 'Vk.fault_iff_reach' does not depend on any axioms
+info: Vk/Fault.lean:273:0: 'Vk.noFault_fixed' does not depend on any axioms
+info: Vk/Fault.lean:274:0: 'Vk.noFault_greatest' does not depend on any axioms
+info: Vk/Fault.lean:275:0: 'Vk.ring_empty_fixed' depends on axioms: [propext]
+info: Vk/Fault.lean:276:0: 'Vk.gfp_fixed' does not depend on any axioms
+info: Vk/Fault.lean:277:0: 'Vk.conditioned_raise_no_fixed_point' does not depend on any axioms
+info: Vk/Fault.lean:278:0: 'Vk.mutual_raise_fixed_points' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Vk/Fault.lean:279:0: 'Vk.conditioned_waiver_two_fixed_points' depends on axioms: [propext, Quot.sound]
+info: Vk/Fault.lean:280:0: 'Vk.frame' does not depend on any axioms
+info: Vk/Fault.lean:281:0: 'Vk.forks_compose' does not depend on any axioms
+info: Vk/Fault.lean:282:0: 'Vk.fault_mono' does not depend on any axioms
+ℹ [3/7] Replayed Vk.Refusals
+info: Vk/Refusals.lean:90:0: 'Vk.cons_iff_noFault' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Vk/Refusals.lean:91:0: 'Vk.selfWaived_consistent' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [5/7] Built Vk.Story (1.1s)
+info: Vk/Story.lean:169:0: 'Vk.Story.S0' depends on axioms: [propext]
+info: Vk/Story.lean:170:0: 'Vk.Story.S1' depends on axioms: [propext]
+info: Vk/Story.lean:171:0: 'Vk.Story.cannot_close_at_13' depends on axioms: [propext]
+✔ [6/7] Built Vk (165ms)
+Build completed successfully (7 jobs).

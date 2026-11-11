@@ -1,0 +1,7 @@
+// p5: the condition reads an UPSTREAM piece only. No ground cycle. Still refused.
+.decl found_false(p:symbol) .decl fault(p:symbol) .decl good(d:symbol) .decl owed(p:symbol)
+fault("x")  :- found_false("x").
+good("d")   :- !fault("x").
+owed("r2")  :- !good("d").
+fault("r2") :- owed("r2").
+.output fault

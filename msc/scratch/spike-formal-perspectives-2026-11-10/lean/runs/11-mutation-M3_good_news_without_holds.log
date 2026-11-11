@@ -1,0 +1,12 @@
+mutations/M3_good_news_without_holds.lean:10:77: error: Tactic `rfl` failed: The left-hand side
+  g.outcome
+is not definitionally equal to the right-hand side
+  Outcome.holds
+
+s : State Pc Cr
+g : Evidence Pc Cr
+cn : List Pc
+p : Pc
+i : Item Pc Cr
+h : i ∈ own W (learn s g) cn p
+⊢ g.outcome = Outcome.holds

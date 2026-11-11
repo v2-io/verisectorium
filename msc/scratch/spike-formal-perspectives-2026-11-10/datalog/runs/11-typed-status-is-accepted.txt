@@ -1,0 +1,10 @@
+=== clingo: a typed status beside the rules that compute it
+stationary(r1_0830)
+stationary(r0_S0)
+SATISFIABLE
+=== souffle: a fact for a derived relation
+---------------
+owed
+===============
+typed-by-hand
+===============

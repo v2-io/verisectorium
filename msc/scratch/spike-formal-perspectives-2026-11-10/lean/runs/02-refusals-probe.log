@@ -1,0 +1,17 @@
+/private/tmp/claude-505/-Users-josephwecker-v2-src-verisectorium/0a83fb87-05a4-4e19-91c7-2d406212a1d6/scratchpad/refuse.lean:5:0: error: (kernel) arg #4 of 'Try.FaultR.raised' has a non positive occurrence of the datatypes being declared
+@Cons : {Piece : Type} → (Piece → Prop) → (Piece → Piece → Prop) → Piece → Prop
+@Cons.coinduct : ∀ {Piece : Type} (own : Piece → Prop) (rests : Piece → Piece → Prop) (pred : Piece → Prop),
+  (∀ (a : Piece), pred a → ¬own a ∧ ∀ (q : Piece), rests a q → pred q) → ∀ (a : Piece), pred a → Cons own rests a
+/private/tmp/claude-505/-Users-josephwecker-v2-src-verisectorium/0a83fb87-05a4-4e19-91c7-2d406212a1d6/scratchpad/refuse.lean:17:0: error: Could not prove 'Try.ConsR' to be monotone in its recursive calls:
+  Cannot eliminate recursive call in
+    ConsR rests a✝
+  
+@ConsW : {Piece : Type} → (Piece → Prop) → (Piece → Piece → Prop) → Piece → Prop
+/private/tmp/claude-505/-Users-josephwecker-v2-src-verisectorium/0a83fb87-05a4-4e19-91c7-2d406212a1d6/scratchpad/refuse.lean:26:0: error: Could not prove 'Try.consR' to be monotone in its recursive calls:
+  Cannot eliminate recursive call in
+    consR rests p
+  
+/private/tmp/claude-505/-Users-josephwecker-v2-src-verisectorium/0a83fb87-05a4-4e19-91c7-2d406212a1d6/scratchpad/refuse.lean:31:0: error: Could not prove 'Try.consM' to be monotone in its recursive calls:
+  Cannot eliminate recursive call in
+    consM !p
+  

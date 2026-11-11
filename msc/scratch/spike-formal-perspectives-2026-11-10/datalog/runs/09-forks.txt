@@ -1,0 +1,16 @@
+=== written-against as recorded by the write
+  owed(a_and_b2,c2_unreconciled(c,c2),w)
+  SATISFIABLE
+  stationary(a_alone)
+  stationary(a_and_b)
+  stationary(b_alone)
+  stationary(b2_alone)
+  stationary(s0)
+=== written-against computed from the line
+  SATISFIABLE
+  stationary(a_alone)
+  stationary(a_and_b)
+  stationary(a_and_b2)
+  stationary(b_alone)
+  stationary(b2_alone)
+  stationary(s0)

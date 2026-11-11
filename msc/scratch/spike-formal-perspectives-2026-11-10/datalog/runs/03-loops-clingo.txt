@@ -1,0 +1,24 @@
+=== p1-question-on-own-consistency
+UNSATISFIABLE
+=== p2-two-questions-crossed
+stands(qb) owed(b) fault(b)
+fault(a) stands(qa) owed(a)
+SATISFIABLE
+=== p3-ring
+ok_by_fault(a) ok_by_fault(b) consistent(a) consistent(b)
+ok_by_fault(a) ok_by_fault(b)
+SATISFIABLE
+=== p4-waiver-on-own-consistency
+viol(p) owed(p) fault(p)
+viol(p) waived(p)
+SATISFIABLE
+=== p5-condition-upstream
+good(d)
+SATISFIABLE
+=== p6-condition-loops-back
+owed(r2) fault(r2) fault(x)
+good(d)
+SATISFIABLE
+=== p5 + assumption fails
+fault(x) fault(r2) owed(r2)
+SATISFIABLE

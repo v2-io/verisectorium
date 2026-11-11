@@ -1,0 +1,38 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 90 and seed 8145937299017948596 with 2 workers on 16 cores with 3641MB heap and 64MB offheap memory [pid: 65297] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/MCForks.tla
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/Veri.tla
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-3576804321890556767/TLC.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-3576804321890556767/Naturals.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-3576804321890556767/Sequences.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-3576804321890556767/FiniteSets.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Veri
+Semantic processing of module TLC
+Semantic processing of module MCForks
+Linting of module Veri
+Linting of module MCForks
+Starting... (2026-11-10 20:48:49)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-10 20:48:50.
+Progress(9) at 2026-11-10 20:48:53: 132,856 states generated (132,856 s/min), 74,238 distinct states found (74,238 ds/min), 60,978 states left on queue.
+Progress(11) at 2026-11-10 20:49:53: 3,137,327 states generated (3,004,471 s/min), 892,571 distinct states found (818,333 ds/min), 573,219 states left on queue.
+Progress(12) at 2026-11-10 20:50:53: 6,261,047 states generated (3,123,720 s/min), 1,163,446 distinct states found (270,875 ds/min), 532,942 states left on queue.
+Progress(12) at 2026-11-10 20:51:53: 9,388,522 states generated (3,127,475 s/min), 1,534,007 distinct states found (370,561 ds/min), 589,454 states left on queue.
+Progress(13) at 2026-11-10 20:52:53: 12,487,829 states generated (3,099,307 s/min), 1,905,769 distinct states found (371,762 ds/min), 638,868 states left on queue.
+Progress(13) at 2026-11-10 20:53:53: 15,556,801 states generated (3,068,972 s/min), 2,240,952 distinct states found (335,183 ds/min), 653,231 states left on queue.
+Progress(13) at 2026-11-10 20:54:53: 18,642,262 states generated (3,085,461 s/min), 2,347,321 distinct states found (106,369 ds/min), 460,614 states left on queue.
+Progress(13) at 2026-11-10 20:55:53: 21,759,711 states generated (3,117,449 s/min), 2,432,230 distinct states found (84,909 ds/min), 244,022 states left on queue.
+Progress(15) at 2026-11-10 20:56:53: 24,633,803 states generated (2,874,092 s/min), 2,502,980 distinct states found (70,750 ds/min), 40,102 states left on queue.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 3.1E-6
+  based on the actual fingerprints:  val = 4.2E-7
+25116813 states generated, 2512166 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 18.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 13 and the 95th percentile is 5).
+Finished in 08min 14s at (2026-11-10 20:57:04)
+exit=0

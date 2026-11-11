@@ -1,0 +1,73 @@
+ℹ [2/7] Replayed Vk.Fault
+info: Vk/Fault.lean:272:0: 'Vk.fault_iff_reach' does not depend on any axioms
+info: Vk/Fault.lean:273:0: 'Vk.noFault_fixed' does not depend on any axioms
+info: Vk/Fault.lean:274:0: 'Vk.noFault_greatest' does not depend on any axioms
+info: Vk/Fault.lean:275:0: 'Vk.ring_empty_fixed' depends on axioms: [propext]
+info: Vk/Fault.lean:276:0: 'Vk.gfp_fixed' does not depend on any axioms
+info: Vk/Fault.lean:277:0: 'Vk.conditioned_raise_no_fixed_point' does not depend on any axioms
+info: Vk/Fault.lean:278:0: 'Vk.mutual_raise_fixed_points' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Vk/Fault.lean:279:0: 'Vk.conditioned_waiver_two_fixed_points' depends on axioms: [propext, Quot.sound]
+info: Vk/Fault.lean:280:0: 'Vk.frame' does not depend on any axioms
+info: Vk/Fault.lean:281:0: 'Vk.forks_compose' does not depend on any axioms
+info: Vk/Fault.lean:282:0: 'Vk.fault_mono' does not depend on any axioms
+ℹ [3/7] Replayed Vk.Refusals
+info: Vk/Refusals.lean:90:0: 'Vk.cons_iff_noFault' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Vk/Refusals.lean:91:0: 'Vk.selfWaived_consistent' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [4/7] Built Vk.Model (554ms)
+ℹ [5/7] Built Vk.Story (548ms)
+info: Vk/Story.lean:76:0: []
+info: Vk/Story.lean:77:0: [Vk.M0.Item.finding (Vk.Story.Pc.c) 5, Vk.M0.Item.restsOnFault (Vk.Story.Pc.u) (Vk.Story.Pc.c)]
+info: Vk/Story.lean:78:0: [Vk.M0.Item.unasked (Vk.Story.Pc.T) (Vk.Story.Cr.whole),
+ Vk.M0.Item.notTogether (Vk.Story.Pc.T) (Vk.Story.Pc.e) (Vk.Story.Pc.c),
+ Vk.M0.Item.guard (Vk.Story.Pc.c) 5,
+ Vk.M0.Item.unreconciled (Vk.Story.Pc.u) (Vk.Story.Pc.c),
+ Vk.M0.Item.unasked (Vk.Story.Pc.u) (Vk.Story.Cr.valid),
+ Vk.M0.Item.restsOnFault (Vk.Story.Pc.u) (Vk.Story.Pc.c)]
+info: Vk/Story.lean:79:0: [Vk.M0.Item.finding (Vk.Story.Pc.c) 5, Vk.M0.Item.restsOnFault (Vk.Story.Pc.u) (Vk.Story.Pc.c)]
+info: Vk/Story.lean:80:0: [[Vk.M0.Item.unasked (Vk.Story.Pc.T) (Vk.Story.Cr.whole),
+  Vk.M0.Item.guard (Vk.Story.Pc.c) 5,
+  Vk.M0.Item.unasked (Vk.Story.Pc.c) (Vk.Story.Cr.valid),
+  Vk.M0.Item.unreconciled (Vk.Story.Pc.u) (Vk.Story.Pc.c),
+  Vk.M0.Item.unasked (Vk.Story.Pc.u) (Vk.Story.Cr.valid),
+  Vk.M0.Item.restsOnFault (Vk.Story.Pc.u) (Vk.Story.Pc.c)],
+ [Vk.M0.Item.unasked (Vk.Story.Pc.T) (Vk.Story.Cr.whole),
+  Vk.M0.Item.unreconciled (Vk.Story.Pc.u) (Vk.Story.Pc.c),
+  Vk.M0.Item.unasked (Vk.Story.Pc.u) (Vk.Story.Cr.valid)],
+ [Vk.M0.Item.unasked (Vk.Story.Pc.T) (Vk.Story.Cr.whole),
+  Vk.M0.Item.unasked (Vk.Story.Pc.c) (Vk.Story.Cr.valid),
+  Vk.M0.Item.unreconciled (Vk.Story.Pc.u) (Vk.Story.Pc.c),
+  Vk.M0.Item.unasked (Vk.Story.Pc.u) (Vk.Story.Cr.valid),
+  Vk.M0.Item.restsOnFault (Vk.Story.Pc.u) (Vk.Story.Pc.c)],
+ [Vk.M0.Item.unasked (Vk.Story.Pc.T) (Vk.Story.Cr.whole),
+  Vk.M0.Item.unreconciled (Vk.Story.Pc.u) (Vk.Story.Pc.c),
+  Vk.M0.Item.unasked (Vk.Story.Pc.u) (Vk.Story.Cr.valid)],
+ [Vk.M0.Item.unasked (Vk.Story.Pc.T) (Vk.Story.Cr.whole), Vk.M0.Item.unasked (Vk.Story.Pc.U) (Vk.Story.Cr.whole)],
+ []]
+info: Vk/Story.lean:81:0: [[Vk.M0.Item.unasked (Vk.Story.Pc.T) (Vk.Story.Cr.whole),
+  Vk.M0.Item.notTogether (Vk.Story.Pc.T) (Vk.Story.Pc.k) (Vk.Story.Pc.e),
+  Vk.M0.Item.guard (Vk.Story.Pc.c) 5,
+  Vk.M0.Item.unasked (Vk.Story.Pc.c) (Vk.Story.Cr.valid),
+  Vk.M0.Item.unreconciled (Vk.Story.Pc.u) (Vk.Story.Pc.c),
+  Vk.M0.Item.unasked (Vk.Story.Pc.u) (Vk.Story.Cr.valid),
+  Vk.M0.Item.restsOnFault (Vk.Story.Pc.u) (Vk.Story.Pc.c)],
+ [Vk.M0.Item.unasked (Vk.Story.Pc.T) (Vk.Story.Cr.whole),
+  Vk.M0.Item.notTogether (Vk.Story.Pc.T) (Vk.Story.Pc.k) (Vk.Story.Pc.e),
+  Vk.M0.Item.unreconciled (Vk.Story.Pc.u) (Vk.Story.Pc.c),
+  Vk.M0.Item.unasked (Vk.Story.Pc.u) (Vk.Story.Cr.valid)],
+ [Vk.M0.Item.unasked (Vk.Story.Pc.T) (Vk.Story.Cr.whole),
+  Vk.M0.Item.notTogether (Vk.Story.Pc.T) (Vk.Story.Pc.k) (Vk.Story.Pc.e),
+  Vk.M0.Item.unasked (Vk.Story.Pc.c) (Vk.Story.Cr.valid),
+  Vk.M0.Item.unreconciled (Vk.Story.Pc.u) (Vk.Story.Pc.c),
+  Vk.M0.Item.unasked (Vk.Story.Pc.u) (Vk.Story.Cr.valid),
+  Vk.M0.Item.restsOnFault (Vk.Story.Pc.u) (Vk.Story.Pc.c)],
+ [Vk.M0.Item.unasked (Vk.Story.Pc.T) (Vk.Story.Cr.whole),
+  Vk.M0.Item.notTogether (Vk.Story.Pc.T) (Vk.Story.Pc.k) (Vk.Story.Pc.e),
+  Vk.M0.Item.unreconciled (Vk.Story.Pc.u) (Vk.Story.Pc.c),
+  Vk.M0.Item.unasked (Vk.Story.Pc.u) (Vk.Story.Cr.valid)],
+ [Vk.M0.Item.unasked (Vk.Story.Pc.T) (Vk.Story.Cr.whole),
+  Vk.M0.Item.notTogether (Vk.Story.Pc.T) (Vk.Story.Pc.k) (Vk.Story.Pc.e),
+  Vk.M0.Item.unasked (Vk.Story.Pc.U) (Vk.Story.Cr.whole)],
+ [Vk.M0.Item.notTogether (Vk.Story.Pc.T) (Vk.Story.Pc.k) (Vk.Story.Pc.e)]]
+info: Vk/Story.lean:82:0: [Vk.Story.Pc.O, Vk.Story.Pc.T, Vk.Story.Pc.U, Vk.Story.Pc.c, Vk.Story.Pc.d, Vk.Story.Pc.e, Vk.Story.Pc.k, Vk.Story.Pc.u]
+✔ [6/7] Built Vk (177ms)
+Build completed successfully (7 jobs).

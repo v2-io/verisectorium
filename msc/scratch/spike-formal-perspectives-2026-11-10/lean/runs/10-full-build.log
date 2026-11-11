@@ -1,0 +1,39 @@
+ℹ [2/10] Built Vk.Fault (254ms)
+info: Vk/Fault.lean:272:0: 'Vk.fault_iff_reach' does not depend on any axioms
+info: Vk/Fault.lean:273:0: 'Vk.noFault_fixed' does not depend on any axioms
+info: Vk/Fault.lean:274:0: 'Vk.noFault_greatest' does not depend on any axioms
+info: Vk/Fault.lean:275:0: 'Vk.ring_empty_fixed' depends on axioms: [propext]
+info: Vk/Fault.lean:276:0: 'Vk.gfp_fixed' does not depend on any axioms
+info: Vk/Fault.lean:277:0: 'Vk.conditioned_raise_no_fixed_point' does not depend on any axioms
+info: Vk/Fault.lean:278:0: 'Vk.mutual_raise_fixed_points' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Vk/Fault.lean:279:0: 'Vk.conditioned_waiver_two_fixed_points' depends on axioms: [propext, Quot.sound]
+info: Vk/Fault.lean:280:0: 'Vk.frame' does not depend on any axioms
+info: Vk/Fault.lean:281:0: 'Vk.forks_compose' does not depend on any axioms
+info: Vk/Fault.lean:282:0: 'Vk.fault_mono' does not depend on any axioms
+ℹ [3/10] Built Vk.View (249ms)
+info: Vk/View.lean:116:0: 'Vk.View.same_type' does not depend on any axioms
+info: Vk/View.lean:117:0: 'Vk.View.carry_keeps_outcome' does not depend on any axioms
+info: Vk/View.lean:118:0: 'Vk.View.attested_trans' depends on axioms: [Quot.sound]
+info: Vk/View.lean:119:0: 'Vk.View.no_way_back' depends on axioms: [propext, Quot.sound]
+⚠ [4/10] Built Vk.Tiers (282ms)
+warning: Vk/Tiers.lean:117:8: declaration uses `sorry`
+info: Vk/Tiers.lean:126:0: 'Vk.Tiers.built_on_it' depends on axioms: [sorryAx]
+info: Vk/Tiers.lean:127:0: 'Vk.Tiers.migrated_owes' depends on axioms: [propext]
+ℹ [5/10] Built Vk.Refusals (196ms)
+info: Vk/Refusals.lean:90:0: 'Vk.cons_iff_noFault' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Vk/Refusals.lean:91:0: 'Vk.selfWaived_consistent' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [6/10] Built Vk.Model (588ms)
+⚠ [7/10] Built Vk.GoodNews (340ms)
+warning: Vk/GoodNews.lean:151:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+info: Vk/GoodNews.lean:223:0: 'Vk.M0.good_news' depends on axioms: [propext, Quot.sound]
+info: Vk/GoodNews.lean:224:0: 'Vk.M0.stationary_good_news' depends on axioms: [propext, Quot.sound]
+ℹ [8/10] Built Vk.Story (1.2s)
+info: Vk/Story.lean:179:0: 'Vk.Story.S0' depends on axioms: [propext]
+info: Vk/Story.lean:180:0: 'Vk.Story.S1' depends on axioms: [propext]
+info: Vk/Story.lean:181:0: 'Vk.Story.cannot_close_at_13' depends on axioms: [propext]
+info: Vk/Story.lean:182:0: 'Vk.Story.more_record_can_owe_more' depends on axioms: [propext]
+✔ [9/10] Built Vk (166ms)
+Build completed successfully (10 jobs).

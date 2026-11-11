@@ -1,0 +1,71 @@
+# Bodies of work that already hold parts of this model
+
+*2026-11-11, spike lead. Joseph's widening: "give it allowance to research/find/incorporate other things as well". These are not languages to build the kernel in. Each is a field that met one part of the model's problem years ago, and each has a name, a theorem or a known failure for something the two builds found by search. Read, not run, except where a file in `datalog/runs/` is named.*
+
+**How well each is checked.** *Primary*: I read the definition or theorem in the paper itself, this session. *Secondary*: I found it stated in summaries, course notes or package documentation, and did not open the paper. *Memory*: from training, checked against nothing. A mapping from the field to the model is always mine, and is argued, not tested, unless a run is named.
+
+## 1. Invariant confluence: when two forks can both close
+
+**The field.** Bailis, Fekete, Franklin, Ghodsi, Hellerstein, Stoica, "Coordination Avoidance in Database Systems" (VLDB 2015; arXiv 1402.2237). **Primary** for the two statements quoted.
+
+> Definition 6 (I-confluence). A set of transactions T is I-confluent with respect to invariant I if, for all I-T-reachable states Di, Dj with a common ancestor state, Di ⊔ Dj is I-valid.
+
+> Theorem 1. A globally I-valid system can execute a set of transactions T with coordination-freedom, transactional availability, convergence if and only if T is I-confluent with respect to I.
+
+Their merge ⊔ is, in the basic model, "set union of the versions contained at different servers".
+
+**The mapping.** Replica: a fork. Common ancestor: the checkpoint both started from. Merge: the union of the two forks' events, which is the reading both builders took for closing (Ada G1, OCaml §4.2). The invariant I: *stationary*. Then kernel property R9 ("two forks from one checkpoint: characterize exactly when both can close") asks which pairs of changes are invariant-confluent with respect to stationarity.
+
+**What it shows about the model.**
+
+- R9 has a name and a literature. The builders both wrote that the meeting condition "is the read-set and write-set condition of transaction processing" and that neither had checked a text. The nearer match is this one. Read-set against write-set is the older, conservative test (optimistic validation; **memory**: Kung and Robinson 1981), and both builds measured it to be conservative (OCaml: most forks that meet can both close anyway; Ada: 56,122 of 100,000 pairs outside the theorem's hypothesis still owed nothing new). Invariant confluence is the exact condition: the merged state satisfies the invariant.
+- The theorem's "only if" says something the builds could not: where two changes are not confluent, **no engine can let both land without one of them waiting for the other**. Draft 4 §6 ("otherwise it must be reworked on the new checkpoint") is not a limit of the design. It is the unavoidable case, and the design's job is only to make it rare. Holding-is-not-resting, and an outline that reads of its parts only that they exist, are what make it rare.
+- The failure when it is not confluent also has a name: **write skew**. Two transactions read overlapping things, write different things, each leaves the invariant true, and together they break it. The three-fork story in `datalog/story-forks.lp` is one (**run**, `datalog/runs/09-forks.txt`): one fork rewrites c having looked at w, the other rewords w having looked at c, they write different pieces, and the union owes. The known repair in databases (**secondary**: Cahill, Röhm and Fekete 2008, after Fekete et al. 2005) does not look for any overlap of reads and writes. It looks for one transaction with a read-write dependency both in and out, which is narrower than "they meet" and still safe. I did not work out what that pattern is in the model's terms.
+- The paper's method is a table: for each kind of invariant and each kind of operation, confluent or not (inserting under a foreign key is; deleting is not, unless it cascades). The model's nine conditions against its handful of events is the same table, unwritten. The polarity table in `datalog/PERSPECTIVE.md` §2.4 is its first column. The Ada frame theorem's list of what "agree on a region" means is the rest of it, stated as a hypothesis instead of as a table.
+
+## 2. The CALM theorem: why a checkpoint is only stationary as of a time
+
+**The field.** Hellerstein and Alvaro, "Keeping CALM: When Distributed Consistency Is Easy" (2019/2020). **Secondary**: a program has a consistent, coordination-free distributed implementation exactly when it is monotonic. I did not read the paper's own statement.
+
+**What it shows.** The base only grows, and anything that only grows can be shared by every line with no ordering between them. That is the half of my guess that held. The other half did not: I had expected the base-and-line split to *be* the monotone and non-monotone split, and it is not, because the frontier is not monotone in the base. "Nothing is owed" is a statement that something does not exist (no finding applies, no question is open), and a statement of absence can always be retracted by one more fact. So no reading of an open record can ever say "stationary" for good. It can say it as of a time. Both builds found this as a correction to R11 (Ada G5: "a checkpoint is stationary as of when it was marked"; OCaml: "holds at the moment of closing, by definition; not afterwards"), and note 22 has it in prose ("the checkpoint was stationary when it was reached and is not now, and it says so"). CALM says it is not a wrinkle. A verisectorium whose record stays open cannot have a checkpoint that is stationary without a date on it.
+
+## 3. Truth maintenance: what the base knows about every combination of versions
+
+**The field.** Doyle's justification-based truth maintenance (1979) and de Kleer's assumption-based one (*Artificial Intelligence* 28, 1986). **Secondary** for de Kleer (abstracts and later papers): every datum carries a *label*, the minimal sets of assumptions (*environments*) from which it follows; a set of assumptions known to be inconsistent is a *nogood*; and because labels do not depend on which context is current, several contexts are held at once and moving between them recomputes nothing. **Memory** for Doyle: beliefs are in or out according to their justifications, a justification may require something to be *out*, and odd loops among such justifications have no consistent labelling.
+
+**The mapping.** An assumption: "piece p is at version v". A piece of evidence: a datum whose one environment is its subject's version together with the versions it read. A line's selection: a context. *Applies*: the evidence's environment is contained in the context.
+
+**What it shows.**
+
+- Note 22's first-listed choice of the lead's, "evidence is about a version and crosses between forks … going back loses the work, it does not lose what was learned", is the founding idea of the assumption-based system, forty years old. It was invented because the earlier kind lost everything on each change of context.
+- A finding is a nogood. So is the story's dead end: "no version of u1 follows from c1′" is the nogood {u at u1, c at c1′}, and it is known before any later fork tries that pair again. The note says the record keeps "that weakening the conclusion was tried and why it was dropped" and that it does not bear on S1. In this view it bears on every *future* fork: it is pruning.
+- The base, with no line at all, already determines which combinations of versions ever written could be rested at. `datalog/selections.lp` asks exactly that of the story (**run**, `datalog/runs/12-selections.txt`): at S0, one combination (S0's); from the finding at 08:30 until 14:00, **none**, whatever anyone might rewind to; at 14:00, exactly one, and it is S1. So draft 3's picture (a state is a free selection) is not wrong. It is the right picture of what the *base* knows, and draft 4's lines are the right picture of how minds get from one such selection to another. The two were built as rivals and are two readings of one record. One caution: a free selection has no history, so this run has no guards, which is draft 3's cost again (see `datalog/PERSPECTIVE.md` §2.5 on why the guard is the one clause that needs a line).
+- Doyle's odd loops are finding (b) of note 23, met in 1979 from the other side.
+
+## 4. Build systems: evidence is a verifying trace, and a guard is a regression test
+
+**The field.** Mokhov, Mitchell and Peyton Jones, "Build Systems à la Carte" (ICFP 2018). **Secondary** (the authors' Haskell package documentation and summaries): a *verifying trace* records, for a built thing, the hashes of what it depended on, and the thing is up to date while those hashes still match; a *constructive trace* also stores the result, so that it can be fetched instead of rebuilt, including by someone else; *early cutoff* is stopping the spread of rebuilding when a rebuilt dependency comes out identical.
+
+**The mapping.** Evidence that holds, with what it read at which versions, is a verifying trace. *Applies* is "the trace still matches". **Same** is early cutoff. Evidence known on every fork is a shared cache keyed by content.
+
+**What it shows.**
+
+- A cache keyed by content is sound only if the trace lists everything the step read. That is the builds' rule 2 ("evidence records what it read"), and in that field it is called hermeticity and is *enforced*, by running the step where it can see nothing it did not declare. For an instrument's check the model could have reads observed and not declared. For a mind's check the nearest thing is what the harness saw the mind open, which is core's "reading checked, not taken on the reader's word" arriving from another direction.
+- What a step reads is often not known until it has run (the paper's "dynamic dependencies"), so traces are written after the run. The same is true of a check: its reads are a report of what happened, not a plan.
+- Later systems in the same line (**memory**: Salsa, Adapton) let a step depend on a *function* of an input, and cut off when that function's value is unchanged though the input changed. That is the builds' graded reads: an outline reads of each part only whether it exists, so rewriting a part does not disturb the outline. It suggests that **same**, normalization (core: "a reflow mints nothing") and graded reads are one idea, namely that evidence reads a *view* of a version and survives while the view is unchanged, differing only in who vouches that the view is unchanged: a function, the kind's declaration, or a mind.
+- Build systems have nothing like the guard, and seeing why is useful. When a test fails and the source is edited, the old failure is simply out of date, and nobody minds, because the test is run again automatically on every version. The model's asymmetry ("a defect once found is presumed still there until looked for") exists because a mind's check is *not* re-run automatically. Put that way, **a guard is a regression test**: a criterion that once failed on this piece joins the set of things every later version of the piece is asked. Core's «kind» and «segment» defs already use the words ("a regression guard opens *still false*"). And the cost both draft-3 builds measured (one new check per old finding per edit, for ever) is the cost of a regression suite with no cache; "answered once" in draft 4 is one way to cap it, and early cutoff (**same**, said of the finding's criterion) is the other.
+
+## 5. Stratification, stable models, well-founded semantics
+
+Used directly; see `datalog/PERSPECTIVE.md` §2.3. **Secondary**: stable models are Gelfond and Lifschitz 1988; locally stratified programs and their perfect model are Przymusinski 1988, and the perfect model of a locally stratified program coincides with its well-founded model. I found the statement that it is also the unique stable model only in lecture notes. **Memory**: stratified negation is Apt, Blair and Walker 1988; the well-founded semantics is Van Gelder, Ross and Schlipf 1991.
+
+## 6. Smaller correspondences, all from memory
+
+- **The frame rule of separation logic.** What a command does not touch is unchanged by it, provided the command's footprint is stated tightly; two commands with disjoint footprints can run side by side. The Ada build named its theorem *Frame*, and its "agree on a region" is a footprint. Reading a part "for its existence only" is, in that field's terms, a weaker permission than reading its content.
+- **Argumentation frameworks** (Dung 1995). A finding attacks a claim; a set-aside attacks the finding; someone contests the set-aside. The cautious semantics there (the *grounded* extension) accepts what is unattacked, rejects what an accepted argument attacks, and leaves mutual attackers undecided. `impl-a-finding-is-answered` reaches the same place by hand: "a contest of a contest is not read by rule; it is routed to a decider". Dung showed that semantics to be the well-founded one in different dress.
+- **Merge queues in version control.** The practice of testing the *merged* result before the main branch moves ("the main branch always passes"), because two changes that each pass and do not textually conflict can fail together. That is closing on the stationarity of the union, not on footprints, and it is in wide use. It bears on the first of the questions the OCaml builder left for the model (close because the merged state is stationary, or only because the forks do not meet).
+- **Provenance semirings** (Green, Karvounarakis, Tannen 2007). A warrant that is the least along what a piece is predicated on, and the best over independent lines of evidence, is an annotation in a semiring, and "two confirmations that share a source are one line" is what the *why* form of provenance counts. M0 has no warrant levels, so I did not go further.
+
+## What I did not look at
+
+Temporal databases (valid time against transaction time, which is the model's two clocks); CRDTs beyond the remark in §2; belief revision (AGM); the literature on proof-carrying data and attestation, for the part of the model that is set aside (who).

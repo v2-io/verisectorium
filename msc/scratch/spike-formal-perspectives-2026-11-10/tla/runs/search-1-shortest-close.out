@@ -1,0 +1,93 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 51 and seed -7016990190152966875 with 2 workers on 16 cores with 3641MB heap and 64MB offheap memory [pid: 58237] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/MCStory.tla
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/Veri.tla
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-15022795519955497081/TLC.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-15022795519955497081/Naturals.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-15022795519955497081/Sequences.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-15022795519955497081/FiniteSets.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Veri
+Semantic processing of module TLC
+Semantic processing of module MCStory
+Linting of module Veri
+Linting of module MCStory
+Starting... (2026-11-10 20:34:00)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-10 20:34:00.
+Progress(9) at 2026-11-10 20:34:03: 34,458 states generated (34,458 s/min), 34,457 distinct states found (34,457 ds/min), 22,709 states left on queue.
+Error: Invariant NeverCloses is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ sel = [c |-> 1, k |-> 1, d |-> 1, u |-> 1]
+/\ frontier = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+
+State 2: <FNext line 118, col 3 to line 123, col 61 of module MCStory>
+/\ sel = [c |-> 3, k |-> 1, d |-> 1, u |-> 1]
+/\ frontier = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "c">>,
+  <<"5 root's ask", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "e">>,
+  <<"5 rests on a fault", "u">> }
+
+State 3: <FNext line 118, col 3 to line 123, col 61 of module MCStory>
+/\ sel = [c |-> 3, k |-> 1, d |-> 1, u |-> 1]
+/\ frontier = { <<"2 not reconciled", "u">>,
+  <<"5 root's ask", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "e">>,
+  <<"5 rests on a fault", "u">> }
+
+State 4: <FNext line 118, col 3 to line 123, col 61 of module MCStory>
+/\ sel = [c |-> 3, k |-> 1, d |-> 4, u |-> 1]
+/\ frontier = { <<"2 not reconciled", "u">>,
+  <<"5 root's ask", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "e">>,
+  <<"5 rests on a fault", "u">> }
+
+State 5: <FNext line 118, col 3 to line 123, col 61 of module MCStory>
+/\ sel = [c |-> 3, k |-> 1, d |-> 4, u |-> 1]
+/\ frontier = { <<"2 not reconciled", "u">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "e">> }
+
+State 6: <FNext line 118, col 3 to line 123, col 61 of module MCStory>
+/\ sel = [c |-> 3, k |-> 1, d |-> 4, u |-> 1]
+/\ frontier = { <<"2 not reconciled", "u">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "e">> }
+
+State 7: <FNext line 118, col 3 to line 123, col 61 of module MCStory>
+/\ sel = [c |-> 3, k |-> 1, d |-> 4, u |-> 2]
+/\ frontier = { <<"5 root's ask", "u">>,
+  <<"5 root's ask", "U">>,
+  <<"6 not looked at together", "e">> }
+
+State 8: <FNext line 118, col 3 to line 123, col 61 of module MCStory>
+/\ sel = [c |-> 3, k |-> 1, d |-> 4, u |-> 2]
+/\ frontier = {<<"5 root's ask", "U">>, <<"6 not looked at together", "e">>}
+
+State 9: <FNext line 118, col 3 to line 123, col 61 of module MCStory>
+/\ sel = [c |-> 3, k |-> 1, d |-> 4, u |-> 2]
+/\ frontier = {<<"6 not looked at together", "e">>}
+
+State 10: <FNext line 118, col 3 to line 123, col 61 of module MCStory>
+/\ sel = [c |-> 3, k |-> 1, d |-> 4, u |-> 2]
+/\ frontier = {}
+
+State 11: <FNext line 118, col 3 to line 123, col 61 of module MCStory>
+/\ sel = [c |-> 3, k |-> 1, d |-> 4, u |-> 2]
+/\ frontier = {}
+
+202570 states generated, 202570 distinct states found, 101994 states left on queue.
+The depth of the complete state graph search is 11.
+Finished in 22s at (2026-11-10 20:34:22)
+exit=12

@@ -1,0 +1,34 @@
+=== souffle strat-p1.dl
+Error: Unable to stratify relation(s) {fault,owed,stands}
+Relation fault in file strat-p1.dl at line 1
+.decl stands(q:symbol)  .decl owed(p:symbol)  .decl fault(p:symbol)
+----------------------------------------------------^---------------
+has cyclic negation in file strat-p1.dl at line 2
+stands("q") :- !fault("p").
+----------------^-----------
+1 errors generated, evaluation aborted
+exit=1
+=== souffle strat-p5.dl
+Warning: No rules/facts defined for relation found_false in file strat-p5.dl at line 2
+.decl found_false(p:symbol) .decl fault(p:symbol) .decl good(d:symbol) .decl owed(p:symbol)
+------^-------------------------------------------------------------------------------------
+Error: Unable to stratify relation(s) {fault,good,owed}
+Relation fault in file strat-p5.dl at line 2
+.decl found_false(p:symbol) .decl fault(p:symbol) .decl good(d:symbol) .decl owed(p:symbol)
+----------------------------------^---------------------------------------------------------
+has cyclic negation in file strat-p5.dl at line 4
+good("d")   :- !fault("x").
+----------------^-----------
+1 errors generated, evaluation aborted
+exit=1
+=== souffle strat-p3.dl
+Warning: No rules/facts defined for relation owed in file strat-p3.dl at line 2
+.decl rests(p:symbol,q:symbol) .decl owed(p:symbol) .decl fault(p:symbol) .decl piece(p:symbol) .decl ok(p:symbol)
+-------------------------------------^-----------------------------------------------------------------------------
+---------------
+ok
+===============
+a
+b
+===============
+exit=0

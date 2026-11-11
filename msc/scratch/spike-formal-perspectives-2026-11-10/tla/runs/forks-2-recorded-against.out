@@ -1,0 +1,35 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 61 and seed 939900481556696663 with 2 workers on 16 cores with 3641MB heap and 64MB offheap memory [pid: 61686] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/MCForks.tla
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/Veri.tla
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-1200796822862893774/TLC.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-1200796822862893774/Naturals.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-1200796822862893774/Sequences.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-1200796822862893774/FiniteSets.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Veri
+Semantic processing of module TLC
+Semantic processing of module MCForks
+Linting of module Veri
+Linting of module MCForks
+Starting... (2026-11-10 20:39:25)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-10 20:39:25.
+Progress(9) at 2026-11-10 20:39:28: 86,730 states generated (86,730 s/min), 39,656 distinct states found (39,656 ds/min), 29,306 states left on queue.
+Progress(12) at 2026-11-10 20:40:28: 1,993,095 states generated (1,906,365 s/min), 472,085 distinct states found (432,429 ds/min), 222,201 states left on queue.
+Progress(13) at 2026-11-10 20:41:28: 3,683,651 states generated (1,690,556 s/min), 763,883 distinct states found (291,798 ds/min), 291,965 states left on queue.
+Progress(13) at 2026-11-10 20:42:28: 5,331,088 states generated (1,647,437 s/min), 920,503 distinct states found (156,620 ds/min), 237,407 states left on queue.
+Progress(14) at 2026-11-10 20:43:28: 6,840,984 states generated (1,509,896 s/min), 1,048,098 distinct states found (127,595 ds/min), 158,807 states left on queue.
+Progress(16) at 2026-11-10 20:44:28: 8,260,591 states generated (1,419,607 s/min), 1,126,609 distinct states found (78,511 ds/min), 46,853 states left on queue.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 4.7E-7
+  based on the actual fingerprints:  val = 1.4E-8
+8681535 states generated, 1141264 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 18.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 10 and the 95th percentile is 4).
+Finished in 05min 23s at (2026-11-10 20:44:48)
+exit=0

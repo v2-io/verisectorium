@@ -1,0 +1,4 @@
+'Vk.View.same_type' does not depend on any axioms
+'Vk.View.carry_keeps_outcome' does not depend on any axioms
+'Vk.View.attested_trans' depends on axioms: [Quot.sound]
+'Vk.View.no_way_back' depends on axioms: [propext, Quot.sound]

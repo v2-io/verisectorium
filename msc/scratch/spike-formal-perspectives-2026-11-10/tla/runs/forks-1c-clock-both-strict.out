@@ -1,0 +1,118 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 93 and seed 3585424772996299262 with 2 workers on 16 cores with 3641MB heap and 64MB offheap memory [pid: 66943] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/MCForks.tla
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/Veri.tla
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-256885246933312523/TLC.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-256885246933312523/Naturals.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-256885246933312523/Sequences.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-256885246933312523/FiniteSets.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Veri
+Semantic processing of module TLC
+Semantic processing of module MCForks
+Linting of module Veri
+Linting of module MCForks
+Starting... (2026-11-10 20:58:26)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-10 20:58:26.
+Error: Invariant NoPhantomReconcileStrict is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>}
+
+State 2: <Open("A") line 149, col 3 to line 151, col 42 of module Veri>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>}
+
+State 3: <Write("A","c",2) line 155, col 3 to line 160, col 37 of module Veri>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<<<"w", "c", 2, 6>>>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>}
+
+State 4: <Learn([n |-> 0, id |-> <<"valid", "c", 2>>, subj |-> "c", ver |-> 2, crit |-> "valid", out |-> "holds", reads |-> {}]) line 143, col 3 to line 146, col 37 of module Veri>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<<<"w", "c", 2, 6>>>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"valid", "c", 2>>}
+
+State 5: <Affirm("A","x","c") line 164, col 3 to line 169, col 37 of module Veri>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<<<"w", "c", 2, 6>>, <<"a", "x", 1, 8>>>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"valid", "c", 2>>}
+
+State 6: <Open("B") line 149, col 3 to line 151, col 42 of module Veri>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<<<"w", "c", 2, 6>>, <<"a", "x", 1, 8>>>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"valid", "c", 2>>}
+
+State 7: <Close("A") line 183, col 3 to line 189, col 28 of module Veri>
+/\ main = << <<"w", "c", 1, 1, "S0">>,
+   <<"w", "x", 1, 2, "S0">>,
+   <<"w", "O", 1, 3, "S0">>,
+   <<"w", "c", 2, 6, "A">>,
+   <<"a", "x", 1, 8, "A">> >>
+/\ sel = [x |-> 1, c |-> 2]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"valid", "c", 2>>}
+
+State 8: <Write("B","x",2) line 155, col 3 to line 160, col 37 of module Veri>
+/\ main = << <<"w", "c", 1, 1, "S0">>,
+   <<"w", "x", 1, 2, "S0">>,
+   <<"w", "O", 1, 3, "S0">>,
+   <<"w", "c", 2, 6, "A">>,
+   <<"a", "x", 1, 8, "A">> >>
+/\ sel = [x |-> 1, c |-> 2]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<<<"w", "x", 2, 9>>>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"valid", "c", 2>>}
+
+State 9: <Learn([n |-> 0, id |-> <<"valid", "x", 2>>, subj |-> "x", ver |-> 2, crit |-> "valid", out |-> "holds", reads |-> {}]) line 143, col 3 to line 146, col 37 of module Veri>
+/\ main = << <<"w", "c", 1, 1, "S0">>,
+   <<"w", "x", 1, 2, "S0">>,
+   <<"w", "O", 1, 3, "S0">>,
+   <<"w", "c", 2, 6, "A">>,
+   <<"a", "x", 1, 8, "A">> >>
+/\ sel = [x |-> 1, c |-> 2]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<<<"w", "x", 2, 9>>>>]
+/\ known = { <<"valid", "x", 1>>,
+  <<"valid", "x", 2>>,
+  <<"valid", "c", 1>>,
+  <<"valid", "c", 2>> }
+
+State 10: <Close("B") line 183, col 3 to line 189, col 28 of module Veri>
+/\ main = << <<"w", "c", 1, 1, "S0">>,
+   <<"w", "x", 1, 2, "S0">>,
+   <<"w", "O", 1, 3, "S0">>,
+   <<"w", "c", 2, 6, "A">>,
+   <<"a", "x", 1, 8, "A">>,
+   <<"w", "x", 2, 9, "B">> >>
+/\ sel = [x |-> 2, c |-> 2]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<>>]
+/\ known = { <<"valid", "x", 1>>,
+  <<"valid", "x", 2>>,
+  <<"valid", "c", 1>>,
+  <<"valid", "c", 2>> }
+
+147484 states generated, 65625 distinct states found, 47551 states left on queue.
+The depth of the complete state graph search is 10.
+Finished in 02s at (2026-11-10 20:58:29)
+exit=12

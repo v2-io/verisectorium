@@ -1,0 +1,113 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 107 and seed -7882116644862439987 with 2 workers on 16 cores with 3641MB heap and 64MB offheap memory [pid: 66668] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/MCForks.tla
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/Veri.tla
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-11420543910950519138/TLC.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-11420543910950519138/Naturals.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-11420543910950519138/Sequences.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-11420543910950519138/FiniteSets.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Veri
+Semantic processing of module TLC
+Semantic processing of module MCForks
+Linting of module Veri
+Linting of module MCForks
+Starting... (2026-11-10 20:57:08)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-10 20:57:08.
+Error: Invariant NoLostUpdate is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>}
+
+State 2: <Open("B") line 148, col 3 to line 150, col 42 of module Veri>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>}
+
+State 3: <Open("A") line 148, col 3 to line 150, col 42 of module Veri>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>}
+
+State 4: <Write("A","c",2) line 154, col 3 to line 159, col 37 of module Veri>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<<<"w", "c", 2, 6>>>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>}
+
+State 5: <Learn([n |-> 0, id |-> <<"valid", "c", 2>>, subj |-> "c", ver |-> 2, crit |-> "valid", out |-> "holds", reads |-> {}]) line 142, col 3 to line 145, col 37 of module Veri>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<<<"w", "c", 2, 6>>>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"valid", "c", 2>>}
+
+State 6: <Affirm("A","x","c") line 163, col 3 to line 168, col 37 of module Veri>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<<<"w", "c", 2, 6>>, <<"a", "x", 1, 8>>>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"valid", "c", 2>>}
+
+State 7: <Close("A") line 182, col 3 to line 187, col 28 of module Veri>
+/\ main = << <<"w", "c", 1, 1, "S0">>,
+   <<"w", "x", 1, 2, "S0">>,
+   <<"w", "O", 1, 3, "S0">>,
+   <<"w", "c", 2, 6, "A">>,
+   <<"a", "x", 1, 8, "A">> >>
+/\ sel = [x |-> 1, c |-> 2]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"valid", "c", 2>>}
+
+State 8: <Write("B","c",3) line 154, col 3 to line 159, col 37 of module Veri>
+/\ main = << <<"w", "c", 1, 1, "S0">>,
+   <<"w", "x", 1, 2, "S0">>,
+   <<"w", "O", 1, 3, "S0">>,
+   <<"w", "c", 2, 6, "A">>,
+   <<"a", "x", 1, 8, "A">> >>
+/\ sel = [x |-> 1, c |-> 2]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<<<"w", "c", 3, 9>>>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"valid", "c", 2>>}
+
+State 9: <Write("B","c",2) line 154, col 3 to line 159, col 37 of module Veri>
+/\ main = << <<"w", "c", 1, 1, "S0">>,
+   <<"w", "x", 1, 2, "S0">>,
+   <<"w", "O", 1, 3, "S0">>,
+   <<"w", "c", 2, 6, "A">>,
+   <<"a", "x", 1, 8, "A">> >>
+/\ sel = [x |-> 1, c |-> 2]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<<<"w", "c", 3, 9>>, <<"w", "c", 2, 10>>>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"valid", "c", 2>>}
+
+State 10: <Close("B") line 182, col 3 to line 187, col 28 of module Veri>
+/\ main = << <<"w", "c", 1, 1, "S0">>,
+   <<"w", "x", 1, 2, "S0">>,
+   <<"w", "O", 1, 3, "S0">>,
+   <<"w", "c", 2, 6, "A">>,
+   <<"a", "x", 1, 8, "A">>,
+   <<"w", "c", 3, 9, "B">>,
+   <<"w", "c", 2, 10, "B">> >>
+/\ sel = [x |-> 1, c |-> 2]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"valid", "c", 2>>}
+
+147921 states generated, 66107 distinct states found, 48054 states left on queue.
+The depth of the complete state graph search is 10.
+Finished in 02s at (2026-11-10 20:57:10)
+exit=12

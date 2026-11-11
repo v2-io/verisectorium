@@ -1,0 +1,6 @@
+Vk/GoodNews.lean:151:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+'Vk.M0.good_news' depends on axioms: [propext, Quot.sound]
+'Vk.M0.stationary_good_news' depends on axioms: [propext, Quot.sound]

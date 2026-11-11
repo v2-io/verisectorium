@@ -1,0 +1,27 @@
+rules read from: polarity/m0-split.lp
+derived relations: 43  stored relations: 22
+cycles through negation: none (the program is stratified)
+
+polarity of each stored relation toward `owed`:
+  affirm           -   can only remove
+  asks_valid       +   can only add
+  evd              +-  either
+  inner            +   can only add
+  markroot         +-  either
+  pred             +   can only add
+  qd               +-  either
+  reads            +-  either
+  rec_f            +-  either
+  rec_h            -   can only remove
+  rec_raise        +   can only add
+  result           +   can only add
+  same_f           +-  either
+  same_h           -   can only remove
+  setaside_f       +-  either
+  setaside_h       +   can only add
+  slot             +-  either
+  view             +-  either
+  vis              +-  either
+  waive            -   can only remove
+  write            +-  either
+  wrote_against    -   can only remove

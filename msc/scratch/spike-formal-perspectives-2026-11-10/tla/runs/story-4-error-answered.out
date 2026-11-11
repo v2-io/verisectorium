@@ -1,0 +1,202 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 80 and seed 135676937942144715 with 2 workers on 16 cores with 3641MB heap and 64MB offheap memory [pid: 57873] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/MCStory.tla
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/Veri.tla
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-1934290863506785244/TLC.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-1934290863506785244/Naturals.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-1934290863506785244/Sequences.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-1934290863506785244/FiniteSets.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Veri
+Semantic processing of module TLC
+Semantic processing of module MCStory
+Linting of module Veri
+Linting of module MCStory
+Starting... (2026-11-10 20:33:50)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-10 20:33:50.
+Error: Invariant NotDone is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ step = <<"S0">>
+/\ main = {}
+/\ onFork = {<<"-", "no fork">>}
+
+State 2: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"learn", "E5">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = {<<"-", "no fork">>}
+
+State 3: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"open", "F">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+
+State 4: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"write", "F", "c", 2>>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "c">>,
+  <<"5 root's ask", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "e">>,
+  <<"5 rests on a fault", "u">> }
+
+State 5: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"write", "F", "d", 2>>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "c">>,
+  <<"5 root's ask", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "e">>,
+  <<"5 rests on a fault", "u">> }
+
+State 6: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"learn", "E6">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "e">>,
+  <<"5 rests on a fault", "u">> }
+
+State 7: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"rewind", "F", 0>>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+
+State 8: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"write", "F", "c", 3>>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "c">>,
+  <<"5 root's ask", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "e">>,
+  <<"5 rests on a fault", "u">> }
+
+State 9: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"write", "F", "d", 3>>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "c">>,
+  <<"5 root's ask", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "e">>,
+  <<"5 rests on a fault", "u">> }
+
+State 10: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"write", "F", "k", 2>>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "c">>,
+  <<"5 root's ask", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "e">>,
+  <<"6 not looked at together", "k">>,
+  <<"5 rests on a fault", "u">> }
+
+State 11: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"affirm", "F", "e", "c">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "c">>,
+  <<"5 root's ask", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"6 not looked at together", "k">>,
+  <<"5 rests on a fault", "u">> }
+
+State 12: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"affirm", "F", "k", "e">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "c">>,
+  <<"5 root's ask", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"5 rests on a fault", "u">> }
+
+State 13: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"learn", "E7">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"5 rests on a fault", "u">> }
+
+State 14: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"learn", "E8">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = {<<"2 not reconciled", "u">>, <<"5 root's ask", "T">>, <<"5 root's ask", "u">>}
+
+State 15: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"learn", "E13">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 known wrong", "d">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">> }
+
+State 16: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"write", "F", "d", 4>>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "d">>,
+  <<"5 root's ask", "c">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">>,
+  <<"5 rests on a fault", "u">> }
+
+State 17: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"learn", "E9">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = { <<"2 not reconciled", "u">>,
+  <<"4 guard open", "d">>,
+  <<"5 root's ask", "T">>,
+  <<"5 root's ask", "u">> }
+
+State 18: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"learn", "E14">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = {<<"2 not reconciled", "u">>, <<"5 root's ask", "T">>, <<"5 root's ask", "u">>}
+
+State 19: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"write", "F", "u", 2>>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = {<<"5 root's ask", "T">>, <<"5 root's ask", "u">>, <<"5 root's ask", "U">>}
+
+State 20: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"learn", "E10">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = {<<"5 root's ask", "T">>, <<"5 root's ask", "U">>}
+
+State 21: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"learn", "E11">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = {<<"5 root's ask", "U">>}
+
+State 22: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"learn", "E12">>
+/\ main = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "u">>}
+/\ onFork = {}
+
+State 23: <SNext line 101, col 10 to line 101, col 63 of module MCStory>
+/\ step = <<"close", "F">>
+/\ main = {}
+/\ onFork = {<<"-", "no fork">>}
+
+23 states generated, 23 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 23.
+Finished in 00s at (2026-11-10 20:33:50)
+exit=12

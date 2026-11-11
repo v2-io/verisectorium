@@ -1,0 +1,39 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 125 and seed -6118783564888506006 with 2 workers on 16 cores with 3641MB heap and 64MB offheap memory [pid: 65292] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/MCForks.tla
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/Veri.tla
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-13102961326508185208/TLC.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-13102961326508185208/Naturals.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-13102961326508185208/Sequences.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-13102961326508185208/FiniteSets.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Veri
+Semantic processing of module TLC
+Semantic processing of module MCForks
+Linting of module Veri
+Linting of module MCForks
+Starting... (2026-11-10 20:48:49)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-10 20:48:49.
+Error: Invariant R11_Plain is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {}
+/\ forks = [A |-> <<>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>}
+
+State 2: <Learn([n |-> 0, id |-> <<"caseX", "c", 1>>, subj |-> "c", ver |-> 1, crit |-> "caseX", out |-> "fails", reads |-> {}]) line 142, col 3 to line 145, col 37 of module Veri>
+/\ main = <<<<"w", "c", 1, 1, "S0">>, <<"w", "x", 1, 2, "S0">>, <<"w", "O", 1, 3, "S0">>>>
+/\ sel = [x |-> 1, c |-> 1]
+/\ frontier = {<<"4 known wrong", "c">>, <<"5 rests on a fault", "x">>}
+/\ forks = [A |-> <<>>, B |-> <<>>]
+/\ known = {<<"valid", "x", 1>>, <<"valid", "c", 1>>, <<"caseX", "c", 1>>}
+
+2 states generated, 2 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 2.
+Finished in 00s at (2026-11-10 20:48:49)
+exit=12

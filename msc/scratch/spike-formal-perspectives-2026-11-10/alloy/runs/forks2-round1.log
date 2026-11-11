@@ -1,0 +1,24 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by kodkod.engine.satlab.SATFactory in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+00. run   all5                     0    1/1     SAT
+01. run   dropD                    0    1/1     SAT
+02. run   dropE                    0    1/1     SAT
+03. run   dropR                    0    1/1     SAT
+04. run   dropK                    0    1/1     SAT
+05. run   dropX                    0    1/1     SAT
+c last restart ## conflicts  :  215 10340 
+c last restart ## conflicts  :  0 10033 
+c last restart ## conflicts  :  173 10107 
+c last restart ## conflicts  :  0 9750 
+c last restart ## conflicts  :  132 10256 
+c last restart ## conflicts  :  0 9999 
+c last restart ## conflicts  :  46 10212 
+c last restart ## conflicts  :  0 10195 
+c last restart ## conflicts  :  62 10035 
+c last restart ## conflicts  :  0 10234 
+c last restart ## conflicts  :  120 9390 
+c last restart ## conflicts  :  1 8999 
+exit=0
