@@ -1,0 +1,40 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 57 and seed 3120531396084209706 with 1 worker on 16 cores with 10923MB heap and 64MB offheap memory [pid: 31940] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/idiomatic-slice-2026-11-11/tla.tla
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-2418335393186566966/Naturals.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-2418335393186566966/Sequences.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-2418335393186566966/FiniteSets.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-2418335393186566966/TLC.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module tla
+Linting of module tla
+Starting... (2026-11-10 21:59:14)
+<<"canon", {"c", "d", "k", "T", "O"}>>
+<< "in canon, with content",
+   [ c |-> "Every bounded monotone sequence of reals converges.",
+     d |->
+         "Take the least upper bound of the terms and show the terms come within any ε of it.",
+     k |->
+         "If you keep stepping forward and there is a wall you cannot pass, you end up settling somewhere at or before the wall." ] >>
+<<"promised and empty", {<<"T", "description">>}>>
+<< "does not fit its kind",
+   {<<"U", "description", "declared as one, and absent">>} >>
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-10 21:59:14.
+Error: Invariant UNeverCanon is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ canon = {"c", "d", "k", "T", "O"}
+/\ promisedAndEmpty = {<<"T", "description">>}
+
+State 2: <Next line 181, col 9 to line 181, col 89 of module tla>
+/\ canon = {"c", "d", "k", "u", "T", "U", "O"}
+/\ promisedAndEmpty = {<<"T", "description">>}
+
+7 states generated, 7 distinct states found, 5 states left on queue.
+The depth of the complete state graph search is 2.
+Finished in 00s at (2026-11-10 21:59:14)
+exit=12

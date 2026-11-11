@@ -1,0 +1,115 @@
+// The slice in Soufflé (strict Datalog with declared, typed relations and sum types).
+// Run:  souffle souffle.dl
+//
+// What is idiomatic here, and what I reached for:
+//   - Everything is a relation, declared once with types. The declarations ARE the vocabulary:
+//     a reader can stop after the .decl lines and know what may be stored.
+//   - Ids are their own types (Seg, Kind, SlotName are not interchangeable symbols). Tested:
+//     a RULE that puts a kind where a segment is wanted is a compile error
+//     (`canon(K) :- veritoid_kind(K).` is rejected). A FACT is not checked the same way:
+//     `root("claim").` is accepted, because a quoted constant is taken as whatever type its
+//     place wants. So the types guard the rules and not the data.
+//   - A slot's state is a sum type (Fill): suggested with its note, promised, gap, holds,
+//     points at. "Provisional" is a flag only a filled slot can carry, so it lives inside
+//     the two filled branches and cannot be written on an empty one (tested: a provisional
+//     mark on a suggested slot is an arity error).
+//   - Canon is the textbook recursive rule. Two lines.
+//   - Nothing is refused at the level of a state. A claim in the eli8 slot is not an error;
+//     it is a row in `misfilled`. That is the language's way: every set of facts is a state,
+//     and what is wrong with it is a derived relation you can read.
+// What it made awkward: holding is not containment. A relation cannot put c "inside" T; it
+//   can only say T's slot holds c, and "a held segment has one holder" has to be a rule
+//   (held_twice) where a language with nested values gets it for nothing. And the order of
+//   slots is a number column I have to carry by hand.
+//   One field I wanted to call `as` is a keyword; the parser said so plainly.
+
+.type Seg      <: symbol
+.type Kind     <: symbol
+.type SlotName <: symbol
+.type Standing = Firm {} | Provisional {}
+.type Fill     = Suggested {note : symbol}
+               | Promised  {}
+               | Gap       {}
+               | Holds     {held : Seg, standing : Standing}
+               | PointsAt  {target : Seg, standing : Standing}
+.type Count    = One {} | AtMostOne {} | AnyNumber {}
+.type Takes    = Of {kind : Kind} | Anything {}
+
+// ---------- the ontology: kinds, and what an assembly kind's slots take
+.decl veritoid_kind(k : Kind)
+.decl assembly_kind(k : Kind)
+.decl slot_of(k : Kind, pos : number, name : SlotName, takes : Takes, how_many : Count)
+veritoid_kind("claim"). veritoid_kind("step"). veritoid_kind("explanation").
+assembly_kind("derived-result"). assembly_kind("outline").
+slot_of("derived-result", 1, "formal-claim", $Of("claim"),       $One()).
+slot_of("derived-result", 2, "derivation",   $Of("step"),        $AnyNumber()).
+slot_of("derived-result", 3, "description",  $Of("explanation"), $One()).
+slot_of("derived-result", 4, "eli8",         $Of("explanation"), $AtMostOne()).
+slot_of("outline",        1, "entry",        $Anything(),        $AnyNumber()).
+
+// ---------- what is written
+.decl veritoid(s : Seg, k : Kind, content : symbol)
+.decl assembly(s : Seg, k : Kind)
+.decl slot(a : Seg, name : SlotName, nth : number, fill : Fill)     // nth: order among fillers of one slot
+.decl root(a : Seg)
+
+veritoid("c", "claim",       "Every bounded monotone sequence of reals converges.").
+veritoid("d", "step",        "Take the least upper bound of the terms and show the terms come within any ε of it.").
+veritoid("k", "explanation", "If you keep stepping forward and there is a wall you cannot pass, you end up settling somewhere at or before the wall.").
+veritoid("u", "claim",       "Every Cauchy sequence of reals converges.").
+
+assembly("T", "derived-result").
+slot("T", "formal-claim", 1, $Holds("c", $Firm())).
+slot("T", "derivation",   1, $Holds("d", $Firm())).
+slot("T", "description",  1, $Promised()).
+slot("T", "eli8",         1, $Holds("k", $Firm())).
+
+assembly("U", "derived-result").
+slot("U", "formal-claim", 1, $Holds("u", $Firm())).
+
+assembly("O", "outline").
+slot("O", "entry", 1, $PointsAt("T", $Firm())).
+slot("O", "entry", 2, $PointsAt("U", $Provisional())).
+slot("O", "entry", 3, $Suggested("a result about series is probably wanted here")).
+slot("O", "entry", 4, $Gap()).
+root("O").
+
+// ---------- computed
+.decl kind_of(s : Seg, k : Kind)
+kind_of(S, K) :- veritoid(S, K, _).
+kind_of(S, K) :- assembly(S, K).
+
+// a slot reaches what fills it; firmly, when not provisional
+.decl fills(a : Seg, name : SlotName, s : Seg, standing : Standing)
+fills(A, N, S, St) :- slot(A, N, _, $Holds(S, St)).
+fills(A, N, S, St) :- slot(A, N, _, $PointsAt(S, St)).
+
+.decl canon(s : Seg)
+canon(A) :- root(A).
+canon(S) :- canon(A), fills(A, _, S, $Firm()).
+
+.decl promised_and_empty(a : Seg, name : SlotName)
+promised_and_empty(A, N) :- slot(A, N, _, $Promised()).
+
+// ---------- what is wrong with this state, as things to read (nothing is refused)
+.decl misfilled(a : Seg, name : SlotName, s : Seg, wanted : Kind, got : Kind)
+misfilled(A, N, S, Want, Got) :- assembly(A, AK), slot_of(AK, _, N, $Of(Want), _), fills(A, N, S, _), kind_of(S, Got), Got != Want.
+
+.decl overfilled(a : Seg, name : SlotName)
+overfilled(A, N) :- assembly(A, AK), slot_of(AK, _, N, _, $One()),       fills(A, N, S1, _), fills(A, N, S2, _), S1 != S2.
+overfilled(A, N) :- assembly(A, AK), slot_of(AK, _, N, _, $AtMostOne()), fills(A, N, S1, _), fills(A, N, S2, _), S1 != S2.
+
+.decl mentioned(a : Seg, name : SlotName)
+mentioned(A, N) :- slot(A, N, _, _).
+.decl required_and_unmentioned(a : Seg, name : SlotName)
+required_and_unmentioned(A, N) :- assembly(A, AK), slot_of(AK, _, N, _, $One()), !mentioned(A, N).
+
+.decl held_twice(s : Seg)
+held_twice(S) :- slot(A1, N1, _, $Holds(S, _)), slot(A2, N2, _, $Holds(S, _)), (A1 != A2 ; N1 != N2).
+
+.output canon(IO=stdout)
+.output promised_and_empty(IO=stdout)
+.output required_and_unmentioned(IO=stdout)
+.output misfilled(IO=stdout)
+.output overfilled(IO=stdout)
+.output held_twice(IO=stdout)

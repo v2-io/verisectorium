@@ -1,0 +1,15 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by kodkod.engine.satlab.SATFactory in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+00. run   show                     0    1/1     SAT
+01. check expected                 0       UNSAT
+02. run   inCanonButHolderIsNot     0    1/1     SAT
+03. check canonIsOnlyWhatIsReached     0       UNSAT
+04. run   q4IsNotVacuous           0    1/1     SAT
+c last restart ## conflicts  :  0 352 
+c last restart ## conflicts  :  56 1360 
+c last restart ## conflicts  :  1 1447 
+c last restart ## conflicts  :  52 1405 
+c last restart ## conflicts  :  1 1432 

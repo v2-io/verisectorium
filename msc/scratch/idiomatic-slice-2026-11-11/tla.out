@@ -1,0 +1,35 @@
+TLC2 Version 2026.11.06.222357 (rev: d8fb231)
+Running breadth-first search Model-Checking with fp 83 and seed -516227406904950359 with 1 worker on 16 cores with 10923MB heap and 64MB offheap memory [pid: 31937] (Mac OS X 27.0.1 aarch64, Homebrew 27.0.1.0.3 64bit, MSBDiskFPSet, DiskStateQueue).
+Parsing file /Users/josephwecker-v2/src/verisectorium/msc/scratch/idiomatic-slice-2026-11-11/tla.tla
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-5030490685574854999/Naturals.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Naturals.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-5030490685574854999/Sequences.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/Sequences.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-5030490685574854999/FiniteSets.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/FiniteSets.tla)
+Parsing file /private/var/folders/0g/9lb50spx2jzgs1_t58t4zygc0000gs/T/tlc-5030490685574854999/TLC.tla (jar:file:/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-formal-perspectives-2026-11-10/tla/tla2tools.jar!/tla2sany/StandardModules/TLC.tla)
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module tla
+Linting of module tla
+Starting... (2026-11-10 21:59:12)
+<<"canon", {"c", "d", "k", "T", "O"}>>
+<< "in canon, with content",
+   [ c |-> "Every bounded monotone sequence of reals converges.",
+     d |->
+         "Take the least upper bound of the terms and show the terms come within any ε of it.",
+     k |->
+         "If you keep stepping forward and there is a wall you cannot pass, you end up settling somewhere at or before the wall." ] >>
+<<"promised and empty", {<<"T", "description">>}>>
+<< "does not fit its kind",
+   {<<"U", "description", "declared as one, and absent">>} >>
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-10 21:59:12.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 2.1E-14
+1793 states generated, 256 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 9.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 8 and the 95th percentile is 4).
+Finished in 01s at (2026-11-10 21:59:14)
+exit=0
