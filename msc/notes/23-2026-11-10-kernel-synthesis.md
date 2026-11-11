@@ -25,7 +25,7 @@ I took "not append-only" too far and removed order altogether. Both builds found
 - **Nothing can be answered once.** A selection has no "later", so a defect found at one version must be met again at every other version for ever: one new fact per old finding per edit. The Ada agent's words: "the guard is for ever, and I think that is the price of having no history."
 - **A wrong finding cannot be undone.** With facts that only accumulate and no order among them, evidence against a finding is a standing conflict, never a correction. Core's own example of a wrong finding being set aside with the piece untouched could not be expressed.
 
-Your statement this evening has both things draft 3 was missing and the thing it got right: "there should be causal ordering … a clock and an additive base--- event sourcing style --- but one that allows multi-step serial parts to be part of a logically simultaneous change and that distinct from the steady-state checkpoints *AND* the ability to rewind / unstage / fork at a checkpoint".
+Your statement this evening has both things draft 3 was missing and the thing it got right: "there should be causal ordering, fwiw, definitely a clock and an addative base--- event sourcing style ---  but one that allows multi-step serial parts to be part of a logically simultaneous change and that distinct from the steady-state checkpoints *AND* the ability to rewind / unstage / fork at a checkpoint".
 
 Put together with what the builds showed, I think the shape is this, and it is not new machinery; it is how version control already works, with one addition.
 
