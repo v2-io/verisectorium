@@ -73,6 +73,24 @@ One thing: revise the spec's account of change to §3 (events, checkpoints, fork
 
 What I would not do: add anything to core, or answer the builds' remaining findings one by one. They are in the two accounts, and most of them are about wording in a spec that is about to change.
 
+## 8. After the re-runs on draft 4
+
+Both agents rebuilt on the spec with events, forks and checkpoints, and I read both new accounts whole. They did not read each other's.
+
+**The result to keep.** What is owed about a set of pieces depends on nothing outside what those pieces read. In Ada this is proved (656 checks), for every ontology of the bounded types and with no condition on it, about the function from a state to what it owes. Two consequences are proved with it: if two forks each leave their own part stationary and the parts cover everything, the union is stationary; and whatever the union still owes is about a piece in neither part. In OCaml the same thing was tested on events directly: an event that changes nothing a piece reads left what that piece owes unchanged in 19.8 million checks; 690,000 pairs of forks that did not meet all closed; every one of 87,000 owed items in failed merges sat on a piece that read something from both forks. The Ada agent's judgment, which I share: this does not depend on how defects or canon are decided, only on each condition being computed from what one piece reads, so any later draft that keeps that shape keeps the theorem.
+
+Three limits. The proof stops at the state: the layer that reads a state from a line of events is tested and not proved. The result says where to look after a merge, not that a repair confined there exists, and "a piece that reads both" can be far downstream of where two forks met. And it is conservative: most forks that meet can close anyway.
+
+**What "meet" is.** Both builds arrived at the same thing from different sides: something of one fork reads a piece the other changed, where a piece can change in whether it exists, which version it is at, or what is recorded about it. An outline that reads of its parts only that they exist is not a meeting place for repairs to two of them. One that was read whole, as one fact about two parts, is.
+
+**The split I was unsure of leaks in one place**, and both found it. Evidence is in the base and has one time; whether it counted *when recorded* is a question about a line. As I worded it, a check of a draft made before the fork has that draft does not count, where the identical check made after does; and a fork that writes, is checked, rewinds and writes the same thing again is not stationary. Core's own advice is to check a piece before accepting it, so the wording is wrong and the intent is clear: a check counts wherever its version is, whenever it was made.
+
+**The wording of when a found defect still stands has four holes**, all in the layer that could not be proved. An old pass on a criterion answers a new finding at birth (my error; "later than the finding" was meant). A finding against a draft that was then rewound leaves nothing behind. Putting a defect back after it was answered, then editing, sheds it under one reading. And rewriting something a finding had read makes the finding stop applying. The last was found by search and not predicted. I have not tried to restate the rule; each builder offers a wording, and the right one should come from what the rule is for, not from patching four cases.
+
+**Smaller things both found.** A checkpoint is stationary as of when it closed: evidence arrives everywhere at once, which I think is right. Un-marking a root can make other pieces owe. Setting a finding aside is a general exit and should be shown with a checkpoint as a waiver is. Consistency's fixed point is the greatest one and not the only one.
+
+**Decisions that are the model's, not the spec's.** Whether two forks may close because the merged state happens to be stationary, or only because they do not meet: the first is cheaper and has a hole in which the answer turns on which of two writes has the later clock time. Whether what an outline reads of its parts is declared by its kind. Whether a slot marked provisional counts as filled because some other root reaches what is in it.
+
 ## What I have not done
 
-Read the agents' code or run it. Checked their counts. Read the two real-root runs against any of this. Tried §3 or §4 on anything.
+Read the agents' code beyond a sample, or run it. Checked their counts. Read the two real-root runs against any of this. Tried §3 or §4 on anything.

@@ -162,11 +162,11 @@ Evidence can arrive against a checkpoint itself. The checkpoint was stationary w
 
 When a fork reaches a stationary state it can be **closed**: it becomes the next checkpoint. Everything between two checkpoints is an **atomic changeset**. Inside, it was many steps in sequence; from outside it is one logical instant.[^31]
 
-One thing crosses between forks. Evidence is about a version, and a version is the same thing wherever it appears, so what was found out on an abandoned fork is still known on the next one. Going back loses the work. It does not lose what was learned.[^32]
+One thing crosses between forks. Evidence is about a version, and a version is the same thing wherever it appears, so what was found out on an abandoned fork is still known on the next one. A check made ahead of time, on a draft or on another fork, counts as soon as this fork has that version. Going back loses the work. It does not lose what was learned.[^32]
 
 A known problem that is knowingly left is a **waiver**: a decision, with its reason, that one frontier item stays. A waived item is shown with the checkpoint. Waivers are meant to be rare.[^33]
 
-Stationary can be said of a part: of what one root reaches, or of any set of pieces that nothing outside it reads. Two forks whose work does not meet can both close, in either order.[^34]
+Stationary can be said of a part: of what one root reaches, or of any set of pieces that nothing outside it reads. Two forks **meet** when something of one reads a piece the other changed. Two forks that do not meet can both close, in either order; and when they do meet, whatever is then owed is on pieces that read something from both.[^34]
 
 ### 4.3 The example
 
@@ -321,12 +321,12 @@ Three levels, and most of this note is at the lowest. *Tested*: something was bu
 | Holding and pointing are not resting (2.3) | The opposite was tested and failed: with it, a built instance had every repair reach the outline. Two formal builds then found the other route: a single check that read two parts of an outline together joins their repairs there, and checks made part by part do not. |
 | Two kinds of answer (3.2) | Argued, and lightly tested: two built instances sorted everything they met into one or the other. Neither was looking for a third kind. |
 | Evidence is about a version; "the same" (3.3) | Built twice. Two things came out of it. Saying two versions are the same carries bad news forward as readily as good. And with nobody's standing in question, nothing limits who may say it, so everything that used to be "lapsing" rests on a part of the model that is set aside for now. |
-| A found defect is presumed present until looked for; a wrong finding is set aside (3.3) | The first is proved to hold through rewording, splitting and replacing, where the replacement is recorded as descending from the piece; entered as new material it is shed. The second is built in one of the two builds and untested in this form. |
+| A found defect is presumed present until looked for; a wrong finding is set aside (3.3) | Setting aside works as built in both. The rule for when a found defect still stands is the weakest part of the model: two builds found four ways to shed a defect under my wording (note 23, §8), all in the part neither could prove. |
 | Decisions have conditions (3.4) | Argued. One built instance had a decision fall and be remade when a ground changed, under an earlier wording. |
 | Canon by marked roots (3.5) | Asserted, on your word, which is a decision about the model and not evidence for it. Measured: asking nothing beyond placement admits every state that asking more does. Per-root requirements are untested. |
-| Events, checkpoints, forks; evidence crossing between forks (4.2) | Asserted. It is your statement of the shape plus one addition of mine, and two builders are running it now. An earlier form with no order at all was built twice and failed in the two ways note 23 gives. |
+| Events, checkpoints, forks; evidence crossing between forks (4.2) | Built twice. Order does what it was added for: a finding is answered once, a wrong finding can be set aside, and the worked moves run as forks that close. The crossing leaked in one clause of my spec (a check made before a fork has the version did not count); the sentence in 4.2 is the intent, and the spec's wording is not yet repaired. |
 | The nine conditions (4.1) | Built twice in an earlier form. That they have a definite answer is proved, for every ontology within small bounds, provided questions, promises and waivers are unconditional. That good news never makes anything newly owed is proved under three conditions. The wording of several conditions changed after the builds and has not been re-run. |
-| Stationary of a part; two forks both closing (4.2) | Tested in the first form: of 345 million pairs of changes in tiny universes, the 6.2 million that did not meet all combined. Not proved. The Ada code now states it as theorems; whether they are proved, and how much their hypothesis assumes, I have not checked. |
+| Stationary of a part; two forks both closing (4.2) | Proved in Ada, for every ontology within small bounds, about the function from a state to what it owes: what is owed about a set of pieces depends on nothing outside what they read; two forks that leave their own parts stationary combine; what a merge owes lies where they met. Tested on events in OCaml (19.8 million checks, no failure). Not proved: the layer that reads a state from a line of events. |
 | Better (4.4) | Argued. A real segment gave two versions it cannot rank. |
 | Intake (Part 5) | The need is measured (one sprint, no source retired). The mechanism has one invented run. |
 
