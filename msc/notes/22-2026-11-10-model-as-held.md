@@ -146,6 +146,8 @@ A state is **consistent** when, for everything in canon[^25]:
 8. every promised or required slot has something in canon in it;
 9. every question raised about it has been answered since.
 
+*(Added 2026-11-11 by the second lead: what each of these nine is for, where they may be too restrictive or in the wrong place, and what the fork work says of the second, is in `22a-2026-11-11-nine-conditions-annotated.md` beside this note.)*
+
 The **frontier** is every place one of these fails, each naming what failed and what it would take. It is computed from the state, and from nothing else.[^26]
 
 Three things a verisectorium's own rules must respect, or the nine have no definite answer.[^27] A question, a promise or a waiver is unconditional: it stands until withdrawn. Evidence says what it read. And a slot may require that something fills it, never that the something be consistent.
