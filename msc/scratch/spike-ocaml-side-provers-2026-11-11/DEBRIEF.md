@@ -52,7 +52,7 @@ All four ran note 22 §4.3. Where they decided, they agree with each other and p
 - **09:00.** The note says "c1′ is fine." The conditions owe a guard on c: the case found in c1 has not been looked for in c1′. (`rocq` §3, `why3` §1, `eprover` §5. Cameleer's cut has no guards and says so.)
 - **k2 and e1.** Nothing in the story looks at k2 beside e1, so condition 6 stays owed and S1 is not stationary without one more affirm. (`rocq` §3, as two pinned readings; `why3` §1; `eprover` §5 through row 8, with row 9 undecided by E and argued by hand.)
 
-These are the places the earlier spike's common reading said to watch, and the Rocq fork had read the Lean fork's findings first. The Why3 and E forks say they had not read anyone's. I do not count any of this as independent of the first spike. One difference among them that someone should settle: Why3 puts the condition-6 item on k, the dependent piece; Rocq and E put it on T, the assembly. (mine, from their tables)
+These are the places the earlier spike's common reading said to watch, and the Rocq fork had read the Lean fork's findings first. The Why3 fork says it had not read the other forks' files; the E fork says it compared its result with nothing beyond what the common reading predicts. I do not count any of this as independent of the first spike. One difference among them that someone should settle: Why3 puts the condition-6 item on k, the dependent piece; Rocq and E put it on T, the assembly. (mine, from their tables)
 
 Cameleer's cut adds one thing the note does not mention: at 09:00 the fork's c1′ also lapses T's whole read (`cameleer/PERSPECTIVE.md` §7). Rocq and Why3 list 5 on T at that row as well.
 
