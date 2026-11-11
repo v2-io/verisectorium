@@ -90,3 +90,11 @@ In a switch of its own, so the working one is not disturbed:
 2. **Cameleer, 15 minutes, stop at the bell.** Pin it and see whether it builds. If it does, give it the one function `slots_filled` from `pulled_out.ml` with a specification in GOSPEL. If it does not build in fifteen minutes, that is the finding.
 
 I would not try E on its own. The conditions involve a reachability closure and a fixed point, which are not first-order; E earns its place behind Why3, not in front of the model.
+
+## Changed, 2026-11-11, after the provers were run
+
+My answer is now **Rocq and the OCaml it extracts to**, not Lean. A fork of me built the slice, the small model and four general theorems in Rocq in one sitting and ran the model from the extracted OCaml; its account is `msc/scratch/spike-ocaml-side-provers-2026-11-11/rocq/AS-A-HOME.md`, and the spike's `DEBRIEF.md` has the rest. I read its notes whole and none of its code.
+
+What changed my mind is the premise, not the tools' merits: I chose Lean because I believed OCaml had no route to "for every state", and I had not looked. What I said about speed on this route was too quick and is corrected there: extraction costs about a factor of two, and the function that was easy to prove is far slower than the one I would write unproved. Neither I nor the fork has used Lean on anything, so "ahead of Lean" compares one touched thing with one untouched.
+
+If "one language" is read strictly, so that Rocq with extracted OCaml counts as two, my first answer stands.

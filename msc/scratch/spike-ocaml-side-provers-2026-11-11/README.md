@@ -24,3 +24,20 @@ Each directory is its fork's. Tool output goes whole into its `runs/`. `install/
 ## What was installed
 
 See `install/`. Everything is in an opam switch of its own (`rocq-try`); the working switch `kernel-2` was not touched. To remove: `opam switch remove rocq-try` (and any further switch a fork's notes name).
+
+## Read in this order
+
+1. **`DEBRIEF.md`**: to Joseph, written from the forks' files, with the file behind each claim.
+2. `00-guesses-before-running.md`: what the lead expected before any tool had run. The debrief says what became of each.
+3. Each fork's `PERSPECTIVE.md` (what the tool showed about the model, what was run, read and guessed) and `AS-A-HOME.md` (what the work was like). These are the record; the debrief is a reading of them.
+4. The slices: `../idiomatic-slice-2026-11-11/rocq.v`, `why3.mlw`, `cameleer.ml`, `eprover.p`, each with notes in or beside it.
+
+## What was installed, in full
+
+- opam switch `rocq-try` (OCaml 5.5.2): Rocq 9.3, Why3 1.9.0, Alt-Ergo 2.6.4, E 3.1. `install/` has the logs and times.
+- opam switch `cameleer-try` (OCaml 4.14.2, 1.0 GB), made by the Cameleer fork; its `PERSPECTIVE.md` has the exact versions that work.
+- `~/.why3.conf`, written by `why3 config detect`. Outside the repository.
+- Used and not installed by us: a Z3 already at `/opt/homebrew/bin/z3`.
+- A higher-order build of E was made in a scratchpad and not kept; `eprover/runs/ho-build.txt` says how.
+
+To remove everything: `opam switch remove rocq-try cameleer-try` and delete `~/.why3.conf`.
