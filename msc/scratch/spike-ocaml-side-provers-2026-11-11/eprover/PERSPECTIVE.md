@@ -74,7 +74,7 @@ So the guess is half overturned. E can state "least", and proves from it in a fi
 
 ## 5. Running the story: not what it is for
 
-The small model's conditions 2, 4, 5 and 6 went down as one definition each (`m0/m0.ax`, about 110 lines), and they read close to note 22's sentences:
+The small model's conditions 2, 4, 5 and 6 went down as one definition each (`m0/m0.ax`, 130 lines), and they read close to note 22's sentences:
 
 ```
 % 4. no finding applies, and no guard is open
