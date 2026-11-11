@@ -1,0 +1,8 @@
+instance, extracted canon_list: O, T, c, d, k
+instance, extracted promised: description of T
+n=  50  in canon: extracted 100, by hand 100, walk 100
+        seconds: extracted 0.034, same rounds by hand 0.021, walk 0.0000
+n= 100  in canon: extracted 199, by hand 199, walk 199
+        seconds: extracted 0.315, same rounds by hand 0.159, walk 0.0000
+n= 200  in canon: extracted 400, by hand 400, walk 400
+        seconds: extracted 2.662, same rounds by hand 1.271, walk 0.0002

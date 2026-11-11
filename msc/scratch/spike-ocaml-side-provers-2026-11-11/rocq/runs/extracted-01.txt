@@ -1,0 +1,11 @@
+instance, extracted canon_list: O, T, c, d, k
+instance, extracted closed check: true
+instance, extracted promised: description of T
+n=  50  in canon: extracted 100, by hand 100, walk 100;  check passes true
+        seconds: extracted 0.018 (+ check 0.000), same by hand 0.010, walk 0.0000
+n= 100  in canon: extracted 199, by hand 199, walk 199;  check passes true
+        seconds: extracted 0.108 (+ check 0.001), same by hand 0.056, walk 0.0000
+n= 200  in canon: extracted 400, by hand 400, walk 400;  check passes true
+        seconds: extracted 0.863 (+ check 0.005), same by hand 0.450, walk 0.0001
+n= 400  in canon: extracted 799, by hand 799, walk 799;  check passes true
+        seconds: extracted 7.297 (+ check 0.019), same by hand 3.584, walk 0.0002

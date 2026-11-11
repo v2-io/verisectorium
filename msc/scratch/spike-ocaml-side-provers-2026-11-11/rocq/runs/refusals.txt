@@ -1,0 +1,22 @@
+=== follow_pointers_forever.v
+File "./follow_pointers_forever.v", line 265, characters 0-99:
+Error: Cannot guess decreasing argument of fix.
+exit 1
+=== gap_in_typed_slot.v
+File "./gap_in_typed_slot.v", line 265, characters 58-61:
+Error:
+The term "Gap" has type "entry" while it is expected to have type
+ "slot (veritoid Explanation)".
+exit 1
+=== step_in_claim_slot.v
+File "./step_in_claim_slot.v", line 265, characters 39-46:
+Error:
+The term "holds d" has type "slot (veritoid Step)"
+while it is expected to have type "slot (veritoid Claim)".
+exit 1
+=== two_claims.v
+File "./two_claims.v", line 265, characters 47-54:
+Error:
+The term "holds c" has type "slot (veritoid Claim)"
+while it is expected to have type "list (slot (veritoid Step))".
+exit 1

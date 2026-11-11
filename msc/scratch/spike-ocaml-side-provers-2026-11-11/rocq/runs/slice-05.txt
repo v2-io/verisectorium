@@ -1,0 +1,11 @@
+     = ["O"; "T"; "c"; "d"; "k"]
+     : list name
+     = [("T", "description")]
+     : list (name * string)
+Closed under the global context
+File "./rocq.v", line 387, characters 0-56:
+Warning: Setting extraction output directory by default to
+"/Users/josephwecker-v2/src/verisectorium/msc/scratch/idiomatic-slice-2026-11-11".
+Use "Set Extraction Output Directory" or command line option
+"-output-directory" to set a different directory for extracted files to
+appear in. [extraction-default-directory,extraction,default]
