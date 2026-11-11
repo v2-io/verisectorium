@@ -127,3 +127,7 @@ The spike's own combination puts rules at the centre. I cannot weigh that agains
 ## What I did not do
 
 Finish pulling the conditions out (four of nine). Put the state behind an interface. Give pieces, versions and events distinct types. Write the checkpoint module. Use QCheck, which is installed, for larger universes with shrinking. Try extraction from a prover. Have anyone else read the code. Read the forks' own notes on Lean, Alloy and TLA+, or anything of the Ada build.
+
+## Correction, added 2026-11-11 after Joseph asked about Rocq, Why3 and Cameleer
+
+Above I wrote that OCaml "gives no route to 'for every state', and I did not find one". I did not look for one. Two exist on paper: specifications on the OCaml itself checked by solvers (Cameleer over Why3, with Alt-Ergo and others), and the model written in Rocq and extracted to OCaml. I named the second in one clause and never weighed the first. What I have since checked, and what I would try, is in `msc/scratch/forced-choice-2026-11-11/ocaml-builder.md` under "Added later the same day". The sentence above should be read as "I proved nothing and tried no prover", which is true.

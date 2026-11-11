@@ -46,3 +46,47 @@ If the speed is not there, I would say so within the week and go back to OCaml, 
 ## If the choice had to be among what I have actually used
 
 OCaml, with the conditions pulled out and the state behind an interface, and I could keep it true. I would say plainly on its first page that nothing in it is or can be proved.
+
+## Added later the same day: Rocq, Why3, Cameleer, Alt-Ergo, E
+
+*Joseph asked, through the lead: "Did OCaml not use rocq as intended? what about why3/cameleer, alt-ergo, eprover, etc.?" This section is my answer. Everything above it is as first written, before I had read any other answer; I still have read none.*
+
+### 1. What I was asked, and what I did with it
+
+Rocq was in my brief, once, as an option and not as the task. The lead's words to me were: "If you think a different instrument would see more (Joseph mentioned Rocq in the same breath), say so." His "ocaml / rocq or something" did not reach me in those words.
+
+I considered a prover twice and set it aside both times, on timing. In my audit of draft 1: "a proof assistant would be early while §5 is still choosing its fixpoints". In the draft-3 account: "A proof assistant would now be worth its cost for exactly two statements, both short … I did not attempt either." I never came back to it, and by draft 4 I was saying the same thing a third time without acting on it.
+
+Why3, Cameleer, Alt-Ergo and E I did not consider at all. They did not cross my mind. That is an omission, not a judgment.
+
+### 2. Does my premise hold? No, not as I stated it
+
+In `AS-A-HOME.md` I wrote that OCaml "gives no route to 'for every state', and I did not find one", and my choice of Lean above rests on "that is permanent". I did not look for a route. I named extraction from a prover in one clause and dismissed it in the next. So the premise was asserted, not checked. Two routes exist on paper, and they are different in kind:
+
+**Specifications on the OCaml itself, discharged by solvers** (Cameleer: OCaml annotated in GOSPEL, translated to Why3, sent to Alt-Ergo, CVC5, Z3, E). One fact from this estate bears on it directly: SPARK's prover *is* Why3 with those same solvers behind it. So the Ada builder's 656 proved checks, including the locality result, are evidence that this solver stack can discharge conditions of this shape over bounded types. What I do not know is whether Cameleer accepts code like mine. `model.ml` leans on closures over lists, polymorphic comparison and bitmasks; I would expect to rewrite the conditions in a plainer style first, much as `pulled_out.ml` already is. From what I know of it (training, unchecked), Cameleer is a research tool covering a subset of OCaml.
+
+**The model written in Rocq and extracted to OCaml.** Then Rocq is the home and OCaml is what it runs as. This is the same shape as my Lean answer, with one difference that matters to the risk I put first: extracted code runs at OCaml's speed, and my explorer is already OCaml. The thing I said would make Lean the wrong choice within a week is not a risk on this route.
+
+What I checked just now, by asking opam what it would do and installing nothing:
+
+| | on the existing `kernel-2` switch (OCaml 5.5.2) |
+|---|---|
+| Rocq 9.3 | resolves; 7 packages, no conflict |
+| Why3 1.9.0 | resolves; 4 packages, no conflict |
+| Alt-Ergo 2.6.4 | resolves, but would downgrade 2 and recompile 14 packages already there; better in a switch of its own |
+| E 3.1 | in the repository |
+| GOSPEL 0.3.1 | in the repository |
+| Cameleer | **not in the opam repository.** It would have to be pinned from its source; whether it builds against this compiler I have not tried |
+
+**So, the forced choice again.** If "one language" is strict, my answer stands: Lean compiles itself, so the statements, the model, the search and the proofs are one language with nothing extracted. If "Rocq, and the OCaml it extracts to" counts as one home, which I think is what Joseph's "ocaml / rocq" meant, then I would put that ahead of Lean: it removes the risk I named first, it keeps the explorer I have, it installs into the switch that is already there, and it changes far less from month to month. I would hold that as a lean and not a choice until I have typed some of it. I have used neither on this model, and the Lean fork has.
+
+The Cameleer route I would not make the home on what I know. It proves properties of the program; the statements Joseph would read would be annotations in comments beside code, which is further from "the sentence" than either prover's definitions.
+
+### 3. The smallest thing worth an hour
+
+In a switch of its own, so the working one is not disturbed:
+
+1. **Rocq, 45 minutes.** The idiomatic slice only (segments, slots, roots). Canon stated as the two rules; canon as a function; a proof that they agree; extraction to OCaml; the extracted function run on the shared instance beside `idiomatic-slice-2026-11-11/ocaml.ml`, and timed against it on a large made-up outline. That answers three things at once: whether the statement reads as well as Lean's, whether the proof is a sitting's work, and whether extracted code is as fast as I am assuming.
+2. **Cameleer, 15 minutes, stop at the bell.** Pin it and see whether it builds. If it does, give it the one function `slots_filled` from `pulled_out.ml` with a specification in GOSPEL. If it does not build in fifteen minutes, that is the finding.
+
+I would not try E on its own. The conditions involve a reachability closure and a fixed point, which are not first-order; E earns its place behind Why3, not in front of the model.
