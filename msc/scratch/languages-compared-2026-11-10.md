@@ -55,7 +55,7 @@ Datalog itself is a language and a guarantee (one answer, always terminates, ord
 | **Ada / SPARK** | Alire, GNAT, gnatprove | prover runs of three to five minutes; must run alone | a timeout looks the same for a false claim, a true one needing a hint, and one that proved yesterday; at least two obligations proved once and timed out later unchanged |
 | **Lean 4** | 2.8 GB, changes monthly | builds in about a second | the pull toward what is provable: a model cut smaller until a theorem goes through. A checkpoint "with a proof" was built for a state that owes by lowering a bound (audit) |
 | **Soufflé** | one `brew install` | instant | accepts a status typed by hand beside the rule that computes it |
-| **clingo** | the same install | instant | a misspelled relation is treated as empty, so the answer gets shorter and looks like "nothing owed" |
+| **clingo** | the same install | instant | a misspelled relation prints one line marked "info" and is then treated as empty, so the answer gets shorter and looks like "nothing owed" (the TLA+ fork checked this on clingo 5.8.3) |
 | **Prolog, tabled** | already present | not measured | "it accepts everything" |
 | **Alloy 6** | one jar and a JDK | minutes; one query stopped after ten with no answer | the size bound is part of the meaning, and nothing checks that a passing result is not vacuous |
 | **TLA+** | one jar, but only the pre-release prints readable traces; four attempts to the first run | 1.5 to 8 minutes for three pieces and two forks | no types; every "holds" is for one universe and one clock bound chosen by hand |
@@ -354,6 +354,34 @@ Nobody was asked these; they fell out of the languages.
 | **Kinds as types refuse the most and can be declared by nobody but the programmer** | OCaml and Lean put kinds in types; Ada, Soufflé, clingo, Prolog, TLA+ keep them as data; Alloy's signatures sit between | OCaml: "For one verisectorium's own kinds written once, this is the best thing in the file. For a tool that must load any verisectorium's ontology, it is the wrong shape" |
 | **Refused or owed is a choice made sentence by sentence** | clingo (a constraint or a derived fact), Alloy (a fact or a predicate), Ada (a predicate on the type or a check elsewhere), Soufflé (nothing is refused) | clingo: "it takes one character to change your mind" |
 | **Content is opaque everywhere.** It is stored, compared and printed, and no language could say anything about it | all eight | Alloy: "That matches the slice (content is what questions are asked OF) and it means nothing about content can ever be said in this language." |
+
+## 8. Forced to choose one, and to live with it
+
+Joseph, on reading the verdicts above: "It's always 'safest' to not recommend ones own experience as the home, I would think. I wonder what they would choose if they looked at all of the assembled report and *had* to choose a home and had to live with the result..." Each of the six minds that used a language was asked for one language, no combination, as the one who would keep it true through the next several changes to the spec. Each wrote before reading any other answer. The lead wrote first, before asking. The answers are in `forced-choice-2026-11-11/`, each a page; I read all seven whole.
+
+| who | used | chose | second | the reason it gives, in a line |
+|---|---|---|---|---|
+| Ada builder | Ada / SPARK | **Ada / SPARK** | (Lean or Soufflé, under other beliefs) | a home must search, prove for every ontology, and survive a spec change; only SPARK and Lean prove, and in SPARK a solver writes the proofs, which is why they crossed the change for nothing |
+| OCaml builder | OCaml | **Lean 4** | OCaml | "the only one of the eight in which all four jobs can be done on one text"; in OCaml "none found in the universes visited" would be permanent |
+| Lean fork | Lean 4 | **Lean 4** | OCaml | the statement adjudicated and the thing that runs can be the same text; it can say "for every state"; it will not let a sentence stand with two readings |
+| Alloy fork | Alloy 6 | **Lean 4** | Soufflé | "It labels its own claims, by machine": proved, stated and owed, and merely tried are told apart by the toolchain, which is the model's oldest rule applied to its own formal layer |
+| spike lead | Soufflé, clingo, Prolog | **clingo** | OCaml | one copy of the conditions runs the example and is what the search is asked over; the one language with evidence that a cold mind could read and repair it |
+| TLA+ fork | TLA+ | **clingo** | OCaml | the model is still at the stage of finding which sentences are wrong, so the search has to be inside the language and a second reading has to cost two lines |
+| the lead | none (a reader) | **OCaml** | | search found the errors; the types read fastest; it could be the engine. Argued partly by leaning on the Ada proofs, which the question forbade |
+
+Three for Lean, two for clingo, one for Ada, and one reader for OCaml. Three of the six chose a language they had not used. OCaml is the second choice of three and the fallback of a fourth, and nobody who used a language chose it first.
+
+**What they agree on.** There should be one copy of the conditions, written one per sentence of note 22, that Joseph can read and that runs. Every answer says so, and every answer names a second hand-kept copy as the thing it fears most.
+
+**What divides them is one judgment about the model, not about languages.** If the model is still at the stage where the work is finding which sentences are false, the search must be in the home and cheap to re-ask, and that points at clingo (or OCaml). If its general claims ("for every ontology, under this condition") are what the work is for and will be rewritten several times, the home must prove, and that points at Lean (or SPARK). The TLA+ fork: "once the conditions stop moving, this is the first thing I would regret." The Ada builder, betting the other way: "I think they will be rewritten several times, and I think they matter most."
+
+**What each says would show it wrong, and what is cheap to find out.**
+
+- *Lean, three times:* nobody has measured compiled Lean on the search. The OCaml builder would go back to OCaml "within the week" if it is not within about a factor of ten; the Lean fork has not written the search at all.
+- *clingo, twice:* both named the same test, the two-fork search asked in clingo, and the spike lead then ran it. All three known faults came out in under a fifth of a second each, on a model far smaller than the OCaml explorer covers. Two of its three runs first returned a wrong answer that read like a right one, caught only because the right answers were already known. The spike lead: "I hold that less firmly than I did an hour ago."
+- *Everyone:* whether Joseph reads rules or propositions or functions fastest. The Lean fork: "your reading is what the layer is for."
+
+**How much these seven are worth as a count.** Less than seven. The spike lead and its three forks began from one reading; the two builders are separate from them and from each other; all seven are one model. The split between the two clingo answers and the two Lean answers runs inside the one lineage, which is some evidence the forks have diverged. No answer rests on having kept any of these languages true through a change, except the two builders', and they chose differently.
 
 ## What I have not done
 
