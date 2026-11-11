@@ -1,0 +1,32 @@
+=== the five cases, clock footing with only the guard reworded
+  owed(c_roundtrip,c4_guard(fc),c)
+  owed(e_old_pass,c4_guard(fc),c)
+  stationary(a_fork1)
+  stationary(a_fork2)
+  stationary(a_union)
+  stationary(d_checked_first)
+  stationary(f_rewound)
+=== the five cases, causal footing with the two-versions clause removed
+  owed(c_roundtrip,c4_guard(fc),c)
+  owed(e_old_pass,c4_guard(fc),c)
+  stationary(a_fork1)
+  stationary(a_fork2)
+  stationary(a_union)
+  stationary(d_checked_first)
+  stationary(f_rewound)
+=== a guard across a merge: clock, as written
+  owed(g_b,c4_guard(f),c)
+  stationary(g_union)
+=== a guard across a merge: clock, guard reworded
+  owed(g_b,c4_guard(f),c)
+  stationary(g_union)
+=== a guard across a merge: causal
+  owed(g_b,c4_guard(f),c)
+  owed(g_union,c0_two_versions(c1,c2),c)
+  owed(g_union,c4_guard(f),c)
+=== a guard across a merge: causal, two-versions clause removed
+  owed(g_b,c4_guard(f),c)
+  owed(g_union,c4_guard(f),c)
+=== resting on a piece outside canon (finding 7), after the correction
+  fault(t4,c)
+  owed(t4,c5_rests_outside_canon(x),c)

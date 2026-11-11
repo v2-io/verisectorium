@@ -20,6 +20,8 @@ So the product is not four encodings. It is what each language's native way of s
 4. `03-other-bodies-of-work.md`: five fields that already hold parts of this model (databases, truth maintenance, build systems, logic programming, and smaller ones), with how well each claim about them was checked.
 5. `02-guesses-before-running.md` and `05-what-the-guesses-came-to.md`: what I expected before any tool was installed, and what became of each expectation. Three were wrong.
 6. `proposed-integration-plan.md`: suggestions, with reasons, and first of all what an independent reader should try to break.
+7. `de-novo-feedback-1.md`: an independent read of all of the above, by an agent with none of our context. `08-corrections-after-the-independent-read.md`: what I did about it. Read these two before leaning on anything in the debrief.
+8. `06-languages-as-homes.md` and `07-datalog-family-apart.md`: the languages weighed as homes for the model, firsthand; each instrument directory has an `AS-A-HOME.md` in its maker's words.
 
 ## What exists
 

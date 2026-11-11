@@ -68,8 +68,8 @@ owed(R,K,P) :- viol(R,K,P), not waived(R,K,P).
 rests(R,P,Q) :- sel(R,P,V), pred(P,V,Q).
 fault(R,P) :- owed(R,_,P).
 fault(R,P) :- rests(R,P,Q), fault(R,Q).
-fault(R,P) :- canon(R,P), rests(R,P,Q), selected(R,Q), not canon(R,Q).
-owed(R,c5_rests_on_fault(Q),P) :- canon(R,P), rests(R,P,Q), fault(R,Q).
+viol(R,c5_rests_outside_canon(Q),P) :- canon(R,P), rests(R,P,Q), selected(R,Q), not canon(R,Q).   % corrected after de-novo-feedback-1 finding 7: this was marked as fault and never owed
+viol(R,c5_rests_on_fault(Q),P) :- canon(R,P), rests(R,P,Q), fault(R,Q).                              % a viol, so that it can be waived like any other item
 stationary(R) :- view(R,_), not anything(R).
 anything(R) :- owed(R,_,_).
 #show owed/3.

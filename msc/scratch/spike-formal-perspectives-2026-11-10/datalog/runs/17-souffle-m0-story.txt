@@ -1,43 +1,43 @@
 ---------------
 owed
 ===============
-r1_0830	c5_rests_on_fault	c		u
 r1_0830	c4_finding	e5_		c
-r2_0900	c5_rests_on_fault	c		u
+r1_0830	c5_rests_on_fault	c		u
 r2_0900	c2_unreconciled	c	c1p	u
 r2_0900	c5_unchecked			u
 r2_0900	c5_not_read_whole			t
 r2_0900	c6_not_together	e	c	t
 r2_0900	c4_guard	e5_		c
-r3_1000	c5_rests_on_fault	c		u
+r2_0900	c5_rests_on_fault	c		u
 r3_1000	c4_finding	e5_		c
-r4_1030	c5_rests_on_fault	c		u
+r3_1000	c5_rests_on_fault	c		u
 r4_1030	c2_unreconciled	c	c2	u
 r4_1030	c5_unchecked			c
 r4_1030	c5_unchecked			u
 r4_1030	c5_not_read_whole			t
 r4_1030	c4_guard	e5_		c
+r4_1030	c5_rests_on_fault	c		u
 r5_1100	c2_unreconciled	c	c2	u
 r5_1100	c5_unchecked			u
 r5_1100	c5_not_read_whole			t
-r6_1130	c5_rests_on_fault	c		u
 r6_1130	c2_unreconciled	c	c2	u
 r6_1130	c5_unchecked			c
 r6_1130	c5_unchecked			u
 r6_1130	c5_not_read_whole			t
+r6_1130	c5_rests_on_fault	c		u
 r7_1200	c2_unreconciled	c	c2	u
 r7_1200	c5_unchecked			u
 r7_1200	c5_not_read_whole			t
 r8_1300	c5_not_read_whole			t
 r8_1300	c5_not_read_whole			uu
-rX_S0_at_1400	c5_rests_on_fault	c		u
 rX_S0_at_1400	c4_finding	e5_		c
-rY_fa_at_1400	c5_rests_on_fault	c		u
+rX_S0_at_1400	c5_rests_on_fault	c		u
 rY_fa_at_1400	c2_unreconciled	c	c1p	u
 rY_fa_at_1400	c5_unchecked			u
 rY_fa_at_1400	c5_not_read_whole			t
 rY_fa_at_1400	c6_not_together	e	c	t
 rY_fa_at_1400	c4_guard	e5_		c
+rY_fa_at_1400	c5_rests_on_fault	c		u
 ===============
 ---------------
 stationary
