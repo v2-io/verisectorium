@@ -1,0 +1,268 @@
+seed 1 done, 2s, 34560 states
+seed 2 done, 3s, 40320 states
+seed 3 done, 3s, 46720 states
+seed 4 done, 9s, 104512 states
+seed 5 done, 20s, 228160 states
+seed 6 done, 22s, 257056 states
+seed 7 done, 22s, 260256 states
+seed 8 done, 25s, 298784 states
+seed 9 done, 27s, 317984 states
+seed 10 done, 32s, 379808 states
+seed 11 done, 34s, 425888 states
+seed 12 done, 35s, 451488 states
+seed 13 done, 37s, 486048 states
+seed 14 done, 38s, 511648 states
+seed 15 done, 38s, 511648 states
+seed 16 done, 40s, 557728 states
+seed 17 done, 43s, 583328 states
+seed 18 done, 49s, 645152 states
+seed 19 done, 49s, 650912 states
+seed 20 done, 58s, 673952 states
+seed 21 done, 59s, 686752 states
+seed 22 done, 62s, 748576 states
+seed 23 done, 64s, 771616 states
+seed 24 done, 68s, 806176 states
+seed 25 done, 81s, 863968 states
+seed 26 done, 83s, 910048 states
+seed 27 done, 85s, 938848 states
+seed 28 done, 89s, 964448 states
+seed 29 done, 93s, 990048 states
+seed 30 done, 95s, 1002848 states
+seed 31 done, 96s, 1022112 states
+seed 32 done, 97s, 1068192 states
+seed 33 done, 103s, 1125984 states
+seed 34 done, 107s, 1164512 states
+seed 35 done, 108s, 1176800 states
+seed 36 done, 109s, 1215328 states
+seed 37 done, 112s, 1261408 states
+seed 38 done, 113s, 1272928 states
+seed 39 done, 113s, 1277248 states
+seed 40 done, 115s, 1323328 states
+seed 41 done, 122s, 1400384 states
+seed 42 done, 126s, 1524032 states
+seed 43 done, 126s, 1529792 states
+seed 44 done, 131s, 1575872 states
+seed 45 done, 131s, 1576896 states
+seed 46 done, 134s, 1599936 states
+seed 47 done, 135s, 1630848 states
+seed 48 done, 138s, 1707904 states
+seed 49 done, 138s, 1719424 states
+seed 50 done, 139s, 1726624 states
+seed 51 done, 140s, 1739424 states
+seed 52 done, 141s, 1751712 states
+seed 53 done, 144s, 1797792 states
+seed 54 done, 144s, 1817056 states
+seed 55 done, 145s, 1878880 states
+seed 56 done, 147s, 1891680 states
+seed 57 done, 148s, 1937760 states
+seed 58 done, 151s, 1960800 states
+seed 59 done, 152s, 1962848 states
+seed 60 done, 152s, 1963360 states
+seed 61 done, 154s, 2001888 states
+seed 62 done, 154s, 2003424 states
+seed 63 done, 154s, 2007520 states
+seed 64 done, 154s, 2012320 states
+seed 65 done, 156s, 2028320 states
+seed 66 done, 165s, 2105376 states
+seed 67 done, 165s, 2128416 states
+seed 68 done, 167s, 2146016 states
+seed 69 done, 167s, 2207840 states
+seed 70 done, 168s, 2210912 states
+seed 71 done, 168s, 2230176 states
+seed 72 done, 171s, 2276256 states
+seed 73 done, 175s, 2322336 states
+seed 74 done, 177s, 2345376 states
+seed 75 done, 178s, 2355008 states
+seed 76 done, 180s, 2401088 states
+seed 77 done, 189s, 2478144 states
+seed 78 done, 189s, 2482240 states
+seed 79 done, 191s, 2574976 states
+seed 80 done, 192s, 2587776 states
+seed 81 done, 199s, 2664832 states
+seed 82 done, 201s, 2710912 states
+seed 83 done, 202s, 2733952 states
+seed 84 done, 203s, 2746240 states
+seed 85 done, 204s, 2771840 states
+seed 86 done, 206s, 2817920 states
+seed 87 done, 207s, 2830720 states
+seed 88 done, 213s, 2888512 states
+seed 89 done, 216s, 2936672 states
+seed 90 done, 221s, 2984832 states
+seed 91 done, 222s, 3031200 states
+seed 92 done, 227s, 3077280 states
+seed 93 done, 234s, 3154336 states
+seed 94 done, 235s, 3167136 states
+seed 95 done, 235s, 3170208 states
+seed 96 done, 235s, 3193248 states
+seed 97 done, 236s, 3198064 states
+seed 98 done, 236s, 3217264 states
+seed 99 done, 236s, 3219312 states
+seed 100 done, 238s, 3231600 states
+seed 101 done, 239s, 3257200 states
+seed 102 done, 243s, 3303280 states
+seed 103 done, 243s, 3332176 states
+seed 104 done, 244s, 3343696 states
+seed 105 done, 245s, 3420752 states
+seed 106 done, 246s, 3433552 states
+seed 107 done, 249s, 3452816 states
+seed 108 done, 252s, 3478416 states
+seed 109 done, 255s, 3490704 states
+seed 110 done, 255s, 3496848 states
+seed 111 done, 266s, 3531408 states
+seed 112 done, 267s, 3537552 states
+seed 113 done, 269s, 3554832 states
+seed 114 done, 270s, 3561232 states
+seed 115 done, 274s, 3586832 states
+seed 116 done, 285s, 3632912 states
+seed 117 done, 296s, 3709968 states
+seed 118 done, 305s, 3756048 states
+seed 119 done, 306s, 3772048 states
+seed 120 done, 309s, 3806608 states
+seeds 1..120 ids=5 pool=23 flags=ams checks=f
+states visited: 3806608
+
+== R9a FAIL [spec] footprints do not meet and the forks cannot both close : 3072
+  smallest (11 events):
+  ontology: asks= write_affirms=true guard_from_last=false read_as=Model.Max
+  state: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 1; need = None }]}; 1@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 2@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 2; need = (Some (0, 1)) }]}; 3@1 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 2), false); ("b", (Model.Holds 1), false)]}; 4@1 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 1), true); ("b", (Model.Holds 2), false);
+    ("c", (Model.Holds 2), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t20: Model.Write {p = 3; v = 1}
+    t21: Model.Write {p = 4; v = 1}
+  frontier: violated=[(Model.C1 (4, 1))] uncovered=[(Model.C1 (4, 1))] consistent-mask=4
+  checkpoint mask 511; A adds 1048576; B adds 2097152; base since 0
+== R9a [graded] footprints do NOT meet, both close : 181456
+== R9a [graded] footprints meet, both close : 1923732
+== R9a [graded] footprints meet, cannot both close : 24768
+== R9a [spec neighbourhood] footprints do NOT meet, both close : 222360
+== R9a [spec neighbourhood] footprints do NOT meet, cannot both close : 3072
+== R9a [spec neighbourhood] footprints meet, both close : 1882828
+== R9a [spec neighbourhood] footprints meet, cannot both close : 21696
+== R9a [static neighbourhood] footprints do NOT meet, both close : 15592
+== R9a [static neighbourhood] footprints meet, both close : 2089596
+== R9a [static neighbourhood] footprints meet, cannot both close : 24768
+== R9a [wider neighbourhood] footprints do NOT meet, both close : 56084
+== R9a [wider neighbourhood] footprints meet, both close : 2049104
+== R9a [wider neighbourhood] footprints meet, cannot both close : 24768
+== R9b FAIL [spec] an item on a piece that sees only one footprint: C1 : 9216
+  smallest (11 events):
+  ontology: asks= write_affirms=true guard_from_last=false read_as=Model.Max
+  state: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 1; need = None }]}; 1@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 2@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 2; need = (Some (0, 1)) }]}; 3@1 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 2), false); ("b", (Model.Holds 1), false)]}; 4@1 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 1), true); ("b", (Model.Holds 2), false);
+    ("c", (Model.Holds 2), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t20: Model.Write {p = 3; v = 1}
+    t21: Model.Write {p = 4; v = 1}
+  frontier: violated=[(Model.C1 (4, 1))] uncovered=[(Model.C1 (4, 1))] consistent-mask=4
+  item (Model.C1 (4, 1)); checkpoint mask 511; A adds 1048576 (footprint 3); B adds 2097152 (footprint 4); base since 0
+== R9b FAIL [spec] an item on a piece that sees only one footprint: C5_ask : 7488
+  smallest (11 events):
+  ontology: asks=(kind 0, dim 0, >=1),(kind 1, dim 0, >=2) write_affirms=true guard_from_last=false read_as=Model.Max_unless_bad
+  state: 0@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(0, 0, 1)];
+  reports = []; refs = [{ Model.rk = 2; target = 2; need = None }]}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 1)];
+  reports = []; refs = [{ Model.rk = 3; target = 0; need = None }]}; 2@1 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 0), false); ("b", (Model.Points 0), true)]}; 4@1 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 2), false); ("b", (Model.Holds 2), false);
+    ("c", (Model.Points 2), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t17: Model.Write {p = 4; v = 1}
+    t21: Model.Write {p = 2; v = 1}
+  frontier: violated=[(Model.C5_ask (2, 4, 0))] uncovered=[(Model.C5_ask (2, 4, 0))] consistent-mask=16
+  item (Model.C5_ask (2, 4, 0)); checkpoint mask 511; A adds 131072 (footprint 4); B adds 2097152 (footprint 2); base since 0
+== R9b FAIL [spec] an item on a piece that sees only one footprint: C5_rest : 576
+  smallest (12 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=false read_as=Model.Max
+  state: 0@1 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 1; need = (Some (0, 2)) }]}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [20];
+  refs = [{ Model.rk = 2; target = 2; need = None }]}; 2@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 0; target = 1; need = None }]}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Holds 2), false); ("b", Model.Empty, true)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 0), false); ("b", (Model.Points 0), false);
+    ("c", (Model.Points 0), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t16: (Model.Unmark_root 4)
+    t17: Model.Write {p = 0; v = 1}
+    t21: (Model.Mark_root 4)
+  frontier: violated=[(Model.C5_ask (0, 4, 0)), (Model.C5_rest (0, 1)), (Model.C8_need (0, 0))] uncovered=[(Model.C5_ask (0, 4, 0)), (Model.C5_rest (0, 1)), (Model.C8_need (0, 0))] consistent-mask=16
+  item (Model.C5_rest (0, 1)); checkpoint mask 511; A adds 196608 (footprint 0,4); B adds 2097152 (footprint 4); base since 0
+== R9b FAIL [spec] an item on a piece that sees only one footprint: C8_need : 576
+  smallest (12 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=false read_as=Model.Max
+  state: 0@1 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 1; need = (Some (0, 2)) }]}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [20];
+  refs = [{ Model.rk = 2; target = 2; need = None }]}; 2@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 0; target = 1; need = None }]}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Holds 2), false); ("b", Model.Empty, true)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 0), false); ("b", (Model.Points 0), false);
+    ("c", (Model.Points 0), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t16: (Model.Unmark_root 4)
+    t17: Model.Write {p = 0; v = 1}
+    t21: (Model.Mark_root 4)
+  frontier: violated=[(Model.C5_ask (0, 4, 0)), (Model.C5_rest (0, 1)), (Model.C8_need (0, 0))] uncovered=[(Model.C5_ask (0, 4, 0)), (Model.C5_rest (0, 1)), (Model.C8_need (0, 0))] consistent-mask=16
+  item (Model.C8_need (0, 0)); checkpoint mask 511; A adds 196608 (footprint 0,4); B adds 2097152 (footprint 4); base since 0
+== R9b [graded] ok: the item is on a piece that reads something each fork changed : 25920
+== R9b [spec] ok: the item is on a piece that sees both footprints : 8064
+== R9b [static] ok: the item is on a piece that sees both footprints : 25920
+== R9b [wider] ok: the item is on a piece that sees both footprints : 25920
+exit 0

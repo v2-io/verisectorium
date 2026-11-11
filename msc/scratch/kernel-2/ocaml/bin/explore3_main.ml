@@ -13,7 +13,7 @@ let () =
   let fl = a.(6) and ch = a.(7) in
   let cfg =
     {
-      Explore.n;
+      Explore3.n;
       nv;
       m;
       asm = String.contains fl 'a';
@@ -26,7 +26,7 @@ let () =
   let w c = String.contains ch c in
   let which =
     {
-      Explore.w2 = w '2';
+      Explore3.w2 = w '2';
       w3 = w '3';
       w4 = w '4';
       w5 = w '5';
@@ -39,12 +39,12 @@ let () =
   let t0 = Unix.gettimeofday () in
   for seed = s0 to s1 do
     let st = Random.State.make [| seed |] in
-    Explore.run_universe which (Explore.gen_universe st cfg);
+    Explore3.run_universe which (Explore3.gen_universe st cfg);
     (* progress on stderr as it goes, so a long run is never silent *)
     Printf.eprintf "seed %d done, %.0fs, %d states\n%!" seed
       (Unix.gettimeofday () -. t0)
-      !Explore.visited
+      !Explore3.visited
   done;
   Printf.printf "seeds %d..%d ids=%d versions=%d pool=%d flags=%s checks=%s\n"
     s0 s1 n nv m fl ch;
-  Explore.report stdout
+  Explore3.report stdout

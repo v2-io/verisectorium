@@ -1,0 +1,389 @@
+seed 1 done, 4s, 16384 states
+seed 2 done, 10s, 32768 states
+seed 3 done, 11s, 49152 states
+seed 4 done, 13s, 65536 states
+seed 5 done, 13s, 81920 states
+seed 6 done, 16s, 98304 states
+seed 7 done, 18s, 114688 states
+seed 8 done, 21s, 131072 states
+seed 9 done, 22s, 147456 states
+seed 10 done, 26s, 163840 states
+seed 11 done, 29s, 180224 states
+seed 12 done, 31s, 196608 states
+seed 13 done, 36s, 212992 states
+seed 14 done, 40s, 229376 states
+seed 15 done, 44s, 245760 states
+seed 16 done, 51s, 262144 states
+seed 17 done, 55s, 278528 states
+seed 18 done, 57s, 294912 states
+seed 19 done, 59s, 311296 states
+seed 20 done, 61s, 327680 states
+seed 21 done, 67s, 344064 states
+seed 22 done, 70s, 360448 states
+seed 23 done, 75s, 376832 states
+seed 24 done, 78s, 393216 states
+seed 25 done, 79s, 409600 states
+seed 26 done, 82s, 425984 states
+seed 27 done, 91s, 442368 states
+seed 28 done, 92s, 458752 states
+seed 29 done, 93s, 475136 states
+seed 30 done, 98s, 491520 states
+seed 31 done, 104s, 507904 states
+seed 32 done, 105s, 524288 states
+seed 33 done, 108s, 540672 states
+seed 34 done, 110s, 557056 states
+seed 35 done, 112s, 573440 states
+seed 36 done, 114s, 589824 states
+seed 37 done, 116s, 606208 states
+seed 38 done, 118s, 622592 states
+seed 39 done, 125s, 638976 states
+seed 40 done, 127s, 655360 states
+seed 41 done, 127s, 671744 states
+seed 42 done, 129s, 688128 states
+seed 43 done, 142s, 704512 states
+seed 44 done, 143s, 720896 states
+seed 45 done, 145s, 737280 states
+seed 46 done, 149s, 753664 states
+seed 47 done, 152s, 770048 states
+seed 48 done, 153s, 786432 states
+seed 49 done, 154s, 802816 states
+seed 50 done, 157s, 819200 states
+seed 51 done, 160s, 835584 states
+seed 52 done, 160s, 851968 states
+seed 53 done, 161s, 868352 states
+seed 54 done, 166s, 884736 states
+seed 55 done, 167s, 901120 states
+seed 56 done, 168s, 917504 states
+seed 57 done, 170s, 933888 states
+seed 58 done, 173s, 950272 states
+seed 59 done, 177s, 966656 states
+seed 60 done, 180s, 983040 states
+seed 61 done, 183s, 999424 states
+seed 62 done, 186s, 1015808 states
+seed 63 done, 187s, 1032192 states
+seed 64 done, 193s, 1048576 states
+seed 65 done, 194s, 1064960 states
+seed 66 done, 195s, 1081344 states
+seed 67 done, 198s, 1097728 states
+seed 68 done, 200s, 1114112 states
+seed 69 done, 203s, 1130496 states
+seed 70 done, 212s, 1146880 states
+seed 71 done, 213s, 1163264 states
+seed 72 done, 215s, 1179648 states
+seed 73 done, 216s, 1196032 states
+seed 74 done, 219s, 1212416 states
+seed 75 done, 224s, 1228800 states
+seed 76 done, 226s, 1245184 states
+seed 77 done, 227s, 1261568 states
+seed 78 done, 231s, 1277952 states
+seed 79 done, 238s, 1294336 states
+seed 80 done, 240s, 1310720 states
+seeds 1..80 ids=5 pool=23 flags=a checks=27+
+states visited: 1310720
+
+== R10 unmark adds nothing here : 9103
+== R2 ok : 899072
+== R3 a stationary state is broken by a later finding : 17395
+  smallest (9 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=true read_as=Model.Max
+  state: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 2; need = None }]}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Holds 2), true); ("b", (Model.Holds 0), true)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 1), false); ("b", (Model.Points 1), false);
+    ("c", (Model.Points 2), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+  frontier: violated=[] uncovered=[] consistent-mask=22
+  added t20: Model.Evidence {p = 4; v = 0; d = 0; crit = 0; out = Model.Fails;
+  reads = [(1, 0, Model.Assertions)]}
+  then: violated=[(Model.C6_finding (4, 20))] uncovered=[(Model.C6_finding (4, 20))] consistent-mask=6
+== R3 a stationary state is broken by a later same-for-finding : 2146
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=false guard_from_last=false read_as=Model.Max_unless_bad
+  state: 0@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 2; need = None }]}; 2@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = [(2, 0, 2)];
+  reports = []; refs = [{ Model.rk = 0; target = 0; need = (Some (0, 2)) }]}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 0), false); ("b", Model.Empty, false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 0), true); ("b", (Model.Points 0), false);
+    ("c", (Model.Holds 3), true)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t10: Model.Evidence {p = 0; v = 1; d = 0; crit = 0; out = Model.Fails; reads = []}
+  frontier: violated=[] uncovered=[] consistent-mask=17
+  added t12: Model.Same {x = 0; v = 0; w = 1; for_ = 10}
+  then: violated=[(Model.C5_ask (0, 4, 0)), (Model.C6_finding (0, 10))] uncovered=[(Model.C5_ask (0, 4, 0)), (Model.C6_finding (0, 10))] consistent-mask=16
+== R3 ok: still stationary after a base event : 204870
+== R5 set aside changes nothing here : 41792
+== R5 set-aside-of-evidence-holds adds C5_ask : 4523
+  smallest (9 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=false guard_from_last=false read_as=Model.Max
+  state: 0@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 1; need = None }]}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(2, 0, 2)];
+  reports = []; refs = [{ Model.rk = 3; target = 2; need = (Some (0, 1)) }]}; 2@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 2; target = 0; need = (Some (0, 1)) }]}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 1), true); ("b", (Model.Points 1), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 2), true); ("b", (Model.Points 2), false);
+    ("c", (Model.Holds 2), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+  frontier: violated=[] uncovered=[] consistent-mask=20
+  added t10: (Model.Set_aside 7)
+  then: violated=[(Model.C5_ask (2, 4, 0))] uncovered=[(Model.C5_ask (2, 4, 0))] consistent-mask=16
+== R5 set-aside-of-evidence-holds adds C5_rest : 192
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1),(kind 1, dim 0, >=2) write_affirms=true guard_from_last=false read_as=Model.Max
+  state: 0@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 1; need = None }]}; 1@1 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 2; need = (Some (0, 2)) }]}; 2@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = [(2, 0, 1)];
+  reports = []; refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", Model.Empty, false); ("b", (Model.Points 0), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 1), false); ("b", (Model.Holds 1), false);
+    ("c", (Model.Holds 2), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t11: Model.Write {p = 1; v = 1}
+  frontier: violated=[(Model.C5_ask (1, 4, 0)), (Model.C8_need (1, 0))] uncovered=[(Model.C5_ask (1, 4, 0)), (Model.C8_need (1, 0))] consistent-mask=20
+  added t19: (Model.Set_aside 7)
+  then: violated=[(Model.C5_ask (1, 4, 0)), (Model.C5_ask (2, 4, 0)), (Model.C5_rest (1, 2)), (Model.C7_claim (2, 0)), (Model.C8_need (1, 0))] uncovered=[(Model.C5_ask (1, 4, 0)), (Model.C5_ask (2, 4, 0)), (Model.C5_rest (1, 2)), (Model.C7_claim (2, 0)), (Model.C8_need (1, 0))] consistent-mask=16
+== R5 set-aside-of-evidence-holds adds C6_guard : 8
+  smallest (11 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=false guard_from_last=false read_as=Model.Max_unless_bad
+  state: 0@1 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 1@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 2@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 0), true); ("b", (Model.Points 0), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 1), false); ("b", (Model.Points 0), false);
+    ("c", (Model.Holds 0), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t11: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Fails;
+  reads = [(1, 0, Model.Existence)]}
+    t12: Model.Write {p = 0; v = 1}
+  frontier: violated=[(Model.C5_ask (0, 4, 0))] uncovered=[(Model.C5_ask (0, 4, 0))] consistent-mask=18
+  added t16: (Model.Set_aside 5)
+  then: violated=[(Model.C5_ask (0, 4, 0)), (Model.C6_guard (0, 11))] uncovered=[(Model.C5_ask (0, 4, 0)), (Model.C6_guard (0, 11))] consistent-mask=18
+== R5 set-aside-of-evidence-holds adds C7_claim : 1792
+  smallest (9 events):
+  ontology: asks=(kind 0, dim 0, >=1),(kind 1, dim 0, >=2) write_affirms=true guard_from_last=false read_as=Model.Odd
+  state: 0@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(0, 0, 1)];
+  reports = []; refs = [{ Model.rk = 2; target = 2; need = None }]}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 1)];
+  reports = []; refs = [{ Model.rk = 3; target = 0; need = None }]}; 2@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 0), false); ("b", (Model.Points 0), true)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 0), false); ("b", Model.Empty, true);
+    ("c", Model.Empty, false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+  frontier: violated=[] uncovered=[] consistent-mask=17
+  added t20: (Model.Set_aside 5)
+  then: violated=[(Model.C5_ask (0, 4, 0)), (Model.C7_claim (0, 0))] uncovered=[(Model.C5_ask (0, 4, 0)), (Model.C7_claim (0, 0))] consistent-mask=16
+== R5 set-aside-of-evidence-holds adds C8_need : 32
+  smallest (9 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=false guard_from_last=false read_as=Model.Max
+  state: 0@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 1; need = None }]}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(2, 0, 2)];
+  reports = []; refs = [{ Model.rk = 3; target = 2; need = (Some (0, 1)) }]}; 2@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 2; target = 0; need = (Some (0, 1)) }]}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 1), true); ("b", (Model.Points 1), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 2), true); ("b", (Model.Points 2), false);
+    ("c", (Model.Holds 2), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+  frontier: violated=[] uncovered=[] consistent-mask=20
+  added t14: (Model.Set_aside 5)
+  then: violated=[(Model.C8_need (2, 0))] uncovered=[(Model.C8_need (2, 0))] consistent-mask=16
+== R5 set-aside-of-finding removes C5_ask : 384
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=false guard_from_last=false read_as=Model.Max_unless_bad
+  state: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 1@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(1, 0, 1)];
+  reports = []; refs = []}; 2@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", Model.Empty, false); ("b", Model.Empty, false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", Model.Empty, false); ("b", (Model.Points 1), false);
+    ("c", Model.Empty, false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t16: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Fails; reads = []}
+  frontier: violated=[(Model.C5_ask (1, 4, 0)), (Model.C6_finding (1, 16)), (Model.C7_claim (1, 0))] uncovered=[(Model.C5_ask (1, 4, 0)), (Model.C6_finding (1, 16)), (Model.C7_claim (1, 0))] consistent-mask=16
+  added t20: (Model.Set_aside 16)
+  then: violated=[] uncovered=[] consistent-mask=18
+== R5 set-aside-of-finding removes C5_rest : 1856
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1),(kind 1, dim 0, >=2) write_affirms=true guard_from_last=false read_as=Model.Odd
+  state: 0@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 2)];
+  reports = []; refs = [{ Model.rk = 0; target = 1; need = None }]}; 1@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = [(1, 0, 1)];
+  reports = []; refs = [{ Model.rk = 1; target = 1; need = None }]}; 2@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(1, 0, 1)];
+  reports = []; refs = [{ Model.rk = 0; target = 1; need = None }]}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Holds 0), false); ("b", (Model.Holds 0), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 2), false); ("b", (Model.Holds 1), false);
+    ("c", Model.Empty, true)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t12: Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Fails; reads = []}
+  frontier: violated=[(Model.C5_rest (2, 1)), (Model.C6_finding (1, 12))] uncovered=[(Model.C5_rest (2, 1)), (Model.C6_finding (1, 12))] consistent-mask=16
+  added t22: (Model.Set_aside 12)
+  then: violated=[] uncovered=[] consistent-mask=22
+== R5 set-aside-of-finding removes C6_finding : 3488
+  smallest (10 events):
+  ontology: asks= write_affirms=true guard_from_last=true read_as=Model.Max_unless_bad
+  state: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 2@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 2; target = 2; need = None }]}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 1), false); ("b", (Model.Points 1), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 1), false); ("b", Model.Empty, true);
+    ("c", (Model.Points 1), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t17: Model.Evidence {p = 4; v = 0; d = 0; crit = 1; out = Model.Fails; reads = []}
+  frontier: violated=[(Model.C6_finding (4, 17))] uncovered=[(Model.C6_finding (4, 17))] consistent-mask=2
+  added t19: (Model.Set_aside 17)
+  then: violated=[] uncovered=[] consistent-mask=18
+== R5 set-aside-of-finding removes C7_claim : 704
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=false guard_from_last=false read_as=Model.Max_unless_bad
+  state: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 1@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(1, 0, 1)];
+  reports = []; refs = []}; 2@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", Model.Empty, false); ("b", Model.Empty, false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", Model.Empty, false); ("b", (Model.Points 1), false);
+    ("c", Model.Empty, false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t16: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Fails; reads = []}
+  frontier: violated=[(Model.C5_ask (1, 4, 0)), (Model.C6_finding (1, 16)), (Model.C7_claim (1, 0))] uncovered=[(Model.C5_ask (1, 4, 0)), (Model.C6_finding (1, 16)), (Model.C7_claim (1, 0))] consistent-mask=16
+  added t20: (Model.Set_aside 16)
+  then: violated=[] uncovered=[] consistent-mask=18
+== R6 a promise adds C8_slot : 1154
+  smallest (9 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=true read_as=Model.Odd
+  state: 0@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(2, 0, 1)];
+  reports = []; refs = [{ Model.rk = 3; target = 0; need = None }]}; 2@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", Model.Empty, false); ("b", (Model.Points 0), true)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 2), false); ("b", Model.Empty, false);
+    ("c", (Model.Holds 2), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+  frontier: violated=[] uncovered=[] consistent-mask=20
+  added t16: (Model.Promise (4, "b"))
+  then: violated=[(Model.C8_slot (4, "b"))] uncovered=[(Model.C8_slot (4, "b"))] consistent-mask=4
+== R6 ok : 315375
+== R6 promise: adds nothing here : 42792
+== R7 ok: one fixed point : 1310720
+exit 0

@@ -1,0 +1,416 @@
+seed 1 done, 2s, 4096 states
+seed 2 done, 3s, 8192 states
+seed 3 done, 5s, 12288 states
+seed 4 done, 5s, 16384 states
+seed 5 done, 8s, 20480 states
+seed 6 done, 9s, 24576 states
+seed 7 done, 11s, 28672 states
+seed 8 done, 12s, 32768 states
+seed 9 done, 13s, 36864 states
+seed 10 done, 13s, 40960 states
+seed 11 done, 14s, 45056 states
+seed 12 done, 15s, 49152 states
+seed 13 done, 15s, 53248 states
+seed 14 done, 15s, 57344 states
+seed 15 done, 16s, 61440 states
+seed 16 done, 19s, 65536 states
+seed 17 done, 21s, 69632 states
+seed 18 done, 21s, 73728 states
+seed 19 done, 22s, 77824 states
+seed 20 done, 23s, 81920 states
+seed 21 done, 24s, 86016 states
+seed 22 done, 26s, 90112 states
+seed 23 done, 30s, 94208 states
+seed 24 done, 32s, 98304 states
+seed 25 done, 33s, 102400 states
+seed 26 done, 33s, 106496 states
+seed 27 done, 37s, 110592 states
+seed 28 done, 37s, 114688 states
+seed 29 done, 38s, 118784 states
+seed 30 done, 39s, 122880 states
+seed 31 done, 41s, 126976 states
+seed 32 done, 42s, 131072 states
+seed 33 done, 42s, 135168 states
+seed 34 done, 44s, 139264 states
+seed 35 done, 44s, 143360 states
+seed 36 done, 45s, 147456 states
+seed 37 done, 46s, 151552 states
+seed 38 done, 48s, 155648 states
+seed 39 done, 49s, 159744 states
+seed 40 done, 49s, 163840 states
+seed 41 done, 50s, 167936 states
+seed 42 done, 50s, 172032 states
+seed 43 done, 53s, 176128 states
+seed 44 done, 53s, 180224 states
+seed 45 done, 54s, 184320 states
+seed 46 done, 54s, 188416 states
+seed 47 done, 55s, 192512 states
+seed 48 done, 58s, 196608 states
+seed 49 done, 60s, 200704 states
+seed 50 done, 62s, 204800 states
+seed 51 done, 66s, 208896 states
+seed 52 done, 66s, 212992 states
+seed 53 done, 67s, 217088 states
+seed 54 done, 68s, 221184 states
+seed 55 done, 69s, 225280 states
+seed 56 done, 70s, 229376 states
+seed 57 done, 76s, 233472 states
+seed 58 done, 76s, 237568 states
+seed 59 done, 76s, 241664 states
+seed 60 done, 77s, 245760 states
+seed 61 done, 81s, 249856 states
+seed 62 done, 81s, 253952 states
+seed 63 done, 81s, 258048 states
+seed 64 done, 81s, 262144 states
+seed 65 done, 84s, 266240 states
+seed 66 done, 84s, 270336 states
+seed 67 done, 86s, 274432 states
+seed 68 done, 88s, 278528 states
+seed 69 done, 89s, 282624 states
+seed 70 done, 89s, 286720 states
+seed 71 done, 92s, 290816 states
+seed 72 done, 92s, 294912 states
+seed 73 done, 92s, 299008 states
+seed 74 done, 93s, 303104 states
+seed 75 done, 95s, 307200 states
+seed 76 done, 96s, 311296 states
+seed 77 done, 97s, 315392 states
+seed 78 done, 100s, 319488 states
+seed 79 done, 102s, 323584 states
+seed 80 done, 105s, 327680 states
+seed 81 done, 106s, 331776 states
+seed 82 done, 109s, 335872 states
+seed 83 done, 110s, 339968 states
+seed 84 done, 110s, 344064 states
+seed 85 done, 111s, 348160 states
+seed 86 done, 112s, 352256 states
+seed 87 done, 116s, 356352 states
+seed 88 done, 117s, 360448 states
+seed 89 done, 118s, 364544 states
+seed 90 done, 118s, 368640 states
+seed 91 done, 118s, 372736 states
+seed 92 done, 119s, 376832 states
+seed 93 done, 121s, 380928 states
+seed 94 done, 122s, 385024 states
+seed 95 done, 122s, 389120 states
+seed 96 done, 124s, 393216 states
+seed 97 done, 124s, 397312 states
+seed 98 done, 125s, 401408 states
+seed 99 done, 126s, 405504 states
+seed 100 done, 127s, 409600 states
+seeds 1..100 ids=5 pool=21 flags=a checks=L
+states visited: 409600
+
+== R12 (event at any time) FAIL a accept outside the spec neighbourhood changes what is owed on the piece : 1792
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=true read_as=Model.Max
+  state: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [17];
+  refs = [{ Model.rk = 3; target = 1; need = None }]}; 1@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 2@1 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(2, 0, 2)];
+  reports = [17]; refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 0), false); ("b", Model.Empty, false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 2), false); ("b", (Model.Points 1), false);
+    ("c", (Model.Points 1), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t10: Model.Write {p = 2; v = 1}
+  frontier: violated=[(Model.C5_ask (2, 4, 0)), (Model.C7_claim (2, 0)), (Model.C7_report (2, 17))] uncovered=[(Model.C5_ask (2, 4, 0)), (Model.C7_claim (2, 0)), (Model.C7_report (2, 17))] consistent-mask=18
+  piece 2, neighbourhood {2}; added t17 Model.Accept {p = 0; v = 0; d = 1; conds = []}; then about the piece: in canon=true (Model.C5_ask (2, 4, 0)), (Model.C7_claim (2, 0))
+== R12 (event at any time) FAIL a evidence-holds outside the spec neighbourhood changes what is owed on the piece : 512
+  smallest (9 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=false read_as=Model.Odd
+  state: 0@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 0; target = 0; need = (Some (0, 2)) }]}; 2@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = [(1, 0, 1)];
+  reports = []; refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Holds 1), false); ("b", (Model.Holds 0), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 2), false); ("b", (Model.Points 2), false);
+    ("c", Model.Empty, false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+  frontier: violated=[] uncovered=[] consistent-mask=20
+  piece 2, neighbourhood {2}; added t20 Model.Evidence {p = 0; v = 0; d = 0; crit = 1; out = Model.Holds_; reads = []}; then about the piece: in canon=true (Model.C7_claim (2, 0))
+== R12 (event at any time) FAIL a finding outside the spec neighbourhood changes what is owed on the piece : 1760
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=false read_as=Model.Odd
+  state: 1@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Holds 0), false); ("b", (Model.Holds 0), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 1), false); ("b", (Model.Points 1), false);
+    ("c", (Model.Points 1), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t19: Model.Retire {p = 0; into = [1]}
+  frontier: violated=[] uncovered=[] consistent-mask=18
+  piece 1, neighbourhood {1}; added t16 Model.Evidence {p = 0; v = 0; d = 0; crit = 1; out = Model.Fails; reads = []}; then about the piece: in canon=true (Model.C6_guard (1, 16))
+== R12 (event at any time) FAIL a mark-root outside the spec neighbourhood changes what is owed on the piece : 2240
+  smallest (9 events):
+  ontology: asks=(kind 0, dim 0, >=1),(kind 1, dim 0, >=2) write_affirms=true guard_from_last=true read_as=Model.Max_unless_bad
+  state: 0@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 0; need = None }]}; 1@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Holds 1), false); ("b", (Model.Points 1), true)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", Model.Empty, false); ("b", Model.Empty, false);
+    ("c", (Model.Points 1), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+  frontier: violated=[] uncovered=[] consistent-mask=18
+  piece 1, neighbourhood {1}; added t14 (Model.Mark_root 3); then about the piece: in canon=true (Model.C5_ask (1, 3, 0))
+== R12 (event at any time) FAIL a promise outside the spec neighbourhood changes what is owed on the piece : 2048
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1),(kind 1, dim 0, >=2) write_affirms=true guard_from_last=true read_as=Model.Odd
+  state: 0@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [11];
+  refs = [{ Model.rk = 1; target = 1; need = None }]}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 3@0 IN CANON = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Holds 2), false); ("b", (Model.Points 0), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 1), true); ("b", Model.Empty, true);
+    ("c", (Model.Points 2), true)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t12: (Model.Mark_root 3)
+  frontier: violated=[(Model.C2 (3, "b", "a")), (Model.C4 (0, 0)), (Model.C5_ask (0, 3, 0)), (Model.C5_ask (2, 3, 0)), (Model.C7_report (0, 11))] uncovered=[(Model.C2 (3, "b", "a")), (Model.C4 (0, 0)), (Model.C5_ask (0, 3, 0)), (Model.C5_ask (2, 3, 0)), (Model.C7_report (0, 11))] consistent-mask=16
+  piece 0, neighbourhood {1,0}; added t11 (Model.Promise (3, "b")); then about the piece: in canon=true (Model.C4 (0, 0)), (Model.C5_ask (0, 3, 0))
+== R12 (event at any time) FAIL a raise outside the spec neighbourhood changes what is owed on the piece : 1856
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1),(kind 1, dim 0, >=2) write_affirms=true guard_from_last=true read_as=Model.Odd
+  state: 0@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [13];
+  refs = []}; 1@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 1)];
+  reports = []; refs = []}; 3@0 IN CANON = Model.Assembly {ak = 1;
+  fill = [("a", Model.Empty, false); ("b", Model.Empty, false)]}; 4@1 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 3), false); ("b", (Model.Points 1), false);
+    ("c", (Model.Points 0), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t18: Model.Write {p = 4; v = 1}
+  frontier: violated=[(Model.C7_report (0, 13)), (Model.C8_slot (3, "a"))] uncovered=[(Model.C7_report (0, 13)), (Model.C8_slot (3, "a"))] consistent-mask=18
+  piece 0, neighbourhood {0}; added t13 (Model.Raise (2, 0)); then about the piece: in canon=true 
+== R12 (event at any time) FAIL a same-for-evidence-holds outside the spec neighbourhood changes what is owed on the piece : 1536
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=true read_as=Model.Max_unless_bad
+  state: 0@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 2; need = None }]}; 1@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = [(2, 0, 1)];
+  reports = []; refs = []}; 2@1 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 3@0 IN CANON = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 1), true); ("b", Model.Empty, false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 2), false); ("b", (Model.Holds 1), false);
+    ("c", (Model.Points 3), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t15: Model.Write {p = 2; v = 1}
+  frontier: violated=[(Model.C5_ask (2, 4, 0)), (Model.C7_claim (1, 0))] uncovered=[(Model.C5_ask (2, 4, 0)), (Model.C7_claim (1, 0))] consistent-mask=24
+  piece 1, neighbourhood {1}; added t16 Model.Same {x = 2; v = 0; w = 1; for_ = 7}; then about the piece: in canon=true 
+== R12 (event at any time) FAIL a set-aside-of-evidence-holds outside the spec neighbourhood changes what is owed on the piece : 512
+  smallest (9 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=false read_as=Model.Odd
+  state: 0@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 0; target = 0; need = (Some (0, 2)) }]}; 2@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = [(1, 0, 1)];
+  reports = []; refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Holds 1), false); ("b", (Model.Holds 0), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 2), false); ("b", (Model.Points 2), false);
+    ("c", Model.Empty, false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+  frontier: violated=[] uncovered=[] consistent-mask=20
+  piece 2, neighbourhood {2}; added t12 (Model.Set_aside 6); then about the piece: in canon=true (Model.C7_claim (2, 0))
+== R12 (event at any time) FAIL a set-aside-of-finding outside the spec neighbourhood changes what is owed on the piece : 32
+  smallest (13 events):
+  ontology: asks=(kind 0, dim 0, >=1),(kind 1, dim 0, >=2) write_affirms=false guard_from_last=false read_as=Model.Max_unless_bad
+  state: 1@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@1 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 1; need = None }]}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 0), false); ("b", (Model.Points 1), false)]}; 4@1 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", Model.Empty, true); ("b", (Model.Points 2), false);
+    ("c", (Model.Holds 2), true)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t10: Model.Retire {p = 0; into = [2]}
+    t12: Model.Evidence {p = 0; v = 0; d = 0; crit = 1; out = Model.Fails;
+  reads = [(3, 0, Model.Assertions)]}
+    t14: Model.Write {p = 2; v = 1}
+    t15: Model.Write {p = 4; v = 1}
+  frontier: violated=[(Model.C4 (2, 0)), (Model.C5_ask (2, 4, 0)), (Model.C6_guard (2, 12))] uncovered=[(Model.C4 (2, 0)), (Model.C5_ask (2, 4, 0)), (Model.C6_guard (2, 12))] consistent-mask=16
+  piece 2, neighbourhood {1,2}; added t18 (Model.Set_aside 12); then about the piece: in canon=true (Model.C4 (2, 0)), (Model.C5_ask (2, 4, 0))
+== R12 (event at any time) FAIL a unmark-root outside the spec neighbourhood changes what is owed on the piece : 47296
+  smallest (9 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=false read_as=Model.Max
+  state: 0@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 2; target = 1; need = None }]}; 1@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 2@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 2), false); ("b", (Model.Holds 2), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", Model.Empty, false); ("b", (Model.Holds 0), false);
+    ("c", Model.Empty, false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+  frontier: violated=[] uncovered=[] consistent-mask=17
+  piece 0, neighbourhood {1,0}; added t11 (Model.Unmark_root 4); then about the piece: in canon=false 
+== R12 (event at any time) FAIL a withdraw-of-promise outside the spec neighbourhood changes what is owed on the piece : 512
+  smallest (11 events):
+  ontology: asks=(kind 0, dim 0, >=1),(kind 1, dim 0, >=2) write_affirms=true guard_from_last=true read_as=Model.Odd
+  state: 0@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [11];
+  refs = [{ Model.rk = 1; target = 1; need = None }]}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 3@0 IN CANON = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Holds 2), false); ("b", (Model.Points 0), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 1), true); ("b", Model.Empty, true);
+    ("c", (Model.Points 2), true)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+    t11: (Model.Promise (3, "b"))
+    t12: (Model.Mark_root 3)
+  frontier: violated=[(Model.C2 (3, "b", "a")), (Model.C4 (0, 0)), (Model.C5_ask (0, 3, 0)), (Model.C5_ask (2, 3, 0))] uncovered=[(Model.C2 (3, "b", "a")), (Model.C4 (0, 0)), (Model.C5_ask (0, 3, 0)), (Model.C5_ask (2, 3, 0))] consistent-mask=16
+  piece 0, neighbourhood {1,0}; added t16 (Model.Withdraw 11); then about the piece: in canon=true (Model.C4 (0, 0)), (Model.C5_ask (0, 3, 0)), (Model.C7_report (0, 11))
+== R12 (event at any time) FAIL a write outside the spec neighbourhood changes what is owed on the piece : 50880
+  smallest (9 events):
+  ontology: asks= write_affirms=true guard_from_last=true read_as=Model.Odd
+  state: 0@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 1@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [17];
+  refs = [{ Model.rk = 1; target = 0; need = None }]}; 2@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 0; need = None }]}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", Model.Empty, false); ("b", (Model.Holds 1), true)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 0), true); ("b", (Model.Holds 0), false);
+    ("c", Model.Empty, false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+  frontier: violated=[] uncovered=[] consistent-mask=17
+  piece 0, neighbourhood {0}; added t9 Model.Write {p = 4; v = 1}; then about the piece: in canon=false 
+== R12 (event at any time) FAIL a write outside the wider neighbourhood changes what is owed on the piece : 512
+  smallest (9 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=true read_as=Model.Max_unless_bad
+  state: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [18];
+  refs = []}; 2@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(2, 0, 1)];
+  reports = []; refs = []}; 3@0 = Model.Assembly {ak = 1;
+  fill = [("a", (Model.Points 0), true); ("b", (Model.Points 1), false)]}; 4@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 2), false); ("b", Model.Empty, true);
+    ("c", Model.Empty, true)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Write {p = 4; v = 0}
+    t5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t8: (Model.Mark_root 4)
+  frontier: violated=[] uncovered=[] consistent-mask=20
+  piece 4, neighbourhood {2,4}; added t14 Model.Write {p = 3; v = 1}; then about the piece: in canon=true (Model.C1 (4, 2))
+== R12 (event at any time) ok, neighbourhood=spec : 2132960
+== R12 (event at any time) ok, neighbourhood=static : 297760
+== R12 (event at any time) ok, neighbourhood=wider : 393528
+exit 0

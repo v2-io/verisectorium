@@ -1,0 +1,509 @@
+seed 1 done, 1s, 25600 states
+seed 2 done, 2s, 48640 states
+seed 3 done, 2s, 74240 states
+seed 4 done, 5s, 151296 states
+seed 5 done, 5s, 174336 states
+seed 6 done, 6s, 220416 states
+seed 7 done, 6s, 231936 states
+seed 8 done, 7s, 355584 states
+seed 9 done, 7s, 369984 states
+seed 10 done, 8s, 404544 states
+seed 11 done, 9s, 420544 states
+seed 12 done, 9s, 466624 states
+seed 13 done, 10s, 492224 states
+seed 14 done, 11s, 554048 states
+seed 15 done, 12s, 560192 states
+seed 16 done, 13s, 637248 states
+seed 17 done, 13s, 643008 states
+seed 18 done, 14s, 720064 states
+seed 19 done, 15s, 761000 states
+seed 20 done, 15s, 807080 states
+seed 21 done, 16s, 832680 states
+seed 22 done, 17s, 851880 states
+seed 23 done, 17s, 877480 states
+seed 24 done, 18s, 889768 states
+seed 25 done, 20s, 935848 states
+seed 26 done, 20s, 935848 states
+seed 27 done, 20s, 958888 states
+seed 28 done, 22s, 1082536 states
+seed 29 done, 23s, 1128616 states
+seed 30 done, 23s, 1141416 states
+seed 31 done, 24s, 1152936 states
+seed 32 done, 24s, 1157032 states
+seed 33 done, 25s, 1197352 states
+seed 34 done, 26s, 1236232 states
+seed 35 done, 28s, 1313288 states
+seed 36 done, 28s, 1326088 states
+seed 37 done, 28s, 1349128 states
+seed 38 done, 28s, 1354888 states
+seed 39 done, 29s, 1355912 states
+seed 40 done, 29s, 1365512 states
+seed 41 done, 30s, 1489160 states
+seed 42 done, 31s, 1535240 states
+seed 43 done, 31s, 1581320 states
+seed 44 done, 31s, 1584392 states
+seed 45 done, 32s, 1596680 states
+seed 46 done, 32s, 1612136 states
+seed 47 done, 32s, 1624936 states
+seed 48 done, 32s, 1663464 states
+seed 49 done, 33s, 1701992 states
+seed 50 done, 34s, 1748072 states
+seed 51 done, 35s, 1773672 states
+seed 52 done, 35s, 1790952 states
+seed 53 done, 36s, 1808232 states
+seed 54 done, 38s, 1885288 states
+seed 55 done, 38s, 1893016 states
+seed 56 done, 38s, 1927576 states
+seed 57 done, 39s, 1928600 states
+seed 58 done, 39s, 1957400 states
+seed 59 done, 39s, 1969688 states
+seed 60 done, 40s, 2046744 states
+seed 61 done, 41s, 2072344 states
+seed 62 done, 42s, 2118712 states
+seed 63 done, 42s, 2125112 states
+seed 64 done, 42s, 2148152 states
+seed 65 done, 43s, 2182712 states
+seed 66 done, 44s, 2259768 states
+seed 67 done, 45s, 2322376 states
+seed 68 done, 45s, 2360904 states
+seed 69 done, 46s, 2373704 states
+seed 70 done, 46s, 2399304 states
+seed 71 done, 46s, 2416584 states
+seed 72 done, 49s, 2540232 states
+seed 73 done, 50s, 2553032 states
+seed 74 done, 50s, 2562664 states
+seed 75 done, 53s, 2686312 states
+seed 76 done, 53s, 2763368 states
+seed 77 done, 55s, 2840424 states
+seed 78 done, 55s, 2852712 states
+seed 79 done, 56s, 2875752 states
+seed 80 done, 56s, 2904648 states
+seed 81 done, 57s, 2952808 states
+seed 82 done, 57s, 2987368 states
+seed 83 done, 58s, 2990168 states
+seed 84 done, 58s, 3113816 states
+seed 85 done, 59s, 3152456 states
+seed 86 done, 59s, 3229512 states
+seed 87 done, 59s, 3232392 states
+seed 88 done, 59s, 3235464 states
+seed 89 done, 60s, 3258504 states
+seed 90 done, 60s, 3264904 states
+seed 91 done, 61s, 3341960 states
+seed 92 done, 61s, 3343560 states
+seed 93 done, 62s, 3349704 states
+seed 94 done, 62s, 3362504 states
+seed 95 done, 62s, 3372104 states
+seed 96 done, 62s, 3384904 states
+seed 97 done, 62s, 3389720 states
+seed 98 done, 63s, 3408920 states
+seed 99 done, 63s, 3434520 states
+seed 100 done, 64s, 3436120 states
+seed 101 done, 64s, 3448920 states
+seed 102 done, 64s, 3479832 states
+seed 103 done, 64s, 3483928 states
+seed 104 done, 65s, 3522456 states
+seed 105 done, 65s, 3545496 states
+seed 106 done, 65s, 3558296 states
+seed 107 done, 67s, 3625720 states
+seed 108 done, 67s, 3627768 states
+seed 109 done, 68s, 3650808 states
+seed 110 done, 68s, 3663608 states
+seed 111 done, 69s, 3689208 states
+seed 112 done, 69s, 3701496 states
+seed 113 done, 72s, 3778552 states
+seed 114 done, 73s, 3855608 states
+seed 115 done, 73s, 3901688 states
+seed 116 done, 75s, 3978744 states
+seed 117 done, 75s, 3991544 states
+seed 118 done, 76s, 4058968 states
+seed 119 done, 77s, 4093528 states
+seed 120 done, 77s, 4116568 states
+seed 121 done, 78s, 4155096 states
+seed 122 done, 79s, 4193624 states
+seed 123 done, 80s, 4206424 states
+seed 124 done, 80s, 4283480 states
+seed 125 done, 81s, 4295768 states
+seed 126 done, 82s, 4343928 states
+seed 127 done, 82s, 4356216 states
+seed 128 done, 82s, 4375480 states
+seed 129 done, 83s, 4394680 states
+seed 130 done, 84s, 4429240 states
+seed 131 done, 87s, 4552888 states
+seed 132 done, 87s, 4578488 states
+seed 133 done, 88s, 4624568 states
+seed 134 done, 88s, 4650168 states
+seed 135 done, 89s, 4673208 states
+seed 136 done, 89s, 4696248 states
+seed 137 done, 91s, 4721848 states
+seed 138 done, 91s, 4744888 states
+seed 139 done, 91s, 4751032 states
+seed 140 done, 92s, 4774072 states
+seed 141 done, 92s, 4786872 states
+seed 142 done, 94s, 4863928 states
+seed 143 done, 95s, 4870072 states
+seed 144 done, 95s, 4876216 states
+seed 145 done, 97s, 4922296 states
+seed 146 done, 98s, 4968376 states
+seed 147 done, 99s, 4979128 states
+seed 148 done, 100s, 5025208 states
+seed 149 done, 100s, 5044472 states
+seed 150 done, 101s, 5092632 states
+seed 151 done, 102s, 5127192 states
+seed 152 done, 103s, 5173272 states
+seed 153 done, 103s, 5182872 states
+seed 154 done, 105s, 5228952 states
+seed 155 done, 105s, 5262664 states
+seed 156 done, 106s, 5339720 states
+seed 157 done, 106s, 5342024 states
+seed 158 done, 107s, 5365064 states
+seed 159 done, 107s, 5377864 states
+seed 160 done, 108s, 5403464 states
+seed 161 done, 108s, 5441992 states
+seed 162 done, 108s, 5448392 states
+seed 163 done, 110s, 5525448 states
+seed 164 done, 111s, 5554248 states
+seed 165 done, 112s, 5600328 states
+seed 166 done, 112s, 5623368 states
+seed 167 done, 113s, 5700424 states
+seed 168 done, 114s, 5723464 states
+seed 169 done, 114s, 5734984 states
+seed 170 done, 114s, 5752584 states
+seed 171 done, 114s, 5756680 states
+seed 172 done, 116s, 5833736 states
+seed 173 done, 116s, 5840536 states
+seed 174 done, 116s, 5852056 states
+seed 175 done, 117s, 5856664 states
+seed 176 done, 117s, 5879704 states
+seed 177 done, 118s, 5898904 states
+seed 178 done, 120s, 5975960 states
+seed 179 done, 120s, 6014488 states
+seed 180 done, 122s, 6040088 states
+seed 181 done, 122s, 6117144 states
+seed 182 done, 122s, 6118680 states
+seed 183 done, 124s, 6176472 states
+seed 184 done, 125s, 6188760 states
+seed 185 done, 125s, 6201560 states
+seed 186 done, 126s, 6247640 states
+seed 187 done, 126s, 6269312 states
+seed 188 done, 127s, 6315392 states
+seed 189 done, 127s, 6318464 states
+seed 190 done, 127s, 6340784 states
+seed 191 done, 127s, 6346928 states
+seed 192 done, 128s, 6366128 states
+seed 193 done, 129s, 6391728 states
+seed 194 done, 129s, 6409008 states
+seed 195 done, 130s, 6415152 states
+seed 196 done, 130s, 6429552 states
+seed 197 done, 130s, 6452592 states
+seed 198 done, 130s, 6464112 states
+seed 199 done, 132s, 6510192 states
+seed 200 done, 132s, 6514800 states
+seed 201 done, 133s, 6560880 states
+seed 202 done, 136s, 6684528 states
+seed 203 done, 136s, 6730608 states
+seed 204 done, 137s, 6769136 states
+seed 205 done, 137s, 6772208 states
+seed 206 done, 137s, 6774256 states
+seed 207 done, 137s, 6797296 states
+seed 208 done, 138s, 6840496 states
+seed 209 done, 138s, 6846096 states
+seed 210 done, 139s, 6848144 states
+seed 211 done, 139s, 6859664 states
+seed 212 done, 140s, 6898192 states
+seed 213 done, 140s, 6900240 states
+seed 214 done, 141s, 6911760 states
+seed 215 done, 141s, 6937360 states
+seed 216 done, 141s, 6943760 states
+seed 217 done, 142s, 6966800 states
+seed 218 done, 142s, 6970896 states
+seed 219 done, 142s, 6980528 states
+seed 220 done, 143s, 7104176 states
+seed 221 done, 143s, 7109936 states
+seed 222 done, 145s, 7171760 states
+seed 223 done, 146s, 7186960 states
+seed 224 done, 146s, 7233040 states
+seed 225 done, 147s, 7239184 states
+seed 226 done, 147s, 7258448 states
+seed 227 done, 147s, 7296976 states
+seed 228 done, 148s, 7325776 states
+seed 229 done, 149s, 7371856 states
+seed 230 done, 151s, 7417936 states
+seed 231 done, 152s, 7452496 states
+seed 232 done, 152s, 7498576 states
+seed 233 done, 155s, 7591312 states
+seed 234 done, 155s, 7592464 states
+seed 235 done, 155s, 7593488 states
+seed 236 done, 155s, 7606288 states
+seed 237 done, 155s, 7610896 states
+seed 238 done, 156s, 7612432 states
+seed 239 done, 156s, 7650960 states
+seed 240 done, 157s, 7663248 states
+seed 241 done, 159s, 7740304 states
+seed 242 done, 160s, 7833040 states
+seed 243 done, 160s, 7861936 states
+seed 244 done, 161s, 7892848 states
+seed 245 done, 162s, 7970128 states
+seed 246 done, 162s, 7987408 states
+seed 247 done, 163s, 8009808 states
+seed 248 done, 164s, 8055888 states
+seed 249 done, 165s, 8102256 states
+seed 250 done, 166s, 8140784 states
+seed 251 done, 166s, 8158064 states
+seed 252 done, 166s, 8164208 states
+seed 253 done, 167s, 8202736 states
+seed 254 done, 167s, 8228336 states
+seed 255 done, 168s, 8251376 states
+seed 256 done, 168s, 8264176 states
+seed 257 done, 169s, 8326000 states
+seed 258 done, 169s, 8351600 states
+seed 259 done, 170s, 8367056 states
+seed 260 done, 170s, 8390096 states
+seed 261 done, 171s, 8436176 states
+seed 262 done, 172s, 8461776 states
+seed 263 done, 173s, 8496336 states
+seed 264 done, 173s, 8502480 states
+seed 265 done, 173s, 8515280 states
+seed 266 done, 173s, 8521424 states
+seed 267 done, 173s, 8523824 states
+seed 268 done, 174s, 8546864 states
+seed 269 done, 174s, 8559664 states
+seed 270 done, 174s, 8578928 states
+seed 271 done, 175s, 8604528 states
+seed 272 done, 175s, 8618976 states
+seed 273 done, 175s, 8624736 states
+seed 274 done, 175s, 8627040 states
+seed 275 done, 177s, 8704096 states
+seed 276 done, 177s, 8716384 states
+seed 277 done, 179s, 8741984 states
+seed 278 done, 180s, 8788064 states
+seed 279 done, 180s, 8822624 states
+seed 280 done, 181s, 8848224 states
+seed 281 done, 181s, 8859744 states
+seed 282 done, 182s, 8905824 states
+seed 283 done, 183s, 8918112 states
+seed 284 done, 183s, 8940512 states
+seed 285 done, 183s, 8950496 states
+seed 286 done, 184s, 8976096 states
+seed 287 done, 184s, 8979296 states
+seed 288 done, 185s, 9037088 states
+seed 289 done, 186s, 9062688 states
+seed 290 done, 186s, 9085728 states
+seed 291 done, 186s, 9097248 states
+seed 292 done, 187s, 9110048 states
+seed 293 done, 188s, 9187104 states
+seed 294 done, 188s, 9196320 states
+seed 295 done, 189s, 9227232 states
+seed 296 done, 189s, 9238752 states
+seed 297 done, 189s, 9251552 states
+seed 298 done, 190s, 9290080 states
+seed 299 done, 191s, 9313120 states
+seed 300 done, 191s, 9324640 states
+seeds 1..300 ids=4 pool=22 flags=ms checks=9
+states visited: 9324640
+
+== R9 CANNOT both close | same id written by both=false | one wrote what the other reads: wider=false static=false | set-aside, withdraw or root event in either=true | touch a common piece=false : 1816
+  smallest (11 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=false read_as=Model.Max
+  state: 0@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = [(1, 0, 2)];
+  reports = []; refs = []}; 3@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", Model.Empty, false); ("b", (Model.Points 0), false);
+    ("c", (Model.Holds 0), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t5: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: (Model.Mark_root 3)
+    t11: (Model.Unmark_root 3)
+    t17: (Model.Set_aside 4)
+    t18: (Model.Mark_root 3)
+  frontier: violated=[(Model.C5_ask (0, 3, 0))] uncovered=[(Model.C5_ask (0, 3, 0))] consistent-mask=8
+  checkpoint: events of mask 2303; fork A adds mask 131072, fork B adds mask 262144; base since: mask 0
+== R9 CANNOT both close | same id written by both=false | one wrote what the other reads: wider=false static=false | set-aside, withdraw or root event in either=true | touch a common piece=true : 1720
+  smallest (11 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=false read_as=Model.Max
+  state: 0@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = [(1, 0, 2)];
+  reports = []; refs = []}; 3@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", Model.Empty, false); ("b", (Model.Points 0), false);
+    ("c", (Model.Holds 0), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t5: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: (Model.Mark_root 3)
+    t11: (Model.Unmark_root 3)
+    t15: (Model.Promise (3, "a"))
+    t18: (Model.Mark_root 3)
+  frontier: violated=[(Model.C8_slot (3, "a"))] uncovered=[(Model.C8_slot (3, "a"))] consistent-mask=1
+  checkpoint: events of mask 2303; fork A adds mask 32768, fork B adds mask 262144; base since: mask 0
+== R9 CANNOT both close | same id written by both=false | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=false | touch a common piece=false : 12896
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1),(kind 1, dim 0, >=2) write_affirms=false guard_from_last=true read_as=Model.Max
+  state: 0@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [21];
+  refs = []}; 3@1 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 1), false); ("b", (Model.Points 0), false);
+    ("c", (Model.Holds 1), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t5: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: (Model.Mark_root 3)
+    t16: (Model.Raise (0, 0))
+    t20: Model.Write {p = 3; v = 1}
+  frontier: violated=[(Model.C9 (0, 16))] uncovered=[(Model.C9 (0, 16))] consistent-mask=10
+  checkpoint: events of mask 255; fork A adds mask 65536, fork B adds mask 1048576; base since: mask 0
+== R9 CANNOT both close | same id written by both=false | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=false | touch a common piece=true : 15680
+  smallest (10 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=false guard_from_last=true read_as=Model.Max
+  state: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 0; target = 1; need = (Some (0, 1)) }]}; 1@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 3@1 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 1), false); ("b", Model.Empty, true);
+    ("c", (Model.Holds 2), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t5: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: (Model.Mark_root 3)
+    t15: Model.Write {p = 3; v = 1}
+    t17: (Model.Promise (3, "b"))
+  frontier: violated=[(Model.C8_slot (3, "b"))] uncovered=[(Model.C8_slot (3, "b"))] consistent-mask=6
+  checkpoint: events of mask 255; fork A adds mask 32768, fork B adds mask 131072; base since: mask 0
+== R9 CANNOT both close | same id written by both=false | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=true | touch a common piece=false : 4636
+  smallest (11 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=false guard_from_last=true read_as=Model.Max
+  state: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 0; target = 1; need = (Some (0, 1)) }]}; 1@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 3@1 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 1), false); ("b", Model.Empty, true);
+    ("c", (Model.Holds 2), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t5: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: (Model.Mark_root 3)
+    t15: Model.Write {p = 3; v = 1}
+    t18: (Model.Mark_root 3)
+    t20: (Model.Raise (2, 0))
+  frontier: violated=[(Model.C9 (2, 20))] uncovered=[(Model.C9 (2, 20))] consistent-mask=10
+  checkpoint: events of mask 255; fork A adds mask 294912, fork B adds mask 1048576; base since: mask 0
+== R9 CANNOT both close | same id written by both=false | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=true | touch a common piece=true : 19548
+  smallest (11 events):
+  ontology: asks=(kind 0, dim 0, >=1),(kind 1, dim 0, >=2) write_affirms=true guard_from_last=true read_as=Model.Max_unless_bad
+  state: 0@1 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 0; need = None }]}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(1, 0, 1)];
+  reports = []; refs = [{ Model.rk = 1; target = 2; need = None }]}; 2@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 3@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", Model.Empty, false); ("b", (Model.Points 2), false);
+    ("c", (Model.Holds 0), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t5: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: (Model.Mark_root 3)
+    t13: Model.Evidence {p = 0; v = 1; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t15: Model.Write {p = 0; v = 1}
+    t18: (Model.Set_aside 13)
+  frontier: violated=[(Model.C5_ask (0, 3, 0))] uncovered=[(Model.C5_ask (0, 3, 0))] consistent-mask=12
+  checkpoint: events of mask 8447; fork A adds mask 32768, fork B adds mask 262144; base since: mask 0
+== R9 CANNOT both close | same id written by both=true | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=false | touch a common piece=true : 16684
+  smallest (11 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=false guard_from_last=true read_as=Model.Max_unless_bad
+  state: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 2; target = 0; need = None }]}; 3@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Holds 2), false); ("b", Model.Empty, true);
+    ("c", (Model.Points 1), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t5: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: (Model.Mark_root 3)
+    t15: Model.Write {p = 3; v = 1}
+    t17: Model.Write {p = 3; v = 0}
+    t19: (Model.Raise (2, 0))
+  frontier: violated=[(Model.C9 (2, 19))] uncovered=[(Model.C9 (2, 19))] consistent-mask=10
+  checkpoint: events of mask 255; fork A adds mask 131072, fork B adds mask 557056; base since: mask 0
+== R9 CANNOT both close | same id written by both=true | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=true | touch a common piece=true : 8144
+  smallest (12 events):
+  ontology: asks=(kind 0, dim 0, >=1) write_affirms=true guard_from_last=false read_as=Model.Max
+  state: 0@1 IN CANON = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [16];
+  refs = []}; 1@0 IN CANON = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 3@0 IN CANON = Model.Assembly {ak = 0;
+  fill =
+  [("a", (Model.Points 0), false); ("b", (Model.Holds 2), true);
+    ("c", (Model.Points 1), false)]}
+  events:
+    t0: Model.Write {p = 0; v = 0}
+    t1: Model.Write {p = 1; v = 0}
+    t2: Model.Write {p = 2; v = 0}
+    t3: Model.Write {p = 3; v = 0}
+    t4: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t5: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t6: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_; reads = []}
+    t7: (Model.Mark_root 3)
+    t9: (Model.Unmark_root 3)
+    t17: Model.Write {p = 0; v = 0}
+    t20: Model.Write {p = 0; v = 1}
+    t21: (Model.Mark_root 3)
+  frontier: violated=[(Model.C5_ask (0, 3, 0)), (Model.C7_report (0, 16))] uncovered=[(Model.C5_ask (0, 3, 0)), (Model.C7_report (0, 16))] consistent-mask=10
+  checkpoint: events of mask 767; fork A adds mask 1048576, fork B adds mask 2228224; base since: mask 0
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=false static=false | set-aside, withdraw or root event in either=false | touch a common piece=false : 125408
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=false static=false | set-aside, withdraw or root event in either=false | touch a common piece=true : 119064
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=false static=false | set-aside, withdraw or root event in either=true | touch a common piece=false : 254670
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=false static=false | set-aside, withdraw or root event in either=true | touch a common piece=true : 496424
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=false static=true | set-aside, withdraw or root event in either=false | touch a common piece=false : 23026
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=false static=true | set-aside, withdraw or root event in either=false | touch a common piece=true : 2432
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=false static=true | set-aside, withdraw or root event in either=true | touch a common piece=false : 18062
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=false static=true | set-aside, withdraw or root event in either=true | touch a common piece=true : 2144
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=false | touch a common piece=false : 607294
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=false | touch a common piece=true : 785520
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=true | touch a common piece=false : 535152
+== R9 both close | same id written by both=false | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=true | touch a common piece=true : 1327736
+== R9 both close | same id written by both=true | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=false | touch a common piece=true : 601020
+== R9 both close | same id written by both=true | one wrote what the other reads: wider=true static=true | set-aside, withdraw or root event in either=true | touch a common piece=true : 426256
+exit 0

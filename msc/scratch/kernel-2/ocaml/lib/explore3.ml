@@ -6,7 +6,7 @@
    a seed, so "smallest" below means smallest found in the universes visited,
    and "no counterexample" means none within them. *)
 
-open Model
+open Model3
 
 (* ---------- generating universes ---------- *)
 

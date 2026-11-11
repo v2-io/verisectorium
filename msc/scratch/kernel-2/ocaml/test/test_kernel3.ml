@@ -2,7 +2,7 @@
    universe written out in full. The exhaustive runs (bin/explore_main) found
    most of these; here each is pinned so it can be read and re-run. *)
 
-open Kernel.Model
+open Kernel.Model3
 
 let pred = 0 (* rests, relies on everything, validity caps along it *)
 let narr = 1 (* does not rest, relies on assertions *)

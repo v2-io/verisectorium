@@ -1,6 +1,6 @@
 # kernel-2 in OCaml
 
-**What is here now (2026-11-10):** `ACCOUNT.md` is what was done and found, against spec draft 3; `SPEC-AUDIT.md` is the earlier audit of draft 1. `lib/model.ml` is the kernel as an executable model, `lib/explore.ml` the exhaustive checks, `bin/explore_main.ml` their driver, `test/test_kernel.ml` the hand-built witnesses and the invented moves, `runs/` the full output of every run the account cites (`runs/run.sh NAME args` re-makes one; progress goes to the file as it runs). The placeholder `Kernel.Hello` described below has been deleted. The rest of this file is the toolchain agent's, unchanged.
+**What is here now (2026-11-11):** `ACCOUNT.md` is what was done and found against spec draft 4; `ACCOUNT-draft3.md` the same for draft 3; `SPEC-AUDIT.md` the audit of draft 1. For draft 4: `lib/model.ml` (the kernel as an executable model), `lib/explore.ml` (the exhaustive checks), `bin/explore_main.ml` (their driver; its header lists the arguments), `test/test_kernel.ml` (hand-built witnesses and the invented moves). The draft-3 build sits beside them as `model3.ml`, `explore3.ml`, `explore3_main.ml`, `test_kernel3.ml`. `runs/` holds the full output of every run the accounts cite (`runs/draft3/` for draft 3); `runs/queue.sh` runs the batches named on its standard input two at a time, each writing progress and results to `runs/NAME.txt`. The placeholder `Kernel.Hello` described below has been deleted. The rest of this file is the toolchain agent's, unchanged.
 
 ## The toolchain base
 
