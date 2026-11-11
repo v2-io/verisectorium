@@ -79,7 +79,7 @@ Write that to a scratch file and Read it in pages. The spine of the eight days, 
 - I relayed the first spike's debrief to Joseph before its independent read came back, and repeated three of its overclaims in my own words. Wait for the read, or mark the relay unverified in its first line.
 - I said note 22's example "does not close as written" after reading, that same hour, the rule in «changeset» under which it does.
 - I told seven minds they could not lean on a combination of languages, and then leaned on one in my own answer.
-- I had the first lead's failure (answering every finding with a mechanism) in my context all evening. I did not add to core, and I did commission four rounds of delegated work on languages. Joseph calls that thread sideways and has chosen it knowingly; the model thread is the one that is waiting.
+- Not an error of mine, on Joseph's word after reading this list: I had listed here that I commissioned four rounds of delegated work on languages while the model thread waited. He answered: "those are all yours. Except the last one. That was completely on me … adjudicating these languages is helping me learn how to think about formal proofs and the modeling. It is a bit of a distraction but it's part of my growth." So the language thread is his chosen one, not drift to be corrected; the model thread is still the one that is waiting, and it is his to say when to return to it.
 
 ## 6. What is waiting on Joseph, for the model
 
