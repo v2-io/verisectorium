@@ -28,6 +28,7 @@
 | 19 | 11-08 | `holistic-model` | the Opus 5.5 session's whole model in seven working terms, with intake folded in and the stopped-bound error worked through it; a proposal, untested, with a written guess of what a real root will strain | — |
 | 20 | 11-08 | `current-state` | the Fable 5.1 session's first summary after an experiential read of notes 01–19 (predictions and findings for 01–08 are in `msc/scratch/experiential-read-2026-11-08/`): how the model evolved, a three-sentence spine, where it does not hold, and the recommendation that became `core-2/`, now `core/`. Pasted in by Joseph | `core/` |
 | 21 | 11-09 | `later-state` | the same Fable 5.1 session's closing remark at the end of 11-09: the state of `core-2/` (now `core/`) in one paragraph and the decisions left waiting for Joseph. Pasted in by Joseph | — |
+| 22 | 11-10 | `model-as-held` | the Fable 5.2 lead's statement of the whole model at its real size, written to Joseph in the register of note 09 and about a third its length: the workflow first, two kinds of answer, segments and slots at any depth, evidence about immutable versions, a state as a selection, nine consistency conditions, an atomic changeset as a pair of stationary selections, intake, and who-does-what left out. Attributions in footnotes. Written after Joseph said the day's additions to `core/` had gone sideways; it proposes cutting core back to this. Unread by him when filed. | |
 
 ## Corrections to what the notes carry
 
