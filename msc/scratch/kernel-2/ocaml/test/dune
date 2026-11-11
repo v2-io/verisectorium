@@ -1,0 +1,5 @@
+(test
+ (name test_kernel)
+ (libraries kernel alcotest qcheck-core qcheck-alcotest)
+ (preprocess
+  (pps ppx_deriving_qcheck)))
