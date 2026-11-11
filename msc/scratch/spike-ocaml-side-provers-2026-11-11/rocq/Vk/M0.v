@@ -306,13 +306,14 @@ Definition c9 (l : line) (p : piece) : bool :=
 Definition waived (l : line) (n : nat) (p : piece) : bool :=
   existsb (fun x => match x with Waive n' p' => Nat.eqb n' n && eqs p' p | _ => false end) l.
 
-(* What fails on p of its own, not counting what it rests on. *)
+(* The conditions that are about p alone, each with whether it is met. *)
+Definition checks O l am p : list (nat * bool) :=
+  [ (1, c1 O l p); (2, c2 O l p); (4, c4 l p); (5, c5_asked O l p);
+    (6, c6 O l p); (8, c8 O l am p); (9, c9 l p) ].
+
+(* What fails on p of its own, not counting what it rests on, and is not waived. *)
 Definition own O l am p : list nat :=
-  filter (fun n => negb (waived l n p))
-    ((if c1 O l p then [] else [1]) ++ (if c2 O l p then [] else [2])
-     ++ (if c4 l p then [] else [4]) ++ (if c5_asked O l p then [] else [5])
-     ++ (if c6 O l p then [] else [6]) ++ (if c8 O l am p then [] else [8])
-     ++ (if c9 l p then [] else [9])).
+  map fst (filter (fun nb => negb (snd nb) && negb (waived l (fst nb) p)) (checks O l am p)).
 
 (* 5, second half. it rests only on pieces in canon with nothing wrong of
    their own *)

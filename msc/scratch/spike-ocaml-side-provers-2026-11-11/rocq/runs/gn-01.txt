@@ -1,0 +1,4 @@
+File "./Vk/GoodNews.v", line 230, characters 2-21:
+Error: Found no subterm matching "forallb ?M1083 (?M1084 ++ ?M1085)"
+in the current goal.
+

@@ -145,6 +145,8 @@ val c9 : line -> piece -> bool
 
 val waived : line -> int -> piece -> bool
 
+val checks : ontology -> line -> piece list -> piece -> (int * bool) list
+
 val own : ontology -> line -> piece list -> piece -> int list
 
 val c5_rests : ontology -> line -> string list -> piece -> bool

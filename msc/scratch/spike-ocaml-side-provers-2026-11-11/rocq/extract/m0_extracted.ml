@@ -487,41 +487,29 @@ let waived l n p =
     | Waive (n', p') -> (&&) ((=) n' n) (eqs p' p)
     | _ -> false) l
 
+(** val checks :
+    ontology -> line -> piece list -> piece -> (int * bool) list **)
+
+let checks o l am p =
+  ((Stdlib.Int.succ 0), (c1 o l p)) :: (((Stdlib.Int.succ (Stdlib.Int.succ
+    0)), (c2 o l p)) :: (((Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
+    (Stdlib.Int.succ 0)))), (c4 l p)) :: (((Stdlib.Int.succ (Stdlib.Int.succ
+    (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ 0))))),
+    (c5_asked o l p)) :: (((Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
+    (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ 0)))))),
+    (c6 o l p)) :: (((Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
+    (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
+    (Stdlib.Int.succ 0)))))))), (c8 o l am p)) :: (((Stdlib.Int.succ
+    (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
+    (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
+    0))))))))), (c9 l p)) :: []))))))
+
 (** val own : ontology -> line -> piece list -> piece -> int list **)
 
 let own o l am p =
-  filter (fun n -> negb (waived l n p))
-    (app (if c1 o l p then [] else (Stdlib.Int.succ 0) :: [])
-      (app
-        (if c2 o l p then [] else (Stdlib.Int.succ (Stdlib.Int.succ 0)) :: [])
-        (app
-          (if c4 l p
-           then []
-           else (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
-                  (Stdlib.Int.succ 0)))) :: [])
-          (app
-            (if c5_asked o l p
-             then []
-             else (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
-                    (Stdlib.Int.succ (Stdlib.Int.succ 0))))) :: [])
-            (app
-              (if c6 o l p
-               then []
-               else (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
-                      (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
-                      0)))))) :: [])
-              (app
-                (if c8 o l am p
-                 then []
-                 else (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
-                        (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
-                        (Stdlib.Int.succ (Stdlib.Int.succ 0)))))))) :: [])
-                (if c9 l p
-                 then []
-                 else (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
-                        (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
-                        (Stdlib.Int.succ (Stdlib.Int.succ (Stdlib.Int.succ
-                        0))))))))) :: [])))))))
+  map fst
+    (filter (fun nb -> (&&) (negb (snd nb)) (negb (waived l (fst nb) p)))
+      (checks o l am p))
 
 (** val c5_rests : ontology -> line -> string list -> piece -> bool **)
 

@@ -1,0 +1,82 @@
+=== Vk/Reach.v
+=== Vk/M0.v
+=== Vk/Story.v
+=== Vk/Checkpoint.v
+Closed under the global context
+Closed under the global context
+=== Vk/GoodNews.v
+Closed under the global context
+=== Vk/Extract.v
+=== mutations (m1, m2, m3 must fail; m4 is a probe and must pass)
+--- mutations/m1_pin_with_an_item_removed.v
+File "./mutations/m1_pin_with_an_item_removed.v", line 5, characters 7-18:
+Error: Unable to unify "[(4, "c")]" with "frontier looks r0830".
+
+exit 1
+--- mutations/m2_checkpoint_at_1300.v
+File "./mutations/m2_checkpoint_at_1300.v", line 3, characters 36-57:
+Error:
+The term "exist (fun l : line => frontier looks l = nil) r1300 eq_refl"
+has type "{l : list event | frontier looks l = nil}"
+while it is expected to have type "checkpoint looks" (cannot satisfy
+constraint
+"frontier looks r1300 = frontier looks r1300" == "(fun l : line =>
+                                                 frontier looks l = nil)
+                                                 r1300";
+cannot unify "frontier looks r1300" and "nil").
+
+exit 1
+--- mutations/m3_known_wrong_at_a_checkpoint.v
+File "./mutations/m3_known_wrong_at_a_checkpoint.v", line 11, characters 7-18:
+Error: Unable to unify "true" with "c4 waived_line "c"".
+
+exit 1
+--- mutations/m4_ring_of_resting.v
+     = ["a"; "b"]
+     : list piece
+     = []
+     : list (nat * piece)
+     = [(5, "a"); (4, "b"); (5, "b")]
+     : list (nat * piece)
+exit 0
+=== the story, run by the extracted OCaml
+S0     owed: nothing
+       close: yes, a checkpoint
+08:30  owed: 4 on c, 5 on u
+       close: refused
+09:00  owed: 5 on T, 6 on T, 4 on c, 2 on u, 5 on u
+       close: refused
+10:00  owed: 4 on c, 5 on u
+       close: refused
+10:30  owed: 5 on T, 4 on c, 5 on c, 2 on u, 5 on u
+       (if a write does not count as a look: 5 on T, 6 on T, 4 on c, 5 on c, 2 on u, 5 on u)
+       close: refused
+11:00  owed: 5 on T, 2 on u, 5 on u
+       (if a write does not count as a look: 5 on T, 6 on T, 2 on u, 5 on u)
+       close: refused
+11:30  owed: 5 on T, 5 on c, 2 on u, 5 on u
+       (if a write does not count as a look: 5 on T, 6 on T, 5 on c, 2 on u, 5 on u)
+       close: refused
+12:00  owed: 5 on T, 2 on u, 5 on u
+       (if a write does not count as a look: 5 on T, 6 on T, 2 on u, 5 on u)
+       close: refused
+13:00  owed: 5 on T, 5 on U
+       (if a write does not count as a look: 5 on T, 6 on T, 5 on U)
+       close: refused
+14:00  owed: nothing
+       (if a write does not count as a look: 6 on T)
+       close: yes, a checkpoint
+20000 frontiers in 1.85 s
+=== the slice (../../idiomatic-slice-2026-11-11/rocq.v)
+     = ["O"; "T"; "c"; "d"; "k"]
+     : list name
+     = [("T", "description")]
+     : list (name * string)
+Closed under the global context
+File "./rocq.v", line 388, characters 0-56:
+Warning: Setting extraction output directory by default to
+"/Users/josephwecker-v2/src/verisectorium/msc/scratch/idiomatic-slice-2026-11-11".
+Use "Set Extraction Output Directory" or command line option
+"-output-directory" to set a different directory for extracted files to
+appear in. [extraction-default-directory,extraction,default]
+exit 0

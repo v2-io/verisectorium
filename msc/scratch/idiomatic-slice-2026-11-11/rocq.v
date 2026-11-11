@@ -1,14 +1,15 @@
 (* The slice in Rocq, and the OCaml it extracts to.
 
    Check:    opam exec --switch=rocq-try -- rocq compile rocq.v
-   That also writes rocq_extracted.ml, the same functions as plain OCaml.
+   That also writes rocq_extracted.ml: the same functions as plain OCaml.
 
    Three things are said here, in this order:
      1. what exists (types; the kind of a veritoid is in its type);
      2. what canon IS: two rules, with nothing about how to find it;
      3. a function that computes a list, and a proof that the list is canon
         exactly, for any verisectorium whatever.
-   Notes on what it was like are in rocq-NOTES.md beside this file. *)
+   Notes on what Rocq made natural, refused, and made awkward are at the
+   foot of the file. *)
 
 From Stdlib Require Import List String Bool Arith Lia.
 Import ListNotations.
@@ -385,3 +386,75 @@ Print Assumptions canon_list_is_canon.
 From Stdlib Require Extraction.
 From Stdlib Require Import ExtrOcamlBasic ExtrOcamlNativeString.
 Extraction "rocq_extracted.ml" canon_list promised here.
+
+(* ---------- notes ----------
+
+   WHAT I REACHED FOR, AND WHY
+
+   - Saying a thing twice, and proving the two are one. [Canon] is canon as
+     the slice words it: the roots, and what something in canon reaches,
+     and nothing else. [canon_list] is a program. [canon_list_is_canon] says
+     they agree for every verisectorium there could be. This is the one
+     thing here no other OCaml-side tool gives, and it is what I would show
+     first.
+   - An index on the type for a veritoid's kind: [veritoid Claim] and
+     [veritoid Step] are different types made from one record.
+   - A record per assembly kind, with one, any number, one, at most one as a
+     field, a list, a field, an option. The same move as the OCaml slice.
+   - [Fail], to keep a refusal in the file as a checked fact: if Rocq ever
+     starts accepting a step in the claim slot, this file stops compiling.
+   - Extraction. The last three lines turn the functions into OCaml.
+
+   WHAT IT REFUSES (each tried; messages in the spike's rocq/runs/refusals.txt)
+
+   - A step in the formal-claim slot; a second formal claim; a gap in a
+     typed slot. Type errors, as in OCaml.
+   - A function that follows pointers with no account of why it stops.
+     "Cannot guess decreasing argument of fix." OCaml let me write that
+     function, and it ran for ever on an outline that points at itself.
+     Rocq would not take it, so the function counts its rounds and the proof
+     says why that many are enough: each round adds a name or changes
+     nothing, and there are only so many names.
+
+   WHAT IT DOES NOT REFUSE
+
+   - A root that is a veritoid, or a root that does not exist: roots are
+     names. A pointer to nothing: pointing is by name too. Both are states
+     that can be written, and canon is still definite for them (the name is
+     in canon and reaches nothing).
+   - Holding one segment in two places.
+
+   WHERE THIS DEPARTS FROM THE SLICE AS WORDED
+
+   1. A fifth slot state, [Untouched], and a gap as an entry of an outline
+      and not a state of a slot. Both as in the OCaml slice, for the same
+      reasons; I am the same mind and did not rediscover them.
+   2. Pointing is by name, into a store of what lives on its own. (The OCaml
+      slice shared values instead.) So a pointer can dangle and can go round
+      in a ring, and the proof covers both.
+   3. An outline may hold a veritoid or a derived result, and can only point
+      at another outline. With "a segment is a veritoid or an assembly whose
+      slots hold segments" as one recursive type, Rocq's own induction
+      principle is too weak to prove anything about it without writing a
+      better one by hand. I cut the recursion instead. This is the largest
+      departure and it was made for the prover, not for the model.
+
+   WHAT WAS AWKWARD
+
+   - Three notations for "is this less than that" and "how long is this",
+     for strings, lists and numbers, all spelled the same. Three of my nine
+     failed compiles, across the slice and the small model, were the wrong
+     one being picked. All were loud.
+   - The proof is about 150 lines for a two-line definition and a five-line
+     function. None of it is hard and none of it can be read without
+     running it: each line changes a goal that is not on the page.
+   - What comes out the other end. The extracted OCaml has one [veritoid]
+     type: the kind is gone, and with it the refusal of a step in the claim
+     slot. What is proved in Rocq is proved of the functions; what the types
+     refused, the OCaml no longer refuses.
+   - Speed, for the reason above the function: the version that is easy to
+     prove is slow. On an outline of 200 results the extracted function
+     takes 2.7 s; the same rounds written by hand in OCaml 1.3 s; a walk
+     with a set, which is what one would write unproved, 0.0002 s
+     (rocq/runs/extracted-02.txt). Extraction did not cost the speed. The
+     proof did, and a faster function would need its own. *)

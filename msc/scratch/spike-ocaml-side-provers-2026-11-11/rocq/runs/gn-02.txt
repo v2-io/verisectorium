@@ -1,0 +1,14 @@
+File "./Vk/GoodNews.v", line 264, characters 26-53:
+Error:
+In environment
+O : ontology
+l : line
+x : evidence
+x_holds : e_holds x = true
+am : list piece
+p : piece
+Hw : negb (waived l 1 p) = true
+E : (1, c1 O l' p) = (1, false)
+H1 : c1 O l' p = false
+Unable to unify "c1 O l p = false" with "c1 O l p = c1 O l' p".
+

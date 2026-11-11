@@ -146,3 +146,19 @@ Proof.
 Qed.
 
 End Reach.
+
+(* Two ways of leading that agree everywhere reach the same list. *)
+Lemma iter_ext : forall {A} (f g : A -> A),
+  (forall a, f a = g a) -> forall n a, iter n f a = iter n g a.
+Proof.
+  intros A f g H n. induction n; simpl; intros a.
+  - reflexivity.
+  - rewrite H. apply IHn.
+Qed.
+
+Lemma reach_ext : forall out out' start universe,
+  (forall p, out p = out' p) -> reach out start universe = reach out' start universe.
+Proof.
+  intros out out' start universe H. unfold reach. apply iter_ext.
+  intros S. unfold step. rewrite (flat_map_ext _ _ H). reflexivity.
+Qed.

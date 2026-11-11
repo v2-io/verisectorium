@@ -67,16 +67,12 @@ Proof.
   assert (map (fun n => (n, p)) (owed O l (canon O l) p) = []) as Hm.
   { apply (flat_map_nil (fun p => map (fun n => (n, p)) (owed O l (canon O l) p)) (canon O l) p Hl Hp). }
   apply map_eq_nil in Hm. apply owed_nil_own_nil in Hm.
-  unfold own in Hm.
   destruct (c4 l p) eqn:E4. reflexivity. exfalso.
-  assert (In 4 (filter (fun n => negb (waived l n p))
-     ((if c1 O l p then [] else [1]) ++ (if c2 O l p then [] else [2])
-      ++ [4] ++ (if c5_asked O l p then [] else [5])
-      ++ (if c6 O l p then [] else [6]) ++ (if c8 O l (canon O l) p then [] else [8])
-      ++ (if c9 l p then [] else [9])))) as Hin.
-  { apply filter_In. split.
-    - apply in_or_app. right. apply in_or_app. right. simpl. left. reflexivity.
-    - rewrite Hw. reflexivity. }
+  assert (In 4 (own O l (canon O l) p)) as Hin.
+  { unfold own. apply in_map_iff. exists (4, false). split. reflexivity.
+    apply filter_In. split.
+    - unfold checks. rewrite E4. simpl. right. right. left. reflexivity.
+    - simpl. rewrite Hw. reflexivity. }
   rewrite Hm in Hin. contradiction.
 Qed.
 

@@ -1,0 +1,6 @@
+     = nil
+     : list (nat * piece)
+Finished transaction in 0.011 secs (0.009u,0.001s) (successful)
+     = nil
+     : list (nat * piece)
+Finished transaction in 0.01 secs (0.009u,0.001s) (successful)
