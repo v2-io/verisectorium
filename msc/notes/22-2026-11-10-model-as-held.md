@@ -4,7 +4,7 @@
 
 *It is written to be read top to bottom. Each word is introduced before it is used. Part 7 is the lexicon. Part 8 says where I chose, what is open, and what from `core/` I have left out on purpose.*
 
-*Where each idea comes from (yours, with the date; note 09; today's tests; or mine and least tested) is in the footnotes, so the text reads straight through.*
+*Where each idea comes from (yours, with the date; note 09; today's tests; or mine and least tested) is in the footnotes, so the text reads straight through. A footnote says where an idea came from. It is not a reason to believe the idea, whoever it names; Part 8 says what, if anything, each part has earned.*
 
 *What this is not: a summary of `core/`. Core today is larger and finer-grained than this, and you have said why that is a fault. This note is what I think the model is at its real size. If you agree with it, core should be cut back to it.*
 
@@ -286,6 +286,26 @@ In rough order of how much rides on each.
 5. **Holding and pointing are not resting** (2.3). Your 11-09 remark about definitions running bottom-up and adjudication top-down, made a rule.
 6. **A decision about the subject has its reasons as content** (3.4).
 7. **Nine conditions** (4.1). I have tried to make each one something a person would recognize. I do not know that nine is right.
+
+### What supports what
+
+Three levels, and most of this note is at the lowest. *Tested*: something was built or run that could have come out otherwise. *Argued*: reasons are given here and nothing was run. *Asserted*: it rests on someone's say-so, yours or mine, and stands as a hypothesis.
+
+| Part | Standing |
+|---|---|
+| The workflow (Part 1) | Asserted, as a description of what the estate's verisectoria have done. That it is the right workflow is not shown by their having done it. |
+| Segments at any depth, slots (2.2) | Argued. One invented run and one built instance used it without strain. |
+| Holding and pointing are not resting (2.3) | The opposite was tested and failed: with it, a built instance had every repair reach the outline. That this version does not fail the same way by another route is untested, and one reviewer predicts it does. |
+| Two kinds of answer (3.2) | Argued, and lightly tested: two built instances sorted everything they met into one or the other. Neither was looking for a third kind. |
+| Evidence is about a version; "the same" (3.3) | Argued today. Untested. A first reading by a builder already found that evidence must also record what else it read; that is in the text. |
+| A found defect is presumed still present (3.3) | Argued. Untested. |
+| Decisions have conditions (3.4) | Argued. One built instance had a decision fall and be remade when a ground changed, under an earlier wording. |
+| Canon must be declared (3.5) | Tested in the negative: on a real segment nothing could be computed until it was. Which standard is right is not known. |
+| A state is a selection; the changeset is a pair (4.1, 4.2) | Asserted. Derived from three remarks of yours and not yet built or run by anyone. |
+| The nine conditions (4.1) | Asserted. A builder's first reading found five faults in their formal statement. |
+| Stationary of a part (4.2) | Argued. The naive form was tested and failed. |
+| Better (4.4) | Argued. A real segment gave two versions it cannot rank. |
+| Intake (Part 5) | The need is measured (one sprint, no source retired). The mechanism has one invented run. |
 
 ### Open, and I have not tried to close
 
