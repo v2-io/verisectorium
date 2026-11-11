@@ -2,8 +2,16 @@
   The slice in Lean 4, written the way Lean wants it.
   2026-11-11, by the Lean fork of the formal-perspectives spike (Fable 5.2).
 
-  Run:  ~/.elan/bin/lean Lean.lean      (Lean 4.35.0, core library only)
-  It prints canon and the promised-and-empty slots, and checks four statements.
+  Run:  ~/.elan/bin/lean lean.lean      (Lean 4.35.0, core library only)
+  It prints
+
+      ["O", "T", "c", "d", "k"]          canon
+      ["T.description"]                  slots promised and empty
+
+  and checks four statements about them; exit 0 means all four hold. Two
+  mutations were tried and behave as they should: asserting U is in canon is
+  rejected, and un-marking the provisional flag on O's second row puts U and
+  u into the printed canon.
 
   WHAT LEAN REACHED FOR
 
@@ -44,6 +52,13 @@
   - The types refer to each other (a segment has slots, a slot holds a
     segment, an outline has rows), so they are declared together and every
     function over them is five small functions declared together.
+  - Lean must see that each of those functions terminates, and what it would
+    accept was narrower than I expected: a function that carried a label down
+    through the slots was refused, and the same function returning labels
+    upward was accepted. Two of this file's five runs went on that.
+  - Checking the four statements by evaluation needed the stronger of Lean's
+    two evaluators (`decide +kernel`); the default one stopped at the
+    functions over the mutually declared types.
   - Ids are names here and nothing stops two pieces sharing one. Minting
     ("made once, never reused") is about history, and the slice has none.
 -/

@@ -2,6 +2,15 @@
 
 *2026-11-10/11, by the Lean fork of the formal-perspectives spike (Fable 5.2). It started from `../01-common-reading.md` (the small model M0 and note 22's example) and the six G-L guesses in `../02-guesses-before-running.md`. Nothing here is a fact about the model until it is adjudicated in core, and nothing here proposes a mechanism.*
 
+## Corrections after the independent read (added 2026-11-11)
+
+`../de-novo-feedback-1.md` §9 makes four points about this directory. I accept all four. The text below is left as first written; read it with these.
+
+- **§2 overstates the checkpoint.** `Written.fuel` bounds how far canon is followed and is a number someone fills in. With too small a number canon is cut short, the frontier under-reports, and a `Checkpoint` can then be had for a state that owes (the reader built one for the 08:30 state with `fuel := 1`; I did not re-run it, and it follows from the definition). So "cannot be built without a proof that its frontier is empty" is true of the frontier *as computed with that number*, and "computed, never typed" had one typed number under it. `good_news` and the story are unaffected. `msc/scratch/idiomatic-slice-2026-11-11/lean.lean` does canon the way it should have been done here: the bound is read from the store, and a theorem ties the computed list to canon's definition.
+- **§4 is about an abstract step, not about `Model.lean`.** `Fault.lean` takes an arbitrary `own` and `rests`. `Model.lean` does not import it, and no theorem says that `Model.lean`'s bounded `faulty` is that reachability. "Not a fixed point that has to be chosen" is proved of the step as the spec states it, in the abstract, and is unproved of M0's own function and of the spec's (waivers, effective warrant).
+- **§8's "forces one choice" returns its own premise.** The construction makes sameness an equality under a view, and Lean's quotient closes whatever relation it is given. So what is shown is: *if* sameness is equality under a view, chaining is free. It is not shown that a mind's attestation is of that kind, and "one attestation in the chain was wrong" does not answer the worry about carry upon carry, where each can be right of its two versions and the ends still differ. That worry stands.
+- **Mutation 3 cannot fail to fail.** It shows only that the lemma has a hypothesis. The real counterexample is `more_record_can_owe_more`, in the build.
+
 ## What Lean is, in one paragraph
 
 Lean is a language in which a statement is a type and a proof of it is a value of that type, checked by a small kernel. "Proved" below means the kernel accepted it. It is not a search and has no bound: a theorem here about "every state" is about lines and bases of any length over any set of pieces. Its cost is that every statement has to be made exact before anything can be said about it, and that is where most of what follows came from.
