@@ -383,6 +383,144 @@ Three for Lean, two for clingo, one for Ada, and one reader for OCaml. Three of 
 
 **How much these seven are worth as a count.** Less than seven. The spike lead and its three forks began from one reading; the two builders are separate from them and from each other; all seven are one model. The split between the two clingo answers and the two Lean answers runs inside the one lineage, which is some evidence the forks have diverged. No answer rests on having kept any of these languages true through a change, except the two builders', and they chose differently.
 
+## 9. The provers on the OCaml side: Rocq, Why3, Cameleer, E
+
+*Added 2026-11-11. Joseph, on reading sections 1 to 8: "Did OCaml not use rocq as intended? what about why3/cameleer, alt-ergo, eprover, etc.?" It had not. His first ask had named "ocaml / rocq or something"; Rocq reached the OCaml builder only as an aside in its brief, and Why3, Cameleer, Alt-Ergo and E "never crossed my mind; that is an omission, not a judgment". So sections 1 to 8 set Ada with its prover against OCaml without one, and several of the forced choices turned on "OCaml cannot prove", which nobody had checked. The OCaml builder then forked four ways and ran them, each fork leaving what the first spike's forks left: `spike-ocaml-side-provers-2026-11-11/` (a perspective on the small model and a firsthand note per tool, and a debrief), and four more slices in `idiomatic-slice-2026-11-11/`.*
+
+*What this section rests on: the spike lead's `DEBRIEF.md` and the four `AS-A-HOME.md` notes, read whole by me; the cores of the four slice files, cut by line number and not read whole; the four `PERSPECTIVE.md` files not read at all. An independent read of the spike was commissioned with a bare brief and had not come back when this was written. The four forks began from one mind's reading, guesses and forced choice. Nothing here has been checked by anyone but its makers. The tables in sections 1 to 5 have not been widened to twelve columns; this section carries the four new rows.*
+
+### Where each lands, in its user's words
+
+| tool | as the home | what it did tonight | what goes wrong quietly |
+|---|---|---|---|
+| **Rocq 9.3**, extracted to OCaml | "Yes, more than I expected, and with one cost I had under-weighed." | canon proved to be exactly its two rules, for every store; the small model and note 22's example pinned row by row; "recording evidence which holds adds nothing owed" for the small model's own function; the model then run from extracted OCaml. Installed in under four minutes | little: nine failed compiles, "every one was loud". But the functions that are easy to prove are slow (on an outline of 200 results, 2.7 s extracted against 0.0002 s for an unproved walk), and what the types knew is partly erased at the boundary with OCaml |
+| **Why3 1.9** (WhyML, with Alt-Ergo, Z3 and E behind it) | "Not alone … It would not win." The one to pick "if the rule were 'the conditions stay as programs that run, and proof is added to them where it is cheap'" | 149 obligations across the slice and the small model, about a dozen needing help; each condition a function with its sentence above it and "a machine holding the two together"; extracted OCaml that "looks hand-written" | "A timeout is not an answer": a false statement and a true one missing a lemma look the same. "An unproved lemma is still used": a goal read *Valid* while resting on one that timed out. Results can move with a solver upgrade |
+| **Cameleer / GOSPEL** (specifications on the OCaml itself) | "No, and the reason is the first item under dread, not anything about the idea." | "the only arrangement where the conditions that run in the fast OCaml explorer are literally the text the lemmas are about"; proved for every state that a write elsewhere leaves a piece's findings and checks alone, in a cut with no guards, fixed point, forks or canon | the toolchain: "a research tool held together by a pinned commit", needing a compiler three major versions behind the kernel's. And everything said of Why3 |
+| **E 3.1** alone (first-order logic) | "No. Not as the home, and not as a standing part either." | deciding in a fraction of a second whether a general sentence follows from the conditions as written, both ways | cannot run a state (no answer after seventeen minutes on the example's last row); three statuses that mean "no answer"; "every closing is written by hand, and a missing one is silent" |
+
+Alt-Ergo had no fork of its own; it is the solver behind Why3 and Cameleer.
+
+### The same slice, in each
+
+**Rocq (`rocq.v`): OCaml's types, a rule, a function, and the proof that they agree**
+
+```coq
+Record veritoid (k : vkind) := Veritoid { v_name : name; content : string }.
+
+Inductive filler (A : Type) := Holds (x : A) | PointsAt (target : name).
+
+Inductive slot (A : Type) :=
+| Untouched  (* declared by the kind; nobody has said anything yet *)
+| Suggested (note : string)
+| Promised
+| Filled (f : filler A) (provisional : bool).
+
+Record derived_result := DerivedResult {
+  r_name : name;
+  formal_claim : slot (veritoid Claim);
+  derivation : list (slot (veritoid Step));
+  description : slot (veritoid Explanation);
+  eli8 : option (slot (veritoid Explanation)) }.
+
+Inductive entry := Entry (s : slot held) | Gap.
+
+Inductive Canon (V : verisectorium) : name -> Prop :=
+| canon_root : forall r, In r (roots V) -> Canon V r
+| canon_step : forall r q, Canon V r -> In q (out V r) -> Canon V q.
+
+Definition canon_list (V : verisectorium) : list name :=
+  iter (S (List.length (universe V))) (step V) (roots V).
+
+Theorem canon_list_is_canon : forall V r, Canon V r <-> In r (canon_list V).
+
+Fail Definition wrong := DerivedResult "T" (holds d) [] Promised None.
+
+Extraction "rocq_extracted.ml" canon_list promised here.
+```
+
+The types are the OCaml slice's with different punctuation, including its fifth slot state and its gap as an entry. What is new is the last four statements: canon as two rules, a function, a theorem for every store that the function computes exactly what the rules say (no bound typed by hand; it is read from the store), a refusal kept as a checked line, and the OCaml that comes out.
+
+**Why3 (`why3.mlw`): the function carries its own promise**
+
+```whyml
+inductive canon (v: world) (n: id) =
+  | Canon_root: forall v: world, r: id.
+      mem r (roots v) -> canon v r
+  | Canon_step: forall v: world, r q: id.
+      canon v r -> mem q (out v r) -> canon v q
+
+(* The promise. If this answers at all, its answer is canon exactly: by the
+   two rules, for any world whatever. *)
+let canon_of (v: world) : option (list id)
+  ensures { match result with
+            | Some s -> forall r. canon v r <-> mem r s
+            | None -> true
+            end }
+= let s = grow v (size v + 1) (roots v) in
+  if is_closed v s then Some s else None
+```
+
+The sentence sits in the function's contract and solvers discharge it. Weaker than Rocq's here: it promises exactness only when a closedness check passes, and does not prove the number of rounds always suffices.
+
+**Cameleer (`cameleer.ml`): ordinary OCaml, with the kind's rule as an invariant beside the type**
+
+```ocaml
+type derived_result = {
+  r_id : int;
+  formal_claim : veritoid slot;  (* one *)
+  derivation : veritoid slot list;  (* any number, in order *)
+  description : veritoid slot;  (* one *)
+  eli8 : veritoid slot option;  (* at most one *)
+}
+(*@ invariant takes Claim formal_claim
+    invariant all_take Step derivation
+    invariant takes Explanation description
+    invariant match eli8 with None -> true | Some s -> takes Explanation s *)
+
+let canon_list (roots : int list) (es : (int * int) list) : int list =
+  close (count es + 1) roots es roots
+(*@ s = canon_list roots es
+      ensures forall x. mem x s -> canon roots es x
+      ensures forall x. mem x roots -> mem x s *)
+```
+
+Here the kind of a veritoid is a value, not a type, so "a claim goes in the claim slot" is an invariant the solvers must hold, where OCaml alone and Rocq refuse it at compile time.
+
+**E (`eprover.p`): nothing is assumed, so everything that is so has to be said**
+
+```tptp
+tff(canon_root, axiom, ![A: seg]: ( root(A) => canon(A) )).
+tff(canon_step, axiom, ![A: seg, S: seg]: ( (canon(A) & firm(A, S)) => canon(S) )).
+
+% CLOSING. "And nothing else is in canon." First-order logic cannot say "the
+% least set closed under the two rules". This is the nearest it has: whatever
+% is in canon has a reason. It is weaker: see slice/ring.p.
+tff(canon_only, axiom,
+    ![S: seg]: ( canon(S) => ( root(S) | ?[A: seg]: (canon(A) & firm(A, S)) ) )).
+
+tff(root_exactly, axiom, ![A: seg]: ( root(A) <=> A = o )).
+
+tff(canon_is, conjecture,
+    ![X: seg]: ( canon(X) <=> (X = o | X = t | X = c | X = d | X = k) )).
+```
+
+The two rules read as well as any in section 7. The price is the lines marked "exactly": that these are all the roots, all the slots, all the pieces, each written by hand.
+
+### What it adds to what the other eight said about the model
+
+- **Everything the model computes reads absence as information, and the model says so nowhere.** The E fork, having had to write "these are all the writes, all the evidence, the only root" each time: "The model's rule that standing is computed and never typed is only as good as the record being *all* of the record." Its example of where that would bite (a fork or a reader computing what is owed from an incomplete record with nothing saying so) is reasoning, not a run. The spike lead had guessed nothing new about the model would come out, and names this as where it was wrong.
+- **"Rests only on consistent pieces" may need no fixed point.** The Rocq fork read it as "nothing it reaches by *predicated on* has something wrong of its own", which is reaching again, with the same function and theorem as canon. This is what the Lean, Alloy and Datalog forks of the first spike said. The Rocq fork's claim that the kernel builds give the same answer on a ring comes from reading their code, not running it.
+- **A fifth slot state and the gap as an entry, again.** Rocq, Why3 and Cameleer all carry `Untouched` and `Gap` as an entry. They are forks of the mind that wrote the OCaml slice, so this is that slice restated, not three more votes.
+- **The example in note 22, again.** All four part from its prose in the same two places as the first spike (09:00; the eli8 beside the description). The spike lead: "I do not count any of this as independent of the first spike." One disagreement among them is unsettled: Why3 puts the owed item on the dependent piece, Rocq and E on the assembly.
+
+### What it does to the forced choices in section 8
+
+The OCaml builder's choice of Lean rested on OCaml having no route to "for every state". Three routes were walked in an evening. It has changed its answer to **Rocq and the OCaml it extracts to**, with two things held beside it: neither it nor its fork has used Lean, so "ahead of Lean" compares one touched thing with one untouched; and if Rocq with extracted OCaml counts as two languages, its first answer stands. The count in section 8 is then two for Lean, two for clingo, one for Ada, one for Rocq with OCaml, and the lead as a reader for OCaml. The other five have not been asked again.
+
+The Rocq fork adds a rule none of the earlier answers had: "every condition is written twice, as the sentence and as the function, and the proof that they agree is the first proof owed." It did that for canon and for "rests on", and for none of the nine conditions.
+
+What would overturn it, by its own account: speed. Its findings in the kernel builds all came from visiting tens of millions of states in minutes; the function that was easy to prove is four orders of magnitude slower than an unproved one on the slice's example; and nobody has timed extracted code against the explorer on one model.
+
 ## What I have not done
 
-Read the Ada proof files, either explorer, either test suite, or the Ada layer that reads a state from events. Run anything in OCaml, Ada, Lean, Alloy or TLA+. (I did run one two-rule example in clingo, Soufflé and SWI-Prolog, for a different question.) Checked any figure in the builders' notes against their logs.
+Read the Ada proof files, either explorer, either test suite, or the Ada layer that reads a state from events. Run anything in OCaml, Ada, Lean, Alloy or TLA+. (I did run one two-rule example in clingo, Soufflé and SWI-Prolog, for a different question.) Checked any figure in the builders' notes against their logs. For section 9: read the four `PERSPECTIVE.md` files of the OCaml-side spike, read its four slice files whole, or seen its independent read.
