@@ -1,0 +1,48 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:69:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:70:27
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:71:26
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:80:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:81:22
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:82:25
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:89:19
+ medium: assertion might fail
+--> vk-lemmas.adb:216:07
+  216 |          pragma Assert (False);
+      |          ^~~~~~~~~~~~~~~~~~~~
+      + provers reached time limit before completing the proof
+
+ medium: assertion might fail
+--> vk-lemmas.adb:641:07
+  641 |          pragma Assert (False);
+      |          ^~~~~~~~~~~~~~~~~~~~
+      + provers reached time limit before completing the proof
+
+ high: all paths in "Consistent_Is_Fixed" raise exceptions or do not terminate normally
+--> vk-lemmas.ads:28:14
+   28 |       procedure Consistent_Is_Fixed
+      |                 ^~~~~~~~~~~~~~~~~~~
+
+ high: all paths in "Good_Facts_Do_No_Harm" raise exceptions or do not terminate normally
+--> vk-lemmas.ads:157:14
+  157 |       procedure Good_Facts_Do_No_Harm
+      |                 ^~~~~~~~~~~~~~~~~~~~~
+Summary logged in /Users/josephwecker-v2/src/verisectorium/msc/scratch/kernel-2/ada/obj/development/gnatprove/gnatprove.out
+gnatprove: unproved check messages considered as errors
+ERROR: Command ["gnatprove", "-P", "vkern.gpr"] exited with code 1
+exit 1

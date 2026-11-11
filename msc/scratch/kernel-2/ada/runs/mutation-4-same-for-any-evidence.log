@@ -1,0 +1,44 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:69:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:70:27
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:71:26
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:80:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:81:22
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:82:25
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:89:19
+ medium: postcondition might fail, cannot prove F.Ev (I) = F2.Ev (I)
+--> vk-lemmas.adb:333:14
+  333 |         Post => Ev_Rel (O, T, S, F, F2, I);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      + in inlined expression function body at vk-lemmas.adb:322
+      + provers reached time limit before completing the proof
+
+ medium: precondition might fail, cannot prove F.Ev (I) = F2.Ev (I)
+--> vk-lemmas.adb:612:13
+  612 |                Own_Mono (O, T, S, F, F2, P, D);
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + in inlined expression function body at vk-lemmas.adb:322
+      + possible fix: precondition of subprogram at vk-lemmas.ads:157 should mention S and T
+      --> vk-lemmas.ads:157:04
+  157 |       procedure Good_Facts_Do_No_Harm
+      |       ^
+      + provers reached time limit before completing the proof
+Summary logged in /Users/josephwecker-v2/src/verisectorium/msc/scratch/kernel-2/ada/obj/development/gnatprove/gnatprove.out
+gnatprove: unproved check messages considered as errors
+ERROR: Command ["gnatprove", "-P", "vkern.gpr"] exited with code 1
+exit 1

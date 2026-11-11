@@ -1,0 +1,1009 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: implicit aspect Always_Terminates on "One" has been proved, subprogram will terminate
+--> vk-model.adb:11:16
+
+ info: loop invariant initialization proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:29:16
+
+ info: loop invariant preservation proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:29:16
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:29:24
+
+ info: index check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:30:24
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:30:38
+
+ info: loop invariant initialization proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:32:16
+
+ info: loop invariant preservation proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:32:16
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:32:24
+
+ info: index check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:33:43
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step; Z3: 6 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:33:58
+
+ info: loop invariant initialization proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:36:13
+
+ info: loop invariant preservation proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:36:13
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:36:21
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:37:40
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:37:55
+
+ info: subprogram variant proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:54:17
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:54:61
+
+ info: initialization of "Cyc" proved
+--> vk-model.adb:67:07
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:69:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:70:27
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:71:26
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:80:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:81:22
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:82:25
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:89:19
+
+ info: loop invariant initialization proved (Z3: 6 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:112:13
+
+ info: loop invariant preservation proved (Z3: 6 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:112:13
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:112:21
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:113:22
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:113:48
+
+ info: loop invariant initialization proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:120:16
+
+ info: loop invariant preservation proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:120:16
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:120:24
+
+ info: index check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:121:28
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:121:62
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:123:16
+
+ info: loop invariant preservation proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:123:16
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:123:24
+
+ info: index check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:125:28
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:125:63
+
+ info: loop invariant initialization proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:126:36
+
+ info: loop invariant preservation proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:126:36
+
+ info: loop invariant initialization proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:129:13
+
+ info: loop invariant preservation proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:129:13
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:129:21
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:131:25
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:131:60
+
+ info: loop invariant preservation proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:132:33
+
+ info: loop invariant initialization proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:132:33
+
+ info: subprogram variant proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:152:17
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.adb:152:68
+
+ info: implicit aspect Always_Terminates on "Sel" has been proved, subprogram will terminate
+--> vk-model.ads:9:13
+
+ info: implicit aspect Always_Terminates on "WF_Sel" has been proved, subprogram will terminate
+--> vk-model.ads:14:13
+
+ info: implicit aspect Always_Terminates on "Agrees" has been proved, subprogram will terminate
+--> vk-model.ads:22:13
+
+ info: implicit aspect Always_Terminates on "Edge" has been proved, subprogram will terminate
+--> vk-model.ads:41:13
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:45:50
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:46:45
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:49:58
+
+ info: implicit aspect Always_Terminates on "Plain_True" has been proved, subprogram will terminate
+--> vk-model.ads:59:13
+
+ info: implicit aspect Always_Terminates on "Aside" has been proved, subprogram will terminate
+--> vk-model.ads:74:13
+
+ info: implicit aspect Always_Terminates on "Read_OK" has been proved, subprogram will terminate
+--> vk-model.ads:88:13
+
+ info: implicit aspect Always_Terminates on "Applies" has been proved, subprogram will terminate
+--> vk-model.ads:95:13
+
+ info: implicit aspect Always_Terminates on "Has_Holds" has been proved, subprogram will terminate
+--> vk-model.ads:106:13
+
+ info: implicit aspect Always_Terminates on "Own_Warrant" has been proved, subprogram will terminate
+--> vk-model.ads:115:13
+
+ info: implicit aspect Always_Terminates on "Guard" has been proved, subprogram will terminate
+--> vk-model.ads:127:13
+
+ info: implicit aspect Always_Terminates on "Caps_Along" has been proved, subprogram will terminate
+--> vk-model.ads:154:13
+
+ info: implicit aspect Always_Terminates on "Is_Cap_Solution" has been proved, subprogram will terminate
+--> vk-model.ads:166:13
+
+ info: implicit aspect Always_Terminates on "Lower" has been proved, subprogram will terminate
+--> vk-model.ads:189:13
+
+ info: implicit aspect Always_Terminates on "Cap_Step" has been proved, subprogram will terminate
+--> vk-model.ads:201:13
+
+ info: postcondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:206:08
+
+ info: implicit aspect Always_Terminates on "Cap_Iter" has been proved, subprogram will terminate
+--> vk-model.ads:221:13
+
+ info: postcondition proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:227:08
+
+ info: subprogram variant proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:229:16
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:229:60
+
+ info: implicit aspect Always_Terminates on "Cap_Cycles" has been proved, subprogram will terminate
+--> vk-model.ads:233:13
+
+ info: implicit aspect Always_Terminates on "Derive" has been proved, subprogram will terminate
+--> vk-model.ads:242:13
+
+ info: postcondition proved (Z3: 9 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:247:08
+
+ info: implicit aspect Always_Terminates on "Cond_True" has been proved, subprogram will terminate
+--> vk-model.ads:261:13
+
+ info: implicit aspect Always_Terminates on "Dec_Holds" has been proved, subprogram will terminate
+--> vk-model.ads:271:13
+
+ info: implicit aspect Always_Terminates on "Stratified" has been proved, subprogram will terminate
+--> vk-model.ads:288:13
+
+ info: implicit aspect Always_Terminates on "Affirmed" has been proved, subprogram will terminate
+--> vk-model.ads:298:13
+
+ info: implicit aspect Always_Terminates on "Holds_In_Slot" has been proved, subprogram will terminate
+--> vk-model.ads:312:13
+
+ info: implicit aspect Always_Terminates on "V_C1_Held" has been proved, subprogram will terminate
+--> vk-model.ads:320:13
+
+ info: implicit aspect Always_Terminates on "V_C1_Shape" has been proved, subprogram will terminate
+--> vk-model.ads:332:13
+
+ info: implicit aspect Always_Terminates on "Read_Together" has been proved, subprogram will terminate
+--> vk-model.ads:345:13
+
+ info: implicit aspect Always_Terminates on "V_C2" has been proved, subprogram will terminate
+--> vk-model.ads:357:13
+
+ info: implicit aspect Always_Terminates on "One_Desc" has been proved, subprogram will terminate
+--> vk-model.ads:375:13
+
+ info: implicit aspect Always_Terminates on "V_C3_Resolve" has been proved, subprogram will terminate
+--> vk-model.ads:382:13
+
+ info: implicit aspect Always_Terminates on "V_C4" has been proved, subprogram will terminate
+--> vk-model.ads:391:13
+
+ info: implicit aspect Always_Terminates on "V_C5_Standard" has been proved, subprogram will terminate
+--> vk-model.ads:402:13
+
+ info: implicit aspect Always_Terminates on "V_C5_Rests" has been proved, subprogram will terminate
+--> vk-model.ads:417:13
+
+ info: implicit aspect Always_Terminates on "V_C6_Fails" has been proved, subprogram will terminate
+--> vk-model.ads:426:13
+
+ info: implicit aspect Always_Terminates on "Has_Holds_C" has been proved, subprogram will terminate
+--> vk-model.ads:431:13
+
+ info: implicit aspect Always_Terminates on "V_C6_Guard" has been proved, subprogram will terminate
+--> vk-model.ads:438:13
+
+ info: implicit aspect Always_Terminates on "V_C7_Claim" has been proved, subprogram will terminate
+--> vk-model.ads:445:13
+
+ info: implicit aspect Always_Terminates on "V_C7_Report" has been proved, subprogram will terminate
+--> vk-model.ads:452:13
+
+ info: implicit aspect Always_Terminates on "V_C8_Need" has been proved, subprogram will terminate
+--> vk-model.ads:459:13
+
+ info: implicit aspect Always_Terminates on "Promised" has been proved, subprogram will terminate
+--> vk-model.ads:468:13
+
+ info: implicit aspect Always_Terminates on "V_C8_Slot" has been proved, subprogram will terminate
+--> vk-model.ads:477:13
+
+ info: implicit aspect Always_Terminates on "V_C9" has been proved, subprogram will terminate
+--> vk-model.ads:492:13
+
+ info: implicit aspect Always_Terminates on "Violated" has been proved, subprogram will terminate
+--> vk-model.ads:506:13
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:517:59
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:521:39
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:521:54
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:524:64
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:529:62
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:535:62
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:538:54
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:542:41
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:542:53
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:550:61
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:553:67
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:556:58
+
+ info: implicit aspect Always_Terminates on "Covered" has been proved, subprogram will terminate
+--> vk-model.ads:559:13
+
+ info: implicit aspect Always_Terminates on "Own_OK" has been proved, subprogram will terminate
+--> vk-model.ads:574:13
+
+ info: implicit aspect Always_Terminates on "Is_Fixed" has been proved, subprogram will terminate
+--> vk-model.ads:589:13
+
+ info: implicit aspect Always_Terminates on "Stepped" has been proved, subprogram will terminate
+--> vk-model.ads:597:13
+
+ info: implicit aspect Always_Terminates on "Iter" has been proved, subprogram will terminate
+--> vk-model.ads:603:13
+
+ info: postcondition proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:609:08
+
+ info: subprogram variant proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:611:16
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-model.ads:611:67
+
+ info: implicit aspect Always_Terminates on "Asserted_Set" has been proved, subprogram will terminate
+--> vk-model.ads:613:13
+
+ info: implicit aspect Always_Terminates on "Consistent" has been proved, subprogram will terminate
+--> vk-model.ads:623:13
+
+ info: implicit aspect Always_Terminates on "On_Frontier" has been proved, subprogram will terminate
+--> vk-model.ads:630:13
+ info: postcondition proved (Trivial: 5 VC in max 0.0 seconds and 2 steps; Z3: 15 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:12:14
+
+ info: assertion proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 3 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:24:10
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:29:13
+
+ info: assertion proved (Z3: 6 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:32:13
+
+ info: postcondition proved (Trivial: 5 VC in max 0.0 seconds and 2 steps; Z3: 15 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:44:14
+
+ info: precondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:57:10
+
+ info: loop invariant preservation proved (Trivial: 5 VC in max 0.0 seconds and 2 steps; Z3: 15 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:59:13
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Trivial: 5 VC in max 0.0 seconds and 2 steps; Z3: 14 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:59:13
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:59:21
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:60:45
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:61:47
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:63:26
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:64:47
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:65:49
+
+ info: postcondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 34 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:77:14
+
+ info: precondition proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:87:07
+
+ info: precondition proved (Trivial: 8 VC in max 0.0 seconds and 2 steps; Z3: 16 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:97:16
+
+ info: loop invariant initialization proved (Trivial: 8 VC in max 0.0 seconds and 2 steps; Z3: 136 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:99:19
+
+ info: loop invariant preservation proved (Trivial: 8 VC in max 0.0 seconds and 2 steps; Z3: 136 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:99:19
+
+ info: range check proved (Z3: 16 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:99:27
+
+ info: range check proved (Z3: 16 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:100:63
+
+ info: range check proved (Z3: 16 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:101:65
+
+ info: range check proved (Z3: 16 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:103:59
+
+ info: range check proved (Z3: 16 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:104:61
+
+ info: loop invariant initialization proved (Trivial: 4 VC in max 0.0 seconds and 2 steps; Z3: 68 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:107:16
+
+ info: loop invariant preservation proved (Trivial: 4 VC in max 0.0 seconds and 2 steps; Z3: 68 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:107:16
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:107:24
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:109:60
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:110:62
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:112:56
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:113:58
+
+ info: loop invariant initialization proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 34 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:116:13
+
+ info: loop invariant preservation proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 34 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:116:13
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:116:21
+
+ info: implicit aspect Always_Terminates on "Card" has been proved, subprogram will terminate
+--> vk-lemmas.adb:131:13
+
+ info: overflow check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:132:32
+
+ info: overflow check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:133:07
+
+ info: overflow check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:133:34
+
+ info: overflow check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:134:07
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:134:07
+
+ info: implicit aspect Always_Terminates on "Dropped" has been proved, subprogram will terminate
+--> vk-lemmas.adb:137:13
+
+ info: postcondition proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:153:14
+
+ info: precondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:160:10
+
+ info: precondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:161:10
+
+ info: loop invariant preservation proved (Z3: 3 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:163:13
+
+ info: loop invariant initialization proved (Z3: 3 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:163:13
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:163:21
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:164:18
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:164:49
+
+ info: postcondition proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:175:14
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:185:25
+
+ info: assertion proved (Z3: 3 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:187:13
+
+ info: assertion proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:188:25
+
+ info: precondition proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 5 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:189:10
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:191:25
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:192:25
+
+ info: assertion proved (CVC5: 1 VC in max 0.0 seconds and 281 steps)
+--> vk-lemmas.adb:193:25
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:194:25
+
+ info: precondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:196:13
+
+ info: loop invariant initialization proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:198:16
+
+ info: loop invariant preservation proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:198:16
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:198:24
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:199:49
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:200:50
+
+ info: assertion proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:202:25
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 104 steps; Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:203:10
+
+ info: subprogram variant proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:203:10
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:203:42
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:204:25
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:204:56
+
+ info: precondition proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 5 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:205:10
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:205:71
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:213:22
+
+ info: assertion proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:214:22
+
+ info: precondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 3 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:215:07
+
+ info: postcondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:226:14
+
+ info: precondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:234:13
+
+ info: loop invariant initialization proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:236:16
+
+ info: loop invariant preservation proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:236:16
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:236:24
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:237:48
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:238:50
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:240:25
+
+ info: precondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:241:10
+
+ info: subprogram variant proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:241:10
+
+ info: range check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:241:72
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:249:22
+
+ info: precondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:250:07
+
+ info: assertion proved (Trivial: 4 VC in max 0.0 seconds and 2 steps; Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:265:19
+
+ info: assertion proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:269:31
+
+ info: assertion proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:270:31
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:273:16
+
+ info: loop invariant preservation proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:273:16
+
+ info: loop invariant initialization proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:276:16
+
+ info: loop invariant preservation proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:276:16
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:276:24
+
+ info: index check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:277:26
+
+ info: index check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:277:42
+
+ info: index check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:277:54
+
+ info: loop invariant initialization proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:280:13
+
+ info: loop invariant preservation proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:280:13
+
+ info: assertion proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:294:22
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:296:10
+
+ info: implicit aspect Always_Terminates on "Ev_Rel" has been proved, subprogram will terminate
+--> vk-lemmas.adb:304:13
+
+ info: postcondition proved (Trivial: 3 VC in max 0.0 seconds and 2 steps; Z3: 17 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:333:14
+
+ info: assertion proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:340:10
+
+ info: assertion proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:344:10
+
+ info: assertion proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:347:22
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:348:22
+
+ info: assertion proved (Z3: 10 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:351:13
+
+ info: assertion proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:354:13
+
+ info: postcondition proved (CVC5: 4 VC in max 0.2 seconds and 1475 steps; Trivial: 3 VC in max 0.0 seconds and 2 steps; Z3: 13 VC in max 0.1 seconds and 187 steps)
+--> vk-lemmas.adb:364:14
+
+ info: precondition proved (Z3: 6 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:370:10
+
+ info: loop invariant initialization proved (Trivial: 3 VC in max 0.0 seconds and 2 steps; Z3: 17 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:372:13
+
+ info: loop invariant preservation proved (Trivial: 3 VC in max 0.0 seconds and 2 steps; Z3: 17 VC in max 0.1 seconds and 324 steps)
+--> vk-lemmas.adb:372:13
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:372:21
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:373:39
+
+ info: implicit aspect Always_Terminates on "Table_Le" has been proved, subprogram will terminate
+--> vk-lemmas.adb:377:13
+
+ info: postcondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:386:14
+
+ info: assertion proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:394:10
+
+ info: postcondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:403:14
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:410:10
+
+ info: postcondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:420:14
+
+ info: precondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:427:10
+
+ info: precondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:428:10
+
+ info: subprogram variant proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:428:10
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:429:71
+
+ info: implicit aspect Always_Terminates on "Ctx_Le" has been proved, subprogram will terminate
+--> vk-lemmas.adb:434:13
+
+ info: implicit aspect Always_Terminates on "World_Le" has been proved, subprogram will terminate
+--> vk-lemmas.adb:446:13
+
+ info: postcondition proved (Trivial: 4 VC in max 0.0 seconds and 2 steps; Z3: 12 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:465:14
+
+ info: assertion proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 3 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:480:13
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:485:16
+
+ info: assertion proved (Z3: 6 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:488:16
+
+ info: implicit aspect Always_Terminates on "Decs_Rel" has been proved, subprogram will terminate
+--> vk-lemmas.adb:495:13
+
+ info: postcondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:514:14
+
+ info: precondition proved (Z3: 22 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:521:10
+
+ info: loop invariant initialization proved (Trivial: 4 VC in max 0.0 seconds and 2 steps; Z3: 12 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:523:13
+
+ info: loop invariant preservation proved (Trivial: 4 VC in max 0.0 seconds and 2 steps; Z3: 12 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:523:13
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:523:21
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:524:45
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:525:50
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:526:37
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:526:51
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:528:27
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:529:56
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:530:47
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:531:37
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:531:51
+
+ info: postcondition proved (CVC5: 1 VC in max 0.1 seconds and 1193 steps; Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 33 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:541:14
+
+ info: postcondition proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:559:14
+
+ info: precondition proved (Z3: 11 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:566:07
+
+ info: precondition proved (Trivial: 16 VC in max 0.0 seconds and 2 steps; Z3: 120 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:570:16
+
+ info: loop invariant initialization proved (Trivial: 8 VC in max 0.0 seconds and 2 steps; Z3: 136 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:572:19
+
+ info: loop invariant preservation proved (Trivial: 8 VC in max 0.0 seconds and 2 steps; Z3: 136 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:572:19
+
+ info: range check proved (Z3: 16 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:572:27
+
+ info: range check proved (Z3: 16 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:573:66
+
+ info: range check proved (Z3: 16 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:574:65
+
+ info: range check proved (Z3: 16 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:576:59
+
+ info: range check proved (Z3: 16 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:577:64
+
+ info: loop invariant initialization proved (Trivial: 4 VC in max 0.0 seconds and 2 steps; Z3: 68 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:580:16
+
+ info: loop invariant preservation proved (Trivial: 4 VC in max 0.0 seconds and 2 steps; Z3: 68 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:580:16
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:580:24
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:582:63
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:583:62
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:585:56
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:586:61
+
+ info: loop invariant preservation proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 34 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:589:13
+
+ info: loop invariant initialization proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 34 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:589:13
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:589:21
+
+ info: precondition proved (Z3: 3 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:609:07
+
+ info: precondition proved (CVC5: 17 VC in max 0.6 seconds and 4866 steps; Trivial: 12 VC in max 0.0 seconds and 2 steps; Z3: 55 VC in max 0.1 seconds and 438 steps)
+--> vk-lemmas.adb:612:13
+
+ info: loop invariant initialization proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:614:16
+
+ info: loop invariant preservation proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:614:16
+
+ info: range check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:614:24
+
+ info: index check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:615:28
+
+ info: index check proved (Z3: 8 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:615:46
+
+ info: loop invariant initialization proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:618:13
+
+ info: loop invariant preservation proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:618:13
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:618:21
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:619:44
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:619:63
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:621:22
+
+ info: precondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:622:07
+
+ info: assertion proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:623:22
+
+ info: assertion proved (CVC5: 3 VC in max 0.9 seconds and 4946 steps; Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 3 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:624:22
+
+ info: precondition proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:628:07
+
+ info: assertion proved (CVC5: 1 VC in max 0.0 seconds and 367 steps; Z3: 10 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:629:22
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 388 steps; Z3: 20 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:631:10
+
+ info: loop invariant initialization proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:633:13
+
+ info: loop invariant preservation proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.1 seconds and 376 steps)
+--> vk-lemmas.adb:633:13
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:633:21
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:634:22
+
+ info: range check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:634:58
+
+ info: precondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 3 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:636:07
+
+ info: assertion proved (CVC5: 1 VC in max 0.0 seconds and 389 steps; Z3: 10 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:637:22
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 391 steps; Z3: 10 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:638:07
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 399 steps; Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 14 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.adb:639:07
+
+ info: implicit aspect Always_Terminates on "Sub_Set" has been proved, subprogram will terminate
+--> vk-lemmas.ads:11:13
+
+ info: postcondition proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.ads:24:14
+
+ info: postcondition proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.ads:33:14
+
+ info: postcondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.ads:45:14
+
+ info: implicit aspect Always_Terminates on "Ranked" has been proved, subprogram will terminate
+--> vk-lemmas.ads:57:13
+
+ info: postcondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.ads:74:14
+
+ info: postcondition proved (Z3: 33 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.ads:98:14
+
+ info: implicit aspect Always_Terminates on "Monotone" has been proved, subprogram will terminate
+--> vk-lemmas.ads:106:13
+
+ info: implicit aspect Always_Terminates on "Plain_Obligations" has been proved, subprogram will terminate
+--> vk-lemmas.ads:118:13
+
+ info: implicit aspect Always_Terminates on "Read_Grew" has been proved, subprogram will terminate
+--> vk-lemmas.ads:125:13
+
+ info: implicit aspect Always_Terminates on "Ev_Good" has been proved, subprogram will terminate
+--> vk-lemmas.ads:132:13
+
+ info: implicit aspect Always_Terminates on "Good_Ext" has been proved, subprogram will terminate
+--> vk-lemmas.ads:147:13
+
+ info: postcondition proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> vk-lemmas.ads:165:14
+Success: all checks proved (328 checks).
+Summary logged in /Users/josephwecker-v2/src/verisectorium/msc/scratch/kernel-2/ada/obj/release/gnatprove/gnatprove.out
+exit 0

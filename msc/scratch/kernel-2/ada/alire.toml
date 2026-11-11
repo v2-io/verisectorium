@@ -1,0 +1,15 @@
+name = "vkern"
+description = "Verisectorium kernel, spec draft 3, in Ada 2022 + SPARK"
+version = "0.1.0-dev"
+authors = ["kernel-2 Ada agent"]
+maintainers = ["kernel-2 Ada agent <noreply@example.com>"]
+licenses = "MIT"
+tags = []
+
+[[depends-on]]
+gnatprove = "=16.1.0"
+
+[build-switches]
+"*".ada_version = "Ada2022"
+"*".contracts = "Yes"
+"*".style_checks = "No"

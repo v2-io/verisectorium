@@ -1,0 +1,1 @@
+alr -n gnatprove --report=statistics > runs/prove-final.log 2>&1  760.89s user 37.65s system 521% cpu 2:33.22 total

@@ -1,0 +1,19 @@
+name = "vkern_tests"
+description = "Scenarios and property search for the draft-3 kernel"
+version = "0.1.0-dev"
+authors = ["kernel-2 Ada agent"]
+maintainers = ["kernel-2 Ada agent <noreply@example.com>"]
+licenses = "MIT"
+tags = []
+executables = ["scenarios", "search"]
+
+[[depends-on]]
+vkern = "*"
+
+[[pins]]
+vkern = { path='..' }
+
+[build-switches]
+"*".ada_version = "Ada2022"
+"*".contracts = "Yes"
+"*".style_checks = "No"

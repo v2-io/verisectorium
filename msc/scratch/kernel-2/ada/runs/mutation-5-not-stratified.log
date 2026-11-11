@@ -1,0 +1,35 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:69:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:70:27
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:71:26
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:80:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:81:22
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:82:25
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:89:19
+ medium: assertion might fail, cannot prove F.Dec (J).Conds (K).What /= Asserted_Consistent
+--> vk-lemmas.adb:30:15
+   30 |                  F.Dec (J).Conds (K).What /= Asserted_Consistent);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + possible fix: precondition of subprogram at line 7 should mention F and J
+    7 |       procedure Dec_Mono
+      |       ^
+      + provers reached time limit before completing the proof
+Summary logged in /Users/josephwecker-v2/src/verisectorium/msc/scratch/kernel-2/ada/obj/development/gnatprove/gnatprove.out
+gnatprove: unproved check messages considered as errors
+ERROR: Command ["gnatprove", "-P", "vkern.gpr"] exited with code 1
+exit 1

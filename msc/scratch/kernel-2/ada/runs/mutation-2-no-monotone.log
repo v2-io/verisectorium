@@ -1,0 +1,34 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:69:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:70:27
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:71:26
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:80:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:81:22
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:82:25
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:89:19
+ medium: postcondition might fail
+--> vk-lemmas.adb:385:14
+  385 |         Post => Own_Warrant (O, T, S, F, P, D)
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  386 |                 <= Own_Warrant (O, T, S, F2, P, D);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + provers reached time limit before completing the proof
+Summary logged in /Users/josephwecker-v2/src/verisectorium/msc/scratch/kernel-2/ada/obj/development/gnatprove/gnatprove.out
+gnatprove: unproved check messages considered as errors
+ERROR: Command ["gnatprove", "-P", "vkern.gpr"] exited with code 1
+exit 1
