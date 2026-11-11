@@ -1,24 +1,5 @@
-Testing `kernel, draft 4'.
-This run has ID `VD3VUBLU'.
-
-  [OK]          moves          0   a small move, with whole reads.
-  [OK]          moves          1   a wrong finding, set aside.
-  [OK]          moves          2   an outline fills in; roots.
-  [OK]          R4             0   answered once, and its price.
-  [OK]          R9             0   two forks.
-  [OK]          R9             1   a shared dependent, affirmed.
-  [OK]          R9             2   a shared dependent, and the clock.
-  [OK]          R9             3   what meeting is.
-  [OK]          R2 R3          0   checked before selected.
-  [OK]          R2 R3          1   a rewind forgets an answer.
-  [OK]          R7             0   more than one fixed point.
-  [OK]          R8             0   recorded and unrecorded replacement.
-  [OK]          R6             0   a promise spreads.
-
-Full test results in `~/src/verisectorium/msc/scratch/kernel-2/ocaml/_build/.sandbox/c6dc7b0932a88df0bfe849e8cec4d9f6/default/test/_build/_tests/kernelU+002C draft 4'.
-Test Successful in 0.008s. 13 tests run.
 Testing `kernel'.
-This run has ID `B4RGMVZJ'.
+This run has ID `NABLYBXS'.
 
   [OK]          Q6                 0   no fixed point.
   [OK]          Q6                 1   no greatest fixed point.
@@ -33,5 +14,25 @@ This run has ID `B4RGMVZJ'.
   [OK]          moves              1   two moves at once.
   [OK]          moves              2   a wrong finding.
 
-Full test results in `~/src/verisectorium/msc/scratch/kernel-2/ocaml/_build/.sandbox/6033b70e7d0ba3dd0912e5a40471f4a8/default/test/_build/_tests/kernel'.
+Full test results in `~/src/verisectorium/msc/scratch/kernel-2/ocaml/_build/.sandbox/62f33488eab20c060dd1f78180589ff0/default/test/_build/_tests/kernel'.
 Test Successful in 0.059s. 12 tests run.
+Testing `kernel, draft 4'.
+This run has ID `BLLSSIQ4'.
+
+  [OK]          moves          0   a small move, with whole reads.
+  [OK]          moves          1   a wrong finding, set aside.
+  [OK]          moves          2   an outline fills in; roots.
+  [OK]          R4             0   answered once, and its price.
+  [OK]          R9             0   two forks.
+  [OK]          R9             1   a shared dependent, affirmed.
+  [OK]          R9             2   a shared dependent, and the clock.
+  [OK]          R9             3   what meeting is.
+  [OK]          R2 R3          0   checked before selected.
+  [OK]          R2 R3          1   a rewind forgets an answer.
+  [OK]          R7             0   more than one fixed point.
+  [OK]          R8             0   recorded and unrecorded replacement.
+  [OK]          R6             0   a promise spreads.
+  [OK]          trial          0   pulled out.
+
+Full test results in `~/src/verisectorium/msc/scratch/kernel-2/ocaml/_build/.sandbox/ecb82a023f2edd79887b727c074ab4e9/default/test/_build/_tests/kernelU+002C draft 4'.
+Test Successful in 2.210s. 14 tests run.

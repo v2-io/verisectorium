@@ -587,6 +587,34 @@ let promise_downstream () =
     (List.mem (C5_rest (0, 1)) v);
   b "waived, the promise no longer spreads" true (stationary u (range 0 5))
 
+(* The trial for AS-A-HOME.md: four conditions written one function per
+   sentence of note 22 agree with the model's own, on every line of forty
+   random universes. *)
+let pulled_out () =
+  let module E = Kernel.Explore in
+  let cfg =
+    { E.n = 5; m = 21; asm2 = true; mono = false; no_same_bad = false }
+  in
+  let g = E.genesis_len cfg in
+  let mine =
+    [ "C3_ref"; "C3_slot"; "C6_finding"; "C6_guard"; "C8_slot"; "C9" ]
+  in
+  let states = ref 0 and items = ref 0 in
+  for seed = 1 to 40 do
+    let u = E.gen_universe (Random.State.make [| seed |]) cfg in
+    for s' = 0 to (1 lsl (npool u - g)) - 1 do
+      let s = upto (g - 1) lor (s' lsl g) in
+      let theirs =
+        List.filter (fun i -> List.mem (inst_ctor i) mine) (violated u s 0)
+      in
+      let ours = Kernel.Pulled_out.(four (state u s)) in
+      incr states;
+      items := !items + List.length ours;
+      if ours <> theirs then Alcotest.failf "seed %d line %d differ" seed s
+    done
+  done;
+  Printf.printf "pulled out: %d lines, %d items, all agree\n" !states !items
+
 let () =
   let t n f = Alcotest.test_case n `Quick f in
   Alcotest.run "kernel, draft 4"
@@ -613,4 +641,5 @@ let () =
       ("R7", [ t "more than one fixed point" fixed_points ]);
       ("R8", [ t "recorded and unrecorded replacement" recuts ]);
       ("R6", [ t "a promise spreads" promise_downstream ]);
+      ("trial", [ t "pulled out" pulled_out ]);
     ]
