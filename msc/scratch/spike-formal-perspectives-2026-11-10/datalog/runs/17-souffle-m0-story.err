@@ -1,0 +1,12 @@
+Warning: No rules/facts defined for relation same in file m0.dl at line 7
+.decl same(e:S,p:S,v:S,w:S)                  .decl setaside(b:S,t:number,e:S)
+------^-----------------------------------------------------------------------
+Warning: No rules/facts defined for relation setaside in file m0.dl at line 7
+.decl same(e:S,p:S,v:S,w:S)                  .decl setaside(b:S,t:number,e:S)
+---------------------------------------------------^--------------------------
+Warning: No rules/facts defined for relation raise in file m0.dl at line 8
+.decl affirm(b:S,t:number,p:S,v:S,q:S,w:S)   .decl raise(b:S,t:number,p:S,c:S)
+---------------------------------------------------^---------------------------
+Warning: No rules/facts defined for relation waive in file m0.dl at line 9
+.decl waive(b:S,t:number,k:S,d1:S,d2:S,p:S)  .decl markroot(b:S,t:number,a:S)
+------^-----------------------------------------------------------------------
