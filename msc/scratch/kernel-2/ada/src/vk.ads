@@ -1,5 +1,7 @@
---  The objects of KERNEL-SPEC draft 3 (sections 2 and 3), as bounded
---  tables. Nothing here computes; Vk.Model does.
+--  The objects of KERNEL-SPEC draft 4 (sections 2 and 3), as bounded
+--  tables. Nothing here computes; Vk.Model does (the state-to-frontier
+--  function) and Vk.Lines does (events, lines, forks, and the state
+--  read from a line).
 --
 --  Everything is a small discrete range or an array over one, because
 --  that is the shape SPARK proves over most readily. The bounds are
@@ -54,9 +56,12 @@ package Vk with SPARK_Mode => On, Pure is
    --  returns a conflict flag; here conflict is C6's business.
    type Read_Table is array (Boolean, Boolean) of Warrant;
 
+   --  A decided dimension ("accepted by these people") has no
+   --  evidence: its warrant is top while an accept decision about the
+   --  piece on that dimension is in force, and bottom otherwise.
    type Dim_Decl is record
-      Read_As  : Read_Table := [others => [others => 0]];
-      Rule_Min : Warrant    := 0;   --  the rule standard asks this much
+      Read_As : Read_Table := [others => [others => 0]];
+      Decided : Boolean    := False;
    end record;
    type Dim_Decls is array (Dim) of Dim_Decl;
 
@@ -73,22 +78,19 @@ package Vk with SPARK_Mode => On, Pure is
    end record;
    type Kind_Decls is array (Kind) of Kind_Decl;
 
-   type Canon_Standard is (By_Decision, By_Rule, By_Placement);
+   --  What a root asks: for a root of kind KR, of each piece of kind
+   --  KP it reaches, at least this warrant on each dimension (0: nothing).
+   type Ask_Table is array (Kind, Kind, Dim) of Warrant;
 
    type Ontology is record
       RK    : Ref_Kind_Decls;
       Dims  : Dim_Decls;
       Kinds : Kind_Decls;
+      Asks  : Ask_Table := [others => [others => [others => 0]]];
       Point_Kind : Ref_Kind := 1;   --  what a pointing slot is, as a reference
-      Canon : Canon_Standard := By_Decision;
-      --  Switches. The first is the spec's own (Q10). The rest are
-      --  places where the draft can be read two ways.
-      Guards_On            : Boolean := True;
-      Reads_On             : Boolean := True;   --  evidence has a read set
-      Set_Aside_On         : Boolean := True;   --  a decision may set evidence aside
-      Waived_Is_Consistent : Boolean := False;  --  a covered violation does not spread
-      Slot_Needs_Consistent : Boolean := True;  --  C8: filler asserted AND consistent
-      Redirect             : Boolean := True;   --  C3: a sole descendant resolves
+      --  The spec's [lead] choice, kept as a switch: a waived instance
+      --  does not make its piece inconsistent for what rests on it.
+      Waived_Is_Consistent : Boolean := True;
    end record;
 
    -------------------------------------------------------------------
@@ -106,8 +108,9 @@ package Vk with SPARK_Mode => On, Pure is
 
    type Slot_State is (Empty, Holding, Pointing);
    type Slot is record
-      State  : Slot_State := Empty;
-      Filler : Id         := 1;
+      State       : Slot_State := Empty;
+      Filler      : Id         := 1;
+      Provisional : Boolean    := False;
    end record;
    type Slot_List is array (Slot_Ix) of Slot;
 
@@ -149,10 +152,8 @@ package Vk with SPARK_Mode => On, Pure is
 
    type Outcome is (Holds, Part, Fails);
 
-   --  A read: what else the evidence relied on, and how far. NOT in
-   --  draft 3 (its evidence is about one version and reads nothing).
-   --  With Ontology.Reads_On false, or no read present, this is the
-   --  literal draft.
+   --  A read: what else the evidence relied on, and how far.
+   --  DEPARTS: at most two reads per evidence fact.
    type Read is record
       Present : Boolean := False;
       Q       : Id      := 1;
@@ -175,6 +176,7 @@ package Vk with SPARK_Mode => On, Pure is
       C       : Crit    := 1;
       Result  : Outcome := Holds;
       Reads   : Read_List := [others => <>];
+      Time    : Natural := 0;       --  when it was recorded, in the base
    end record;
    type Ev_List is array (Ev_Ix) of Evidence;
 
@@ -183,13 +185,13 @@ package Vk with SPARK_Mode => On, Pure is
    --  I and J index a reference/slot, an evidence fact, a decision, or
    --  a (dimension, criterion) pair, and are 0 where unused.
    type Inst_Kind is
-     (C1_Held,        --  P is held by more than one selected assembly
+     (C1_Held,        --  what slot I of P holds is held elsewhere too
       C1_Shape,       --  slot I of P does not conform, or holds nothing selected
       C2_Together,    --  inner dependency slot I -> slot J not looked at
       C3_Resolve,     --  edge I of P has no selected target
       C3_Cycle,       --  P is on a cycle along a capping kind
       C4_Reconciled,  --  edge I of P not affirmed against its target
-      C5_Standard,    --  the standard for canon is not met for P
+      C5_Asks,        --  root I asks more of P on dimension J than it has
       C5_Rests,       --  edge I: what P rests on is not asserted and consistent
       C6_Fails,       --  evidence I applies to P and does not hold
       C6_Guard,       --  guard (dim I, crit J) on P not met
@@ -219,9 +221,10 @@ package Vk with SPARK_Mode => On, Pure is
    end record;
    type Cond_List is array (Cond_Ix) of Condition;
 
-   --  Set_Aside is NOT in draft 3: a decision that one evidence fact is
-   --  not to count (the exit for a wrong finding that leaves the piece
-   --  alone). Switched by Ontology.Set_Aside_On.
+   --  DEPARTS: a set aside is of an evidence fact only, not of a same
+   --  event (same sets are held closed per fact). Marking a root and
+   --  withdrawing are events of a line (Vk.Lines), not rows here: this
+   --  table is the decisions in force.
    type Dec_Kind is (Admit, Affirm, Promise, Waive, Ask, Set_Aside);
 
    --  "withdrawn(decision)" is the flag: it only ever goes to True.
@@ -235,10 +238,11 @@ package Vk with SPARK_Mode => On, Pure is
       QV        : Ver      := 1;         --  affirm: as it was at this version
       QSame     : Ver_Set  := No_Vers;   --  affirm: or these, same for it
       S         : Slot_Ix  := 1;         --  promise: this slot of P
-      D         : Dim      := 1;         --  raise: on this dimension
+      D         : Dim      := 1;         --  raise, accept: on this dimension
       Inst      : Instance;              --  waive: this instance
       Ev        : Ev_Ix    := 1;         --  set aside: this evidence fact
       Conds     : Cond_List := [others => <>];
+      Time      : Natural := 0;          --  when it was made, on its line
    end record;
    type Dec_List is array (Dec_Ix) of Decision;
 
@@ -262,5 +266,31 @@ package Vk with SPARK_Mode => On, Pure is
       Asserted : Boolean := False;
    end record;
    type Selection is array (Id) of Pick;
+
+   -------------------------------------------------------------------
+   --  What the frontier needs from the line beyond selection and facts
+   -------------------------------------------------------------------
+
+   --  Edges: a piece's references (1 .. 2) and its slots as pointers
+   --  (3 .. 5), as one list.
+   type Edge_Ix is range 1 .. 5;
+
+   type Reach_Table is array (Id, Id) of Boolean;   --  (root, piece)
+   type Guard_Table is array (Id, Dim, Crit) of Boolean;
+
+   --  What edge I of P was written against: the target's version when
+   --  P's selected version was written (the C4 switch of section 5).
+   type Seen is record
+      Has : Boolean := False;
+      V   : Ver     := 1;
+   end record;
+   type Seen_Table is array (Id, Edge_Ix) of Seen;
+
+   type Line_View is record
+      Roots : Id_Set      := [others => False];
+      Reach : Reach_Table := [others => [others => False]];
+      Guard : Guard_Table := [others => [others => [others => False]]];
+      Seen  : Seen_Table  := [others => [others => <>]];
+   end record;
 
 end Vk;

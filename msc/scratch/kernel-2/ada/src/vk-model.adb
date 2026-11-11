@@ -55,42 +55,21 @@ package body Vk.Model with SPARK_Mode => On is
       end if;
    end Cap_Iter;
 
-   ----------------
-   -- Cap_Cycles --
-   ----------------
+   ---------------
+   -- Deep_Iter --
+   ---------------
 
-   function Cap_Cycles
-     (O : Ontology; T : Version_Table; S : Selection) return Id_Set
+   function Deep_Iter
+     (O : Ontology; T : Version_Table; S : Selection; Dp : Id_Set;
+      N : Natural) return Id_Set
    is
-      type Reach_Table is array (Id, Id) of Boolean;
-      Reach : Reach_Table := [others => [others => False]];
-      Cyc   : Id_Set;
    begin
-      for P in Id loop
-         for I in Edge_Ix loop
-            for D in Dim loop
-               if Caps_Along (O, T, S, P, I, D)
-                 and then S (Edge (O, T, S, P, I).Target).Selected
-               then
-                  Reach (P, Edge (O, T, S, P, I).Target) := True;
-               end if;
-            end loop;
-         end loop;
-      end loop;
-      for K in Id loop
-         for P in Id loop
-            for Q in Id loop
-               if Reach (P, K) and then Reach (K, Q) then
-                  Reach (P, Q) := True;
-               end if;
-            end loop;
-         end loop;
-      end loop;
-      for P in Id loop
-         Cyc (P) := Reach (P, P);
-      end loop;
-      return Cyc;
-   end Cap_Cycles;
+      if N = 0 then
+         return Dp;
+      else
+         return Deep_Iter (O, T, S, Deep_Step (O, T, S, Dp), N - 1);
+      end if;
+   end Deep_Iter;
 
    ------------
    -- Derive --
@@ -143,13 +122,14 @@ package body Vk.Model with SPARK_Mode => On is
 
    function Iter
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; X : Id_Set; N : Natural) return Id_Set
+      L : Line_View; C : Context; X : Id_Set; N : Natural) return Id_Set
    is
    begin
-      if N = 0 or else Stepped (O, T, S, F, C, X) = X then
+      if N = 0 or else Stepped (O, T, S, F, L, C, X) = X then
          return X;
       else
-         return Iter (O, T, S, F, C, Stepped (O, T, S, F, C, X), N - 1);
+         return Iter
+           (O, T, S, F, L, C, Stepped (O, T, S, F, L, C, X), N - 1);
       end if;
    end Iter;
 

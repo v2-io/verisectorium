@@ -1,0 +1,41 @@
+scenes per property: 100000; bounds: 5 ids, 3 versions each, 2 dimensions, 2 criteria, 4 warrant levels, 12 evidence facts, 12 decisions, lines of about 20 events
+
+R6. Good news does no harm, as events on a line (frontier after is within frontier before)
+ read_as monotone:
+  add HOLDING_EVIDENCE:  100000 tried, 0 counterexamples
+  add AN_AFFIRM:  100000 tried, 0 counterexamples
+  add AN_ACCEPT:  100000 tried, 0 counterexamples
+  add A_SAME:  11254 tried, 0 counterexamples
+ read_as not required monotone:
+    first found: adds C5_ASKS(p 4, 4, 1); guard mode LETTER, off-line guards FALSE
+  add HOLDING_EVIDENCE:  100000 tried, 3292 counterexamples
+
+R7. Consistency
+  R7:  100000 states read from random lines; result not a fixed point: 0; a fixed point not within it: 0; states with more than one fixed point: 66
+
+R8. A defect survives
+  R8 (mode LATER): an unanswered finding against a once-selected version is owed on the piece and its descendants in canon: 30739 cases, 0 counterexamples
+  guards open under LATER that the LETTER counts as met (by evidence no later than the finding): 291
+  guards that exist only if findings against versions the line never selected count: 5448
+
+R9. Forks compose
+    unclassified: the union alone owes C4_RECONCILED(p 5, 2)
+    unclassified: the union alone owes C9_RAISED(p 3, 3)
+    unclassified: the union alone owes C9_RAISED(p 1, 3)
+  R9: 100000 pairs of forks from one checkpoint (three events each); the union owes something neither fork owes alone in 6572
+    of those, by the first cause that fits:
+      both wrote or retired one id (the spec's first case): 1938
+      one's evidence is about, or read, what the other wrote (the spec's second case): 2137
+      one's decision is about what the other wrote: 978
+      one's new version refers to, holds or points at what the other wrote: 1311
+      one marked or unmarked a root: 153
+      one withdrew a decision: 3
+      evidence from before the checkpoint that read what a fork wrote: 38
+      each set some evidence aside: 0
+      none of these: 14
+    the proved theorem on the same pairs:
+      instances, on a region where the union agrees with a fork, on which the union's frontier and the fork's differ (must be 0): 0
+      pairs whose two regions cover every piece (the union's frontier is then the two forks' frontiers, each on its region): 37306; of those, pairs that nonetheless meet (must be 0): 0
+      pairs the regions do NOT cover and that do not meet (the theorem is silent, nothing went wrong): 56122
+      mean size of a region, of 5 pieces: 21 tenths
+exit 0

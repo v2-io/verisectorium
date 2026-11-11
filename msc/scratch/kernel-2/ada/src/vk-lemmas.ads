@@ -2,8 +2,10 @@
 --  selection and set of facts of the bounded types, under the stated
 --  preconditions. All ghost: nothing here runs.
 --
---  The names say which property of KERNEL-SPEC draft 3 section 7 each
---  bears on. The account says what is NOT covered by each.
+--  The names say which property of KERNEL-SPEC draft 4 section 7 each
+--  bears on (R6, R7, R8, and the cap). They are about the function
+--  from a state to its frontier; what Vk.Lines reads from a line is
+--  tested, not proved. The account says what is NOT covered by each.
 with Vk.Model; use Vk.Model;
 
 package Vk.Lemmas with SPARK_Mode => On, Ghost is
@@ -18,31 +20,31 @@ package Vk.Lemmas with SPARK_Mode => On, Ghost is
    --  Taking more pieces as consistent never makes a piece worse off.
    procedure Mono_X
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; Y, X : Id_Set; P : Id)
+      L : Line_View; C : Context; Y, X : Id_Set; P : Id)
    with
      Pre  => Stratified (F) and then Sub_Set (Y, X),
-     Post => (if Own_OK (O, T, S, F, C, Y, P)
-              then Own_OK (O, T, S, F, C, X, P));
+     Post => (if Own_OK (O, T, S, F, L, C, Y, P)
+              then Own_OK (O, T, S, F, L, C, X, P));
 
    --  The consistent set is a fixed point.
    procedure Consistent_Is_Fixed
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context)
+      L : Line_View; C : Context)
    with
      Pre  => Stratified (F),
-     Post => Is_Fixed (O, T, S, F, C, Consistent (O, T, S, F, C));
+     Post => Is_Fixed (O, T, S, F, L, C, Consistent (O, T, S, F, L, C));
 
    --  And every set that is consistent with itself lies within it. (Y
    --  need not be a fixed point; it is enough that nothing is violated
    --  about any member when Y is taken as the consistent pieces.)
    procedure Consistent_Is_Greatest
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; Y : Id_Set)
+      L : Line_View; C : Context; Y : Id_Set)
    with
      Pre  => Stratified (F)
              and then (for all P in Id =>
-                         (if Y (P) then Own_OK (O, T, S, F, C, Y, P))),
-     Post => Sub_Set (Y, Consistent (O, T, S, F, C));
+                         (if Y (P) then Own_OK (O, T, S, F, L, C, Y, P))),
+     Post => Sub_Set (Y, Consistent (O, T, S, F, L, C));
 
    -------------------------------------------------------------------
    --  Q6, the cap: at most one solution when there is no cycle
@@ -74,33 +76,45 @@ package Vk.Lemmas with SPARK_Mode => On, Ghost is
      Post => (for all P in Id => E1 (P, D) = E2 (P, D));
 
    -------------------------------------------------------------------
-   --  Q5: a known defect cannot be selected away
+   --  R8: an open guard is on the frontier
    -------------------------------------------------------------------
 
-   --  With guards on: a fact that does not hold, not set aside, about P
-   --  or about anything P descends from, at ANY version, puts a C6
-   --  instance about P on the frontier of every selection that asserts
-   --  P (at any version) without holding evidence on that criterion
-   --  applying there. X is arbitrary, so this is about the frontier
-   --  whatever is consistent.
-   procedure Defect_Stays
+   --  Whatever is consistent, an open guard on an asserted piece is a
+   --  violated instance. (Which guards are open is Vk.Lines' to say.)
+   procedure Guard_Is_Owed
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      X : Id_Set; P : Id; I : Ev_Ix)
+      L : Line_View; X : Id_Set; P : Id; D : Dim; Cr : Crit)
    with
-     Pre  => O.Guards_On
-             and then F.Ev (I).Present
-             and then F.Ev (I).Result /= Holds
-             and then not Aside (O, T, S, F, I)
-             and then (F.Ev (I).P = P or else F.Desc (F.Ev (I).P, P))
-             and then S (P).Asserted
-             and then not Has_Holds
-               (O, T, S, F, P, F.Ev (I).D, F.Ev (I).C),
+     Pre  => L.Guard (P, D, Cr) and then S (P).Asserted,
      Post => Violated
-               (O, T, S, F, Derive (O, T, S, F), X,
-                (C6_Guard, P, Sub (F.Ev (I).D), Sub (F.Ev (I).C)));
+               (O, T, S, F, L, Derive (O, T, S, F), X,
+                (C6_Guard, P, Sub (D), Sub (Cr)));
 
    -------------------------------------------------------------------
-   --  Q4: good facts do no harm
+   --  The spec's rule (section 2): obligations are unconditional
+   -------------------------------------------------------------------
+
+   function Unconditional (F : Facts) return Boolean is
+     (for all J in Dec_Ix =>
+        (if F.Dec (J).Present
+           and then F.Dec (J).What in Promise | Waive | Ask | Set_Aside
+         then
+           (for all K in Cond_Ix => F.Dec (J).Conds (K).What = None)));
+
+   --  R7 as the spec now has it.
+   procedure Well_Defined
+     (O : Ontology; T : Version_Table; S : Selection; F : Facts;
+      L : Line_View; C : Context; Y : Id_Set)
+   with
+     Pre  => Unconditional (F),
+     Post => Is_Fixed (O, T, S, F, L, C, Consistent (O, T, S, F, L, C))
+             and then
+             (if (for all P in Id =>
+                    (if Y (P) then Own_OK (O, T, S, F, L, C, Y, P)))
+              then Sub_Set (Y, Consistent (O, T, S, F, L, C)));
+
+   -------------------------------------------------------------------
+   --  R6: good news does no harm
    -------------------------------------------------------------------
 
    function Monotone (O : Ontology) return Boolean is
@@ -136,7 +150,7 @@ package Vk.Lemmas with SPARK_Mode => On, Ghost is
         (A.Present and then B.Present
          and then A.Result = Holds and then B.Result = Holds
          and then A.P = B.P and then A.V = B.V
-         and then A.D = B.D and then A.C = B.C
+         and then A.D = B.D and then A.C = B.C and then A.Time = B.Time
          and then (for all V in Ver => (if A.Same (V) then B.Same (V)))
          and then (for all R in Read_Ix =>
                      Read_Grew (A.Reads (R), B.Reads (R)))));
@@ -153,16 +167,40 @@ package Vk.Lemmas with SPARK_Mode => On, Ghost is
            or else (not F.Dec (J).Present
                     and then F2.Dec (J).What in Admit | Affirm)));
 
+   --  The two views of the line agree, except that the later one may
+   --  have fewer guards open. (That good news opens no guard is a
+   --  property of Vk.Lines, tested there.)
+   function View_Le (L, L2 : Line_View) return Boolean is
+     ((for all P in Id =>
+         L.Roots (P) = L2.Roots (P)
+         and then (for all Q in Id => L.Reach (P, Q) = L2.Reach (P, Q))
+         and then (for all I in Edge_Ix => L.Seen (P, I) = L2.Seen (P, I))
+         and then
+           (for all D in Dim => (for all Cr in Crit =>
+              (if L2.Guard (P, D, Cr) then L.Guard (P, D, Cr))))));
+
    --  Adding good facts adds nothing to the frontier.
    procedure Good_Facts_Do_No_Harm
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
-      N : Instance)
+      L, L2 : Line_View; N : Instance)
    with
      Pre  => Good_Ext (F, F2)
              and then Monotone (O)
              and then Stratified (F) and then Stratified (F2)
-             and then Plain_Obligations (F),
-     Post => (if On_Frontier (O, T, S, F2, N)
-              then On_Frontier (O, T, S, F, N));
+             and then Plain_Obligations (F)
+             and then View_Le (L, L2),
+     Post => (if On_Frontier (O, T, S, F2, L2, N)
+              then On_Frontier (O, T, S, F, L, N));
+
+   --  R6 as the spec now has it: with obligations unconditional, the
+   --  one condition left on the ontology is that read_as is monotone.
+   procedure Good_News
+     (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
+      L, L2 : Line_View; N : Instance)
+   with
+     Pre  => Good_Ext (F, F2) and then Monotone (O)
+             and then Unconditional (F) and then View_Le (L, L2),
+     Post => (if On_Frontier (O, T, S, F2, L2, N)
+              then On_Frontier (O, T, S, F, L, N));
 
 end Vk.Lemmas;

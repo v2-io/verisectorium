@@ -1,0 +1,272 @@
+
+== 1. A small move: a fork that closes (roots: the two documents)
+  checkpoint S0  (time 12)
+    selected: p1@1(root) p2@1 p3@1 p4@1(root) p5@1
+    frontier empty
+    ok:   S0 is stationary
+  the finding (it is in the base: main sees it too)  (time 13)
+    selected: p1@1(root) p2@1 p3@1 p4@1(root) p5@1
+    owed: C5_RESTS(p 5, 1)
+    owed: C6_FAILS(p 2, 6)
+    ok:   c is known wrong
+    ok:     and on the main line as well, with no event on it
+    ok:   u rests on an inconsistent c
+    ok:   T and U are untouched: a slot needs a filler in canon, not a consistent one
+  c@2 written, nothing else done  (time 14)
+    selected: p1@1(root) p2@2 p3@1 p4@1(root) p5@1
+    owed: C2_TOGETHER(p 1, 2, 1)
+    owed: C4_RECONCILED(p 5, 1)
+    owed: C5_ASKS(p 1, 1, 2)
+    owed: C5_ASKS(p 2, 1, 1)
+    owed: C5_ASKS(p 3, 1, 1)
+    owed: C5_ASKS(p 5, 4, 1)
+    owed: C5_RESTS(p 5, 1)
+    owed: C6_GUARD(p 2, 1, 2)
+    ok:   the defect is presumed in c@2
+    ok:   u was written against c@1
+    ok:   u's check read c@1: it no longer applies (evidence has reads)
+    ok:   T's whole read read c's assertion: lapsed
+    ok:   rewind: the dead-end draft c@3 is gone from the line
+    ok:     and the check made of it changes nothing here (R2)
+  the fork, repaired  (time 21)
+    selected: p1@1(root) p2@2 p3@1 p4@1(root) p5@2
+    frontier empty
+    ok:   the fork is stationary
+    ok:   main is not (the finding stands against it) until the fork closes
+    ok:   closed: checkpoint S1 is stationary
+    ok:   R4: c reworded again later: no guard from the old finding
+    ok:   R4: selecting c@1 again brings the finding back
+
+== 2. An outline fills in (dimension 2 is 'accepted', decided)
+    ok:   S0 is stationary
+    ok:   step 1: the promise is owed
+    ok:     O's acceptance is untouched: promising writes nothing
+  step 2: R2 drafted, in a slot flagged provisional  (time 10)
+    selected: p1@2(root) p2@1 p4@1(not in canon) p5@1(not in canon)
+    owed: C8_SLOT(p 1, 2)
+    ok:   step 2: the promise is still owed, and nothing inside the draft is
+  step 4: the flag removed, R2 and Q accepted  (time 14)
+    selected: p1@3(root) p2@1 p4@1 p5@1
+    frontier empty
+    ok:   step 4: stationary; the promise kept
+    ok:   closed: S1
+  step 5: D reworded  (time 15)
+    selected: p1@3(root) p2@2 p4@1 p5@1
+    owed: C4_RECONCILED(p 4, 1)
+    owed: C5_ASKS(p 2, 1, 2)
+    owed: C5_RESTS(p 4, 1)
+    ok:   step 5: D's acceptance was of D@1
+    ok:     R2 was written against D@1, and rests on a D not consistent
+    ok:     R2's own acceptance stands (it is of R2@1)
+    ok:     O holds D and is untouched
+    ok:   step 6: accept D@2, affirm: stationary
+  step 7: the assumption fails  (time 18)
+    selected: p1@3(root) p2@2 p4@1 p5@1
+    owed: C5_RESTS(p 4, 2)
+    owed: C6_FAILS(p 5, 1)
+    ok:   step 7: R2 is unsettled through its reference to Q, with no word of R2 changed. (Its ACCEPTANCE is not reopened: an accept cannot here be conditioned on Q; see the account)
+
+== 3. A rewording, a wrong finding and a right one
+    ok:   S0 is stationary
+    ok:   step 1: reworded; its check lapsed
+    ok:     e narrates c, relies on its assertions: unchanged
+    ok:   step 2: one same event carries the check
+    ok:   step 3: a finding against c
+    ok:   step 4 (R5): set aside by a decision on the fork; c is never written
+    ok:     on main it still stands until the fork closes
+    ok:   step 5: the rewrite does not clear it
+    ok:   step 6: answered at the new version
+    ok:   closed
+    ok:   afterwards (R4): a comma moved in e; the answered finding asks nothing more (draft 3 owed it again at every edit)
+
+== 4. Two forks from one checkpoint: PLAIN
+    ok:   the checkpoint is stationary
+  A alone  (time 18)
+    selected: p1@2 p2@2 p3@1 p4@1(not in canon) p5@1(root)
+    owed: C6_FAILS(p 3, 10)
+  B alone  (time 18)
+    selected: p1@1 p2@1 p3@2 p4@1(not in canon) p5@1(root)
+    owed: C5_RESTS(p 2, 1)
+    owed: C6_FAILS(p 1, 6)
+  both closed  (time 18)
+    selected: p1@2 p2@2 p3@2 p4@1(not in canon) p5@1(root)
+    frontier empty
+    the union agrees with A on { p1 p2 p4 p5 }, with B on { p3 p4 p5 }; with neither on { }
+    ok:   each fork is stationary on the region it shares with the union
+    ok:   the two regions cover everything: by the theorem (Vk.Merge.Forks_Compose) the union is stationary
+    ok:   neither is stationary alone: each sees the other's finding, which is in the base
+    ok:   together they are (R9 holds here)
+
+== 4. Two forks from one checkpoint: WHOLE_READ
+    ok:   the checkpoint is stationary
+  A alone  (time 21)
+    selected: p1@2 p2@2 p3@1 p4@1(not in canon) p5@1(root)
+    owed: C6_FAILS(p 3, 10)
+  B alone  (time 21)
+    selected: p1@1 p2@1 p3@2 p4@1(not in canon) p5@1(root)
+    owed: C5_RESTS(p 2, 1)
+    owed: C6_FAILS(p 1, 6)
+  both closed  (time 21)
+    selected: p1@2 p2@2 p3@2 p4@1(not in canon) p5@1(root)
+    owed: C5_ASKS(p 5, 5, 2)
+    the union agrees with A on { p1 p2 p4 }, with B on { p3 p4 }; with neither on { p5 }
+    ok:   each fork is stationary on the region it shares with the union
+    ok:   what is owed is about the outline, which is in neither region (Vk.Merge.Meeting_Is_Local)
+    ok:   they meet at the outline: one fact that read two parts (the spec's second case)
+
+== 4. Two forks from one checkpoint: REFERENCE_TO_REWRITTEN
+    ok:   the checkpoint is stationary
+  A alone  (time 18)
+    selected: p1@2 p2@2 p3@1 p4@1(not in canon) p5@1(root)
+    owed: C6_FAILS(p 3, 10)
+  B alone  (time 18)
+    selected: p1@1 p2@1 p3@2 p4@1(not in canon) p5@1(root)
+    owed: C5_RESTS(p 2, 1)
+    owed: C5_RESTS(p 3, 1)
+    owed: C6_FAILS(p 1, 6)
+  both closed  (time 18)
+    selected: p1@2 p2@2 p3@2 p4@1(not in canon) p5@1(root)
+    owed: C4_RECONCILED(p 3, 1)
+    the union agrees with A on { p1 p2 p4 p5 }, with B on { p4 p5 }; with neither on { p3 }
+    ok:   each fork is stationary on the region it shares with the union
+    ok:   what is owed is about x, in neither region
+    ok:   they meet at x's reference, written against c@1: NOT one of R9's two cases (no id written twice, no evidence that read what the other rewrote)
+    ok:   OBSERVED: if 'written against' is worked out from the line being read, the union says x@2 was written against c@2, because A's write of c is earlier in time than B's write of x. B never saw c@2. The union is stationary on an affirmation nobody made
+
+== 4. Two forks from one checkpoint: SLOT_TO_REWRITTEN
+    ok:   the checkpoint is stationary
+  A alone  (time 12)
+    selected: p1@1 p2@1(not in canon) p3@1 p4@1 p5@2(root)
+    frontier empty
+  B alone  (time 12)
+    selected: p1@1 p2@1 p3@1 p4@2(not in canon) p5@1(root)
+    frontier empty
+  both closed  (time 12)
+    selected: p1@1 p2@1(not in canon) p3@1 p4@2 p5@2(root)
+    owed: C5_ASKS(p 4, 5, 1)
+    the union agrees with A on { p1 p2 p3 p5 }, with B on { p1 p3 }; with neither on { p4 }
+    ok:   each fork is stationary on the region it shares with the union
+    ok:   what is owed is about w, in neither region
+    ok:   each alone is stationary
+    ok:   PREDICTED: together not: A's slot brings into canon the w that B rewrote. NOT one of R9's two cases
+
+== 4. Two forks from one checkpoint: RETIRED_TARGET
+    ok:   the checkpoint is stationary
+  A alone  (time 13)
+    selected: p1@1 p2@1 p3@1 p5@1(root)
+    frontier empty
+  B alone  (time 13)
+    selected: p1@1 p2@1 p3@2 p4@1(not in canon) p5@1(root)
+    frontier empty
+  both closed  (time 13)
+    selected: p1@1 p2@1 p3@2 p5@1(root)
+    owed: C3_RESOLVE(p 3, 1)
+    the union agrees with A on { p1 p2 p4 p5 }, with B on { p1 p2 p5 }; with neither on { p3 }
+    ok:   each fork is stationary on the region it shares with the union
+    ok:   what is owed is about x, in neither region
+    ok:   each alone is stationary
+    ok:   PREDICTED: together not: B's x refers to what A retired. NOT one of R9's two cases
+
+== 4. Two forks from one checkpoint: UNMARKED_ROOT
+    ok:   the checkpoint is stationary
+  A alone  (time 13)
+    selected: p1@1(not in canon) p2@1(not in canon) p3@1(not in canon) p4@1(not in canon) p5@1(not in canon)
+    frontier empty
+  B alone  (time 13)
+    selected: p1@1 p2@1 p3@2 p4@1(not in canon) p5@1(root)
+    frontier empty
+  both closed  (time 13)
+    selected: p1@1(not in canon) p2@1(not in canon) p3@2(not in canon) p4@1(not in canon) p5@1(not in canon)
+    frontier empty
+    the union agrees with A on { p1 p2 p4 p5 }, with B on { p4 }; with neither on { p3 }
+    ok:   each fork is stationary on the region it shares with the union
+    ok:   x is in neither region (B rewrote it; A took it out of canon), and yet nothing is owed: the theorem says where to look, not that there must be something there
+    ok:   each alone is stationary
+    ok:   together: stationary, vacuously (nothing is in canon)
+
+== 4. Two forks from one checkpoint: WITHDRAWN_WAIVER
+    ok:   the checkpoint is stationary
+  A alone  (time 18)
+    selected: p1@1 p2@1 p3@2 p4@1(not in canon) p5@1(root)
+    frontier empty
+  B alone  (time 18)
+    selected: p1@1 p2@2 p3@1 p4@1(not in canon) p5@1(root)
+    owed: C6_FAILS(p 3, 5)  [waived]
+  both closed  (time 18)
+    selected: p1@1 p2@2 p3@2 p4@1(not in canon) p5@1(root)
+    frontier empty
+    the union agrees with A on { p1 p3 p4 p5 }, with B on { p1 p2 p4 p5 }; with neither on { }
+    ok:   each fork is stationary on the region it shares with the union
+    ok:   the two regions cover everything: by the theorem (Vk.Merge.Forks_Compose) the union is stationary
+    ok:   each alone is stationary
+    ok:   together: stationary (A repaired what the waiver covered; B did not lean on it)
+
+== 5. An audit comes in
+    ok:   S0 is stationary
+    ok:   step 1: the source comes in under no root; nothing is owed
+    ok:   step 2: a question raised on c is owed although c was checked before (C9 now asks for evidence LATER than the raise)
+    ok:     a later check answers it
+    ok:   step 4: 'already present' said as an affirm of the chunk against i@1 (there is still no routing decision)
+    ok:   closed
+    ok:   step 7: i rewritten; the routing fails
+    ok:     and nothing is owed for it: retirement is still no constraint
+
+== P1. Guards by the letter: an old pass meets a new finding
+    ok:   LETTER: p1 found wrong
+    ok:   LETTER, PREDICTED: reworded, and the pass that came BEFORE the finding meets its guard: stationary, the defect never looked at (3 events, 2 facts)
+    ok:   LATER: p1 found wrong
+    ok:   LATER: the guard stands until something later than the finding answers it
+
+== P2. Guards and rewind: a finding against a dropped version
+    ok:   the draft p1@2 is found wrong on the fork
+    ok:   AS WRITTEN, PREDICTED: rewind, write it again reworded: p1@2 is a version 'the line never selected', so no guard: stationary
+    ok:   the draft p1@2 is found wrong on the fork
+    ok:   switch: a finding against any version of the piece guards the line until answered once
+
+== P2b. A finding that read something, and the thing rewritten
+    ok:   p1 found wrong, by a check that read p2
+    ok:   as built: a finding that has stopped applying guards the version it was about as well
+    ok:   p1 found wrong, by a check that read p2
+    ok:   AS WRITTEN, PREDICTED after the first search run: reword p2, which the finding read. The finding no longer applies (its read is not as it was) and guards only LATER versions of p1: p1@1 is clean, untouched and unexamined
+
+== P3. R3: going back
+    ok:   stationary at the point
+    ok:   after the rewind the selection is as it was
+    ok:   and it is stationary: what was learned is about p1@2, which the line no longer has (and, as written, never had)
+    ok:   a finding recorded since, about the version returned to, is what makes a return not stationary
+
+== P4. R5: what a set aside can do
+    ok:   a question is raised; a finding answers it (it is evidence on the dimension) and is itself owed
+    ok:   set the finding aside: its item goes, and the QUESTION comes back. Setting aside a finding can add an item
+    ok:   set aside evidence that HOLDS: the warrant falls. A set aside is not good news
+
+== P5. R10: canon by roots
+    ok:   under the outline alone: stationary
+  the document marked a root too  (time 10)
+    selected: p1@1 p2@1 p3@1(not in canon) p4@1(root) p5@1(root)
+    owed: C5_ASKS(p 2, 4, 1)
+    ok:   p2 is reached by both and held to both: the document asks validity 2 and p2 has 1
+  p2 checked by a second criterion  (time 11)
+    selected: p1@1 p2@1 p3@1(not in canon) p4@1(root) p5@1(root)
+    owed: C5_ASKS(p 2, 4, 1)
+    ok:   OBSERVED: still owed. p2 is predicated on p1, validity caps along that, and p1 (asked only 1 by the outline) has 1: what a root asks reaches through the cap to pieces the root does not reach
+    ok:   p1 checked twice as well: stationary
+    ok:   bad news against the provisional p3: no item, and one stated condition
+  the outline unmarked  (time 14)
+    selected: p1@1(not in canon) p2@1 p3@1(not in canon) p4@1(root) p5@1(not in canon)
+    owed: C5_RESTS(p 2, 1)
+    ok:   PREDICTED: unmarking the outline ADDS an item: p1 was in canon only through it, and p2 (still under the document) rests on p1
+
+== P6. R7: is the greatest fixed point now unique?
+    ok:   two claims resting on each other (by a kind that caps nothing): consistent together
+    ok:   NOT unique: 'neither of them' is a fixed point too
+
+== P7. Closing second: union, and what re-timing would do
+    ok:   A closes after B, as a union of timed events: stationary
+  A's write appended to main with a new time  (time 12)
+    selected: p1@2 p2@2 p5@1(root)
+    owed: C6_GUARD(p 1, 1, 2)
+    ok:   appended and re-timed: the fork was stationary and the main line after closing is not. The answer 'did not apply when recorded': by the new times p1@2 was written after it
+
+expectations: 110, failed: 0
+exit 0

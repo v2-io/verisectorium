@@ -1,0 +1,33 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-frames.adb:19:27
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-frames.adb:21:22
+ warning: unused variable "O"
+--> vk-model.ads:85:07
+   85 |         (O : Ontology; T : Version_Table; S : Selection; F : Facts; I : Ev_Ix)
+      |          ^
+
+ warning: unused variable "J" in conjunct [-gnatw.t]
+--> vk-model.ads:116:23
+  116 |            and then S (P).Selected and then F.Dec (J).PVs (S (P).V)
+      |                     ~~~~~^~~~~~~~~
+      + consider extracting conjunct from quantified expression
+
+ warning: unused variable "D" in conjunct [-gnatw.t]
+--> vk-model.ads:239:56
+  239 |                   and then S (Edge (O, T, S, P, I).Target).Selected
+      |                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+      + consider extracting conjunct from quantified expression
+
+ warning: unused variable "D" in conjunct [-gnatw.t]
+--> vk-model.ads:240:25
+  240 |                   and then Dp (Edge (O, T, S, P, I).Target)))]);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + consider extracting conjunct from quantified expression
+Success: all checks proved (656 checks).
+Summary logged in /Users/josephwecker-v2/src/verisectorium/msc/scratch/kernel-2/ada/obj/development/gnatprove/gnatprove.out
+exit 0

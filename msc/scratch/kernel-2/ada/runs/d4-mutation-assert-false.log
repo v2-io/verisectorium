@@ -1,0 +1,59 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:69:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:70:27
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:71:26
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:80:19
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:81:22
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:82:25
+
+ info: unrolling loop [info-unrolling-inlining]
+--> vk-model.adb:89:19
+
+ warning: unused variable "O"
+--> vk-model.ads:85:07
+   85 |         (O : Ontology; T : Version_Table; S : Selection; F : Facts; I : Ev_Ix)
+      |          ^
+
+ warning: unused variable "J" in conjunct [-gnatw.t]
+--> vk-model.ads:116:23
+  116 |            and then S (P).Selected and then F.Dec (J).PVs (S (P).V)
+      |                     ~~~~~^~~~~~~~~
+      + consider extracting conjunct from quantified expression
+ medium: assertion might fail
+--> vk-lemmas.adb:306:07
+  306 |          pragma Assert (False);
+      |          ^~~~~~~~~~~~~~~~~~~~
+      + provers reached time limit before completing the proof
+
+ medium: assertion might fail
+--> vk-lemmas.adb:672:07
+  672 |          pragma Assert (False);
+      |          ^~~~~~~~~~~~~~~~~~~~
+      + provers reached time limit before completing the proof
+
+ high: all paths in "Well_Defined" raise exceptions or do not terminate normally
+--> vk-lemmas.ads:105:14
+  105 |       procedure Well_Defined
+      |                 ^~~~~~~~~~~~
+
+ high: all paths in "Good_News" raise exceptions or do not terminate normally
+--> vk-lemmas.ads:197:14
+  197 |       procedure Good_News
+      |                 ^~~~~~~~~
+Summary logged in /Users/josephwecker-v2/src/verisectorium/msc/scratch/kernel-2/ada/obj/release/gnatprove/gnatprove.out
+gnatprove: unproved check messages considered as errors
+ERROR: Command ["gnatprove", "-P", "vkern.gpr"] exited with code 1
+exit 1

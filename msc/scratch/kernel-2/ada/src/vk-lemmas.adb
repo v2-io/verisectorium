@@ -71,34 +71,34 @@ package body Vk.Lemmas with SPARK_Mode => On is
    --  larger.
    procedure Inst_Mono
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; Y, X : Id_Set; N : Instance)
+      L : Line_View; C : Context; Y, X : Id_Set; N : Instance)
    with
      Pre  => Stratified (F) and then Sub_Set (Y, X),
-     Post => (if Violated (O, T, S, F, C, X, N)
-              then Violated (O, T, S, F, C, Y, N))
+     Post => (if Violated (O, T, S, F, L, C, X, N)
+              then Violated (O, T, S, F, L, C, Y, N))
              and then
              (if Covered (T, S, F, C, Y, N)
               then Covered (T, S, F, C, X, N));
 
    procedure Inst_Mono
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; Y, X : Id_Set; N : Instance) is
+      L : Line_View; C : Context; Y, X : Id_Set; N : Instance) is
    begin
       Decs_Mono (T, S, F, C, Y, X);
    end Inst_Mono;
 
    procedure Mono_X
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; Y, X : Id_Set; P : Id) is
+      L : Line_View; C : Context; Y, X : Id_Set; P : Id) is
    begin
       for K in Inst_Kind loop
          for I in Sub loop
             for J in Sub loop
-               Inst_Mono (O, T, S, F, C, Y, X, (K, P, I, J));
+               Inst_Mono (O, T, S, F, L, C, Y, X, (K, P, I, J));
                pragma Loop_Invariant
                  (for all J2 in Sub range Sub'First .. J =>
-                    (if Violated (O, T, S, F, C, X, (K, P, I, J2))
-                     then Violated (O, T, S, F, C, Y, (K, P, I, J2)))
+                    (if Violated (O, T, S, F, L, C, X, (K, P, I, J2))
+                     then Violated (O, T, S, F, L, C, Y, (K, P, I, J2)))
                     and then
                     (if Covered (T, S, F, C, Y, (K, P, I, J2))
                      then Covered (T, S, F, C, X, (K, P, I, J2))));
@@ -106,8 +106,8 @@ package body Vk.Lemmas with SPARK_Mode => On is
             pragma Loop_Invariant
               (for all I2 in Sub range Sub'First .. I =>
                  (for all J2 in Sub =>
-                    (if Violated (O, T, S, F, C, X, (K, P, I2, J2))
-                     then Violated (O, T, S, F, C, Y, (K, P, I2, J2)))
+                    (if Violated (O, T, S, F, L, C, X, (K, P, I2, J2))
+                     then Violated (O, T, S, F, L, C, Y, (K, P, I2, J2)))
                     and then
                     (if Covered (T, S, F, C, Y, (K, P, I2, J2))
                      then Covered (T, S, F, C, X, (K, P, I2, J2)))));
@@ -116,8 +116,8 @@ package body Vk.Lemmas with SPARK_Mode => On is
            (for all K2 in Inst_Kind range Inst_Kind'First .. K =>
               (for all I2 in Sub =>
                  (for all J2 in Sub =>
-                    (if Violated (O, T, S, F, C, X, (K2, P, I2, J2))
-                     then Violated (O, T, S, F, C, Y, (K2, P, I2, J2)))
+                    (if Violated (O, T, S, F, L, C, X, (K2, P, I2, J2))
+                     then Violated (O, T, S, F, L, C, Y, (K2, P, I2, J2)))
                     and then
                     (if Covered (T, S, F, C, Y, (K2, P, I2, J2))
                      then Covered (T, S, F, C, X, (K2, P, I2, J2))))));
@@ -136,118 +136,118 @@ package body Vk.Lemmas with SPARK_Mode => On is
    --  What has been dropped stays dropped.
    function Dropped
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; X : Id_Set) return Boolean
+      L : Line_View; C : Context; X : Id_Set) return Boolean
    is
      (for all P in Id =>
-        (if not X (P) then not Own_OK (O, T, S, F, C, X, P)));
+        (if not X (P) then not Own_OK (O, T, S, F, L, C, X, P)));
 
    --  Two sets with the same members: if one is a fixed point, so is
    --  the other. (Stated and proved through Mono_X both ways, because
    --  the provers do not get F (A) = F (B) from A = B on arrays.)
    procedure Fixed_Transfer
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; A, B : Id_Set)
+      L : Line_View; C : Context; A, B : Id_Set)
    with
      Pre  => Stratified (F) and then Sub_Set (A, B) and then Sub_Set (B, A)
-             and then Is_Fixed (O, T, S, F, C, B),
-     Post => Is_Fixed (O, T, S, F, C, A);
+             and then Is_Fixed (O, T, S, F, L, C, B),
+     Post => Is_Fixed (O, T, S, F, L, C, A);
 
    procedure Fixed_Transfer
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; A, B : Id_Set) is
+      L : Line_View; C : Context; A, B : Id_Set) is
    begin
       for P in Id loop
-         Mono_X (O, T, S, F, C, A, B, P);
-         Mono_X (O, T, S, F, C, B, A, P);
+         Mono_X (O, T, S, F, L, C, A, B, P);
+         Mono_X (O, T, S, F, L, C, B, A, P);
          pragma Loop_Invariant
            (for all Q in Id range Id'First .. P =>
-              A (Q) = Own_OK (O, T, S, F, C, A, Q));
+              A (Q) = Own_OK (O, T, S, F, L, C, A, Q));
       end loop;
    end Fixed_Transfer;
 
    procedure Fixed_Rec
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; X : Id_Set; N : Natural)
+      L : Line_View; C : Context; X : Id_Set; N : Natural)
    with
      Subprogram_Variant => (Decreases => N),
      Pre  => Stratified (F) and then Card (X) <= N
-             and then Dropped (O, T, S, F, C, X),
-     Post => Is_Fixed (O, T, S, F, C, Iter (O, T, S, F, C, X, N));
+             and then Dropped (O, T, S, F, L, C, X),
+     Post => Is_Fixed (O, T, S, F, L, C, Iter (O, T, S, F, L, C, X, N));
 
    procedure Fixed_Rec
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; X : Id_Set; N : Natural)
+      L : Line_View; C : Context; X : Id_Set; N : Natural)
    is
-      X2 : constant Id_Set := Stepped (O, T, S, F, C, X);
-      R  : constant Id_Set := Iter (O, T, S, F, C, X, N);
+      X2 : constant Id_Set := Stepped (O, T, S, F, L, C, X);
+      R  : constant Id_Set := Iter (O, T, S, F, L, C, X, N);
    begin
       if X2 = X then
          pragma Assert (R = X);
          pragma Assert
-           (for all P in Id => X (P) = Own_OK (O, T, S, F, C, X, P));
-         pragma Assert (Is_Fixed (O, T, S, F, C, X));
-         Fixed_Transfer (O, T, S, F, C, R, X);
+           (for all P in Id => X (P) = Own_OK (O, T, S, F, L, C, X, P));
+         pragma Assert (Is_Fixed (O, T, S, F, L, C, X));
+         Fixed_Transfer (O, T, S, F, L, C, R, X);
       else
          pragma Assert (Sub_Set (X2, X));
          pragma Assert (for some P in Id => X (P) and then not X2 (P));
          pragma Assert (Card (X2) < Card (X));
          pragma Assert (N > 0);
          for P in Id loop
-            Mono_X (O, T, S, F, C, X2, X, P);
+            Mono_X (O, T, S, F, L, C, X2, X, P);
             pragma Loop_Invariant
               (for all Q in Id range Id'First .. P =>
-                 (if Own_OK (O, T, S, F, C, X2, Q)
-                  then Own_OK (O, T, S, F, C, X, Q)));
+                 (if Own_OK (O, T, S, F, L, C, X2, Q)
+                  then Own_OK (O, T, S, F, L, C, X, Q)));
          end loop;
-         pragma Assert (Dropped (O, T, S, F, C, X2));
-         Fixed_Rec (O, T, S, F, C, X2, N - 1);
-         pragma Assert (R = Iter (O, T, S, F, C, X2, N - 1));
-         Fixed_Transfer (O, T, S, F, C, R, Iter (O, T, S, F, C, X2, N - 1));
+         pragma Assert (Dropped (O, T, S, F, L, C, X2));
+         Fixed_Rec (O, T, S, F, L, C, X2, N - 1);
+         pragma Assert (R = Iter (O, T, S, F, L, C, X2, N - 1));
+         Fixed_Transfer (O, T, S, F, L, C, R, Iter (O, T, S, F, L, C, X2, N - 1));
       end if;
    end Fixed_Rec;
 
    procedure Consistent_Is_Fixed
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context) is
+      L : Line_View; C : Context) is
    begin
       pragma Assert (Card (Asserted_Set (S)) <= Rounds);
-      pragma Assert (Dropped (O, T, S, F, C, Asserted_Set (S)));
-      Fixed_Rec (O, T, S, F, C, Asserted_Set (S), Rounds);
+      pragma Assert (Dropped (O, T, S, F, L, C, Asserted_Set (S)));
+      Fixed_Rec (O, T, S, F, L, C, Asserted_Set (S), Rounds);
    end Consistent_Is_Fixed;
 
    procedure Greatest_Rec
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; Y, X : Id_Set; N : Natural)
+      L : Line_View; C : Context; Y, X : Id_Set; N : Natural)
    with
      Subprogram_Variant => (Decreases => N),
      Pre  => Stratified (F) and then Sub_Set (Y, X)
              and then (for all P in Id =>
-                         (if Y (P) then Own_OK (O, T, S, F, C, Y, P))),
-     Post => Sub_Set (Y, Iter (O, T, S, F, C, X, N));
+                         (if Y (P) then Own_OK (O, T, S, F, L, C, Y, P))),
+     Post => Sub_Set (Y, Iter (O, T, S, F, L, C, X, N));
 
    procedure Greatest_Rec
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; Y, X : Id_Set; N : Natural) is
+      L : Line_View; C : Context; Y, X : Id_Set; N : Natural) is
    begin
       if N > 0 then
          for P in Id loop
-            Mono_X (O, T, S, F, C, Y, X, P);
+            Mono_X (O, T, S, F, L, C, Y, X, P);
             pragma Loop_Invariant
               (for all Q in Id range Id'First .. P =>
-                 (if Own_OK (O, T, S, F, C, Y, Q)
-                  then Own_OK (O, T, S, F, C, X, Q)));
+                 (if Own_OK (O, T, S, F, L, C, Y, Q)
+                  then Own_OK (O, T, S, F, L, C, X, Q)));
          end loop;
-         pragma Assert (Sub_Set (Y, Stepped (O, T, S, F, C, X)));
-         Greatest_Rec (O, T, S, F, C, Y, Stepped (O, T, S, F, C, X), N - 1);
+         pragma Assert (Sub_Set (Y, Stepped (O, T, S, F, L, C, X)));
+         Greatest_Rec (O, T, S, F, L, C, Y, Stepped (O, T, S, F, L, C, X), N - 1);
       end if;
    end Greatest_Rec;
 
    procedure Consistent_Is_Greatest
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; Y : Id_Set) is
+      L : Line_View; C : Context; Y : Id_Set) is
    begin
       pragma Assert (Sub_Set (Y, Asserted_Set (S)));
-      Greatest_Rec (O, T, S, F, C, Y, Asserted_Set (S), Rounds);
+      Greatest_Rec (O, T, S, F, L, C, Y, Asserted_Set (S), Rounds);
    end Consistent_Is_Greatest;
 
    -------------------------------------------------------------------
@@ -282,19 +282,28 @@ package body Vk.Lemmas with SPARK_Mode => On is
    end Cap_Unique;
 
    -------------------------------------------------------------------
-   --  Q5
+   --  R8, R7
    -------------------------------------------------------------------
 
-   procedure Defect_Stays
+   procedure Guard_Is_Owed
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      X : Id_Set; P : Id; I : Ev_Ix)
-   is
-      C : constant Context := Derive (O, T, S, F);
+      L : Line_View; X : Id_Set; P : Id; D : Dim; Cr : Crit) is
    begin
-      pragma Assert (Guard (O, T, S, F, P, F.Ev (I).D, F.Ev (I).C));
-      pragma Assert
-        (not Has_Holds_C (F, C, P, F.Ev (I).D, F.Ev (I).C));
-   end Defect_Stays;
+      null;
+   end Guard_Is_Owed;
+
+   procedure Well_Defined
+     (O : Ontology; T : Version_Table; S : Selection; F : Facts;
+      L : Line_View; C : Context; Y : Id_Set) is
+   begin
+      pragma Assert (Stratified (F));
+      Consistent_Is_Fixed (O, T, S, F, L, C);
+      if (for all P in Id =>
+            (if Y (P) then Own_OK (O, T, S, F, L, C, Y, P)))
+      then
+         Consistent_Is_Greatest (O, T, S, F, L, C, Y);
+      end if;
+   end Well_Defined;
 
    -------------------------------------------------------------------
    --  Q4
@@ -305,13 +314,14 @@ package body Vk.Lemmas with SPARK_Mode => On is
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
       I : Ev_Ix) return Boolean
    is
-     (Aside (O, T, S, F, I) = Aside (O, T, S, F2, I)
+     (Aside (F, I) = Aside (F2, I)
       and then (if Applies (O, T, S, F, I) then
                   Applies (O, T, S, F2, I)
                   and then F.Ev (I).P = F2.Ev (I).P
                   and then F.Ev (I).D = F2.Ev (I).D
                   and then F.Ev (I).C = F2.Ev (I).C
                   and then F.Ev (I).Result = F2.Ev (I).Result
+                  and then F.Ev (I).Time = F2.Ev (I).Time
                   and then F.Ev (I).Reads (1).Present
                            = F2.Ev (I).Reads (1).Present
                   and then F.Ev (I).Reads (2).Present
@@ -344,7 +354,7 @@ package body Vk.Lemmas with SPARK_Mode => On is
         (for all J in Dec_Ix =>
            (if F2.Dec (J).Present and then F2.Dec (J).What = Set_Aside
             then F.Dec (J) = F2.Dec (J)));
-      pragma Assert (Aside (O, T, S, F, I) = Aside (O, T, S, F2, I));
+      pragma Assert (Aside (F, I) = Aside (F2, I));
       pragma Assert (Ev_Good (F.Ev (I), F2.Ev (I)));
       if F.Ev (I) = F2.Ev (I) then
          pragma Assert
@@ -352,8 +362,8 @@ package body Vk.Lemmas with SPARK_Mode => On is
       elsif F.Ev (I).Present then
          pragma Assert
            (for all R in Read_Ix =>
-              (if Read_OK (O, T, S, F.Ev (I).Reads (R))
-               then Read_OK (O, T, S, F2.Ev (I).Reads (R))));
+              (if Read_OK (T, S, F.Ev (I).Reads (R))
+               then Read_OK (T, S, F2.Ev (I).Reads (R))));
       end if;
    end Ev_Transfer;
 
@@ -381,7 +391,7 @@ package body Vk.Lemmas with SPARK_Mode => On is
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
       P : Id; D : Dim)
    with
-     Pre  => Monotone (O)
+     Pre  => Monotone (O) and then Good_Ext (F, F2)
              and then (for all I in Ev_Ix => Ev_Rel (O, T, S, F, F2, I)),
      Post => Own_Warrant (O, T, S, F, P, D)
              <= Own_Warrant (O, T, S, F2, P, D);
@@ -394,6 +404,11 @@ package body Vk.Lemmas with SPARK_Mode => On is
         (for all Cr in Crit =>
            (if Has_Holds (O, T, S, F, P, D, Cr)
             then Has_Holds (O, T, S, F2, P, D, Cr)));
+      pragma Assert
+        (for all J in Dec_Ix =>
+           (if F.Dec (J).Present then F.Dec (J) = F2.Dec (J)));
+      pragma Assert
+        (if Accepted (T, S, F, P, D) then Accepted (T, S, F2, P, D));
    end Own_Mono;
 
    procedure Cap_Step_Mono
@@ -445,7 +460,7 @@ package body Vk.Lemmas with SPARK_Mode => On is
 
    function World_Le
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
-      C, C2 : Context; X, X2 : Id_Set) return Boolean
+      L, L2 : Line_View; C, C2 : Context; X, X2 : Id_Set) return Boolean
    is
      (Good_Ext (F, F2)
       and then Stratified (F) and then Stratified (F2)
@@ -455,13 +470,14 @@ package body Vk.Lemmas with SPARK_Mode => On is
                   C.App (I) = Applies (O, T, S, F, I)
                   and then C2.App (I) = Applies (O, T, S, F2, I))
       and then Ctx_Le (F2, C, C2)
+      and then View_Le (L, L2)
       and then Sub_Set (X, X2));
 
    procedure Dec_Transfer
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
-      C, C2 : Context; X, X2 : Id_Set; J : Dec_Ix)
+      L, L2 : Line_View; C, C2 : Context; X, X2 : Id_Set; J : Dec_Ix)
    with
-     Pre  => World_Le (O, T, S, F, F2, C, C2, X, X2),
+     Pre  => World_Le (O, T, S, F, F2, L, L2, C, C2, X, X2),
      Post => (if Dec_Holds (T, S, F, C, X, J)
               then Dec_Holds (T, S, F2, C2, X2, J)
                    and then F.Dec (J) = F2.Dec (J))
@@ -473,7 +489,7 @@ package body Vk.Lemmas with SPARK_Mode => On is
 
    procedure Dec_Transfer
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
-      C, C2 : Context; X, X2 : Id_Set; J : Dec_Ix) is
+      L, L2 : Line_View; C, C2 : Context; X, X2 : Id_Set; J : Dec_Ix) is
    begin
       if F.Dec (J) = F2.Dec (J) then
          pragma Assert
@@ -508,17 +524,17 @@ package body Vk.Lemmas with SPARK_Mode => On is
 
    procedure Decs_Transfer
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
-      C, C2 : Context; X, X2 : Id_Set)
+      L, L2 : Line_View; C, C2 : Context; X, X2 : Id_Set)
    with
-     Pre  => World_Le (O, T, S, F, F2, C, C2, X, X2),
+     Pre  => World_Le (O, T, S, F, F2, L, L2, C, C2, X, X2),
      Post => Decs_Rel (T, S, F, F2, C, C2, X, X2);
 
    procedure Decs_Transfer
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
-      C, C2 : Context; X, X2 : Id_Set) is
+      L, L2 : Line_View; C, C2 : Context; X, X2 : Id_Set) is
    begin
       for J in Dec_Ix loop
-         Dec_Transfer (O, T, S, F, F2, C, C2, X, X2, J);
+         Dec_Transfer (O, T, S, F, F2, L, L2, C, C2, X, X2, J);
          pragma Loop_Invariant
            (for all J2 in Dec_Ix range Dec_Ix'First .. J =>
               (if Dec_Holds (T, S, F, C, X, J2)
@@ -534,44 +550,44 @@ package body Vk.Lemmas with SPARK_Mode => On is
 
    procedure Inst_Transfer
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
-      C, C2 : Context; X, X2 : Id_Set; N : Instance)
+      L, L2 : Line_View; C, C2 : Context; X, X2 : Id_Set; N : Instance)
    with
-     Pre  => World_Le (O, T, S, F, F2, C, C2, X, X2)
+     Pre  => World_Le (O, T, S, F, F2, L, L2, C, C2, X, X2)
              and then Decs_Rel (T, S, F, F2, C, C2, X, X2),
-     Post => (if Violated (O, T, S, F2, C2, X2, N)
-              then Violated (O, T, S, F, C, X, N))
+     Post => (if Violated (O, T, S, F2, L2, C2, X2, N)
+              then Violated (O, T, S, F, L, C, X, N))
              and then
              (if Covered (T, S, F, C, X, N)
               then Covered (T, S, F2, C2, X2, N));
 
    procedure Inst_Transfer
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
-      C, C2 : Context; X, X2 : Id_Set; N : Instance) is
+      L, L2 : Line_View; C, C2 : Context; X, X2 : Id_Set; N : Instance) is
    begin
       null;
    end Inst_Transfer;
 
    procedure Own_Transfer
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
-      C, C2 : Context; X, X2 : Id_Set; P : Id)
+      L, L2 : Line_View; C, C2 : Context; X, X2 : Id_Set; P : Id)
    with
-     Pre  => World_Le (O, T, S, F, F2, C, C2, X, X2),
-     Post => (if Own_OK (O, T, S, F, C, X, P)
-              then Own_OK (O, T, S, F2, C2, X2, P));
+     Pre  => World_Le (O, T, S, F, F2, L, L2, C, C2, X, X2),
+     Post => (if Own_OK (O, T, S, F, L, C, X, P)
+              then Own_OK (O, T, S, F2, L2, C2, X2, P));
 
    procedure Own_Transfer
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
-      C, C2 : Context; X, X2 : Id_Set; P : Id) is
+      L, L2 : Line_View; C, C2 : Context; X, X2 : Id_Set; P : Id) is
    begin
-      Decs_Transfer (O, T, S, F, F2, C, C2, X, X2);
+      Decs_Transfer (O, T, S, F, F2, L, L2, C, C2, X, X2);
       for K in Inst_Kind loop
          for I in Sub loop
             for J in Sub loop
-               Inst_Transfer (O, T, S, F, F2, C, C2, X, X2, (K, P, I, J));
+               Inst_Transfer (O, T, S, F, F2, L, L2, C, C2, X, X2, (K, P, I, J));
                pragma Loop_Invariant
                  (for all J2 in Sub range Sub'First .. J =>
-                    (if Violated (O, T, S, F2, C2, X2, (K, P, I, J2))
-                     then Violated (O, T, S, F, C, X, (K, P, I, J2)))
+                    (if Violated (O, T, S, F2, L2, C2, X2, (K, P, I, J2))
+                     then Violated (O, T, S, F, L, C, X, (K, P, I, J2)))
                     and then
                     (if Covered (T, S, F, C, X, (K, P, I, J2))
                      then Covered (T, S, F2, C2, X2, (K, P, I, J2))));
@@ -579,8 +595,8 @@ package body Vk.Lemmas with SPARK_Mode => On is
             pragma Loop_Invariant
               (for all I2 in Sub range Sub'First .. I =>
                  (for all J2 in Sub =>
-                    (if Violated (O, T, S, F2, C2, X2, (K, P, I2, J2))
-                     then Violated (O, T, S, F, C, X, (K, P, I2, J2)))
+                    (if Violated (O, T, S, F2, L2, C2, X2, (K, P, I2, J2))
+                     then Violated (O, T, S, F, L, C, X, (K, P, I2, J2)))
                     and then
                     (if Covered (T, S, F, C, X, (K, P, I2, J2))
                      then Covered (T, S, F2, C2, X2, (K, P, I2, J2)))));
@@ -589,8 +605,8 @@ package body Vk.Lemmas with SPARK_Mode => On is
            (for all K2 in Inst_Kind range Inst_Kind'First .. K =>
               (for all I2 in Sub =>
                  (for all J2 in Sub =>
-                    (if Violated (O, T, S, F2, C2, X2, (K2, P, I2, J2))
-                     then Violated (O, T, S, F, C, X, (K2, P, I2, J2)))
+                    (if Violated (O, T, S, F2, L2, C2, X2, (K2, P, I2, J2))
+                     then Violated (O, T, S, F, L, C, X, (K2, P, I2, J2)))
                     and then
                     (if Covered (T, S, F, C, X, (K2, P, I2, J2))
                      then Covered (T, S, F2, C2, X2, (K2, P, I2, J2))))));
@@ -599,12 +615,12 @@ package body Vk.Lemmas with SPARK_Mode => On is
 
    procedure Good_Facts_Do_No_Harm
      (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
-      N : Instance)
+      L, L2 : Line_View; N : Instance)
    is
       C  : constant Context := Derive (O, T, S, F);
       C2 : constant Context := Derive (O, T, S, F2);
-      X  : constant Id_Set := Consistent (O, T, S, F, C);
-      X2 : constant Id_Set := Consistent (O, T, S, F2, C2);
+      X  : constant Id_Set := Consistent (O, T, S, F, L, C);
+      X2 : constant Id_Set := Consistent (O, T, S, F2, L2, C2);
    begin
       Evs_Transfer (O, T, S, F, F2);
       for P in Id loop
@@ -625,18 +641,33 @@ package body Vk.Lemmas with SPARK_Mode => On is
 
       --  X, the consistent set of the smaller world, is consistent
       --  with itself in the larger one; so it lies within X2.
-      Consistent_Is_Fixed (O, T, S, F, C);
-      pragma Assert (World_Le (O, T, S, F, F2, C, C2, X, X));
+      Consistent_Is_Fixed (O, T, S, F, L, C);
+      pragma Assert (World_Le (O, T, S, F, F2, L, L2, C, C2, X, X));
       for P in Id loop
-         Own_Transfer (O, T, S, F, F2, C, C2, X, X, P);
+         Own_Transfer (O, T, S, F, F2, L, L2, C, C2, X, X, P);
          pragma Loop_Invariant
            (for all Q in Id range Id'First .. P =>
-              (if X (Q) then Own_OK (O, T, S, F2, C2, X, Q)));
+              (if X (Q) then Own_OK (O, T, S, F2, L2, C2, X, Q)));
       end loop;
-      Consistent_Is_Greatest (O, T, S, F2, C2, X);
-      pragma Assert (World_Le (O, T, S, F, F2, C, C2, X, X2));
-      Decs_Transfer (O, T, S, F, F2, C, C2, X, X2);
-      Inst_Transfer (O, T, S, F, F2, C, C2, X, X2, N);
+      Consistent_Is_Greatest (O, T, S, F2, L2, C2, X);
+      pragma Assert (World_Le (O, T, S, F, F2, L, L2, C, C2, X, X2));
+      Decs_Transfer (O, T, S, F, F2, L, L2, C, C2, X, X2);
+      Inst_Transfer (O, T, S, F, F2, L, L2, C, C2, X, X2, N);
    end Good_Facts_Do_No_Harm;
+
+   procedure Good_News
+     (O : Ontology; T : Version_Table; S : Selection; F, F2 : Facts;
+      L, L2 : Line_View; N : Instance) is
+   begin
+      pragma Assert (Stratified (F));
+      pragma Assert (Plain_Obligations (F));
+      pragma Assert
+        (for all J in Dec_Ix =>
+           (if F2.Dec (J).Present
+              and then F2.Dec (J).What not in Admit | Affirm
+            then F.Dec (J) = F2.Dec (J)));
+      pragma Assert (Stratified (F2));
+      Good_Facts_Do_No_Harm (O, T, S, F, F2, L, L2, N);
+   end Good_News;
 
 end Vk.Lemmas;

@@ -1,9 +1,11 @@
---  What is derived from an ontology O, a table of versions T, a
---  selection S and a set of facts F (spec sections 4 and 5).
+--  The state-to-frontier function (spec draft 4, sections 4 and 5):
+--  what is derived from an ontology O, a table of versions T, a
+--  selection S, the facts in force F, and the view L of the line the
+--  state was read from (its roots, what each reaches, which guards are
+--  open, what each version was written against).
 --
---  Every function here has Global => null by construction (the unit
---  has no state), which is Q1 in the language's own terms: nothing is
---  read but (O, T, S, F). There is no log and no fold to get wrong.
+--  Vk.Lines reads (S, F, L) from a line and the base. Everything here
+--  is a function of those and nothing else: the unit has no state.
 package Vk.Model with SPARK_Mode => On is
 
    function Sel (T : Version_Table; S : Selection; P : Id) return Version is
@@ -36,8 +38,6 @@ package Vk.Model with SPARK_Mode => On is
    --  Edges: a piece's references and its pointing slots, as one list
    -------------------------------------------------------------------
 
-   type Edge_Ix is range 1 .. 5;   --  1 .. 2 references, 3 .. 5 slots
-
    function Edge
      (O : Ontology; T : Version_Table; S : Selection; P : Id; I : Edge_Ix)
       return Ref
@@ -68,29 +68,18 @@ package Vk.Model with SPARK_Mode => On is
           and then Sel (T, S, C.P).Slots (C.S).Filler = C.Filler,
         when Warrant_At_Least | Asserted_Consistent => False);
 
-   --  Evidence I has been set aside by a decision that holds. Such a
-   --  decision's conditions must be plain: evidence decides warrants,
-   --  so it cannot be conditioned on them.
-   function Aside
-     (O : Ontology; T : Version_Table; S : Selection; F : Facts; I : Ev_Ix)
-      return Boolean
-   is
-     (O.Set_Aside_On
-      and then
-        (for some J in Dec_Ix =>
-           F.Dec (J).Present and then not F.Dec (J).Withdrawn
-           and then F.Dec (J).What = Set_Aside
-           and then F.Dec (J).Ev = I
-           and then
-             (for all K in Cond_Ix =>
-                Plain_True (T, S, F.Dec (J).Conds (K)))));
+   --  Evidence I has been set aside by a decision in force. A set
+   --  aside has no conditions (spec section 2).
+   function Aside (F : Facts; I : Ev_Ix) return Boolean is
+     (for some J in Dec_Ix =>
+        F.Dec (J).Present and then not F.Dec (J).Withdrawn
+        and then F.Dec (J).What = Set_Aside
+        and then F.Dec (J).Ev = I);
 
    function Read_OK
-     (O : Ontology; T : Version_Table; S : Selection; R : Read)
-      return Boolean
+     (T : Version_Table; S : Selection; R : Read) return Boolean
    is
-     (not O.Reads_On or else not R.Present
-      or else Agrees (T, S, R.Q, R.W, R.Same, R.Level));
+     (not R.Present or else Agrees (T, S, R.Q, R.W, R.Same, R.Level));
 
    function Applies
      (O : Ontology; T : Version_Table; S : Selection; F : Facts; I : Ev_Ix)
@@ -100,8 +89,8 @@ package Vk.Model with SPARK_Mode => On is
       and then S (F.Ev (I).P).Selected
       and then (S (F.Ev (I).P).V = F.Ev (I).V
                 or else F.Ev (I).Same (S (F.Ev (I).P).V))
-      and then (for all R in Read_Ix => Read_OK (O, T, S, F.Ev (I).Reads (R)))
-      and then not Aside (O, T, S, F, I));
+      and then (for all R in Read_Ix => Read_OK (T, S, F.Ev (I).Reads (R)))
+      and then not Aside (F, I));
 
    function Has_Holds
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
@@ -112,29 +101,32 @@ package Vk.Model with SPARK_Mode => On is
         and then F.Ev (I).P = P and then F.Ev (I).D = D
         and then F.Ev (I).C = C and then F.Ev (I).Result = Holds);
 
+   --  An accept decision about P on (decided) dimension D is in force.
+   --  Its conditions are read as plain ones only: a decided warrant
+   --  cannot depend on warrants or on consistency without the two
+   --  becoming circular (see the account).
+   function Accepted
+     (T : Version_Table; S : Selection; F : Facts; P : Id; D : Dim)
+      return Boolean
+   is
+     (for some J in Dec_Ix =>
+        F.Dec (J).Present and then not F.Dec (J).Withdrawn
+        and then F.Dec (J).What = Admit
+        and then F.Dec (J).P = P and then F.Dec (J).D = D
+        and then S (P).Selected and then F.Dec (J).PVs (S (P).V)
+        and then
+          (for all K in Cond_Ix => Plain_True (T, S, F.Dec (J).Conds (K))));
+
    function Own_Warrant
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
       P : Id; D : Dim) return Warrant
    is
-     (if S (P).Selected then
+     (if not S (P).Selected then 0
+      elsif O.Dims (D).Decided then
+        (if Accepted (T, S, F, P, D) then Warrant'Last else 0)
+      else
         O.Dims (D).Read_As
-          (Has_Holds (O, T, S, F, P, D, 1), Has_Holds (O, T, S, F, P, D, 2))
-      else 0);
-
-   --  A defect once found, about P at any version or about anything P
-   --  descends from, is presumed present until looked for and not
-   --  found (spec section 4, "Guards").
-   function Guard
-     (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      P : Id; D : Dim; C : Crit) return Boolean
-   is
-     (O.Guards_On
-      and then
-        (for some I in Ev_Ix =>
-           F.Ev (I).Present and then F.Ev (I).Result /= Holds
-           and then F.Ev (I).D = D and then F.Ev (I).C = C
-           and then (F.Ev (I).P = P or else F.Desc (F.Ev (I).P, P))
-           and then not Aside (O, T, S, F, I)));
+          (Has_Holds (O, T, S, F, P, D, 1), Has_Holds (O, T, S, F, P, D, 2)));
 
    -------------------------------------------------------------------
    --  The context: everything that does not depend on consistency
@@ -228,10 +220,42 @@ package Vk.Model with SPARK_Mode => On is
         else Cap_Iter'Result =
                Cap_Iter (O, T, S, Cap_Step (O, T, S, E), N - 1));
 
-   --  The pieces on a cycle along a capping kind. It reads the
-   --  selection and the versions, and no fact.
+   --  Cycles along capping kinds. Deep_Step keeps the pieces that
+   --  have a capping edge (for some dimension) to a selected piece
+   --  still kept. Starting from every selected piece, what is left
+   --  after as many rounds as there are ids is the pieces with a
+   --  capping path of that length: those on a capping cycle, and those
+   --  whose cap runs into one. (Draft 3's build flagged only the
+   --  former; a piece capped by a cycle has no well-founded cap
+   --  either, and this form can be reasoned about region by region.)
+   function Deep_Step
+     (O : Ontology; T : Version_Table; S : Selection; Dp : Id_Set)
+      return Id_Set
+   is
+     ([for P in Id =>
+         (for some I in Edge_Ix =>
+            (for some D in Dim =>
+               Caps_Along (O, T, S, P, I, D)
+               and then S (Edge (O, T, S, P, I).Target).Selected
+               and then Dp (Edge (O, T, S, P, I).Target)))]);
+
+   function Deep_Iter
+     (O : Ontology; T : Version_Table; S : Selection; Dp : Id_Set;
+      N : Natural) return Id_Set
+   with
+     Subprogram_Variant => (Decreases => N),
+     Post =>
+       (if N = 0 then Deep_Iter'Result = Dp
+        else Deep_Iter'Result =
+               Deep_Iter (O, T, S, Deep_Step (O, T, S, Dp), N - 1));
+
+   function Selected_Set (S : Selection) return Id_Set is
+     ([for P in Id => S (P).Selected]);
+
    function Cap_Cycles
-     (O : Ontology; T : Version_Table; S : Selection) return Id_Set;
+     (O : Ontology; T : Version_Table; S : Selection) return Id_Set
+   is
+     (Deep_Iter (O, T, S, Selected_Set (S), 5));
 
    Cap_Rounds : constant := 5;   --  = the number of ids
 
@@ -317,17 +341,18 @@ package Vk.Model with SPARK_Mode => On is
       and then Sel (T, S, A).Slots (Sl).State = Holding
       and then Sel (T, S, A).Slots (Sl).Filler = P);
 
+   --  Stated of the assembly: what slot Sl of A holds is also held in
+   --  another slot, of A or of another selected assembly.
    function V_C1_Held
-     (T : Version_Table; S : Selection; P : Id) return Boolean
+     (T : Version_Table; S : Selection; A : Id; Sl : Slot_Ix) return Boolean
    is
-     (for some A in Id =>
-        (for some Sa in Slot_Ix =>
-           Holds_In_Slot (T, S, A, P, Sa)
-           and then
-             (for some B in Id =>
-                (for some Sb in Slot_Ix =>
-                   (A /= B or else Sa /= Sb)
-                   and then Holds_In_Slot (T, S, B, P, Sb)))));
+     (Sel (T, S, A).Slots (Sl).State = Holding
+      and then
+        (for some B in Id =>
+           (for some Sb in Slot_Ix =>
+              (A /= B or else Sl /= Sb)
+              and then Holds_In_Slot
+                (T, S, B, Sel (T, S, A).Slots (Sl).Filler, Sb))));
 
    function V_C1_Shape
      (O : Ontology; T : Version_Table; S : Selection; P : Id; Sl : Slot_Ix)
@@ -343,16 +368,14 @@ package Vk.Model with SPARK_Mode => On is
 
    --  Evidence about A that read B applies.
    function Read_Together
-     (O : Ontology; F : Facts; C : Context; A, B : Id) return Boolean
+     (F : Facts; C : Context; A, B : Id) return Boolean
    is
-     (O.Reads_On
-      and then
-        (for some I in Ev_Ix =>
-           C.App (I) and then F.Ev (I).P = A
-           and then
-             (for some R in Read_Ix =>
-                F.Ev (I).Reads (R).Present
-                and then F.Ev (I).Reads (R).Q = B)));
+     (for some I in Ev_Ix =>
+        C.App (I) and then F.Ev (I).P = A
+        and then
+          (for some R in Read_Ix =>
+             F.Ev (I).Reads (R).Present
+             and then F.Ev (I).Reads (R).Q = B));
 
    function V_C2
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
@@ -368,51 +391,50 @@ package Vk.Model with SPARK_Mode => On is
         (T, S, F, C, X, Sel (T, S, P).Slots (Sa).Filler,
          Sel (T, S, P).Slots (Sb).Filler, Everything)
       and then not Read_Together
-        (O, F, C, Sel (T, S, P).Slots (Sa).Filler,
+        (F, C, Sel (T, S, P).Slots (Sa).Filler,
          Sel (T, S, P).Slots (Sb).Filler));
 
-   --  Exactly one selected descendant of Q.
-   function One_Desc (S : Selection; F : Facts; Q : Id) return Boolean is
-     (for some B in Id =>
-        F.Desc (Q, B) and then S (B).Selected
-        and then
-          (for all B2 in Id =>
-             (if F.Desc (Q, B2) and then S (B2).Selected then B2 = B)));
-
+   --  A reference to a retired id does not resolve through descent.
    function V_C3_Resolve
-     (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      P : Id; I : Edge_Ix) return Boolean
+     (O : Ontology; T : Version_Table; S : Selection; P : Id; I : Edge_Ix)
+      return Boolean
    is
      (Edge (O, T, S, P, I).Present
-      and then not S (Edge (O, T, S, P, I).Target).Selected
-      and then not
-        (O.Redirect and then One_Desc (S, F, Edge (O, T, S, P, I).Target)));
+      and then not S (Edge (O, T, S, P, I).Target).Selected);
+
+   --  Edge I of P was written against its target as the target is now,
+   --  as far as the kind relies on it.
+   function Written_Against
+     (O : Ontology; T : Version_Table; S : Selection; L : Line_View;
+      P : Id; I : Edge_Ix) return Boolean
+   is
+     (L.Seen (P, I).Has
+      and then Agrees
+        (T, S, Edge (O, T, S, P, I).Target, L.Seen (P, I).V, No_Vers,
+         O.RK (Edge (O, T, S, P, I).K).Relies_On));
 
    function V_C4
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; X : Id_Set; P : Id; I : Edge_Ix) return Boolean
+      L : Line_View; C : Context; X : Id_Set; P : Id; I : Edge_Ix)
+      return Boolean
    is
      (Edge (O, T, S, P, I).Present
       and then O.RK (Edge (O, T, S, P, I).K).Relies_On /= Existence
       and then S (Edge (O, T, S, P, I).Target).Selected
+      and then not Written_Against (O, T, S, L, P, I)
       and then not Affirmed
         (T, S, F, C, X, P, Edge (O, T, S, P, I).Target,
          O.RK (Edge (O, T, S, P, I).K).Relies_On));
 
-   function V_C5_Standard
-     (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; X : Id_Set; P : Id) return Boolean
+   --  Root R, marked and reaching P, asks more of P's kind on
+   --  dimension D than P's effective warrant.
+   function V_C5_Asks
+     (O : Ontology; T : Version_Table; S : Selection; L : Line_View;
+      C : Context; P : Id; R : Id; D : Dim) return Boolean
    is
-     (case O.Canon is
-        when By_Decision =>
-          not (for some J in Dec_Ix =>
-                 F.Dec (J).What = Admit and then F.Dec (J).P = P
-                 and then Dec_Holds (T, S, F, C, X, J)),
-        when By_Rule =>
-          (for some D in Dim =>
-             O.Kinds (Sel (T, S, P).K).Opens (D)
-             and then C.Eff (P, D) < O.Dims (D).Rule_Min),
-        when By_Placement => False);
+     (L.Roots (R) and then S (R).Selected
+      and then (R = P or else L.Reach (R, P))
+      and then C.Eff (P, D) < O.Asks (Sel (T, S, R).K, Sel (T, S, P).K, D));
 
    function V_C5_Rests
      (O : Ontology; T : Version_Table; S : Selection; X : Id_Set;
@@ -435,12 +457,12 @@ package Vk.Model with SPARK_Mode => On is
         C.App (I) and then F.Ev (I).P = P and then F.Ev (I).D = D
         and then F.Ev (I).C = Cr and then F.Ev (I).Result = Holds);
 
+   --  Which guards are open is read from the line (Vk.Lines): it
+   --  needs the order of a piece's versions and the times of events.
    function V_C6_Guard
-     (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; P : Id; D : Dim; Cr : Crit) return Boolean
+     (L : Line_View; P : Id; D : Dim; Cr : Crit) return Boolean
    is
-     (Guard (O, T, S, F, P, D, Cr)
-      and then not Has_Holds_C (F, C, P, D, Cr));
+     (L.Guard (P, D, Cr));
 
    function V_C7_Claim
      (T : Version_Table; S : Selection; C : Context; P : Id) return Boolean
@@ -484,10 +506,7 @@ package Vk.Model with SPARK_Mode => On is
          or else Promised (T, S, F, C, X, P, Sl))
       and then not
         (Sel (T, S, P).Slots (Sl).State /= Empty
-         and then S (Sel (T, S, P).Slots (Sl).Filler).Asserted
-         and then
-           (not O.Slot_Needs_Consistent
-            or else X (Sel (T, S, P).Slots (Sl).Filler))));
+         and then S (Sel (T, S, P).Slots (Sl).Filler).Asserted));
 
    function V_C9
      (T : Version_Table; S : Selection; F : Facts; C : Context;
@@ -498,20 +517,22 @@ package Vk.Model with SPARK_Mode => On is
       and then not
         (for some I in Ev_Ix =>
            C.App (I) and then F.Ev (I).P = P
-           and then F.Ev (I).D = F.Dec (J).D));
+           and then F.Ev (I).D = F.Dec (J).D
+           and then F.Ev (I).Time > F.Dec (J).Time));
 
    --  Is instance N violated, taking X as the consistent pieces?
    --  Pieces not asserted have no instances. An instance whose indices
    --  are out of range for its kind is never violated.
    function Violated
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; X : Id_Set; N : Instance) return Boolean
+      L : Line_View; C : Context; X : Id_Set; N : Instance) return Boolean
    is
      (S (N.P).Asserted
       and then
         (case N.K is
            when C1_Held =>
-             N.I = 0 and then N.J = 0 and then V_C1_Held (T, S, N.P),
+             N.I in 1 .. 3 and then N.J = 0
+             and then V_C1_Held (T, S, N.P, Slot_Ix (N.I)),
            when C1_Shape =>
              N.I in 1 .. 3 and then N.J = 0
              and then V_C1_Shape (O, T, S, N.P, Slot_Ix (N.I)),
@@ -521,15 +542,15 @@ package Vk.Model with SPARK_Mode => On is
                             Slot_Ix (N.I), Slot_Ix (N.J)),
            when C3_Resolve =>
              N.I in 1 .. 5 and then N.J = 0
-             and then V_C3_Resolve (O, T, S, F, N.P, Edge_Ix (N.I)),
+             and then V_C3_Resolve (O, T, S, N.P, Edge_Ix (N.I)),
            when C3_Cycle =>
              N.I = 0 and then N.J = 0 and then C.Cyc (N.P),
            when C4_Reconciled =>
              N.I in 1 .. 5 and then N.J = 0
-             and then V_C4 (O, T, S, F, C, X, N.P, Edge_Ix (N.I)),
-           when C5_Standard =>
-             N.I = 0 and then N.J = 0
-             and then V_C5_Standard (O, T, S, F, C, X, N.P),
+             and then V_C4 (O, T, S, F, L, C, X, N.P, Edge_Ix (N.I)),
+           when C5_Asks =>
+             N.I in 1 .. 5 and then N.J in 1 .. 2
+             and then V_C5_Asks (O, T, S, L, C, N.P, Id (N.I), Dim (N.J)),
            when C5_Rests =>
              N.I in 1 .. 5 and then N.J = 0
              and then V_C5_Rests (O, T, S, X, N.P, Edge_Ix (N.I)),
@@ -538,8 +559,7 @@ package Vk.Model with SPARK_Mode => On is
              and then V_C6_Fails (F, C, N.P, Ev_Ix (N.I)),
            when C6_Guard =>
              N.I in 1 .. 2 and then N.J in 1 .. 2
-             and then V_C6_Guard (O, T, S, F, C, N.P,
-                                  Dim (N.I), Crit (N.J)),
+             and then V_C6_Guard (L, N.P, Dim (N.I), Crit (N.J)),
            when C7_Claim =>
              N.I = 0 and then N.J = 0 and then V_C7_Claim (T, S, C, N.P),
            when C7_Report =>
@@ -573,14 +593,14 @@ package Vk.Model with SPARK_Mode => On is
    --  consistent" is part of this.
    function Own_OK
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; X : Id_Set; P : Id) return Boolean
+      L : Line_View; C : Context; X : Id_Set; P : Id) return Boolean
    is
      (S (P).Asserted
       and then
         (for all K in Inst_Kind =>
            (for all I in Sub =>
               (for all J in Sub =>
-                 not Violated (O, T, S, F, C, X, (K, P, I, J))
+                 not Violated (O, T, S, F, L, C, X, (K, P, I, J))
                  or else
                    (O.Waived_Is_Consistent
                     and then Covered (T, S, F, C, X, (K, P, I, J)))))));
@@ -588,27 +608,28 @@ package Vk.Model with SPARK_Mode => On is
    --  X is a fixed point of "consistent".
    function Is_Fixed
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; X : Id_Set) return Boolean
+      L : Line_View; C : Context; X : Id_Set) return Boolean
    is
-     (for all P in Id => X (P) = Own_OK (O, T, S, F, C, X, P));
+     (for all P in Id => X (P) = Own_OK (O, T, S, F, L, C, X, P));
 
    --  One round: keep the pieces of X about which nothing is violated
    --  when X is taken as the consistent pieces.
    function Stepped
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; X : Id_Set) return Id_Set
+      L : Line_View; C : Context; X : Id_Set) return Id_Set
    is
-     ([for P in Id => X (P) and then Own_OK (O, T, S, F, C, X, P)]);
+     ([for P in Id => X (P) and then Own_OK (O, T, S, F, L, C, X, P)]);
 
    function Iter
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context; X : Id_Set; N : Natural) return Id_Set
+      L : Line_View; C : Context; X : Id_Set; N : Natural) return Id_Set
    with
      Subprogram_Variant => (Decreases => N),
      Post =>
-       (if N = 0 or else Stepped (O, T, S, F, C, X) = X then Iter'Result = X
+       (if N = 0 or else Stepped (O, T, S, F, L, C, X) = X
+        then Iter'Result = X
         else Iter'Result =
-               Iter (O, T, S, F, C, Stepped (O, T, S, F, C, X), N - 1));
+               Iter (O, T, S, F, L, C, Stepped (O, T, S, F, L, C, X), N - 1));
 
    function Asserted_Set (S : Selection) return Id_Set is
      ([for P in Id => S (P).Asserted]);
@@ -617,21 +638,21 @@ package Vk.Model with SPARK_Mode => On is
 
    --  The consistent pieces: descend from "every asserted piece".
    --  When Stratified (F) this is the greatest fixed point
-   --  (Vk.Lemmas.Consistent_Is_Fixed, Consistent_Is_Greatest). When
+   --  (Vk.Lemmas). When
    --  not, there may be no fixed point at all, and the result is
    --  whatever the descent stopped at: test Is_Fixed.
    function Consistent
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      C : Context) return Id_Set
+      L : Line_View; C : Context) return Id_Set
    is
-     (Iter (O, T, S, F, C, Asserted_Set (S), Rounds));
+     (Iter (O, T, S, F, L, C, Asserted_Set (S), Rounds));
 
    --  Instance N is on the frontier.
    function On_Frontier
      (O : Ontology; T : Version_Table; S : Selection; F : Facts;
-      N : Instance) return Boolean
+      L : Line_View; N : Instance) return Boolean
    is
-     (Violated (O, T, S, F, Derive (O, T, S, F),
-                Consistent (O, T, S, F, Derive (O, T, S, F)), N));
+     (Violated (O, T, S, F, L, Derive (O, T, S, F),
+                Consistent (O, T, S, F, L, Derive (O, T, S, F)), N));
 
 end Vk.Model;

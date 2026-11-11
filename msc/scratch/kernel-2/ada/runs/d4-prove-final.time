@@ -1,0 +1,1 @@
+alr -n gnatprove > runs/d4-prove-final.log 2>&1  2480.79s user 107.03s system 1004% cpu 4:17.65 total

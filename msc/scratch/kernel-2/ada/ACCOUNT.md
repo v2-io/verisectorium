@@ -1,132 +1,142 @@
-# Account: KERNEL-SPEC draft 3 in Ada 2022 + SPARK
+# Account: KERNEL-SPEC draft 4 in Ada 2022 + SPARK
 
-*2026-11-10, by the Ada/SPARK agent (Fable 5.2). For the lead and for Joseph. Built from `KERNEL-SPEC.md` at `9305775`. Nothing under `core/` and nothing in the spec was changed. `SPEC-AUDIT.md` beside this file is the earlier audit of draft 1; this account is about draft 3 only. Toolchain: GNAT 16.1.0, gnatprove 16.1.0 at level 2, Alire 2.1.1.*
+*2026-11-10, by the Ada/SPARK agent (Fable 5.2). For the lead and for Joseph. Built from `KERNEL-SPEC.md` at `5e2cffd`. Nothing under `core/` and nothing in the spec was changed. `ACCOUNT-draft3.md` beside this file is the account of the draft-3 build (its sources are at `038c7fa`, its tests in `draft3-tests/`, its runs in `runs/draft3/`); `SPEC-AUDIT.md` is the audit of draft 1. I have not read the OCaml agent's accounts or code. Toolchain: GNAT 16.1.0, gnatprove 16.1.0 at level 2, Alire 2.1.1.*
 
 Nothing here is a fact about the model until core adjudicates it. Each finding names the clause of the draft it is against.
+
+## The result I would put first
+
+**What is owed about a region of pieces depends on nothing outside the region. Proved.** If two states agree on a region, in a sense spelled out below and computable, then every constraint instance about a piece of the region is violated in one exactly when it is in the other, and waived in one exactly when in the other (`Vk.Merge.Frame`). Two corollaries, both proved:
+
+- **Forks compose** (`Forks_Compose`). Take two forks A and B and their union M. Let RA be a region on which M agrees with A, and RB one on which M agrees with B. If RA and RB between them cover every piece, and each fork is stationary on its own region, then M is stationary.
+- **A meeting is local** (`Meeting_Is_Local`). Whether or not they cover everything: anything M owes, unwaived, is about a piece in *neither* region. Resolving there is enough.
+
+This is R9 and R12 in one statement. It holds for every ontology of the bounded types, with no condition on it: not monotone `read_as`, not unconditional obligations, nothing about roots or switches. A and B need not have come from one checkpoint; they are any two states.
+
+"Agree on a region R" (`Vk.Frames.Member_OK`) asks, of each piece p in R:
+
+1. p is selected at the same version, and is in canon in both or neither;
+2. everything p's version refers to, holds, points at or makes a standing claim about is in R too, **except** that a target reached only by an edge that reads nothing but existence (relies on existence, caps nothing, needs no warrant; a plain pointing slot is one) need only exist in both and be in canon in both, at whatever version;
+3. the evidence about p is the same rows, set aside in the same cases, and what each read is in R;
+4. the decisions about p are the same rows, and the pieces their conditions and affirmations name are in R;
+5. what the line says of p is the same: its open guards, what its version was written against, which marked roots reach it (and their kinds), and whether anything it holds is held elsewhere.
+
+Read the other way, that list is the definition of two forks **meeting**: some single thing of one fork (a reference, a read of a piece of evidence, a decision's subject or condition, a slot, a root's reach) reads a piece that the other wrote, retired, or moved in or out of canon. The lead observed that this is the read-set against write-set condition of transaction processing; I think that is right, and have likewise not checked it against a text.
+
+Three things to hold beside the proof:
+
+- **It is about the function from a state to its frontier.** The layer that reads a state from a line (`Vk.Lines`: who is selected, which guards are open, what a root reaches) is executable and tested, not proved. But item 5 is a *hypothesis checked on the actual states*, not an assumption about that layer: the search computes the largest agreeing regions for 100,000 real pairs of forks and compares frontiers. On no instance in any region did the union's frontier differ from the fork's; of the 37,306 pairs whose regions covered every piece, none met.
+- **It is conservative.** It says where to look, not that something is there. In 56,122 of the 100,000 pairs the regions did not cover everything and yet nothing new was owed. Random scenes are far more entangled than real ones (a region averaged 2.1 of 5 pieces), so that proportion says little about practice.
+- **A shared outline is not a meeting place**, by clause 2: in scenario 4's plain case the outline is in *both* regions though each fork rewrote something it points at. It becomes one exactly when something reads two of its parts at once (a whole read as one fact), which is draft 3's finding, now with its reason.
 
 ## What exists
 
 | file | lines | what |
 |---|---|---|
-| `src/vk.ads` | 266 | the objects of §2 and §3 as bounded tables: ontology, versions, facts, selection, constraint instances |
-| `src/vk-model.ads`, `.adb` | 793 | §4 and §5: which evidence applies, warrants, the cap, decisions holding, the nine constraints as fifteen instance kinds, consistency, the frontier |
-| `src/vk-lemmas.ads`, `.adb` | 810 | the proofs: ghost lemmas over the model |
-| `tests/src/scenarios.adb` | 612 | the five invented moves and nine probes, 89 stated expectations |
-| `tests/src/search.adb` | 1267 | random search with shrinking for Q2, Q4, Q5, Q6, Q7, Q9 |
-| `runs/` | | the full output of every run this account cites |
+| `src/vk.ads` | 296 | the objects of §2 and §3 as bounded tables |
+| `src/vk-model.ads`, `.adb` | 794 | §4 and §5: the function from a state to its frontier. SPARK |
+| `src/vk-lines.ads`, `.adb` | 405 | events, lines, union, rewind, and the state read from a line as of a time, with ordered guards. Not SPARK |
+| `src/vk-frames.ads`, `.adb` | 205 | what it is for two states to agree on a region; the largest such region. SPARK, executable |
+| `src/vk-lemmas.ads`, `.adb` | 879 | proofs of R6, R7, R8 and the cap |
+| `src/vk-merge.ads`, `.adb` | 1217 | proofs of the frame theorem and its two corollaries |
+| `tests/src/scenarios.adb` | 750 | the five moves as forks that close, seven two-fork cases, eight probes: 110 stated expectations |
+| `tests/src/search.adb` | 788 | random search for R6, R7, R8, R9 |
 
 ```sh
 cd msc/scratch/kernel-2/ada
-alr build && alr gnatprove                        # 328 checks, all proved; 2m33s from a clean session
+alr build && alr gnatprove            # 656 checks, all proved; 4m18s from a clean session
 cd tests && alr build
-./bin/scenarios                                   # 89 expectations, 0 failed
-./bin/search 200000                               # about three minutes
+./bin/scenarios                       # 110 expectations, 0 failed
+./bin/search 100000                   # about four minutes
 ```
 
-Bounds: 5 ids, 3 versions each, 2 dimensions, 2 criteria per dimension, 4 warrant levels, 3 reference kinds, 12 evidence facts, 12 decisions. A proof below is a proof for every ontology, version table, selection and fact set of those bounded types satisfying the stated condition. A search result is a sample: 200,000 random worlds per property from a fixed seed, never exhaustive.
+Run `alr gnatprove` on its own: a build of the tests at the same moment makes it report a spurious "unsupported recursive subprogram" and stop.
+
+Bounds: 5 ids, 3 versions each, 2 dimensions, 2 criteria, 4 warrant levels, 3 reference kinds, 12 evidence facts, 12 decisions, lines of up to 40 events. A proof is for every ontology, version table and state of those types satisfying its stated condition. A search result is a sample of 100,000 random scenes from a fixed seed.
 
 ## The table
 
 | | status | by what | condition, or counterexample |
 |---|---|---|---|
-| **Q1** No history | **holds by construction** | the model unit has no state; every function reads only its arguments | there is no log to disagree with |
-| **Q2** Dead ends are inert | **tested**, 57,952 cases, 0 counterexamples; half **proved** | search; and a dead fact that *holds* adding nothing is an instance of the Q4 lemma | tested for evidence facts only, not for decisions about unselected versions |
-| **Q3** Going back | **not attempted as stated** | scenario 1 shows one case | as written it is Q1 restated; see F11 |
-| **Q4** Good facts do no harm | **proved**, for evidence that holds, same facts for evidence that holds, accept and affirm, any number at once | `Good_Facts_Do_No_Harm` | needs three conditions, each with a counterexample when dropped: `read_as` monotone; no promise or raise conditioned on a warrant or on consistency; same facts only for evidence that holds (F2, F3) |
-| **Q5** A known defect cannot be selected away | **proved** | `Defect_Stays`; and 248,429 tested cases | three ways out remain, all visible: F8 |
-| **Q6** Well defined, consistency | **proved**: a fixed point is reached, and it is the greatest | `Consistent_Is_Fixed`, `Consistent_Is_Greatest` | only if no promise, raise, waiver or set-aside is conditioned on consistency. Otherwise there may be **no fixed point** (F2). The fixed point is not unique (280 of 185,348 worlds had more than one) |
-| **Q6** Well defined, `effective` | uniqueness **proved**; existence **tested** | `Cap_Unique`; the computed table was a solution in all 20,000 (world, dimension) pairs checked | unique given a ranking witnessing no capping cycle. With a cycle, 2,411 of 7,954 pairs had several solutions; the kernel takes the greatest |
-| **Q7** Locality | **tested**, 75,147 (world, closed region) pairs, 0 counterexamples | search: rewrite everything outside the region, compare the frontier inside | the closure it needs is wider than §7 says (F9) |
-| **Q8** Changesets compose | **shown by example** both ways; not proved | scenario 4, four variants | composes when the outline's *references* rely on anything; fails when *evidence about the outline read two parts at once* (F6) |
-| **Q9** The three standards | **measured** | search and probe P7 | placement's frontier is always within the other two; decision and rule are incomparable (F10) |
-| **Q10** Switches | **exhibited** | probes P5 and P9 | guards off: one piece, two versions, one fact. Written-against off: one affirmation per reference out of the edited piece, plus one per reference in that relies on everything |
+| **R1** State is a function of line and base | **by construction** | no unit has state; a line is a set of timed events | under the reading in G1 |
+| **R2** Abandoned work is inert | **by construction**, with two exceptions found | a line's state reads its own events and the base | a rewind erases that a version was ever tried (G3) |
+| **R3** Going back | **characterized**, shown in probe P3 | after a rewind the state is what it was plus later evidence | a return is not stationary exactly when a finding recorded since applies to, or guards, what was returned to |
+| **R4** Answered once | **holds as built**, scenarios 1 and 3 | later rewordings carry no guard; re-selecting the old version brings the finding back | by the letter of §4 it holds too easily (G2) |
+| **R5** A wrong finding has a way out | **holds**, scenario 3 step 4 | a set aside on the fork; the piece is never written | a set aside is not good news (G8) |
+| **R6** Good news does no harm | **proved** for the state function; **tested** for events on a line (holding evidence, an affirm, an accept: 100,000 each; a same event: 11,254; 0 counterexamples) | `Good_News` | one condition left on the ontology: `read_as` monotone (3,292 counterexamples without it). Same events only for evidence that holds |
+| **R7** Consistency well defined | **proved**: a greatest fixed point is reached | `Well_Defined` | with obligations unconditional, no further condition. **Not unique**: 66 of 100,000 states had more than one fixed point (probe P6) |
+| **R8** A defect survives | **tested**, 30,739 cases, 0 counterexamples, in the mode built; an open guard is owed, **proved** | search; `Guard_Is_Owed` | three ways out by the letter of the draft (G2, G3, G4), each a switch |
+| **R9** Forks compose | **proved**, both forms | `Forks_Compose`, `Meeting_Is_Local` | the spec's two cases are not the whole of it (G6) |
+| **R10** Canon by roots | **shown**, probe P5 | | "removes its items and nothing else" is false (G7) |
+| **R11** Checkpoints | **by construction** of close | a fork closes only if stationary | stationary *as of when it closed*: G5 |
+| **R12** Locality | **proved** | `Frame` | narrower than draft 3's reading in two ways and wider in one (G9) |
 
-## How the proofs were checked for emptiness
+## Findings against draft 4
 
-A proof that goes through on the first run deserves suspicion, and most of these did (the Q4 lemma among them; only the fixed-point lemma needed a second attempt). So: a false assertion planted at the end of `Good_Facts_Do_No_Harm` and of `Consistent_Is_Fixed` is rejected (`runs/mutation-1`). Dropping each hypothesis in turn (monotone `read_as`; plain obligations; same only for holding evidence; stratified) makes the proof fail in each case (`runs/mutation-2` to `-5`). A failed proof is not a counterexample, but for each of the four the search found one independently.
+**G1. A line cannot be both "in time order" and "appended to" (§3, §6).** A fork that closes second has events earlier than the main line's latest. Appended with their times, the line is out of order. Appended with new times, evidence (in the base, its time fixed) no longer "applied when recorded": probe P7 shows a fork that was stationary and a main line that is not, the moment it closes. Merged by time, the main line's past changes. *Reading built, and agreed by the lead*: a line is a set of timed events, the order is time, a state is read **as of a time**, a checkpoint is a snapshot of the set, and closing is set union. Then "either order, same state" is free, and R9 is only about whether the union is stationary. "As of a time" also replaces §3's "up to the line's latest time", under which an idle line never sees new evidence.
 
-The refactoring that made consistency and the cap provable (loops rewritten as iterated steps) left all 200,000-world search figures identical before and after, which is a check on the refactoring.
+**G2. By the letter, an old pass meets a new finding (§4, guards).** "Met … by evidence on the same criterion that holds at any version of p the line selected at or after v" does not ask that the evidence be later than the finding. Probe P1: p passed criterion 1 once; later it fails criterion 1; reword it, carry the old pass: stationary, the defect never looked at. Three events and two facts. In the search, 291 guards that stand under "later" count as met by the letter. The lead says "later" was meant; it is the mode built (`Mode => Later`), the letter is the switch.
 
-## Findings against draft 3
+**G3. A rewind erases a finding's footing (§4, §6; R2).** A guard comes from a finding against "a version the line once selected". Write a draft, have it found wrong, rewind, write it again reworded: the flawed version is one "the line never selected", and there is no guard (probe P2). The evidence is in the base and means nothing to the line. This is the one place the split of §0 is not clean: what a line *tried* is knowledge the base cannot hold and the rewound line no longer has. Switch `Off_Line_Guards`: a finding against any version of a piece guards the line until answered once. It is not free: 5,448 more guards in the search, each from someone else's abandoned draft.
 
-Ordered by how much I think turns on each. F1 to F5 were sent to the lead mid-flight and agreed as switches; they are here in full because the account is what gets read later.
+**G4. Rewriting what a finding read sheds the finding (§4, applies).** Found by the search, not predicted: the first R8 run had 73 counterexamples in 954. Evidence applies only while "each of e's reads is as it was". That is right for a pass. For a finding it means: reword any piece the finding read, and the finding stops applying to the piece it was about, which is untouched; and guards are only for *later* versions, so nothing is owed (probe P2b). Good news should lapse when what it read moves; bad news should not, which is `def/act.md`'s asymmetry. *Built*: a finding that has stopped applying for any reason guards the very version it was about. Switch `Reads_Shed` is the letter.
 
-**F1. Evidence has no reads (§3 Fact, §4 "applies").** A fact is `evidence(p@v, d, criterion, outcome)` and applies while p is selected at v. A check of u that read premise c still applies after c is rewritten; C4 then asks for an affirmation of u's reference, which is a decision, and u is consistent with no new check. `def/act.md`'s "an unchanged piece needs a fresh check after its premise moves" cannot be said, and neither can a whole read of an assembly lapsing on a part. §2 declares what a view relies on in each filler and §4 never uses it; C2 speaks of evidence "against" a second piece, which the fact's signature cannot carry. *Built*: evidence carries up to two reads, each with how far it relies (existence, assertions, everything) and its own same set; `Reads_On` off is the literal draft. Scenario 1's last two lines show the difference on the small move.
+**G5. A checkpoint is stationary as of when it was marked (R11).** Evidence is in the base and every line sees it at once. Scenario 1: the moment the finding is recorded on a fork, the main line owes it too, with no event on the main line. Scenario 4, plain: neither fork is stationary alone, since each sees the other's finding. So "every checkpoint's state is stationary" holds of the state as read at the time of closing and not of the same events read later. I think that is correct and wanted (bad news is known at once, everywhere), but R11 should say it; and it is why `Forks_Compose` asks each fork to be stationary *on its own region*, not outright.
 
-**F2. Consistency can have no fixed point (§4 "holds", Q6).** A raise about p conditioned on "p is asserted and consistent" holds exactly when p is consistent, and when it holds p has an unmet C9 and is not. Probe P1 is the smallest case: one piece, one decision. The same goes for a promise. The proof of Q6 needs, and uses, that only accept and affirm decisions carry a consistency condition (`Stratified`). Decisions that add an obligation or remove one must be conditioned on something consistency does not feed. Random unstratified worlds almost never hit this (0 of 14,652), which is why it wants stating and not testing.
+**G6. R9's two cases are not the whole of it.** Of 100,000 pairs of three-event forks, the union owed something neither fork owed alone in 6,572. By the first cause that fits: both wrote one id, 1,938; one's evidence read what the other wrote, 2,137 (the spec's two cases, 62% together); one's decision is about what the other wrote, 978; one's new version refers to, holds or points at what the other wrote, 1,311; one marked or unmarked a root, 153; one withdrew a decision, 3; evidence from before the checkpoint that read what a fork wrote, 38; none of my labels, 14. Scenario 4 has a smallest case of each of the two new kinds that matter most: A's slot brings into canon a piece B rewrote (pointing reads existence only, and they still meet, because canon is what moved); B's new version refers to what A retired. The frame theorem's list is the complete statement; the labels above are only my first attempt at naming its parts, and the 14 are cases they miss and it does not.
 
-**F3. Q4's exact conditions.** Three, each necessary:
-- *`read_as` monotone*: more criteria with holding evidence never gives a lower warrant. Counterexample (2 pieces): `read_as` gives 2 for no evidence and 0 for criterion 2 alone; p2 claims p1 stands at 2; add holding evidence on p1; C7 on p2.
-- *Same facts only for evidence that holds.* §7 lists "a same fact" as good without qualification. Counterexample (1 piece, 2 versions, 1 fact): evidence fails at p@2, p@1 is selected and clean, add `same(p@2, p@1, for that fact)`: C6 at p@1.
-- *No obligation conditioned on a warrant.* Counterexample: a raise about p2 "if warrant(p5) ≥ 1"; add holding evidence about p5; C9 on p2. The spec's own exception (a promise adds a C8 instance) is the unconditioned case of the same thing.
+**G7. Unmarking a root adds items (R10).** Probe P5: p1 is in canon only through the outline; p2, under a second root, rests on p1. Unmark the outline: p1 leaves canon and p2 owes C5 (what it rests on is not asserted). The same goes for a required slot whose filler leaves canon. Also observed there: what a root asks reaches *through the cap* to pieces the root does not reach. A root asking validity 2 of p2 is not satisfied until p1, which only a more lenient root reaches, has it too.
 
-**F4. A wrong finding has no way out that leaves the piece alone (C6, §3's "contesting" row).** Contrary evidence on the same criterion at the same version is a conflict and clears nothing: C6's first clause is still violated. Only a waiver or a new version helps, and `impl-a-finding-is-answered` step 4 cannot be said. C6's third clause is also redundant as written: two facts on one criterion disagree only if one of them does not hold, which the first clause already catches. *Built*, as the lead leaned: a decision that sets one evidence fact aside while its own (plain) conditions hold; scenario 3 step 4 runs it both ways. Related: at the very version found wrong, the guard is violated as well as the first clause and nothing but conflicting evidence could meet it, so one defect needs two waivers (probe P3).
+**G8. A set aside is not good news (R5).** It removes a finding's item and its guards. It can also add items: set aside a finding that had answered a raised question and the question is owed again; set aside evidence that holds and the warrant falls (probe P4). So it does not belong in R6's list. I did not build setting aside a *same* event (same sets are held closed per fact).
 
-**F5. The guard is for ever, and I think that is the price of having no history.** Every defect ever found needs, at every later version of the piece, either fresh evidence that holds on that criterion or a same fact carrying an earlier answer (scenario 3, last two lines: a comma moved, and the old finding is owed again). The cost is one fact per guard per edit, growing with the piece's history. The reason is structural. "Answered since" needs versions to be ordered, and a selection has no order: v3 is not *after* v2, it is only another version. So a guard cannot be discharged once; it can only be met wherever one stands. This is the one thing the log did that the selection model cannot, and it is my main answer to §9's question. Descent is the model's only order, and it is among ids, not versions.
+**G9. R12: narrower twice, wider once.** Against draft 3's reading: no holders are needed (C1 is stated of the assembly; what it reads upward is one hypothesis in item 5), and no descendants (no redirect). And a target read only for its existence need not be in the region at all. Wider: canon by placement makes every instance about a piece depend on which roots reach it, which is a fact about the chain of slots above it. The theorem takes that as a hypothesis about the piece (item 5), not by pulling the roots into the region; that is what lets two regions under one outline stay apart.
 
-**F6. Q8, and what an outline must rely on.** Scenario 4, two repairs in unrelated pieces under one outline:
-- outline points, relying on existence only: both apply together, stationary;
-- outline's pointing relies on assertions: still composes, because each changeset supplies its own affirmation and affirmations are per pair (outline, part);
-- a whole read of the outline, as evidence that read both parts' assertions: each changeset re-reads the outline against its own selection; neither read applies to the combined one; the outline fails the rule. They meet at the outline. This is the audit's M5 and trial 1's finding 12, confirmed.  
-So the answer to Q8's question is not about the outline's references at all. It is that **one piece of evidence reading two parts is a conjunction, and conjunctions do not compose**. An outline whose coherence is evidenced part by part, or by a read that relies only on what repairs leave alone, does not join changesets. The second half of the move (x comes to rest on c) meets at x's reference, as core says.
+**G10. "Written against" must be recorded by the write (C4's switch).** If what a version was written against is worked out from the line being read, then on a union it is worked out from the union: scenario 4, B writes x referring to c; A rewrote c earlier in time; the union says x was written against A's c, which B never saw, and is stationary on an affirmation nobody made. *Built*: a write event records what each of its edges pointed at on the line it was made on. With that the two forks meet at x, as they should.
 
-**F7. C8 asks for a consistent filler, and that makes every document a hub (C8).** A required or promised slot must be "filled by an asserted, consistent piece". So a claim found wrong makes its document inconsistent, and whatever requires the document (scenario 1: both T and U join the frontier on one finding; probe P4). It also un-keeps a kept promise whenever the filler is later unsettled (scenario 2, step 5), where `def/segment.md` has a promise "kept when what fills the slot is accepted" and a whole that "stays settled while one of them is unsettled". Switch `Slot_Needs_Consistent`; off, the document stays consistent.
+**G11. A decided dimension cannot be asked "the same way" without care (§2).** If a root asks "accepted" as a warrant, warrants depend on accept decisions. If those may be conditioned on consistency or on warrants, warrant and consistency are circular (consistency already reads warrants through C5). *Reading built*: an accept decision's conditions are plain ones (the piece's version; a slot's filler). The cost shows in scenario 2, step 7: an assumption failing does not reopen R2's *acceptance*, as `impl-an-outline-fills-in` has it; R2 is unsettled through its reference to the assumption instead. The item is there either way, under a different name.
 
-**F8. Q5's three ways out.** Proved: with guards on, a failing fact about p or an ancestor, at any version, puts C6 on every selection asserting p without holding evidence on that criterion there. What still sheds it (probe P6): (a) the same content under a fresh id with no descent recorded: nothing ties them, since content is opaque and descent is whatever was recorded; (b) selecting p without asserting it: free for any piece nothing rests on and no slot requires; (c) a set-aside, by design. And a waiver covers. (b) is the audit's M4, now the same under all three standards because what is asserted is chosen. The frontier is blind to unasserted pieces, which is trial 1's finding 16 unchanged.
+**G12. Smaller.**
+- *R7, not unique*: two claims resting on each other by a kind that caps nothing are consistent together, and "neither" is a fixed point too (P6).
+- *C3's cycle* is now "has a capping path as long as there are pieces", which flags a piece capped by a cycle as well as one on it. I changed it so that it can be reasoned about region by region; I think it is also the better constraint.
+- *C9* works now: a question raised on an already-checked piece is owed until something later answers it (scenario 5).
+- *Promising writes nothing*, so the outline's acceptance is untouched by a promise (scenario 2, step 1), where the move in core has it reopened.
+- *No routing decision and no retirement*, still (scenario 5).
 
-**F9. Locality needs a wider closure than "what it references and rests on" (Q7).** Tested with the region closed under: reference and pointing targets; held fillers; what a standing claim is about; what evidence about a member read; the pieces named by conditions and affirmations of decisions about a member; decisions a member reports; **every assembly that could hold a member**; and **descent in both directions**. Leaving out holders gave 276 failures in 79,732, descent 628 in 78,170, reported decisions 20 in 76,838. Holders are needed only because C1's "held by exactly one" is an instance about the held piece and reads upward; stated about the assemblies, regions would close downward only. Descendants are needed only because C3 lets a sole selected descendant resolve a reference.
+## The five moves
 
-**F10. Q9.** On the same selection and facts, 200,000 worlds: placement's frontier was within decision's and within rule's every time. Decision owed something rule did not in 120,214 worlds and the reverse in 15,322. Stationary under decision and not under rule: 82; under rule and not decision: 2,434; under placement and not decision: 5,616; under placement and not rule: 3,264. So each of decision and rule admits stationary selections the other calls inconsistent, and placement admits everything either does. What a new assertion costs (P7, two claims, one resting on the other): under decision, an accept each, the second conditioned on the first being sound; under rule, a check each; under placement, nothing beyond the affirmation of the reference. A rewrite of an asserted piece costs, under decision, a new accept of it, the affirmations C4 asks of what references it, and no other accept *if* the dependents' accepts were conditioned on soundness and not on the version (scenario 2, step 6: R1's and R2's acceptances stand again unasked once D@2 is accepted). There is no latch, which settles the audit's M1 one way.
+All five run as forks from a checkpoint that close, and the three things draft 3 could not say are said: the wrong finding set aside with the piece never written (3, step 4); the whole reads lapsing when a part's assertion changes (1); a comma moved after an answered finding, asking nothing (3, last line; 1's R4 lines). Scenario 1 includes a dead-end draft, a check made of it, and a rewind. What they still cannot say: an acceptance reopened by a named assumption (G11); a promise unsettling the assembly; routing.
 
-**F11. Q3 says less than it seems to.** "Stationary again exactly when no fact in $F' \setminus F$ violates a constraint at $\sigma$" is true by Q1 and tells the reader nothing about which facts those are. The content is Q2 and Q4 together: of what was added, good facts and dead ones cannot break $\sigma$; what can is evidence that fails where $\sigma$ stands, a same fact carrying a failure there, a withdrawal, a promise, a raise, and recorded descent.
+## What carried over from the draft-3 build, and what was rebuilt
 
-**F12. Smaller, each against its clause.**
-- *C9* is met by any evidence on the dimension that applies, however old (scenario 5, step 2): a question raised on an already-checked piece is no question. It wants a criterion, or "evidence other than what was there".
-- *C4's "written against counts as its own affirmation"* needs the version each reference was written against; §3's Version does not carry one. I treat it as an affirm fact made with the version, which is the same thing and keeps Q10's switch a matter of which facts exist.
-- *C3* lets a reference resolve to a sole selected descendant; `def/reference.md` says a reference to a retired id "is never silently redirected". Switch `Redirect`; I let it affect C3 only.
-- *`effective`* is defined in Q6 only for selections satisfying C3, but the frontier has to be computed on those that do not. The kernel takes the greatest solution everywhere.
-- *Waivers do not stop spreading.* A covered violation still makes its piece inconsistent, so everything resting on it needs a waiver of its own (probe P3: a chain of five, four more). Switch `Waived_Is_Consistent`.
-- *Nothing says* a held id must be selected, or an asserted piece selected. I made the first a C1 violation.
-- *The fixed point is not unique* (probe P8): for two claims each accepted on the other being sound, "both" and "neither" are fixed points. The greatest is the right one, and the order of acceptance does not matter.
+Unchanged in substance: the objects; which evidence applies; warrants and the cap; consistency as an iterated step; the frontier as a function of a state. The draft-3 proofs of Q4 and Q6 went across with a parameter added (the line's view) and no new idea: `Good_Facts_Do_No_Harm`, `Consistent_Is_Fixed`, `Consistent_Is_Greatest`, `Cap_Unique`. R6 and R7 as the spec now words them are two short lemmas on top (`Good_News`, `Well_Defined`): "obligations unconditional" implies the two conditions the old proofs needed.
 
-## What removing the log lost
+Changed in the state function: canon read from roots; C5 as what each reaching root asks; C1 of the assembly; no redirect; C8 without "consistent"; C9 with time; set aside and the guard table as inputs; cycles as an iterated step.
 
-Checked against my own audit's list (I have not read the OCaml agent's, to keep the two lines apart).
+New: `Vk.Lines` (everything about events and order), `Vk.Frames` and `Vk.Merge` (the theorem).
 
-Lost and, I think, mattering:
-1. **Later.** F5. No order among versions, so nothing can be answered once.
-2. **Reads.** F1. Restored here as a field on evidence.
-3. **Overturning.** F4. Restored here as a decision.
-4. **Slot states.** A slot is empty, holding or pointing. "Suggested" and "gap" cannot be written, so the adviser's idea and nothing at all look the same; and promising no longer changes the assembly, so in scenario 2 step 1 the outline's acceptance is untouched where core has it reopened.
-5. **Routing and retirement.** No routing decision and no retirement. Scenario 5 says "already present" as an affirmation of the chunk against its target, which works and un-routes when the target is rewritten; nothing is owed for it either way.
-6. **Cause and address.** A frontier item has no cause and nobody it is addressed to. "Several changesets open at once" becomes "stationary on a set of pieces", which the kernel can say.
+Draft 3's Q5 as a proof is gone, because which guards are open is now decided in the unproved layer; what is proved is only that an open guard is owed. Draft 3's Q7 (tested) is replaced by `Frame` (proved).
 
-Lost and, I think, well lost: path-dependence (the audit's K15: whether a piece owes no longer depends on whether it was once accepted); refusals (a draft is a selection that is not stationary; a cycle is a violation); the latch on reopened decisions; every question about who may answer, carry or contest. The audit's M1, M3 and most of M2 are gone as the lead said.
+## Readings I had to take
 
-Changed shape: M4 (un-asserting is always available, F8); M5 (F6); M6 (the promise now has one home).
+G1 (a line as a set; a state as of a time; closing as union). G2 (later). G4 (a lapsed finding guards). G10 (writes record what they saw). G11 (accept conditions plain). And from draft 3, unchanged: warrants a total order; two criteria per dimension; one filler per slot; one claim and one reported decision per version; same sets closed per fact; at most two reads per evidence fact.
 
-## Where this departs from the letter of the draft
+## What is not done
 
-Each is marked `DEPARTS:` in `src/vk.ads`. Warrants are a total order (the spec allows a lattice). Two criteria per dimension stand for its means, and `read_as` is a table over which of them have holding evidence; it returns no conflict flag. One filler per slot. One standing claim and one reported decision per version. A fact's same set is held already closed (reflexive, symmetric, transitive), per fact; so "does carrying compose" is assumed, not tested. Descent is held transitively closed. A pointing slot is a reference of a kind the ontology names. C1 to C9 are fifteen instance kinds. Conditions on a warrant read the own warrant; the rule standard reads the effective one, on the dimensions the kind opens. C2 is met by an affirmation or by applying evidence about one filler that read the other.
+- `Vk.Lines` is not proved. R4 and R8 as properties of ordered guards are tested and shown, not proved. This is the largest gap: the proofs stop at the state.
+- The frame theorem's hypothesis is stated on states. A version stated on events ("fork A's events touch only this") would need the line layer proved.
+- That the iterated cap is a solution of the cap equations: tested in the draft-3 build, not re-run.
+- Setting aside a same event; assemblies with several fillers per slot; anything about who.
 
-## Ada and SPARK
+## Ada and SPARK, briefly
 
-**Policies as data worked without friction.** An ontology is a record value; every lemma takes it as a parameter; a condition on it (`Monotone`) is a precondition. That is "for every policy" in the plain sense, within the bounds, and it needed no generics. The switches are fields of the same record, so a lemma that does not mention a switch holds under both settings: the Q4 and Q6 proofs cover `Reads_On`, `Set_Aside_On`, `Waived_Is_Consistent`, `Slot_Needs_Consistent` and `Redirect` either way, and all three standards.
+The frame theorem took ten prover runs, where draft 3's proofs had mostly gone through at once. What it needed: one lemma per kind of instance, and then one per slot, per edge and per level of the instance loops (the single lemma over all fifteen kinds did not go through, as it had for R6; small obligations prove reliably and large ones time out on some runs and not others); the gate on a piece being asserted made the same in the definition and in the lemmas, which was a real slip the prover caught; a tool restriction worked around (no array-typed object declared before a loop invariant); and one hypothesis, "held elsewhere", given a name as a function because the provers could not use it as two nested quantifiers. The two consistency descents may stop at different rounds, one state still settling outside the region when the other is done; the induction handles the four cases.
 
-**What proved with no help.** The transfer of every one of the fifteen instance kinds between two fact sets (`Inst_Transfer`, a null body), monotonicity in the consistent set, uniqueness of the cap, and Q5, all at level 2.
+The proofs were checked for emptiness as before. False assertions planted at the end of `Frame`, `Meeting_Is_Local`, `Good_News` and `Well_Defined` are rejected. With the guard clause struck from the definition of agreement, the proof fails at exactly the guard instance (`runs/d4-mutation-*`). And the agreement predicate is not unsatisfiable: the search computes non-empty regions for real forks.
 
-**What had to be shaped for the prover.** Consistency and the cap were first written as loops and could not be reasoned about across two runs. Rewritten as an iterated step function with its defining equation as postcondition, the induction lemmas were short. Reaching a fixed point in five rounds is a counting argument, done with the number of members as the measure. The earlier spike's trap (array equality does not give `F (A) = F (B)`) appeared once and was avoided twice over: the iteration stops as soon as a step changes nothing, and "equal sets are both fixed or neither" is proved through monotonicity each way.
+## Across a table
 
-**What is not proved and could be.** Q7 and Q2 as frame lemmas (the frontier inside a closed region depends on nothing outside) are the same shape as the Q4 transfer, both directions; I would expect them to go through. That the iterated cap is a solution of the cap equations. Q8, which wants Q7 first.
+The order was the right thing to add: answered-once works, the wrong finding has its exit, and the moves read as forks that close. What it cost is that some of what matters now lives in the layer I could not prove, and three of the four holes this build found (G2, G3, G4) are in exactly that layer, in the wording of when a guard stands. That wording deserves the next round of care.
 
-**Small things.** `accept` and `raise` are reserved words (the decision kinds are `Admit` and `Ask` in the code); a type named `Standard` collides with the package; Alire wants crate names of three letters or more.
+The frame theorem is the thing I would keep whatever else changes. It does not depend on how guards or canon are decided, only on the frontier being computed instance by instance from what each instance reads. Any later draft that keeps that shape keeps the theorem, with the list of "what an instance reads" as the one thing to re-check.
 
-## What I would say across a table
-
-Draft 3 is a better object for formal work than draft 1 was. The frontier is a pure function of a selection and a set of facts; the two hardest properties (good facts do no harm; consistency is well defined) proved for every ontology of the bounded types without a struggle, and the proofs said exactly which conditions they needed. Under draft 1 I had predicted I would be deriving exit tables by search.
-
-The same shape has one cost I would want decided knowingly (F5), and two places where a constraint as written undoes something core argued for at length: C8's consistent filler brings back resting on parts (F7), and a whole read of two parts brings back the outline as a meeting place (F6). Neither is forced by the shape. Both are one word in a constraint.
-
-And the question that is Joseph's is still there, in a sharper form. What is asserted is now simply chosen, the frontier sees nothing else, and under placement nothing gates the choice. Whether an asf `stage: draft` segment is asserted is the whole of what its frontier shows.
-
-Nothing is committed. I am on the line.
+The draft-3 account, tests and runs are renamed in the index (`git mv`); nothing is committed. I am on the line.
