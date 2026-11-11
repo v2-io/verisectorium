@@ -28,3 +28,13 @@ Fail any run that prints an "info" line (that is the misspelling and the wrong a
 ## What would show me I chose wrong
 
 I have run six of the nine conditions, on a model a fraction of the spec's size, and one small search over selections; never a search over pairs of forks, which is the job this choice leans on. If within that week the fork search cannot reach the universes the OCaml explorer already covers, or the conditions about how well something stands come out as rules nobody can read against their sentences, then the answer is **OCaml**, with its conditions pulled out one per sentence as its builder began to do. It is the only candidate that has carried all nine conditions and the events through a change of spec, and its builder's remark that the pulled-out conditions "are nearly rules already" is, I think, true and is the reason the two answers are close. I rank it second and not first because what it has proven is that it can be kept running, and what the question asks is whether it can be kept *true*, by reading, by someone who did not write it.
+
+## Added after reading the others' answers and running the check
+
+*Everything above was written first and is unchanged. This part came after.*
+
+The TLA+ fork chose clingo too, and named the same test I did: its two-fork question asked in clingo. I ran it (`clingo-fork-search/`, with its own README). The lost rewrite, the clock case and write skew all come out, over the same rules that run the story and with no second model, in under a fifth of a second each. So the thing I said would show me wrong did not, at the size I tried, which is far smaller than what the OCaml explorer covers.
+
+What I had not expected is how the three runs went. The first two each handed me a wrong answer that read like a right one: a "none" that was only none within too small a bound, a "found" from a question I had worded loosely, and a "none" because a line I added had silently forbidden every affirmation. I caught all three only because I already knew what the answers should be. On a question whose answer I did not know, I would have believed them.
+
+That does not change my choice. It changes what I think the choice costs. The guards I listed above as first-week work are not hygiene; without them this home would have told me three false things in fifteen minutes. The two Lean answers put their weight on exactly this: a home should tell apart, by machine, what was shown from what was only run. I think they are right that this is the deepest objection to my choice, and I think the answer to it is the model's own (say on every result what it rests on, and compute that where it can be computed) and not a different language. But I hold that less firmly than I did an hour ago.

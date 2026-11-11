@@ -1,0 +1,36 @@
+=== guard: is the space non-empty? (any pair, each able to close alone; fewest events)
+union_stationary does(20,aff(x,x0,c0),a) does(21,aff(x,x0,c0),b) 
+Optimization: 2
+OPTIMUM FOUND
+real 0.01
+=== guard: can an affirmation happen at all?
+union_stationary does(20,aff(x,x0,c0),b) does(21,aff(x,x0,c0),a) 
+Optimization: 2
+OPTIMUM FOUND
+real 0.01
+=== Q1 lost rewrite, up to 6 events
+UNSATISFIABLE
+real 0.05
+=== Q1 lost rewrite, up to 8 events
+union_stationary does(20,wr(c,c2),a) saw(21,c2) does(21,wr(x,x1),a) does(22,wr(c,c1),b) does(23,chk(c,c2),base) does(24,chk(c,c1),base) does(25,chk(x,x1,c1),base) does(26,chk(x,x1,c2),base) saw(27,c1) does(27,wr(x,x1),b) 
+Optimization: 8
+OPTIMUM FOUND
+real 0.14
+=== Q2 different pieces, each closes alone, union owes; up to 6
+saw(20,c0) does(20,wr(x,x1),a) does(21,wr(c,c1),b) does(22,aff(x,x0,c1),b) does(23,chk(x,x1,c0),base) does(24,chk(c,c1),base) does(25,chk(x,x0,c1),base) owed(both,c2_unreconciled(c,c1),x) owed(both,c5_unchecked,x) 
+Optimization: 6
+OPTIMUM FOUND
+real 0.04
+=== Q3 clock case, written-against as recorded, up to 8 (expected: none)
+UNSATISFIABLE
+real 0.01
+=== Q3 clock case, written-against worked out from the line, up to 8
+union_stationary does(20,wr(c,c2),b) saw(21,c2) does(21,wr(x,x1),b) saw(22,c0) does(22,wr(x,x1),a) does(23,chk(x,x1,c0),base) does(24,chk(c,c2),base) does(25,chk(x,x1,c2),base) 
+Optimization: 6
+OPTIMUM FOUND
+real 0.04
+=== Q1 up to 12 events, to see what the bound costs
+union_stationary does(20,wr(c,c2),a) does(21,wr(c,c1),b) does(22,chk(x,x0,c1),base) does(23,chk(x,x0,c2),base) does(24,aff(x,x0,c1),b) does(25,chk(c,c1),base) does(26,chk(c,c2),base) does(27,aff(x,x0,c2),a) 
+Optimization: 8
+OPTIMUM FOUND
+real 0.19
