@@ -1,0 +1,4 @@
+File "example.ml", line 3, characters 14-19:
+Sub-goal Postcondition of goal succ'vc.
+Prover result is: Valid (0.01s, 16 steps).
+

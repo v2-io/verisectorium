@@ -1,0 +1,4 @@
+alt-ergo [induction_ty_lex -a split_all_full]: Prover result is: Timeout (20.00s, 883349 steps).;
+alt-ergo [induction_ty_lex -a compute_in_goal]: Prover result is: Timeout (20.00s, 621551 steps).;
+z3 [induction_ty_lex -a split_all_full]: Prover result is: Timeout (20.00s, 27693530 steps).;
+z3 [induction_ty_lex -a compute_in_goal]: Prover result is: Timeout (20.00s, 41188608 steps).;

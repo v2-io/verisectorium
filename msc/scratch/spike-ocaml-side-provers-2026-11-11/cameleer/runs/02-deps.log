@@ -1,0 +1,247 @@
+[gospel.dev] synchronised (git+https://github.com/ocaml-gospel/gospel.git#c20125aeb2154b3853e0e5411c4548f568541096)
+gospel is now pinned to git+https://github.com/ocaml-gospel/gospel.git#c20125aeb2154b3853e0e5411c4548f568541096 (version dev)
+
+<><> Synchronising pinned packages ><><><><><><><><><><><><><><><><><><><><>  🐫 
+[gospel.dev] synchronised (no changes)
+
+The following actions will be performed:
+=== install 56 packages
+  ∗ alt-ergo            2.6.4
+  ∗ alt-ergo-lib        2.6.4        [required by alt-ergo]
+  ∗ alt-ergo-parsers    2.6.4        [required by alt-ergo]
+  ∗ base                v0.16.5      [required by ppx_sexp_conv]
+  ∗ camlzip             1.14         [required by why3]
+  ∗ cmdliner            2.1.1        [required by fmt, alt-ergo, gospel]
+  ∗ conf-gmp            5            [required by zarith]
+  ∗ conf-pkg-config     5            [required by zarith]
+  ∗ conf-zlib           1            [required by camlzip]
+  ∗ cppo                1.8.0        [required by ppx_deriving]
+  ∗ csexp               1.5.2        [required by dune-private-libs, dune-configurator]
+  ∗ dolmen              0.10         [required by alt-ergo-lib]
+  ∗ dolmen_loop         0.10         [required by alt-ergo-lib]
+  ∗ dolmen_type         0.10         [required by alt-ergo-lib]
+  ∗ dune                3.24.2
+  ∗ dune-build-info     3.24.2       [required by alt-ergo-lib]
+  ∗ dune-configurator   3.24.2       [required by base]
+  ∗ dune-private-libs   3.24.2       [required by dune-site]
+  ∗ dune-site           3.24.2       [required by alt-ergo]
+  ∗ dyn                 3.24.2       [required by dune-private-libs]
+  ∗ fmt                 0.11.0
+  ∗ fs-io               3.24.2       [required by stdune]
+  ∗ gen                 1.1          [required by dolmen_loop]
+  ∗ gospel              dev (pinned)
+  ∗ hmap                0.8.1        [required by dolmen]
+  ∗ logs                0.10.0       [required by ocplib-simplex]
+  ∗ menhir              20250912     [required by gospel, alt-ergo, why3]
+  ∗ menhirCST           20250912     [required by menhir]
+  ∗ menhirLib           20250912     [required by menhir]
+  ∗ menhirSdk           20250912     [required by menhir]
+  ∗ num                 1.6          [required by sexplib]
+  ∗ ocaml-compiler-libs v0.12.4      [required by gospel, ppxlib]
+  ∗ ocamlbuild          0.16.1       [required by fmt]
+  ∗ ocamlfind           1.9.8        [required by ppx_deriving, fmt, why3]
+  ∗ ocplib-simplex      0.5.1        [required by alt-ergo-lib]
+  ∗ ordering            3.24.2       [required by dyn, stdune]
+  ∗ parsexp             v0.16.0      [required by sexplib]
+  ∗ pp                  2.0.0        [required by dune-private-libs]
+  ∗ pp_loc              2.1.0        [required by dolmen_loop]
+  ∗ ppx_blob            0.9.0        [required by alt-ergo-lib]
+  ∗ ppx_derivers        1.2.1        [required by ppx_deriving, ppxlib]
+  ∗ ppx_deriving        6.0.3
+  ∗ ppx_sexp_conv       v0.16.0
+  ∗ ppxlib              0.35.0
+  ∗ psmt2-frontend      0.4.0        [required by alt-ergo-parsers]
+  ∗ seq                 base         [required by alt-ergo-lib]
+  ∗ sexplib             v0.16.0
+  ∗ sexplib0            v0.16.0      [required by ppxlib, ppx_sexp_conv, sexplib]
+  ∗ spelll              0.4          [required by dolmen_type]
+  ∗ stdlib-shims        0.3.0        [required by ppxlib]
+  ∗ stdune              3.24.2       [required by dune-private-libs]
+  ∗ top-closure         3.24.2       [required by stdune]
+  ∗ topkg               1.1.1        [required by fmt]
+  ∗ uutf                1.0.4        [required by dolmen_type]
+  ∗ why3                1.9.0
+  ∗ zarith              1.14         [required by why3]
+
+<><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><>  🐫 
+⬇ retrieved camlzip.1.14  (cached)
+⬇ retrieved cmdliner.2.1.1  (cached)
+⬇ retrieved conf-gmp.5  (cached)
+⬇ retrieved conf-pkg-config.5  (cached)
+⬇ retrieved cppo.1.8.0  (cached)
+⬇ retrieved csexp.1.5.2  (cached)
+∗ installed conf-pkg-config.5
+∗ installed conf-gmp.5
+∗ installed conf-zlib.1
+⬇ retrieved alt-ergo.2.6.4, alt-ergo-lib.2.6.4, alt-ergo-parsers.2.6.4  (cached)
+⬇ retrieved dolmen.0.10, dolmen_loop.0.10, dolmen_type.0.10  (cached)
+⬇ retrieved dune.3.24.2, dune-build-info.3.24.2, dune-configurator.3.24.2, dune-private-libs.3.24.2, dune-site.3.24.2, dyn.3.24.2, fs-io.3.24.2, ordering.3.24.2, stdune.3.24.2, top-closure.3.24.2  (cached)
+⬇ retrieved fmt.0.11.0  (cached)
+⬇ retrieved gen.1.1  (cached)
+⬇ retrieved hmap.0.8.1  (cached)
+⬇ retrieved logs.0.10.0  (cached)
+⬇ retrieved base.v0.16.5  (https://opam.ocaml.org/cache)
+⬇ retrieved menhir.20250912, menhirCST.20250912, menhirLib.20250912, menhirSdk.20250912  (cached)
+∗ installed cmdliner.2.1.1
+⬇ retrieved gospel.dev  (no changes)
+⬇ retrieved ocamlbuild.0.16.1  (cached)
+⬇ retrieved num.1.6  (https://opam.ocaml.org/cache)
+⬇ retrieved ocaml-compiler-libs.v0.12.4  (https://opam.ocaml.org/cache)
+⬇ retrieved ocplib-simplex.0.5.1  (cached)
+⬇ retrieved pp.2.0.0  (cached)
+⬇ retrieved pp_loc.2.1.0  (cached)
+⬇ retrieved ppx_blob.0.9.0  (cached)
+⬇ retrieved ppx_derivers.1.2.1  (cached)
+⬇ retrieved ocamlfind.1.9.8  (https://opam.ocaml.org/cache)
+⬇ retrieved parsexp.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_deriving.6.0.3  (https://opam.ocaml.org/cache)
+⬇ retrieved psmt2-frontend.0.4.0  (cached)
+⬇ retrieved seq.base  (cached)
+⬇ retrieved ppx_sexp_conv.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved sexplib.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved spelll.0.4  (cached)
+⬇ retrieved stdlib-shims.0.3.0  (cached)
+⬇ retrieved topkg.1.1.1  (cached)
+⬇ retrieved uutf.1.0.4  (cached)
+⬇ retrieved ppxlib.0.35.0  (https://opam.ocaml.org/cache)
+⬇ retrieved sexplib0.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved zarith.1.14  (cached)
+⬇ retrieved why3.1.9.0  (cached)
+∗ installed ocamlbuild.0.16.1
+∗ installed num.1.6
+∗ installed ocamlfind.1.9.8
+∗ installed seq.base
+∗ installed camlzip.1.14
+∗ installed topkg.1.1.1
+∗ installed zarith.1.14
+∗ installed fmt.0.11.0
+∗ installed hmap.0.8.1
+∗ installed logs.0.10.0
+∗ installed uutf.1.0.4
+∗ installed dune.3.24.2
+∗ installed csexp.1.5.2
+∗ installed dune-build-info.3.24.2
+∗ installed cppo.1.8.0
+∗ installed fs-io.3.24.2
+∗ installed dune-configurator.3.24.2
+∗ installed menhirCST.20250912
+∗ installed gen.1.1
+∗ installed menhirSdk.20250912
+∗ installed menhirLib.20250912
+∗ installed ocplib-simplex.0.5.1
+∗ installed ocaml-compiler-libs.v0.12.4
+∗ installed ordering.3.24.2
+∗ installed pp.2.0.0
+∗ installed pp_loc.2.1.0
+∗ installed dyn.3.24.2
+∗ installed ppx_derivers.1.2.1
+∗ installed sexplib0.v0.16.0
+∗ installed stdlib-shims.0.3.0
+∗ installed base.v0.16.5
+∗ installed parsexp.v0.16.0
+∗ installed menhir.20250912
+∗ installed sexplib.v0.16.0
+∗ installed ppxlib.0.35.0
+∗ installed psmt2-frontend.0.4.0
+∗ installed dolmen.0.10
+∗ installed ppx_blob.0.9.0
+∗ installed ppx_sexp_conv.v0.16.0
+∗ installed ppx_deriving.6.0.3
+∗ installed spelll.0.4
+∗ installed top-closure.3.24.2
+∗ installed dolmen_type.0.10
+[ERROR] The compilation of gospel.dev failed at "dune build -p gospel -j 2".
+∗ installed dolmen_loop.0.10
+∗ installed stdune.3.24.2
+∗ installed alt-ergo-lib.2.6.4
+∗ installed dune-private-libs.3.24.2
+∗ installed alt-ergo-parsers.2.6.4
+∗ installed dune-site.3.24.2
+∗ installed alt-ergo.2.6.4
+∗ installed why3.1.9.0
+
+#=== ERROR while compiling gospel.dev =========================================#
+# context              2.6.1 | macos/arm64 | ocaml-base-compiler.4.14.2 | pinned(git+https://github.com/ocaml-gospel/gospel.git#c20125aeb2154b3853e0e5411c4548f568541096#c20125aeb2154b3853e0e5411c4548f568541096)
+# path                 ~/.opam/cameleer-try/.opam-switch/build/gospel.dev
+# command              ~/.opam/opam-init/hooks/sandbox.sh build dune build -p gospel -j 2
+# exit-code            1
+# env-file             ~/.opam/log/gospel-63125-81c786.env
+# output-file          ~/.opam/log/gospel-63125-81c786.out
+### output ###
+# (cd _build/default && /Users/josephwecker-v2/.opam/cameleer-try/bin/ocamlopt.opt -w -40 -g -I bin/.cli.eobjs/byte -I bin/.cli.eobjs/native -I /Users/josephwecker-v2/.opam/cameleer-try/lib/cmdliner -I /Users/josephwecker-v2/.opam/cameleer-try/lib/fmt -I /Users/josephwecker-v2/.opam/cameleer-try/lib/ocaml-compiler-libs/common -I /Users/josephwecker-v2/.opam/cameleer-try/lib/ocaml-compiler-libs/[...]
+# File "bin/cli.ml", line 32, characters 37-47:
+# 32 | let files = Arg.(non_empty & pos_all ocaml_file [] & info [] ~docv:"FILE")
+#                                           ^^^^^^^^^^
+# Error: This expression has type
+#          (string -> [> `Error of string | `Ok of string ]) *
+#          (Format.formatter -> string -> unit)
+#        but an expression was expected of type
+#          'a Cmdliner.Arg.conv = 'a Cmdliner.Arg.Conv.t
+
+
+
+<><> Error report <><><><><><><><><><><><><><><><><><><><><><><><><><><><><>  🐫 
+┌─ The following actions failed
+│ λ build gospel dev
+└─ 
+┌─ The following changes have been performed
+│ ∗ install alt-ergo            2.6.4
+│ ∗ install alt-ergo-lib        2.6.4
+│ ∗ install alt-ergo-parsers    2.6.4
+│ ∗ install base                v0.16.5
+│ ∗ install camlzip             1.14
+│ ∗ install cmdliner            2.1.1
+│ ∗ install conf-gmp            5
+│ ∗ install conf-pkg-config     5
+│ ∗ install conf-zlib           1
+│ ∗ install cppo                1.8.0
+│ ∗ install csexp               1.5.2
+│ ∗ install dolmen              0.10
+│ ∗ install dolmen_loop         0.10
+│ ∗ install dolmen_type         0.10
+│ ∗ install dune                3.24.2
+│ ∗ install dune-build-info     3.24.2
+│ ∗ install dune-configurator   3.24.2
+│ ∗ install dune-private-libs   3.24.2
+│ ∗ install dune-site           3.24.2
+│ ∗ install dyn                 3.24.2
+│ ∗ install fmt                 0.11.0
+│ ∗ install fs-io               3.24.2
+│ ∗ install gen                 1.1
+│ ∗ install hmap                0.8.1
+│ ∗ install logs                0.10.0
+│ ∗ install menhir              20250912
+│ ∗ install menhirCST           20250912
+│ ∗ install menhirLib           20250912
+│ ∗ install menhirSdk           20250912
+│ ∗ install num                 1.6
+│ ∗ install ocaml-compiler-libs v0.12.4
+│ ∗ install ocamlbuild          0.16.1
+│ ∗ install ocamlfind           1.9.8
+│ ∗ install ocplib-simplex      0.5.1
+│ ∗ install ordering            3.24.2
+│ ∗ install parsexp             v0.16.0
+│ ∗ install pp                  2.0.0
+│ ∗ install pp_loc              2.1.0
+│ ∗ install ppx_blob            0.9.0
+│ ∗ install ppx_derivers        1.2.1
+│ ∗ install ppx_deriving        6.0.3
+│ ∗ install ppx_sexp_conv       v0.16.0
+│ ∗ install ppxlib              0.35.0
+│ ∗ install psmt2-frontend      0.4.0
+│ ∗ install seq                 base
+│ ∗ install sexplib             v0.16.0
+│ ∗ install sexplib0            v0.16.0
+│ ∗ install spelll              0.4
+│ ∗ install stdlib-shims        0.3.0
+│ ∗ install stdune              3.24.2
+│ ∗ install top-closure         3.24.2
+│ ∗ install topkg               1.1.1
+│ ∗ install uutf                1.0.4
+│ ∗ install why3                1.9.0
+│ ∗ install zarith              1.14
+└─ 
+
+The former state can be restored with:
+    /Users/josephwecker-v2/.local/share/mise/installs/opam/2.6.1/opam switch import "/Users/josephwecker-v2/.opam/cameleer-try/.opam-switch/backup/state-20261111052826.export"
+deps exit 31

@@ -1,0 +1,10 @@
+0  S0                        (nothing owed in this cut)
+1  08:30 a finding on c      c is known wrong
+2  09:00 fork: c1', d1'      u is unchecked; u was written against another c; T is not read whole
+3  10:00 rewind              c is known wrong
+4  10:30 c2, d2, k2          c is unchecked; u is unchecked; u was written against another c; T is not read whole
+5  11:00 c2 checked          u is unchecked; u was written against another c; T is not read whole
+6  11:30 d3                  c is unchecked; u is unchecked; u was written against another c; T is not read whole
+7  12:00 c2 checked again    u is unchecked; u was written against another c; T is not read whole
+8  13:00 u2                  T is not read whole; U is not read whole
+9  14:00 whole reads         (nothing owed in this cut)

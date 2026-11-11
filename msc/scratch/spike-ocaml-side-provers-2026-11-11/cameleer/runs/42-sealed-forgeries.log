@@ -1,0 +1,5 @@
+Error: Cannot create values of the private type Result.t
+after the finding: refused, 1 owed (known wrong)
+Error: This expression has type Checkpoint.line
+       but an expression was expected of type Checkpoint.t
+after the finding: refused, 1 owed (known wrong)

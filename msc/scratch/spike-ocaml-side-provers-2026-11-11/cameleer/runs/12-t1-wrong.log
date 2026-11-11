@@ -1,0 +1,20 @@
+File t1_wrong.ml:
+Goal derived_result'vc.
+Prover result is: Timeout (5.00s, 308041 steps).
+
+File "t1_wrong.ml", line 40, character 2 to line 44, character 43:
+Sub-goal Precondition of goal t'vc.
+Prover result is: Timeout (5.00s, 424569 steps).
+
+File "t1_wrong.ml", line 40, character 2 to line 44, character 43:
+Sub-goal Precondition of goal t'vc.
+Prover result is: Valid (0.02s, 138 steps).
+
+File "t1_wrong.ml", line 40, character 2 to line 44, character 43:
+Sub-goal Precondition of goal t'vc.
+Prover result is: Valid (0.02s, 95 steps).
+
+File "t1_wrong.ml", line 40, character 2 to line 44, character 43:
+Sub-goal Precondition of goal t'vc.
+Prover result is: Valid (0.02s, 113 steps).
+

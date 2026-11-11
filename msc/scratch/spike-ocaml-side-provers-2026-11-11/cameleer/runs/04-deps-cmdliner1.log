@@ -1,0 +1,55 @@
+
+<><> Synchronising pinned packages ><><><><><><><><><><><><><><><><><><><><>  🐫 
+[gospel.dev] synchronised (no changes)
+
+The following actions will be performed:
+=== recompile 7 packages
+  ↻ dolmen           0.10           [uses fmt]
+  ↻ dolmen_loop      0.10           [uses dolmen]
+  ↻ dolmen_type      0.10           [uses uutf]
+  ↻ fmt              0.11.0         [uses cmdliner]
+  ↻ logs             0.10.0         [uses cmdliner]
+  ↻ ocplib-simplex   0.5.1          [uses logs]
+  ↻ uutf             1.0.4          [uses cmdliner]
+=== install 1 package
+  ∗ gospel           dev (pinned)
+=== downgrade 4 packages
+  ↘ alt-ergo         2.6.4 to 2.6.2 [uses cmdliner]
+  ↘ alt-ergo-lib     2.6.4 to 2.6.2 [required by alt-ergo]
+  ↘ alt-ergo-parsers 2.6.4 to 2.6.2 [required by alt-ergo]
+  ↘ cmdliner         2.1.1 to 1.3.0
+
+<><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><>  🐫 
+⬇ retrieved dolmen.0.10, dolmen_loop.0.10, dolmen_type.0.10  (cached)
+⬇ retrieved fmt.0.11.0  (cached)
+⬇ retrieved cmdliner.1.3.0  (https://opam.ocaml.org/cache)
+⬇ retrieved logs.0.10.0  (cached)
+⬇ retrieved ocplib-simplex.0.5.1  (cached)
+⬇ retrieved uutf.1.0.4  (cached)
+⬇ retrieved gospel.dev  (no changes)
+⬇ retrieved alt-ergo.2.6.2, alt-ergo-lib.2.6.2, alt-ergo-parsers.2.6.2  (https://opam.ocaml.org/cache)
+⊘ removed   alt-ergo.2.6.4
+⊘ removed   alt-ergo-parsers.2.6.4
+⊘ removed   alt-ergo-lib.2.6.4
+⊘ removed   dolmen_loop.0.10
+⊘ removed   dolmen_type.0.10
+⊘ removed   dolmen.0.10
+⊘ removed   ocplib-simplex.0.5.1
+⊘ removed   logs.0.10.0
+⊘ removed   fmt.0.11.0
+⊘ removed   uutf.1.0.4
+⊘ removed   cmdliner.2.1.1
+∗ installed cmdliner.1.3.0
+∗ installed uutf.1.0.4
+∗ installed fmt.0.11.0
+∗ installed gospel.dev
+∗ installed logs.0.10.0
+∗ installed ocplib-simplex.0.5.1
+∗ installed dolmen.0.10
+∗ installed dolmen_type.0.10
+∗ installed dolmen_loop.0.10
+∗ installed alt-ergo-lib.2.6.2
+∗ installed alt-ergo-parsers.2.6.2
+∗ installed alt-ergo.2.6.2
+Done.
+deps exit 0

@@ -1,0 +1,72 @@
+File "t3.ml", line 16, character 25 to line 17, character 54:
+Goal closed_has_canon.
+Prover result is: Timeout (10.00s, 802140 steps).
+
+File t3.ml:
+Sub-goal Variant decrease of goal is_in'vc.
+Prover result is: Valid (0.02s, 95 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal is_in'vc.
+Prover result is: Valid (0.02s, 26 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal is_in'vc.
+Prover result is: Valid (0.02s, 31 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal is_in'vc.
+Prover result is: Valid (0.02s, 55 steps).
+
+File t3.ml:
+Sub-goal Variant decrease of goal all_in'vc.
+Prover result is: Valid (0.02s, 95 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal all_in'vc.
+Prover result is: Valid (0.02s, 29 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal all_in'vc.
+Prover result is: Valid (0.02s, 161 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal all_in'vc.
+Prover result is: Valid (0.02s, 70 steps).
+
+File t3.ml:
+Sub-goal Variant decrease of goal edges_closed'vc.
+Prover result is: Valid (0.02s, 80 steps).
+
+File t3.ml:
+Sub-goal Variant decrease of goal edges_closed'vc.
+Prover result is: Valid (0.02s, 81 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal edges_closed'vc.
+Prover result is: Valid (0.02s, 30 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal edges_closed'vc.
+Prover result is: Timeout (10.00s, 332885 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal edges_closed'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal edges_closed'vc.
+Prover result is: Timeout (10.00s, 359460 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal edges_closed'vc.
+Prover result is: Timeout (10.00s, 324822 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal is_closed'vc.
+Prover result is: Valid (0.02s, 162 steps).
+
+File t3.ml:
+Sub-goal Postcondition of goal is_closed'vc.
+Prover result is: Valid (0.02s, 60 steps).
+

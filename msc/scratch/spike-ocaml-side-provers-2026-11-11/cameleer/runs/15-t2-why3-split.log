@@ -1,0 +1,84 @@
+File "t2.ml", line 13, characters 48-57:
+Sub-goal Variant decrease of goal is_in'vc.
+Prover result is: Valid (0.02s, 101 steps).
+
+File "t2.ml", line 16, characters 14-27:
+Sub-goal Postcondition of goal is_in'vc.
+Prover result is: Timeout (10.00s, 968260 steps).
+
+File "t2.ml", line 24, characters 49-77:
+Sub-goal Variant decrease of goal pass'vc.
+Prover result is: Valid (0.02s, 99 steps).
+
+File "t2.ml", line 24, characters 49-77:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.02s, 173 steps).
+
+File "t2.ml", line 24, characters 49-77:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.02s, 74 steps).
+
+File "t2.ml", line 25, characters 11-32:
+Sub-goal Variant decrease of goal pass'vc.
+Prover result is: Valid (0.02s, 98 steps).
+
+File "t2.ml", line 25, characters 11-32:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.02s, 32 steps).
+
+File "t2.ml", line 25, characters 11-32:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.02s, 73 steps).
+
+File "t2.ml", line 30, characters 35-52:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Timeout (10.00s, 1095505 steps).
+
+File "t2.ml", line 31, characters 38-45:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Timeout (10.00s, 664347 steps).
+
+File "t2.ml", line 35, characters 57-82:
+Sub-goal Precondition of goal close'vc.
+Prover result is: Valid (0.02s, 26 steps).
+
+File "t2.ml", line 35, characters 57-82:
+Sub-goal Precondition of goal close'vc.
+Prover result is: Valid (0.01s, 20 steps).
+
+File "t2.ml", line 35, characters 30-82:
+Sub-goal Variant decrease of goal close'vc.
+Prover result is: Valid (0.01s, 18 steps).
+
+File "t2.ml", line 35, characters 30-82:
+Sub-goal Precondition of goal close'vc.
+Prover result is: Valid (0.02s, 26 steps).
+
+File "t2.ml", line 39, characters 35-52:
+Sub-goal Postcondition of goal close'vc.
+Prover result is: Valid (0.02s, 64 steps).
+
+File "t2.ml", line 40, characters 38-45:
+Sub-goal Postcondition of goal close'vc.
+Prover result is: Valid (0.02s, 30 steps).
+
+File "t2.ml", line 43, characters 39-47:
+Sub-goal Variant decrease of goal length'vc.
+Prover result is: Valid (0.02s, 92 steps).
+
+File "t2.ml", line 46, characters 14-20:
+Sub-goal Postcondition of goal length'vc.
+Prover result is: Valid (0.39s, 56379 steps).
+
+File "t2.ml", line 48, character 58 to line 49, character 38:
+Sub-goal Precondition of goal canon_list'vc.
+Prover result is: Valid (0.02s, 26 steps).
+
+File "t2.ml", line 51, characters 35-51:
+Sub-goal Postcondition of goal canon_list'vc.
+Prover result is: Valid (0.02s, 26 steps).
+
+File "t2.ml", line 52, characters 39-46:
+Sub-goal Postcondition of goal canon_list'vc.
+Prover result is: Valid (0.02s, 26 steps).
+

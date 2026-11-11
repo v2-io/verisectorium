@@ -1,0 +1,100 @@
+File m0.ml:
+Sub-goal Variant decrease of goal selected'vc.
+Prover result is: Valid (0.02s, 82 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal reads_stand'vc.
+Prover result is: Valid (0.02s, 165 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal known_wrong'vc.
+Prover result is: Valid (0.02s, 93 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal known_wrong'vc.
+Prover result is: Valid (0.02s, 90 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal known_wrong'vc.
+Prover result is: Valid (0.02s, 92 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal checked'vc.
+Prover result is: Valid (0.02s, 93 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal checked'vc.
+Prover result is: Valid (0.02s, 93 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal checked'vc.
+Prover result is: Valid (0.02s, 90 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal checked'vc.
+Prover result is: Valid (0.02s, 92 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal in_reads'vc.
+Prover result is: Valid (0.02s, 82 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal reads_of'vc.
+Prover result is: Valid (0.02s, 90 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal reads_of'vc.
+Prover result is: Valid (0.02s, 92 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal affirmed'vc.
+Prover result is: Valid (0.02s, 83 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal affirmed'vc.
+Prover result is: Valid (0.02s, 84 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal affirmed'vc.
+Prover result is: Valid (0.02s, 83 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal affirmed'vc.
+Prover result is: Valid (0.02s, 83 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal unreconciled'vc.
+Prover result is: Valid (0.02s, 173 steps).
+
+File m0.ml:
+Sub-goal Variant decrease of goal unreconciled'vc.
+Prover result is: Valid (0.02s, 171 steps).
+
+File "m0.ml", line 107, character 6 to line 108, character 60:
+Goal holding_evidence_adds_no_finding.
+Prover result is: Valid (0.02s, 30 steps).
+
+File "m0.ml", line 111, characters 6-77:
+Goal evidence_never_unchecks.
+Prover result is: Valid (0.02s, 74 steps).
+
+File "m0.ml", line 115, characters 6-77:
+Goal write_is_local.
+Prover result is: Valid (0.02s, 33 steps).
+
+File "m0.ml", line 119, character 6 to line 120, character 65:
+Goal unread_reads_stand.
+Prover result is: Timeout (10.00s, 392259 steps).
+
+File "m0.ml", line 125, character 6 to line 126, character 65:
+Goal write_elsewhere_leaves_findings.
+Prover result is: Timeout (10.00s, 335493 steps).
+
+File "m0.ml", line 129, character 6 to line 130, character 61:
+Goal write_elsewhere_leaves_checks.
+Prover result is: Timeout (10.00s, 506520 steps).
+
+File "m0.ml", line 135, character 6 to line 136, character 66:
+Goal a_read_lapses.
+Prover result is: Timeout (10.00s, 352640 steps).
+

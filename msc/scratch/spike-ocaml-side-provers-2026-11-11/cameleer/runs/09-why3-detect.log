@@ -1,0 +1,19 @@
+warning: cannot read config file /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-ocaml-side-provers-2026-11-11/cameleer/why3.conf:
+  /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-ocaml-side-provers-2026-11-11/cameleer/why3.conf: No such file or directory
+Found prover Alt-Ergo version 2.6.2, OK.
+Found prover Alt-Ergo version 2.6.2 (alternative: counterexamples)
+Found prover Alt-Ergo version 2.6.2 (alternative: BV)
+Prover Z3 version 5.3.3 is not recognized.
+  Known versions for this prover: ^4\.8\.[7-9]$, ^4\.8\.1[0-9]+$,
+  ^4\.9\.[0-9]+$, ^4\.10\.[0-9]+$, ^4\.11\.[0-9]+$, ^4\.12\.[0-9]+$,
+  ^4\.13\.[0-9]+$.
+Prover Z3 (alternative: noBV) version 5.3.3 is not recognized.
+  Known versions for this prover: 4.7.1, 4.8.0, 4.8.1, 4.8.3, 4.8.4, 4.8.5,
+  4.8.6, ^4\.8\.[7-9]$, ^4\.8\.1[0-9]+$, ^4\.9\.[0-9]+$, ^4\.10\.[0-9]+$,
+  ^4\.11\.[0-9]+$, ^4\.12\.[0-9]+$, ^4\.13\.[0-9]+$.
+Prover Z3 (alternative: counterexamples) version 5.3.3 is not recognized.
+  Known versions for this prover: ^4\.8\.[7-9]$, ^4\.8\.1[0-9]+$,
+  ^4\.9\.[0-9]+$, ^4\.10\.[0-9]+$, ^4\.11\.[0-9]+$, ^4\.12\.[0-9]+$,
+  ^4\.13\.[0-9]+$.
+6 prover(s) added (including 3 prover(s) with an unrecognized version)
+Save config to /Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-ocaml-side-provers-2026-11-11/cameleer/why3.conf

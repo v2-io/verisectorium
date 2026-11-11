@@ -1,0 +1,36 @@
+File "bin/dune", line 2, characters 12-18:
+2 |  (libraries gospel why3 cameleer)
+                ^^^^^^
+Error: Library "gospel" not found.
+-> required by _build/default/bin/cli.exe
+-> required by _build/install/default/bin/cameleer
+-> required by _build/default/cameleer.install
+-> required by alias install
+File "src/dune", line 3, characters 19-25:
+3 |  (libraries ppxlib gospel why3))
+                       ^^^^^^
+Error: Library "gospel" not found.
+-> required by library "cameleer" in _build/default/src
+-> required by _build/default/META.cameleer
+-> required by _build/install/default/lib/cameleer/META
+-> required by _build/default/cameleer.install
+-> required by alias install
+File "plugin/dune", line 6, characters 53-59:
+6 |    ppxlib.astlib ppxlib.stdppx ppxlib.ast ppxlib fmt gospel cameleer))
+                                                         ^^^^^^
+Error: Library "gospel" not found.
+-> required by _build/default/plugin/plugin_cameleer.cmxs
+-> required by _build/install/default/lib/why3/plugins/plugin_cameleer.cmxs
+-> required by _build/default/cameleer.install
+-> required by alias install
+File "plugin/dune", line 2, characters 19-25:
+2 |  (libraries ppxlib gospel why3 cameleer)
+                       ^^^^^^
+Error: Library "gospel" not found.
+-> required by
+   _build/default/plugin/.plugin_cameleer.eobjs/native/dune__exe__Plugin_cameleer.cmx
+-> required by _build/default/plugin/plugin_cameleer.cmxs
+-> required by _build/install/default/lib/why3/plugins/plugin_cameleer.cmxs
+-> required by _build/default/cameleer.install
+-> required by alias install
+build exit 1

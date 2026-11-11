@@ -1,0 +1,8 @@
+unread_reads_stand [induction_ty_lex]: Valid (0.06s, 1471 steps).;
+unread_reads_stand [induction_ty_lex -a split_all_full]: Valid (0.06s, 1476 steps).;
+write_elsewhere_leaves_findings [induction_ty_lex]: Valid (0.03s, 519 steps).;
+write_elsewhere_leaves_findings [induction_ty_lex -a split_all_full]: Valid (0.03s, 530 steps).;
+write_elsewhere_leaves_checks [induction_ty_lex]: Valid (0.03s, 530 steps).;
+write_elsewhere_leaves_checks [induction_ty_lex -a split_all_full]: Valid (0.03s, 542 steps).;
+a_read_lapses [induction_ty_lex]: Timeout (10.00s, 357053 steps);
+a_read_lapses [induction_ty_lex -a split_all_full]: Timeout (10.00s, 350341 steps);

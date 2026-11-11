@@ -1,0 +1,7 @@
+attempt 1 start 22:26:29 (OCaml 4.14.2, gospel at the commit cameleer pins, why3 as opam chooses)
+attempt 1 end 22:30:27
+attempt 2 start 22:30:42 (cmdliner held below 2, since the pinned gospel uses its old interface)
+attempt 2 end 22:31:22
+attempt with why3 1.8.2 start 22:31:30
+attempt with why3 1.8.2 end 22:32:44
+writing notes 22:46:42

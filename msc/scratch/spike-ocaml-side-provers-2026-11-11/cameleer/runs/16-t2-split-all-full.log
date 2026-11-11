@@ -1,0 +1,160 @@
+File t2.ml:
+Sub-goal Variant decrease of goal is_in'vc.
+Prover result is: Valid (0.02s, 95 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal is_in'vc.
+Prover result is: Valid (0.02s, 26 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal is_in'vc.
+Prover result is: Valid (0.02s, 31 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal is_in'vc.
+Prover result is: Valid (0.02s, 55 steps).
+
+File t2.ml:
+Sub-goal Variant decrease of goal pass'vc.
+Prover result is: Valid (0.02s, 110 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.02s, 190 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.02s, 89 steps).
+
+File t2.ml:
+Sub-goal Variant decrease of goal pass'vc.
+Prover result is: Valid (0.02s, 112 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.02s, 40 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.02s, 91 steps).
+
+File t2.ml:
+Sub-goal Variant decrease of goal pass'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File t2.ml:
+Sub-goal Variant decrease of goal pass'vc.
+Prover result is: Valid (0.02s, 108 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.02s, 38 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal pass'vc.
+Prover result is: Valid (0.02s, 87 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Valid (0.02s, 29 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Valid (0.02s, 46 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Valid (0.02s, 90 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Valid (0.02s, 46 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Valid (0.02s, 48 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Valid (0.02s, 44 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal pass'vc.
+Prover result is: Valid (0.02s, 46 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal close'vc.
+Prover result is: Valid (0.02s, 29 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal close'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File t2.ml:
+Sub-goal Variant decrease of goal close'vc.
+Prover result is: Valid (0.01s, 24 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal close'vc.
+Prover result is: Valid (0.02s, 34 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal close'vc.
+Prover result is: Valid (0.02s, 29 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal close'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal close'vc.
+Prover result is: Valid (0.02s, 40 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal close'vc.
+Prover result is: Valid (0.02s, 42 steps).
+
+File t2.ml:
+Sub-goal Variant decrease of goal length'vc.
+Prover result is: Valid (0.02s, 88 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal length'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal length'vc.
+Prover result is: Valid (0.01s, 26 steps).
+
+File t2.ml:
+Sub-goal Precondition of goal canon_list'vc.
+Prover result is: Valid (0.02s, 29 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal canon_list'vc.
+Prover result is: Valid (0.02s, 32 steps).
+
+File t2.ml:
+Sub-goal Postcondition of goal canon_list'vc.
+Prover result is: Valid (0.02s, 34 steps).
+

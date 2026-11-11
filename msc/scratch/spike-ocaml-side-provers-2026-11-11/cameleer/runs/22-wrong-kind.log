@@ -1,0 +1,12 @@
+File wrong_kind.ml:
+Sub-goal Precondition of goal t'vc.
+Prover result is: Timeout (10.00s, 755218 steps).
+File wrong_kind.ml:
+Sub-goal Precondition of goal t'vc.
+Prover result is: Valid (0.02s, 145 steps).
+File wrong_kind.ml:
+Sub-goal Precondition of goal t'vc.
+Prover result is: Valid (0.02s, 100 steps).
+File wrong_kind.ml:
+Sub-goal Precondition of goal t'vc.
+Prover result is: Valid (0.02s, 118 steps).
