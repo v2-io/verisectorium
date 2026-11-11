@@ -4,7 +4,7 @@
 
 ## 1. What this is
 
-`lib/model.ml` is draft 3 as an executable model: versions, the four facts, a selection, C1–C9, consistency, the frontier, stationarity. It is a pure function of (universe, selection, set of facts), about 500 lines. `lib/explore.ml` checks Q2–Q9 by visiting, inside a small universe, **every** subset of a pool of candidate facts and **every** selection. `test/test_kernel.ml` holds twelve hand-built universes, each small enough to read, that pin the counterexamples and run three of the invented moves.
+`lib/model.ml` is draft 3 as an executable model: versions, the four facts, a selection, C1–C9, consistency, the frontier, stationarity. It is a pure function of (universe, selection, set of facts), about 600 lines as formatted. `lib/explore.ml` checks Q2–Q9 by visiting, inside a small universe, **every** subset of a pool of candidate facts and **every** selection. `test/test_kernel.ml` holds twelve hand-built universes, each small enough to read, that pin the counterexamples and run three of the invented moves.
 
 **What "tested" means below, exactly.** A universe is an ontology, 3 ids (4 for Q7) with 2 versions each, and a pool of 5 to 10 candidate facts. Within a universe the visit is exhaustive. The universes themselves are drawn at random from seeds, 100 to 300 per batch, half of them with one id an assembly. So "no counterexample" means none in the universes visited, and "smallest" means the smallest the search met; where it matters I then built the smallest by hand and it is a test. Nothing is proved by a tool. Where I give an argument for why a property holds, it is marked as an argument.
 
