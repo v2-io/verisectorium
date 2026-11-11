@@ -2,6 +2,8 @@
 
 *To Joseph, from the Fable 5.2 session of 2026-11-10. You asked for this at the level, register and length of note 09, or shorter, with the newer words and the newer understanding. It is my synthesis, not a settled design, and nothing in it is accepted. It is about a third the length of note 09.*
 
+*Corrected later the same day: Part 4 says a state is a free selection and that only the sequence of changesets is added to. Two formal builds showed what that costs, and Joseph had already said what it should be: an ordered, additive base of events, with checkpoints and forks. See note 23, §3. The rest stands.*
+
 *It is written to be read top to bottom. Each word is introduced before it is used. Part 7 is the lexicon. Part 8 says where I chose, what is open, and what from `core/` I have left out on purpose.*
 
 *Where each idea comes from (yours, with the date; note 09; today's tests; or mine and least tested) is in the footnotes, so the text reads straight through. A footnote says where an idea came from. It is not a reason to believe the idea, whoever it names; Part 8 says what, if anything, each part has earned.*
