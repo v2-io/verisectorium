@@ -1,0 +1,403 @@
+seed 1 done, 1s, 128000 states
+seed 2 done, 1s, 256000 states
+seed 3 done, 2s, 384000 states
+seed 4 done, 3s, 512000 states
+seed 5 done, 4s, 640000 states
+seed 6 done, 5s, 768000 states
+seed 7 done, 5s, 896000 states
+seed 8 done, 6s, 1024000 states
+seed 9 done, 7s, 1152000 states
+seed 10 done, 8s, 1280000 states
+seed 11 done, 9s, 1408000 states
+seed 12 done, 10s, 1536000 states
+seed 13 done, 11s, 1664000 states
+seed 14 done, 12s, 1792000 states
+seed 15 done, 12s, 1920000 states
+seed 16 done, 14s, 2048000 states
+seed 17 done, 14s, 2176000 states
+seed 18 done, 15s, 2304000 states
+seed 19 done, 15s, 2432000 states
+seed 20 done, 16s, 2560000 states
+seed 21 done, 17s, 2688000 states
+seed 22 done, 18s, 2816000 states
+seed 23 done, 19s, 2944000 states
+seed 24 done, 19s, 3072000 states
+seed 25 done, 20s, 3200000 states
+seed 26 done, 21s, 3328000 states
+seed 27 done, 22s, 3456000 states
+seed 28 done, 23s, 3584000 states
+seed 29 done, 24s, 3712000 states
+seed 30 done, 24s, 3840000 states
+seed 31 done, 25s, 3968000 states
+seed 32 done, 26s, 4096000 states
+seed 33 done, 27s, 4224000 states
+seed 34 done, 27s, 4352000 states
+seed 35 done, 28s, 4480000 states
+seed 36 done, 29s, 4608000 states
+seed 37 done, 30s, 4736000 states
+seed 38 done, 30s, 4864000 states
+seed 39 done, 32s, 4992000 states
+seed 40 done, 32s, 5120000 states
+seed 41 done, 33s, 5248000 states
+seed 42 done, 34s, 5376000 states
+seed 43 done, 35s, 5504000 states
+seed 44 done, 36s, 5632000 states
+seed 45 done, 37s, 5760000 states
+seed 46 done, 37s, 5888000 states
+seed 47 done, 38s, 6016000 states
+seed 48 done, 39s, 6144000 states
+seed 49 done, 40s, 6272000 states
+seed 50 done, 41s, 6400000 states
+seed 51 done, 42s, 6528000 states
+seed 52 done, 43s, 6656000 states
+seed 53 done, 44s, 6784000 states
+seed 54 done, 44s, 6912000 states
+seed 55 done, 45s, 7040000 states
+seed 56 done, 46s, 7168000 states
+seed 57 done, 47s, 7296000 states
+seed 58 done, 48s, 7424000 states
+seed 59 done, 49s, 7552000 states
+seed 60 done, 49s, 7680000 states
+seed 61 done, 50s, 7808000 states
+seed 62 done, 51s, 7936000 states
+seed 63 done, 51s, 8064000 states
+seed 64 done, 52s, 8192000 states
+seed 65 done, 53s, 8320000 states
+seed 66 done, 53s, 8448000 states
+seed 67 done, 54s, 8576000 states
+seed 68 done, 55s, 8704000 states
+seed 69 done, 56s, 8832000 states
+seed 70 done, 57s, 8960000 states
+seed 71 done, 58s, 9088000 states
+seed 72 done, 59s, 9216000 states
+seed 73 done, 59s, 9344000 states
+seed 74 done, 60s, 9472000 states
+seed 75 done, 61s, 9600000 states
+seed 76 done, 62s, 9728000 states
+seed 77 done, 62s, 9856000 states
+seed 78 done, 63s, 9984000 states
+seed 79 done, 64s, 10112000 states
+seed 80 done, 65s, 10240000 states
+seed 81 done, 66s, 10368000 states
+seed 82 done, 66s, 10496000 states
+seed 83 done, 67s, 10624000 states
+seed 84 done, 68s, 10752000 states
+seed 85 done, 69s, 10880000 states
+seed 86 done, 70s, 11008000 states
+seed 87 done, 71s, 11136000 states
+seed 88 done, 72s, 11264000 states
+seed 89 done, 72s, 11392000 states
+seed 90 done, 73s, 11520000 states
+seed 91 done, 74s, 11648000 states
+seed 92 done, 75s, 11776000 states
+seed 93 done, 75s, 11904000 states
+seed 94 done, 76s, 12032000 states
+seed 95 done, 77s, 12160000 states
+seed 96 done, 78s, 12288000 states
+seed 97 done, 79s, 12416000 states
+seed 98 done, 79s, 12544000 states
+seed 99 done, 80s, 12672000 states
+seed 100 done, 81s, 12800000 states
+seed 101 done, 82s, 12928000 states
+seed 102 done, 83s, 13056000 states
+seed 103 done, 84s, 13184000 states
+seed 104 done, 84s, 13312000 states
+seed 105 done, 85s, 13440000 states
+seed 106 done, 85s, 13568000 states
+seed 107 done, 87s, 13696000 states
+seed 108 done, 88s, 13824000 states
+seed 109 done, 89s, 13952000 states
+seed 110 done, 90s, 14080000 states
+seed 111 done, 91s, 14208000 states
+seed 112 done, 91s, 14336000 states
+seed 113 done, 92s, 14464000 states
+seed 114 done, 93s, 14592000 states
+seed 115 done, 94s, 14720000 states
+seed 116 done, 94s, 14848000 states
+seed 117 done, 95s, 14976000 states
+seed 118 done, 96s, 15104000 states
+seed 119 done, 97s, 15232000 states
+seed 120 done, 97s, 15360000 states
+seed 121 done, 98s, 15488000 states
+seed 122 done, 99s, 15616000 states
+seed 123 done, 99s, 15744000 states
+seed 124 done, 100s, 15872000 states
+seed 125 done, 101s, 16000000 states
+seed 126 done, 102s, 16128000 states
+seed 127 done, 102s, 16256000 states
+seed 128 done, 103s, 16384000 states
+seed 129 done, 104s, 16512000 states
+seed 130 done, 105s, 16640000 states
+seed 131 done, 106s, 16768000 states
+seed 132 done, 106s, 16896000 states
+seed 133 done, 107s, 17024000 states
+seed 134 done, 108s, 17152000 states
+seed 135 done, 109s, 17280000 states
+seed 136 done, 110s, 17408000 states
+seed 137 done, 110s, 17536000 states
+seed 138 done, 111s, 17664000 states
+seed 139 done, 111s, 17792000 states
+seed 140 done, 112s, 17920000 states
+seed 141 done, 113s, 18048000 states
+seed 142 done, 114s, 18176000 states
+seed 143 done, 115s, 18304000 states
+seed 144 done, 115s, 18432000 states
+seed 145 done, 116s, 18560000 states
+seed 146 done, 117s, 18688000 states
+seed 147 done, 117s, 18816000 states
+seed 148 done, 118s, 18944000 states
+seed 149 done, 119s, 19072000 states
+seed 150 done, 120s, 19200000 states
+seed 151 done, 120s, 19328000 states
+seed 152 done, 121s, 19456000 states
+seed 153 done, 122s, 19584000 states
+seed 154 done, 122s, 19712000 states
+seed 155 done, 123s, 19840000 states
+seed 156 done, 124s, 19968000 states
+seed 157 done, 125s, 20096000 states
+seed 158 done, 125s, 20224000 states
+seed 159 done, 126s, 20352000 states
+seed 160 done, 127s, 20480000 states
+seed 161 done, 128s, 20608000 states
+seed 162 done, 128s, 20736000 states
+seed 163 done, 129s, 20864000 states
+seed 164 done, 130s, 20992000 states
+seed 165 done, 131s, 21120000 states
+seed 166 done, 132s, 21248000 states
+seed 167 done, 133s, 21376000 states
+seed 168 done, 134s, 21504000 states
+seed 169 done, 134s, 21632000 states
+seed 170 done, 135s, 21760000 states
+seed 171 done, 136s, 21888000 states
+seed 172 done, 136s, 22016000 states
+seed 173 done, 137s, 22144000 states
+seed 174 done, 138s, 22272000 states
+seed 175 done, 139s, 22400000 states
+seed 176 done, 139s, 22528000 states
+seed 177 done, 140s, 22656000 states
+seed 178 done, 141s, 22784000 states
+seed 179 done, 141s, 22912000 states
+seed 180 done, 142s, 23040000 states
+seed 181 done, 143s, 23168000 states
+seed 182 done, 144s, 23296000 states
+seed 183 done, 145s, 23424000 states
+seed 184 done, 146s, 23552000 states
+seed 185 done, 147s, 23680000 states
+seed 186 done, 147s, 23808000 states
+seed 187 done, 148s, 23936000 states
+seed 188 done, 149s, 24064000 states
+seed 189 done, 149s, 24192000 states
+seed 190 done, 150s, 24320000 states
+seed 191 done, 151s, 24448000 states
+seed 192 done, 152s, 24576000 states
+seed 193 done, 153s, 24704000 states
+seed 194 done, 154s, 24832000 states
+seed 195 done, 154s, 24960000 states
+seed 196 done, 155s, 25088000 states
+seed 197 done, 156s, 25216000 states
+seed 198 done, 156s, 25344000 states
+seed 199 done, 157s, 25472000 states
+seed 200 done, 158s, 25600000 states
+seeds 1..200 ids=3 versions=2 pool=10 flags=ams checks=4
+states visited: 25600000
+
+== Q4 FAIL decision-Model.Accept adds C8_promise (read_as=Model.Max) : 1216
+  smallest (size 4):
+  ontology: standard=Model.By_decision guards=true written_against=true read_as=Model.Max descent=
+  selection: 0@1 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 2; target = 2; need = None; against = None }]}; 2@0 ASSERTED = Model.Assembly {ak = 0; fill = [("a", (Model.Holds 0)); ("b", Model.Empty)]}
+  facts:
+    f4: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "b"));
+  conds = [(Model.Asserted_consistent 1); (Model.Selected_at (0, 1))]}
+  frontier: violated=[(Model.C5_std 1), (Model.C5_std 2), (Model.C8_required (2, "a"))] uncovered=[(Model.C5_std 1), (Model.C5_std 2), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f1 Model.Decision {k = Model.Accept; subj = (Model.Piece_at (1, 0)); conds = []}
+  new violated: (Model.C8_promise (2, "b", 4))
+== Q4 FAIL decision-Model.Accept adds C9 (read_as=Model.Max) : 2560
+  smallest (size 3):
+  ontology: standard=Model.By_decision guards=true written_against=true read_as=Model.Max descent=
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Points 1)); ("b", (Model.Points 0))]}
+  facts:
+    f4: Model.Decision {k = Model.Raise; subj = (Model.Question (2, 0));
+  conds = [(Model.Asserted_consistent 0)]}
+  frontier: violated=[(Model.C5_std 0), (Model.C5_std 2), (Model.C8_required (2, "a"))] uncovered=[(Model.C5_std 0), (Model.C5_std 2), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f5 Model.Decision {k = Model.Accept; subj = (Model.Piece_at (0, 0)); conds = []}
+  new violated: (Model.C9 (2, 0, 4))
+== Q4 FAIL evidence-holds adds C8_promise (read_as=Model.Max) : 16768
+  smallest (size 3):
+  ontology: standard=Model.By_placement guards=false written_against=true read_as=Model.Max descent=0->2
+  selection: 1@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 2; need = None; against = None }]}; 2@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 1)); ("b", (Model.Points 1))]}
+  facts:
+    f1: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "b"));
+  conds = [(Model.Warrant_ge (1, 0, 1)); (Model.Warrant_ge (1, 0, 1))]}
+  frontier: violated=[(Model.C2 (2, "b", "a")), (Model.C8_required (2, "a"))] uncovered=[(Model.C2 (2, "b", "a")), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f6 Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  new violated: (Model.C8_promise (2, "b", 1))
+== Q4 FAIL evidence-holds adds C8_promise (read_as=Model.Max_unless_bad) : 16400
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=false written_against=false read_as=Model.Max_unless_bad descent=1->2
+  selection: 2@1 ASSERTED = Model.Assembly {ak = 0; fill = [("a", Model.Empty); ("b", Model.Empty)]}
+  facts:
+    f3: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "b"));
+  conds = [(Model.Warrant_ge (2, 0, 1))]}
+  frontier: violated=[(Model.C8_required (2, "a"))] uncovered=[(Model.C8_required (2, "a"))] consistent-mask=0
+  added: f0 Model.Evidence {p = 2; v = 1; d = 0; crit = 1; out = Model.Holds_}
+  new violated: (Model.C8_promise (2, "b", 3))
+== Q4 FAIL evidence-holds adds C9 (read_as=Model.Max) : 17600
+  smallest (size 3):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=false read_as=Model.Max descent=
+  selection: 1@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = [(1, 0, 2)];
+  reports = [];
+  refs = [{ Model.rk = 1; target = 2; need = None; against = None }]}; 2@0 ASSERTED = Model.Assembly {ak = 0; fill = [("a", Model.Empty); ("b", (Model.Holds 0))]}
+  facts:
+    f5: Model.Decision {k = Model.Raise; subj = (Model.Question (2, 0));
+  conds = [(Model.Warrant_ge (1, 0, 1))]}
+  frontier: violated=[(Model.C5_std 2), (Model.C8_required (2, "a"))] uncovered=[(Model.C5_std 2), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f0 Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+  new violated: (Model.C9 (2, 0, 5))
+== Q4 FAIL evidence-holds adds C9 (read_as=Model.Max_unless_bad) : 2048
+  smallest (size 4):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Max_unless_bad descent=
+  selection: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 1@1 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 2; target = 2; need = (Some (0, 1)); against = None }]}; 2@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 0)); ("b", (Model.Holds 1))]}
+  facts:
+    f5: Model.Decision {k = Model.Raise; subj = (Model.Question (2, 0));
+  conds = [(Model.Warrant_ge (0, 0, 2)); (Model.Selected_at (1, 1))]}
+  frontier: violated=[(Model.C2 (2, "b", "a")), (Model.C5_std 2), (Model.C8_required (2, "a"))] uncovered=[(Model.C2 (2, "b", "a")), (Model.C5_std 2), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f0 Model.Evidence {p = 0; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  new violated: (Model.C9 (2, 0, 5))
+== Q4 FAIL same-for-decision-Model.Accept adds C8_promise (read_as=Model.Max) : 192
+  smallest (size 7):
+  ontology: standard=Model.By_decision guards=true written_against=true read_as=Model.Max descent=1->2
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs =
+  [{ Model.rk = 2; target = 1; need = (Some (0, 1)); against = (Some 1) }]}; 1@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 0; target = 0; need = None; against = (Some 1) }]}; 2@0 ASSERTED = Model.Assembly {ak = 0; fill = [("a", Model.Empty); ("b", (Model.Holds 0))]}
+  facts:
+    f0: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+    f1: Model.Evidence {p = 0; v = 1; d = 0; crit = 1; out = Model.Holds_}
+    f2: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "a"));
+  conds = [(Model.Asserted_consistent 0)]}
+    f5: Model.Decision {k = Model.Accept; subj = (Model.Piece_at (0, 0));
+  conds = [(Model.Warrant_ge (0, 0, 1))]}
+  frontier: violated=[(Model.C5_std 0), (Model.C5_std 2), (Model.C8_required (2, "a"))] uncovered=[(Model.C5_std 0), (Model.C5_std 2), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f7 Model.Same {x = 0; v = 0; w = 1; for_ = 5}
+  new violated: (Model.C8_promise (2, "a", 2))
+== Q4 FAIL same-for-decision-Model.Promise adds C8_promise (read_as=Model.Max_unless_bad) : 128
+  smallest (size 5):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max_unless_bad descent=0->1
+  selection: 0@0 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 2; need = None; against = (Some 1) }]}; 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = [(0, 0, 2)];
+  reports = [];
+  refs = [{ Model.rk = 1; target = 2; need = None; against = (Some 0) }]}; 2@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 1)); ("b", (Model.Holds 0))]}
+  facts:
+    f4: Model.Evidence {p = 0; v = 0; d = 0; crit = 1; out = Model.Holds_}
+    f6: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "b"));
+  conds = [(Model.Selected_at (2, 1)); (Model.Asserted_consistent 1)]}
+  frontier: violated=[(Model.C2 (2, "b", "a"))] uncovered=[(Model.C2 (2, "b", "a"))] consistent-mask=2
+  added: f7 Model.Same {x = 2; v = 0; w = 1; for_ = 6}
+  new violated: (Model.C8_promise (2, "b", 6))
+== Q4 FAIL same-for-decision-Model.Raise adds C9 (read_as=Model.Max) : 12800
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=
+  selection: 2@1 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 1)); ("b", (Model.Points 1))]}
+  facts:
+    f2: Model.Decision {k = Model.Raise; subj = (Model.Question (2, 0));
+  conds = [(Model.Selected_at (2, 0))]}
+  frontier: violated=[(Model.C8_required (2, "a"))] uncovered=[(Model.C8_required (2, "a"))] consistent-mask=0
+  added: f9 Model.Same {x = 2; v = 1; w = 0; for_ = 2}
+  new violated: (Model.C9 (2, 0, 2))
+== Q4 FAIL same-for-decision-Model.Raise adds C9 (read_as=Model.Max_unless_bad) : 2880
+  smallest (size 2):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Max_unless_bad descent=
+  selection: 1@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}
+  facts:
+    f3: Model.Decision {k = Model.Raise; subj = (Model.Question (1, 0));
+  conds = [(Model.Selected_at (1, 0))]}
+  frontier: violated=[(Model.C5_std 1)] uncovered=[(Model.C5_std 1)] consistent-mask=0
+  added: f7 Model.Same {x = 1; v = 1; w = 0; for_ = 3}
+  new violated: (Model.C9 (1, 0, 3))
+== Q4 FAIL same-for-evidence-holds adds C8_promise (read_as=Model.Max) : 1920
+  smallest (size 4):
+  ontology: standard=Model.By_placement guards=false written_against=true read_as=Model.Max descent=0->2
+  selection: 1@1 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 2@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 1)); ("b", (Model.Points 1))]}
+  facts:
+    f1: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "b"));
+  conds = [(Model.Warrant_ge (1, 0, 1)); (Model.Warrant_ge (1, 0, 1))]}
+    f6: Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[(Model.C2 (2, "b", "a")), (Model.C8_required (2, "a"))] uncovered=[(Model.C2 (2, "b", "a")), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f7 Model.Same {x = 1; v = 0; w = 1; for_ = 6}
+  new violated: (Model.C8_promise (2, "b", 1))
+== Q4 FAIL same-for-evidence-holds adds C8_promise (read_as=Model.Max_unless_bad) : 480
+  smallest (size 5):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max_unless_bad descent=
+  selection: 1@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 2@1 ASSERTED = Model.Assembly {ak = 0; fill = [("a", Model.Empty); ("b", (Model.Holds 1))]}
+  facts:
+    f0: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_}
+    f1: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "b"));
+  conds = [(Model.Warrant_ge (1, 0, 2)); (Model.Warrant_ge (2, 0, 1))]}
+    f3: Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[(Model.C8_required (2, "a"))] uncovered=[(Model.C8_required (2, "a"))] consistent-mask=0
+  added: f8 Model.Same {x = 2; v = 1; w = 0; for_ = 0}
+  new violated: (Model.C8_promise (2, "b", 1))
+== Q4 FAIL same-for-evidence-holds adds C9 (read_as=Model.Max) : 3520
+  smallest (size 4):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=false read_as=Model.Max descent=
+  selection: 1@1 = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [2];
+  refs = [{ Model.rk = 0; target = 2; need = None; against = (Some 1) }]}; 2@0 ASSERTED = Model.Assembly {ak = 0; fill = [("a", Model.Empty); ("b", (Model.Holds 0))]}
+  facts:
+    f0: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+    f5: Model.Decision {k = Model.Raise; subj = (Model.Question (2, 0));
+  conds = [(Model.Warrant_ge (1, 0, 1))]}
+  frontier: violated=[(Model.C5_std 2), (Model.C8_required (2, "a"))] uncovered=[(Model.C5_std 2), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f7 Model.Same {x = 1; v = 1; w = 0; for_ = 0}
+  new violated: (Model.C9 (2, 0, 5))
+== Q4 adding decision-Model.Promise leaves no fixed point : 512
+  smallest (size 3):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=1->2
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 2)];
+  reports = []; refs = []}; 2@1 ASSERTED = Model.Assembly {ak = 0; fill = [("a", (Model.Holds 1)); ("b", Model.Empty)]}
+  facts:
+    f5: Model.Evidence {p = 2; v = 1; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[] uncovered=[] consistent-mask=6
+  added: f1 Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "b"));
+  conds = [(Model.Asserted_consistent 2); (Model.Selected_at (1, 0))]}
+== Q4 adding evidence-holds leaves no fixed point : 2720
+  smallest (size 3):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max_unless_bad descent=
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = [(1, 0, 1)];
+  reports = []; refs = []}; 1@1 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 1)];
+  reports = []; refs = []}
+  facts:
+    f2: Model.Decision {k = Model.Raise; subj = (Model.Question (0, 0));
+  conds = [(Model.Asserted_consistent 0)]}
+  frontier: violated=[(Model.C7_claim (0, 0))] uncovered=[(Model.C7_claim (0, 0))] consistent-mask=0
+  added: f5 Model.Evidence {p = 1; v = 1; d = 0; crit = 0; out = Model.Holds_}
+== Q4 adding same-for-evidence-holds leaves no fixed point : 416
+  smallest (size 4):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 2; target = 2; need = None; against = None }]}; 2@0 = Model.Assembly {ak = 0; fill = [("a", Model.Empty); ("b", (Model.Points 0))]}
+  facts:
+    f0: Model.Decision {k = Model.Raise; subj = (Model.Question (1, 0));
+  conds = [(Model.Asserted_consistent 1); (Model.Warrant_ge (2, 0, 1))]}
+    f3: Model.Evidence {p = 2; v = 1; d = 0; crit = 0; out = Model.Holds_}
+  frontier: violated=[] uncovered=[] consistent-mask=2
+  added: f8 Model.Same {x = 2; v = 0; w = 1; for_ = 3}
+== Q4 excepted: a conflict where the criterion already fails : 201600
+== Q4 excepted: a promise's consequences downstream : 128
+== Q4 ok : 79381968
+== states with no fixed point reached by iteration (skipped by Q2-Q5, Q7) : 4256
+exit 0

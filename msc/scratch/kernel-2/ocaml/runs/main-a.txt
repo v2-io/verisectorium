@@ -1,0 +1,560 @@
+seed 1 done, 2s, 128000 states
+seed 2 done, 3s, 256000 states
+seed 3 done, 5s, 384000 states
+seed 4 done, 7s, 512000 states
+seed 5 done, 9s, 640000 states
+seed 6 done, 11s, 768000 states
+seed 7 done, 13s, 896000 states
+seed 8 done, 14s, 1024000 states
+seed 9 done, 16s, 1152000 states
+seed 10 done, 18s, 1280000 states
+seed 11 done, 20s, 1408000 states
+seed 12 done, 23s, 1536000 states
+seed 13 done, 24s, 1664000 states
+seed 14 done, 27s, 1792000 states
+seed 15 done, 29s, 1920000 states
+seed 16 done, 31s, 2048000 states
+seed 17 done, 33s, 2176000 states
+seed 18 done, 34s, 2304000 states
+seed 19 done, 35s, 2432000 states
+seed 20 done, 37s, 2560000 states
+seed 21 done, 39s, 2688000 states
+seed 22 done, 42s, 2816000 states
+seed 23 done, 43s, 2944000 states
+seed 24 done, 45s, 3072000 states
+seed 25 done, 47s, 3200000 states
+seed 26 done, 49s, 3328000 states
+seed 27 done, 50s, 3456000 states
+seed 28 done, 53s, 3584000 states
+seed 29 done, 55s, 3712000 states
+seed 30 done, 57s, 3840000 states
+seed 31 done, 59s, 3968000 states
+seed 32 done, 61s, 4096000 states
+seed 33 done, 62s, 4224000 states
+seed 34 done, 64s, 4352000 states
+seed 35 done, 66s, 4480000 states
+seed 36 done, 68s, 4608000 states
+seed 37 done, 70s, 4736000 states
+seed 38 done, 72s, 4864000 states
+seed 39 done, 74s, 4992000 states
+seed 40 done, 75s, 5120000 states
+seed 41 done, 78s, 5248000 states
+seed 42 done, 82s, 5376000 states
+seed 43 done, 86s, 5504000 states
+seed 44 done, 88s, 5632000 states
+seed 45 done, 89s, 5760000 states
+seed 46 done, 91s, 5888000 states
+seed 47 done, 93s, 6016000 states
+seed 48 done, 95s, 6144000 states
+seed 49 done, 97s, 6272000 states
+seed 50 done, 99s, 6400000 states
+seed 51 done, 101s, 6528000 states
+seed 52 done, 103s, 6656000 states
+seed 53 done, 105s, 6784000 states
+seed 54 done, 107s, 6912000 states
+seed 55 done, 108s, 7040000 states
+seed 56 done, 110s, 7168000 states
+seed 57 done, 112s, 7296000 states
+seed 58 done, 114s, 7424000 states
+seed 59 done, 116s, 7552000 states
+seed 60 done, 118s, 7680000 states
+seed 61 done, 119s, 7808000 states
+seed 62 done, 121s, 7936000 states
+seed 63 done, 123s, 8064000 states
+seed 64 done, 124s, 8192000 states
+seed 65 done, 126s, 8320000 states
+seed 66 done, 128s, 8448000 states
+seed 67 done, 130s, 8576000 states
+seed 68 done, 132s, 8704000 states
+seed 69 done, 134s, 8832000 states
+seed 70 done, 136s, 8960000 states
+seed 71 done, 138s, 9088000 states
+seed 72 done, 140s, 9216000 states
+seed 73 done, 142s, 9344000 states
+seed 74 done, 143s, 9472000 states
+seed 75 done, 145s, 9600000 states
+seed 76 done, 147s, 9728000 states
+seed 77 done, 149s, 9856000 states
+seed 78 done, 151s, 9984000 states
+seed 79 done, 153s, 10112000 states
+seed 80 done, 155s, 10240000 states
+seed 81 done, 157s, 10368000 states
+seed 82 done, 158s, 10496000 states
+seed 83 done, 161s, 10624000 states
+seed 84 done, 163s, 10752000 states
+seed 85 done, 164s, 10880000 states
+seed 86 done, 166s, 11008000 states
+seed 87 done, 168s, 11136000 states
+seed 88 done, 171s, 11264000 states
+seed 89 done, 172s, 11392000 states
+seed 90 done, 174s, 11520000 states
+seed 91 done, 176s, 11648000 states
+seed 92 done, 178s, 11776000 states
+seed 93 done, 179s, 11904000 states
+seed 94 done, 182s, 12032000 states
+seed 95 done, 184s, 12160000 states
+seed 96 done, 186s, 12288000 states
+seed 97 done, 187s, 12416000 states
+seed 98 done, 189s, 12544000 states
+seed 99 done, 191s, 12672000 states
+seed 100 done, 192s, 12800000 states
+seed 101 done, 195s, 12928000 states
+seed 102 done, 197s, 13056000 states
+seed 103 done, 199s, 13184000 states
+seed 104 done, 200s, 13312000 states
+seed 105 done, 202s, 13440000 states
+seed 106 done, 204s, 13568000 states
+seed 107 done, 207s, 13696000 states
+seed 108 done, 209s, 13824000 states
+seed 109 done, 211s, 13952000 states
+seed 110 done, 214s, 14080000 states
+seed 111 done, 216s, 14208000 states
+seed 112 done, 217s, 14336000 states
+seed 113 done, 218s, 14464000 states
+seed 114 done, 221s, 14592000 states
+seed 115 done, 223s, 14720000 states
+seed 116 done, 224s, 14848000 states
+seed 117 done, 226s, 14976000 states
+seed 118 done, 228s, 15104000 states
+seed 119 done, 230s, 15232000 states
+seed 120 done, 232s, 15360000 states
+seed 121 done, 234s, 15488000 states
+seed 122 done, 235s, 15616000 states
+seed 123 done, 237s, 15744000 states
+seed 124 done, 239s, 15872000 states
+seed 125 done, 241s, 16000000 states
+seed 126 done, 242s, 16128000 states
+seed 127 done, 244s, 16256000 states
+seed 128 done, 246s, 16384000 states
+seed 129 done, 248s, 16512000 states
+seed 130 done, 250s, 16640000 states
+seed 131 done, 252s, 16768000 states
+seed 132 done, 254s, 16896000 states
+seed 133 done, 256s, 17024000 states
+seed 134 done, 258s, 17152000 states
+seed 135 done, 260s, 17280000 states
+seed 136 done, 262s, 17408000 states
+seed 137 done, 263s, 17536000 states
+seed 138 done, 265s, 17664000 states
+seed 139 done, 267s, 17792000 states
+seed 140 done, 269s, 17920000 states
+seed 141 done, 271s, 18048000 states
+seed 142 done, 273s, 18176000 states
+seed 143 done, 275s, 18304000 states
+seed 144 done, 277s, 18432000 states
+seed 145 done, 278s, 18560000 states
+seed 146 done, 280s, 18688000 states
+seed 147 done, 282s, 18816000 states
+seed 148 done, 283s, 18944000 states
+seed 149 done, 285s, 19072000 states
+seed 150 done, 287s, 19200000 states
+seeds 1..150 ids=3 versions=2 pool=10 flags=a checks=24569
+states visited: 19200000
+
+== Q2 FAIL a dead decision-Model.Accept changes the frontier : 62720
+  smallest (size 2):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=false written_against=true read_as=Model.Odd descent=1->2
+  selection: 1@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [4];
+  refs = [{ Model.rk = 2; target = 2; need = None; against = (Some 0) }]}
+  facts:
+    f4: Model.Decision {k = Model.Accept; subj = (Model.Piece_at (1, 0));
+  conds = [(Model.Selected_at (1, 1))]}
+  frontier: violated=[(Model.C3_resolve (1, 0)), (Model.C5_std 1)] uncovered=[(Model.C3_resolve (1, 0)), (Model.C5_std 1)] consistent-mask=0
+  dead fact: f4; without it: violated=[(Model.C3_resolve (1, 0)), (Model.C5_std 1), (Model.C7_report (1, 4))] uncovered=[(Model.C3_resolve (1, 0)), (Model.C5_std 1), (Model.C7_report (1, 4))] consistent-mask=0
+== Q2 FAIL a dead decision-Model.Affirm changes the frontier : 119808
+  smallest (size 2):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Max descent=
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [6];
+  refs = [{ Model.rk = 3; target = 2; need = None; against = (Some 1) }]}
+  facts:
+    f6: Model.Decision {k = Model.Affirm; subj = (Model.Pair (2, 1, 0, 1));
+  conds = []}
+  frontier: violated=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] uncovered=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] consistent-mask=0
+  dead fact: f6; without it: violated=[(Model.C3_resolve (0, 0)), (Model.C5_std 0), (Model.C7_report (0, 6))] uncovered=[(Model.C3_resolve (0, 0)), (Model.C5_std 0), (Model.C7_report (0, 6))] consistent-mask=0
+== Q2 ok : 29852704
+== Q4 FAIL decision-Model.Accept adds C8_promise (read_as=Model.Max_unless_bad) : 192
+  smallest (size 7):
+  ontology: standard=Model.By_decision guards=true written_against=true read_as=Model.Max_unless_bad descent=1->2
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs =
+  [{ Model.rk = 2; target = 1; need = (Some (0, 1)); against = (Some 1) }]}; 1@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 0; target = 0; need = None; against = (Some 1) }]}; 2@0 ASSERTED = Model.Assembly {ak = 0; fill = [("a", Model.Empty); ("b", (Model.Holds 0))]}
+  facts:
+    f0: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+    f1: Model.Evidence {p = 0; v = 1; d = 0; crit = 1; out = Model.Holds_}
+    f2: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "a"));
+  conds = [(Model.Asserted_consistent 0)]}
+    f7: Model.Same {x = 0; v = 0; w = 1; for_ = 5}
+  frontier: violated=[(Model.C5_std 0), (Model.C5_std 2), (Model.C8_required (2, "a"))] uncovered=[(Model.C5_std 0), (Model.C5_std 2), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f5 Model.Decision {k = Model.Accept; subj = (Model.Piece_at (0, 0));
+  conds = [(Model.Warrant_ge (0, 0, 1))]}
+  new violated: (Model.C8_promise (2, "a", 2))
+== Q4 FAIL evidence-holds adds C5_std (read_as=Model.Odd) : 25600
+  smallest (size 2):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs =
+  [{ Model.rk = 3; target = 0; need = (Some (0, 1)); against = (Some 0) }]}
+  facts:
+    f1: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+  frontier: violated=[(Model.C3_resolve (1, 0))] uncovered=[(Model.C3_resolve (1, 0))] consistent-mask=0
+  added: f4 Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  new violated: (Model.C5_std 1)
+== Q4 FAIL evidence-holds adds C7_claim (read_as=Model.Odd) : 2560
+  smallest (size 4):
+  ontology: standard=Model.By_decision guards=true written_against=true read_as=Model.Odd descent=
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = [(2, 0, 1)];
+  reports = []; refs = []}; 2@1 = Model.Assembly {ak = 0; fill = [("a", (Model.Points 0)); ("b", Model.Empty)]}
+  facts:
+    f4: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_}
+    f8: Model.Same {x = 2; v = 0; w = 1; for_ = 4}
+  frontier: violated=[(Model.C5_std 1)] uncovered=[(Model.C5_std 1)] consistent-mask=0
+  added: f5 Model.Evidence {p = 2; v = 1; d = 0; crit = 1; out = Model.Holds_}
+  new violated: (Model.C7_claim (1, 0))
+== Q4 FAIL evidence-holds adds C8_need (read_as=Model.Odd) : 5120
+  smallest (size 3):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 1; need = (Some (0, 1)); against = None }]}; 1@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs =
+  [{ Model.rk = 3; target = 0; need = (Some (0, 1)); against = (Some 0) }]}
+  facts:
+    f1: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+  frontier: violated=[(Model.C4 (0, 0)), (Model.C5_std 0)] uncovered=[(Model.C4 (0, 0)), (Model.C5_std 0)] consistent-mask=0
+  added: f4 Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  new violated: (Model.C8_need (0, 0))
+== Q4 FAIL evidence-holds adds C8_promise (read_as=Model.Max) : 6400
+  smallest (size 3):
+  ontology: standard=Model.By_placement guards=false written_against=true read_as=Model.Max descent=0->2
+  selection: 1@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 2; need = None; against = None }]}; 2@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 1)); ("b", (Model.Points 1))]}
+  facts:
+    f1: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "b"));
+  conds = [(Model.Warrant_ge (1, 0, 1)); (Model.Warrant_ge (1, 0, 1))]}
+  frontier: violated=[(Model.C2 (2, "b", "a")), (Model.C8_required (2, "a"))] uncovered=[(Model.C2 (2, "b", "a")), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f6 Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  new violated: (Model.C8_promise (2, "b", 1))
+== Q4 FAIL evidence-holds adds C8_promise (read_as=Model.Max_unless_bad) : 7488
+  smallest (size 3):
+  ontology: standard=Model.By_placement guards=true written_against=false read_as=Model.Max_unless_bad descent=0->2
+  selection: 1@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [4];
+  refs = []}; 2@0 ASSERTED = Model.Assembly {ak = 0; fill = [("a", Model.Empty); ("b", Model.Empty)]}
+  facts:
+    f4: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "a"));
+  conds = [(Model.Warrant_ge (1, 0, 2)); (Model.Selected_at (1, 0))]}
+  frontier: violated=[(Model.C8_required (2, "a"))] uncovered=[(Model.C8_required (2, "a"))] consistent-mask=0
+  added: f2 Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  new violated: (Model.C8_promise (2, "a", 4))
+== Q4 FAIL evidence-holds adds C8_promise (read_as=Model.Odd) : 5120
+  smallest (size 3):
+  ontology: standard=Model.By_decision guards=false written_against=true read_as=Model.Odd descent=
+  selection: 1@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = [(0, 0, 1)];
+  reports = [];
+  refs = [{ Model.rk = 0; target = 2; need = None; against = None }]}; 2@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 1)); ("b", (Model.Points 0))]}
+  facts:
+    f4: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "a"));
+  conds = [(Model.Warrant_ge (1, 0, 1)); (Model.Warrant_ge (1, 0, 1))]}
+  frontier: violated=[(Model.C5_std 2), (Model.C8_required (2, "a"))] uncovered=[(Model.C5_std 2), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f2 Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+  new violated: (Model.C8_promise (2, "a", 4))
+== Q4 FAIL evidence-holds adds C8_required (read_as=Model.Odd) : 320
+  smallest (size 6):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=false written_against=true read_as=Model.Odd descent=1->2
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs =
+  [{ Model.rk = 3; target = 2; need = (Some (0, 1)); against = (Some 1) }]}; 2@0 ASSERTED = Model.Assembly {ak = 0; fill = [("a", (Model.Holds 1)); ("b", Model.Empty)]}
+  facts:
+    f0: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+    f3: Model.Evidence {p = 2; v = 1; d = 0; crit = 0; out = Model.Holds_}
+    f7: Model.Same {x = 1; v = 0; w = 1; for_ = 5}
+    f8: Model.Same {x = 2; v = 0; w = 1; for_ = 3}
+  frontier: violated=[] uncovered=[] consistent-mask=6
+  added: f5 Model.Evidence {p = 1; v = 1; d = 0; crit = 1; out = Model.Holds_}
+  new violated: (Model.C8_required (2, "a"))
+== Q4 FAIL evidence-holds adds C9 (read_as=Model.Max) : 1600
+  smallest (size 3):
+  ontology: standard=Model.By_decision guards=false written_against=false read_as=Model.Max descent=
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 1; need = None; against = (Some 0) }]}; 2@1 = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 0)); ("b", (Model.Holds 0))]}
+  facts:
+    f4: Model.Decision {k = Model.Raise; subj = (Model.Question (0, 0));
+  conds = [(Model.Warrant_ge (2, 0, 1))]}
+  frontier: violated=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] uncovered=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] consistent-mask=0
+  added: f2 Model.Evidence {p = 2; v = 1; d = 0; crit = 0; out = Model.Holds_}
+  new violated: (Model.C9 (0, 0, 4))
+== Q4 FAIL evidence-holds adds C9 (read_as=Model.Max_unless_bad) : 11520
+  smallest (size 3):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=false read_as=Model.Max_unless_bad descent=
+  selection: 1@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = [(1, 0, 2)];
+  reports = [];
+  refs = [{ Model.rk = 1; target = 2; need = None; against = None }]}; 2@0 ASSERTED = Model.Assembly {ak = 0; fill = [("a", Model.Empty); ("b", (Model.Holds 0))]}
+  facts:
+    f5: Model.Decision {k = Model.Raise; subj = (Model.Question (2, 0));
+  conds = [(Model.Warrant_ge (1, 0, 1))]}
+  frontier: violated=[(Model.C5_std 2), (Model.C8_required (2, "a"))] uncovered=[(Model.C5_std 2), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f0 Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+  new violated: (Model.C9 (2, 0, 5))
+== Q4 FAIL same-for-decision-Model.Accept adds C8_promise (read_as=Model.Max_unless_bad) : 192
+  smallest (size 7):
+  ontology: standard=Model.By_decision guards=true written_against=true read_as=Model.Max_unless_bad descent=1->2
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs =
+  [{ Model.rk = 2; target = 1; need = (Some (0, 1)); against = (Some 1) }]}; 1@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 0; target = 0; need = None; against = (Some 1) }]}; 2@0 ASSERTED = Model.Assembly {ak = 0; fill = [("a", Model.Empty); ("b", (Model.Holds 0))]}
+  facts:
+    f0: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+    f1: Model.Evidence {p = 0; v = 1; d = 0; crit = 1; out = Model.Holds_}
+    f2: Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "a"));
+  conds = [(Model.Asserted_consistent 0)]}
+    f5: Model.Decision {k = Model.Accept; subj = (Model.Piece_at (0, 0));
+  conds = [(Model.Warrant_ge (0, 0, 1))]}
+  frontier: violated=[(Model.C5_std 0), (Model.C5_std 2), (Model.C8_required (2, "a"))] uncovered=[(Model.C5_std 0), (Model.C5_std 2), (Model.C8_required (2, "a"))] consistent-mask=0
+  added: f7 Model.Same {x = 0; v = 0; w = 1; for_ = 5}
+  new violated: (Model.C8_promise (2, "a", 2))
+== Q4 FAIL same-for-decision-Model.Raise adds C9 (read_as=Model.Max) : 12800
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 2; need = None; against = (Some 0) }]}
+  facts:
+    f3: Model.Decision {k = Model.Raise; subj = (Model.Question (0, 0));
+  conds = [(Model.Selected_at (0, 0))]}
+  frontier: violated=[(Model.C3_resolve (0, 0))] uncovered=[(Model.C3_resolve (0, 0))] consistent-mask=0
+  added: f8 Model.Same {x = 0; v = 1; w = 0; for_ = 3}
+  new violated: (Model.C9 (0, 0, 3))
+== Q4 FAIL same-for-decision-Model.Raise adds C9 (read_as=Model.Odd) : 1280
+  smallest (size 3):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=0->2
+  selection: 0@1 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 2; need = (Some (0, 2)); against = None }]}
+  facts:
+    f3: Model.Decision {k = Model.Raise; subj = (Model.Question (1, 0));
+  conds = [(Model.Selected_at (0, 1)); (Model.Selected_at (1, 1))]}
+  frontier: violated=[(Model.C3_resolve (1, 0)), (Model.C5_std 1)] uncovered=[(Model.C3_resolve (1, 0)), (Model.C5_std 1)] consistent-mask=0
+  added: f7 Model.Same {x = 1; v = 1; w = 0; for_ = 3}
+  new violated: (Model.C9 (1, 0, 3))
+== Q4 FAIL same-for-evidence-bad adds C5_std (read_as=Model.Max_unless_bad) : 6400
+  smallest (size 3):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=false read_as=Model.Max_unless_bad descent=
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 0; target = 2; need = None; against = None }]}
+  facts:
+    f1: Model.Evidence {p = 0; v = 1; d = 0; crit = 1; out = Model.Part}
+    f4: Model.Evidence {p = 0; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[(Model.C3_resolve (0, 0)), (Model.C5_rest (0, 2))] uncovered=[(Model.C3_resolve (0, 0)), (Model.C5_rest (0, 2))] consistent-mask=0
+  added: f7 Model.Same {x = 0; v = 1; w = 0; for_ = 1}
+  new violated: (Model.C5_std 0)
+== Q4 FAIL same-for-evidence-bad adds C6_conflict (read_as=Model.Max) : 12800
+  smallest (size 3):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Max descent=
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(2, 0, 2)];
+  reports = [];
+  refs = [{ Model.rk = 0; target = 1; need = None; against = None }]}
+  facts:
+    f3: Model.Evidence {p = 0; v = 0; d = 0; crit = 1; out = Model.Fails}
+    f6: Model.Evidence {p = 0; v = 1; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[(Model.C3_resolve (0, 0)), (Model.C5_rest (0, 1)), (Model.C7_claim (0, 0))] uncovered=[(Model.C3_resolve (0, 0)), (Model.C5_rest (0, 1)), (Model.C7_claim (0, 0))] consistent-mask=0
+  added: f7 Model.Same {x = 0; v = 0; w = 1; for_ = 3}
+  new violated: (Model.C6_conflict (0, 0, 1))
+== Q4 FAIL same-for-evidence-bad adds C6_conflict (read_as=Model.Max_unless_bad) : 3200
+  smallest (size 3):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=false read_as=Model.Max_unless_bad descent=
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 0; target = 2; need = None; against = None }]}
+  facts:
+    f1: Model.Evidence {p = 0; v = 1; d = 0; crit = 1; out = Model.Part}
+    f4: Model.Evidence {p = 0; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[(Model.C3_resolve (0, 0)), (Model.C5_rest (0, 2))] uncovered=[(Model.C3_resolve (0, 0)), (Model.C5_rest (0, 2))] consistent-mask=0
+  added: f7 Model.Same {x = 0; v = 1; w = 0; for_ = 1}
+  new violated: (Model.C6_conflict (0, 0, 1))
+== Q4 FAIL same-for-evidence-bad adds C6_conflict (read_as=Model.Odd) : 8000
+  smallest (size 3):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}
+  facts:
+    f0: Model.Evidence {p = 0; v = 1; d = 0; crit = 0; out = Model.Holds_}
+    f5: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Part}
+  frontier: violated=[] uncovered=[] consistent-mask=1
+  added: f7 Model.Same {x = 0; v = 1; w = 0; for_ = 5}
+  new violated: (Model.C6_conflict (0, 0, 0))
+== Q4 FAIL same-for-evidence-bad adds C6_fail (read_as=Model.Max) : 134400
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=1->2
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}
+  facts:
+    f1: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Part}
+  frontier: violated=[(Model.C6_guard (0, 0, 0))] uncovered=[(Model.C6_guard (0, 0, 0))] consistent-mask=0
+  added: f7 Model.Same {x = 0; v = 0; w = 1; for_ = 1}
+  new violated: (Model.C6_fail (0, 0, 0))
+== Q4 FAIL same-for-evidence-bad adds C6_fail (read_as=Model.Max_unless_bad) : 60800
+  smallest (size 2):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Max_unless_bad descent=0->2
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(1, 0, 1)];
+  reports = []; refs = []}
+  facts:
+    f6: Model.Evidence {p = 1; v = 1; d = 0; crit = 0; out = Model.Part}
+  frontier: violated=[(Model.C5_std 1), (Model.C6_guard (1, 0, 0)), (Model.C7_claim (1, 0))] uncovered=[(Model.C5_std 1), (Model.C6_guard (1, 0, 0)), (Model.C7_claim (1, 0))] consistent-mask=0
+  added: f7 Model.Same {x = 1; v = 0; w = 1; for_ = 6}
+  new violated: (Model.C6_fail (1, 0, 0))
+== Q4 FAIL same-for-evidence-bad adds C6_fail (read_as=Model.Odd) : 83200
+  smallest (size 2):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}
+  facts:
+    f1: Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Part}
+  frontier: violated=[(Model.C5_std 0), (Model.C6_guard (0, 0, 0))] uncovered=[(Model.C5_std 0), (Model.C6_guard (0, 0, 0))] consistent-mask=0
+  added: f7 Model.Same {x = 0; v = 1; w = 0; for_ = 1}
+  new violated: (Model.C6_fail (0, 0, 0))
+== Q4 FAIL same-for-evidence-bad adds C8_required (read_as=Model.Odd) : 448
+  smallest (size 5):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=false written_against=true read_as=Model.Odd descent=1->2
+  selection: 1@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [4];
+  refs = [{ Model.rk = 2; target = 2; need = None; against = (Some 0) }]}; 2@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 1)); ("b", (Model.Points 1))]}
+  facts:
+    f2: Model.Evidence {p = 1; v = 1; d = 0; crit = 1; out = Model.Holds_}
+    f4: Model.Decision {k = Model.Accept; subj = (Model.Piece_at (1, 0));
+  conds = [(Model.Selected_at (1, 1))]}
+    f6: Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Fails}
+  frontier: violated=[(Model.C2 (2, "b", "a")), (Model.C5_std 2)] uncovered=[(Model.C2 (2, "b", "a")), (Model.C5_std 2)] consistent-mask=2
+  added: f8 Model.Same {x = 1; v = 1; w = 0; for_ = 6}
+  new violated: (Model.C8_required (2, "a"))
+== Q4 FAIL same-for-evidence-holds adds C5_std (read_as=Model.Odd) : 6400
+  smallest (size 3):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=false written_against=true read_as=Model.Odd descent=1->2
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs =
+  [{ Model.rk = 3; target = 2; need = (Some (0, 1)); against = (Some 1) }]}
+  facts:
+    f0: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+    f5: Model.Evidence {p = 1; v = 1; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[(Model.C3_resolve (1, 0))] uncovered=[(Model.C3_resolve (1, 0))] consistent-mask=0
+  added: f7 Model.Same {x = 1; v = 0; w = 1; for_ = 5}
+  new violated: (Model.C5_std 1)
+== Q4 FAIL same-for-evidence-holds adds C7_claim (read_as=Model.Odd) : 1280
+  smallest (size 4):
+  ontology: standard=Model.By_decision guards=true written_against=true read_as=Model.Odd descent=
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = [(2, 0, 1)];
+  reports = []; refs = []}; 2@1 = Model.Assembly {ak = 0; fill = [("a", (Model.Points 0)); ("b", Model.Empty)]}
+  facts:
+    f4: Model.Evidence {p = 2; v = 0; d = 0; crit = 0; out = Model.Holds_}
+    f5: Model.Evidence {p = 2; v = 1; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[(Model.C5_std 1)] uncovered=[(Model.C5_std 1)] consistent-mask=0
+  added: f8 Model.Same {x = 2; v = 0; w = 1; for_ = 4}
+  new violated: (Model.C7_claim (1, 0))
+== Q4 FAIL same-for-evidence-holds adds C8_required (read_as=Model.Odd) : 160
+  smallest (size 6):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=false written_against=true read_as=Model.Odd descent=1->2
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs =
+  [{ Model.rk = 3; target = 2; need = (Some (0, 1)); against = (Some 1) }]}; 2@0 ASSERTED = Model.Assembly {ak = 0; fill = [("a", (Model.Holds 1)); ("b", Model.Empty)]}
+  facts:
+    f0: Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Holds_}
+    f3: Model.Evidence {p = 2; v = 1; d = 0; crit = 0; out = Model.Holds_}
+    f5: Model.Evidence {p = 1; v = 1; d = 0; crit = 1; out = Model.Holds_}
+    f8: Model.Same {x = 2; v = 0; w = 1; for_ = 3}
+  frontier: violated=[] uncovered=[] consistent-mask=6
+  added: f7 Model.Same {x = 1; v = 0; w = 1; for_ = 5}
+  new violated: (Model.C8_required (2, "a"))
+== Q4 adding decision-Model.Promise leaves no fixed point : 512
+  smallest (size 3):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=1->2
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 2)];
+  reports = []; refs = []}; 2@1 ASSERTED = Model.Assembly {ak = 0; fill = [("a", (Model.Holds 1)); ("b", Model.Empty)]}
+  facts:
+    f5: Model.Evidence {p = 2; v = 1; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[] uncovered=[] consistent-mask=6
+  added: f1 Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "b"));
+  conds = [(Model.Asserted_consistent 2); (Model.Selected_at (1, 0))]}
+== Q4 adding evidence-holds leaves no fixed point : 2720
+  smallest (size 3):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Odd descent=
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = [(1, 0, 1)];
+  reports = []; refs = []}; 1@1 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 1)];
+  reports = []; refs = []}
+  facts:
+    f2: Model.Decision {k = Model.Raise; subj = (Model.Question (0, 0));
+  conds = [(Model.Asserted_consistent 0)]}
+  frontier: violated=[(Model.C7_claim (0, 0))] uncovered=[(Model.C7_claim (0, 0))] consistent-mask=0
+  added: f5 Model.Evidence {p = 1; v = 1; d = 0; crit = 0; out = Model.Holds_}
+== Q4 adding same-for-evidence-holds leaves no fixed point : 416
+  smallest (size 4):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 2; target = 2; need = None; against = None }]}; 2@0 = Model.Assembly {ak = 0; fill = [("a", Model.Empty); ("b", (Model.Points 0))]}
+  facts:
+    f0: Model.Decision {k = Model.Raise; subj = (Model.Question (1, 0));
+  conds = [(Model.Asserted_consistent 1); (Model.Warrant_ge (2, 0, 1))]}
+    f3: Model.Evidence {p = 2; v = 1; d = 0; crit = 0; out = Model.Holds_}
+  frontier: violated=[] uncovered=[] consistent-mask=2
+  added: f8 Model.Same {x = 2; v = 0; w = 1; for_ = 3}
+== Q4 excepted: a conflict where the criterion already fails : 182400
+== Q4 ok : 59408272
+== Q5 clone: same content under an unrelated id is asserted with nothing violated on it : 21824
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}
+  facts:
+    f3: Model.Evidence {p = 1; v = 1; d = 0; crit = 1; out = Model.Fails}
+  frontier: violated=[] uncovered=[] consistent-mask=1
+  defect was found on 1@1; asserted clone is 0
+== Q5 ok (related piece) : 3353600
+== Q6 FAIL no fixed point (conditioned raise/promise/waive present=true) : 4256
+  smallest (size 3):
+  ontology: standard=Model.By_placement guards=false written_against=true read_as=Model.Odd descent=
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 2; need = None; against = None }]}; 2@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 1)); ("b", (Model.Points 0))]}
+  facts:
+    f4: Model.Decision {k = Model.Raise; subj = (Model.Question (2, 0));
+  conds = [(Model.Asserted_consistent 2)]}
+  frontier: (no fixed point reached)
+  
+== Q6 ok: unique greatest fixed point : 19195744
+== Q9 stationary under at least one : 6363762
+== Q9 stationary under decision, not under rule : 81376
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Odd descent=
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}
+  facts:
+    f3: Model.Decision {k = Model.Accept; subj = (Model.Piece_at (0, 1)); conds = []}
+  frontier: violated=[] uncovered=[] consistent-mask=1
+  decision=true rule=false placement=true
+== Q9 stationary under placement, not under decision : 2119426
+  smallest (size 1):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Odd descent=
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}
+  facts:
+
+  frontier: violated=[] uncovered=[] consistent-mask=1
+  decision=false rule=false placement=true
+== Q9 stationary under placement, not under rule : 1944154
+  smallest (size 1):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Odd descent=
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}
+  facts:
+
+  frontier: violated=[] uncovered=[] consistent-mask=1
+  decision=false rule=false placement=true
+== Q9 stationary under rule, not under decision : 256648
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Odd descent=
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(0, 0, 1)];
+  reports = []; refs = []}
+  facts:
+    f0: Model.Evidence {p = 0; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[] uncovered=[] consistent-mask=1
+  decision=false rule=true placement=true
+== states with no fixed point reached by iteration (skipped by Q2-Q5, Q7) : 4256
+exit 0

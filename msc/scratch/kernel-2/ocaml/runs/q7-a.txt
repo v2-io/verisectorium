@@ -1,0 +1,339 @@
+seed 1 done, 2s, 40000 states
+seed 2 done, 6s, 80000 states
+seed 3 done, 9s, 120000 states
+seed 4 done, 11s, 160000 states
+seed 5 done, 12s, 200000 states
+seed 6 done, 14s, 240000 states
+seed 7 done, 17s, 280000 states
+seed 8 done, 18s, 320000 states
+seed 9 done, 20s, 360000 states
+seed 10 done, 22s, 400000 states
+seed 11 done, 25s, 440000 states
+seed 12 done, 27s, 480000 states
+seed 13 done, 28s, 520000 states
+seed 14 done, 31s, 560000 states
+seed 15 done, 32s, 600000 states
+seed 16 done, 34s, 640000 states
+seed 17 done, 36s, 680000 states
+seed 18 done, 36s, 720000 states
+seed 19 done, 38s, 760000 states
+seed 20 done, 39s, 800000 states
+seed 21 done, 43s, 840000 states
+seed 22 done, 45s, 880000 states
+seed 23 done, 46s, 920000 states
+seed 24 done, 49s, 960000 states
+seed 25 done, 51s, 1000000 states
+seed 26 done, 53s, 1040000 states
+seed 27 done, 54s, 1080000 states
+seed 28 done, 57s, 1120000 states
+seed 29 done, 58s, 1160000 states
+seed 30 done, 59s, 1200000 states
+seed 31 done, 62s, 1240000 states
+seed 32 done, 64s, 1280000 states
+seed 33 done, 65s, 1320000 states
+seed 34 done, 67s, 1360000 states
+seed 35 done, 72s, 1400000 states
+seed 36 done, 75s, 1440000 states
+seed 37 done, 76s, 1480000 states
+seed 38 done, 78s, 1520000 states
+seed 39 done, 79s, 1560000 states
+seed 40 done, 82s, 1600000 states
+seed 41 done, 84s, 1640000 states
+seed 42 done, 87s, 1680000 states
+seed 43 done, 89s, 1720000 states
+seed 44 done, 90s, 1760000 states
+seed 45 done, 92s, 1800000 states
+seed 46 done, 93s, 1840000 states
+seed 47 done, 95s, 1880000 states
+seed 48 done, 98s, 1920000 states
+seed 49 done, 100s, 1960000 states
+seed 50 done, 102s, 2000000 states
+seed 51 done, 105s, 2040000 states
+seed 52 done, 107s, 2080000 states
+seed 53 done, 109s, 2120000 states
+seed 54 done, 111s, 2160000 states
+seed 55 done, 112s, 2200000 states
+seed 56 done, 114s, 2240000 states
+seed 57 done, 116s, 2280000 states
+seed 58 done, 117s, 2320000 states
+seed 59 done, 120s, 2360000 states
+seed 60 done, 123s, 2400000 states
+seed 61 done, 126s, 2440000 states
+seed 62 done, 128s, 2480000 states
+seed 63 done, 132s, 2520000 states
+seed 64 done, 135s, 2560000 states
+seed 65 done, 136s, 2600000 states
+seed 66 done, 140s, 2640000 states
+seed 67 done, 142s, 2680000 states
+seed 68 done, 145s, 2720000 states
+seed 69 done, 146s, 2760000 states
+seed 70 done, 148s, 2800000 states
+seed 71 done, 150s, 2840000 states
+seed 72 done, 154s, 2880000 states
+seed 73 done, 155s, 2920000 states
+seed 74 done, 157s, 2960000 states
+seed 75 done, 158s, 3000000 states
+seed 76 done, 160s, 3040000 states
+seed 77 done, 162s, 3080000 states
+seed 78 done, 164s, 3120000 states
+seed 79 done, 166s, 3160000 states
+seed 80 done, 167s, 3200000 states
+seed 81 done, 170s, 3240000 states
+seed 82 done, 173s, 3280000 states
+seed 83 done, 175s, 3320000 states
+seed 84 done, 177s, 3360000 states
+seed 85 done, 182s, 3400000 states
+seed 86 done, 184s, 3440000 states
+seed 87 done, 185s, 3480000 states
+seed 88 done, 187s, 3520000 states
+seed 89 done, 189s, 3560000 states
+seed 90 done, 192s, 3600000 states
+seed 91 done, 194s, 3640000 states
+seed 92 done, 196s, 3680000 states
+seed 93 done, 198s, 3720000 states
+seed 94 done, 200s, 3760000 states
+seed 95 done, 202s, 3800000 states
+seed 96 done, 203s, 3840000 states
+seed 97 done, 205s, 3880000 states
+seed 98 done, 207s, 3920000 states
+seed 99 done, 212s, 3960000 states
+seed 100 done, 215s, 4000000 states
+seeds 1..100 ids=4 versions=2 pool=6 flags=a checks=7
+states visited: 4000000
+
+== Q7 FAIL a decision-Model.Accept outside the spec neighbourhood changes it : 16280
+  smallest (size 1):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=
+  selection: 1@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = [(1, 0, 2)];
+  reports = [0]; refs = []}
+  facts:
+
+  frontier: violated=[(Model.C7_claim (1, 0)), (Model.C7_report (1, 0))] uncovered=[(Model.C7_claim (1, 0)), (Model.C7_report (1, 0))] consistent-mask=0
+  piece 1, neighbourhood {1}; added f0 Model.Decision {k = Model.Accept; subj = (Model.Piece_at (2, 1)); conds = []}; then about the piece: (Model.C7_claim (1, 0))
+== Q7 FAIL a decision-Model.Affirm outside the spec neighbourhood changes it : 5200
+  smallest (size 1):
+  ontology: standard=Model.By_placement guards=true written_against=false read_as=Model.Max_unless_bad descent=2->3
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [0];
+  refs = []}
+  facts:
+
+  frontier: violated=[(Model.C7_report (1, 0))] uncovered=[(Model.C7_report (1, 0))] consistent-mask=0
+  piece 1, neighbourhood {1}; added f0 Model.Decision {k = Model.Affirm; subj = (Model.Pair (3, 0, 0, 0));
+  conds = []}; then about the piece: 
+== Q7 FAIL a decision-Model.Promise outside the spec neighbourhood changes it : 10960
+  smallest (size 1):
+  ontology: standard=Model.By_decision guards=true written_against=true read_as=Model.Max descent=
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [2];
+  refs =
+  [{ Model.rk = 3; target = 1; need = (Some (0, 2)); against = (Some 1) }]}
+  facts:
+
+  frontier: violated=[(Model.C3_resolve (0, 0)), (Model.C5_std 0), (Model.C7_report (0, 2))] uncovered=[(Model.C3_resolve (0, 0)), (Model.C5_std 0), (Model.C7_report (0, 2))] consistent-mask=0
+  piece 0, neighbourhood {1,0}; added f2 Model.Decision {k = Model.Promise; subj = (Model.Slot (3, "a")); conds = []}; then about the piece: (Model.C3_resolve (0, 0)), (Model.C5_std 0)
+== Q7 FAIL a decision-Model.Raise outside the spec neighbourhood changes it : 10560
+  smallest (size 1):
+  ontology: standard=Model.By_placement guards=false written_against=true read_as=Model.Odd descent=
+  selection: 2@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(3, 0, 2)];
+  reports = [2];
+  refs =
+  [{ Model.rk = 1; target = 1; need = (Some (0, 2)); against = (Some 0) }]}
+  facts:
+
+  frontier: violated=[(Model.C3_resolve (2, 0)), (Model.C7_claim (2, 0)), (Model.C7_report (2, 2))] uncovered=[(Model.C3_resolve (2, 0)), (Model.C7_claim (2, 0)), (Model.C7_report (2, 2))] consistent-mask=0
+  piece 2, neighbourhood {1,2}; added f2 Model.Decision {k = Model.Raise; subj = (Model.Question (0, 0)); conds = []}; then about the piece: (Model.C3_resolve (2, 0)), (Model.C7_claim (2, 0))
+== Q7 FAIL a decision-Model.Waive outside the spec neighbourhood changes it : 24200
+  smallest (size 1):
+  ontology: standard=Model.By_decision guards=true written_against=false read_as=Model.Max_unless_bad descent=1->2
+  selection: 2@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [3];
+  refs = [{ Model.rk = 1; target = 0; need = None; against = None }]}
+  facts:
+
+  frontier: violated=[(Model.C3_resolve (2, 0)), (Model.C5_std 2), (Model.C7_report (2, 3))] uncovered=[(Model.C3_resolve (2, 0)), (Model.C5_std 2), (Model.C7_report (2, 3))] consistent-mask=0
+  piece 2, neighbourhood {0,2}; added f3 Model.Decision {k = Model.Waive; subj = (Model.Inst (Model.C5_rest (3, 0)));
+  conds = []}; then about the piece: (Model.C3_resolve (2, 0)), (Model.C5_std 2)
+== Q7 FAIL a evidence-bad outside the spec neighbourhood changes it : 36560
+  smallest (size 1):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 2@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}
+  facts:
+
+  frontier: violated=[(Model.C5_std 2)] uncovered=[(Model.C5_std 2)] consistent-mask=0
+  piece 2, neighbourhood {2}; added f3 Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Fails}; then about the piece: (Model.C5_std 2), (Model.C6_guard (2, 0, 1))
+== Q7 FAIL a evidence-bad outside the wider neighbourhood changes it : 27480
+  smallest (size 1):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 2@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}
+  facts:
+
+  frontier: violated=[(Model.C5_std 2)] uncovered=[(Model.C5_std 2)] consistent-mask=0
+  piece 2, neighbourhood {2}; added f3 Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Fails}; then about the piece: (Model.C5_std 2), (Model.C6_guard (2, 0, 1))
+== Q7 FAIL a evidence-holds outside the spec neighbourhood changes it : 34888
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 1@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 1)];
+  reports = []; refs = []}; 2@0 = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = [(3, 0, 1)];
+  reports = []; refs = []}
+  facts:
+
+  frontier: violated=[(Model.C7_claim (1, 0))] uncovered=[(Model.C7_claim (1, 0))] consistent-mask=0
+  piece 1, neighbourhood {1}; added f0 Model.Evidence {p = 2; v = 0; d = 0; crit = 1; out = Model.Holds_}; then about the piece: 
+== Q7 FAIL a same-for-evidence-holds outside the spec neighbourhood changes it : 4800
+  smallest (size 3):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 1@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 1)];
+  reports = []; refs = []}; 2@1 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 0; need = None; against = (Some 0) }]}
+  facts:
+    f0: Model.Evidence {p = 2; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[(Model.C7_claim (1, 0))] uncovered=[(Model.C7_claim (1, 0))] consistent-mask=0
+  piece 1, neighbourhood {1}; added f4 Model.Same {x = 2; v = 0; w = 1; for_ = 0}; then about the piece: 
+== Q7 FAIL a withdrawn outside the spec neighbourhood changes it : 13640
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=
+  selection: 1@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = [(1, 0, 2)];
+  reports = [0]; refs = []}
+  facts:
+    f0: Model.Decision {k = Model.Accept; subj = (Model.Piece_at (2, 1)); conds = []}
+  frontier: violated=[(Model.C7_claim (1, 0))] uncovered=[(Model.C7_claim (1, 0))] consistent-mask=0
+  piece 1, neighbourhood {1}; added f5 (Model.Withdrawn 0); then about the piece: (Model.C7_claim (1, 0)), (Model.C7_report (1, 0))
+== Q7 FAIL selection outside the spec neighbourhood changes C3_resolve : 11520
+  smallest (size 1):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=0->3
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(2, 0, 1)];
+  reports = [];
+  refs = [{ Model.rk = 2; target = 0; need = None; against = (Some 1) }]}
+  facts:
+
+  frontier: violated=[(Model.C3_resolve (1, 0)), (Model.C7_claim (1, 0))] uncovered=[(Model.C3_resolve (1, 0)), (Model.C7_claim (1, 0))] consistent-mask=0
+  piece 1, neighbourhood {0,1}; id 3 moved to version 0 asserted=false; then about the piece: (Model.C7_claim (1, 0))
+== Q7 FAIL selection outside the spec neighbourhood changes C4 : 7680
+  smallest (size 1):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 1; need = None; against = None }]}
+  facts:
+
+  frontier: violated=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] uncovered=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] consistent-mask=0
+  piece 0, neighbourhood {1,0}; id 2 moved to version 0 asserted=false; then about the piece: (Model.C4 (0, 0)), (Model.C5_std 0)
+== Q7 FAIL selection outside the spec neighbourhood changes C5_rest : 2880
+  smallest (size 3):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=1->3
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(1, 0, 2)];
+  reports = [];
+  refs = [{ Model.rk = 0; target = 1; need = None; against = (Some 1) }]}; 1@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}
+  facts:
+    f3: Model.Decision {k = Model.Raise; subj = (Model.Question (1, 0));
+  conds = [(Model.Selected_at (2, 0))]}
+  frontier: violated=[(Model.C7_claim (0, 0))] uncovered=[(Model.C7_claim (0, 0))] consistent-mask=2
+  piece 0, neighbourhood {1,0}; id 2 moved to version 0 asserted=false; then about the piece: (Model.C5_rest (0, 1)), (Model.C7_claim (0, 0))
+== Q7 FAIL selection outside the spec neighbourhood changes C7_claim : 168448
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 1@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 1)];
+  reports = []; refs = []}
+  facts:
+    f0: Model.Evidence {p = 2; v = 0; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[(Model.C7_claim (1, 0))] uncovered=[(Model.C7_claim (1, 0))] consistent-mask=0
+  piece 1, neighbourhood {1}; id 2 moved to version 0 asserted=false; then about the piece: 
+== Q7 FAIL selection outside the spec neighbourhood changes C7_report : 86096
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=0->3
+  selection: 1@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [1];
+  refs = [{ Model.rk = 2; target = 3; need = None; against = None }]}
+  facts:
+    f1: Model.Decision {k = Model.Promise; subj = (Model.Slot (3, "b"));
+  conds = [(Model.Asserted_consistent 0); (Model.Selected_at (0, 0))]}
+  frontier: violated=[(Model.C3_resolve (1, 0)), (Model.C7_report (1, 1))] uncovered=[(Model.C3_resolve (1, 0)), (Model.C7_report (1, 1))] consistent-mask=0
+  piece 1, neighbourhood {3,1}; id 0 moved to version 0 asserted=true; then about the piece: (Model.C3_resolve (1, 0))
+== Q7 FAIL selection outside the spec neighbourhood changes C8_need : 3840
+  smallest (size 1):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs =
+  [{ Model.rk = 2; target = 1; need = (Some (0, 1)); against = (Some 1) }]}
+  facts:
+
+  frontier: violated=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] uncovered=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] consistent-mask=0
+  piece 0, neighbourhood {1,0}; id 2 moved to version 0 asserted=false; then about the piece: (Model.C5_std 0), (Model.C8_need (0, 0))
+== Q7 FAIL selection outside the spec neighbourhood changes C8_promise : 59486
+  smallest (size 2):
+  ontology: standard=Model.By_decision guards=true written_against=true read_as=Model.Max descent=
+  selection: 3@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 2)); ("b", (Model.Holds 2))]}
+  facts:
+    f1: Model.Decision {k = Model.Promise; subj = (Model.Slot (3, "a"));
+  conds = [(Model.Selected_at (0, 1))]}
+  frontier: violated=[(Model.C5_std 3), (Model.C8_required (3, "a"))] uncovered=[(Model.C5_std 3), (Model.C8_required (3, "a"))] consistent-mask=0
+  piece 3, neighbourhood {2,3}; id 0 moved to version 1 asserted=false; then about the piece: (Model.C5_std 3), (Model.C8_promise (3, "a", 1)), (Model.C8_required (3, "a"))
+== Q7 FAIL selection outside the spec neighbourhood changes C8_required : 1174
+  smallest (size 4):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Odd descent=
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 2@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [2];
+  refs = []}; 3@1 ASSERTED = Model.Assembly {ak = 0; fill = [("a", (Model.Holds 2)); ("b", Model.Empty)]}
+  facts:
+    f2: Model.Decision {k = Model.Raise; subj = (Model.Question (3, 0));
+  conds = [(Model.Asserted_consistent 0)]}
+  frontier: violated=[(Model.C9 (3, 0, 2))] uncovered=[(Model.C9 (3, 0, 2))] consistent-mask=5
+  piece 3, neighbourhood {2,3}; id 0 moved to version -1 asserted=false; then about the piece: (Model.C8_required (3, "a"))
+== Q7 FAIL selection outside the spec neighbourhood changes C9 : 50304
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max_unless_bad descent=0->2
+  selection: 3@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 0)); ("b", (Model.Points 1))]}
+  facts:
+    f2: Model.Decision {k = Model.Raise; subj = (Model.Question (3, 0));
+  conds = [(Model.Asserted_consistent 2)]}
+  frontier: violated=[(Model.C8_required (3, "a"))] uncovered=[(Model.C8_required (3, "a"))] consistent-mask=0
+  piece 3, neighbourhood {1,0,3}; id 2 moved to version 0 asserted=true; then about the piece: (Model.C8_required (3, "a")), (Model.C9 (3, 0, 2))
+== Q7 FAIL selection outside the spec neighbourhood changes coverage : 16320
+  smallest (size 2):
+  ontology: standard=Model.By_decision guards=true written_against=true read_as=Model.Max descent=
+  selection: 3@0 ASSERTED = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Points 0)); ("b", (Model.Points 0))]}
+  facts:
+    f0: Model.Decision {k = Model.Waive;
+  subj = (Model.Inst (Model.C8_required (3, "a")));
+  conds = [(Model.Selected_at (2, 0))]}
+  frontier: violated=[(Model.C5_std 3), (Model.C8_required (3, "a"))] uncovered=[(Model.C5_std 3), (Model.C8_required (3, "a"))] consistent-mask=0
+  piece 3, neighbourhood {0,3}; id 2 moved to version 0 asserted=false; then about the piece: (Model.C5_std 3), (Model.C8_required (3, "a"))
+== Q7 FAIL selection outside the wider neighbourhood changes C3_resolve : 4832
+  smallest (size 1):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=0->3
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = [(2, 0, 1)];
+  reports = [];
+  refs = [{ Model.rk = 2; target = 0; need = None; against = (Some 1) }]}
+  facts:
+
+  frontier: violated=[(Model.C3_resolve (1, 0)), (Model.C7_claim (1, 0))] uncovered=[(Model.C3_resolve (1, 0)), (Model.C7_claim (1, 0))] consistent-mask=0
+  piece 1, neighbourhood {2,0,1}; id 3 moved to version 0 asserted=false; then about the piece: (Model.C7_claim (1, 0))
+== Q7 FAIL selection outside the wider neighbourhood changes C4 : 3936
+  smallest (size 1):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 1; target = 1; need = None; against = None }]}
+  facts:
+
+  frontier: violated=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] uncovered=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] consistent-mask=0
+  piece 0, neighbourhood {1,0}; id 2 moved to version 0 asserted=false; then about the piece: (Model.C4 (0, 0)), (Model.C5_std 0)
+== Q7 FAIL selection outside the wider neighbourhood changes C8_need : 1792
+  smallest (size 1):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs =
+  [{ Model.rk = 2; target = 1; need = (Some (0, 1)); against = (Some 1) }]}
+  facts:
+
+  frontier: violated=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] uncovered=[(Model.C3_resolve (0, 0)), (Model.C5_std 0)] consistent-mask=0
+  piece 0, neighbourhood {1,0}; id 2 moved to version 0 asserted=false; then about the piece: (Model.C5_std 0), (Model.C8_need (0, 0))
+== Q7 ok fact, neighbourhood=spec : 7326852
+== Q7 ok fact, neighbourhood=static : 2388960
+== Q7 ok fact, neighbourhood=wider : 3982024
+== Q7 ok selection, neighbourhood=spec : 51957916
+== Q7 ok selection, neighbourhood=static : 16247040
+== Q7 ok selection, neighbourhood=wider : 28551600
+== states with no fixed point reached by iteration (skipped by Q2-Q5, Q7) : 320
+exit 0

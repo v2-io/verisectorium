@@ -1,4 +1,8 @@
-# kernel-2 in OCaml: the toolchain base
+# kernel-2 in OCaml
+
+**What is here now (2026-11-10):** `ACCOUNT.md` is what was done and found, against spec draft 3; `SPEC-AUDIT.md` is the earlier audit of draft 1. `lib/model.ml` is the kernel as an executable model, `lib/explore.ml` the exhaustive checks, `bin/explore_main.ml` their driver, `test/test_kernel.ml` the hand-built witnesses and the invented moves, `runs/` the full output of every run the account cites (`runs/run.sh NAME args` re-makes one; progress goes to the file as it runs). The placeholder `Kernel.Hello` described below has been deleted. The rest of this file is the toolchain agent's, unchanged.
+
+## The toolchain base
 
 A hello-world dune project that builds, runs one unit test and one property test, so work on the model can start from something known to work. `Kernel.Hello` (a toy event log and a fold over it) and its tests are placeholders and can be deleted. Set up 2026-11-10 on macOS 27.0.1, arm64. The spec is `../KERNEL-SPEC.md`.
 

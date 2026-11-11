@@ -1,0 +1,178 @@
+seed 1 done, 1s, 4000 states
+seed 2 done, 2s, 8000 states
+seed 3 done, 3s, 12000 states
+seed 4 done, 4s, 16000 states
+seed 5 done, 5s, 20000 states
+seed 6 done, 7s, 24000 states
+seed 7 done, 8s, 28000 states
+seed 8 done, 12s, 32000 states
+seed 9 done, 13s, 36000 states
+seed 10 done, 14s, 40000 states
+seed 11 done, 15s, 44000 states
+seed 12 done, 16s, 48000 states
+seed 13 done, 17s, 52000 states
+seed 14 done, 19s, 56000 states
+seed 15 done, 20s, 60000 states
+seed 16 done, 21s, 64000 states
+seed 17 done, 22s, 68000 states
+seed 18 done, 24s, 72000 states
+seed 19 done, 25s, 76000 states
+seed 20 done, 32s, 80000 states
+seed 21 done, 33s, 84000 states
+seed 22 done, 34s, 88000 states
+seed 23 done, 35s, 92000 states
+seed 24 done, 38s, 96000 states
+seed 25 done, 39s, 100000 states
+seed 26 done, 40s, 104000 states
+seed 27 done, 43s, 108000 states
+seed 28 done, 44s, 112000 states
+seed 29 done, 46s, 116000 states
+seed 30 done, 50s, 120000 states
+seed 31 done, 51s, 124000 states
+seed 32 done, 52s, 128000 states
+seed 33 done, 52s, 132000 states
+seed 34 done, 55s, 136000 states
+seed 35 done, 56s, 140000 states
+seed 36 done, 60s, 144000 states
+seed 37 done, 64s, 148000 states
+seed 38 done, 67s, 152000 states
+seed 39 done, 68s, 156000 states
+seed 40 done, 69s, 160000 states
+seed 41 done, 70s, 164000 states
+seed 42 done, 72s, 168000 states
+seed 43 done, 73s, 172000 states
+seed 44 done, 75s, 176000 states
+seed 45 done, 81s, 180000 states
+seed 46 done, 82s, 184000 states
+seed 47 done, 84s, 188000 states
+seed 48 done, 85s, 192000 states
+seed 49 done, 86s, 196000 states
+seed 50 done, 88s, 200000 states
+seed 51 done, 89s, 204000 states
+seed 52 done, 90s, 208000 states
+seed 53 done, 91s, 212000 states
+seed 54 done, 92s, 216000 states
+seed 55 done, 108s, 220000 states
+seed 56 done, 109s, 224000 states
+seed 57 done, 110s, 228000 states
+seed 58 done, 111s, 232000 states
+seed 59 done, 112s, 236000 states
+seed 60 done, 113s, 240000 states
+seed 61 done, 116s, 244000 states
+seed 62 done, 120s, 248000 states
+seed 63 done, 121s, 252000 states
+seed 64 done, 123s, 256000 states
+seed 65 done, 124s, 260000 states
+seed 66 done, 134s, 264000 states
+seed 67 done, 134s, 268000 states
+seed 68 done, 143s, 272000 states
+seed 69 done, 144s, 276000 states
+seed 70 done, 148s, 280000 states
+seed 71 done, 149s, 284000 states
+seed 72 done, 150s, 288000 states
+seed 73 done, 153s, 292000 states
+seed 74 done, 154s, 296000 states
+seed 75 done, 155s, 300000 states
+seed 76 done, 156s, 304000 states
+seed 77 done, 158s, 308000 states
+seed 78 done, 161s, 312000 states
+seed 79 done, 164s, 316000 states
+seed 80 done, 167s, 320000 states
+seed 81 done, 168s, 324000 states
+seed 82 done, 169s, 328000 states
+seed 83 done, 170s, 332000 states
+seed 84 done, 171s, 336000 states
+seed 85 done, 172s, 340000 states
+seed 86 done, 174s, 344000 states
+seed 87 done, 175s, 348000 states
+seed 88 done, 175s, 352000 states
+seed 89 done, 177s, 356000 states
+seed 90 done, 177s, 360000 states
+seed 91 done, 179s, 364000 states
+seed 92 done, 182s, 368000 states
+seed 93 done, 184s, 372000 states
+seed 94 done, 185s, 376000 states
+seed 95 done, 189s, 380000 states
+seed 96 done, 191s, 384000 states
+seed 97 done, 197s, 388000 states
+seed 98 done, 198s, 392000 states
+seed 99 done, 199s, 396000 states
+seed 100 done, 203s, 400000 states
+seed 101 done, 204s, 404000 states
+seed 102 done, 205s, 408000 states
+seed 103 done, 209s, 412000 states
+seed 104 done, 212s, 416000 states
+seed 105 done, 213s, 420000 states
+seed 106 done, 214s, 424000 states
+seed 107 done, 215s, 428000 states
+seed 108 done, 216s, 432000 states
+seed 109 done, 217s, 436000 states
+seed 110 done, 218s, 440000 states
+seed 111 done, 218s, 444000 states
+seed 112 done, 219s, 448000 states
+seed 113 done, 225s, 452000 states
+seed 114 done, 226s, 456000 states
+seed 115 done, 235s, 460000 states
+seed 116 done, 240s, 464000 states
+seed 117 done, 240s, 468000 states
+seed 118 done, 245s, 472000 states
+seed 119 done, 246s, 476000 states
+seed 120 done, 248s, 480000 states
+seed 121 done, 255s, 484000 states
+seed 122 done, 258s, 488000 states
+seed 123 done, 263s, 492000 states
+seed 124 done, 264s, 496000 states
+seed 125 done, 265s, 500000 states
+seed 126 done, 266s, 504000 states
+seed 127 done, 266s, 508000 states
+seed 128 done, 270s, 512000 states
+seed 129 done, 271s, 516000 states
+seed 130 done, 276s, 520000 states
+seed 131 done, 277s, 524000 states
+seed 132 done, 278s, 528000 states
+seed 133 done, 279s, 532000 states
+seed 134 done, 280s, 536000 states
+seed 135 done, 281s, 540000 states
+seed 136 done, 282s, 544000 states
+seed 137 done, 283s, 548000 states
+seed 138 done, 284s, 552000 states
+seed 139 done, 284s, 556000 states
+seed 140 done, 285s, 560000 states
+seed 141 done, 286s, 564000 states
+seed 142 done, 287s, 568000 states
+seed 143 done, 288s, 572000 states
+seed 144 done, 289s, 576000 states
+seed 145 done, 290s, 580000 states
+seed 146 done, 290s, 584000 states
+seed 147 done, 291s, 588000 states
+seed 148 done, 299s, 592000 states
+seed 149 done, 300s, 596000 states
+seed 150 done, 301s, 600000 states
+seeds 1..150 ids=3 versions=2 pool=5 flags=x checks=8
+states visited: 600000
+
+== Q8 DOES NOT compose; neighbourhoods meet: spec=false static=true : 46506
+  smallest (size 0):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max_unless_bad descent=1->2
+  selection: 
+  facts:
+
+  frontier: violated=[] uncovered=[] consistent-mask=0
+  change 1: id 0 -> version 1 asserted=false, adds facts mask 3, changed 0
+  change 2: id 2 -> version 0 asserted=true, adds facts mask 0, changed 2
+  both: violated=[(Model.C6_guard (2, 0, 0))] uncovered=[(Model.C6_guard (2, 0, 0))] consistent-mask=0
+== Q8 DOES NOT compose; neighbourhoods meet: spec=true static=true : 4815051
+  smallest (size 0):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Odd descent=1->2
+  selection: 
+  facts:
+
+  frontier: violated=[] uncovered=[] consistent-mask=0
+  change 1: id 0 -> version 1 asserted=true, adds facts mask 0, changed 0
+  change 2: id 1 -> version 0 asserted=false, adds facts mask 5, changed 1
+  both: (no fixed point reached)
+== Q8 composes; neighbourhoods meet: spec=false static=false : 4781259
+== Q8 composes; neighbourhoods meet: spec=false static=true : 6323478
+== Q8 composes; neighbourhoods meet: spec=true static=true : 139675359
+== states with no fixed point reached by iteration (skipped by Q2-Q5, Q7) : 680
+exit 0

@@ -1,0 +1,18 @@
+Testing `kernel'.
+This run has ID `469V0WK3'.
+
+  [OK]          Q6                 0   no fixed point.
+  [OK]          Q6                 1   no greatest fixed point.
+  [OK]          Q4                 0   same for failing evidence.
+  [OK]          Q4                 1   good evidence wakes a question.
+  [OK]          Q5 Q10             0   guards.
+  [OK]          Q5 Q10             1   affirmations per edit.
+  [OK]          Q9                 0   costs and disagreements.
+  [OK]          Q8                 0   an outline over two repairs.
+  [OK]          changeset          0   a second defect on a waived piece.
+  [OK]          moves              0   a small move.
+  [OK]          moves              1   two moves at once.
+  [OK]          moves              2   a wrong finding.
+
+Full test results in `~/src/verisectorium/msc/scratch/kernel-2/ocaml/_build/.sandbox/f9a0e6583bedb0ea874c04bb960503df/default/test/_build/_tests/kernel'.
+Test Successful in 0.041s. 12 tests run.

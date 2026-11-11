@@ -1,0 +1,306 @@
+seed 1 done, 0s, 32000 states
+seed 2 done, 0s, 64000 states
+seed 3 done, 0s, 96000 states
+seed 4 done, 0s, 128000 states
+seed 5 done, 0s, 160000 states
+seed 6 done, 0s, 192000 states
+seed 7 done, 0s, 224000 states
+seed 8 done, 0s, 256000 states
+seed 9 done, 0s, 288000 states
+seed 10 done, 0s, 320000 states
+seed 11 done, 1s, 352000 states
+seed 12 done, 1s, 384000 states
+seed 13 done, 1s, 416000 states
+seed 14 done, 1s, 448000 states
+seed 15 done, 1s, 480000 states
+seed 16 done, 1s, 512000 states
+seed 17 done, 1s, 544000 states
+seed 18 done, 1s, 576000 states
+seed 19 done, 1s, 608000 states
+seed 20 done, 1s, 640000 states
+seed 21 done, 1s, 672000 states
+seed 22 done, 1s, 704000 states
+seed 23 done, 1s, 736000 states
+seed 24 done, 1s, 768000 states
+seed 25 done, 1s, 800000 states
+seed 26 done, 1s, 832000 states
+seed 27 done, 2s, 864000 states
+seed 28 done, 2s, 896000 states
+seed 29 done, 2s, 928000 states
+seed 30 done, 2s, 960000 states
+seed 31 done, 2s, 992000 states
+seed 32 done, 2s, 1024000 states
+seed 33 done, 2s, 1056000 states
+seed 34 done, 2s, 1088000 states
+seed 35 done, 2s, 1120000 states
+seed 36 done, 2s, 1152000 states
+seed 37 done, 2s, 1184000 states
+seed 38 done, 2s, 1216000 states
+seed 39 done, 2s, 1248000 states
+seed 40 done, 2s, 1280000 states
+seed 41 done, 2s, 1312000 states
+seed 42 done, 2s, 1344000 states
+seed 43 done, 2s, 1376000 states
+seed 44 done, 3s, 1408000 states
+seed 45 done, 3s, 1440000 states
+seed 46 done, 3s, 1472000 states
+seed 47 done, 3s, 1504000 states
+seed 48 done, 3s, 1536000 states
+seed 49 done, 3s, 1568000 states
+seed 50 done, 3s, 1600000 states
+seed 51 done, 3s, 1632000 states
+seed 52 done, 3s, 1664000 states
+seed 53 done, 3s, 1696000 states
+seed 54 done, 3s, 1728000 states
+seed 55 done, 3s, 1760000 states
+seed 56 done, 3s, 1792000 states
+seed 57 done, 3s, 1824000 states
+seed 58 done, 3s, 1856000 states
+seed 59 done, 3s, 1888000 states
+seed 60 done, 3s, 1920000 states
+seed 61 done, 4s, 1952000 states
+seed 62 done, 4s, 1984000 states
+seed 63 done, 4s, 2016000 states
+seed 64 done, 4s, 2048000 states
+seed 65 done, 4s, 2080000 states
+seed 66 done, 4s, 2112000 states
+seed 67 done, 4s, 2144000 states
+seed 68 done, 4s, 2176000 states
+seed 69 done, 4s, 2208000 states
+seed 70 done, 4s, 2240000 states
+seed 71 done, 4s, 2272000 states
+seed 72 done, 4s, 2304000 states
+seed 73 done, 4s, 2336000 states
+seed 74 done, 4s, 2368000 states
+seed 75 done, 4s, 2400000 states
+seed 76 done, 4s, 2432000 states
+seed 77 done, 4s, 2464000 states
+seed 78 done, 5s, 2496000 states
+seed 79 done, 5s, 2528000 states
+seed 80 done, 5s, 2560000 states
+seed 81 done, 5s, 2592000 states
+seed 82 done, 5s, 2624000 states
+seed 83 done, 5s, 2656000 states
+seed 84 done, 5s, 2688000 states
+seed 85 done, 5s, 2720000 states
+seed 86 done, 5s, 2752000 states
+seed 87 done, 5s, 2784000 states
+seed 88 done, 5s, 2816000 states
+seed 89 done, 5s, 2848000 states
+seed 90 done, 5s, 2880000 states
+seed 91 done, 5s, 2912000 states
+seed 92 done, 5s, 2944000 states
+seed 93 done, 5s, 2976000 states
+seed 94 done, 5s, 3008000 states
+seed 95 done, 5s, 3040000 states
+seed 96 done, 6s, 3072000 states
+seed 97 done, 6s, 3104000 states
+seed 98 done, 6s, 3136000 states
+seed 99 done, 6s, 3168000 states
+seed 100 done, 6s, 3200000 states
+seed 101 done, 6s, 3232000 states
+seed 102 done, 6s, 3264000 states
+seed 103 done, 6s, 3296000 states
+seed 104 done, 6s, 3328000 states
+seed 105 done, 6s, 3360000 states
+seed 106 done, 6s, 3392000 states
+seed 107 done, 6s, 3424000 states
+seed 108 done, 6s, 3456000 states
+seed 109 done, 6s, 3488000 states
+seed 110 done, 6s, 3520000 states
+seed 111 done, 6s, 3552000 states
+seed 112 done, 7s, 3584000 states
+seed 113 done, 7s, 3616000 states
+seed 114 done, 7s, 3648000 states
+seed 115 done, 7s, 3680000 states
+seed 116 done, 7s, 3712000 states
+seed 117 done, 7s, 3744000 states
+seed 118 done, 7s, 3776000 states
+seed 119 done, 7s, 3808000 states
+seed 120 done, 7s, 3840000 states
+seed 121 done, 7s, 3872000 states
+seed 122 done, 7s, 3904000 states
+seed 123 done, 7s, 3936000 states
+seed 124 done, 7s, 3968000 states
+seed 125 done, 7s, 4000000 states
+seed 126 done, 7s, 4032000 states
+seed 127 done, 7s, 4064000 states
+seed 128 done, 8s, 4096000 states
+seed 129 done, 8s, 4128000 states
+seed 130 done, 8s, 4160000 states
+seed 131 done, 8s, 4192000 states
+seed 132 done, 8s, 4224000 states
+seed 133 done, 8s, 4256000 states
+seed 134 done, 8s, 4288000 states
+seed 135 done, 8s, 4320000 states
+seed 136 done, 8s, 4352000 states
+seed 137 done, 8s, 4384000 states
+seed 138 done, 8s, 4416000 states
+seed 139 done, 8s, 4448000 states
+seed 140 done, 8s, 4480000 states
+seed 141 done, 8s, 4512000 states
+seed 142 done, 8s, 4544000 states
+seed 143 done, 9s, 4576000 states
+seed 144 done, 9s, 4608000 states
+seed 145 done, 9s, 4640000 states
+seed 146 done, 9s, 4672000 states
+seed 147 done, 9s, 4704000 states
+seed 148 done, 9s, 4736000 states
+seed 149 done, 9s, 4768000 states
+seed 150 done, 9s, 4800000 states
+seed 151 done, 9s, 4832000 states
+seed 152 done, 9s, 4864000 states
+seed 153 done, 9s, 4896000 states
+seed 154 done, 9s, 4928000 states
+seed 155 done, 9s, 4960000 states
+seed 156 done, 9s, 4992000 states
+seed 157 done, 9s, 5024000 states
+seed 158 done, 9s, 5056000 states
+seed 159 done, 9s, 5088000 states
+seed 160 done, 10s, 5120000 states
+seed 161 done, 10s, 5152000 states
+seed 162 done, 10s, 5184000 states
+seed 163 done, 10s, 5216000 states
+seed 164 done, 10s, 5248000 states
+seed 165 done, 10s, 5280000 states
+seed 166 done, 10s, 5312000 states
+seed 167 done, 10s, 5344000 states
+seed 168 done, 10s, 5376000 states
+seed 169 done, 10s, 5408000 states
+seed 170 done, 10s, 5440000 states
+seed 171 done, 10s, 5472000 states
+seed 172 done, 10s, 5504000 states
+seed 173 done, 10s, 5536000 states
+seed 174 done, 10s, 5568000 states
+seed 175 done, 10s, 5600000 states
+seed 176 done, 11s, 5632000 states
+seed 177 done, 11s, 5664000 states
+seed 178 done, 11s, 5696000 states
+seed 179 done, 11s, 5728000 states
+seed 180 done, 11s, 5760000 states
+seed 181 done, 11s, 5792000 states
+seed 182 done, 11s, 5824000 states
+seed 183 done, 11s, 5856000 states
+seed 184 done, 11s, 5888000 states
+seed 185 done, 11s, 5920000 states
+seed 186 done, 11s, 5952000 states
+seed 187 done, 11s, 5984000 states
+seed 188 done, 11s, 6016000 states
+seed 189 done, 11s, 6048000 states
+seed 190 done, 11s, 6080000 states
+seed 191 done, 11s, 6112000 states
+seed 192 done, 11s, 6144000 states
+seed 193 done, 11s, 6176000 states
+seed 194 done, 12s, 6208000 states
+seed 195 done, 12s, 6240000 states
+seed 196 done, 12s, 6272000 states
+seed 197 done, 12s, 6304000 states
+seed 198 done, 12s, 6336000 states
+seed 199 done, 12s, 6368000 states
+seed 200 done, 12s, 6400000 states
+seeds 1..200 ids=3 versions=2 pool=8 flags=a checks=3
+states visited: 6400000
+
+== Q3 FAIL each alone harmless, together break it: decision-Model.Raise + evidence-holds : 320
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max descent=
+  selection: 1@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 2; target = 2; need = None; against = None }]}; 2@1 = Model.Assembly {ak = 0;
+  fill = [("a", (Model.Holds 0)); ("b", (Model.Points 1))]}
+  facts:
+
+  frontier: violated=[] uncovered=[] consistent-mask=2
+  added: f0 Model.Decision {k = Model.Raise; subj = (Model.Question (1, 0));
+  conds = [(Model.Asserted_consistent 1); (Model.Warrant_ge (2, 0, 1))]}, f3 Model.Evidence {p = 2; v = 1; d = 0; crit = 0; out = Model.Holds_}; alone: true, true; together: false
+== Q3 FAIL each alone harmless, together break it: decision-Model.Raise + same-for-decision-Model.Raise : 384
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max_unless_bad descent=1->2
+  selection: 0@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}; 1@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 0; need = None; against = None }]}
+  facts:
+
+  frontier: violated=[] uncovered=[] consistent-mask=3
+  added: f1 Model.Decision {k = Model.Raise; subj = (Model.Question (1, 0));
+  conds = [(Model.Asserted_consistent 0); (Model.Selected_at (1, 0))]}, f5 Model.Same {x = 1; v = 0; w = 1; for_ = 1}; alone: true, true; together: false
+== Q3 FAIL each alone harmless, together break it: evidence-bad + same-for-evidence-bad : 2368
+  smallest (size 1):
+  ontology: standard=Model.By_placement guards=false written_against=true read_as=Model.Max descent=
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}
+  facts:
+
+  frontier: violated=[] uncovered=[] consistent-mask=1
+  added: f0 Model.Evidence {p = 0; v = 0; d = 0; crit = 1; out = Model.Fails}, f6 Model.Same {x = 0; v = 1; w = 0; for_ = 0}; alone: true, true; together: false
+== Q3 FAIL each alone harmless, together break it: evidence-holds + same-for-evidence-holds : 480
+  smallest (size 2):
+  ontology: standard=(Model.By_rule [(0, 1)]) guards=true written_against=true read_as=Model.Odd descent=0->2
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}
+  facts:
+    f3: Model.Evidence {p = 0; v = 1; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[] uncovered=[] consistent-mask=1
+  added: f4 Model.Evidence {p = 0; v = 0; d = 0; crit = 0; out = Model.Holds_}, f7 Model.Same {x = 0; v = 0; w = 1; for_ = 4}; alone: true, true; together: false
+== Q3 FAIL one alone breaks it, together fine: decision-Model.Accept + withdrawn : 120
+  smallest (size 4):
+  ontology: standard=Model.By_decision guards=true written_against=true read_as=Model.Odd descent=0->1
+  selection: 0@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 1; need = None; against = None }]}; 1@0 = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = [(2, 0, 2)];
+  reports = []; refs = []}
+  facts:
+    f2: Model.Decision {k = Model.Accept; subj = (Model.Piece_at (0, 0)); conds = []}
+    f6: Model.Same {x = 0; v = 0; w = 1; for_ = 2}
+  frontier: violated=[] uncovered=[] consistent-mask=1
+  added: f1 Model.Decision {k = Model.Accept; subj = (Model.Piece_at (0, 1)); conds = []}, f7 (Model.Withdrawn 2); alone: true, false; together: true
+== Q3 FAIL one alone breaks it, together fine: decision-Model.Promise + withdrawn : 268
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max_unless_bad descent=1->2
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = [{ Model.rk = 2; target = 2; need = None; against = None }]}; 2@1 ASSERTED = Model.Assembly {ak = 0; fill = [("a", (Model.Points 1)); ("b", Model.Empty)]}
+  facts:
+
+  frontier: violated=[] uncovered=[] consistent-mask=6
+  added: f1 Model.Decision {k = Model.Promise; subj = (Model.Slot (2, "b"));
+  conds = [(Model.Asserted_consistent 1)]}, f5 (Model.Withdrawn 1); alone: false, true; together: true
+== Q3 FAIL one alone breaks it, together fine: decision-Model.Raise + evidence-holds : 1056
+  smallest (size 1):
+  ontology: standard=Model.By_placement guards=true written_against=false read_as=Model.Odd descent=
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}
+  facts:
+
+  frontier: violated=[] uncovered=[] consistent-mask=2
+  added: f3 Model.Evidence {p = 1; v = 0; d = 0; crit = 1; out = Model.Holds_}, f4 Model.Decision {k = Model.Raise; subj = (Model.Question (1, 0)); conds = []}; alone: true, false; together: true
+== Q3 FAIL one alone breaks it, together fine: decision-Model.Raise + same-for-evidence-holds : 48
+  smallest (size 3):
+  ontology: standard=Model.By_placement guards=false written_against=true read_as=Model.Max_unless_bad descent=
+  selection: 1@0 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = []}; 2@0 ASSERTED = Model.Assembly {ak = 0; fill = [("a", (Model.Points 1)); ("b", Model.Empty)]}
+  facts:
+    f2: Model.Evidence {p = 2; v = 1; d = 0; crit = 1; out = Model.Holds_}
+  frontier: violated=[] uncovered=[] consistent-mask=6
+  added: f3 Model.Decision {k = Model.Raise; subj = (Model.Question (2, 0));
+  conds = [(Model.Asserted_consistent 2)]}, f6 Model.Same {x = 2; v = 0; w = 1; for_ = 2}; alone: false, true; together: true
+== Q3 FAIL one alone breaks it, together fine: decision-Model.Raise + withdrawn : 880
+  smallest (size 2):
+  ontology: standard=Model.By_placement guards=true written_against=true read_as=Model.Max_unless_bad descent=
+  selection: 0@0 = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = [(1, 0, 1)];
+  reports = [];
+  refs = [{ Model.rk = 1; target = 2; need = None; against = None }]}; 1@0 ASSERTED = Model.Veritoid {content = 1; asserts = [(0, 0)]; claims = []; reports = [];
+  refs = [{ Model.rk = 3; target = 0; need = None; against = None }]}
+  facts:
+
+  frontier: violated=[] uncovered=[] consistent-mask=2
+  added: f4 Model.Decision {k = Model.Raise; subj = (Model.Question (1, 0)); conds = []}, f7 (Model.Withdrawn 4); alone: false, true; together: true
+== Q3 FAIL one alone breaks it, together fine: evidence-bad + evidence-holds : 1248
+  smallest (size 1):
+  ontology: standard=Model.By_placement guards=true written_against=false read_as=Model.Max descent=1->2
+  selection: 1@1 ASSERTED = Model.Veritoid {content = 0; asserts = [(0, 1)]; claims = []; reports = [];
+  refs = []}
+  facts:
+
+  frontier: violated=[] uncovered=[] consistent-mask=2
+  added: f0 Model.Evidence {p = 1; v = 0; d = 0; crit = 0; out = Model.Fails}, f4 Model.Evidence {p = 1; v = 1; d = 0; crit = 0; out = Model.Holds_}; alone: false, true; together: true
+== Q3 ok (per-fact reading) : 11739174
+== states with no fixed point reached by iteration (skipped by Q2-Q5, Q7) : 2096
+exit 0

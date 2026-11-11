@@ -1,0 +1,5 @@
+seeds 1..400 ids=3 versions=2 pool=10 flags=ac checks=6
+states visited: 51200000
+
+== Q6 ok: unique greatest fixed point : 51200000
+exit 0

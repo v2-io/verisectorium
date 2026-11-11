@@ -1,0 +1,3 @@
+(executable
+ (name explore_main)
+ (libraries kernel unix))
