@@ -1,0 +1,339 @@
+### pass 1: everything, Alt-Ergo, 10 s each
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 46, characters 21-22: unused variable w
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 63, characters 53-60:
+Sub-goal Variant decrease of goal has'vc.
+Prover result is: Valid (0.01s, 27 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 61, characters 14-32:
+Sub-goal Postcondition of goal has'vc.
+Prover result is: Valid (0.01s, 76 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 71, characters 27-38:
+Sub-goal Variant decrease of goal add_new'vc.
+Prover result is: Valid (0.01s, 24 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 67, characters 24-60:
+Sub-goal Postcondition of goal add_new'vc.
+Prover result is: Valid (0.02s, 579 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 83, characters 22-41:
+Sub-goal Variant decrease of goal reached_from'vc.
+Prover result is: Valid (0.01s, 24 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 84, characters 27-82:
+Sub-goal Assertion of goal reached_from'vc.
+Prover result is: Valid (0.01s, 7 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 76, characters 40-76:
+Sub-goal Postcondition of goal reached_from'vc.
+Prover result is: Timeout (10.00s, 129679 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 77, characters 56-68:
+Sub-goal Postcondition of goal reached_from'vc.
+Prover result is: Valid (5.48s, 96362 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 96, characters 9-59:
+Sub-goal Variant decrease of goal grow'vc.
+Prover result is: Valid (0.01s, 4 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 96, characters 9-59:
+Sub-goal Precondition of goal grow'vc.
+Prover result is: Valid (0.01s, 4 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 96, characters 9-59:
+Sub-goal Precondition of goal grow'vc.
+Prover result is: Valid (0.01s, 21 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 93, characters 41-50:
+Sub-goal Postcondition of goal grow'vc.
+Prover result is: Valid (0.01s, 22 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 106, characters 55-65:
+Sub-goal Variant decrease of goal all_in'vc.
+Prover result is: Valid (0.01s, 30 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 104, characters 14-54:
+Sub-goal Postcondition of goal all_in'vc.
+Prover result is: Valid (0.02s, 369 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 116, characters 21-45:
+Sub-goal Variant decrease of goal reaches_stay_in'vc.
+Prover result is: Valid (0.01s, 34 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 117, characters 63-86:
+Sub-goal Assertion of goal reaches_stay_in'vc.
+Prover result is: Valid (0.01s, 14 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 109, characters 67-74:
+Sub-goal Postcondition of goal reaches_stay_in'vc.
+Prover result is: Valid (0.01s, 174 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 110, characters 70-76:
+Sub-goal Postcondition of goal reaches_stay_in'vc.
+Prover result is: Valid (0.01s, 214 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 122, characters 14-35:
+Sub-goal Postcondition of goal is_closed'vc.
+Prover result is: Valid (0.01s, 54 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 128, characters 14-42:
+Sub-goal Postcondition of goal is_closed_means'vc.
+Prover result is: Valid (0.01s, 0 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 136, characters 39-46:
+Goal closed_has_canon.
+Prover result is: Timeout (10.00s, 151134 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 145, characters 12-41:
+Sub-goal Precondition of goal canon_of'vc.
+Prover result is: Valid (0.01s, 2 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 145, characters 12-41:
+Sub-goal Precondition of goal canon_of'vc.
+Prover result is: Valid (0.01s, 7 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 141, character 14 to line 144, character 17:
+Sub-goal Postcondition of goal canon_of'vc.
+Prover result is: Valid (0.01s, 66 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 222, characters 54-66:
+Sub-goal Variant decrease of goal firm_steps'vc.
+Prover result is: Valid (0.01s, 20 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 238, characters 68-87:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.01s, 38 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 239, characters 59-78:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.01s, 39 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 240, characters 18-35:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.01s, 34 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 240, characters 18-35:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.01s, 32 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 240, characters 18-35:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.01s, 23 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 249, characters 42-61:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.01s, 43 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 250, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.01s, 43 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 250, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.01s, 40 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 250, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.01s, 32 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 250, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.01s, 23 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 257, characters 64-81:
+Sub-goal Variant decrease of goal assemblies'vc.
+Prover result is: Valid (0.01s, 28 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 260, characters 37-52:
+Sub-goal Variant decrease of goal assemblies'vc.
+Prover result is: Valid (0.01s, 28 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 267, characters 57-70:
+Sub-goal Variant decrease of goal out_of'vc.
+Prover result is: Valid (0.01s, 21 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 267, characters 76-89:
+Sub-goal Variant decrease of goal out_of'vc.
+Prover result is: Valid (0.01s, 23 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 275, characters 14-25:
+Sub-goal Postcondition of goal how_many'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 47, characters 14-25:
+Sub-goal Postcondition of goal size'refn'vc.
+Prover result is: Valid (0.01s, 12 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 292, characters 53-75:
+Sub-goal Variant decrease of goal promised_steps'vc.
+Prover result is: Valid (0.01s, 62 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 305, characters 47-60:
+Sub-goal Variant decrease of goal promised'vc.
+Prover result is: Valid (0.01s, 66 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 306, characters 33-46:
+Sub-goal Variant decrease of goal promised'vc.
+Prover result is: Valid (0.01s, 66 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 362, character 4 to line 365, character 34:
+Goal what_reaches_what.
+Prover result is: Valid (0.25s, 11438 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 367, characters 16-41:
+Goal from_o.
+Prover result is: Valid (0.07s, 2043 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 368, characters 16-61:
+Goal from_t.
+Prover result is: Valid (0.16s, 5312 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 370, characters 52-68:
+Goal from_others.
+Prover result is: Valid (0.29s, 18287 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 372, characters 21-38:
+Goal from_leaves.
+Prover result is: Valid (0.01s, 86 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 372, characters 42-59:
+Goal from_leaves.
+Prover result is: Valid (0.01s, 86 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 372, characters 63-80:
+Goal from_leaves.
+Prover result is: Valid (0.01s, 86 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 374, characters 14-27:
+Goal o_in.
+Prover result is: Valid (0.02s, 376 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 375, characters 14-27:
+Goal t_in.
+Prover result is: Valid (0.03s, 789 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 376, characters 18-31:
+Goal c_d_k_in.
+Prover result is: Valid (0.03s, 795 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 376, characters 35-48:
+Goal c_d_k_in.
+Prover result is: Timeout (10.00s, 602657 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 376, characters 52-65:
+Goal c_d_k_in.
+Prover result is: Timeout (10.00s, 595757 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 379, characters 4-72:
+Goal those_five_pass_the_check.
+Prover result is: Timeout (10.00s, 422609 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 382, characters 4-69:
+Goal those_five_are_closed.
+Prover result is: Valid (0.02s, 105 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 386, characters 6-65:
+Goal nothing_else.
+Prover result is: Valid (0.02s, 429 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 390, characters 35-83:
+Goal canon_here.
+Prover result is: Timeout (10.00s, 444465 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 390, characters 18-30:
+Goal canon_here.
+Prover result is: Valid (0.01s, 58 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 392, characters 27-47:
+Goal uu_is_not_in_canon.
+Prover result is: Valid (0.93s, 38122 steps).
+
+### pass 2: by name
+## Reach / reached_from'vc / split_vc / z3
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 46, characters 21-22: unused variable w
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 83, characters 22-41:
+Sub-goal Variant decrease of goal reached_from'vc.
+Prover result is: Valid (0.00s, 1144 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 84, characters 27-82:
+Sub-goal Assertion of goal reached_from'vc.
+Prover result is: Valid (0.00s, 12626 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 76, characters 40-76:
+Sub-goal Postcondition of goal reached_from'vc.
+Prover result is: Valid (0.01s, 17180 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 77, characters 56-68:
+Sub-goal Postcondition of goal reached_from'vc.
+Prover result is: Valid (0.00s, 15320 steps).
+
+exit 0
+## Reach / closed_has_canon / induction_pr / alt-ergo
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 46, characters 21-22: unused variable w
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 135, character 4 to line 136, character 46:
+Goal closed_has_canon.
+Prover result is: Valid (0.01s, 20 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 135, character 4 to line 136, character 46:
+Goal closed_has_canon.
+Prover result is: Valid (0.01s, 29 steps).
+
+exit 0
+## Instance / what_reaches_what / compute_in_goal / alt-ergo
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 46, characters 21-22: unused variable w
+exit 0
+## Instance / from_o / compute_in_goal / alt-ergo
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 46, characters 21-22: unused variable w
+exit 0
+## Instance / from_t / compute_in_goal / alt-ergo
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 46, characters 21-22: unused variable w
+exit 0
+## Instance / those_five_pass_the_check / compute_in_goal / alt-ergo
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 46, characters 21-22: unused variable w
+Warning: term reduction aborted (takes more than 1024 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 379, characters 4-72:
+Goal those_five_pass_the_check.
+Prover result is: Valid (0.19s, 7053 steps).
+
+exit 0
+## Instance / t_in / split_vc / z3
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 46, characters 21-22: unused variable w
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 375, characters 14-27:
+Goal t_in.
+Prover result is: Valid (0.01s, 98942 steps).
+
+exit 0
+## Instance / c_d_k_in / split_vc / z3
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 46, characters 21-22: unused variable w
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 376, characters 18-31:
+Goal c_d_k_in.
+Prover result is: Valid (0.02s, 160681 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 376, characters 35-48:
+Goal c_d_k_in.
+Prover result is: Valid (0.02s, 160685 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 376, characters 52-65:
+Goal c_d_k_in.
+Prover result is: Valid (0.02s, 160689 steps).
+
+exit 0
+## Instance / canon_here / split_vc / z3
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 46, characters 21-22: unused variable w
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 390, characters 35-83:
+Goal canon_here.
+Prover result is: Valid (1.19s, 7080814 steps).
+
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 390, characters 18-30:
+Goal canon_here.
+Prover result is: Valid (0.92s, 5930066 steps).
+
+exit 0
+## Instance / uu_is_not_in_canon / split_vc / z3
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 46, characters 21-22: unused variable w
+File "../../idiomatic-slice-2026-11-11/why3.mlw", line 392, characters 27-47:
+Goal uu_is_not_in_canon.
+Prover result is: Valid (0.03s, 218615 steps).
+
+exit 0

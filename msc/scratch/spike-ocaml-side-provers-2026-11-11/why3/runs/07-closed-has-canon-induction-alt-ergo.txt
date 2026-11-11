@@ -1,0 +1,9 @@
+Warning, file "why3.mlw", line 40, characters 21-22: unused variable w
+File "why3.mlw", line 123, character 4 to line 124, character 46:
+Goal closed_has_canon.
+Prover result is: Valid (0.01s, 14 steps).
+
+File "why3.mlw", line 123, character 4 to line 124, character 46:
+Goal closed_has_canon.
+Prover result is: Valid (0.01s, 23 steps).
+

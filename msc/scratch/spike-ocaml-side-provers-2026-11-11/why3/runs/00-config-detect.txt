@@ -1,0 +1,14 @@
+Found prover Alt-Ergo version 2.6.4, OK.
+Found prover Alt-Ergo version 2.6.4 (alternative: counterexamples)
+Found prover Alt-Ergo version 2.6.4 (alternative: BV)
+Prover Eprover version 3.1.0 is not recognized.
+  Known versions for this prover: ^3\.[01]$, ^3\.2\.5$.
+Prover Z3 version 5.3.3 is not recognized.
+  Known versions for this prover: ^4\.1[2-5]\.[0-9]+$.
+Prover Z3 (alternative: noBV) version 5.3.3 is not recognized.
+  Known versions for this prover: 4.7.1, 4.8.0, 4.8.1, 4.8.3, 4.8.4, 4.8.5,
+  4.8.6, ^4\.8\.[7-9]$, ^4\.8\.1[0-9]+$, ^4\.9\.[0-9]+$, ^4\.1[0-5]\.[0-9]+$.
+Prover Z3 (alternative: counterexamples) version 5.3.3 is not recognized.
+  Known versions for this prover: ^4\.1[2-5]\.[0-9]+$.
+7 prover(s) added (including 4 prover(s) with an unrecognized version)
+Save config to /Users/josephwecker-v2/.why3.conf

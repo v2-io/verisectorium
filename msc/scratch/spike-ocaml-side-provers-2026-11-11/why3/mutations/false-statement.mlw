@@ -1,0 +1,14 @@
+(* A statement that is false, to see what the tool says of it: that recording
+   ANY evidence at the end of a line makes no finding apply that did not
+   before. (It is true only of evidence that holds; see m0.mlw, Sentences.) *)
+module False
+  use int.Int
+  use list.List
+  use list.Append
+  use m0.M0
+
+  goal any_news_adds_no_finding:
+    forall l: line, ev: event, p: id.
+      (match ev with Evidence _ _ _ _ _ _ _ -> true | _ -> false end) ->
+      finding_applies (l ++ Cons ev Nil) (l ++ Cons ev Nil) p -> finding_applies l l p
+end

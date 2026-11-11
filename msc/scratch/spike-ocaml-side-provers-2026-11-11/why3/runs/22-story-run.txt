@@ -1,0 +1,11 @@
+0 S0                               (empty: stationary)
+1 08:30 E5 fails                   4:c 5:u
+2 09:00 fork F: c1', d1', E6       4:c 6:e 2:u 5:u 5:T
+3 10:00 F rewound                  4:c 5:u
+4 10:30 c2 d2 k2, affirm(e1,c2)    4:c 5:c 6:k 2:u 5:u 5:T
+5 11:00 E7, E8                     6:k 2:u 5:u 5:T
+6 11:30 d3                         5:c 6:k 2:u 5:u 5:T
+7 12:00 E9                         6:k 2:u 5:u 5:T
+8 13:00 u2, E10                    6:k 5:T 5:U
+9 14:00 E11, E12                   6:k
+9' and k2 affirmed beside e1       (empty: stationary)

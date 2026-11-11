@@ -1,0 +1,3 @@
+Warning, file "../../idiomatic-slice-2026-11-11/why3.mlw", line 40, characters 21-22: unused variable w
+Type mismatch between Slice.filler (Slice.slot (Slice.veritoid Slice.
+explanation)) and Slice.filler (Slice.veritoid Slice.explanation)

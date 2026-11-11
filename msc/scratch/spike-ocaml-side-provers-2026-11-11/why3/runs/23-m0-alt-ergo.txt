@@ -1,0 +1,348 @@
+File "m0.mlw", line 67, characters 14-29:
+Sub-goal Variant decrease of goal selected'vc.
+Prover result is: Valid (0.01s, 21 steps).
+
+File "m0.mlw", line 80, characters 57-73:
+Sub-goal Variant decrease of goal once_at'vc.
+Prover result is: Valid (0.01s, 37 steps).
+
+File "m0.mlw", line 81, characters 21-37:
+Sub-goal Variant decrease of goal once_at'vc.
+Prover result is: Valid (0.01s, 35 steps).
+
+File "m0.mlw", line 88, characters 45-61:
+Sub-goal Variant decrease of goal set_aside'vc.
+Prover result is: Valid (0.01s, 31 steps).
+
+File "m0.mlw", line 89, characters 21-37:
+Sub-goal Variant decrease of goal set_aside'vc.
+Prover result is: Valid (0.01s, 32 steps).
+
+File "m0.mlw", line 96, characters 44-63:
+Sub-goal Variant decrease of goal reads_as_now'vc.
+Prover result is: Valid (0.01s, 25 steps).
+
+File "m0.mlw", line 107, characters 53-60:
+Sub-goal Variant decrease of goal has'vc.
+Prover result is: Valid (0.01s, 27 steps).
+
+File "m0.mlw", line 105, characters 14-32:
+Sub-goal Postcondition of goal has'vc.
+Prover result is: Valid (0.01s, 76 steps).
+
+File "m0.mlw", line 113, characters 47-61:
+Sub-goal Variant decrease of goal kind_of'vc.
+Prover result is: Valid (0.01s, 28 steps).
+
+File "m0.mlw", line 122, characters 41-53:
+Sub-goal Variant decrease of goal roots'vc.
+Prover result is: Valid (0.01s, 28 steps).
+
+File "m0.mlw", line 123, characters 21-31:
+Sub-goal Variant decrease of goal roots'vc.
+Prover result is: Valid (0.01s, 32 steps).
+
+File "m0.mlw", line 130, characters 56-65:
+Sub-goal Variant decrease of goal firm'vc.
+Prover result is: Valid (0.01s, 21 steps).
+
+File "m0.mlw", line 130, characters 78-89:
+Sub-goal Variant decrease of goal firm'vc.
+Prover result is: Valid (0.01s, 24 steps).
+
+File "m0.mlw", line 140, characters 27-38:
+Sub-goal Variant decrease of goal add_new'vc.
+Prover result is: Valid (0.01s, 24 steps).
+
+File "m0.mlw", line 145, characters 60-79:
+Sub-goal Variant decrease of goal reached_from'vc.
+Prover result is: Valid (0.01s, 25 steps).
+
+File "m0.mlw", line 151, characters 31-81:
+Sub-goal Variant decrease of goal grow'vc.
+Prover result is: Valid (0.01s, 4 steps).
+
+File "m0.mlw", line 151, characters 31-81:
+Sub-goal Precondition of goal grow'vc.
+Prover result is: Valid (0.01s, 4 steps).
+
+File "m0.mlw", line 154, characters 4-37:
+Sub-goal Precondition of goal canon'vc.
+Prover result is: Valid (0.01s, 2 steps).
+
+File "m0.mlw", line 163, characters 45-61:
+Sub-goal Variant decrease of goal all_there'vc.
+Prover result is: Valid (0.01s, 27 steps).
+
+File "m0.mlw", line 176, characters 50-73:
+Sub-goal Variant decrease of goal affirmed'vc.
+Prover result is: Valid (0.01s, 43 steps).
+
+File "m0.mlw", line 177, characters 21-44:
+Sub-goal Variant decrease of goal affirmed'vc.
+Prover result is: Valid (0.01s, 32 steps).
+
+File "m0.mlw", line 186, characters 11-37:
+Sub-goal Variant decrease of goal all_reconciled'vc.
+Prover result is: Valid (0.01s, 29 steps).
+
+File "m0.mlw", line 201, characters 51-79:
+Sub-goal Variant decrease of goal finding_applies'vc.
+Prover result is: Valid (0.01s, 52 steps).
+
+File "m0.mlw", line 202, characters 21-49:
+Sub-goal Variant decrease of goal finding_applies'vc.
+Prover result is: Valid (0.01s, 48 steps).
+
+File "m0.mlw", line 202, characters 21-49:
+Sub-goal Variant decrease of goal finding_applies'vc.
+Prover result is: Valid (0.01s, 32 steps).
+
+File "m0.mlw", line 213, characters 11-42:
+Sub-goal Variant decrease of goal answered_since'vc.
+Prover result is: Valid (0.01s, 62 steps).
+
+File "m0.mlw", line 214, characters 21-52:
+Sub-goal Variant decrease of goal answered_since'vc.
+Prover result is: Valid (0.01s, 48 steps).
+
+File "m0.mlw", line 214, characters 21-52:
+Sub-goal Variant decrease of goal answered_since'vc.
+Prover result is: Valid (0.01s, 32 steps).
+
+File "m0.mlw", line 225, characters 11-34:
+Sub-goal Variant decrease of goal guard_open'vc.
+Prover result is: Valid (0.01s, 58 steps).
+
+File "m0.mlw", line 226, characters 21-44:
+Sub-goal Variant decrease of goal guard_open'vc.
+Prover result is: Valid (0.01s, 48 steps).
+
+File "m0.mlw", line 226, characters 21-44:
+Sub-goal Variant decrease of goal guard_open'vc.
+Prover result is: Valid (0.01s, 32 steps).
+
+File "m0.mlw", line 240, characters 51-71:
+Sub-goal Variant decrease of goal checked'vc.
+Prover result is: Valid (0.01s, 41 steps).
+
+File "m0.mlw", line 241, characters 21-41:
+Sub-goal Variant decrease of goal checked'vc.
+Prover result is: Valid (0.01s, 58 steps).
+
+File "m0.mlw", line 241, characters 21-41:
+Sub-goal Variant decrease of goal checked'vc.
+Prover result is: Valid (0.01s, 48 steps).
+
+File "m0.mlw", line 241, characters 21-41:
+Sub-goal Variant decrease of goal checked'vc.
+Prover result is: Valid (0.01s, 32 steps).
+
+File "m0.mlw", line 248, characters 35-50:
+Sub-goal Variant decrease of goal read_one'vc.
+Prover result is: Valid (0.01s, 23 steps).
+
+File "m0.mlw", line 255, characters 49-72:
+Sub-goal Variant decrease of goal read_each'vc.
+Prover result is: Valid (0.01s, 23 steps).
+
+File "m0.mlw", line 264, characters 11-42:
+Sub-goal Variant decrease of goal read_whole'vc.
+Prover result is: Valid (0.01s, 42 steps).
+
+File "m0.mlw", line 265, characters 21-52:
+Sub-goal Variant decrease of goal read_whole'vc.
+Prover result is: Valid (0.01s, 58 steps).
+
+File "m0.mlw", line 265, characters 21-52:
+Sub-goal Variant decrease of goal read_whole'vc.
+Prover result is: Valid (0.01s, 48 steps).
+
+File "m0.mlw", line 265, characters 21-52:
+Sub-goal Variant decrease of goal read_whole'vc.
+Prover result is: Valid (0.01s, 32 steps).
+
+File "m0.mlw", line 286, characters 11-39:
+Sub-goal Variant decrease of goal read_together'vc.
+Prover result is: Valid (0.01s, 63 steps).
+
+File "m0.mlw", line 287, characters 21-49:
+Sub-goal Variant decrease of goal read_together'vc.
+Prover result is: Valid (0.01s, 32 steps).
+
+File "m0.mlw", line 297, characters 11-28:
+Sub-goal Variant decrease of goal owes6_in'vc.
+Prover result is: Valid (0.01s, 45 steps).
+
+File "m0.mlw", line 310, characters 60-74:
+Sub-goal Variant decrease of goal targets'vc.
+Prover result is: Valid (0.01s, 21 steps).
+
+File "m0.mlw", line 317, characters 66-88:
+Sub-goal Variant decrease of goal predicated_from'vc.
+Prover result is: Valid (0.01s, 25 steps).
+
+File "m0.mlw", line 322, characters 31-88:
+Sub-goal Variant decrease of goal rests_on'vc.
+Prover result is: Valid (0.01s, 4 steps).
+
+File "m0.mlw", line 322, characters 31-88:
+Sub-goal Precondition of goal rests_on'vc.
+Prover result is: Valid (0.01s, 4 steps).
+
+File "m0.mlw", line 328, characters 62-81:
+Sub-goal Variant decrease of goal any_bad'vc.
+Prover result is: Valid (0.02s, 46 steps).
+
+File "m0.mlw", line 332, characters 19-68:
+Sub-goal Precondition of goal owes5_rest'vc.
+Prover result is: Valid (0.01s, 2 steps).
+
+File "m0.mlw", line 349, characters 41-64:
+Sub-goal Variant decrease of goal frontier_of'vc.
+Prover result is: Valid (0.01s, 25 steps).
+
+File "m0.mlw", line 375, characters 51-76:
+Sub-goal Variant decrease of goal reads_as_now_means'vc.
+Prover result is: Valid (0.01s, 21 steps).
+
+File "m0.mlw", line 373, characters 14-91:
+Sub-goal Postcondition of goal reads_as_now_means'vc.
+Prover result is: Valid (0.02s, 505 steps).
+
+File "m0.mlw", line 381, characters 44-66:
+Sub-goal Variant decrease of goal set_aside_means'vc.
+Prover result is: Valid (0.01s, 21 steps).
+
+File "m0.mlw", line 379, characters 14-62:
+Sub-goal Postcondition of goal set_aside_means'vc.
+Prover result is: Timeout (10.00s, 203827 steps).
+
+File "m0.mlw", line 390, characters 44-78:
+Sub-goal Variant decrease of goal finding_applies_means'vc.
+Prover result is: Valid (0.01s, 21 steps).
+
+File "m0.mlw", line 386, character 14 to line 388, character 67:
+Sub-goal Postcondition of goal finding_applies_means'vc.
+Prover result is: Timeout (10.00s, 88555 steps).
+
+File "m0.mlw", line 406, characters 29-35:
+Sub-goal Unreachable point of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 30 steps).
+
+File "m0.mlw", line 408, characters 21-42:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 10 steps).
+
+File "m0.mlw", line 409, characters 21-52:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 148 steps).
+
+File "m0.mlw", line 410, characters 21-53:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 16 steps).
+
+File "m0.mlw", line 408, characters 21-42:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 10 steps).
+
+File "m0.mlw", line 409, characters 21-52:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 48 steps).
+
+File "m0.mlw", line 410, characters 21-53:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 15 steps).
+
+File "m0.mlw", line 408, characters 21-42:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 8 steps).
+
+File "m0.mlw", line 409, characters 21-52:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 41 steps).
+
+File "m0.mlw", line 410, characters 21-53:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 14 steps).
+
+File "m0.mlw", line 408, characters 21-42:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 8 steps).
+
+File "m0.mlw", line 409, characters 21-52:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 38 steps).
+
+File "m0.mlw", line 410, characters 21-53:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 13 steps).
+
+File "m0.mlw", line 413, characters 8-34:
+Sub-goal Variant decrease of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 30 steps).
+
+File "m0.mlw", line 413, characters 8-34:
+Sub-goal Precondition of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 4 steps).
+
+File "m0.mlw", line 414, characters 17-76:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 12 steps).
+
+File "m0.mlw", line 415, characters 17-67:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s, 8 steps).
+
+File "m0.mlw", line 416, characters 17-85:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.06s, 2768 steps).
+
+File "m0.mlw", line 401, characters 14-58:
+Sub-goal Postcondition of goal selected_unmoved'vc.
+Prover result is: Timeout (10.00s, 440135 steps).
+
+File "m0.mlw", line 423, characters 44-71:
+Sub-goal Variant decrease of goal set_aside_unmoved'vc.
+Prover result is: Valid (0.01s, 38 steps).
+
+File "m0.mlw", line 423, characters 44-71:
+Sub-goal Precondition of goal set_aside_unmoved'vc.
+Prover result is: Valid (0.01s, 4 steps).
+
+File "m0.mlw", line 421, characters 14-60:
+Sub-goal Postcondition of goal set_aside_unmoved'vc.
+Prover result is: Valid (0.02s, 154 steps).
+
+File "m0.mlw", line 429, characters 51-74:
+Sub-goal Variant decrease of goal reads_unmoved'vc.
+Prover result is: Valid (0.01s, 38 steps).
+
+File "m0.mlw", line 429, characters 51-74:
+Sub-goal Precondition of goal reads_unmoved'vc.
+Prover result is: Valid (0.01s, 4 steps).
+
+File "m0.mlw", line 427, characters 14-80:
+Sub-goal Postcondition of goal reads_unmoved'vc.
+Prover result is: Valid (0.02s, 180 steps).
+
+File "m0.mlw", line 433, characters 22-90:
+Goal applies_unmoved.
+Prover result is: Valid (0.01s, 102 steps).
+
+File "m0.mlw", line 440, characters 44-76:
+Sub-goal Variant decrease of goal findings_unmoved'vc.
+Prover result is: Valid (0.01s, 38 steps).
+
+File "m0.mlw", line 440, characters 44-76:
+Sub-goal Precondition of goal findings_unmoved'vc.
+Prover result is: Valid (0.01s, 4 steps).
+
+File "m0.mlw", line 437, character 14 to line 438, character 41:
+Sub-goal Postcondition of goal findings_unmoved'vc.
+Prover result is: Valid (0.02s, 386 steps).
+
+File "m0.mlw", line 445, characters 65-86:
+Goal good_news_adds_no_finding.
+Prover result is: Valid (0.01s, 9 steps).
+

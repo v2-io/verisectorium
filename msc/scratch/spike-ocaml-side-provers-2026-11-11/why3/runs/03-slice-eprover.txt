@@ -1,0 +1,160 @@
+File "why3.mlw", line 87, characters 54-66:
+Sub-goal Variant decrease of goal firm_steps'vc.
+Prover result is: Valid (0.22s).
+
+File "why3.mlw", line 103, characters 68-87:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 104, characters 59-78:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 105, characters 18-35:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (1.69s).
+
+File "why3.mlw", line 105, characters 18-35:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 105, characters 18-35:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 114, characters 42-61:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 115, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 115, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 115, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 115, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 122, characters 64-81:
+Sub-goal Variant decrease of goal assemblies'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 125, characters 37-52:
+Sub-goal Variant decrease of goal assemblies'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 132, characters 57-70:
+Sub-goal Variant decrease of goal out_of'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 132, characters 76-89:
+Sub-goal Variant decrease of goal out_of'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 151, characters 53-60:
+Sub-goal Variant decrease of goal has'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 149, characters 14-32:
+Sub-goal Postcondition of goal has'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 159, characters 27-38:
+Sub-goal Variant decrease of goal add_new'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 155, characters 24-60:
+Sub-goal Postcondition of goal add_new'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 166, characters 56-75:
+Sub-goal Variant decrease of goal reached_from'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 164, characters 24-77:
+Sub-goal Postcondition of goal reached_from'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 176, characters 9-59:
+Sub-goal Variant decrease of goal grow'vc.
+Prover result is: Valid (4.13s).
+
+File "why3.mlw", line 176, characters 9-59:
+Sub-goal Precondition of goal grow'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 176, characters 9-59:
+Sub-goal Precondition of goal grow'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 173, characters 41-50:
+Sub-goal Postcondition of goal grow'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 186, characters 55-65:
+Sub-goal Variant decrease of goal all_in'vc.
+Prover result is: Valid (0.01s).
+
+File "why3.mlw", line 184, characters 14-54:
+Sub-goal Postcondition of goal all_in'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 193, characters 43-67:
+Sub-goal Variant decrease of goal reaches_stay_in'vc.
+Prover result is: Valid (0.01s).
+
+File "why3.mlw", line 189, characters 14-75:
+Sub-goal Postcondition of goal reaches_stay_in'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 197, characters 14-35:
+Sub-goal Postcondition of goal is_closed'vc.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 205, characters 33-40:
+Goal closed_has_canon.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 214, characters 12-60:
+Sub-goal Precondition of goal canon_of'vc.
+Prover result is: Valid (0.01s).
+
+File "why3.mlw", line 214, characters 12-60:
+Sub-goal Precondition of goal canon_of'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 210, character 14 to line 213, character 17:
+Sub-goal Postcondition of goal canon_of'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 226, characters 53-75:
+Sub-goal Variant decrease of goal promised_steps'vc.
+Prover result is: Valid (0.24s).
+
+File "why3.mlw", line 239, characters 47-60:
+Sub-goal Variant decrease of goal promised'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 240, characters 33-46:
+Sub-goal Variant decrease of goal promised'vc.
+Prover result is: Valid (0.00s).
+
+File "why3.mlw", line 295, characters 35-83:
+Goal canon_here.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 295, characters 18-30:
+Goal canon_here.
+Prover result is: Timeout (10.00s).
+
+File "why3.mlw", line 297, characters 27-47:
+Goal uu_is_not_in_canon.
+Prover result is: Timeout (10.00s).
+

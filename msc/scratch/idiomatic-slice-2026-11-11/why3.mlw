@@ -1,0 +1,394 @@
+(* The slice in WhyML, the language of Why3.
+
+   Prove:    ../spike-ocaml-side-provers-2026-11-11/why3/prove-slice.sh
+             (every obligation, one solver at a time; which solver or named
+             step each one needed is in that script)
+   To OCaml: why3 extract -D ocaml64 -L <dir> --recursive <file>.Instance -o out.ml
+             (the result is beside this file as why3_extracted.ml; it runs)
+   All through:  opam exec --switch=rocq-try -- 
+
+   The idea in one line: A FUNCTION CARRIES ITS OWN SENTENCE. Each function
+   says, in a contract above its body, what is true of its answer, and
+   solvers are asked to show the body keeps the contract. What canon IS is two
+   rules; the function that finds it promises, in its contract, that when it
+   answers at all its answer is canon exactly.
+
+   Read in this order: module Slice (what exists), then module Reach (what
+   canon is, and the function), then module Instance. Reach comes first in
+   the file only because WhyML wants a thing defined before it is used.
+   Notes on what this was like are in why3-NOTES.md beside this file. *)
+
+module Id
+  use int.Int
+  type id = int
+end
+
+(* ---------- canon, for anything that says what reaches what ----------
+
+   Written once, about a "world" of which only one thing is known: for each
+   id, the list of ids it reaches in one step. The slice below hands it the
+   real thing. Proofs here cannot lean on how [out] is computed, and that is
+   also what lets the solvers finish. *)
+
+module Reach
+
+  use int.Int
+  use list.List
+  use list.Mem
+  use list.Append
+  use option.Option
+
+  use Id
+
+  type world
+  val function roots (w: world) : list id
+  val function out (w: world) (n: id) : list id
+  val function size (w: world) : int
+    ensures { result >= 0 }
+
+  (* ---------- what canon is ---------- *)
+
+  (* A root is in canon. What something in canon reaches is in canon. *)
+  inductive canon (v: world) (n: id) =
+    | Canon_root: forall v: world, r: id.
+        mem r (roots v) -> canon v r
+    | Canon_step: forall v: world, r q: id.
+        canon v r -> mem q (out v r) -> canon v q
+
+  (* ---------- a function that finds it, and what it promises ---------- *)
+
+  let rec function has (x: id) (l: list id) : bool
+    ensures { result <-> mem x l }
+    variant { l }
+  = match l with Nil -> false | Cons y r -> x = y || has x r end
+
+  (* xs, less what s already has, in front of s *)
+  let rec add_new (xs s: list id) : list id
+    ensures { forall x. mem x result <-> mem x xs \/ mem x s }
+    variant { xs }
+  = match xs with
+    | Nil -> s
+    | Cons x r -> let s' = add_new r s in if has x s' then s' else Cons x s'
+    end
+
+  (* everything the members of l reach *)
+  let rec reached_from (v: world) (l: list id) : list id
+    ensures { forall q. mem q result -> exists r. mem r l /\ mem q (out v r) }
+    ensures { forall r q. mem r l -> mem q (out v r) -> mem q result }
+    variant { l }
+  = match l with
+    | Nil -> Nil
+    | Cons r rest ->
+        let here = out v r in
+        let further = reached_from v rest in
+        assert { forall q. mem q (here ++ further) <-> mem q here \/ mem q further };
+        here ++ further
+    end
+
+  (* WhyML will not take a recursion without a reason it stops, and following
+     pointers has none. So the search is told how many rounds it gets. *)
+  let rec grow (v: world) (rounds: int) (s: list id) : list id
+    requires { rounds >= 0 }
+    requires { forall x. mem x s -> canon v x }
+    ensures  { forall x. mem x result -> canon v x }
+    variant  { rounds }
+  = if rounds = 0 then s
+    else grow v (rounds - 1) (add_new (reached_from v s) s)
+
+  (* The check: s has the roots, and has everything its members reach. *)
+  predicate closed (v: world) (s: list id) =
+    (forall r. mem r (roots v) -> mem r s) /\
+    (forall r q. mem r s -> mem q (out v r) -> mem q s)
+
+  let rec function all_in (xs s: list id) : bool
+    ensures { result <-> forall x. mem x xs -> mem x s }
+    variant { xs }
+  = match xs with Nil -> true | Cons x r -> has x s && all_in r s end
+
+  let rec function reaches_stay_in (v: world) (xs s: list id) : bool
+    ensures { result -> forall r q. mem r xs -> mem q (out v r) -> mem q s }
+    ensures { (forall r q. mem r xs -> mem q (out v r) -> mem q s) -> result }
+    variant { xs }
+  = match xs with
+    | Nil -> true
+    | Cons r rest ->
+        let first = all_in (out v r) s in
+        let others = reaches_stay_in v rest s in
+        assert { forall r' q. mem r' xs -> mem q (out v r') -> (r' = r \/ mem r' rest) };
+        first && others
+    end
+
+  let function is_closed (v: world) (s: list id) : bool
+    ensures { result <-> closed v s }
+  = all_in (roots v) s && reaches_stay_in v s s
+
+  (* the same thing said once more, so that it can be used in a statement
+     and not only in a program *)
+  let lemma is_closed_means (v: world) (s: list id)
+    ensures { is_closed v s <-> closed v s }
+  = let _ = is_closed v s in ()
+
+  (* Anything closed has all of canon in it. This is the one statement here
+     the solvers do not get alone: it is by induction on how a thing came to
+     be in canon, and that has to be asked for by name. *)
+  lemma closed_has_canon:
+    forall v: world, r: id. canon v r ->
+      forall s: list id. closed v s -> mem r s
+
+  (* The promise. If this answers at all, its answer is canon exactly: by the
+     two rules, for any world whatever. *)
+  let canon_of (v: world) : option (list id)
+    ensures { match result with
+              | Some s -> forall r. canon v r <-> mem r s
+              | None -> true
+              end }
+  = let s = grow v (size v + 1) (roots v) in
+    if is_closed v s then Some s else None
+
+end
+
+module Slice
+
+  use int.Int
+  use list.List
+  use list.Mem
+  use list.Append
+  use list.Length
+  use option.Option
+
+  (* ---------- what exists ---------- *)
+
+  use Id
+
+  (* Kinds of veritoid, as types that have no values. A veritoid carries its
+     kind as a tag on its type and nowhere else. *)
+  type claim
+  type step
+  type explanation
+
+  type veritoid 'kind = { name: id; content: string }
+
+  (* A slot for an 'a holds one, inside, or points at one by its id. *)
+  type filler 'a = Holds 'a | PointsAt id
+
+  type slot 'a =
+    | Untouched            (* declared by the kind; nobody has said anything *)
+    | Suggested string
+    | Promised
+    | Filled (filler 'a) bool      (* the bool: provisional *)
+
+  let function holds (x: 'a) : slot 'a = Filled (Holds x) false
+  let function points_at (n: id) : slot 'a = Filled (PointsAt n) false
+  let function provisionally_points_at (n: id) : slot 'a = Filled (PointsAt n) true
+
+  (* The kind derived-result: one, any number, one, at most one. *)
+  type derived_result = {
+    r_name: id;
+    formal_claim: slot (veritoid claim);
+    derivation: list (slot (veritoid step));
+    description: slot (veritoid explanation);
+    eli8: option (slot (veritoid explanation));
+  }
+
+  (* An outline takes anything, in order; a gap is an entry, not a state of a
+     slot. An outline may hold a veritoid or a result; another outline it can
+     only point at (a departure: it keeps every type here non-nested). *)
+  type held =
+    | AClaim (veritoid claim)
+    | AStep (veritoid step)
+    | AnExplanation (veritoid explanation)
+    | AResult derived_result
+
+  type entry = Entry (slot held) | Gap
+
+  type outline = { o_name: id; entries: list entry }
+
+  type living = Result derived_result | AnOutline outline
+
+  type verisectorium = { store: list living; roots: list id }
+
+  (* ---------- what one assembly reaches in one step ---------- *)
+
+  (* through a slot that is filled and not provisional *)
+  let function firm_v (s: slot (veritoid 'k)) : list id =
+    match s with
+    | Filled (Holds v) False -> Cons v.name Nil
+    | Filled (PointsAt n) False -> Cons n Nil
+    | _ -> Nil
+    end
+
+  let rec function firm_steps (l: list (slot (veritoid step))) : list id
+    variant { l }
+  = match l with Nil -> Nil | Cons s r -> firm_v s ++ firm_steps r end
+
+  let function reaches_result (r: derived_result) : list id =
+    firm_v r.formal_claim ++ firm_steps r.derivation ++ firm_v r.description
+    ++ match r.eli8 with Some s -> firm_v s | None -> Nil end
+
+  let function held_name (h: held) : id =
+    match h with
+    | AClaim v -> v.name | AStep v -> v.name | AnExplanation v -> v.name
+    | AResult r -> r.r_name
+    end
+
+  let rec function reaches_entries (l: list entry) : list id
+    variant { l }
+  = match l with
+    | Nil -> Nil
+    | Cons (Entry (Filled (Holds h) False)) r -> Cons (held_name h) (reaches_entries r)
+    | Cons (Entry (Filled (PointsAt n) False)) r -> Cons n (reaches_entries r)
+    | Cons _ r -> reaches_entries r
+    end
+
+  (* every assembly there is, wherever it lives, with what it reaches *)
+  let rec function held_results (l: list entry) : list (id, list id)
+    variant { l }
+  = match l with
+    | Nil -> Nil
+    | Cons (Entry (Filled (Holds (AResult r)) _)) rest ->
+        Cons (r.r_name, reaches_result r) (held_results rest)
+    | Cons _ rest -> held_results rest
+    end
+
+  let rec function assemblies (s: list living) : list (id, list id)
+    variant { s }
+  = match s with
+    | Nil -> Nil
+    | Cons (Result r) rest -> Cons (r.r_name, reaches_result r) (assemblies rest)
+    | Cons (AnOutline o) rest ->
+        Cons (o.o_name, reaches_entries o.entries)
+          (held_results o.entries ++ assemblies rest)
+    end
+
+  let rec function out_of (a: list (id, list id)) (n: id) : list id
+    variant { a }
+  = match a with
+    | Nil -> Nil
+    | Cons (m, reached) rest -> if m = n then reached ++ out_of rest n else out_of rest n
+    end
+
+  let function out (v: verisectorium) (n: id) : list id = out_of (assemblies v.store) n
+
+  (* ---------- canon: the general account, handed this slice's [out] ---------- *)
+
+  let function how_many (v: verisectorium) : int
+    ensures { result >= 0 }
+  = length (assemblies v.store)
+
+  let function roots_of (v: verisectorium) : list id = v.roots
+
+  clone export Reach with
+    type world = verisectorium, val roots = roots_of, val out = out, val size = how_many
+
+  (* ---------- which slots are promised and empty ---------- *)
+
+  let function promised_v (owner: id) (slot_name: string) (s: slot (veritoid 'k)) : list (id, string) =
+    match s with Promised -> Cons (owner, slot_name) Nil | _ -> Nil end
+
+  let rec function promised_steps (owner: id) (l: list (slot (veritoid step))) : list (id, string)
+    variant { l }
+  = match l with
+    | Nil -> Nil
+    | Cons s r -> promised_v owner "derivation" s ++ promised_steps owner r
+    end
+
+  let function promised_in (r: derived_result) : list (id, string) =
+    promised_v r.r_name "formal-claim" r.formal_claim
+    ++ promised_steps r.r_name r.derivation
+    ++ promised_v r.r_name "description" r.description
+    ++ match r.eli8 with Some s -> promised_v r.r_name "eli8" s | None -> Nil end
+
+  let rec function promised (s: list living) : list (id, string)
+    variant { s }
+  = match s with
+    | Nil -> Nil
+    | Cons (Result r) rest -> promised_in r ++ promised rest
+    | Cons (AnOutline _) rest -> promised rest
+    end
+
+end
+
+module Instance
+
+  use int.Int
+  use list.List
+  use list.Mem
+  use option.Option
+  use Id
+  use Slice
+
+  (* ids are numbers here; the letters are the README's *)
+  let constant c_ : id = 1
+  let constant d_ : id = 2
+  let constant k_ : id = 3
+  let constant t_ : id = 4
+  let constant u_ : id = 5
+  let constant uu_ : id = 6
+  let constant o_ : id = 7
+
+  let constant c : veritoid claim =
+    { name = c_; content = "Every bounded monotone sequence of reals converges." }
+  let constant d : veritoid step =
+    { name = d_; content = "Take the least upper bound of the terms and show the terms come within any \xCE\xB5 of it." }
+  let constant k : veritoid explanation =
+    { name = k_; content = "If you keep stepping forward and there is a wall you cannot pass, you end up settling somewhere at or before the wall." }
+  let constant u : veritoid claim =
+    { name = u_; content = "Every Cauchy sequence of reals converges." }
+
+  let constant tt : derived_result =
+    { r_name = t_; formal_claim = holds c; derivation = Cons (holds d) Nil;
+      description = Promised; eli8 = Some (holds k) }
+
+  let constant uu : derived_result =
+    { r_name = uu_; formal_claim = holds u; derivation = Nil;
+      description = Untouched; eli8 = None }
+
+  let constant o : outline =
+    { o_name = o_;
+      entries =
+        Cons (Entry (points_at t_))
+       (Cons (Entry (provisionally_points_at uu_))
+       (Cons (Entry (Suggested "a result about series is probably wanted here"))
+       (Cons Gap Nil))) }
+
+  let constant here : verisectorium =
+    { store = Cons (Result tt) (Cons (Result uu) (Cons (AnOutline o) Nil));
+      roots = Cons o_ Nil }
+
+  let answer () : (option (list id), list (id, string)) = (canon_of here, promised here.store)
+
+  (* What reaches what, here. Each of these is shown by computing. *)
+  lemma what_reaches_what:
+    assemblies here.store =
+      Cons (t_, Cons c_ (Cons d_ (Cons k_ Nil)))
+     (Cons (uu_, Cons u_ Nil)
+     (Cons (o_, Cons t_ Nil) Nil))
+
+  lemma from_o: out here o_ = Cons t_ Nil
+  lemma from_t: out here t_ = Cons c_ (Cons d_ (Cons k_ Nil))
+  lemma from_others:
+    forall n: id. n <> o_ -> n <> t_ -> n <> uu_ -> out here n = Nil
+
+  lemma from_leaves: out here c_ = Nil /\ out here d_ = Nil /\ out here k_ = Nil
+
+  lemma o_in: canon here o_
+  lemma t_in: canon here t_
+  lemma c_d_k_in: canon here c_ /\ canon here d_ /\ canon here k_
+
+  lemma those_five_pass_the_check:
+    is_closed here (Cons o_ (Cons t_ (Cons c_ (Cons d_ (Cons k_ Nil)))))
+
+  lemma those_five_are_closed:
+    closed here (Cons o_ (Cons t_ (Cons c_ (Cons d_ (Cons k_ Nil)))))
+
+  lemma nothing_else:
+    forall r: id. canon here r ->
+      mem r (Cons o_ (Cons t_ (Cons c_ (Cons d_ (Cons k_ Nil)))))
+
+  (* Canon here is O, T, c, d, k: by the two rules, not by the function. *)
+  goal canon_here:
+    forall r: id. canon here r <-> (r = o_ \/ r = t_ \/ r = c_ \/ r = d_ \/ r = k_)
+
+  goal uu_is_not_in_canon: not (canon here uu_)
+
+end

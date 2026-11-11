@@ -1,0 +1,1 @@
+Warning, file "/Users/josephwecker-v2/src/verisectorium/msc/scratch/spike-ocaml-side-provers-2026-11-11/why3/extracted/slice.mlw", line 40, characters 21-22: unused variable w

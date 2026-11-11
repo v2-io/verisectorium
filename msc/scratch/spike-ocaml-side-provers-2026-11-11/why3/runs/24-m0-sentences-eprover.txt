@@ -1,0 +1,144 @@
+File "m0.mlw", line 375, characters 51-76:
+Sub-goal Variant decrease of goal reads_as_now_means'vc.
+Prover result is: Valid (0.22s).
+
+File "m0.mlw", line 373, characters 14-91:
+Sub-goal Postcondition of goal reads_as_now_means'vc.
+Prover result is: Timeout (10.00s).
+
+File "m0.mlw", line 381, characters 44-66:
+Sub-goal Variant decrease of goal set_aside_means'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 379, characters 14-62:
+Sub-goal Postcondition of goal set_aside_means'vc.
+Prover result is: Timeout (10.00s).
+
+File "m0.mlw", line 390, characters 44-78:
+Sub-goal Variant decrease of goal finding_applies_means'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 386, character 14 to line 388, character 67:
+Sub-goal Postcondition of goal finding_applies_means'vc.
+Prover result is: Timeout (10.00s).
+
+File "m0.mlw", line 406, characters 29-35:
+Sub-goal Unreachable point of goal selected_unmoved'vc.
+Prover result is: Valid (1.61s).
+
+File "m0.mlw", line 408, characters 21-42:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 409, characters 21-52:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Timeout (10.00s).
+
+File "m0.mlw", line 410, characters 21-53:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 408, characters 21-42:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 409, characters 21-52:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (1.60s).
+
+File "m0.mlw", line 410, characters 21-53:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 408, characters 21-42:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 409, characters 21-52:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 410, characters 21-53:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 408, characters 21-42:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 409, characters 21-52:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 410, characters 21-53:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 413, characters 8-34:
+Sub-goal Variant decrease of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 413, characters 8-34:
+Sub-goal Precondition of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 414, characters 17-76:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 415, characters 17-67:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Timeout (10.00s).
+
+File "m0.mlw", line 416, characters 17-85:
+Sub-goal Assertion of goal selected_unmoved'vc.
+Prover result is: Timeout (10.00s).
+
+File "m0.mlw", line 401, characters 14-58:
+Sub-goal Postcondition of goal selected_unmoved'vc.
+Prover result is: Timeout (10.00s).
+
+File "m0.mlw", line 423, characters 44-71:
+Sub-goal Variant decrease of goal set_aside_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 423, characters 44-71:
+Sub-goal Precondition of goal set_aside_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 421, characters 14-60:
+Sub-goal Postcondition of goal set_aside_unmoved'vc.
+Prover result is: Timeout (10.00s).
+
+File "m0.mlw", line 429, characters 51-74:
+Sub-goal Variant decrease of goal reads_unmoved'vc.
+Prover result is: Valid (0.23s).
+
+File "m0.mlw", line 429, characters 51-74:
+Sub-goal Precondition of goal reads_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 427, characters 14-80:
+Sub-goal Postcondition of goal reads_unmoved'vc.
+Prover result is: Timeout (10.00s).
+
+File "m0.mlw", line 433, characters 22-90:
+Goal applies_unmoved.
+Prover result is: Timeout (10.00s).
+
+File "m0.mlw", line 440, characters 44-76:
+Sub-goal Variant decrease of goal findings_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 440, characters 44-76:
+Sub-goal Precondition of goal findings_unmoved'vc.
+Prover result is: Valid (0.01s).
+
+File "m0.mlw", line 437, character 14 to line 438, character 41:
+Sub-goal Postcondition of goal findings_unmoved'vc.
+Prover result is: Timeout (10.00s).
+
+File "m0.mlw", line 445, characters 65-86:
+Goal good_news_adds_no_finding.
+Prover result is: Timeout (10.00s).
+

@@ -1,0 +1,189 @@
+Warning, file "why3.mlw", line 40, characters 21-22: unused variable w
+File "why3.mlw", line 57, characters 53-60:
+Sub-goal Variant decrease of goal has'vc.
+Prover result is: Valid (0.00s, 1158 steps).
+
+File "why3.mlw", line 55, characters 14-32:
+Sub-goal Postcondition of goal has'vc.
+Prover result is: Valid (0.00s, 6939 steps).
+
+File "why3.mlw", line 65, characters 27-38:
+Sub-goal Variant decrease of goal add_new'vc.
+Prover result is: Valid (0.00s, 1119 steps).
+
+File "why3.mlw", line 61, characters 24-60:
+Sub-goal Postcondition of goal add_new'vc.
+Prover result is: Valid (0.01s, 15019 steps).
+
+File "why3.mlw", line 77, characters 22-41:
+Sub-goal Variant decrease of goal reached_from'vc.
+Prover result is: Valid (0.00s, 1144 steps).
+
+File "why3.mlw", line 78, characters 27-82:
+Sub-goal Assertion of goal reached_from'vc.
+Prover result is: Valid (0.00s, 12626 steps).
+
+File "why3.mlw", line 70, characters 40-76:
+Sub-goal Postcondition of goal reached_from'vc.
+Prover result is: Valid (0.01s, 17180 steps).
+
+File "why3.mlw", line 71, characters 56-68:
+Sub-goal Postcondition of goal reached_from'vc.
+Prover result is: Valid (0.00s, 15320 steps).
+
+File "why3.mlw", line 90, characters 9-59:
+Sub-goal Variant decrease of goal grow'vc.
+Prover result is: Valid (0.00s, 782 steps).
+
+File "why3.mlw", line 90, characters 9-59:
+Sub-goal Precondition of goal grow'vc.
+Prover result is: Valid (0.00s, 3138 steps).
+
+File "why3.mlw", line 90, characters 9-59:
+Sub-goal Precondition of goal grow'vc.
+Prover result is: Valid (0.00s, 7983 steps).
+
+File "why3.mlw", line 87, characters 41-50:
+Sub-goal Postcondition of goal grow'vc.
+Prover result is: Valid (0.00s, 8121 steps).
+
+File "why3.mlw", line 100, characters 55-65:
+Sub-goal Variant decrease of goal all_in'vc.
+Prover result is: Valid (0.00s, 2007 steps).
+
+File "why3.mlw", line 98, characters 14-54:
+Sub-goal Postcondition of goal all_in'vc.
+Prover result is: Valid (0.01s, 11158 steps).
+
+File "why3.mlw", line 110, characters 21-45:
+Sub-goal Variant decrease of goal reaches_stay_in'vc.
+Prover result is: Valid (0.00s, 1144 steps).
+
+File "why3.mlw", line 111, characters 63-86:
+Sub-goal Assertion of goal reaches_stay_in'vc.
+Prover result is: Valid (0.00s, 5627 steps).
+
+File "why3.mlw", line 103, characters 67-74:
+Sub-goal Postcondition of goal reaches_stay_in'vc.
+Prover result is: Valid (0.00s, 9585 steps).
+
+File "why3.mlw", line 104, characters 70-76:
+Sub-goal Postcondition of goal reaches_stay_in'vc.
+Prover result is: Valid (0.00s, 7166 steps).
+
+File "why3.mlw", line 116, characters 14-35:
+Sub-goal Postcondition of goal is_closed'vc.
+Prover result is: Valid (0.00s, 7195 steps).
+
+File "why3.mlw", line 116, characters 14-35:
+Sub-goal Postcondition of goal is_closed'vc.
+Prover result is: Valid (0.00s, 7131 steps).
+
+File "why3.mlw", line 124, characters 33-40:
+Goal closed_has_canon.
+Prover result is: Timeout (10.00s, 22590154 steps).
+
+File "why3.mlw", line 133, characters 12-41:
+Sub-goal Precondition of goal canon_of'vc.
+Prover result is: Valid (0.00s, 8238 steps).
+
+File "why3.mlw", line 133, characters 12-41:
+Sub-goal Precondition of goal canon_of'vc.
+Prover result is: Valid (0.00s, 7714 steps).
+
+File "why3.mlw", line 129, character 14 to line 132, character 17:
+Sub-goal Postcondition of goal canon_of'vc.
+Prover result is: Valid (0.00s, 11762 steps).
+
+File "why3.mlw", line 210, characters 54-66:
+Sub-goal Variant decrease of goal firm_steps'vc.
+Prover result is: Valid (0.00s, 3462 steps).
+
+File "why3.mlw", line 226, characters 68-87:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.00s, 4264 steps).
+
+File "why3.mlw", line 227, characters 59-78:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.00s, 4264 steps).
+
+File "why3.mlw", line 228, characters 18-35:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.00s, 4244 steps).
+
+File "why3.mlw", line 228, characters 18-35:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.00s, 4329 steps).
+
+File "why3.mlw", line 228, characters 18-35:
+Sub-goal Variant decrease of goal reaches_entries'vc.
+Prover result is: Valid (0.00s, 4200 steps).
+
+File "why3.mlw", line 237, characters 42-61:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.00s, 4284 steps).
+
+File "why3.mlw", line 238, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.00s, 4397 steps).
+
+File "why3.mlw", line 238, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.00s, 4264 steps).
+
+File "why3.mlw", line 238, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.00s, 4329 steps).
+
+File "why3.mlw", line 238, characters 21-38:
+Sub-goal Variant decrease of goal held_results'vc.
+Prover result is: Valid (0.00s, 4200 steps).
+
+File "why3.mlw", line 245, characters 64-81:
+Sub-goal Variant decrease of goal assemblies'vc.
+Prover result is: Valid (0.00s, 4220 steps).
+
+File "why3.mlw", line 248, characters 37-52:
+Sub-goal Variant decrease of goal assemblies'vc.
+Prover result is: Valid (0.00s, 4220 steps).
+
+File "why3.mlw", line 255, characters 57-70:
+Sub-goal Variant decrease of goal out_of'vc.
+Prover result is: Valid (0.00s, 1593 steps).
+
+File "why3.mlw", line 255, characters 76-89:
+Sub-goal Variant decrease of goal out_of'vc.
+Prover result is: Valid (0.00s, 1632 steps).
+
+File "why3.mlw", line 263, characters 14-25:
+Sub-goal Postcondition of goal how_many'vc.
+Prover result is: Valid (0.01s, 46790 steps).
+
+File "why3.mlw", line 41, characters 14-25:
+Sub-goal Postcondition of goal size'refn'vc.
+Prover result is: Valid (0.00s, 4760 steps).
+
+File "why3.mlw", line 280, characters 53-75:
+Sub-goal Variant decrease of goal promised_steps'vc.
+Prover result is: Valid (0.00s, 16374 steps).
+
+File "why3.mlw", line 293, characters 47-60:
+Sub-goal Variant decrease of goal promised'vc.
+Prover result is: Valid (0.00s, 16276 steps).
+
+File "why3.mlw", line 294, characters 33-46:
+Sub-goal Variant decrease of goal promised'vc.
+Prover result is: Valid (0.00s, 16276 steps).
+
+File "why3.mlw", line 350, characters 35-83:
+Goal canon_here.
+Prover result is: Timeout (10.00s, 41405351 steps).
+
+File "why3.mlw", line 350, characters 18-30:
+Goal canon_here.
+Prover result is: Timeout (10.00s, 41070099 steps).
+
+File "why3.mlw", line 352, characters 27-47:
+Goal uu_is_not_in_canon.
+Prover result is: Timeout (10.00s, 42337719 steps).
+

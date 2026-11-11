@@ -1,0 +1,150 @@
+## alt-ergo
+File "mutations/false-statement.mlw", line 11, character 4 to line 13, character 86:
+Goal any_news_adds_no_finding.
+Prover result is: Timeout (10.00s, 391157 steps).
+
+## z3
+File "mutations/false-statement.mlw", line 11, character 4 to line 13, character 86:
+Goal any_news_adds_no_finding.
+Prover result is: Timeout (10.00s, 60134459 steps).
+
+## eprover
+File "mutations/false-statement.mlw", line 11, character 4 to line 13, character 86:
+Goal any_news_adds_no_finding.
+Prover result is: Timeout (10.00s).
+
+## Alt-Ergo asked for a counterexample
+Warning: Error while checking function definition type set_aside: Type mismatch when interpreting (Function ((_arg_0 (Smultiple (Isymbol list) (Ssimple (Isymbol event))))
+                                  (_arg_1 (Sint)))
+                                  (Sbool)
+                                  (Var (Qannotident (Isymbol (Sprover @a5)) (Sbool)))) with lsymbol m0.
+M0.
+set_aside
+
+Warning: Error while checking function definition type selected: Type mismatch when interpreting (Function ((_arg_0 (Smultiple (Isymbol list) (Ssimple (Isymbol event))))
+                                  (_arg_1 (Sint)))
+                                  (Smultiple (Isymbol option) (Ssimple (Isymbol version)))
+                                  (Var (Qannotident (Isymbol (Sprover @a6)) (Smultiple (Isymbol option) (Ssimple (Isymbol version)))))) with lsymbol m0.
+M0.
+selected
+
+Warning: Error while checking function definition type reads_as_now: Type mismatch when interpreting (Function ((_arg_0 (Smultiple (Isymbol list) (Ssimple (Isymbol event))))
+                                  (_arg_1 (Smultiple (Isymbol list) (Smultiple (Isymbol tuple2) (Sint)
+                                  (Sint)))))
+                                  (Sbool)
+                                  (Var (Qannotident (Isymbol (Sprover @a4)) (Sbool)))) with lsymbol m0.
+M0.
+reads_as_now
+
+Warning: Error while checking function definition type mem: Function arity mismatch when interpreting
+(Function () (Sbool) (Var (Qannotident (Isymbol (Sprover @a41)) (Sbool))))
+with lsymbol list.Mem.mem
+Warning: Error while checking function definition type match_option: Function arity mismatch when interpreting
+(Function ()
+  (Ssimple (Isymbol A16))
+  (Var (Qannotident (Isymbol (Sprover @a38)) (Ssimple (Isymbol A16)))))
+with lsymbol match_option
+Warning: Error while checking function definition type match_list: Function arity mismatch when interpreting
+(Function ()
+  (Ssimple (Isymbol A4))
+  (Var (Qannotident (Isymbol (Sprover @a47)) (Ssimple (Isymbol A4)))))
+with lsymbol match_list
+Warning: Error while checking function definition type match_event: Function arity mismatch when interpreting
+(Function ()
+  (Ssimple (Isymbol A23))
+  (Var (Qannotident (Isymbol (Sprover @a29)) (Ssimple (Isymbol A23)))))
+with lsymbol match_event
+Warning: Error while checking function definition type match_criterion: Function arity mismatch when interpreting
+(Function ()
+  (Ssimple (Isymbol A20))
+  (Var (Qannotident (Isymbol (Sprover @a35)) (Ssimple (Isymbol A20)))))
+with lsymbol match_criterion
+Warning: Error while checking function definition type l: Type mismatch when interpreting (Function ()
+                                  (Smultiple (Isymbol list) (Ssimple (Isymbol event)))
+                                  (Var (Qannotident (Isymbol (Sprover @a52)) (Smultiple (Isymbol list) (Ssimple (Isymbol event)))))) with lsymbol l
+
+Warning: Error while checking function definition type finding_applies: Type mismatch when interpreting (Function ((arg_0 (Smultiple (Isymbol list) (Ssimple (Isymbol event))))
+                                  (arg_1 (Smultiple (Isymbol list) (Ssimple (Isymbol event))))
+                                  (arg_2 (Sint)))
+                                  (Sbool)
+                                  (Ite
+                                    (Apply (Qident (Isymbol and)) (Apply (Qident (Isymbol =)) (Var (Qident (Isymbol arg_0)))
+                                                                    (Var (Qident (Isymbol l))))
+                                      (Apply (Qident (Isymbol =)) (Var (Qident (Isymbol arg_1)))
+                                        (Var (Qident (Isymbol l))))
+                                      (Apply (Qident (Isymbol =)) (Var (Qident (Isymbol arg_2)))
+                                        (Cint {value=0; verbatim=0)))
+                                    (Cbool false)
+                                    (Cbool true))) with lsymbol m0.M0.
+finding_applies
+
+Warning: Error while checking function definition type Write_proj_5: Type mismatch when interpreting (Function ((_arg_0 (Ssimple (Isymbol event))))
+                                  (Smultiple (Isymbol list) (Smultiple (Isymbol tuple2) (Sint)
+                                  (Sbool)))
+                                  (Var (Qannotident (Isymbol (Sprover @a23)) (Smultiple (Isymbol list) (Smultiple (Isymbol tuple2) (Sint)
+                                  (Sbool)))))) with lsymbol Write_proj_5
+
+Warning: Error while checking function definition type Write_proj_4: Type mismatch when interpreting (Function ((_arg_0 (Ssimple (Isymbol event))))
+                                  (Smultiple (Isymbol list) (Smultiple (Isymbol tuple2) (Sint)
+                                  (Sint)))
+                                  (Var (Qannotident (Isymbol (Sprover @a24)) (Smultiple (Isymbol list) (Smultiple (Isymbol tuple2) (Sint)
+                                  (Sint)))))) with lsymbol Write_proj_4
+
+Warning: Error while checking function definition type Write: Type mismatch when interpreting (Function ((_arg_0 (Sint))
+                                  (_arg_1 (Sint))
+                                  (_arg_2 (Sint))
+                                  (_arg_3 (Smultiple (Isymbol list) (Smultiple (Isymbol tuple2) (Sint)
+                                  (Sint))))
+                                  (_arg_4 (Smultiple (Isymbol list) (Smultiple (Isymbol tuple2) (Sint)
+                                  (Sbool)))))
+                                  (Ssimple (Isymbol event))
+                                  (Var (Qannotident (Isymbol (Sprover @a34)) (Ssimple (Isymbol event))))) with lsymbol Write
+
+Warning: Error while checking function definition type Some_proj_1: Function arity mismatch when interpreting
+(Function ()
+  (Ssimple (Isymbol A19))
+  (Var (Qannotident (Isymbol (Sprover @a36)) (Ssimple (Isymbol A19)))))
+with lsymbol Some_proj_1
+Warning: Error while checking function definition type Some: Function arity mismatch when interpreting
+(Function ()
+  (Smultiple (Isymbol option) (Ssimple (Isymbol A14)))
+  (Var (Qannotident (Isymbol (Sprover @a39)) (Smultiple (Isymbol option) (Ssimple (Isymbol A14))))))
+with lsymbol Some
+Warning: Error while checking function definition type Evidence_proj_7: Type mismatch when interpreting (Function ((_arg_0 (Ssimple (Isymbol event))))
+                                  (Smultiple (Isymbol list) (Smultiple (Isymbol tuple2) (Sint)
+                                  (Sint)))
+                                  (Var (Qannotident (Isymbol (Sprover @a16)) (Smultiple (Isymbol list) (Smultiple (Isymbol tuple2) (Sint)
+                                  (Sint)))))) with lsymbol Evidence_proj_7
+
+Warning: Error while checking function definition type Evidence: Type mismatch when interpreting (Function ((_arg_0 (Sint))
+                                  (_arg_1 (Sint))
+                                  (_arg_2 (Sint))
+                                  (_arg_3 (Sint))
+                                  (_arg_4 (Ssimple (Isymbol criterion)))
+                                  (_arg_5 (Sbool))
+                                  (_arg_6 (Smultiple (Isymbol list) (Smultiple (Isymbol tuple2) (Sint)
+                                  (Sint)))))
+                                  (Ssimple (Isymbol event))
+                                  (Var (Qannotident (Isymbol (Sprover @a51)) (Ssimple (Isymbol event))))) with lsymbol Evidence
+
+Warning: Error while checking function definition type Cons_proj_2: Function arity mismatch when interpreting
+(Function ()
+  (Smultiple (Isymbol list) (Ssimple (Isymbol A8)))
+  (Var (Qannotident (Isymbol (Sprover @a44)) (Smultiple (Isymbol list) (Ssimple (Isymbol A8))))))
+with lsymbol Cons_proj_2
+Warning: Error while checking function definition type Cons_proj_1: Function arity mismatch when interpreting
+(Function ()
+  (Ssimple (Isymbol A7))
+  (Var (Qannotident (Isymbol (Sprover @a45)) (Ssimple (Isymbol A7)))))
+with lsymbol Cons_proj_1
+Warning: Error while checking function definition type Cons: Type mismatch when interpreting (Function ((_arg_0 (Ssimple (Isymbol event)))
+                                  (_arg_1 (Smultiple (Isymbol list) (Ssimple (Isymbol event)))))
+                                  (Smultiple (Isymbol list) (Ssimple (Isymbol event)))
+                                  (Var (Qannotident (Isymbol (Sprover @a54)) (Smultiple (Isymbol list) (Ssimple (Isymbol event)))))) with lsymbol Cons
+
+File "mutations/false-statement.mlw", line 11, character 4 to line 13, character 86:
+Goal any_news_adds_no_finding.
+Prover result is: Timeout (10.00s, 26 steps).
+Sorry, we don't have a good counterexample for you :(
+
+

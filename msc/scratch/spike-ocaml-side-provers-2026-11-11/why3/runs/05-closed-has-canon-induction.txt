@@ -1,0 +1,4 @@
+File "why3.mlw", line 218, characters 33-40:
+Goal closed_has_canon.
+Prover result is: Timeout (10.00s, 116277 steps).
+

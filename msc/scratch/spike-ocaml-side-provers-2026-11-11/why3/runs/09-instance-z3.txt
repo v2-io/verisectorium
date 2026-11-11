@@ -1,0 +1,47 @@
+## t_in
+Warning, file "why3.mlw", line 40, characters 21-22: unused variable w
+File "why3.mlw", line 361, characters 14-27:
+Goal t_in.
+Prover result is: Valid (0.01s, 93787 steps).
+
+exit 0
+## c_d_k_in
+Warning, file "why3.mlw", line 40, characters 21-22: unused variable w
+File "why3.mlw", line 362, characters 18-31:
+Goal c_d_k_in.
+Prover result is: Valid (0.02s, 152073 steps).
+
+File "why3.mlw", line 362, characters 35-48:
+Goal c_d_k_in.
+Prover result is: Valid (0.02s, 152077 steps).
+
+File "why3.mlw", line 362, characters 52-65:
+Goal c_d_k_in.
+Prover result is: Valid (0.02s, 152081 steps).
+
+exit 0
+## those_five_are_closed
+Warning, file "why3.mlw", line 40, characters 21-22: unused variable w
+File "why3.mlw", line 365, characters 4-69:
+Goal those_five_are_closed.
+Prover result is: Timeout (20.00s, 81029335 steps).
+
+exit 2
+## canon_here
+Warning, file "why3.mlw", line 40, characters 21-22: unused variable w
+File "why3.mlw", line 369, characters 35-83:
+Goal canon_here.
+Prover result is: Timeout (20.00s, 80736613 steps).
+
+File "why3.mlw", line 369, characters 18-30:
+Goal canon_here.
+Prover result is: Valid (0.65s, 4344775 steps).
+
+exit 2
+## uu_is_not_in_canon
+Warning, file "why3.mlw", line 40, characters 21-22: unused variable w
+File "why3.mlw", line 371, characters 27-47:
+Goal uu_is_not_in_canon.
+Prover result is: Valid (0.02s, 171650 steps).
+
+exit 0

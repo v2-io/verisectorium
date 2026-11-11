@@ -1,0 +1,13 @@
+Warning, file "why3.mlw", line 40, characters 21-22: unused variable w
+File "why3.mlw", line 350, characters 35-83:
+Goal canon_here.
+Prover result is: Timeout (20.00s, 840938 steps).
+
+File "why3.mlw", line 350, characters 18-30:
+Goal canon_here.
+Prover result is: Timeout (20.00s, 822369 steps).
+
+File "why3.mlw", line 352, characters 27-47:
+Goal uu_is_not_in_canon.
+Prover result is: Valid (1.82s, 91650 steps).
+

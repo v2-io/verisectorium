@@ -1,0 +1,540 @@
+(* M0, the small model of ../../spike-formal-perspectives-2026-11-10/01-common-reading.md,
+   in WhyML, and note 22 §4.3's story run through it.
+
+   Cut from M0, knowingly: `same` events, raise, promise and waive (the story
+   uses none of them), so conditions 8 and 9 are not here. Conditions 1, 2, 4,
+   5 and 6 are.
+
+   Three modules.
+     M0        the model, as functions that run.
+     Sentences what some of those functions mean, as sentences with "for all"
+               and "there is", each proved equal to its function; and one
+               general statement (good news does no harm to condition 4).
+     Story     the ten rows. *)
+
+module M0
+
+  use int.Int
+  use list.List
+  use list.Mem
+  use list.Append
+  use list.Length
+  use option.Option
+
+  type id = int
+  type ver = int
+  type time = int
+
+  type criterion = Valid | CaseX | Whole
+  type kind = Claim | Other | Result | Outline
+
+  type event =
+    | Write time id ver (list (id, ver)) (list (id, bool))
+        (* p takes version v. What v is predicated on, each target as it
+           stood when this was written. Its slots: filler, provisional. *)
+    | Evidence time int id ver criterion bool (list (id, ver))
+        (* evidence number e: p at v, asked by this criterion, held (true)
+           or failed, having read these at these versions *)
+    | Affirm time id ver id ver   (* p at v was looked at beside q at w and kept *)
+    | SetAside time int
+    | MarkRoot time id
+
+  (* A line with the base it sees: events, earliest first. *)
+  type line = list event
+
+  (* The part of the ontology M0 needs. *)
+  type ontology = {
+    kinds: list (id, kind);
+    deps: list (id, id);       (* inner dependency: the first was written to fit the second *)
+  }
+
+  (* ---------- the state, read from the line ---------- *)
+
+  type version = { v: ver; refs: list (id, ver); slots: list (id, bool) }
+
+  (* p's selected version: its latest write *)
+  let function written_by (ev: event) (p: id) : option version =
+    match ev with
+    | Write _ q v refs slots -> if q = p then Some { v = v; refs = refs; slots = slots } else None
+    | _ -> None
+    end
+
+  let rec function selected (l: line) (p: id) : option version
+    variant { l }
+  = match l with
+    | Nil -> None
+    | Cons ev rest ->
+        match selected rest p with
+        | Some x -> Some x
+        | None -> written_by ev p
+        end
+    end
+
+  let function ver_of (l: line) (p: id) : ver =
+    match selected l p with Some x -> x.v | None -> (-1) end
+
+  let rec function once_at (l: line) (p: id) (v: ver) : bool
+    variant { l }
+  = match l with
+    | Nil -> false
+    | Cons (Write _ q w _ _) rest -> (q = p && w = v) || once_at rest p v
+    | Cons _ rest -> once_at rest p v
+    end
+
+  let rec function set_aside (l: line) (e: int) : bool
+    variant { l }
+  = match l with
+    | Nil -> false
+    | Cons (SetAside _ e') rest -> e' = e || set_aside rest e
+    | Cons _ rest -> set_aside rest e
+    end
+
+  let rec function reads_as_now (l: line) (was_read: list (id, ver)) : bool
+    variant { was_read }
+  = match was_read with
+    | Nil -> true
+    | Cons (q, w) rest -> ver_of l q = w && reads_as_now l rest
+    end
+
+  (* evidence applies: its subject is at the version it is about, every read
+     is as it was read, and it is not set aside *)
+  let function applies (l: line) (e: int) (p: id) (v: ver) (was_read: list (id, ver)) : bool =
+    not (set_aside l e) && ver_of l p = v && reads_as_now l was_read
+
+  let rec function has (x: id) (s: list id) : bool
+    ensures { result <-> mem x s }
+    variant { s }
+  = match s with Nil -> false | Cons y r -> x = y || has x r end
+
+  let rec function kind_of (ks: list (id, kind)) (p: id) : kind
+    variant { ks }
+  = match ks with
+    | Nil -> Other
+    | Cons (q, k) rest -> if q = p then k else kind_of rest p
+    end
+
+  (* ---------- canon ---------- *)
+
+  let rec function roots (l: line) : list id
+    variant { l }
+  = match l with
+    | Nil -> Nil
+    | Cons (MarkRoot _ a) rest -> Cons a (roots rest)
+    | Cons _ rest -> roots rest
+    end
+
+  let rec function firm (slots: list (id, bool)) : list id
+    variant { slots }
+  = match slots with
+    | Nil -> Nil
+    | Cons (q, provisional) rest -> if provisional then firm rest else Cons q (firm rest)
+    end
+
+  let function reaches (l: line) (p: id) : list id =
+    match selected l p with Some x -> firm x.slots | None -> Nil end
+
+  let rec function add_new (xs s: list id) : list id
+    variant { xs }
+  = match xs with
+    | Nil -> s
+    | Cons x r -> let s' = add_new r s in if has x s' then s' else Cons x s'
+    end
+
+  let rec function reached_from (l: line) (s: list id) : list id
+    variant { s }
+  = match s with Nil -> Nil | Cons p rest -> reaches l p ++ reached_from l rest end
+
+  (* told how many rounds it gets, since following slots gives no reason to stop *)
+  let rec function grow (l: line) (rounds: int) (s: list id) : list id
+    requires { rounds >= 0 }
+    variant { rounds }
+  = if rounds <= 0 then s else grow l (rounds - 1) (add_new (reached_from l s) s)
+
+  let function canon (o: ontology) (l: line) : list id =
+    grow l (length o.kinds) (roots l)
+
+  (* ---------- the conditions, numbered as in note 22 §4.1 ---------- *)
+
+  (* 1. every reference reaches a selected piece *)
+  let rec function all_there (l: line) (refs: list (id, ver)) : bool
+    variant { refs }
+  = match refs with
+    | Nil -> true
+    | Cons (q, _) rest -> ver_of l q >= 0 && all_there l rest
+    end
+
+  let function owes1 (l: line) (p: id) : bool =
+    match selected l p with Some x -> not (all_there l x.refs) | None -> false end
+
+  (* 2. every reference was written, or affirmed, against its target as the
+        target now is *)
+  let rec function affirmed (l: line) (p: id) (pv: ver) (q: id) (qv: ver) : bool
+    variant { l }
+  = match l with
+    | Nil -> false
+    | Cons (Affirm _ a av b bv) rest ->
+        (a = p && av = pv && b = q && bv = qv) || affirmed rest p pv q qv
+    | Cons _ rest -> affirmed rest p pv q qv
+    end
+
+  let rec function all_reconciled (l: line) (p: id) (pv: ver) (refs: list (id, ver)) : bool
+    variant { refs }
+  = match refs with
+    | Nil -> true
+    | Cons (q, written_against) rest ->
+        (ver_of l q = written_against || affirmed l p pv q (ver_of l q))
+        && all_reconciled l p pv rest
+    end
+
+  let function owes2 (l: line) (p: id) : bool =
+    match selected l p with
+    | Some x -> not (all_reconciled l p x.v x.refs)
+    | None -> false
+    end
+
+  (* 4. no finding applies; and no guard is open *)
+  let rec function finding_applies (whole l: line) (p: id) : bool
+    variant { l }
+  = match l with
+    | Nil -> false
+    | Cons (Evidence _ e q v _ False was_read) rest ->
+        (q = p && applies whole e q v was_read) || finding_applies whole rest p
+    | Cons _ rest -> finding_applies whole rest p
+    end
+
+  (* is there evidence that holds on this criterion, later than t, applying now? *)
+  let rec function answered_since (whole l: line) (p: id) (c: criterion) (t: time) : bool
+    variant { l }
+  = match l with
+    | Nil -> false
+    | Cons (Evidence t' e q v c' True was_read) rest ->
+        (q = p && (match c, c' with Valid, Valid | CaseX, CaseX | Whole, Whole -> true | _ -> false end)
+         && t' > t && applies whole e q v was_read)
+        || answered_since whole rest p c t
+    | Cons _ rest -> answered_since whole rest p c t
+    end
+
+  (* a finding against a version the line selected earlier, not answered since *)
+  let rec function guard_open (whole l: line) (p: id) : bool
+    variant { l }
+  = match l with
+    | Nil -> false
+    | Cons (Evidence t e q v c False _) rest ->
+        (q = p && not (set_aside whole e) && ver_of whole p <> v && once_at whole p v
+         && not (answered_since whole whole p c t))
+        || guard_open whole rest p
+    | Cons _ rest -> guard_open whole rest p
+    end
+
+  let function owes4 (l: line) (p: id) : bool =
+    finding_applies l l p || guard_open l l p
+
+  (* 5, first half: what the root asks. A claim has applying evidence that
+     holds on Valid. A result has an applying whole read that read every
+     filler. *)
+  let rec function checked (whole l: line) (p: id) : bool
+    variant { l }
+  = match l with
+    | Nil -> false
+    | Cons (Evidence _ e q v Valid True was_read) rest ->
+        (q = p && applies whole e q v was_read) || checked whole rest p
+    | Cons _ rest -> checked whole rest p
+    end
+
+  let rec function read_one (was_read: list (id, ver)) (f: id) : bool
+    variant { was_read }
+  = match was_read with
+    | Nil -> false
+    | Cons (q, _) rest -> q = f || read_one rest f
+    end
+
+  let rec function read_each (was_read: list (id, ver)) (fillers: list (id, bool)) : bool
+    variant { fillers }
+  = match fillers with
+    | Nil -> true
+    | Cons (f, _) rest -> read_one was_read f && read_each was_read rest
+    end
+
+  let rec function read_whole (whole l: line) (p: id) (fillers: list (id, bool)) : bool
+    variant { l }
+  = match l with
+    | Nil -> false
+    | Cons (Evidence _ e q v Whole True was_read) rest ->
+        (q = p && applies whole e q v was_read && read_each was_read fillers)
+        || read_whole whole rest p fillers
+    | Cons _ rest -> read_whole whole rest p fillers
+    end
+
+  let function owes5_ask (o: ontology) (l: line) (p: id) : bool =
+    match kind_of o.kinds p with
+    | Claim -> not (checked l l p)
+    | Result -> match selected l p with
+                | Some x -> not (read_whole l l p x.slots)
+                | None -> false
+                end
+    | Other | Outline -> false
+    end
+
+  (* 6. for each inner dependency a -> b: an affirm, or applying evidence
+        about a that read b, at the selected versions *)
+  let rec function read_together (whole l: line) (a b: id) : bool
+    variant { l }
+  = match l with
+    | Nil -> false
+    | Cons (Evidence _ e q v _ _ was_read) rest ->
+        (q = a && applies whole e q v was_read && read_one was_read b)
+        || read_together whole rest a b
+    | Cons _ rest -> read_together whole rest a b
+    end
+
+  let rec function owes6_in (l: line) (ds: list (id, id)) (p: id) : bool
+    variant { ds }
+  = match ds with
+    | Nil -> false
+    | Cons (a, b) rest ->
+        (a = p && ver_of l a >= 0 && ver_of l b >= 0
+         && not (affirmed l a (ver_of l a) b (ver_of l b)) && not (read_together l l a b))
+        || owes6_in l rest p
+    end
+
+  let function owes6 (o: ontology) (l: line) (p: id) : bool = owes6_in l o.deps p
+
+  (* a violation of its own: anything but "what it rests on" *)
+  let function own_violation (o: ontology) (l: line) (p: id) : bool =
+    owes1 l p || owes2 l p || owes4 l p || owes5_ask o l p || owes6 o l p
+
+  (* 5, second half: it rests (is predicated, through any chain) only on
+     canon pieces with no violation of their own *)
+  let rec function targets (refs: list (id, ver)) : list id
+    variant { refs }
+  = match refs with Nil -> Nil | Cons (q, _) rest -> Cons q (targets rest) end
+
+  let function predicated_on (l: line) (p: id) : list id =
+    match selected l p with Some x -> targets x.refs | None -> Nil end
+
+  let rec function predicated_from (l: line) (s: list id) : list id
+    variant { s }
+  = match s with Nil -> Nil | Cons p rest -> predicated_on l p ++ predicated_from l rest end
+
+  let rec function rests_on (l: line) (rounds: int) (s: list id) : list id
+    requires { rounds >= 0 }
+    variant { rounds }
+  = if rounds <= 0 then s else rests_on l (rounds - 1) (add_new (predicated_from l s) s)
+
+  let rec function any_bad (o: ontology) (l: line) (cn: list id) (s: list id) : bool
+    variant { s }
+  = match s with
+    | Nil -> false
+    | Cons q rest -> not (has q cn) || own_violation o l q || any_bad o l cn rest
+    end
+
+  let function owes5_rest (o: ontology) (l: line) (cn: list id) (p: id) : bool =
+    any_bad o l cn (rests_on l (length o.kinds) (predicated_on l p))
+
+  (* ---------- the frontier ---------- *)
+
+  type item = Owed int id     (* condition, piece *)
+
+  let function owed_by (o: ontology) (l: line) (cn: list id) (p: id) : list item =
+    (if owes1 l p then Cons (Owed 1 p) Nil else Nil)
+    ++ (if owes2 l p then Cons (Owed 2 p) Nil else Nil)
+    ++ (if owes4 l p then Cons (Owed 4 p) Nil else Nil)
+    ++ (if owes5_ask o l p || owes5_rest o l cn p then Cons (Owed 5 p) Nil else Nil)
+    ++ (if owes6 o l p then Cons (Owed 6 p) Nil else Nil)
+
+  let rec function frontier_of (o: ontology) (l: line) (cn: list id) (ps: list id) : list item
+    variant { ps }
+  = match ps with
+    | Nil -> Nil
+    | Cons p rest -> owed_by o l cn p ++ frontier_of o l cn rest
+    end
+
+  let function frontier (o: ontology) (l: line) : list item =
+    let cn = canon o l in frontier_of o l cn cn
+
+  let function stationary (o: ontology) (l: line) : bool =
+    match frontier o l with Nil -> true | Cons _ _ -> false end
+
+end
+
+(* ---------- what some of the functions mean, and one general statement ---------- *)
+
+module Sentences
+
+  use int.Int
+  use list.List
+  use list.Mem
+  use list.Append
+  use option.Option
+  use M0
+
+  (* "every read is as it was read" *)
+  let rec lemma reads_as_now_means (l: line) (was_read: list (id, ver))
+    ensures { reads_as_now l was_read <-> forall q w. mem (q, w) was_read -> ver_of l q = w }
+    variant { was_read }
+  = match was_read with Nil -> () | Cons _ rest -> reads_as_now_means l rest end
+
+  (* "it is set aside": there is a set-aside of it on the line *)
+  let rec lemma set_aside_means (l: line) (e: int)
+    ensures { set_aside l e <-> exists t. mem (SetAside t e) l }
+    variant { l }
+  = match l with Nil -> () | Cons _ rest -> set_aside_means rest e end
+
+  (* "a finding applies to p": there is, on the line, evidence about p that
+     failed and that applies *)
+  let rec lemma finding_applies_means (whole l: line) (p: id)
+    ensures { finding_applies whole l p <->
+              exists t e v c was_read. mem (Evidence t e p v c False was_read) l
+                                    /\ applies whole e p v was_read }
+    variant { l }
+  = match l with Nil -> () | Cons _ rest -> finding_applies_means whole rest p end
+
+  (* Good news does no harm, for condition 4's first half. Recording one more
+     piece of evidence that HOLDS, at the end of a line, makes no finding
+     apply that did not apply before. For every line and every piece. *)
+
+  predicate good_news (ev: event) =
+    match ev with Evidence _ _ _ _ _ True _ -> true | _ -> false end
+
+  let rec lemma selected_unmoved (l: line) (ev: event) (p: id)
+    requires { good_news ev }
+    ensures { selected (l ++ Cons ev Nil) p = selected l p }
+    variant { l }
+  = match l with
+    | Nil ->
+        match ev with
+        | Write _ _ _ _ _ -> absurd
+        | Evidence _ _ _ _ _ _ _ | Affirm _ _ _ _ _ | SetAside _ _ | MarkRoot _ _ ->
+            assert { selected Nil p = None };
+            assert { selected (Cons ev Nil) p = None };
+            assert { Nil ++ Cons ev Nil = Cons ev Nil }
+        end
+    | Cons x rest ->
+        selected_unmoved rest ev p;
+        assert { (Cons x rest) ++ Cons ev Nil = Cons x (rest ++ Cons ev Nil) };
+        assert { selected (rest ++ Cons ev Nil) p = selected rest p };
+        assert { selected (Cons x (rest ++ Cons ev Nil)) p = selected (Cons x rest) p }
+    end
+
+  let rec lemma set_aside_unmoved (l: line) (ev: event) (e: int)
+    requires { good_news ev }
+    ensures { set_aside (l ++ Cons ev Nil) e = set_aside l e }
+    variant { l }
+  = match l with Nil -> () | Cons _ rest -> set_aside_unmoved rest ev e end
+
+  let rec lemma reads_unmoved (l: line) (ev: event) (was_read: list (id, ver))
+    requires { good_news ev }
+    ensures { reads_as_now (l ++ Cons ev Nil) was_read = reads_as_now l was_read }
+    variant { was_read }
+  = match was_read with Nil -> () | Cons _ rest -> reads_unmoved l ev rest end
+
+  lemma applies_unmoved:
+    forall l: line, ev: event, e: int, p: id, v: ver, was_read: list (id, ver).
+      good_news ev -> applies (l ++ Cons ev Nil) e p v was_read = applies l e p v was_read
+
+  let rec lemma findings_unmoved (whole l: line) (ev: event) (p: id)
+    requires { good_news ev }
+    ensures { finding_applies (whole ++ Cons ev Nil) (l ++ Cons ev Nil) p
+              = finding_applies whole l p }
+    variant { l }
+  = match l with Nil -> () | Cons _ rest -> findings_unmoved whole rest ev p end
+
+  goal good_news_adds_no_finding:
+    forall l: line, ev: event, p: id.
+      good_news ev ->
+      finding_applies (l ++ Cons ev Nil) (l ++ Cons ev Nil) p -> finding_applies l l p
+
+end
+
+(* ---------- the story: note 22 §4.3 ---------- *)
+
+module Story
+
+  use int.Int
+  use list.List
+  use list.Append
+  use M0
+
+  let constant c : id = 1
+  let constant d : id = 2
+  let constant e : id = 3
+  let constant k : id = 4
+  let constant u : id = 5
+  let constant tt : id = 6
+  let constant uu : id = 7
+  let constant oo : id = 8
+
+  let constant ont : ontology =
+    { kinds = Cons (c, Claim) (Cons (d, Other) (Cons (e, Other) (Cons (k, Other)
+             (Cons (u, Claim) (Cons (tt, Result) (Cons (uu, Result) (Cons (oo, Outline) Nil)))))));
+      deps = Cons (e, c) (Cons (k, e) Nil) }
+
+  let function plain (t: time) (p: id) (v: ver) : event = Write t p v Nil Nil
+
+  let function t_slots : list (id, bool) =
+    Cons (c, false) (Cons (d, false) (Cons (e, false) (Cons (k, false) Nil)))
+
+  (* row 0: checkpoint S0. Versions: c1 = 1, c1' = 11, c2 = 2; likewise d. *)
+  let function s0 : line =
+    Cons (plain 1 c 1) (Cons (plain 2 d 1) (Cons (plain 3 e 1) (Cons (plain 4 k 1)
+   (Cons (Write 5 u 1 (Cons (c, 1) Nil) Nil)
+   (Cons (Write 6 tt 1 Nil t_slots)
+   (Cons (Write 7 uu 1 Nil (Cons (u, false) Nil))
+   (Cons (Write 8 oo 1 Nil (Cons (tt, false) (Cons (uu, false) Nil)))
+   (Cons (MarkRoot 9 oo)
+   (Cons (Evidence 10 1 c 1 Valid true (Cons (d, 1) Nil))
+   (Cons (Evidence 11 2 u 1 Valid true (Cons (c, 1) Nil))
+   (Cons (Evidence 12 3 tt 1 Whole true (Cons (c, 1) (Cons (d, 1) (Cons (e, 1) (Cons (k, 1) Nil)))))
+   (Cons (Evidence 13 4 uu 1 Whole true (Cons (u, 1) Nil))
+   (Cons (Affirm 14 e 1 c 1)
+   (Cons (Affirm 15 k 1 e 1) Nil))))))))))))))
+
+  (* row 1, 08:30: E5, caseX fails on c1 *)
+  let function e5 : list event = Cons (Evidence 20 5 c 1 CaseX false Nil) Nil
+  let function row1 : line = s0 ++ e5
+
+  (* row 2, 09:00: fork F writes c1', d1'; E6 checks c1' *)
+  let function e6 : list event = Cons (Evidence 32 6 c 11 Valid true (Cons (d, 11) Nil)) Nil
+  let function row2 : line =
+    row1 ++ Cons (plain 30 c 11) (Cons (plain 31 d 11) Nil) ++ e6
+
+  (* row 3, 10:00: F rewound to its start. Its writes are gone; E6 is not. *)
+  let function row3 : line = row1 ++ e6
+
+  (* row 4, 10:30: write c2, d2, k2; affirm(e1, c2) *)
+  let function row4 : line =
+    row3 ++ Cons (plain 40 c 2) (Cons (plain 41 d 2) (Cons (plain 42 k 2)
+            (Cons (Affirm 43 e 1 c 2) Nil)))
+
+  (* row 5, 11:00: E7 valid(c2) read d2; E8 caseX(c2) holds *)
+  let function row5 : line =
+    row4 ++ Cons (Evidence 50 7 c 2 Valid true (Cons (d, 2) Nil))
+           (Cons (Evidence 51 8 c 2 CaseX true Nil) Nil)
+
+  (* row 6, 11:30: write d3 *)
+  let function row6 : line = row5 ++ Cons (plain 60 d 3) Nil
+
+  (* row 7, 12:00: E9 valid(c2) read d3 *)
+  let function row7 : line =
+    row6 ++ Cons (Evidence 70 9 c 2 Valid true (Cons (d, 3) Nil)) Nil
+
+  (* row 8, 13:00: write u2 against c2; E10 valid(u2) read c2 *)
+  let function row8 : line =
+    row7 ++ Cons (Write 80 u 2 (Cons (c, 2) Nil) Nil)
+           (Cons (Evidence 81 10 u 2 Valid true (Cons (c, 2) Nil)) Nil)
+
+  (* row 9, 14:00: E11 whole(T) read c2 d3 e1 k2; E12 whole(U) read u2 *)
+  let function row9 : line =
+    row8 ++ Cons (Evidence 90 11 tt 1 Whole true (Cons (c, 2) (Cons (d, 3) (Cons (e, 1) (Cons (k, 2) Nil)))))
+           (Cons (Evidence 91 12 uu 1 Whole true (Cons (u, 2) Nil)) Nil)
+
+  (* what the story's row 4 leaves unsaid: k2 looked at beside e1 *)
+  let function row9_with_k_affirmed : line = row9 ++ Cons (Affirm 92 k 2 e 1) Nil
+
+  let run () : list (list item) =
+    Cons (frontier ont s0) (Cons (frontier ont row1) (Cons (frontier ont row2)
+   (Cons (frontier ont row3) (Cons (frontier ont row4) (Cons (frontier ont row5)
+   (Cons (frontier ont row6) (Cons (frontier ont row7) (Cons (frontier ont row8)
+   (Cons (frontier ont row9) (Cons (frontier ont row9_with_k_affirmed) Nil))))))))))
+
+end
