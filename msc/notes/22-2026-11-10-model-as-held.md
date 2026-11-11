@@ -1,6 +1,6 @@
 # The model, as I currently hold it
 
-*To Joseph, from the Fable 5.2 session of 2026-11-10. You asked for this at the level, register and length of note 09, or shorter, with the newer words and the newer understanding. It is my synthesis, not a settled design, and nothing in it is accepted. It is about a third the length of note 09.*
+*To Joseph, from the Fable 5.2 session of 2026-11-10. You asked for this at the level, register and length of note 09, or shorter, with the newer words and the newer understanding. It is my synthesis, not a settled design, and nothing in it is accepted. It is a little over half the length of note 09.*
 
 *Revised later the same day, after two formal builds of Part 4's first form and three remarks of yours: Part 4 is rewritten around an ordered base of events with checkpoints and forks, and 3.5 says canon the way you put it. What the first form said and why it was wrong is in note 23.*
 
@@ -19,7 +19,7 @@ A **verisectorium** is a place where material is cut up until each piece can be 
 The work goes like this, over and over:
 
 1. **Bring in.** Material arrives from outside what is settled: a paper, an audit, a spike, an old file, a mind's note. This is **influx**.
-2. **Cut and place.** The material is cut into pieces, all of it, and each piece is put somewhere: into something that exists, into something new, or set aside with a reason.
+2. **Cut and place.** The material is cut into pieces, all of it, and each piece is put somewhere: into something that exists, into something new, or left out with a reason.
 3. **Adjudicate.** Questions are asked of each piece, and each answer is either found out or decided.
 4. **Stabilize.** Anything new, and anything found wrong, leaves some things inconsistent with others. Work goes on, by whatever route, until everything is consistent again.
 5. **Build on.** What is consistent is what others read, cite and build further results on. Then something new arrives.
@@ -51,12 +51,14 @@ assembly kind  derived-result
 
 A **segment** is either a veritoid or an assembly. So one thing does the work at every depth: a result is an assembly of veritoids, a chapter is an assembly of results, a theory is an assembly of chapters.[^6] In practice a verisectorium uses a few depths.
 
-A slot is filled in one of two ways. An assembly **holds** a segment that lives in it and is written with it, as a result holds its claim. Or it **points at** a segment that lives elsewhere, as a chapter points at a result. An assembly that mostly points is a **projection**: a chapter, a volume, a reading path, a paper. One projection is **canonical**: it says "this is the work, in this order".
+A slot is filled in one of two ways. An assembly **holds** a segment that lives in it and is written with it, as a result holds its claim. Or it **points at** a segment that lives elsewhere, as a chapter points at a result. An assembly that mostly points is a **projection**: a chapter, a volume, a reading path, a paper. An outline of the whole work is one.
 
 A slot that is not filled is in one of three states[^7]:
 - **suggested**: someone thinks something might go here. It commits nobody.
 - **promised**: someone in the work has said this will exist.
 - a **gap**: something is missing and it is not yet known what.
+
+A filled slot can be marked **provisional**: the thing is there, on approval.
 
 Kinds also declare **inner dependencies** between slots: the eli8 depends on the description, which depends on the claim. They are why the pieces of a result have to be looked at together when one of them moves.[^8]
 
@@ -100,29 +102,29 @@ Because a version never changes, evidence about it never stops being true. What 
 
 So there is no "lapsing" and no "carrying" as things that happen. There is evidence about versions, and evidence that two versions do not differ in what matters.
 
-One rule is built in, and is a choice[^38]: a defect once found in a piece is presumed still there in its later versions, until someone looks for it by the same criterion and does not find it. After that it is closed, and later versions do not have to answer for it again. Without the rule, the cheapest repair is to reword.
+One rule is built in, and is a choice[^17]: a defect once found in a piece is presumed still there in its later versions, until someone looks for it by the same criterion and does not find it. After that it is closed, and later versions do not have to answer for it again. Without the rule, the cheapest repair is to reword.
 
-A finding can itself be wrong. Then someone with reason to say so sets it aside, as a decision, and the piece is left alone.[^39]
+A finding can itself be wrong. Then someone with reason to say so sets it aside, as a decision, and the piece is left alone.[^18]
 
 ### 3.4 Decisions have conditions
 
-A **decision** records what was chosen, about what, and the **conditions** it was made under: these pieces at these versions, these claims standing at least this well, these assumptions. It is good while its conditions are true. When one stops being true the decision no longer supports anything, and whoever stands behind it has to look again.[^18]
+A **decision** records what was chosen, about what, and the **conditions** it was made under: these pieces at these versions, these claims standing at least this well, these assumptions. It is good while its conditions are true. When one stops being true the decision no longer supports anything, and whoever stands behind it has to look again.[^19]
 
-Where the subject itself is decided (a modelling choice, a syntax choice), the decision's reasons are content: the alternatives, the grounds, what would reopen it are pieces, pointed at like any others. Then a ground that falls reaches the decision the same way it reaches a claim.[^19]
+Where the subject itself is decided (a modelling choice, a syntax choice), the decision's reasons are content: the alternatives, the grounds, what would reopen it are pieces, pointed at like any others. Then a ground that falls reaches the decision the same way it reaches a claim.[^20]
 
 ### 3.5 Canon
 
-Canon is what the verisectorium says it is: the pieces reached from the outlines it marks as its **roots**, through slots that are filled and not marked provisional.[^40] A piece in canon is **asserted**. A piece that is not is **provisional**: to canon it is only the claim that someone suggested it, and nothing inside it is held to anything.
+Canon is what the verisectorium says it is: the pieces reached from the outlines it marks as its **roots**, through slots that are filled and not marked provisional.[^21] A piece in canon is **asserted**. A piece that is not is **provisional**: to canon it is only the claim that someone suggested it, and nothing inside it is held to anything.
 
-A verisectorium may mark more than one root: two outlines, each the canon for its own purpose. And a whole canon can be un-marked at once, when the work has tied itself in knots and a fresh start is wanted; what was canon is then influx to the new one.[^41]
+A verisectorium may mark more than one root: two outlines, each the canon for its own purpose. And a whole canon can be un-marked at once, when the work has tied itself in knots and a fresh start is wanted; what was canon is then influx to the new one.[^22]
 
-What a piece is held to depends on the root that reaches it. Each root says, for the kinds of piece it gathers, which questions must be answered and how well: a theory's outline asks that its claims have been checked; a paper drawn from it asks also that its citations have. A decision by named people is one such question. A piece reached by two roots answers to both.[^42]
+What a piece is held to depends on the root that reaches it. Each root says, for the kinds of piece it gathers, which questions must be answered and how well: a theory's outline asks that its claims have been checked; a paper drawn from it asks also that its citations have. A decision by named people is one such question. A piece reached by two roots answers to both.[^23]
 
 ### 3.6 What is written, what is recorded, what is computed
 
 - **Written**: versions. Content, references, which pieces fill which slots.
 - **Recorded**: evidence and decisions. Each is about versions, and they only accumulate.
-- **Computed**: everything about how well anything stands, and everything about what is owed. Never typed.[^22]
+- **Computed**: everything about how well anything stands, and everything about what is owed. Never typed.[^24]
 
 ---
 
@@ -132,7 +134,7 @@ What a piece is held to depends on the root that reaches it. Each root says, for
 
 At any moment the verisectorium has a **state**: which pieces exist, each at which version, which are in canon, and everything recorded so far.
 
-A state is **consistent** when, for everything in canon[^43]:
+A state is **consistent** when, for everything in canon[^25]:
 
 1. every reference reaches something that is there;
 2. every reference was written or re-read against its target as the target now is;
@@ -144,29 +146,31 @@ A state is **consistent** when, for everything in canon[^43]:
 8. every promised or required slot has something in canon in it;
 9. every question raised about it has been answered since.
 
-The **frontier** is every place one of these fails, each naming what failed and what it would take. It is computed from the state, and from nothing else.[^44]
+The **frontier** is every place one of these fails, each naming what failed and what it would take. It is computed from the state, and from nothing else.[^26]
 
-Three things a verisectorium's own rules must respect, or the nine have no definite answer.[^45] A question, a promise or a waiver is unconditional: it stands until withdrawn. Evidence says what it read. And a slot may require that something fills it, never that the something be consistent.
+Three things a verisectorium's own rules must respect, or the nine have no definite answer.[^27] A question, a promise or a waiver is unconditional: it stands until withdrawn. Evidence says what it read. And a slot may require that something fills it, never that the something be consistent.
 
 ### 4.2 Events, checkpoints, forks
 
-Everything that happens is an **event**, with a time: a version is written, evidence is recorded, a decision is made. Events are only ever added.[^46]
+Everything that happens is an **event**, with a time: a version is written, evidence is recorded, a decision is made. Events are only ever added.[^28]
 
 A state with an empty frontier is **stationary**. A **checkpoint** is a stationary state the verisectorium has rested at. At any moment the verisectorium *is* its latest checkpoint.
 
-A **perturbation** is anything that would make it not stationary: evidence that something fails, new material, a wish to rewrite.[^47] Work on it happens on a **fork**: a line of events that starts at a checkpoint. On a fork the steps come one after another, in order. The fork can be **rewound** to any earlier point on it, or abandoned and another started.[^48] Nothing on a fork is the verisectorium.
+A **perturbation** is anything that would make it not stationary: evidence that something fails, new material, a wish to rewrite.[^29] Work on it happens on a **fork**: a line of events that starts at a checkpoint. On a fork the steps come one after another, in order. The fork can be **rewound** to any earlier point on it, or abandoned and another started.[^30] Nothing on a fork is the verisectorium.
 
-When a fork reaches a stationary state it can be **closed**: it becomes the next checkpoint. Everything between two checkpoints is an **atomic changeset**. Inside, it was many steps in sequence; from outside it is one logical instant.[^49]
+Evidence can arrive against a checkpoint itself. The checkpoint was stationary when it was reached and is not now, and it says so, until a fork closes that deals with it.
 
-One thing crosses between forks. Evidence is about a version, and a version is the same thing wherever it appears, so what was found out on an abandoned fork is still known on the next one. Going back loses the work. It does not lose what was learned.[^50]
+When a fork reaches a stationary state it can be **closed**: it becomes the next checkpoint. Everything between two checkpoints is an **atomic changeset**. Inside, it was many steps in sequence; from outside it is one logical instant.[^31]
 
-A known problem that is knowingly left is a **waiver**: a decision, with its reason, that one frontier item stays. A waived item is shown with the checkpoint. Waivers are meant to be rare.[^51]
+One thing crosses between forks. Evidence is about a version, and a version is the same thing wherever it appears, so what was found out on an abandoned fork is still known on the next one. Going back loses the work. It does not lose what was learned.[^32]
 
-Stationary can be said of a part: of what one root reaches, or of any set of pieces that nothing outside it reads. Two forks whose work does not meet can both close, in either order.[^52]
+A known problem that is knowingly left is a **waiver**: a decision, with its reason, that one frontier item stays. A waived item is shown with the checkpoint. Waivers are meant to be rare.[^33]
+
+Stationary can be said of a part: of what one root reaches, or of any set of pieces that nothing outside it reads. Two forks whose work does not meet can both close, in either order.[^34]
 
 ### 4.3 The example
 
-Checkpoint S0. Result T holds a claim c1, its derivation d1, a description e1 and an eli8 k1. Result U holds a claim u1, predicated on c1. The verisectorium's standard for asserting a claim is that someone other than its author has checked it. B has checked c1 by following d1, and u1. T and U have each been read whole by someone who wrote neither.
+Checkpoint S0. Result T holds a claim c1, its derivation d1, a description e1 and an eli8 k1. Result U holds a claim u1, predicated on c1. Its root asks of every claim that it has been checked, and of every result that it has been read whole. B has checked c1 by following d1, and u1. T and U have each been read whole.
 
 | When | What happens | The frontier on the fork |
 |---|---|---|
@@ -178,7 +182,7 @@ Checkpoint S0. Result T holds a claim c1, its derivation d1, a description e1 an
 | 11:30 | A finds an error in step 3 and writes d3. | B's 11:00 evidence read d2. It says nothing about c2 as now derived. c2 is unchecked again. |
 | 12:00 | B checks c2 by following d3. | T's whole read; u1. |
 | 13:00 | C rewrites U's claim to assume H as well (u2), against c2. B checks u2. | Whole reads of T and U. |
-| 14:00 | Someone who wrote neither reads T whole, and U whole. | Empty. **S1.** |
+| 14:00 | Someone reads T whole, and U whole. | Empty. **S1.** |
 
 What the history says: at one instant, T's claim gained H and its derivation became d3, and U's claim gained H. There was never a verisectorium in which T had H and U did not. Neither d2 nor c1′ was ever in it.
 
@@ -188,29 +192,29 @@ Two decisions were made on the way and are worth having on record with their rea
 
 ### 4.4 Better
 
-A stationary state is feasible, not good. **Better** is a direction: later is better than earlier when, on the determinants, less of what is asserted is known wrong, or what is asserted is better supported, or it says more and stands as well. The comparison is made with everything now known, so replacing a false claim with a narrower true one is an improvement.[^30]
+A stationary state is feasible, not good. **Better** is a direction: later is better than earlier when, on the determinants, less of what is asserted is known wrong, or what is asserted is better supported, or it says more and stands as well. The comparison is made with everything now known, so replacing a false claim with a narrower true one is an improvement.[^35]
 
-Narrowing a claim that has been shown wrong is repair. Narrowing one that has only been questioned, to be rid of the question, is the cheapest way back to stationary and usually a loss. Trying first to make the stronger claim stand is the method; the model does not enforce it.[^31]
+Narrowing a claim that has been shown wrong is repair. Narrowing one that has only been questioned, to be rid of the question, is the cheapest way back to stationary and usually a loss. Trying first to make the stronger claim stand is the method; the model does not enforce it.[^36]
 
 ---
 
 ## Part 5. Intake
 
-Mostly as note 09 had it.[^32]
+Mostly as note 09 had it.[^37]
 
 A **source** is anything brought in. It is an assembly whose pieces are **chunks**, and the cut must cover all of it, so that "every chunk dealt with" cannot mean "found something". Each chunk says what it bears on.
 
-Where a chunk goes is a decision: it changed an existing piece, became a new one, was already there, was set aside with a reason, or was sent to another verisectorium. A source is **retired** when every chunk has such a decision and each decision's conditions still hold. If a later rewrite drops what a chunk had delivered, that decision's conditions fail and the chunk is back.[^33]
+Where a chunk goes is a decision: it changed an existing piece, became a new one, was already there, was left out with a reason, or was sent to another verisectorium. A source is **retired** when every chunk has such a decision and each decision's conditions still hold. If a later rewrite drops what a chunk had delivered, that decision's conditions fail and the chunk is back.[^38]
 
-Every segment has an **inbox**: the chunks bearing on it that have not been placed, and any note a mind leaves there. It is not part of the segment.[^34] A note in an inbox, a suggested slot, a promised slot, a filled slot, an asserted piece: each commits a little more than the last, and each is cheap to do.[^35]
+Every segment has an **inbox**: the chunks bearing on it that have not been placed, and any note a mind leaves there. It is not part of the segment.[^39] A note in an inbox, a suggested slot, a promised slot, a filled slot, an asserted piece: each commits a little more than the last, and each is cheap to do.[^40]
 
-A claim in an old audit that something is wrong enters as a question about the piece, to be checked. A claim in an old audit that something is right enters as nothing, until someone checks.[^36]
+A claim in an old audit that something is wrong enters as a question about the piece, to be checked. A claim in an old audit that something is right enters as nothing, until someone checks.[^41]
 
 ---
 
 ## Part 6. Who does the work
 
-Not in the model yet, on purpose.[^37]
+Not in the model yet, on purpose.[^42]
 
 Everything above works with every piece of evidence and every decision counting, whoever made it. Who may check what, who may decide what, what makes two checks independent, and how it is known that it was you: these are a filter over the record, to be added once the rest runs. Core today has a good deal about this (actors, seats, what a mind inherited from the one that launched it). I think most of it is right and none of it belongs underneath.
 
@@ -225,7 +229,7 @@ THE ONTOLOGY (declared per verisectorium; by hand for now)
   kinds         veritoid kinds: content form, which dimensions apply
                 assembly kinds: slots, inner dependencies
   dimensions    each: found out | decided;  some marked determinant
-  the standard for asserting a piece
+  roots         which outlines are canon, and what each asks of what it reaches
 
 WRITTEN                                   RECORDED (evidence stays true on any fork)
   segment = veritoid | assembly             evidence: piece@version, question,
@@ -265,7 +269,8 @@ OUTSIDE: renderings (files, pages, the view shown to a mind about to write)
 | **segment** | a veritoid or an assembly | document; note 09's two levels |
 | **hold**, **point at** | the two ways a slot is filled | |
 | **suggested**, **promised**, **gap** | the states of an unfilled slot | "provisional row" |
-| **projection**, **canonical** | an assembly that mostly points; the one that says what the work is | outline, grouping |
+| **provisional** (of a slot) | filled, on approval; what it holds is not in canon through this slot | |
+| **projection** | an assembly that mostly points | outline, grouping |
 | **reference**; **predicated-on** | a written pointer; the one support travels along | depends, edge |
 | **rests on** | is predicated on, or assumes | |
 | **id**, **version**, **name** | never reused; one immutable written state; a changeable label | slug |
@@ -313,15 +318,15 @@ Three levels, and most of this note is at the lowest. *Tested*: something was bu
 |---|---|
 | The workflow (Part 1) | Asserted, as a description of what the estate's verisectoria have done. That it is the right workflow is not shown by their having done it. |
 | Segments at any depth, slots (2.2) | Argued. One invented run and one built instance used it without strain. |
-| Holding and pointing are not resting (2.3) | The opposite was tested and failed: with it, a built instance had every repair reach the outline. That this version does not fail the same way by another route is untested, and one reviewer predicts it does. |
+| Holding and pointing are not resting (2.3) | The opposite was tested and failed: with it, a built instance had every repair reach the outline. Two formal builds then found the other route: a single check that read two parts of an outline together joins their repairs there, and checks made part by part do not. |
 | Two kinds of answer (3.2) | Argued, and lightly tested: two built instances sorted everything they met into one or the other. Neither was looking for a third kind. |
-| Evidence is about a version; "the same" (3.3) | Argued today. Untested. A first reading by a builder already found that evidence must also record what else it read; that is in the text. |
+| Evidence is about a version; "the same" (3.3) | Built twice. Two things came out of it. Saying two versions are the same carries bad news forward as readily as good. And with nobody's standing in question, nothing limits who may say it, so everything that used to be "lapsing" rests on a part of the model that is set aside for now. |
 | A found defect is presumed present until looked for; a wrong finding is set aside (3.3) | The first is proved to hold through rewording, splitting and replacing, where the replacement is recorded as descending from the piece; entered as new material it is shed. The second is built in one of the two builds and untested in this form. |
 | Decisions have conditions (3.4) | Argued. One built instance had a decision fall and be remade when a ground changed, under an earlier wording. |
 | Canon by marked roots (3.5) | Asserted, on your word, which is a decision about the model and not evidence for it. Measured: asking nothing beyond placement admits every state that asking more does. Per-root requirements are untested. |
 | Events, checkpoints, forks; evidence crossing between forks (4.2) | Asserted. It is your statement of the shape plus one addition of mine, and two builders are running it now. An earlier form with no order at all was built twice and failed in the two ways note 23 gives. |
 | The nine conditions (4.1) | Built twice in an earlier form. That they have a definite answer is proved, for every ontology within small bounds, provided questions, promises and waivers are unconditional. That good news never makes anything newly owed is proved under three conditions. The wording of several conditions changed after the builds and has not been re-run. |
-| Stationary of a part (4.2) | Argued. The naive form was tested and failed. |
+| Stationary of a part; two forks both closing (4.2) | Tested in the first form: of 345 million pairs of changes in tiny universes, the 6.2 million that did not meet all combined. Not proved. The Ada code now states it as theorems; whether they are proved, and how much their hypothesis assumes, I have not checked. |
 | Better (4.4) | Argued. A real segment gave two versions it cannot rank. |
 | Intake (Part 5) | The need is measured (one sprint, no source retired). The mechanism has one invented run. |
 
@@ -342,7 +347,7 @@ What from today I would keep: the two kinds of answer; segments at any depth wit
 
 ## What I read, and did not
 
-Read whole today: `core/` as it stood this morning; note 09 (just now, for this); the relevant parts of notes 02, 12 and 18; your messages on decisions and attestation since August; the councils dialog of 11-03/04 to its line 1,008 and your turns after; `slot-rollup.md`; two cold reads; the findings of two built instances; two audits of my kernel spec. Not read: most of `msc/notes/`; the first core beyond what a predecessor carried; the built instances' own ontologies and traces; the address theory.
+Read whole today: `core/` as it stood this morning; note 09 (just now, for this); the relevant parts of notes 02, 12 and 18; your messages on decisions and attestation since August; the councils dialog of 11-03/04 to its line 1,008 and your turns after; `slot-rollup.md`; two cold reads; the findings of two built instances; two audits of my kernel spec; both builders' accounts of the first formal builds. Not read: most of `msc/notes/`; the first core beyond what a predecessor carried; the built instances' own ontologies and traces; the address theory.
 
 ---
 
@@ -362,39 +367,29 @@ Read whole today: `core/` as it stood this morning; note 09 (just now, for this)
 [^14]: Joseph, 11-04 and 11-10: "the two critical atomic components that everything else ends up reducing to".
 [^15]: Joseph, 11-10.
 [^16]: Mine, and among the least tested: from your remark of 11-10 that the acts I had named were practice layered over a consistency condition.
-[^17]: Mine, and among the least tested.
-[^18]: Joseph, 8-14, on what backing consists of; the reading as conditions is mine.
-[^19]: From today's tests: the first built instance was a small specification, and its decisions' reasons were where nothing could point at them.
-[^20]: Joseph, 11-09: "provisional == not-in-canon".
-[^21]: From today's tests: the second built instance, on a real TST segment, could not get past this. It is the open question in Part 8.
-[^22]: Carried from note 09; the oldest rule in all of this.
-[^23]: Joseph, 11-08: dimensions "become or are used as logical correctness constraints"
-[^24]: Joseph, 11-08, on telling the frontier from where the work rests.
-[^25]: Joseph, 11-10: "this perturbation makes these things now inconsistent-- and it isn't stationary until it's all consistent again".
-[^26]: Joseph, 11-10: "there needs to be the ability to try it several different ways … back up, undo all of that work that was going to be a deadend, and stabilize the right way".
-[^27]: Joseph, 11-05: "practical sequentialness but logical simultaneity"; and 11-10.
-[^28]: Joseph, 11-05.
-[^29]: Mine, and among the least tested: you set this question aside on 11-05, and I think it cannot wait, because otherwise every repair must waive whatever is unrelated to it.
-[^30]: From today's tests: for the last clause: as I had it, the example above was not an improvement.
-[^31]: Joseph.
-[^32]: Carried from note 09.
-[^33]: From today's tests: from running one through.
-[^34]: Joseph, 11-05; and from RC1: "There should always be a way for agents (including humans) to get their intuitions and tentative results known so they can be adjudicated."
-[^35]: Joseph, 11-09.
-[^36]: From today's tests.
-[^37]: Joseph, 11-10: standing "should be its own separate concern completely so we can make it initially 'any'".
-[^38]: Mine. Two builds showed that without an order of versions this rule costs one new check per old finding per edit, for ever; with the order of Part 4 it costs one.
-[^39]: From today's builds: with facts that only accumulate and no way to set one aside, contrary evidence was a standing conflict and never a correction.
-[^40]: Joseph, 11-10: "canon is whatever the verisectorium says it is-- usually the main outline's non-provisional slots"; and on 11-09: "provisional == not-in-canon".
-[^41]: Joseph, 11-10: "simply mark the two outlines (assembly segments) that are the two 'canon' roots"; and "the existing 'canon' is just marked 'not canon anymore--> influx to new corpus'", which is what is intended for AAT.
-[^42]: Mine, from Joseph's account (11-09) of determinants weighing differently by purpose and audience. Two builds measured that asking nothing beyond placement admits every state that asking more does.
-[^43]: Joseph, 11-08: dimensions "become or are used as logical correctness constraints".
-[^44]: Joseph, 11-08, on telling the frontier from where the work rests. That it can be a pure function of the state was built twice on 11-10.
-[^45]: From today's builds; the first is proved, with a one-piece counterexample when it is broken.
-[^46]: Joseph, 11-10: "there should be causal ordering, fwiw, definitely a clock and an addative base--- event sourcing style ---  but one that allows multi-step serial parts to be part of a logically simultaneous change and that distinct from the steady-state checkpoints *AND* the ability to rewind / unstage / fork at a checkpoint".
-[^47]: Joseph, 11-10: "this perturbation makes these things now inconsistent-- and it isn't stationary until it's all consistent again".
-[^48]: Joseph, 11-10: "there needs to be the ability to try it several different ways … back up, undo all of that work that was going to be a deadend, and stabilize the right way".
-[^49]: Joseph, 11-05: "practical sequentialness but logical simultaneity".
-[^50]: Mine. It is what is left of this note's first form, in which there was no order at all; untested as now stated.
-[^51]: Joseph, 11-05.
-[^52]: Mine; Joseph set the question aside on 11-05. Tested in the first form: two repairs failed to compose only where they chose different versions of one piece, or one's evidence had read what the other rewrote.
+[^17]: Mine. Two builds showed that without an order of versions this rule costs one new check per old finding per edit, for ever; with the order of Part 4 it costs one.
+[^18]: From today's builds: with facts that only accumulate and no way to set one aside, contrary evidence was a standing conflict and never a correction.
+[^19]: Joseph, 8-14, on what backing consists of; the reading as conditions is mine.
+[^20]: From today's tests: the first built instance was a small specification, and its decisions' reasons were where nothing could point at them.
+[^21]: Joseph, 11-10: "canon is whatever the verisectorium says it is-- usually the main outline's non-provisional slots"; and on 11-09: "provisional == not-in-canon".
+[^22]: Joseph, 11-10: "simply mark the two outlines (assembly segments) that are the two 'canon' roots"; and "the existing 'canon' is just marked 'not canon anymore--> influx to new corpus'", which is what is intended for AAT.
+[^23]: Mine, from Joseph's account (11-09) of determinants weighing differently by purpose and audience. Two builds measured that asking nothing beyond placement admits every state that asking more does.
+[^24]: Carried from note 09; the oldest rule in all of this.
+[^25]: Joseph, 11-08: dimensions "become or are used as logical correctness constraints".
+[^26]: Joseph, 11-08, on telling the frontier from where the work rests. That it can be a pure function of the state was built twice on 11-10.
+[^27]: From today's builds; the first is proved, with a one-piece counterexample when it is broken.
+[^28]: Joseph, 11-10: "there should be causal ordering, fwiw, definitely a clock and an addative base--- event sourcing style ---  but one that allows multi-step serial parts to be part of a logically simultaneous change and that distinct from the steady-state checkpoints *AND* the ability to rewind / unstage / fork at a checkpoint".
+[^29]: Joseph, 11-10: "this perturbation makes these things now inconsistent-- and it isn't stationary until it's all consistent again".
+[^30]: Joseph, 11-10: "there needs to be the ability to try it several different ways … back up, undo all of that work that was going to be a deadend, and stabilize the right way".
+[^31]: Joseph, 11-05: "practical sequentialness but logical simultaneity".
+[^32]: Mine. It is what is left of this note's first form, in which there was no order at all; untested as now stated.
+[^33]: Joseph, 11-05.
+[^34]: Mine; Joseph set the question aside on 11-05. Tested in the first form: two repairs failed to compose only where they chose different versions of one piece, or one's evidence had read what the other rewrote.
+[^35]: From today's tests: for the last clause: as I had it, the example above was not an improvement.
+[^36]: Joseph.
+[^37]: Carried from note 09.
+[^38]: From today's tests: from running one through.
+[^39]: Joseph, 11-05; and from RC1: "There should always be a way for agents (including humans) to get their intuitions and tentative results known so they can be adjudicated."
+[^40]: Joseph, 11-09.
+[^41]: From today's tests.
+[^42]: Joseph, 11-10: standing "should be its own separate concern completely so we can make it initially 'any'".
