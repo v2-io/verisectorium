@@ -1,0 +1,10 @@
+
+# Failure: Resource limit exceeded (time)
+# SZS status ResourceOut
+eprover: CPU time limit exceeded, terminating
+# Preprocessing class: FSLSSLSMSSSNFFN.
+# Configuration: G-N--_023_B07_F1_SP_PI_Q7_CS_SP_CO_S5PRR_S0Y1
+# No SInE strategy applied
+# Search class: FGHSF-FSLF31-SFFFFFNN
+# Configuration: G-E--_207_C18_F1_SE_CS_SP_PI_PS_S5PRR_S2SI
+# Presaturation interreduction done

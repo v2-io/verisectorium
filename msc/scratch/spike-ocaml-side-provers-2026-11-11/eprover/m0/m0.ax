@@ -1,0 +1,130 @@
+% M0 (../../spike-formal-perspectives-2026-11-10/01-common-reading.md) for E,
+% in typed first-order logic. Conditions 2, 4, 5 and 6, which the story needs.
+% A state is given by a second file (row-N.ax, made by gen.py) that says, for
+% each stored relation, EXACTLY which tuples are in it.
+%
+% Departures from M0, all to keep this small: assemblies are written once and
+% their slots never change, so slots are given per piece and not per version;
+% nothing is provisional; "predicated on" is per piece.
+
+tff(piece, type, piece: $tType).
+tff(ver, type, ver: $tType).
+tff(ev, type, ev: $tType).
+tff(crit, type, crit: $tType).
+tff(outcome, type, outcome: $tType).
+tff(cond, type, cond: $tType).
+
+tff(holds_out, type, holds: outcome).   tff(fails_out, type, fails: outcome).
+tff(out_differ, axiom, holds != fails).
+tff(valid, type, valid: crit).  tff(whole, type, whole: crit).  tff(casex, type, casex: crit).
+tff(crit_differ, axiom, valid != whole & valid != casex & whole != casex).
+
+% ----- stored (each closed in the row file, or in story.ax) -----
+tff(slot, type, slot: (piece * piece) > $o).          % assembly, what fills a slot of it
+tff(root, type, root: piece > $o).
+tff(is_claim, type, is_claim: piece > $o).
+tff(is_result, type, is_result: piece > $o).
+tff(pred, type, pred: (piece * piece) > $o).          % p is predicated on q
+tff(dep, type, dep: (piece * piece * piece) > $o).    % in assembly a, filler x depends on filler y
+tff(write, type, write: (ev * piece * ver) > $o).
+tff(against, type, against: (ev * piece * ver) > $o).  % that write saw q at w
+tff(evid, type, evid: (ev * piece * ver * crit * outcome) > $o).
+tff(reads, type, reads: (ev * piece * ver) > $o).
+tff(affirm, type, affirm: (ev * piece * ver * piece * ver) > $o).
+tff(before, type, before: (ev * ev) > $o).
+
+% ----- computed -----
+tff(canon, type, canon: piece > $o).
+tff(sel, type, sel: (piece * ver) > $o).
+tff(was, type, was: (piece * ver) > $o).
+tff(latest, type, latest: (ev * piece) > $o).
+tff(applies, type, applies: ev > $o).
+tff(ok2, type, ok2: (piece * piece) > $o).
+tff(checked, type, checked: (piece * crit) > $o).
+tff(looked, type, looked: (piece * piece) > $o).
+tff(own, type, own: piece > $o).
+tff(bad, type, bad: piece > $o).
+tff(owed, type, owed: (cond * piece) > $o).
+tff(stationary, type, stationary: $o).
+tff(cond2, type, cond2: cond). tff(cond4, type, cond4: cond). tff(cond5, type, cond5: cond).
+tff(cond5r, type, cond5r: cond). tff(cond6, type, cond6: cond).
+tff(cond_differ, axiom,
+    cond2 != cond4 & cond2 != cond5 & cond2 != cond5r & cond2 != cond6 & cond4 != cond5 & cond4 != cond5r & cond4 != cond6
+  & cond5 != cond5r & cond5 != cond6 & cond5r != cond6).
+tff(cond_all, axiom, ![C: cond]: (C = cond2 | C = cond4 | C = cond5 | C = cond5r | C = cond6)).
+
+% canon: the two rules, and "whatever is in canon has a reason" (enough here:
+% the slots have no ring).
+tff(canon_def, axiom,
+    ![P: piece]: ( canon(P) <=> ( root(P) | ?[A: piece]: (canon(A) & slot(A, P)) ) )).
+
+% the latest write of a piece on the line, and so its selected version
+tff(latest_def, axiom,
+    ![E: ev, P: piece]:
+      ( latest(E, P)
+    <=> ( ?[V: ver]: write(E, P, V)
+        & ~ ?[E2: ev, V2: ver]: (write(E2, P, V2) & before(E, E2)) ) )).
+tff(sel_def, axiom,
+    ![P: piece, V: ver]: ( sel(P, V) <=> ?[E: ev]: (latest(E, P) & write(E, P, V)) )).
+tff(was_def, axiom, ![P: piece, V: ver]: ( was(P, V) <=> ?[E: ev]: write(E, P, V) )).
+
+% evidence applies: its subject is at the version it is about, and every read
+% is as it was read
+tff(applies_def, axiom,
+    ![E: ev]:
+      ( applies(E)
+    <=> ( ?[P: piece, V: ver, C: crit, O: outcome]: (evid(E, P, V, C, O) & sel(P, V))
+        & ![Q: piece, W: ver]: (reads(E, Q, W) => sel(Q, W)) ) )).
+
+% 2. every reference was written, or affirmed, against its target as it now is
+tff(ok2_def, axiom,
+    ![P: piece, Q: piece]:
+      ( ok2(P, Q)
+    <=> ( ?[E: ev, W: ver]: (latest(E, P) & against(E, Q, W) & sel(Q, W))
+        | ?[E: ev, V: ver, W: ver]: (affirm(E, P, V, Q, W) & sel(P, V) & sel(Q, W)) ) )).
+tff(owed2, axiom,
+    ![P: piece]: ( owed(cond2, P) <=> ( canon(P) & ?[Q: piece]: (pred(P, Q) & ~ ok2(P, Q)) ) )).
+
+% 4. no finding applies, and no guard is open
+tff(owed4, axiom,
+    ![P: piece]:
+      ( owed(cond4, P)
+    <=> ( canon(P)
+        & ?[E: ev, V: ver, C: crit]:
+            ( evid(E, P, V, C, fails)
+            & ( applies(E)
+              | ( was(P, V) & ~ sel(P, V)
+                & ~ ?[H: ev, V2: ver]:
+                      (evid(H, P, V2, C, holds) & before(E, H) & applies(H)) ) ) ) ) )).
+
+% 5. what the root asks: a claim checked, a result read whole
+tff(checked_def, axiom,
+    ![P: piece, C: crit]:
+      ( checked(P, C) <=> ?[E: ev, V: ver]: (evid(E, P, V, C, holds) & applies(E)) )).
+tff(owed5, axiom,
+    ![P: piece]:
+      ( owed(cond5, P)
+    <=> ( canon(P)
+        & ( (is_claim(P) & ~ checked(P, valid)) | (is_result(P) & ~ checked(P, whole)) ) ) )).
+
+% 6. fillers with an inner dependency were looked at together as they now are
+tff(looked_def, axiom,
+    ![X: piece, Y: piece]:
+      ( looked(X, Y)
+    <=> ( ?[E: ev, V: ver, W: ver]: (affirm(E, X, V, Y, W) & sel(X, V) & sel(Y, W))
+        | ?[E: ev, V: ver, C: crit, O: outcome, W: ver]:
+            (evid(E, X, V, C, O) & reads(E, Y, W) & applies(E)) ) )).
+tff(owed6, axiom,
+    ![A: piece]:
+      ( owed(cond6, A)
+    <=> ( canon(A) & ?[X: piece, Y: piece]: (dep(A, X, Y) & ~ looked(X, Y)) ) )).
+
+% 5, second half: it rests only on canon pieces with nothing wrong of their own
+tff(own_def, axiom,
+    ![P: piece]: ( own(P) <=> ( owed(cond2, P) | owed(cond4, P) | owed(cond5, P) | owed(cond6, P) ) )).
+tff(bad_def, axiom,
+    ![P: piece]: ( bad(P) <=> ( ~ canon(P) | own(P) | ?[Q: piece]: (pred(P, Q) & bad(Q)) ) )).
+tff(owed5r, axiom,
+    ![P: piece]: ( owed(cond5r, P) <=> ( canon(P) & ?[Q: piece]: (pred(P, Q) & bad(Q)) ) )).
+
+tff(stationary_def, axiom, ( stationary <=> ~ ?[C: cond, P: piece]: owed(C, P) )).

@@ -1,0 +1,27 @@
+# Preprocessing class: HSSSSMSSSSSNSFA.
+# Scheduled 1 strats onto 1 cores with 30 seconds (30 total)
+# Starting new_ho_14 with 30s (1) cores
+# new_ho_14 with pid 88657 completed with status 0
+# Result found by new_ho_14
+# Preprocessing class: HSSSSMSSSSSNSFA.
+# Scheduled 1 strats onto 1 cores with 30 seconds (30 total)
+# Starting new_ho_14 with 30s (1) cores
+# SinE strategy is gf500_gu_R04_F100_L20000
+# Search class: HGUNF-FFMS11-DSFFFSBN
+# partial match(4): HGUNF-FFSF11-SSFFMSBN
+# Scheduled 5 strats onto 1 cores with 30 seconds (30 total)
+# Starting post_as_ho12 with 11s (1) cores
+# post_as_ho12 with pid 88658 completed with status 0
+# Result found by post_as_ho12
+# Preprocessing class: HSSSSMSSSSSNSFA.
+# Scheduled 1 strats onto 1 cores with 30 seconds (30 total)
+# Starting new_ho_14 with 30s (1) cores
+# SinE strategy is gf500_gu_R04_F100_L20000
+# Search class: HGUNF-FFMS11-DSFFFSBN
+# partial match(4): HGUNF-FFSF11-SSFFMSBN
+# Scheduled 5 strats onto 1 cores with 30 seconds (30 total)
+# Starting post_as_ho12 with 11s (1) cores
+# Presaturation interreduction done
+
+# Proof found!
+# SZS status Theorem

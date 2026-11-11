@@ -1,0 +1,11 @@
+# Preprocessing class: FSSSSMSSSSSNFFN.
+# Configuration: G-E--_302_C18_F1_URBAN_RG_S04BN
+# No SInE strategy applied
+# Search class: FUUSF-FFSF00-SFFFFFNN
+# partial match(1): FUUNF-FFSF00-SFFFFFNN
+# Configuration: SAT001_MinMin_p005000_rr_RG
+# Presaturation interreduction done
+
+# Clause set closed under restricted calculus!
+# SZS status GaveUp
+${=E} $f.p  0.02s user 0.01s system 85% cpu 0.036 total

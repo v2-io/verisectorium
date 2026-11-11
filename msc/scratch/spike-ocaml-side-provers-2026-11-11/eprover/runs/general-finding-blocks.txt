@@ -1,0 +1,8 @@
+# Preprocessing class: FSMSSMSMSSSNFFN.
+# Configuration: G-E--_207_C18_F1_SE_CS_SP_PI_PS_S2SI
+# No SInE strategy applied
+# Search class: FGHSF-FFMS31-SFFFFFNN
+# Configuration: G-E--_207_C01_F1_SE_CS_SP_PI_S5PRR_S0Y
+
+# Proof found!
+# SZS status Theorem

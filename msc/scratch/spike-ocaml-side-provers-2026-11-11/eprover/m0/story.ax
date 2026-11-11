@@ -1,0 +1,64 @@
+% Made by gen.py. What does not change through the story.
+tff(o, type, o: piece).
+tff(t, type, t: piece).
+tff(uu, type, uu: piece).
+tff(c, type, c: piece).
+tff(d, type, d: piece).
+tff(e, type, e: piece).
+tff(k, type, k: piece).
+tff(u, type, u: piece).
+tff(o1, type, o1: ver).
+tff(t1, type, t1: ver).
+tff(uu1, type, uu1: ver).
+tff(c1, type, c1: ver).
+tff(c1p, type, c1p: ver).
+tff(c2, type, c2: ver).
+tff(d1, type, d1: ver).
+tff(d1p, type, d1p: ver).
+tff(d2, type, d2: ver).
+tff(d3, type, d3: ver).
+tff(e1, type, e1: ver).
+tff(k1, type, k1: ver).
+tff(k2, type, k2: ver).
+tff(u1, type, u1: ver).
+tff(u2, type, u2: ver).
+tff(w_c1, type, w_c1: ev).
+tff(w_d1, type, w_d1: ev).
+tff(w_e1, type, w_e1: ev).
+tff(w_k1, type, w_k1: ev).
+tff(w_u1, type, w_u1: ev).
+tff(w_t, type, w_t: ev).
+tff(w_uu, type, w_uu: ev).
+tff(w_o, type, w_o: ev).
+tff(ev1, type, ev1: ev).
+tff(ev2, type, ev2: ev).
+tff(ev3, type, ev3: ev).
+tff(ev4, type, ev4: ev).
+tff(a1, type, a1: ev).
+tff(a2, type, a2: ev).
+tff(ev5, type, ev5: ev).
+tff(w_c1p, type, w_c1p: ev).
+tff(w_d1p, type, w_d1p: ev).
+tff(ev6, type, ev6: ev).
+tff(w_c2, type, w_c2: ev).
+tff(w_d2, type, w_d2: ev).
+tff(w_k2, type, w_k2: ev).
+tff(a3, type, a3: ev).
+tff(ev7, type, ev7: ev).
+tff(ev8, type, ev8: ev).
+tff(w_d3, type, w_d3: ev).
+tff(ev9, type, ev9: ev).
+tff(w_u2, type, w_u2: ev).
+tff(ev10, type, ev10: ev).
+tff(ev11, type, ev11: ev).
+tff(ev12, type, ev12: ev).
+tff(pieces_differ, axiom, o != t & o != uu & o != c & o != d & o != e & o != k & o != u & t != uu & t != c & t != d & t != e & t != k & t != u & uu != c & uu != d & uu != e & uu != k & uu != u & c != d & c != e & c != k & c != u & d != e & d != k & d != u & e != k & e != u & k != u).
+tff(vers_differ, axiom, o1 != t1 & o1 != uu1 & o1 != c1 & o1 != c1p & o1 != c2 & o1 != d1 & o1 != d1p & o1 != d2 & o1 != d3 & o1 != e1 & o1 != k1 & o1 != k2 & o1 != u1 & o1 != u2 & t1 != uu1 & t1 != c1 & t1 != c1p & t1 != c2 & t1 != d1 & t1 != d1p & t1 != d2 & t1 != d3 & t1 != e1 & t1 != k1 & t1 != k2 & t1 != u1 & t1 != u2 & uu1 != c1 & uu1 != c1p & uu1 != c2 & uu1 != d1 & uu1 != d1p & uu1 != d2 & uu1 != d3 & uu1 != e1 & uu1 != k1 & uu1 != k2 & uu1 != u1 & uu1 != u2 & c1 != c1p & c1 != c2 & c1 != d1 & c1 != d1p & c1 != d2 & c1 != d3 & c1 != e1 & c1 != k1 & c1 != k2 & c1 != u1 & c1 != u2 & c1p != c2 & c1p != d1 & c1p != d1p & c1p != d2 & c1p != d3 & c1p != e1 & c1p != k1 & c1p != k2 & c1p != u1 & c1p != u2 & c2 != d1 & c2 != d1p & c2 != d2 & c2 != d3 & c2 != e1 & c2 != k1 & c2 != k2 & c2 != u1 & c2 != u2 & d1 != d1p & d1 != d2 & d1 != d3 & d1 != e1 & d1 != k1 & d1 != k2 & d1 != u1 & d1 != u2 & d1p != d2 & d1p != d3 & d1p != e1 & d1p != k1 & d1p != k2 & d1p != u1 & d1p != u2 & d2 != d3 & d2 != e1 & d2 != k1 & d2 != k2 & d2 != u1 & d2 != u2 & d3 != e1 & d3 != k1 & d3 != k2 & d3 != u1 & d3 != u2 & e1 != k1 & e1 != k2 & e1 != u1 & e1 != u2 & k1 != k2 & k1 != u1 & k1 != u2 & k2 != u1 & k2 != u2 & u1 != u2).
+tff(evs_differ, axiom, w_c1 != w_d1 & w_c1 != w_e1 & w_c1 != w_k1 & w_c1 != w_u1 & w_c1 != w_t & w_c1 != w_uu & w_c1 != w_o & w_c1 != ev1 & w_c1 != ev2 & w_c1 != ev3 & w_c1 != ev4 & w_c1 != a1 & w_c1 != a2 & w_c1 != ev5 & w_c1 != w_c1p & w_c1 != w_d1p & w_c1 != ev6 & w_c1 != w_c2 & w_c1 != w_d2 & w_c1 != w_k2 & w_c1 != a3 & w_c1 != ev7 & w_c1 != ev8 & w_c1 != w_d3 & w_c1 != ev9 & w_c1 != w_u2 & w_c1 != ev10 & w_c1 != ev11 & w_c1 != ev12 & w_d1 != w_e1 & w_d1 != w_k1 & w_d1 != w_u1 & w_d1 != w_t & w_d1 != w_uu & w_d1 != w_o & w_d1 != ev1 & w_d1 != ev2 & w_d1 != ev3 & w_d1 != ev4 & w_d1 != a1 & w_d1 != a2 & w_d1 != ev5 & w_d1 != w_c1p & w_d1 != w_d1p & w_d1 != ev6 & w_d1 != w_c2 & w_d1 != w_d2 & w_d1 != w_k2 & w_d1 != a3 & w_d1 != ev7 & w_d1 != ev8 & w_d1 != w_d3 & w_d1 != ev9 & w_d1 != w_u2 & w_d1 != ev10 & w_d1 != ev11 & w_d1 != ev12 & w_e1 != w_k1 & w_e1 != w_u1 & w_e1 != w_t & w_e1 != w_uu & w_e1 != w_o & w_e1 != ev1 & w_e1 != ev2 & w_e1 != ev3 & w_e1 != ev4 & w_e1 != a1 & w_e1 != a2 & w_e1 != ev5 & w_e1 != w_c1p & w_e1 != w_d1p & w_e1 != ev6 & w_e1 != w_c2 & w_e1 != w_d2 & w_e1 != w_k2 & w_e1 != a3 & w_e1 != ev7 & w_e1 != ev8 & w_e1 != w_d3 & w_e1 != ev9 & w_e1 != w_u2 & w_e1 != ev10 & w_e1 != ev11 & w_e1 != ev12 & w_k1 != w_u1 & w_k1 != w_t & w_k1 != w_uu & w_k1 != w_o & w_k1 != ev1 & w_k1 != ev2 & w_k1 != ev3 & w_k1 != ev4 & w_k1 != a1 & w_k1 != a2 & w_k1 != ev5 & w_k1 != w_c1p & w_k1 != w_d1p & w_k1 != ev6 & w_k1 != w_c2 & w_k1 != w_d2 & w_k1 != w_k2 & w_k1 != a3 & w_k1 != ev7 & w_k1 != ev8 & w_k1 != w_d3 & w_k1 != ev9 & w_k1 != w_u2 & w_k1 != ev10 & w_k1 != ev11 & w_k1 != ev12 & w_u1 != w_t & w_u1 != w_uu & w_u1 != w_o & w_u1 != ev1 & w_u1 != ev2 & w_u1 != ev3 & w_u1 != ev4 & w_u1 != a1 & w_u1 != a2 & w_u1 != ev5 & w_u1 != w_c1p & w_u1 != w_d1p & w_u1 != ev6 & w_u1 != w_c2 & w_u1 != w_d2 & w_u1 != w_k2 & w_u1 != a3 & w_u1 != ev7 & w_u1 != ev8 & w_u1 != w_d3 & w_u1 != ev9 & w_u1 != w_u2 & w_u1 != ev10 & w_u1 != ev11 & w_u1 != ev12 & w_t != w_uu & w_t != w_o & w_t != ev1 & w_t != ev2 & w_t != ev3 & w_t != ev4 & w_t != a1 & w_t != a2 & w_t != ev5 & w_t != w_c1p & w_t != w_d1p & w_t != ev6 & w_t != w_c2 & w_t != w_d2 & w_t != w_k2 & w_t != a3 & w_t != ev7 & w_t != ev8 & w_t != w_d3 & w_t != ev9 & w_t != w_u2 & w_t != ev10 & w_t != ev11 & w_t != ev12 & w_uu != w_o & w_uu != ev1 & w_uu != ev2 & w_uu != ev3 & w_uu != ev4 & w_uu != a1 & w_uu != a2 & w_uu != ev5 & w_uu != w_c1p & w_uu != w_d1p & w_uu != ev6 & w_uu != w_c2 & w_uu != w_d2 & w_uu != w_k2 & w_uu != a3 & w_uu != ev7 & w_uu != ev8 & w_uu != w_d3 & w_uu != ev9 & w_uu != w_u2 & w_uu != ev10 & w_uu != ev11 & w_uu != ev12 & w_o != ev1 & w_o != ev2 & w_o != ev3 & w_o != ev4 & w_o != a1 & w_o != a2 & w_o != ev5 & w_o != w_c1p & w_o != w_d1p & w_o != ev6 & w_o != w_c2 & w_o != w_d2 & w_o != w_k2 & w_o != a3 & w_o != ev7 & w_o != ev8 & w_o != w_d3 & w_o != ev9 & w_o != w_u2 & w_o != ev10 & w_o != ev11 & w_o != ev12 & ev1 != ev2 & ev1 != ev3 & ev1 != ev4 & ev1 != a1 & ev1 != a2 & ev1 != ev5 & ev1 != w_c1p & ev1 != w_d1p & ev1 != ev6 & ev1 != w_c2 & ev1 != w_d2 & ev1 != w_k2 & ev1 != a3 & ev1 != ev7 & ev1 != ev8 & ev1 != w_d3 & ev1 != ev9 & ev1 != w_u2 & ev1 != ev10 & ev1 != ev11 & ev1 != ev12 & ev2 != ev3 & ev2 != ev4 & ev2 != a1 & ev2 != a2 & ev2 != ev5 & ev2 != w_c1p & ev2 != w_d1p & ev2 != ev6 & ev2 != w_c2 & ev2 != w_d2 & ev2 != w_k2 & ev2 != a3 & ev2 != ev7 & ev2 != ev8 & ev2 != w_d3 & ev2 != ev9 & ev2 != w_u2 & ev2 != ev10 & ev2 != ev11 & ev2 != ev12 & ev3 != ev4 & ev3 != a1 & ev3 != a2 & ev3 != ev5 & ev3 != w_c1p & ev3 != w_d1p & ev3 != ev6 & ev3 != w_c2 & ev3 != w_d2 & ev3 != w_k2 & ev3 != a3 & ev3 != ev7 & ev3 != ev8 & ev3 != w_d3 & ev3 != ev9 & ev3 != w_u2 & ev3 != ev10 & ev3 != ev11 & ev3 != ev12 & ev4 != a1 & ev4 != a2 & ev4 != ev5 & ev4 != w_c1p & ev4 != w_d1p & ev4 != ev6 & ev4 != w_c2 & ev4 != w_d2 & ev4 != w_k2 & ev4 != a3 & ev4 != ev7 & ev4 != ev8 & ev4 != w_d3 & ev4 != ev9 & ev4 != w_u2 & ev4 != ev10 & ev4 != ev11 & ev4 != ev12 & a1 != a2 & a1 != ev5 & a1 != w_c1p & a1 != w_d1p & a1 != ev6 & a1 != w_c2 & a1 != w_d2 & a1 != w_k2 & a1 != a3 & a1 != ev7 & a1 != ev8 & a1 != w_d3 & a1 != ev9 & a1 != w_u2 & a1 != ev10 & a1 != ev11 & a1 != ev12 & a2 != ev5 & a2 != w_c1p & a2 != w_d1p & a2 != ev6 & a2 != w_c2 & a2 != w_d2 & a2 != w_k2 & a2 != a3 & a2 != ev7 & a2 != ev8 & a2 != w_d3 & a2 != ev9 & a2 != w_u2 & a2 != ev10 & a2 != ev11 & a2 != ev12 & ev5 != w_c1p & ev5 != w_d1p & ev5 != ev6 & ev5 != w_c2 & ev5 != w_d2 & ev5 != w_k2 & ev5 != a3 & ev5 != ev7 & ev5 != ev8 & ev5 != w_d3 & ev5 != ev9 & ev5 != w_u2 & ev5 != ev10 & ev5 != ev11 & ev5 != ev12 & w_c1p != w_d1p & w_c1p != ev6 & w_c1p != w_c2 & w_c1p != w_d2 & w_c1p != w_k2 & w_c1p != a3 & w_c1p != ev7 & w_c1p != ev8 & w_c1p != w_d3 & w_c1p != ev9 & w_c1p != w_u2 & w_c1p != ev10 & w_c1p != ev11 & w_c1p != ev12 & w_d1p != ev6 & w_d1p != w_c2 & w_d1p != w_d2 & w_d1p != w_k2 & w_d1p != a3 & w_d1p != ev7 & w_d1p != ev8 & w_d1p != w_d3 & w_d1p != ev9 & w_d1p != w_u2 & w_d1p != ev10 & w_d1p != ev11 & w_d1p != ev12 & ev6 != w_c2 & ev6 != w_d2 & ev6 != w_k2 & ev6 != a3 & ev6 != ev7 & ev6 != ev8 & ev6 != w_d3 & ev6 != ev9 & ev6 != w_u2 & ev6 != ev10 & ev6 != ev11 & ev6 != ev12 & w_c2 != w_d2 & w_c2 != w_k2 & w_c2 != a3 & w_c2 != ev7 & w_c2 != ev8 & w_c2 != w_d3 & w_c2 != ev9 & w_c2 != w_u2 & w_c2 != ev10 & w_c2 != ev11 & w_c2 != ev12 & w_d2 != w_k2 & w_d2 != a3 & w_d2 != ev7 & w_d2 != ev8 & w_d2 != w_d3 & w_d2 != ev9 & w_d2 != w_u2 & w_d2 != ev10 & w_d2 != ev11 & w_d2 != ev12 & w_k2 != a3 & w_k2 != ev7 & w_k2 != ev8 & w_k2 != w_d3 & w_k2 != ev9 & w_k2 != w_u2 & w_k2 != ev10 & w_k2 != ev11 & w_k2 != ev12 & a3 != ev7 & a3 != ev8 & a3 != w_d3 & a3 != ev9 & a3 != w_u2 & a3 != ev10 & a3 != ev11 & a3 != ev12 & ev7 != ev8 & ev7 != w_d3 & ev7 != ev9 & ev7 != w_u2 & ev7 != ev10 & ev7 != ev11 & ev7 != ev12 & ev8 != w_d3 & ev8 != ev9 & ev8 != w_u2 & ev8 != ev10 & ev8 != ev11 & ev8 != ev12 & w_d3 != ev9 & w_d3 != w_u2 & w_d3 != ev10 & w_d3 != ev11 & w_d3 != ev12 & ev9 != w_u2 & ev9 != ev10 & ev9 != ev11 & ev9 != ev12 & w_u2 != ev10 & w_u2 != ev11 & w_u2 != ev12 & ev10 != ev11 & ev10 != ev12 & ev11 != ev12).
+tff(pieces_all, axiom, ![P: piece]: (P = o | P = t | P = uu | P = c | P = d | P = e | P = k | P = u)).
+tff(slot_exactly, axiom, ![A: piece, P: piece]: ( slot(A, P) <=> ( (A = o & P = t) | (A = o & P = uu) | (A = t & P = c) | (A = t & P = d) | (A = t & P = e) | (A = t & P = k) | (A = uu & P = u) ) )).
+tff(root_exactly, axiom, ![A: piece]: ( root(A) <=> ( (A = o) ) )).
+tff(is_claim_exactly, axiom, ![P: piece]: ( is_claim(P) <=> ( (P = c) | (P = u) ) )).
+tff(is_result_exactly, axiom, ![P: piece]: ( is_result(P) <=> ( (P = t) | (P = uu) ) )).
+tff(pred_exactly, axiom, ![P: piece, Q: piece]: ( pred(P, Q) <=> ( (P = u & Q = c) ) )).
+tff(dep_exactly, axiom, ![A: piece, X: piece, Y: piece]: ( dep(A, X, Y) <=> ( (A = t & X = e & Y = c) | (A = t & X = k & Y = e) ) )).

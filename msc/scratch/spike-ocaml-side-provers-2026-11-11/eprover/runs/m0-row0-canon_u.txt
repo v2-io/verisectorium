@@ -1,0 +1,10 @@
+# Preprocessing class: FSLSSMSMSSSNFFN.
+# Configuration: C07_19_nc_SOS_SAT001_MinMin_p005000_rr
+# No SInE strategy applied
+# Search class: FGHSF-SMLF31-SFFFFFNN
+# partial match(1): FGHSF-SMLF33-SFFFFFNN
+# Configuration: G-E--_208_C18_F1_SE_CS_SP_PS_S5PRR_S032N
+# Presaturation interreduction done
+
+# Proof found!
+# SZS status Theorem

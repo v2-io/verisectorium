@@ -1,0 +1,20 @@
+ROW 0: owed = []; undecided = []; 85 questions, 65s
+  yes  stationary  (0.1s)
+ROW 1: owed = ['owed(cond4, c)', 'owed(cond5r, u)']; undecided = []; 86 questions, 60s
+  no   stationary  (1.1s)
+ROW 2: owed = ['owed(cond5, t)', 'owed(cond5, u)', 'owed(cond6, t)', 'owed(cond2, u)', 'owed(cond4, c)', 'owed(cond5r, u)']; undecided = []; 87 questions, 148s
+  no   stationary  (1.1s)
+ROW 3: owed = ['owed(cond4, c)', 'owed(cond5r, u)']; undecided = []; 87 questions, 63s
+  no   stationary  (1.1s)
+ROW 4: owed = ['owed(cond2, u)', 'owed(cond5, t)', 'owed(cond5, c)', 'owed(cond5, u)', 'owed(cond6, t)', 'owed(cond5r, u)', 'owed(cond4, c)']; undecided = []; 87 questions, 124s
+  no   stationary  (1.1s)
+ROW 5: owed = ['owed(cond2, u)', 'owed(cond5, t)', 'owed(cond6, t)', 'owed(cond5, u)']; undecided = []; 89 questions, 163s
+  no   stationary  (1.1s)
+ROW 6: owed = ['owed(cond2, u)', 'owed(cond5, t)', 'owed(cond5, u)', 'owed(cond5, c)', 'owed(cond6, t)', 'owed(cond5r, u)']; undecided = []; 89 questions, 212s
+  no   stationary  (1.1s)
+ROW 7: owed = ['owed(cond5, t)', 'owed(cond5, u)', 'owed(cond6, t)']; undecided = ['ok2(u, c)', 'owed(cond2, u)']; 90 questions, 228s
+  no   stationary  (1.1s)
+ROW 8: owed = ['owed(cond5, t)', 'owed(cond5, uu)', 'owed(cond6, t)']; undecided = []; 91 questions, 311s
+  no   stationary  (1.1s)
+ROW 9: owed = []; undecided = ['sel(d, d3)', 'applies(ev8)', 'applies(ev9)', 'applies(ev10)', 'applies(ev11)', 'checked(c, valid)', 'checked(t, whole)', 'looked(k, e)', 'owed(cond4, c)', 'owed(cond5, t)', 'owed(cond5, c)', 'owed(cond6, t)', 'own(t)', 'own(c)', 'bad(c)', 'bad(u)', 'owed(cond5r, u)', 'stationary']; 93 questions, 1011s
+ROW 9: owed = []; undecided = ['sel(d, d3)', 'applies(ev8)', 'applies(ev9)', 'applies(ev10)', 'applies(ev11)', 'checked(c, valid)', 'checked(t, whole)', 'looked(k, e)', 'owed(cond4, c)', 'owed(cond5, t)', 'owed(cond5, c)', 'owed(cond6, t)', 'own(t)', 'own(c)', 'bad(c)', 'bad(u)', 'owed(cond5r, u)', 'stationary']; 93 questions, 1011s

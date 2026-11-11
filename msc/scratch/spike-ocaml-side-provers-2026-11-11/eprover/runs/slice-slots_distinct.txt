@@ -1,0 +1,9 @@
+# Preprocessing class: FSMSSMSMSSSNFFN.
+# Configuration: G-E--_207_C18_F1_SE_CS_SP_PI_PS_S2SI
+# No SInE strategy applied
+# Search class: FGHSF-FFMM21-SFFFFFNN
+# Configuration: G-E--_208_C18_F1_SE_CS_SP_PS_S5PRR_S2v
+# Presaturation interreduction done
+
+# Proof found!
+# SZS status Theorem

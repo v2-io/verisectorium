@@ -1,0 +1,10 @@
+# Preprocessing class: HSSSSMSSSSSNSSA.
+# Configuration: post_as_ho12
+# No SInE strategy applied
+# Search class: HGUNF-FFSF22-SSSFFMBN
+# Configuration: new_ho_10
+# Presaturation interreduction done
+
+# Proof found!
+# SZS status Theorem
+with --auto-schedule, 60 s: Theorem (0.02s)

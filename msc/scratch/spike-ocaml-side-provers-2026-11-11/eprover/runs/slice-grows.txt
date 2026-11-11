@@ -1,0 +1,10 @@
+# Preprocessing class: FSMSSMSSSSSNFFN.
+# Configuration: G-E--_208_C18_F1_SE_CS_SOS_SP_PS_S5PRR_RG_S04AN
+# No SInE strategy applied
+# Search class: FGUNF-FFSF11-SFFFFFNN
+# Configuration: SAT001_CO_MinMin_p005000_rr
+# Presaturation interreduction done
+
+# No proof found!
+# SZS status CounterSatisfiable
+${=E} $f.p  0.02s user 0.01s system 83% cpu 0.036 total

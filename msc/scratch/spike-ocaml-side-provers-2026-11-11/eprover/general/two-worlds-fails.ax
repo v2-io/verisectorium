@@ -1,0 +1,187 @@
+% Made by two_worlds.py from ../m0/m0.ax.
+tff(piece, type, piece: $tType).
+tff(ver, type, ver: $tType).
+tff(ev, type, ev: $tType).
+tff(crit, type, crit: $tType).
+tff(outcome, type, outcome: $tType).
+tff(cond, type, cond: $tType).
+tff(holds_out, type, holds: outcome).
+tff(fails_out, type, fails: outcome).
+tff(out_differ, axiom, holds != fails).
+tff(valid, type, valid: crit).
+tff(whole, type, whole: crit).
+tff(casex, type, casex: crit).
+tff(crit_differ, axiom, valid != whole & valid != casex & whole != casex).
+tff(root, type, root: piece > $o).
+tff(is_claim, type, is_claim: piece > $o).
+tff(is_result, type, is_result: piece > $o).
+tff(canon, type, canon: piece > $o).
+tff(cond2, type, cond2: cond).
+tff(cond4, type, cond4: cond).
+tff(cond5, type, cond5: cond).
+tff(cond5r, type, cond5r: cond).
+tff(cond6, type, cond6: cond).
+tff(cond_differ, axiom,
+    cond2 != cond4 & cond2 != cond5 & cond2 != cond5r & cond2 != cond6 & cond4 != cond5 & cond4 != cond5r & cond4 != cond6
+  & cond5 != cond5r & cond5 != cond6 & cond5r != cond6).
+tff(cond_all, axiom, ![C: cond]: (C = cond2 | C = cond4 | C = cond5 | C = cond5r | C = cond6)).
+tff(canon_def, axiom,
+    ![P: piece]: ( canon(P) <=> ( root(P) | ?[A: piece]: (canon(A) & slot(A, P)) ) )).
+tff(write1_w1, type, write1: (ev * piece * ver) > $o).
+tff(evid1_w1, type, evid1: (ev * piece * ver * crit * outcome) > $o).
+tff(reads1_w1, type, reads1: (ev * piece * ver) > $o).
+tff(affirm1_w1, type, affirm1: (ev * piece * ver * piece * ver) > $o).
+tff(before1_w1, type, before1: (ev * ev) > $o).
+tff(sel1_w1, type, sel1: (piece * ver) > $o).
+tff(was1_w1, type, was1: (piece * ver) > $o).
+tff(latest1_w1, type, latest1: (ev * piece) > $o).
+tff(applies1_w1, type, applies1: ev > $o).
+tff(ok21_w1, type, ok21: (piece * piece) > $o).
+tff(checked1_w1, type, checked1: (piece * crit) > $o).
+tff(looked1_w1, type, looked1: (piece * piece) > $o).
+tff(own1_w1, type, own1: piece > $o).
+tff(bad1_w1, type, bad1: piece > $o).
+tff(owed1_w1, type, owed1: (cond * piece) > $o).
+tff(stationary1_w1, type, stationary1: $o).
+tff(latest_def_w1, axiom,
+    ![E: ev, P: piece]:
+      ( latest1(E, P)
+    <=> ( ?[V: ver]: write1(E, P, V)
+        & ~ ?[E2: ev, V2: ver]: (write1(E2, P, V2) & before1(E, E2)) ) )).
+tff(sel_def_w1, axiom,
+    ![P: piece, V: ver]: ( sel1(P, V) <=> ?[E: ev]: (latest1(E, P) & write1(E, P, V)) )).
+tff(was_def_w1, axiom, ![P: piece, V: ver]: ( was1(P, V) <=> ?[E: ev]: write1(E, P, V) )).
+tff(applies_def_w1, axiom,
+    ![E: ev]:
+      ( applies1(E)
+    <=> ( ?[P: piece, V: ver, C: crit, O: outcome]: (evid1(E, P, V, C, O) & sel1(P, V))
+        & ![Q: piece, W: ver]: (reads1(E, Q, W) => sel1(Q, W)) ) )).
+tff(ok2_def_w1, axiom,
+    ![P: piece, Q: piece]:
+      ( ok21(P, Q)
+    <=> ( ?[E: ev, W: ver]: (latest1(E, P) & against1(E, Q, W) & sel1(Q, W))
+        | ?[E: ev, V: ver, W: ver]: (affirm1(E, P, V, Q, W) & sel1(P, V) & sel1(Q, W)) ) )).
+tff(owed2_w1, axiom,
+    ![P: piece]: ( owed1(cond2, P) <=> ( canon(P) & ?[Q: piece]: (pred(P, Q) & ~ ok21(P, Q)) ) )).
+tff(owed4_w1, axiom,
+    ![P: piece]:
+      ( owed1(cond4, P)
+    <=> ( canon(P)
+        & ?[E: ev, V: ver, C: crit]:
+            ( evid1(E, P, V, C, fails)
+            & ( applies1(E)
+              | ( was1(P, V) & ~ sel1(P, V)
+                & ~ ?[H: ev, V2: ver]:
+                      (evid1(H, P, V2, C, holds) & before1(E, H) & applies1(H)) ) ) ) ) )).
+tff(checked_def_w1, axiom,
+    ![P: piece, C: crit]:
+      ( checked1(P, C) <=> ?[E: ev, V: ver]: (evid1(E, P, V, C, holds) & applies1(E)) )).
+tff(owed5_w1, axiom,
+    ![P: piece]:
+      ( owed1(cond5, P)
+    <=> ( canon(P)
+        & ( (is_claim(P) & ~ checked1(P, valid)) | (is_result(P) & ~ checked1(P, whole)) ) ) )).
+tff(looked_def_w1, axiom,
+    ![X: piece, Y: piece]:
+      ( looked1(X, Y)
+    <=> ( ?[E: ev, V: ver, W: ver]: (affirm1(E, X, V, Y, W) & sel1(X, V) & sel1(Y, W))
+        | ?[E: ev, V: ver, C: crit, O: outcome, W: ver]:
+            (evid1(E, X, V, C, O) & reads1(E, Y, W) & applies1(E)) ) )).
+tff(owed6_w1, axiom,
+    ![A: piece]:
+      ( owed1(cond6, A)
+    <=> ( canon(A) & ?[X: piece, Y: piece]: (dep(A, X, Y) & ~ looked1(X, Y)) ) )).
+tff(own_def_w1, axiom,
+    ![P: piece]: ( own1(P) <=> ( owed1(cond2, P) | owed1(cond4, P) | owed1(cond5, P) | owed1(cond6, P) ) )).
+tff(bad_def_w1, axiom,
+    ![P: piece]: ( bad1(P) <=> ( ~ canon(P) | own1(P) | ?[Q: piece]: (pred(P, Q) & bad1(Q)) ) )).
+tff(owed5r_w1, axiom,
+    ![P: piece]: ( owed1(cond5r, P) <=> ( canon(P) & ?[Q: piece]: (pred(P, Q) & bad1(Q)) ) )).
+tff(stationary_def_w1, axiom, ( stationary1 <=> ~ ?[C: cond, P: piece]: owed1(C, P) )).
+tff(write2_w2, type, write2: (ev * piece * ver) > $o).
+tff(evid2_w2, type, evid2: (ev * piece * ver * crit * outcome) > $o).
+tff(reads2_w2, type, reads2: (ev * piece * ver) > $o).
+tff(affirm2_w2, type, affirm2: (ev * piece * ver * piece * ver) > $o).
+tff(before2_w2, type, before2: (ev * ev) > $o).
+tff(sel2_w2, type, sel2: (piece * ver) > $o).
+tff(was2_w2, type, was2: (piece * ver) > $o).
+tff(latest2_w2, type, latest2: (ev * piece) > $o).
+tff(applies2_w2, type, applies2: ev > $o).
+tff(ok22_w2, type, ok22: (piece * piece) > $o).
+tff(checked2_w2, type, checked2: (piece * crit) > $o).
+tff(looked2_w2, type, looked2: (piece * piece) > $o).
+tff(own2_w2, type, own2: piece > $o).
+tff(bad2_w2, type, bad2: piece > $o).
+tff(owed2_w2, type, owed2: (cond * piece) > $o).
+tff(stationary2_w2, type, stationary2: $o).
+tff(latest_def_w2, axiom,
+    ![E: ev, P: piece]:
+      ( latest2(E, P)
+    <=> ( ?[V: ver]: write2(E, P, V)
+        & ~ ?[E2: ev, V2: ver]: (write2(E2, P, V2) & before2(E, E2)) ) )).
+tff(sel_def_w2, axiom,
+    ![P: piece, V: ver]: ( sel2(P, V) <=> ?[E: ev]: (latest2(E, P) & write2(E, P, V)) )).
+tff(was_def_w2, axiom, ![P: piece, V: ver]: ( was2(P, V) <=> ?[E: ev]: write2(E, P, V) )).
+tff(applies_def_w2, axiom,
+    ![E: ev]:
+      ( applies2(E)
+    <=> ( ?[P: piece, V: ver, C: crit, O: outcome]: (evid2(E, P, V, C, O) & sel2(P, V))
+        & ![Q: piece, W: ver]: (reads2(E, Q, W) => sel2(Q, W)) ) )).
+tff(ok2_def_w2, axiom,
+    ![P: piece, Q: piece]:
+      ( ok22(P, Q)
+    <=> ( ?[E: ev, W: ver]: (latest2(E, P) & against2(E, Q, W) & sel2(Q, W))
+        | ?[E: ev, V: ver, W: ver]: (affirm2(E, P, V, Q, W) & sel2(P, V) & sel2(Q, W)) ) )).
+tff(owed2_w2, axiom,
+    ![P: piece]: ( owed2(cond2, P) <=> ( canon(P) & ?[Q: piece]: (pred(P, Q) & ~ ok22(P, Q)) ) )).
+tff(owed4_w2, axiom,
+    ![P: piece]:
+      ( owed2(cond4, P)
+    <=> ( canon(P)
+        & ?[E: ev, V: ver, C: crit]:
+            ( evid2(E, P, V, C, fails)
+            & ( applies2(E)
+              | ( was2(P, V) & ~ sel2(P, V)
+                & ~ ?[H: ev, V2: ver]:
+                      (evid2(H, P, V2, C, holds) & before2(E, H) & applies2(H)) ) ) ) ) )).
+tff(checked_def_w2, axiom,
+    ![P: piece, C: crit]:
+      ( checked2(P, C) <=> ?[E: ev, V: ver]: (evid2(E, P, V, C, holds) & applies2(E)) )).
+tff(owed5_w2, axiom,
+    ![P: piece]:
+      ( owed2(cond5, P)
+    <=> ( canon(P)
+        & ( (is_claim(P) & ~ checked2(P, valid)) | (is_result(P) & ~ checked2(P, whole)) ) ) )).
+tff(looked_def_w2, axiom,
+    ![X: piece, Y: piece]:
+      ( looked2(X, Y)
+    <=> ( ?[E: ev, V: ver, W: ver]: (affirm2(E, X, V, Y, W) & sel2(X, V) & sel2(Y, W))
+        | ?[E: ev, V: ver, C: crit, O: outcome, W: ver]:
+            (evid2(E, X, V, C, O) & reads2(E, Y, W) & applies2(E)) ) )).
+tff(owed6_w2, axiom,
+    ![A: piece]:
+      ( owed2(cond6, A)
+    <=> ( canon(A) & ?[X: piece, Y: piece]: (dep(A, X, Y) & ~ looked2(X, Y)) ) )).
+tff(own_def_w2, axiom,
+    ![P: piece]: ( own2(P) <=> ( owed2(cond2, P) | owed2(cond4, P) | owed2(cond5, P) | owed2(cond6, P) ) )).
+tff(bad_def_w2, axiom,
+    ![P: piece]: ( bad2(P) <=> ( ~ canon(P) | own2(P) | ?[Q: piece]: (pred(P, Q) & bad2(Q)) ) )).
+tff(owed5r_w2, axiom,
+    ![P: piece]: ( owed2(cond5r, P) <=> ( canon(P) & ?[Q: piece]: (pred(P, Q) & bad2(Q)) ) )).
+tff(stationary_def_w2, axiom, ( stationary2 <=> ~ ?[C: cond, P: piece]: owed2(C, P) )).
+
+% ----- how the two states differ: g, one more piece of evidence that holds -----
+tff(g, type, g: ev).  tff(gp, type, gp: piece).  tff(gv, type, gv: ver).  tff(gc, type, gc: crit).
+tff(same_writes, axiom, ![E: ev, P: piece, V: ver]: (write2(E, P, V) <=> write1(E, P, V))).
+tff(same_against, axiom, ![E: ev, Q: piece, W: ver]: (against2(E, Q, W) <=> against1(E, Q, W))).
+tff(same_affirms, axiom, ![E: ev, P: piece, V: ver, Q: piece, W: ver]: (affirm2(E, P, V, Q, W) <=> affirm1(E, P, V, Q, W))).
+tff(one_more, axiom,
+    ![E: ev, P: piece, V: ver, C: crit, O: outcome]:
+      ( evid2(E, P, V, C, O) <=> ( evid1(E, P, V, C, O) | (E = g & P = gp & V = gv & C = gc & O = fails) ) )).
+tff(its_reads, axiom, ![E: ev, Q: piece, W: ver]: (reads1(E, Q, W) <=> (reads2(E, Q, W) & E != g))).
+tff(g_is_new, axiom,
+    ( ![P: piece, V: ver, C: crit, O: outcome]: ~ evid1(g, P, V, C, O)
+    & ![P: piece, V: ver]: ~ write1(g, P, V)
+    & ![P: piece, V: ver, Q: piece, W: ver]: ~ affirm1(g, P, V, Q, W)
+    & ![Q: piece, W: ver]: ~ against1(g, Q, W) )).
+tff(g_is_last, axiom, ![E1: ev, E2: ev]: (before2(E1, E2) <=> ( (before1(E1, E2) & E2 != g & E1 != g) | (E2 = g & E1 != g) ))).

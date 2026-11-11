@@ -1,0 +1,130 @@
+% The slice for E 3.1, in typed first-order logic (TPTP, TFF).
+%
+% Run:  opam exec --switch=rocq-try -- eprover --auto --cpu-limit=10 -s eprover.p
+% It answers "SZS status Theorem": the conjecture at the foot follows.
+% Companion questions, each a file that includes this one, are in
+% ../spike-ocaml-side-provers-2026-11-11/eprover/slice/ with their outputs.
+%
+% What first-order logic wants of the slice: everything is a relation, and
+% NOTHING IS ASSUMED. Two names are not different until that is said. A slot
+% that was not said to be provisional is not thereby firm. Something not
+% derivable as canon is not thereby outside canon. Each of those closings is
+% written out below, and marked CLOSING. They are the notes, more or less.
+
+% ---------- what exists ----------
+
+tff(seg, type, seg: $tType).
+tff(slot_name, type, slot_name: $tType).
+tff(kind, type, kind: $tType).
+
+tff(claim, type, claim: kind).
+tff(step, type, step: kind).
+tff(explanation, type, explanation: kind).
+tff(derived_result, type, derived_result: kind).
+tff(outline, type, outline: kind).
+
+tff(of_kind, type, of_kind: (seg * kind) > $o).
+tff(content, type, content: seg > $i).
+
+% A slot of an assembly is in one of these states. Holding and pointing name
+% what fills it; provisional is said beside a filled slot.
+tff(holds, type, holds: (seg * slot_name * seg) > $o).
+tff(points_at, type, points_at: (seg * slot_name * seg) > $o).
+tff(promised, type, promised: (seg * slot_name) > $o).
+tff(suggested, type, suggested: (seg * slot_name * $i) > $o).
+tff(gap, type, gap: (seg * slot_name) > $o).
+tff(provisional, type, provisional: (seg * slot_name) > $o).
+tff(root, type, root: seg > $o).
+
+% ---------- canon ----------
+
+tff(firm, type, firm: (seg * seg) > $o).
+tff(canon, type, canon: seg > $o).
+
+tff(firm_def, axiom,
+    ![A: seg, S: seg]:
+      ( firm(A, S)
+    <=> ?[N: slot_name]: ( (holds(A, N, S) | points_at(A, N, S)) & ~ provisional(A, N) ) )).
+
+% The two rules.
+tff(canon_root, axiom, ![A: seg]: ( root(A) => canon(A) )).
+tff(canon_step, axiom, ![A: seg, S: seg]: ( (canon(A) & firm(A, S)) => canon(S) )).
+
+% CLOSING. "And nothing else is in canon." First-order logic cannot say "the
+% least set closed under the two rules". This is the nearest it has: whatever
+% is in canon has a reason. It is weaker: see slice/ring.p.
+tff(canon_only, axiom,
+    ![S: seg]: ( canon(S) => ( root(S) | ?[A: seg]: (canon(A) & firm(A, S)) ) )).
+
+% ---------- the instance ----------
+
+tff(c, type, c: seg).   tff(d, type, d: seg).   tff(k, type, k: seg).
+tff(t, type, t: seg).   tff(u, type, u: seg).   tff(uu, type, uu: seg).
+tff(o, type, o: seg).
+
+tff(formal_claim, type, formal_claim: slot_name).
+tff(derivation, type, derivation: slot_name).
+tff(description, type, description: slot_name).
+tff(eli8, type, eli8: slot_name).
+tff(e1, type, e1: slot_name).  tff(e2, type, e2: slot_name).
+tff(e3, type, e3: slot_name).  tff(e4, type, e4: slot_name).
+
+tff(kinds, axiom,
+    of_kind(c, claim) & of_kind(d, step) & of_kind(k, explanation) & of_kind(u, claim)
+  & of_kind(t, derived_result) & of_kind(uu, derived_result) & of_kind(o, outline)).
+
+tff(content_c, axiom, content(c) = "Every bounded monotone sequence of reals converges.").
+tff(content_d, axiom, content(d) = "Take the least upper bound of the terms and show the terms come within any epsilon of it.").
+tff(content_k, axiom, content(k) = "If you keep stepping forward and there is a wall you cannot pass, you end up settling somewhere at or before the wall.").
+tff(content_u, axiom, content(u) = "Every Cauchy sequence of reals converges.").
+
+% CLOSING. Each relation is given as "exactly these", not as "at least these".
+tff(holds_exactly, axiom,
+    ![A: seg, N: slot_name, S: seg]:
+      ( holds(A, N, S)
+    <=> ( (A = t & N = formal_claim & S = c)
+        | (A = t & N = derivation & S = d)
+        | (A = t & N = eli8 & S = k)
+        | (A = uu & N = formal_claim & S = u) ) )).
+
+tff(points_at_exactly, axiom,
+    ![A: seg, N: slot_name, S: seg]:
+      ( points_at(A, N, S) <=> ( (A = o & N = e1 & S = t) | (A = o & N = e2 & S = uu) ) )).
+
+tff(provisional_exactly, axiom,
+    ![A: seg, N: slot_name]: ( provisional(A, N) <=> (A = o & N = e2) )).
+
+tff(promised_exactly, axiom,
+    ![A: seg, N: slot_name]: ( promised(A, N) <=> (A = t & N = description) )).
+
+tff(suggested_exactly, axiom,
+    ![A: seg, N: slot_name, Note: $i]:
+      ( suggested(A, N, Note)
+    <=> (A = o & N = e3 & Note = "a result about series is probably wanted here") )).
+
+tff(gap_exactly, axiom, ![A: seg, N: slot_name]: ( gap(A, N) <=> (A = o & N = e4) )).
+
+tff(root_exactly, axiom, ![A: seg]: ( root(A) <=> A = o )).
+
+% CLOSING. Seven names are seven things; eight slot names are eight slots.
+% E 3.1 reads TPTP's $distinct(...) as a relation it knows nothing about, so
+% each pair is written out. (Before this was done, E could show c and d are
+% different pieces only because their CONTENT differs, quoted strings being
+% the one thing it takes as distinct; that O and U differ it could not show.)
+tff(segs_differ, axiom,
+      c != d & c != k & c != t & c != u & c != uu & c != o
+    & d != k & d != t & d != u & d != uu & d != o
+    & k != t & k != u & k != uu & k != o
+    & t != u & t != uu & t != o
+    & u != uu & u != o
+    & uu != o ).
+
+tff(slots_differ, axiom,
+      formal_claim != derivation & formal_claim != description & formal_claim != eli8 & formal_claim != e1 & formal_claim != e2 & formal_claim != e3 & formal_claim != e4
+    & derivation != description & derivation != eli8 & derivation != e1 & derivation != e2 & derivation != e3 & derivation != e4
+    & description != eli8 & description != e1 & description != e2 & description != e3 & description != e4
+    & eli8 != e1 & eli8 != e2 & eli8 != e3 & eli8 != e4
+    & e1 != e2 & e1 != e3 & e1 != e4
+    & e2 != e3 & e2 != e4
+    & e3 != e4 ).
+

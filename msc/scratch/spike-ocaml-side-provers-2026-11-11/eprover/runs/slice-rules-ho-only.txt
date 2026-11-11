@@ -1,0 +1,6 @@
+# Preprocessing class: HSSSSMSSSSSNSFA.
+# Scheduled 1 strats onto 1 cores with 30 seconds (30 total)
+# Starting new_ho_14 with 30s (1) cores
+# new_ho_14 with pid 88667 completed with status 8
+# Schedule exhausted
+# SZS status GaveUp

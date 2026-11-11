@@ -1,0 +1,4 @@
+eprover: ring-ho.p:14:(Column 73):(just read '&'): Closing bracket (')') expected, but Ampersand ('&') read 
+with --auto-schedule, 60 s:  (0.02s)
+--auto, 30 s: # SZS status Theorem (0.02s)
+--auto-schedule, 30 s: # SZS status Theorem (0.02s)
