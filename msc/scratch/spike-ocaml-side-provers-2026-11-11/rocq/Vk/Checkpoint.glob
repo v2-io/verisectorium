@@ -1,0 +1,268 @@
+DIGEST 5440b8d7a18569b5bc81efeeb58d4196
+FVk.Checkpoint
+R156:159 Stdlib.Lists.List <> <> lib
+R161:166 Stdlib.Strings.String <> <> lib
+R168:171 Stdlib.Bool.Bool <> <> lib
+R173:177 Stdlib.Arith.Arith <> <> lib
+R203:207 Vk.Reach <> <> lib
+R209:210 Vk.M0 <> <> lib
+R212:216 Vk.Story <> <> lib
+R226:238 Stdlib.Lists.List ListNotations <> mod
+def 433:442 <> checkpoint
+R449:456 Vk.M0 <> ontology rec
+binder 445:445 <> O:1
+R469:470 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R472:474 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R479:481 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R499:500 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R475:478 Vk.M0 <> line def
+binder 471:471 <> l:2
+R494:496 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R482:489 Vk.M0 <> frontier def
+R491:491 Vk.Checkpoint <> O:1 var
+R493:493 Vk.Checkpoint <> l:2 var
+R497:498 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+def 515:519 <> close
+R526:533 Vk.M0 <> ontology rec
+binder 522:522 <> O:3
+R541:544 Vk.M0 <> line def
+binder 537:537 <> l:4
+R549:554 Corelib.Init.Datatypes <> option ind
+R557:566 Vk.Checkpoint <> checkpoint def
+R568:568 Vk.Checkpoint <> O:3 var
+R582:589 Vk.M0 <> frontier def
+R591:591 Vk.Checkpoint <> O:3 var
+R593:593 Vk.Checkpoint <> l:4 var
+R624:627 Corelib.Init.Notations <> ::type_scope:x_'->'_x not
+R620:622 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R608:615 Vk.M0 <> frontier def
+R617:617 Vk.Checkpoint <> O:3 var
+R619:619 Vk.Checkpoint <> l:4 var
+R623:623 Vk.Checkpoint <> f:5 var
+R628:633 Corelib.Init.Datatypes <> option ind
+R636:645 Vk.Checkpoint <> checkpoint def
+R647:647 Vk.Checkpoint <> O:3 var
+R660:661 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+binder 670:670 <> H:6
+R675:678 Corelib.Init.Datatypes <> Some constr
+R681:685 Corelib.Init.Specif <> exist constr
+R691:691 Vk.Checkpoint <> H:6 var
+R689:689 Vk.Checkpoint <> l:4 var
+R699:702 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R717:720 Corelib.Init.Datatypes <> None constr
+R728:734 Corelib.Init.Logic <> eq_refl constr
+def 746:763 <> S0_is_a_checkpoint
+R767:776 Vk.Checkpoint <> checkpoint def
+R778:782 Vk.Story <> looks def
+R787:791 Corelib.Init.Specif <> exist constr
+R798:804 Corelib.Init.Logic <> eq_refl constr
+R795:796 Vk.Story <> S0 def
+def 815:832 <> S1_is_a_checkpoint
+R836:845 Vk.Checkpoint <> checkpoint def
+R847:851 Vk.Story <> looks def
+R856:860 Corelib.Init.Specif <> exist constr
+R870:876 Corelib.Init.Logic <> eq_refl constr
+R864:868 Vk.Story <> r1400 def
+def 932:951 <> a_checkpoint_at_1300
+R955:964 Vk.Checkpoint <> checkpoint def
+R966:970 Vk.Story <> looks def
+R975:979 Corelib.Init.Specif <> exist constr
+R989:995 Corelib.Init.Logic <> eq_refl constr
+R983:987 Vk.Story <> r1300 def
+def 1007:1027 <> close_refuses_at_1300
+R1048:1050 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1031:1035 Vk.Checkpoint <> close def
+R1037:1041 Vk.Story <> looks def
+R1043:1047 Vk.Story <> r1300 def
+R1051:1054 Corelib.Init.Datatypes <> None constr
+def 1091:1118 <> close_refuses_at_1400_strict
+R1140:1142 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1122:1126 Vk.Checkpoint <> close def
+R1128:1133 Vk.Story <> strict def
+R1135:1139 Vk.Story <> r1400 def
+R1143:1146 Corelib.Init.Datatypes <> None constr
+def 1315:1334 <> S0_after_the_finding
+R1362:1364 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1338:1342 Vk.Checkpoint <> close def
+R1344:1348 Vk.Story <> looks def
+R1353:1356 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R1351:1352 Vk.Story <> S0 def
+R1357:1357 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1360:1360 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1358:1359 Vk.Story <> E5 def
+R1365:1368 Corelib.Init.Datatypes <> None constr
+prf 1469:1480 <> flat_map_nil
+binder 1492:1492 <> A:7
+binder 1494:1494 <> B:8
+R1503:1506 Corelib.Init.Notations <> ::type_scope:x_'->'_x not
+R1502:1502 Vk.Checkpoint <> A:7 var
+R1507:1510 Corelib.Init.Datatypes <> list ind
+R1512:1512 Vk.Checkpoint <> B:8 var
+binder 1498:1498 <> f:9
+binder 1515:1515 <> l:10
+binder 1517:1517 <> x:11
+R1539:1542 Corelib.Init.Notations <> ::type_scope:x_'->'_x not
+R1534:1536 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1522:1529 Stdlib.Lists.List <> flat_map def
+R1533:1533 Vk.Checkpoint <> l:10 var
+R1531:1531 Vk.Checkpoint <> f:9 var
+R1537:1538 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1549:1552 Corelib.Init.Notations <> ::type_scope:x_'->'_x not
+R1543:1544 Stdlib.Lists.List <> In def
+R1548:1548 Vk.Checkpoint <> l:10 var
+R1546:1546 Vk.Checkpoint <> x:11 var
+R1556:1558 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1553:1553 Vk.Checkpoint <> f:9 var
+R1555:1555 Vk.Checkpoint <> x:11 var
+R1559:1560 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1652:1661 Stdlib.Lists.List <> app_eq_nil thm
+prf 1776:1791 <> owed_nil_own_nil
+binder 1802:1802 <> O:12
+binder 1804:1804 <> l:13
+binder 1806:1807 <> am:14
+binder 1809:1809 <> p:15
+R1830:1833 Corelib.Init.Notations <> ::type_scope:x_'->'_x not
+R1825:1827 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1812:1815 Vk.M0 <> owed def
+R1817:1817 Vk.Checkpoint <> O:12 var
+R1819:1819 Vk.Checkpoint <> l:13 var
+R1821:1822 Vk.Checkpoint <> am:14 var
+R1824:1824 Vk.Checkpoint <> p:15 var
+R1828:1829 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1846:1848 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1834:1836 Vk.M0 <> own def
+R1838:1838 Vk.Checkpoint <> O:12 var
+R1840:1840 Vk.Checkpoint <> l:13 var
+R1842:1843 Vk.Checkpoint <> am:14 var
+R1845:1845 Vk.Checkpoint <> p:15 var
+R1849:1850 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1888:1891 Vk.M0 <> owed def
+R1966:1969 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R1928:1931 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R1911:1918 Vk.M0 <> c5_rests def
+R1932:1938 Stdlib.Lists.List <> existsb def
+R1953:1955 Vk.M0 <> own def
+R1941:1947 Stdlib.Arith.PeanoNat Nat eqb def
+R1970:1975 Vk.M0 <> waived def
+R2024:2029 Stdlib.Lists.List <> filter def
+R2055:2057 Vk.M0 <> own def
+binder 2036:2036 <> n:16
+R2041:2047 Stdlib.Arith.PeanoNat Nat ltb def
+R2049:2049 Vk.Checkpoint <> n:16 var
+binder 2036:2036 <> n:17
+R2049:2049 Vk.Checkpoint <> n:17 var
+prf 2358:2395 <> at_a_checkpoint_nothing_is_known_wrong
+R2413:2420 Vk.M0 <> ontology rec
+binder 2409:2409 <> O:18
+R2429:2438 Vk.Checkpoint <> checkpoint def
+R2440:2440 Vk.Checkpoint <> O:18 var
+binder 2424:2425 <> cp:19
+R2448:2452 Vk.M0 <> piece def
+binder 2444:2444 <> p:20
+R2469:2477 Corelib.Init.Specif <> proj1_sig def
+R2479:2480 Vk.Checkpoint <> cp:19 var
+binder 2464:2464 <> l:21
+R2505:2508 Corelib.Init.Notations <> ::type_scope:x_'->'_x not
+R2489:2490 Stdlib.Lists.List <> In def
+R2495:2499 Vk.M0 <> canon def
+R2501:2501 Vk.Checkpoint <> O:18 var
+R2503:2503 Vk.Checkpoint <> l:21 var
+R2492:2492 Vk.Checkpoint <> p:20 var
+R2529:2532 Corelib.Init.Notations <> ::type_scope:x_'->'_x not
+R2521:2523 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2509:2514 Vk.M0 <> waived def
+R2516:2516 Vk.Checkpoint <> l:21 var
+R2520:2520 Vk.Checkpoint <> p:20 var
+R2524:2528 Corelib.Init.Datatypes <> false constr
+R2539:2541 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2533:2534 Vk.M0 <> c4 def
+R2536:2536 Vk.Checkpoint <> l:21 var
+R2538:2538 Vk.Checkpoint <> p:20 var
+R2542:2545 Corelib.Init.Datatypes <> true constr
+R2606:2613 Vk.M0 <> frontier def
+R2678:2680 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2632:2634 Corelib.Lists.ListDef <> map def
+R2655:2658 Vk.M0 <> owed def
+R2665:2669 Vk.M0 <> canon def
+binder 2641:2641 <> n:22
+R2646:2646 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2648:2649 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2651:2651 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2647:2647 Vk.Checkpoint <> n:22 var
+R2681:2682 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+binder 2641:2641 <> n:23
+R2647:2647 Vk.Checkpoint <> n:23 var
+R2703:2714 Vk.Checkpoint <> flat_map_nil thm
+R2775:2779 Vk.M0 <> canon def
+binder 2721:2721 <> p:24
+R2726:2728 Corelib.Lists.ListDef <> map def
+R2749:2752 Vk.M0 <> owed def
+R2759:2763 Vk.M0 <> canon def
+R2770:2770 Vk.Checkpoint <> p:24 var
+binder 2735:2735 <> n:25
+R2740:2740 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2742:2743 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2745:2745 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2741:2741 Vk.Checkpoint <> n:25 var
+R2744:2744 Vk.Checkpoint <> p:24 var
+binder 2721:2721 <> p:26
+R2770:2770 Vk.Checkpoint <> p:26 var
+binder 2735:2735 <> n:27
+R2741:2741 Vk.Checkpoint <> n:27 var
+R2744:2744 Vk.Checkpoint <> p:26 var
+R2806:2815 Stdlib.Lists.List <> map_eq_nil thm
+R2830:2845 Vk.Checkpoint <> owed_nil_own_nil thm
+R2863:2865 Vk.M0 <> own def
+R2886:2887 Vk.M0 <> c4 def
+R2934:2935 Stdlib.Lists.List <> In def
+R2940:2945 Stdlib.Lists.List <> filter def
+R2984:2984 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3013:3017 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R2988:2989 Vk.M0 <> c1 def
+R3010:3010 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3012:3012 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3002:3003 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R3018:3018 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3047:3057 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3022:3023 Vk.M0 <> c2 def
+R3044:3044 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3046:3046 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3036:3037 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R3061:3064 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3058:3058 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3060:3060 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3065:3065 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3100:3110 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3069:3076 Vk.M0 <> c5_asked def
+R3097:3097 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3099:3099 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3089:3090 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R3111:3111 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3140:3144 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3115:3116 Vk.M0 <> c6 def
+R3137:3137 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3139:3139 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3129:3130 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R3145:3145 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3186:3197 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3224:3224 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3149:3150 Vk.M0 <> c8 def
+R3157:3161 Vk.M0 <> canon def
+R3183:3183 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3185:3185 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3175:3176 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R3201:3202 Vk.M0 <> c9 def
+R3221:3221 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3223:3223 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3213:3214 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+binder 2952:2952 <> n:28
+R2957:2960 Corelib.Init.Datatypes <> negb def
+R2963:2968 Vk.M0 <> waived def
+R2972:2972 Vk.Checkpoint <> n:28 var
+binder 2952:2952 <> n:29
+R2972:2972 Vk.Checkpoint <> n:29 var
+R3247:3255 Stdlib.Lists.List <> filter_In thm
+R3277:3285 Stdlib.Lists.List <> in_or_app thm
+R3301:3309 Stdlib.Lists.List <> in_or_app thm
+R3438:3475 Vk.Checkpoint <> at_a_checkpoint_nothing_is_known_wrong thm
+R3496:3511 Vk.M0 <> canon_is_reached thm

@@ -1,0 +1,27 @@
+     = ["O"; "T"; "U"; "c"; "d"; "e"; "k"; "u"]
+     : list piece
+     = ("S0", [], [])
+     : string * list (nat * piece) * list (nat * piece)
+     = ("08:30", [(4, "c"); (5, "u")], [(4, "c"); (5, "u")])
+     : string * list (nat * piece) * list (nat * piece)
+     = ("09:00", [(5, "T"); (6, "T"); (4, "c"); (2, "u"); (5, "u")],
+        [(5, "T"); (6, "T"); (4, "c"); (2, "u"); (5, "u")])
+     : string * list (nat * piece) * list (nat * piece)
+     = ("10:00", [(4, "c"); (5, "u")], [(4, "c"); (5, "u")])
+     : string * list (nat * piece) * list (nat * piece)
+     = ("10:30", [(5, "T"); (4, "c"); (5, "c"); (2, "u"); (5, "u")],
+        [(5, "T"); (6, "T"); (4, "c"); (5, "c"); (2, "u"); (5, "u")])
+     : string * list (nat * piece) * list (nat * piece)
+     = ("11:00", [(5, "T"); (2, "u"); (5, "u")],
+        [(5, "T"); (6, "T"); (2, "u"); (5, "u")])
+     : string * list (nat * piece) * list (nat * piece)
+     = ("11:30", [(5, "T"); (5, "c"); (2, "u"); (5, "u")],
+        [(5, "T"); (6, "T"); (5, "c"); (2, "u"); (5, "u")])
+     : string * list (nat * piece) * list (nat * piece)
+     = ("12:00", [(5, "T"); (2, "u"); (5, "u")],
+        [(5, "T"); (6, "T"); (2, "u"); (5, "u")])
+     : string * list (nat * piece) * list (nat * piece)
+     = ("13:00", [(5, "T"); (5, "U")], [(5, "T"); (6, "T"); (5, "U")])
+     : string * list (nat * piece) * list (nat * piece)
+     = ("14:00", [], [(6, "T")])
+     : string * list (nat * piece) * list (nat * piece)

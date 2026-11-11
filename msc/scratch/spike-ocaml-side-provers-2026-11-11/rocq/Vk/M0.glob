@@ -1,0 +1,1199 @@
+DIGEST 80a301e42eea5219e045d30dbe0891d7
+FVk.M0
+R316:319 Stdlib.Lists.List <> <> lib
+R321:326 Stdlib.Strings.String <> <> lib
+R328:331 Stdlib.Bool.Bool <> <> lib
+R333:337 Stdlib.Arith.Arith <> <> lib
+R339:341 Stdlib.micromega.Lia <> <> lib
+R367:371 Vk.Reach <> <> lib
+R381:393 Stdlib.Lists.List ListNotations <> mod
+def 456:460 <> piece
+R465:470 Stdlib.Strings.String <> string ind
+def 484:490 <> version
+R495:500 Stdlib.Strings.String <> string ind
+def 514:516 <> eqs
+R521:530 Stdlib.Strings.String <> eqb def
+ind 596:600 <> shape
+constr 607:614 <> Veritoid
+constr 665:672 <> Assembly
+R628:631 Corelib.Init.Datatypes <> bool ind
+binder 617:624 <> is_claim:3
+R651:654 Corelib.Init.Datatypes <> list ind
+R656:660 Vk.M0 <> piece def
+binder 635:647 <> predicated_on:4
+R687:690 Corelib.Init.Datatypes <> bool ind
+binder 675:683 <> is_result:5
+R702:705 Corelib.Init.Datatypes <> list ind
+R722:724 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R714:716 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R708:713 Stdlib.Strings.String <> string ind
+R717:721 Vk.M0 <> piece def
+R725:728 Corelib.Init.Datatypes <> bool ind
+binder 694:698 <> slots:6
+scheme 596:600 <> shape_rect
+scheme 596:600 <> shape_ind
+scheme 596:600 <> shape_rec
+scheme 596:600 <> shape_sind
+rec 799:806 <> ontology
+proj 815:822 <> shape_of
+proj 862:866 <> inner
+proj 941:951 <> write_looks
+R831:834 Corelib.Init.Notations <> ::type_scope:x_'->'_x not
+R826:830 Vk.M0 <> piece def
+R842:845 Corelib.Init.Notations <> ::type_scope:x_'->'_x not
+R835:841 Vk.M0 <> version def
+R846:851 Corelib.Init.Datatypes <> option ind
+R853:857 Vk.M0 <> shape ind
+R870:873 Corelib.Init.Datatypes <> list ind
+R882:884 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R876:881 Stdlib.Strings.String <> string ind
+R885:890 Stdlib.Strings.String <> string ind
+R955:958 Corelib.Init.Datatypes <> bool ind
+rec 1141:1148 <> evidence
+proj 1157:1162 <> e_name
+proj 1176:1182 <> e_piece
+proj 1195:1203 <> e_version
+proj 1218:1228 <> e_criterion
+proj 1242:1248 <> e_holds
+proj 1260:1266 <> e_reads
+R1166:1171 Stdlib.Strings.String <> string ind
+R1186:1190 Vk.M0 <> piece def
+R1207:1213 Vk.M0 <> version def
+R1232:1237 Stdlib.Strings.String <> string ind
+R1252:1255 Corelib.Init.Datatypes <> bool ind
+R1270:1273 Corelib.Init.Datatypes <> list ind
+R1281:1283 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1276:1280 Vk.M0 <> piece def
+R1284:1290 Vk.M0 <> version def
+ind 1307:1311 <> event
+constr 1318:1322 <> Write
+constr 1352:1359 <> Evidence
+constr 1378:1381 <> Same
+constr 1426:1431 <> Affirm
+constr 1487:1491 <> Raise
+constr 1528:1534 <> Promise
+constr 1566:1570 <> Waive
+constr 1604:1611 <> SetAside
+constr 1628:1635 <> MarkRoot
+R1329:1333 Vk.M0 <> piece def
+binder 1325:1325 <> p:20
+R1341:1347 Vk.M0 <> version def
+binder 1337:1337 <> v:21
+R1366:1373 Vk.M0 <> evidence rec
+binder 1362:1362 <> x:22
+R1388:1393 Stdlib.Strings.String <> string ind
+binder 1384:1384 <> e:23
+R1401:1405 Vk.M0 <> piece def
+binder 1397:1397 <> p:24
+R1415:1421 Vk.M0 <> version def
+binder 1409:1409 <> v:25
+binder 1411:1411 <> w:26
+R1438:1442 Vk.M0 <> piece def
+binder 1434:1434 <> p:27
+R1450:1456 Vk.M0 <> version def
+binder 1446:1446 <> v:28
+R1464:1468 Vk.M0 <> piece def
+binder 1460:1460 <> q:29
+R1476:1482 Vk.M0 <> version def
+binder 1472:1472 <> w:30
+R1498:1502 Vk.M0 <> piece def
+binder 1494:1494 <> p:31
+R1518:1523 Stdlib.Strings.String <> string ind
+binder 1506:1514 <> criterion:32
+R1541:1545 Vk.M0 <> piece def
+binder 1537:1537 <> a:33
+R1556:1561 Stdlib.Strings.String <> string ind
+binder 1549:1552 <> slot:34
+R1585:1587 Corelib.Init.Datatypes <> nat ind
+binder 1573:1581 <> condition:35
+R1595:1599 Vk.M0 <> piece def
+binder 1591:1591 <> p:36
+R1618:1623 Stdlib.Strings.String <> string ind
+binder 1614:1614 <> e:37
+R1642:1646 Vk.M0 <> piece def
+binder 1638:1638 <> a:38
+scheme 1307:1311 <> event_rect
+scheme 1307:1311 <> event_ind
+scheme 1307:1311 <> event_rec
+scheme 1307:1311 <> event_sind
+def 1662:1665 <> line
+R1670:1673 Corelib.Init.Datatypes <> list ind
+R1675:1679 Vk.M0 <> event ind
+def 1750:1752 <> sel
+R1759:1762 Vk.M0 <> line def
+binder 1755:1755 <> l:39
+R1770:1774 Vk.M0 <> piece def
+binder 1766:1766 <> p:40
+R1779:1784 Corelib.Init.Datatypes <> option ind
+R1786:1792 Vk.M0 <> version def
+R1799:1807 Stdlib.Lists.List <> fold_left def
+R1907:1910 Corelib.Init.Datatypes <> None constr
+R1905:1905 Vk.M0 <> l:39 var
+binder 1818:1820 <> cur:41
+binder 1822:1822 <> e:42
+R1833:1833 Vk.M0 <> e:42 var
+R1840:1844 Vk.M0 <> Write constr
+R1856:1858 Vk.M0 <> eqs def
+R1862:1862 Vk.M0 <> p:40 var
+R1881:1883 Vk.M0 <> cur:41 var
+R1869:1872 Corelib.Init.Datatypes <> Some constr
+R1892:1894 Vk.M0 <> cur:41 var
+def 1925:1931 <> written
+R1938:1941 Vk.M0 <> line def
+binder 1934:1934 <> l:44
+R1946:1949 Corelib.Init.Datatypes <> list ind
+R1951:1955 Vk.M0 <> piece def
+R1962:1966 Stdlib.Lists.List <> nodup def
+R1980:1987 Stdlib.Lists.List <> flat_map def
+R2044:2044 Vk.M0 <> l:44 var
+binder 1994:1994 <> e:45
+R2005:2005 Vk.M0 <> e:45 var
+R2012:2016 Vk.M0 <> Write constr
+R2025:2025 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R2027:2027 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R2036:2037 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R1968:1977 Stdlib.Strings.String <> string_dec def
+def 2060:2069 <> is_written
+R2076:2079 Vk.M0 <> line def
+binder 2072:2072 <> l:47
+R2087:2091 Vk.M0 <> piece def
+binder 2083:2083 <> p:48
+R2096:2099 Corelib.Init.Datatypes <> bool ind
+R2104:2110 Stdlib.Lists.List <> existsb def
+R2121:2127 Vk.M0 <> written def
+R2129:2129 Vk.M0 <> l:47 var
+R2113:2115 Vk.M0 <> eqs def
+R2117:2117 Vk.M0 <> p:48 var
+def 2145:2153 <> shape_now
+R2160:2167 Vk.M0 <> ontology rec
+binder 2156:2156 <> O:49
+R2175:2178 Vk.M0 <> line def
+binder 2171:2171 <> l:50
+R2186:2190 Vk.M0 <> piece def
+binder 2182:2182 <> p:51
+R2195:2200 Corelib.Init.Datatypes <> option ind
+R2202:2206 Vk.M0 <> shape ind
+R2219:2221 Vk.M0 <> sel def
+R2223:2223 Vk.M0 <> l:50 var
+R2225:2225 Vk.M0 <> p:51 var
+R2232:2235 Corelib.Init.Datatypes <> Some constr
+R2242:2249 Vk.M0 <> shape_of proj
+R2251:2251 Vk.M0 <> O:49 var
+R2253:2253 Vk.M0 <> p:51 var
+R2259:2262 Corelib.Init.Datatypes <> None constr
+R2267:2270 Corelib.Init.Datatypes <> None constr
+def 2289:2296 <> slots_of
+binder 2298:2298 <> O:52
+binder 2300:2300 <> l:53
+binder 2302:2302 <> p:54
+R2315:2323 Vk.M0 <> shape_now def
+R2325:2325 Vk.M0 <> O:52 var
+R2327:2327 Vk.M0 <> l:53 var
+R2329:2329 Vk.M0 <> p:54 var
+R2336:2339 Corelib.Init.Datatypes <> Some constr
+R2342:2349 Vk.M0 <> Assembly constr
+R2368:2369 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+def 2388:2397 <> fillers_of
+binder 2399:2399 <> O:55
+binder 2401:2401 <> l:56
+binder 2403:2403 <> p:57
+R2408:2410 Corelib.Lists.ListDef <> map def
+R2436:2443 Vk.M0 <> slots_of def
+R2445:2445 Vk.M0 <> O:55 var
+R2447:2447 Vk.M0 <> l:56 var
+R2449:2449 Vk.M0 <> p:57 var
+binder 2417:2417 <> s:58
+R2422:2424 Corelib.Init.Datatypes <> snd def
+R2427:2429 Corelib.Init.Datatypes <> fst def
+R2431:2431 Vk.M0 <> s:58 var
+def 2465:2472 <> preds_of
+binder 2474:2474 <> O:59
+binder 2476:2476 <> l:60
+binder 2478:2478 <> p:61
+R2491:2499 Vk.M0 <> shape_now def
+R2501:2501 Vk.M0 <> O:59 var
+R2503:2503 Vk.M0 <> l:60 var
+R2505:2505 Vk.M0 <> p:61 var
+R2512:2515 Corelib.Init.Datatypes <> Some constr
+R2518:2525 Vk.M0 <> Veritoid constr
+R2546:2547 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+def 2566:2570 <> roots
+R2577:2580 Vk.M0 <> line def
+binder 2573:2573 <> l:62
+R2585:2588 Corelib.Init.Datatypes <> list ind
+R2590:2594 Vk.M0 <> piece def
+R2601:2608 Stdlib.Lists.List <> flat_map def
+R2666:2666 Vk.M0 <> l:62 var
+binder 2615:2615 <> e:63
+R2626:2626 Vk.M0 <> e:63 var
+R2633:2640 Vk.M0 <> MarkRoot constr
+R2647:2647 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R2649:2649 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R2658:2659 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+def 2681:2691 <> evidence_of
+R2698:2701 Vk.M0 <> line def
+binder 2694:2694 <> l:65
+R2706:2709 Corelib.Init.Datatypes <> list ind
+R2711:2718 Vk.M0 <> evidence rec
+R2725:2732 Stdlib.Lists.List <> flat_map def
+R2790:2790 Vk.M0 <> l:65 var
+binder 2739:2739 <> e:66
+R2750:2750 Vk.M0 <> e:66 var
+R2757:2764 Vk.M0 <> Evidence constr
+R2771:2771 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R2773:2773 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R2782:2783 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+def 2805:2812 <> numbered
+R2819:2822 Vk.M0 <> line def
+binder 2815:2815 <> l:68
+R2827:2830 Corelib.Init.Datatypes <> list ind
+R2836:2838 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R2833:2835 Corelib.Init.Datatypes <> nat ind
+R2839:2843 Vk.M0 <> event ind
+R2849:2855 Stdlib.Lists.List <> combine def
+R2881:2881 Vk.M0 <> l:68 var
+R2858:2860 Corelib.Lists.ListDef <> seq def
+R2865:2875 Stdlib.Lists.List <> length abbrev
+R2877:2877 Vk.M0 <> l:68 var
+def 2972:2980 <> out_slots
+R2987:2994 Vk.M0 <> ontology rec
+binder 2983:2983 <> O:69
+R3002:3005 Vk.M0 <> line def
+binder 2998:2998 <> l:70
+R3013:3017 Vk.M0 <> piece def
+binder 3009:3009 <> p:71
+R3022:3025 Corelib.Init.Datatypes <> list ind
+R3027:3031 Vk.M0 <> piece def
+R3041:3050 Vk.M0 <> is_written def
+R3052:3052 Vk.M0 <> l:70 var
+R3054:3054 Vk.M0 <> p:71 var
+R3167:3168 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R3063:3070 Stdlib.Lists.List <> flat_map def
+R3144:3151 Vk.M0 <> slots_of def
+R3153:3153 Vk.M0 <> O:69 var
+R3155:3155 Vk.M0 <> l:70 var
+R3157:3157 Vk.M0 <> p:71 var
+R3095:3097 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3087:3089 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3081:3086 Stdlib.Strings.String <> string ind
+R3090:3094 Vk.M0 <> piece def
+R3098:3101 Corelib.Init.Datatypes <> bool ind
+binder 3077:3077 <> s:72
+R3109:3111 Corelib.Init.Datatypes <> snd def
+R3113:3113 Vk.M0 <> s:72 var
+R3128:3128 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3140:3140 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R3129:3131 Corelib.Init.Datatypes <> snd def
+R3134:3136 Corelib.Init.Datatypes <> fst def
+R3138:3138 Vk.M0 <> s:72 var
+R3120:3121 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+def 3183:3195 <> slot_universe
+binder 3197:3197 <> O:73
+binder 3199:3199 <> l:74
+R3211:3214 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3204:3208 Vk.M0 <> roots def
+R3210:3210 Vk.M0 <> l:74 var
+R3215:3222 Stdlib.Lists.List <> flat_map def
+R3241:3247 Vk.M0 <> written def
+R3249:3249 Vk.M0 <> l:74 var
+R3225:3233 Vk.M0 <> out_slots def
+R3235:3235 Vk.M0 <> O:73 var
+R3237:3237 Vk.M0 <> l:74 var
+def 3265:3269 <> canon
+R3276:3283 Vk.M0 <> ontology rec
+binder 3272:3272 <> O:75
+R3291:3294 Vk.M0 <> line def
+binder 3287:3287 <> l:76
+R3299:3302 Corelib.Init.Datatypes <> list ind
+R3304:3308 Vk.M0 <> piece def
+R3315:3319 Vk.Reach <> reach def
+R3348:3360 Vk.M0 <> slot_universe def
+R3362:3362 Vk.M0 <> O:75 var
+R3364:3364 Vk.M0 <> l:76 var
+R3338:3342 Vk.M0 <> roots def
+R3344:3344 Vk.M0 <> l:76 var
+R3322:3330 Vk.M0 <> out_slots def
+R3332:3332 Vk.M0 <> O:75 var
+R3334:3334 Vk.M0 <> l:76 var
+prf 3375:3387 <> is_written_In
+binder 3398:3398 <> l:77
+binder 3400:3400 <> p:78
+R3424:3427 Corelib.Init.Notations <> ::type_scope:x_'->'_x not
+R3417:3419 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3403:3412 Vk.M0 <> is_written def
+R3414:3414 Vk.M0 <> l:77 var
+R3416:3416 Vk.M0 <> p:78 var
+R3420:3423 Corelib.Init.Datatypes <> true constr
+R3428:3429 Stdlib.Lists.List <> In def
+R3434:3440 Vk.M0 <> written def
+R3442:3442 Vk.M0 <> l:77 var
+R3431:3431 Vk.M0 <> p:78 var
+R3476:3485 Vk.M0 <> is_written def
+R3499:3512 Stdlib.Lists.List <> existsb_exists thm
+R3555:3567 Stdlib.Strings.String <> eqb_eq thm
+prf 3746:3761 <> canon_is_reached
+binder 3772:3772 <> O:79
+binder 3774:3774 <> l:80
+binder 3776:3776 <> r:81
+R3816:3820 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R3781:3787 Vk.Reach <> Reached ind
+R3815:3815 Vk.M0 <> r:81 var
+R3806:3810 Vk.M0 <> roots def
+R3812:3812 Vk.M0 <> l:80 var
+R3790:3798 Vk.M0 <> out_slots def
+R3800:3800 Vk.M0 <> O:79 var
+R3802:3802 Vk.M0 <> l:80 var
+R3821:3822 Stdlib.Lists.List <> In def
+R3827:3831 Vk.M0 <> canon def
+R3833:3833 Vk.M0 <> O:79 var
+R3835:3835 Vk.M0 <> l:80 var
+R3824:3824 Vk.M0 <> r:81 var
+R3869:3873 Vk.M0 <> canon def
+R3882:3897 Vk.Reach <> reach_is_reached thm
+R3925:3937 Vk.M0 <> slot_universe def
+R3946:3954 Stdlib.Lists.List <> in_or_app thm
+R3974:3984 Stdlib.Lists.List <> in_flat_map thm
+R4016:4028 Vk.M0 <> is_written_In thm
+R4038:4046 Vk.M0 <> out_slots def
+R4070:4079 Vk.M0 <> is_written def
+R4157:4169 Vk.M0 <> slot_universe def
+R4178:4186 Stdlib.Lists.List <> in_or_app thm
+def 4316:4324 <> out_preds
+R4331:4338 Vk.M0 <> ontology rec
+binder 4327:4327 <> O:82
+R4346:4349 Vk.M0 <> line def
+binder 4342:4342 <> l:83
+R4357:4361 Vk.M0 <> piece def
+binder 4353:4353 <> p:84
+R4366:4369 Corelib.Init.Datatypes <> list ind
+R4371:4375 Vk.M0 <> piece def
+R4385:4394 Vk.M0 <> is_written def
+R4396:4396 Vk.M0 <> l:83 var
+R4398:4398 Vk.M0 <> p:84 var
+R4425:4426 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R4405:4412 Vk.M0 <> preds_of def
+R4414:4414 Vk.M0 <> O:82 var
+R4416:4416 Vk.M0 <> l:83 var
+R4418:4418 Vk.M0 <> p:84 var
+def 4441:4448 <> rests_on
+R4455:4462 Vk.M0 <> ontology rec
+binder 4451:4451 <> O:85
+R4470:4473 Vk.M0 <> line def
+binder 4466:4466 <> l:86
+R4481:4485 Vk.M0 <> piece def
+binder 4477:4477 <> p:87
+R4490:4493 Corelib.Init.Datatypes <> list ind
+R4495:4499 Vk.M0 <> piece def
+R4506:4510 Vk.Reach <> reach def
+R4568:4571 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R4554:4561 Vk.M0 <> preds_of def
+R4563:4563 Vk.M0 <> O:85 var
+R4565:4565 Vk.M0 <> l:86 var
+R4567:4567 Vk.M0 <> p:87 var
+R4572:4579 Stdlib.Lists.List <> flat_map def
+R4598:4604 Vk.M0 <> written def
+R4606:4606 Vk.M0 <> l:86 var
+R4582:4590 Vk.M0 <> out_preds def
+R4592:4592 Vk.M0 <> O:85 var
+R4594:4594 Vk.M0 <> l:86 var
+R4529:4536 Vk.M0 <> preds_of def
+R4538:4538 Vk.M0 <> O:85 var
+R4540:4540 Vk.M0 <> l:86 var
+R4542:4542 Vk.M0 <> p:87 var
+R4513:4521 Vk.M0 <> out_preds def
+R4523:4523 Vk.M0 <> O:85 var
+R4525:4525 Vk.M0 <> l:86 var
+prf 4620:4638 <> rests_on_is_reached
+binder 4649:4649 <> O:88
+binder 4651:4651 <> l:89
+binder 4653:4653 <> p:90
+binder 4655:4655 <> r:91
+R4702:4706 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R4660:4666 Vk.Reach <> Reached ind
+R4701:4701 Vk.M0 <> r:91 var
+R4685:4692 Vk.M0 <> preds_of def
+R4694:4694 Vk.M0 <> O:88 var
+R4696:4696 Vk.M0 <> l:89 var
+R4698:4698 Vk.M0 <> p:90 var
+R4669:4677 Vk.M0 <> out_preds def
+R4679:4679 Vk.M0 <> O:88 var
+R4681:4681 Vk.M0 <> l:89 var
+R4707:4708 Stdlib.Lists.List <> In def
+R4713:4720 Vk.M0 <> rests_on def
+R4722:4722 Vk.M0 <> O:88 var
+R4724:4724 Vk.M0 <> l:89 var
+R4726:4726 Vk.M0 <> p:90 var
+R4710:4710 Vk.M0 <> r:91 var
+R4762:4769 Vk.M0 <> rests_on def
+R4778:4793 Vk.Reach <> reach_is_reached thm
+R4820:4828 Stdlib.Lists.List <> in_or_app thm
+R4844:4854 Stdlib.Lists.List <> in_flat_map thm
+R4886:4898 Vk.M0 <> is_written_In thm
+R4908:4916 Vk.M0 <> out_preds def
+R4940:4949 Vk.M0 <> is_written def
+R5026:5034 Stdlib.Lists.List <> in_or_app thm
+def 5119:5122 <> same
+R5129:5132 Vk.M0 <> line def
+binder 5125:5125 <> l:92
+R5140:5145 Stdlib.Strings.String <> string ind
+binder 5136:5136 <> e:93
+R5153:5157 Vk.M0 <> piece def
+binder 5149:5149 <> p:94
+R5167:5173 Vk.M0 <> version def
+binder 5161:5161 <> v:95
+binder 5163:5163 <> w:96
+R5178:5181 Corelib.Init.Datatypes <> bool ind
+R5195:5200 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R5188:5190 Vk.M0 <> eqs def
+R5192:5192 Vk.M0 <> v:95 var
+R5194:5194 Vk.M0 <> w:96 var
+R5201:5207 Stdlib.Lists.List <> existsb def
+R5427:5427 Vk.M0 <> l:92 var
+binder 5221:5221 <> x:97
+R5232:5232 Vk.M0 <> x:97 var
+R5258:5261 Vk.M0 <> Same constr
+R5317:5321 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5366:5366 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5305:5308 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5297:5299 Vk.M0 <> eqs def
+R5304:5304 Vk.M0 <> e:93 var
+R5309:5311 Vk.M0 <> eqs def
+R5316:5316 Vk.M0 <> p:94 var
+R5322:5322 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R5341:5346 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R5365:5365 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R5330:5333 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5323:5325 Vk.M0 <> eqs def
+R5329:5329 Vk.M0 <> v:95 var
+R5334:5336 Vk.M0 <> eqs def
+R5340:5340 Vk.M0 <> w:96 var
+R5354:5357 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5347:5349 Vk.M0 <> eqs def
+R5353:5353 Vk.M0 <> w:96 var
+R5358:5360 Vk.M0 <> eqs def
+R5364:5364 Vk.M0 <> v:95 var
+R5392:5396 Corelib.Init.Datatypes <> false constr
+def 5442:5444 <> at_
+R5451:5454 Vk.M0 <> line def
+binder 5447:5447 <> l:99
+R5462:5467 Stdlib.Strings.String <> string ind
+binder 5458:5458 <> e:100
+R5475:5479 Vk.M0 <> piece def
+binder 5471:5471 <> p:101
+R5487:5493 Vk.M0 <> version def
+binder 5483:5483 <> v:102
+R5498:5501 Corelib.Init.Datatypes <> bool ind
+R5514:5516 Vk.M0 <> sel def
+R5518:5518 Vk.M0 <> l:99 var
+R5520:5520 Vk.M0 <> p:101 var
+R5527:5530 Corelib.Init.Datatypes <> Some constr
+R5537:5540 Vk.M0 <> same def
+R5542:5542 Vk.M0 <> l:99 var
+R5544:5544 Vk.M0 <> e:100 var
+R5546:5546 Vk.M0 <> p:101 var
+R5548:5548 Vk.M0 <> v:102 var
+R5554:5557 Corelib.Init.Datatypes <> None constr
+R5562:5566 Corelib.Init.Datatypes <> false constr
+def 5585:5593 <> set_aside
+R5600:5603 Vk.M0 <> line def
+binder 5596:5596 <> l:103
+R5611:5616 Stdlib.Strings.String <> string ind
+binder 5607:5607 <> e:104
+R5621:5624 Corelib.Init.Datatypes <> bool ind
+R5631:5637 Stdlib.Lists.List <> existsb def
+R5704:5704 Vk.M0 <> l:103 var
+binder 5644:5644 <> x:105
+R5655:5655 Vk.M0 <> x:105 var
+R5662:5669 Vk.M0 <> SetAside constr
+R5677:5679 Vk.M0 <> eqs def
+R5684:5684 Vk.M0 <> e:104 var
+R5693:5697 Corelib.Init.Datatypes <> false constr
+def 5719:5725 <> applies
+R5732:5735 Vk.M0 <> line def
+binder 5728:5728 <> l:107
+R5743:5750 Vk.M0 <> evidence rec
+binder 5739:5739 <> x:108
+R5755:5758 Corelib.Init.Datatypes <> bool ind
+R5842:5847 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5794:5799 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R5765:5768 Corelib.Init.Datatypes <> negb def
+R5771:5779 Vk.M0 <> set_aside def
+R5781:5781 Vk.M0 <> l:107 var
+R5784:5789 Vk.M0 <> e_name proj
+R5791:5791 Vk.M0 <> x:108 var
+R5800:5802 Vk.M0 <> at_ def
+R5804:5804 Vk.M0 <> l:107 var
+R5807:5812 Vk.M0 <> e_name proj
+R5814:5814 Vk.M0 <> x:108 var
+R5818:5824 Vk.M0 <> e_piece proj
+R5826:5826 Vk.M0 <> x:108 var
+R5830:5838 Vk.M0 <> e_version proj
+R5840:5840 Vk.M0 <> x:108 var
+R5848:5854 Stdlib.Lists.List <> forallb def
+R5901:5907 Vk.M0 <> e_reads proj
+R5909:5909 Vk.M0 <> x:108 var
+binder 5861:5861 <> r:109
+R5866:5868 Vk.M0 <> at_ def
+R5870:5870 Vk.M0 <> l:107 var
+R5873:5878 Vk.M0 <> e_name proj
+R5880:5880 Vk.M0 <> x:108 var
+R5884:5886 Corelib.Init.Datatypes <> fst def
+R5888:5888 Vk.M0 <> r:109 var
+R5892:5894 Corelib.Init.Datatypes <> snd def
+R5896:5896 Vk.M0 <> r:109 var
+def 5996:6002 <> is_some
+binder 6005:6005 <> A:110
+R6013:6018 Corelib.Init.Datatypes <> option ind
+R6020:6020 Vk.M0 <> A:110 var
+binder 6009:6009 <> o:111
+R6025:6028 Corelib.Init.Datatypes <> bool ind
+R6039:6039 Vk.M0 <> o:111 var
+R6046:6049 Corelib.Init.Datatypes <> Some constr
+R6056:6059 Corelib.Init.Datatypes <> true constr
+R6063:6066 Corelib.Init.Datatypes <> None constr
+R6071:6075 Corelib.Init.Datatypes <> false constr
+def 6151:6152 <> c1
+binder 6154:6154 <> O:113
+binder 6156:6156 <> l:114
+binder 6158:6158 <> p:115
+R6162:6165 Corelib.Init.Datatypes <> bool ind
+R6172:6178 Stdlib.Lists.List <> forallb def
+R6224:6227 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R6210:6217 Vk.M0 <> preds_of def
+R6219:6219 Vk.M0 <> O:113 var
+R6221:6221 Vk.M0 <> l:114 var
+R6223:6223 Vk.M0 <> p:115 var
+R6228:6237 Vk.M0 <> fillers_of def
+R6239:6239 Vk.M0 <> O:113 var
+R6241:6241 Vk.M0 <> l:114 var
+R6243:6243 Vk.M0 <> p:115 var
+binder 6185:6185 <> q:116
+R6190:6196 Vk.M0 <> is_some def
+R6199:6201 Vk.M0 <> sel def
+R6203:6203 Vk.M0 <> l:114 var
+R6205:6205 Vk.M0 <> q:116 var
+def 6302:6305 <> snap
+R6312:6315 Vk.M0 <> line def
+binder 6308:6308 <> l:117
+R6325:6329 Vk.M0 <> piece def
+binder 6319:6319 <> p:118
+binder 6321:6321 <> q:119
+R6345:6350 Corelib.Init.Datatypes <> option ind
+R6352:6358 Vk.M0 <> version def
+binder 6333:6336 <> curq:120
+binder 6338:6341 <> shot:121
+R6363:6368 Corelib.Init.Datatypes <> option ind
+R6370:6376 Vk.M0 <> version def
+R6389:6389 Vk.M0 <> l:117 var
+R6400:6401 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R6406:6409 Vk.M0 <> shot:121 var
+R6424:6427 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6415:6419 Vk.M0 <> Write constr
+R6456:6458 Vk.M0 <> eqs def
+R6462:6462 Vk.M0 <> q:119 var
+R6481:6484 Vk.M0 <> curq:120 var
+R6469:6472 Corelib.Init.Datatypes <> Some constr
+binder 6444:6448 <> curq':124
+R6495:6498 Vk.M0 <> snap:122 def
+R6517:6519 Vk.M0 <> eqs def
+R6523:6523 Vk.M0 <> p:118 var
+R6541:6544 Vk.M0 <> shot:121 var
+R6530:6534 Vk.M0 <> curq':124 var
+R6507:6511 Vk.M0 <> curq':124 var
+R6505:6505 Vk.M0 <> q:119 var
+R6503:6503 Vk.M0 <> p:118 var
+R6552:6555 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6562:6565 Vk.M0 <> snap:122 def
+R6579:6582 Vk.M0 <> shot:121 var
+R6574:6577 Vk.M0 <> curq:120 var
+R6572:6572 Vk.M0 <> q:119 var
+R6570:6570 Vk.M0 <> p:118 var
+def 6603:6617 <> written_against
+R6624:6627 Vk.M0 <> line def
+binder 6620:6620 <> l:125
+R6637:6641 Vk.M0 <> piece def
+binder 6631:6631 <> p:126
+binder 6633:6633 <> q:127
+R6646:6649 Corelib.Init.Datatypes <> bool ind
+R6684:6686 Vk.M0 <> sel def
+R6688:6688 Vk.M0 <> l:125 var
+R6690:6690 Vk.M0 <> q:127 var
+R6662:6665 Vk.M0 <> snap def
+R6667:6667 Vk.M0 <> l:125 var
+R6669:6669 Vk.M0 <> p:126 var
+R6671:6671 Vk.M0 <> q:127 var
+R6673:6676 Corelib.Init.Datatypes <> None constr
+R6678:6681 Corelib.Init.Datatypes <> None constr
+R6701:6704 Corelib.Init.Datatypes <> Some constr
+R6709:6712 Corelib.Init.Datatypes <> Some constr
+R6719:6721 Vk.M0 <> eqs def
+R6739:6743 Corelib.Init.Datatypes <> false constr
+def 6764:6771 <> affirmed
+R6778:6781 Vk.M0 <> line def
+binder 6774:6774 <> l:128
+R6791:6795 Vk.M0 <> piece def
+binder 6785:6785 <> p:129
+binder 6787:6787 <> q:130
+R6800:6803 Corelib.Init.Datatypes <> bool ind
+R6825:6827 Vk.M0 <> sel def
+R6829:6829 Vk.M0 <> l:128 var
+R6831:6831 Vk.M0 <> q:130 var
+R6816:6818 Vk.M0 <> sel def
+R6820:6820 Vk.M0 <> l:128 var
+R6822:6822 Vk.M0 <> p:129 var
+R6842:6845 Corelib.Init.Datatypes <> Some constr
+R6850:6853 Corelib.Init.Datatypes <> Some constr
+R6866:6872 Stdlib.Lists.List <> existsb def
+R7054:7054 Vk.M0 <> l:128 var
+binder 6887:6887 <> x:131
+R6898:6898 Vk.M0 <> x:131 var
+R6925:6930 Vk.M0 <> Affirm constr
+R6979:6982 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6967:6970 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6955:6958 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R6947:6949 Vk.M0 <> eqs def
+R6954:6954 Vk.M0 <> p:129 var
+R6959:6961 Vk.M0 <> eqs def
+R6971:6973 Vk.M0 <> eqs def
+R6978:6978 Vk.M0 <> q:130 var
+R6983:6985 Vk.M0 <> eqs def
+R7017:7021 Corelib.Init.Datatypes <> false constr
+R7068:7072 Corelib.Init.Datatypes <> false constr
+def 7181:7182 <> c2
+binder 7184:7184 <> O:133
+binder 7186:7186 <> l:134
+binder 7188:7188 <> p:135
+R7192:7195 Corelib.Init.Datatypes <> bool ind
+R7202:7208 Stdlib.Lists.List <> forallb def
+R7262:7269 Vk.M0 <> preds_of def
+R7271:7271 Vk.M0 <> O:133 var
+R7273:7273 Vk.M0 <> l:134 var
+R7275:7275 Vk.M0 <> p:135 var
+binder 7215:7215 <> q:136
+R7241:7244 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R7220:7234 Vk.M0 <> written_against def
+R7236:7236 Vk.M0 <> l:134 var
+R7238:7238 Vk.M0 <> p:135 var
+R7240:7240 Vk.M0 <> q:136 var
+R7245:7252 Vk.M0 <> affirmed def
+R7254:7254 Vk.M0 <> l:134 var
+R7256:7256 Vk.M0 <> p:135 var
+R7258:7258 Vk.M0 <> q:136 var
+def 7441:7452 <> was_selected
+R7459:7462 Vk.M0 <> line def
+binder 7455:7455 <> l:137
+R7470:7474 Vk.M0 <> piece def
+binder 7466:7466 <> p:138
+R7482:7488 Vk.M0 <> version def
+binder 7478:7478 <> v:139
+R7493:7496 Corelib.Init.Datatypes <> bool ind
+R7503:7509 Stdlib.Lists.List <> existsb def
+R7588:7588 Vk.M0 <> l:137 var
+binder 7516:7516 <> x:140
+R7527:7527 Vk.M0 <> x:140 var
+R7534:7538 Vk.M0 <> Write constr
+R7557:7560 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7549:7551 Vk.M0 <> eqs def
+R7556:7556 Vk.M0 <> p:138 var
+R7561:7563 Vk.M0 <> eqs def
+R7568:7568 Vk.M0 <> v:139 var
+R7577:7581 Corelib.Init.Datatypes <> false constr
+def 7603:7604 <> c4
+R7611:7614 Vk.M0 <> line def
+binder 7607:7607 <> l:142
+R7622:7626 Vk.M0 <> piece def
+binder 7618:7618 <> p:143
+R7631:7634 Corelib.Init.Datatypes <> bool ind
+R7641:7647 Stdlib.Lists.List <> forallb def
+R8334:8341 Vk.M0 <> numbered def
+R8343:8343 Vk.M0 <> l:142 var
+binder 7658:7659 <> ie:144
+R7677:7679 Corelib.Init.Datatypes <> snd def
+R7681:7682 Vk.M0 <> ie:144 var
+R7698:7705 Vk.M0 <> Evidence constr
+R7796:7813 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7763:7766 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7743:7746 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7726:7728 Vk.M0 <> eqs def
+R7731:7737 Vk.M0 <> e_piece proj
+R7742:7742 Vk.M0 <> p:143 var
+R7747:7750 Corelib.Init.Datatypes <> negb def
+R7753:7759 Vk.M0 <> e_holds proj
+R7767:7770 Corelib.Init.Datatypes <> negb def
+R7773:7781 Vk.M0 <> set_aside def
+R7783:7783 Vk.M0 <> l:142 var
+R7786:7791 Vk.M0 <> e_name proj
+R7814:7825 Vk.M0 <> was_selected def
+R7827:7827 Vk.M0 <> l:142 var
+R7829:7829 Vk.M0 <> p:143 var
+R7832:7840 Vk.M0 <> e_version proj
+R8293:8296 Corelib.Init.Datatypes <> true constr
+R7892:7908 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R7874:7877 Corelib.Init.Datatypes <> negb def
+R7880:7886 Vk.M0 <> applies def
+R7888:7888 Vk.M0 <> l:142 var
+R7909:7915 Stdlib.Lists.List <> existsb def
+R8265:8272 Vk.M0 <> numbered def
+R8274:8274 Vk.M0 <> l:142 var
+binder 7940:7941 <> jg:145
+R7973:7975 Corelib.Init.Datatypes <> snd def
+R7977:7978 Vk.M0 <> jg:145 var
+R8008:8015 Vk.M0 <> Evidence constr
+R8170:8173 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8106:8134 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8093:8096 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8072:8075 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8047:8053 Stdlib.Arith.PeanoNat Nat ltb def
+R8056:8058 Corelib.Init.Datatypes <> fst def
+R8060:8061 Vk.M0 <> ie:144 var
+R8065:8067 Corelib.Init.Datatypes <> fst def
+R8069:8070 Vk.M0 <> jg:145 var
+R8076:8078 Vk.M0 <> eqs def
+R8081:8087 Vk.M0 <> e_piece proj
+R8092:8092 Vk.M0 <> p:143 var
+R8097:8103 Vk.M0 <> e_holds proj
+R8135:8137 Vk.M0 <> eqs def
+R8140:8150 Vk.M0 <> e_criterion proj
+R8156:8166 Vk.M0 <> e_criterion proj
+R8174:8180 Vk.M0 <> applies def
+R8182:8182 Vk.M0 <> l:142 var
+R8214:8218 Corelib.Init.Datatypes <> false constr
+R8312:8315 Corelib.Init.Datatypes <> true constr
+def 8472:8479 <> c5_asked
+binder 8481:8481 <> O:146
+binder 8483:8483 <> l:147
+binder 8485:8485 <> p:148
+R8489:8492 Corelib.Init.Datatypes <> bool ind
+R8505:8513 Vk.M0 <> shape_now def
+R8515:8515 Vk.M0 <> O:146 var
+R8517:8517 Vk.M0 <> l:147 var
+R8519:8519 Vk.M0 <> p:148 var
+R8530:8533 Corelib.Init.Datatypes <> Some constr
+R8536:8543 Vk.M0 <> Veritoid constr
+R8545:8548 Corelib.Init.Datatypes <> true constr
+R8562:8568 Stdlib.Lists.List <> existsb def
+R8673:8683 Vk.M0 <> evidence_of def
+R8685:8685 Vk.M0 <> l:147 var
+binder 8575:8575 <> x:149
+R8641:8644 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8628:8631 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8597:8600 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8580:8582 Vk.M0 <> eqs def
+R8585:8591 Vk.M0 <> e_piece proj
+R8593:8593 Vk.M0 <> x:149 var
+R8596:8596 Vk.M0 <> p:148 var
+R8601:8603 Vk.M0 <> eqs def
+R8606:8616 Vk.M0 <> e_criterion proj
+R8618:8618 Vk.M0 <> x:149 var
+R8632:8638 Vk.M0 <> e_holds proj
+R8640:8640 Vk.M0 <> x:149 var
+R8645:8651 Vk.M0 <> applies def
+R8653:8653 Vk.M0 <> l:147 var
+R8655:8655 Vk.M0 <> x:149 var
+R8692:8695 Corelib.Init.Datatypes <> Some constr
+R8698:8705 Vk.M0 <> Assembly constr
+R8707:8710 Corelib.Init.Datatypes <> true constr
+R8724:8730 Stdlib.Lists.List <> existsb def
+R8945:8955 Vk.M0 <> evidence_of def
+R8957:8957 Vk.M0 <> l:147 var
+binder 8745:8745 <> x:150
+R8837:8851 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8822:8825 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8809:8812 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8778:8781 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R8761:8763 Vk.M0 <> eqs def
+R8766:8772 Vk.M0 <> e_piece proj
+R8774:8774 Vk.M0 <> x:150 var
+R8777:8777 Vk.M0 <> p:148 var
+R8782:8784 Vk.M0 <> eqs def
+R8787:8797 Vk.M0 <> e_criterion proj
+R8799:8799 Vk.M0 <> x:150 var
+R8813:8819 Vk.M0 <> e_holds proj
+R8821:8821 Vk.M0 <> x:150 var
+R8826:8832 Vk.M0 <> applies def
+R8834:8834 Vk.M0 <> l:147 var
+R8836:8836 Vk.M0 <> x:150 var
+R8852:8858 Stdlib.Lists.List <> forallb def
+R8917:8926 Vk.M0 <> fillers_of def
+R8928:8928 Vk.M0 <> O:146 var
+R8930:8930 Vk.M0 <> l:147 var
+R8932:8932 Vk.M0 <> p:148 var
+binder 8865:8865 <> q:151
+R8870:8876 Stdlib.Lists.List <> existsb def
+R8904:8910 Vk.M0 <> e_reads proj
+R8912:8912 Vk.M0 <> x:150 var
+binder 8883:8883 <> r:152
+R8888:8890 Vk.M0 <> eqs def
+R8893:8895 Corelib.Init.Datatypes <> fst def
+R8897:8897 Vk.M0 <> r:152 var
+R8900:8900 Vk.M0 <> q:151 var
+R8969:8972 Corelib.Init.Datatypes <> true constr
+def 9092:9097 <> filler
+binder 9099:9099 <> O:153
+binder 9101:9101 <> l:154
+binder 9103:9103 <> p:155
+R9113:9118 Stdlib.Strings.String <> string ind
+binder 9106:9109 <> slot:156
+R9123:9128 Corelib.Init.Datatypes <> option ind
+R9130:9134 Vk.M0 <> piece def
+R9147:9152 Stdlib.Lists.List <> filter def
+R9189:9196 Vk.M0 <> slots_of def
+R9198:9198 Vk.M0 <> O:153 var
+R9200:9200 Vk.M0 <> l:154 var
+R9202:9202 Vk.M0 <> p:155 var
+binder 9159:9159 <> s:157
+R9164:9166 Vk.M0 <> eqs def
+R9169:9171 Corelib.Init.Datatypes <> fst def
+R9174:9176 Corelib.Init.Datatypes <> fst def
+R9178:9178 Vk.M0 <> s:157 var
+R9182:9185 Vk.M0 <> slot:156 var
+R9215:9218 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9224:9227 Corelib.Init.Datatypes <> Some constr
+R9230:9232 Corelib.Init.Datatypes <> snd def
+R9235:9237 Corelib.Init.Datatypes <> fst def
+R9247:9248 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9253:9256 Corelib.Init.Datatypes <> None constr
+def 9277:9282 <> looked
+binder 9284:9284 <> O:158
+binder 9286:9286 <> l:159
+R9295:9299 Vk.M0 <> piece def
+binder 9289:9289 <> a:160
+binder 9291:9291 <> b:161
+R9304:9307 Corelib.Init.Datatypes <> bool ind
+R9485:9491 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R9530:9530 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R9328:9333 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R9314:9321 Vk.M0 <> affirmed def
+R9323:9323 Vk.M0 <> l:159 var
+R9325:9325 Vk.M0 <> a:160 var
+R9327:9327 Vk.M0 <> b:161 var
+R9334:9340 Stdlib.Lists.List <> existsb def
+R9471:9481 Vk.M0 <> evidence_of def
+R9483:9483 Vk.M0 <> l:159 var
+binder 9347:9347 <> x:162
+R9384:9410 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9369:9372 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9352:9354 Vk.M0 <> eqs def
+R9357:9363 Vk.M0 <> e_piece proj
+R9365:9365 Vk.M0 <> x:162 var
+R9368:9368 Vk.M0 <> a:160 var
+R9373:9379 Vk.M0 <> applies def
+R9381:9381 Vk.M0 <> l:159 var
+R9383:9383 Vk.M0 <> x:162 var
+R9411:9417 Stdlib.Lists.List <> existsb def
+R9445:9451 Vk.M0 <> e_reads proj
+R9453:9453 Vk.M0 <> x:162 var
+binder 9424:9424 <> r:163
+R9429:9431 Vk.M0 <> eqs def
+R9434:9436 Corelib.Init.Datatypes <> fst def
+R9438:9438 Vk.M0 <> r:163 var
+R9441:9441 Vk.M0 <> b:161 var
+R9505:9508 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R9492:9502 Vk.M0 <> write_looks proj
+R9504:9504 Vk.M0 <> O:158 var
+R9509:9523 Vk.M0 <> written_against def
+R9525:9525 Vk.M0 <> l:159 var
+R9527:9527 Vk.M0 <> a:160 var
+R9529:9529 Vk.M0 <> b:161 var
+def 9545:9546 <> c6
+binder 9548:9548 <> O:164
+binder 9550:9550 <> l:165
+binder 9552:9552 <> p:166
+R9556:9559 Corelib.Init.Datatypes <> bool ind
+R9572:9580 Vk.M0 <> shape_now def
+R9582:9582 Vk.M0 <> O:164 var
+R9584:9584 Vk.M0 <> l:165 var
+R9586:9586 Vk.M0 <> p:166 var
+R9597:9600 Corelib.Init.Datatypes <> Some constr
+R9603:9610 Vk.M0 <> Assembly constr
+R9612:9615 Corelib.Init.Datatypes <> true constr
+R9629:9635 Stdlib.Lists.List <> forallb def
+R9827:9831 Vk.M0 <> inner proj
+R9833:9833 Vk.M0 <> O:164 var
+binder 9650:9650 <> d:167
+R9683:9688 Vk.M0 <> filler def
+R9690:9690 Vk.M0 <> O:164 var
+R9692:9692 Vk.M0 <> l:165 var
+R9694:9694 Vk.M0 <> p:166 var
+R9697:9699 Corelib.Init.Datatypes <> snd def
+R9701:9701 Vk.M0 <> d:167 var
+R9661:9666 Vk.M0 <> filler def
+R9668:9668 Vk.M0 <> O:164 var
+R9670:9670 Vk.M0 <> l:165 var
+R9672:9672 Vk.M0 <> p:166 var
+R9675:9677 Corelib.Init.Datatypes <> fst def
+R9679:9679 Vk.M0 <> d:167 var
+R9729:9732 Corelib.Init.Datatypes <> Some constr
+R9737:9740 Corelib.Init.Datatypes <> Some constr
+R9747:9752 Vk.M0 <> looked def
+R9754:9754 Vk.M0 <> O:164 var
+R9756:9756 Vk.M0 <> l:165 var
+R9790:9793 Corelib.Init.Datatypes <> true constr
+R9845:9848 Corelib.Init.Datatypes <> true constr
+def 9927:9928 <> c8
+binder 9930:9930 <> O:168
+binder 9932:9932 <> l:169
+R9940:9943 Corelib.Init.Datatypes <> list ind
+R9945:9949 Vk.M0 <> piece def
+binder 9935:9936 <> am:170
+binder 9952:9952 <> p:171
+R9956:9959 Corelib.Init.Datatypes <> bool ind
+R9966:9972 Stdlib.Lists.List <> forallb def
+R10313:10313 Vk.M0 <> l:169 var
+binder 9983:9983 <> x:172
+R9994:9994 Vk.M0 <> x:172 var
+R10017:10023 Vk.M0 <> Promise constr
+R10056:10058 Vk.M0 <> eqs def
+R10062:10062 Vk.M0 <> p:171 var
+R10259:10262 Corelib.Init.Datatypes <> true constr
+R10093:10098 Vk.M0 <> filler def
+R10100:10100 Vk.M0 <> O:168 var
+R10102:10102 Vk.M0 <> l:169 var
+R10104:10104 Vk.M0 <> p:171 var
+R10141:10144 Corelib.Init.Datatypes <> Some constr
+R10151:10157 Stdlib.Lists.List <> existsb def
+R10167:10168 Vk.M0 <> am:170 var
+R10160:10162 Vk.M0 <> eqs def
+R10195:10198 Corelib.Init.Datatypes <> None constr
+R10203:10207 Corelib.Init.Datatypes <> false constr
+R10285:10288 Corelib.Init.Datatypes <> true constr
+def 10392:10393 <> c9
+R10400:10403 Vk.M0 <> line def
+binder 10396:10396 <> l:174
+R10411:10415 Vk.M0 <> piece def
+binder 10407:10407 <> p:175
+R10420:10423 Corelib.Init.Datatypes <> bool ind
+R10430:10436 Stdlib.Lists.List <> forallb def
+R10954:10961 Vk.M0 <> numbered def
+R10963:10963 Vk.M0 <> l:174 var
+binder 10447:10448 <> ie:176
+R10466:10468 Corelib.Init.Datatypes <> snd def
+R10470:10471 Vk.M0 <> ie:176 var
+R10487:10491 Vk.M0 <> Raise constr
+R10523:10525 Vk.M0 <> eqs def
+R10530:10530 Vk.M0 <> p:175 var
+R10913:10916 Corelib.Init.Datatypes <> true constr
+R10548:10554 Stdlib.Lists.List <> existsb def
+R10885:10892 Vk.M0 <> numbered def
+R10894:10894 Vk.M0 <> l:174 var
+binder 10579:10580 <> jg:177
+R10612:10614 Corelib.Init.Datatypes <> snd def
+R10616:10617 Vk.M0 <> jg:177 var
+R10647:10654 Vk.M0 <> Evidence constr
+R10790:10793 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10732:10760 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10711:10714 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R10686:10692 Stdlib.Arith.PeanoNat Nat ltb def
+R10695:10697 Corelib.Init.Datatypes <> fst def
+R10699:10700 Vk.M0 <> ie:176 var
+R10704:10706 Corelib.Init.Datatypes <> fst def
+R10708:10709 Vk.M0 <> jg:177 var
+R10715:10717 Vk.M0 <> eqs def
+R10720:10726 Vk.M0 <> e_piece proj
+R10731:10731 Vk.M0 <> p:175 var
+R10761:10763 Vk.M0 <> eqs def
+R10766:10776 Vk.M0 <> e_criterion proj
+R10794:10800 Vk.M0 <> applies def
+R10802:10802 Vk.M0 <> l:174 var
+R10834:10838 Corelib.Init.Datatypes <> false constr
+R10932:10935 Corelib.Init.Datatypes <> true constr
+def 10979:10984 <> waived
+R10991:10994 Vk.M0 <> line def
+binder 10987:10987 <> l:178
+R11002:11004 Corelib.Init.Datatypes <> nat ind
+binder 10998:10998 <> n:179
+R11012:11016 Vk.M0 <> piece def
+binder 11008:11008 <> p:180
+R11021:11024 Corelib.Init.Datatypes <> bool ind
+R11031:11037 Stdlib.Lists.List <> existsb def
+R11120:11120 Vk.M0 <> l:178 var
+binder 11044:11044 <> x:181
+R11055:11055 Vk.M0 <> x:181 var
+R11062:11066 Vk.M0 <> Waive constr
+R11089:11092 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11077:11083 Stdlib.Arith.PeanoNat Nat eqb def
+R11088:11088 Vk.M0 <> n:179 var
+R11093:11095 Vk.M0 <> eqs def
+R11100:11100 Vk.M0 <> p:180 var
+R11109:11113 Corelib.Init.Datatypes <> false constr
+def 11200:11202 <> own
+binder 11204:11204 <> O:183
+binder 11206:11206 <> l:184
+binder 11208:11209 <> am:185
+binder 11211:11211 <> p:186
+R11215:11218 Corelib.Init.Datatypes <> list ind
+R11220:11222 Corelib.Init.Datatypes <> nat ind
+R11229:11234 Stdlib.Lists.List <> filter def
+R11272:11272 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11301:11305 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11276:11277 Vk.M0 <> c1 def
+R11279:11279 Vk.M0 <> O:183 var
+R11281:11281 Vk.M0 <> l:184 var
+R11283:11283 Vk.M0 <> p:186 var
+R11298:11298 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11300:11300 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11290:11291 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R11306:11306 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11335:11344 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11310:11311 Vk.M0 <> c2 def
+R11313:11313 Vk.M0 <> O:183 var
+R11315:11315 Vk.M0 <> l:184 var
+R11317:11317 Vk.M0 <> p:186 var
+R11332:11332 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11334:11334 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11324:11325 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R11345:11345 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11372:11376 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11349:11350 Vk.M0 <> c4 def
+R11352:11352 Vk.M0 <> l:184 var
+R11354:11354 Vk.M0 <> p:186 var
+R11369:11369 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11371:11371 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11361:11362 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R11377:11377 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11412:11421 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11381:11388 Vk.M0 <> c5_asked def
+R11390:11390 Vk.M0 <> O:183 var
+R11392:11392 Vk.M0 <> l:184 var
+R11394:11394 Vk.M0 <> p:186 var
+R11409:11409 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11411:11411 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11401:11402 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R11422:11422 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11451:11455 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11426:11427 Vk.M0 <> c6 def
+R11429:11429 Vk.M0 <> O:183 var
+R11431:11431 Vk.M0 <> l:184 var
+R11433:11433 Vk.M0 <> p:186 var
+R11448:11448 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11450:11450 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11440:11441 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R11456:11456 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11488:11498 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11525:11525 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11460:11461 Vk.M0 <> c8 def
+R11463:11463 Vk.M0 <> O:183 var
+R11465:11465 Vk.M0 <> l:184 var
+R11467:11468 Vk.M0 <> am:185 var
+R11470:11470 Vk.M0 <> p:186 var
+R11485:11485 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11487:11487 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11477:11478 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R11502:11503 Vk.M0 <> c9 def
+R11505:11505 Vk.M0 <> l:184 var
+R11507:11507 Vk.M0 <> p:186 var
+R11522:11522 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11524:11524 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11514:11515 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+binder 11241:11241 <> n:187
+R11246:11249 Corelib.Init.Datatypes <> negb def
+R11252:11257 Vk.M0 <> waived def
+R11259:11259 Vk.M0 <> l:184 var
+R11261:11261 Vk.M0 <> n:187 var
+R11263:11263 Vk.M0 <> p:186 var
+def 11631:11638 <> c5_rests
+binder 11640:11640 <> O:188
+binder 11642:11642 <> l:189
+binder 11644:11645 <> am:190
+binder 11647:11647 <> p:191
+R11651:11654 Corelib.Init.Datatypes <> bool ind
+R11661:11667 Stdlib.Lists.List <> forallb def
+R11765:11772 Vk.M0 <> rests_on def
+R11774:11774 Vk.M0 <> O:188 var
+R11776:11776 Vk.M0 <> l:189 var
+R11778:11778 Vk.M0 <> p:191 var
+binder 11674:11674 <> q:192
+R11697:11700 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R11679:11685 Stdlib.Lists.List <> existsb def
+R11695:11696 Vk.M0 <> am:190 var
+R11688:11690 Vk.M0 <> eqs def
+R11692:11692 Vk.M0 <> q:192 var
+R11707:11709 Vk.M0 <> own def
+R11711:11711 Vk.M0 <> O:188 var
+R11713:11713 Vk.M0 <> l:189 var
+R11715:11716 Vk.M0 <> am:190 var
+R11718:11718 Vk.M0 <> q:192 var
+R11725:11726 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R11731:11734 Corelib.Init.Datatypes <> true constr
+R11743:11747 Corelib.Init.Datatypes <> false constr
+def 11794:11797 <> owed
+binder 11799:11799 <> O:193
+binder 11801:11801 <> l:194
+binder 11803:11804 <> am:195
+binder 11806:11806 <> p:196
+R11810:11813 Corelib.Init.Datatypes <> list ind
+R11815:11817 Corelib.Init.Datatypes <> nat ind
+R11833:11835 Vk.M0 <> own def
+R11837:11837 Vk.M0 <> O:193 var
+R11839:11839 Vk.M0 <> l:194 var
+R11841:11842 Vk.M0 <> am:195 var
+R11844:11844 Vk.M0 <> p:196 var
+binder 11828:11828 <> o:197
+R11896:11899 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R11871:11874 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R11854:11861 Vk.M0 <> c5_rests def
+R11863:11863 Vk.M0 <> O:193 var
+R11865:11865 Vk.M0 <> l:194 var
+R11867:11868 Vk.M0 <> am:195 var
+R11870:11870 Vk.M0 <> p:196 var
+R11875:11881 Stdlib.Lists.List <> existsb def
+R11895:11895 Vk.M0 <> o:197 var
+R11884:11890 Stdlib.Arith.PeanoNat Nat eqb def
+R11900:11905 Vk.M0 <> waived def
+R11907:11907 Vk.M0 <> l:194 var
+R11911:11911 Vk.M0 <> p:196 var
+R11958:11961 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11927:11932 Stdlib.Lists.List <> filter def
+R11957:11957 Vk.M0 <> o:197 var
+binder 11939:11939 <> n:198
+R11944:11950 Stdlib.Arith.PeanoNat Nat ltb def
+R11952:11952 Vk.M0 <> n:198 var
+R11965:11968 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R11962:11962 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11964:11964 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11969:11974 Stdlib.Lists.List <> filter def
+R11999:11999 Vk.M0 <> o:197 var
+binder 11981:11981 <> n:199
+R11986:11992 Stdlib.Arith.PeanoNat Nat ltb def
+R11996:11996 Vk.M0 <> n:199 var
+R11918:11918 Vk.M0 <> o:197 var
+def 12163:12170 <> frontier
+R12177:12184 Vk.M0 <> ontology rec
+binder 12173:12173 <> O:200
+R12192:12195 Vk.M0 <> line def
+binder 12188:12188 <> l:201
+R12200:12203 Corelib.Init.Datatypes <> list ind
+R12209:12211 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R12206:12208 Corelib.Init.Datatypes <> nat ind
+R12212:12216 Vk.M0 <> piece def
+R12234:12238 Vk.M0 <> canon def
+R12240:12240 Vk.M0 <> O:200 var
+R12242:12242 Vk.M0 <> l:201 var
+binder 12228:12229 <> am:202
+R12249:12256 Stdlib.Lists.List <> flat_map def
+R12307:12308 Vk.M0 <> am:202 var
+binder 12263:12263 <> p:203
+R12268:12270 Corelib.Lists.ListDef <> map def
+R12291:12294 Vk.M0 <> owed def
+R12296:12296 Vk.M0 <> O:200 var
+R12298:12298 Vk.M0 <> l:201 var
+R12300:12301 Vk.M0 <> am:202 var
+R12303:12303 Vk.M0 <> p:203 var
+binder 12277:12277 <> n:204
+R12282:12282 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12284:12285 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12287:12287 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12283:12283 Vk.M0 <> n:204 var
+R12286:12286 Vk.M0 <> p:203 var
+def 12323:12332 <> stationary
+R12339:12346 Vk.M0 <> ontology rec
+binder 12335:12335 <> O:205
+R12354:12357 Vk.M0 <> line def
+binder 12350:12350 <> l:206
+R12362:12365 Corelib.Init.Datatypes <> bool ind
+R12378:12385 Vk.M0 <> frontier def
+R12387:12387 Vk.M0 <> O:205 var
+R12389:12389 Vk.M0 <> l:206 var
+R12396:12397 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R12402:12405 Corelib.Init.Datatypes <> true constr
+R12414:12418 Corelib.Init.Datatypes <> false constr

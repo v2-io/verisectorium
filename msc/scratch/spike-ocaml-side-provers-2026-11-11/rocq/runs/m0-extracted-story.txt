@@ -1,0 +1,27 @@
+S0     owed: nothing
+       close: yes, a checkpoint
+08:30  owed: 4 on c, 5 on u
+       close: refused
+09:00  owed: 5 on T, 6 on T, 4 on c, 2 on u, 5 on u
+       close: refused
+10:00  owed: 4 on c, 5 on u
+       close: refused
+10:30  owed: 5 on T, 4 on c, 5 on c, 2 on u, 5 on u
+       (if a write does not count as a look: 5 on T, 6 on T, 4 on c, 5 on c, 2 on u, 5 on u)
+       close: refused
+11:00  owed: 5 on T, 2 on u, 5 on u
+       (if a write does not count as a look: 5 on T, 6 on T, 2 on u, 5 on u)
+       close: refused
+11:30  owed: 5 on T, 5 on c, 2 on u, 5 on u
+       (if a write does not count as a look: 5 on T, 6 on T, 5 on c, 2 on u, 5 on u)
+       close: refused
+12:00  owed: 5 on T, 2 on u, 5 on u
+       (if a write does not count as a look: 5 on T, 6 on T, 2 on u, 5 on u)
+       close: refused
+13:00  owed: 5 on T, 5 on U
+       (if a write does not count as a look: 5 on T, 6 on T, 5 on U)
+       close: refused
+14:00  owed: nothing
+       (if a write does not count as a look: 6 on T)
+       close: yes, a checkpoint
+20000 frontiers in 1.84 s

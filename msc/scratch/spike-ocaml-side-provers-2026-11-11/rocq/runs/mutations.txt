@@ -1,0 +1,27 @@
+=== mutations/m1_pin_with_an_item_removed.v
+File "./mutations/m1_pin_with_an_item_removed.v", line 5, characters 7-18:
+Error: Unable to unify "[(4, "c")]" with "frontier looks r0830".
+exit 1
+=== mutations/m2_checkpoint_at_1300.v
+File "./mutations/m2_checkpoint_at_1300.v", line 3, characters 36-57:
+Error:
+The term "exist (fun l : line => frontier looks l = nil) r1300 eq_refl"
+has type "{l : list event | frontier looks l = nil}"
+while it is expected to have type "checkpoint looks" (cannot satisfy
+constraint
+"frontier looks r1300 = frontier looks r1300" == "(fun l : line =>
+                                                 frontier looks l = nil)
+                                                 r1300";
+exit 1
+=== mutations/m3_known_wrong_at_a_checkpoint.v
+File "./mutations/m3_known_wrong_at_a_checkpoint.v", line 11, characters 7-18:
+Error: Unable to unify "true" with "c4 waived_line "c"".
+exit 1
+=== mutations/m4_ring_of_resting.v
+     = ["a"; "b"]
+     : list piece
+     = []
+     : list (nat * piece)
+     = [(5, "a"); (4, "b"); (5, "b")]
+     : list (nat * piece)
+exit 0
