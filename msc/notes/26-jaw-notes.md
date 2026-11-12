@@ -90,6 +90,10 @@ Causal forward arrows from (1) -> (2) -> (3) ... etc. are implied. The strategic
 | 7   | actions' impact on external state | It cannot be cleanly separated from 8.                                                             | Read the scorecard as the thing; assume a fixed causal chain.       | Look for yourself. If targets are hit and the purpose isn't, change the targets.                                                          | Don't check whether it worked.                        |
 | 8   | external response & world drift   | Other parties' reasons can only be inferred. Some of it is never known.                            | Build on a prediction; hold the plan; treat deviation as failure.   | Depend on no single response. Take the openings. Keep the loop short.                                                                     | Drift; let things happen to you.                      |
 
+![[uncertainty-matrix.svg]]
+
+![[gap-panels.svg]]
+
 In every row the knowledge is in one place and the decision is in another. Control sends detail down and pulls the situation up. Adapt sends purpose and limits down and leaves the decision with whoever is in the situation. Abdicate sends nothing.
 
 Across all eight, the two approaches are van Creveld's two options (via Bungay, line 1641): *"One is to increase its information-processing capacity, the other to design the organisation, and indeed the task itself, in such a way as to enable it to operate on the basis of less information."*
@@ -132,7 +136,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“Don’t move information to authority, move authority to the information.”* —(Marquet, 1035)
 
 > [!QUOTE] Two ways to fail
-> *“... the Scylla of rulebook passivity and the Charybdis of random adventurism”* —(Bungay, 915)
+> *“… the Scylla of rulebook passivity and the Charybdis of random adventurism”* —(Bungay, 915)
 
 > [!QUOTE] Abdicate
 > *“But surely you don't expect me to tell all of you what to do? This is not a command-and-control organization.”* —(a CEO, in Bungay, 233)
@@ -153,7 +157,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“These leaders might give the appearance of control, but they actually have no idea what their troops are doing”* —(Willink & Babin on “battlefield aloofness”, 1928)
 
 > [!QUOTE] Accountability stays, control goes
-> *“... such delegation of authority shall in no way relieve the commanding officer of continued responsibility”* —(U.S. Navy Regulations, in Marquet, 938)
+> *“… such delegation of authority shall in no way relieve the commanding officer of continued responsibility”* —(U.S. Navy Regulations, in Marquet, 938)
 
 > [!QUOTE] Accountability stays, control goes
 > *“I would retain accountability for Santa Fe’s operational performance but release control of the actual decisions to the department heads.”* —(Marquet, 895)
@@ -190,7 +194,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“A gap in knowledge prompts the collection of more data.”* —(Bungay, 671)
 
 > [!QUOTE] Adapt
-> *“... not commanding more than is strictly necessary, nor planning beyond the circumstances you can foresee.”* —(von Moltke, 807)
+> *“… not commanding more than is strictly necessary, nor planning beyond the circumstances you can foresee.”* —(von Moltke, 807)
 
 > [!QUOTE]
 > *“There is no 100 percent right solution. The picture is never complete.”* —(Willink & Babin, 2675)
@@ -200,7 +204,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“Uncertainty about one's own strength and position.”* and *“The fact that one's own army is never as strong as it appears on paper.”* —(Clausewitz, 548, 551)
 
 > [!QUOTE]
-> *“... the aspiration of strategy can only ever be to achieve the highest end it can with the means available.”* —(von Moltke, 2752)
+> *“… the aspiration of strategy can only ever be to achieve the highest end it can with the means available.”* —(von Moltke, 2752)
 
 > [!QUOTE]
 > *“We make sober assessments of what our organization is capable of doing.”* —(Bungay on commanding, 2607)
@@ -228,7 +232,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“The rule to follow is that an order should contain all, but also only, what subordinates cannot determine for themselves to achieve a particular purpose.”* —(von Moltke, 831)
 
 > [!QUOTE]
-> *“... that every order which can be misunderstood will be.”* —(Meckel, 1877, 913)
+> *“… that every order which can be misunderstood will be.”* —(Meckel, 1877, 913)
 
 > [!QUOTE] Decide first
 > *“Knowing what you want is not enough. You also have to be able to actually set direction.”* —(Bungay, 1490)
@@ -240,13 +244,13 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“We must spell it out in painful detail”* —(a senior executive, 247); and Bungay's answer, *“But clarity and detail are not the same thing at all.”* —(691)
 
 > [!QUOTE] Adapt
-> *“... alignment needs to be achieved around intent, and autonomy should be granted around actions.”* —(Bungay, 871)
+> *“… alignment needs to be achieved around intent, and autonomy should be granted around actions.”* —(Bungay, 871)
 
 > [!QUOTE]
 > In the backbrief *“the superior gains clarity for the first time about what the implications of their own directions actually are”* —(Bungay, 1981)
 
 > [!QUOTE] Why coherence pays
-> *“... the more alignment you have, the more autonomy you can grant.”* —(Bungay, 865)
+> *“… the more alignment you have, the more autonomy you can grant.”* —(Bungay, 865)
 
 > [!QUOTE] The work can be flawless and still miss the intent
 > *“After all those steps in the review process, they were perfect—but irrelevant.”* —(Marquet on the charts, 1326)
@@ -277,7 +281,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“If they are known or even rumored to be there, but are unmarked, advances usually come to a halt.”* —(Bungay on boundaries, 1536)
 
 > [!QUOTE] Believed versus actual
-> *“... a lot of the constraints they complained of were more imagined than real.”* —(Bungay, 2664)
+> *“… a lot of the constraints they complained of were more imagined than real.”* —(Bungay, 2664)
 
 > [!QUOTE] Control
 > Procedures *“will tend to rise inexorably upward, removing more and more discretion from managers in the field until the slaves become our masters.”* —(Bungay, 2545)
@@ -286,7 +290,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“I can determine how much space to give you by setting the boundaries and the control loop.”* —(Bungay, 2220)
 
 > [!QUOTE]
-> *... junior leaders must fully understand what is within their decision-making authority—the “left and right limits” of their responsibility.* —(Willink & Babin, 1922)
+> *… junior leaders must fully understand what is within their decision-making authority—the “left and right limits” of their responsibility.* —(Willink & Babin, 1922)
 
 > [!QUOTE] What blocks widening it (items 2 and 3)
 > On worries about delegating a decision: *“the worries fall into two broad categories: issues of competence and issues of clarity”* —(Marquet, 1164)
@@ -311,10 +315,10 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“He could have effectively paralyzed his own forces by demanding more information.”* —(Bungay on von Moltke at Buzancy, 1446)
 
 > [!QUOTE] Resolved before the act
-> *Officers would state their intentions with “I intend to . . .” and I would say, “Very well.”* —(Marquet, 1437); and of giving the reasoning with it, *“... it caused them to think at the next higher level”* —(Marquet, 1491)
+> *Officers would state their intentions with “I intend to . . .” and I would say, “Very well.”* —(Marquet, 1437); and of giving the reasoning with it, *“… it caused them to think at the next higher level”* —(Marquet, 1491)
 
 > [!QUOTE] Resolved before the act
-> Of deliberate action, an inspector: *“... your guys tried to make the same number of mistakes—as everyone else”* —(Marquet, 2025)
+> Of deliberate action, an inspector: *“… your guys tried to make the same number of mistakes—as everyone else”* —(Marquet, 2025)
 
 > [!QUOTE] Self-report beats monitoring
 > *“We started getting many more reports of transients than those detected by sonar.”* —(Marquet, 2549)
@@ -336,7 +340,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“The uncertainties that cause friendly troops to exaggerate their own difficulties.”* —(Clausewitz, 549)
 
 > [!QUOTE]
-> *“... one should be extremely careful before condemning generals.”* —(von Moltke, 2128)
+> *“… one should be extremely careful before condemning generals.”* —(von Moltke, 2128)
 
 > [!QUOTE]
 > *“All commanders must always be aware that an omission or failure to act is a graver charge than making a mistake in the choice of means.”* —(Field Service Regulations, 1888, 2128)
@@ -357,7 +361,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“If one of my machine gunners engaged targets outside his field of fire, then I had not ensured he understood where his field of fire was.”* —(Willink & Babin, 455)
 
 > [!QUOTE] Abdicate
-> *“... it’s not what you preach, it’s what you tolerate”* —(Willink & Babin, 615)
+> *“… it’s not what you preach, it’s what you tolerate”* —(Willink & Babin, 615)
 
 > [!QUOTE]
 > *“Taking care of your people does not mean protecting them from the consequences of their own behavior.”* —(Marquet, 2705)
@@ -367,7 +371,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 
 **7 · actions' impact on external state**
 > [!QUOTE]
-> *“... through an accumulation of innumerable petty circumstances which could never be taken into account on paper, everything deteriorates and you find that you are far from achieving your goal.”* —(Clausewitz, the traveller, 506)
+> *“… through an accumulation of innumerable petty circumstances which could never be taken into account on paper, everything deteriorates and you find that you are far from achieving your goal.”* —(Clausewitz, the traveller, 506)
 
 > [!QUOTE]
 > *“Differences between expectations and reality.”* —(Clausewitz, 550)
@@ -379,7 +383,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“There is no substitute for direct observation, which is why von Moltke had a telescope”* —(Bungay, 2436)
 
 > [!QUOTE] Measures inform and do not decide
-> ==*“... no act of command can be derived from any act of control even in principle”*== —(Bungay, 2426)
+> ==*“… no act of command can be derived from any act of control even in principle”*== —(Bungay, 2426)
 
 > [!QUOTE]
 > *“With physics, you don’t have problems; you only have the consequences of your actions.”* —(Marquet, 2072)
@@ -395,13 +399,13 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“Here, our will very soon encounters the independent will of an opponent.”* —(von Moltke, 2758)
 
 > [!QUOTE] Drift
-> *“... all those influences on events that we ascribe to chance, fate, or divine providence, but which human beings neither create nor master.”* —(von Moltke, 2770)
+> *“… all those influences on events that we ascribe to chance, fate, or divine providence, but which human beings neither create nor master.”* —(von Moltke, 2770)
 
 > [!QUOTE]
 > *“We are surrounded by independent wills, and some of them are actually hostile.”* —(Bungay, 2446)
 
 > [!QUOTE] Control
-> *“... the delusion that one can control external events (i.e., a denial of friction)”* —(Bungay, 1185)
+> *“… the delusion that one can control external events (i.e., a denial of friction)”* —(Bungay, 1185)
 
 > [!QUOTE] Adapt
 > *“A robust strategy is not dependent on competitors doing any single thing. It does not seek to control an independent will.”* —(Bungay, 1163)
@@ -410,7 +414,7 @@ Bungay's are from `Art-of-Action.md`; numbers are line numbers there. Clausewitz
 > *“His pragmatic rule of thumb was to work out what his opponent's best option was and to assume they would do that until proved otherwise.”* —(Bungay on von Moltke, 1117)
 
 > [!QUOTE] The upside
-> *“... strategy builds on every successful engagement to exploit it further.”* —(von Moltke, 1135); and of friction, *“It actually provided opportunities”* —(Bungay on Clausewitz, 502)
+> *“… strategy builds on every successful engagement to exploit it further.”* —(von Moltke, 1135); and of friction, *“It actually provided opportunities”* —(Bungay on Clausewitz, 502)
 
 > [!QUOTE]
 > *“Tactical operations are against an intelligent enemy who thinks, plots, and deliberately exploits weaknesses.”* —(Marquet, 1094)
