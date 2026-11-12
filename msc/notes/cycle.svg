@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 745" width="1060" height="745" font-family="Inter, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<title>Strategic cycle — areas of uncertainty</title>
+<style>
+  :root {
+    --bg:#ffffff; --ink:#0f172a; --muted:#64748b; --faint:#94a3b8;
+    --box:#f8fafc; --boxline:#cbd5e1; --badge:#0f172a; --badgeink:#ffffff;
+    --lane:#f1f5f9; --c56:#334155; --c7:#4f46e5; --eq:#94a3b8;
+    --observe:#2563eb; --orient:#7c3aed; --decide:#d97706; --act:#16a34a; --pillink:#ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#0b1120; --ink:#e2e8f0; --muted:#94a3b8; --faint:#64748b;
+      --box:#111827; --boxline:#334155; --badge:#e2e8f0; --badgeink:#0b1120;
+      --lane:#151e30; --c56:#cbd5e1; --c7:#818cf8; --eq:#64748b;
+      --observe:#60a5fa; --orient:#a78bfa; --decide:#fbbf24; --act:#4ade80; --pillink:#0b1120;
+    }
+  }
+  .bg { fill:var(--bg); }
+  .title { fill:var(--ink); font-size:22px; font-weight:650; letter-spacing:-0.01em; }
+  .hdr { fill:var(--muted); font-size:12px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; }
+  .box { fill:var(--box); stroke:var(--boxline); stroke-width:1.25; }
+  .badge { fill:var(--badge); }
+  .num { fill:var(--badgeink); font-size:14px; font-weight:700; }
+  .lbl { fill:var(--ink); font-size:15.5px; }
+  .lane { fill:var(--lane); }
+  .lanehdr { font-size:13px; font-weight:650; }
+  .pill { fill:var(--pillink); font-size:12px; font-weight:600; }
+  .arc { fill:none; stroke-width:2; stroke-linecap:round; }
+  .key { fill:var(--muted); font-size:12.5px; }
+  .guide { stroke:var(--boxline); stroke-width:1; stroke-dasharray:2 4; }
+</style>
+<defs>
+<marker id="ah-c56" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--c56)"/></marker>
+<marker id="ah-c7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--c7)"/></marker>
+<marker id="ah-eq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--eq)"/></marker>
+<linearGradient id="g-Observe-Orient" x1="0" x2="1"><stop offset="0.3" style="stop-color:var(--observe)"/><stop offset="0.7" style="stop-color:var(--orient)"/></linearGradient>
+<linearGradient id="g-Orient-Decide" x1="0" x2="1"><stop offset="0.3" style="stop-color:var(--orient)"/><stop offset="0.7" style="stop-color:var(--decide)"/></linearGradient>
+</defs>
+<rect class="bg" width="1060" height="745" rx="14"/>
+<text class="title" x="40" y="52">Strategic cycle — areas of uncertainty</text>
+<text class="hdr" x="40" y="96">Area of uncertainty</text>
+<text class="hdr" x="454" y="96">Clarifies</text>
+<text class="hdr" x="720" y="74">OODA</text>
+<rect class="lane" x="723" y="86" width="74" height="590.0" rx="10"/>
+<text class="lanehdr" x="760.0" y="102" text-anchor="middle" style="fill:var(--observe)">Observe</text>
+<rect class="lane" x="803" y="86" width="74" height="590.0" rx="10"/>
+<text class="lanehdr" x="840.0" y="102" text-anchor="middle" style="fill:var(--orient)">Orient</text>
+<rect class="lane" x="883" y="86" width="74" height="590.0" rx="10"/>
+<text class="lanehdr" x="920.0" y="102" text-anchor="middle" style="fill:var(--decide)">Decide</text>
+<rect class="lane" x="963" y="86" width="74" height="590.0" rx="10"/>
+<text class="lanehdr" x="1000.0" y="102" text-anchor="middle" style="fill:var(--act)">Act</text>
+<path class="arc" style="stroke:var(--c56)" d="M439,396.0 Q445.5,396.0 445.5,405.0 L445.5,445.0 Q445.5,454.0 452,454.0 Q445.5,454.0 445.5,463.0 L445.5,503.0 Q445.5,512.0 439,512.0"/>
+<path class="arc" style="stroke:var(--c56)" d="M439,180.0 Q445.5,180.0 445.5,189.0 L445.5,265.0 Q445.5,274.0 452,274.0 Q445.5,274.0 445.5,283.0 L445.5,359.0 Q445.5,368.0 439,368.0"/>
+<path class="arc" d="M453,454.0 C572,454.0 572,274.0 457,274.0" style="stroke:var(--c56);stroke-width:2.25" marker-end="url(#ah-c56)"/>
+<path class="arc" style="stroke:var(--c7)" d="M439,540.0 Q445.5,540.0 445.5,549.0 L445.5,589.0 Q445.5,598.0 452,598.0 Q445.5,598.0 445.5,607.0 L445.5,647.0 Q445.5,656.0 439,656.0"/>
+<path class="arc" d="M453,598.0 C657,598.0 617,130 436,130" style="stroke:var(--c7);stroke-width:2.25" marker-end="url(#ah-c7)"/>
+<line class="guide" x1="434" y1="130" x2="720" y2="130" opacity="0"/>
+<rect class="box" x="40" y="104.0" width="390" height="52" rx="16"/>
+<circle class="badge" cx="68" cy="130" r="14"/>
+<text class="num" x="68" y="135" text-anchor="middle">1</text>
+<text class="lbl" x="94" y="135.5">current external state</text>
+<rect x="729" y="116" width="62" height="28" rx="14" style="fill:var(--observe)"/>
+<text class="pill" x="760.0" y="134.5" text-anchor="middle">Observe</text>
+<line class="guide" x1="434" y1="202" x2="720" y2="202" opacity="0"/>
+<rect class="box" x="40" y="176.0" width="390" height="52" rx="16"/>
+<circle class="badge" cx="68" cy="202" r="14"/>
+<text class="num" x="68" y="207" text-anchor="middle">2</text>
+<text class="lbl" x="94" y="207.5">internal capability</text>
+<rect x="729" y="188" width="142" height="28" rx="14" style="fill:url(#g-Observe-Orient)"/>
+<text class="pill" x="800.0" y="206.5" text-anchor="middle">Observe · Orient</text>
+<line class="guide" x1="434" y1="274" x2="720" y2="274" opacity="0"/>
+<rect class="box" x="40" y="248.0" width="390" height="52" rx="16"/>
+<circle class="badge" cx="68" cy="274" r="14"/>
+<text class="num" x="68" y="279" text-anchor="middle">3</text>
+<text class="lbl" x="94" y="279.5">internal intent &amp; its coherence (alignment)</text>
+<rect x="809" y="260" width="142" height="28" rx="14" style="fill:url(#g-Orient-Decide)"/>
+<text class="pill" x="880.0" y="278.5" text-anchor="middle">Orient · Decide</text>
+<line class="guide" x1="434" y1="346" x2="720" y2="346" opacity="0"/>
+<rect class="box" x="40" y="320.0" width="390" height="52" rx="16"/>
+<circle class="badge" cx="68" cy="346" r="14"/>
+<text class="num" x="68" y="351" text-anchor="middle">4</text>
+<text class="lbl" x="94" y="351.5">actual action surface</text>
+<rect x="889" y="332" width="62" height="28" rx="14" style="fill:var(--decide)"/>
+<text class="pill" x="920.0" y="350.5" text-anchor="middle">Decide</text>
+<line class="guide" x1="434" y1="418" x2="720" y2="418" opacity="0"/>
+<rect class="box" x="40" y="392.0" width="390" height="52" rx="16"/>
+<circle class="badge" cx="68" cy="418" r="14"/>
+<text class="num" x="68" y="423" text-anchor="middle">5</text>
+<text class="lbl" x="94" y="423.5">actual actions taken</text>
+<rect x="969" y="404" width="62" height="28" rx="14" style="fill:var(--act)"/>
+<text class="pill" x="1000.0" y="422.5" text-anchor="middle">Act</text>
+<line class="guide" x1="434" y1="490" x2="720" y2="490" opacity="0"/>
+<rect class="box" x="40" y="464.0" width="390" height="52" rx="16"/>
+<circle class="badge" cx="68" cy="490" r="14"/>
+<text class="num" x="68" y="495" text-anchor="middle">6</text>
+<text class="lbl" x="94" y="495.5">actions’ impact on internal state</text>
+<rect x="729" y="476" width="62" height="28" rx="14" style="fill:var(--observe)"/>
+<text class="pill" x="760.0" y="494.5" text-anchor="middle">Observe</text>
+<line class="guide" x1="434" y1="562" x2="720" y2="562" opacity="0"/>
+<rect class="box" x="40" y="536.0" width="390" height="52" rx="16"/>
+<circle class="badge" cx="68" cy="562" r="14"/>
+<text class="num" x="68" y="567" text-anchor="middle">7</text>
+<text class="lbl" x="94" y="567.5">actions’ impact on external state</text>
+<rect x="729" y="548" width="62" height="28" rx="14" style="fill:var(--observe)"/>
+<text class="pill" x="760.0" y="566.5" text-anchor="middle">Observe</text>
+<line class="guide" x1="434" y1="634" x2="720" y2="634" opacity="0"/>
+<rect class="box" x="40" y="608.0" width="390" height="52" rx="16"/>
+<circle class="badge" cx="68" cy="634" r="14"/>
+<text class="num" x="68" y="639" text-anchor="middle">8</text>
+<text class="lbl" x="94" y="639.5">external response &amp; world drift</text>
+<rect x="729" y="620" width="62" height="28" rx="14" style="fill:var(--observe)"/>
+<text class="pill" x="760.0" y="638.5" text-anchor="middle">Observe</text>
+<line x1="40" y1="708.0" x2="66" y2="708.0" class="arc" style="stroke:var(--c56)" marker-end="url(#ah-c56)"/>
+<text class="key" x="74" y="712.5">5 &amp; 6 clarify 2–4</text>
+<line x1="250" y1="708.0" x2="276" y2="708.0" class="arc" style="stroke:var(--c7)" marker-end="url(#ah-c7)"/>
+<text class="key" x="284" y="712.5">7 &amp; 8 clarify 1  (8 ≈ restatement of 1)</text>
+</svg>
