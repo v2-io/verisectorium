@@ -6,7 +6,7 @@
 
 ## The whole thing in one paragraph
 
-A verisectorium is a body of work in which many minds, each arriving cold, raise the proportion of what is true and built-upon to what a reader has to get through. It advances by one pattern: something is made off to the side on its own merits; a second mind checks it; a third reflects it into the whole, replacing what it supersedes, until the whole is at rest again. The whole is made of pieces small enough to be right or wrong on their own, each of a kind that says what must be asked of it. Every answer is either found out, and stands by evidence, or decided, and stands by whoever is behind it. The verisectorium holds as fact only what was written and what was done, and with each thing done, who did it and what it relied on. Everything else it computes and never types: where it is out of line, how much would move if a given piece did, and what is sitting unplaced or unused, and for how long. At rest nothing is out of line, and what was knowingly left, and what lies open at the edge, are shown beside it.
+A verisectorium is a body of work in which many minds, each arriving cold, raise the proportion of what is true and built-upon to what a reader has to get through. It advances by one pattern: something is made off to the side on its own merits; a second mind checks it; a third reflects it into the whole, replacing what it supersedes, until the whole is at rest again. The whole is made of pieces small enough to be right or wrong on their own, each of a kind that says what must be asked of it. Every answer is either found out, and stands by evidence, or decided, and stands by whoever is behind it. The verisectorium holds as fact only what was written and what was done, and with each thing done, who did it and what it relied on. Whatever else can be computed from that record is computed, in place of being simply asserted: where it is out of line, how much would move if a given piece did, and what is sitting unplaced or unused, and for how long. At rest nothing is out of line, and what was knowingly left, and what lies open at the edge, are shown beside it.
 
 ## 1. What it is for
 
@@ -90,9 +90,9 @@ As much of the second as possible is captured from what a mind did and not typed
 
 Because a check is about an exact version, one thing follows without any rule being added: a piece that is rewritten has, for the moment, not been checked. A change lowers certainty by itself. One thing does not follow and is chosen: a check that found something wrong also puts a question to the piece, whether what was found is still there, and a question is about the piece and not a version, so it stays until someone answers it. With both, rewording is not a way out of a finding, and a repaired piece says honestly that it is unchecked until it has been.
 
-## 7. What is computed, and never typed
+## 7. What is computed, wherever it can be
 
-Four readings of that one record.
+Four readings of that one record. Each is computed in place of being simply asserted, wherever that is possible. Where something has to be asserted instead, because nothing can yet compute it or because it rests on someone's word, the assertion is itself a thing done: on record, with who made it.
 
 1. **Where it is out of line.** Two things, the same for every kind: something relied on has since moved, or something that must be answered has no answer. The first covers a pointer whose target was rewritten, a check whose premises changed, a decision whose ground failed, and a whole-read of something since reordered. The second covers what a kind asks, what a root asks, and any question put to a piece.
 2. **How each piece stands**, by the rule its kind states. Across the hand-kept verisectoria the commonest field of all is `status`, typed by hand. If the tool does not put a computed answer there, minds will type one.
@@ -137,9 +137,9 @@ A formal spec. Rule R says nesting stops at two levels. It was derived from deci
 
 **Not sure of:**
 
-- **What content may say about its own standing.** "Computed, never typed" is all this note has. Whether prose inside a piece ("we prove", "verified") needs a rule of its own has been answered three different ways and none has been shown to do any work.
+- **What content may say about its own standing.** "Computed wherever possible, in place of being simply asserted" is all this note has. Whether prose inside a piece ("we prove", "verified") needs a rule of its own has been answered three different ways and none has been shown to do any work.
 - **Who, beyond being recorded.** Three minds are in the pattern, and who decided is part of the latitude. Whose evidence counts, and what makes two checks independent when nearly every checker is the same kind of mind, are set aside.
-- **What answers a question put by bad news.** In practice, a mind other than the one who made the repair. This note does not say.
+- **What answers a question put by evidence against a piece.** In practice, a mind other than the one who made the repair. This note does not say.
 - **Reliance nobody wrote down.** Every computed reading in section 7 is as good as what was recorded as relied on. The practice that finds the rest is building a map of the neighbourhood before working, and writing down what it turns up.
 - **A piece saying when it should come to mind.** Hand-kept verisectoria write this on practices and sayings. It bears on the first objective and has no place here.
 - **Things outside that move with nobody watching**: a library version, a cited source, a date.
