@@ -12,6 +12,8 @@ A verisectorium is a body of work in which many minds, each arriving cold, raise
 
 The purpose is a ratio: what is true and built-upon, over what a reader has to get through. The numerator alone is not enough. A verisectorium can be perfectly consistent and twice the size it needs to be, or consistent beside a thousand things brought in and never placed.
 
+Two things about the ratio. Where the two pull apart, truer comes before shorter. And it is a ratio for some reader, starting where that reader starts: precision a mind has nothing yet to hang on arrives as noise, so the same sentence raises the ratio for one reader and lowers it for another. A body of work too large for any one mind therefore needs layers, a scaffold that fits in a mind and deeper pieces that hang on it, with each simpler telling tied to the fuller piece it tells. A simpler telling is honest when the fuller thing is held behind it and learning more enlarges it without reversing it.
+
 The purpose is decided. No amount of computing over the record produces it. What the record can do is steer by it. A purpose with no feedback loop does not steer; and, in Joseph's words, "Feedback loops without purpose can't supply a purpose." Getting back to rest is the harbor. It is not what the ship is for.
 
 From the side of the mind using it, three things the model and its tools should reach for, in Joseph's words:
@@ -60,7 +62,7 @@ Pieces point at one another, and what matters about a pointer is **whether anyth
 
 ## 4. What counts as the whole
 
-An **outline** is a piece that gathers others in an order: this is the work, and this is how it is arranged. Joseph: "canon is whatever the verisectorium says it is-- usually the main outline's non-provisional slots" (a slot is a place in an outline; provisional means on approval). A verisectorium marks one or more outlines as its roots. What they reach, through places that are filled and not marked as on approval, is the whole that readers build on and that has to be kept in line. There may be more than one root, each for its own purpose, and what a piece has to have answered is what the roots reaching it ask.
+An **outline** is a piece that gathers others in an order: this is the work, and this is how it is arranged. Joseph: "canon is whatever the verisectorium says it is-- usually the main outline's non-provisional slots" (a slot is a place in an outline; provisional means on approval). A verisectorium marks one or more outlines as its roots. What they reach, through places that are filled and not marked as on approval, is the whole that readers build on and that has to be kept in line. There may be more than one root, each for its own purpose and its own reader, and what a piece has to have answered is what the roots reaching it ask.
 
 Everything else is, to the whole, only the claim that someone suggested it, and nothing inside it is held to anything. That is deliberate. It gives a low-stakes way to hold a low-certainty idea, and without one a mind chooses between silence and overclaiming. The steps run from least committed to most: a note left beside a piece; a place in an outline where something is suggested; a place where someone in the work has promised something; a piece put in place on approval; a piece in the whole. Each is cheap to take.
 
