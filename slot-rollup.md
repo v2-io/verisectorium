@@ -250,10 +250,10 @@
 
 | category | in full | what it is for |
 |---|---|---|
-| Identity and name |  | what the piece is called and how it is addressed |
-| Kind |  | what sort of piece it is |
-| Standing | Standing: status, strength, verification | how firmly the piece stands and what has checked it |
-| The content itself |  | the claim, rule, definition or text the piece exists to carry |
+| **Identity** and name |  | what the piece is called and how it is addressed (usually for a segment / multiple related slots) |
+| **Kind** |  | what sort of piece it is |
+| Standing | Standing: status, strength, verification | how firmly the piece stands and what has checked it. Not always principled; almost always attempted. |
+| The **Content** itself |  | the claim, rule, definition or text the piece exists to carry |
 | Summary and short form |  | the piece in a line or a paragraph |
 | Rests on | Rests on: grounds and dependencies | what the piece depends on or is justified by |
 | Connections |  | links to other pieces that are not dependencies |
