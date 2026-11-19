@@ -10,11 +10,13 @@ A verisectorium is a body of work in which many minds, each arriving cold, raise
 
 ## 1. What it is for
 
-*(This section is note 28's, as Joseph last edited it, with one change he invited: the two sentences about a "simpler telling" now speak of a restatement.)*
+*(This section is note 28's, as Joseph last edited it, with two changes he asked for: the two sentences about a "simpler telling" now speak of a restatement, and the paragraph on what a reader is owed at rest was added on 2026-11-19 by the lead session, at his word.)*
 
 The purpose is generally to serve truth, which requires the presence and honesty of that truth with as much clarity as possible. It can be thought of as a ratio: what is known to be true by its degree, over what a reader has to get through to comprehend it;  that is, the truth to noise ratio. The numerator alone is not enough. A verisectorium can be perfectly consistent and twice the size it needs to be, therefore making much of the truth inaccessible, or consistent beside a thousand things brought in and never placed that also hold truth but unadjudicated and undistilled.
 
 Two things about the ratio. Where the two pull apart, truer comes before shorter. And it is a ratio for some *specific reader* (an individual, not an abstraction), starting where that reader starts: precision a mind has nothing yet to hang on arrives as noise, so the same sentence raises the ratio for one reader and lowers it for another. A body of work too large for any one mind therefore needs layers, a scaffold that fits in a mind and deeper pieces that hang on it, with each restatement tied to the piece it restates. A restatement depends on the piece it restates and makes no claim on top of it: it builds beside it, not above it. It may be simpler, for a reader starting further back, or the same fact at full fidelity in other words, at any length. A simpler one is honest when the fuller thing is held behind it and learning more enlarges it without reversing it.
+
+What a reader is owed is the other half of the same purpose. In Joseph's words: "a verisectorium at rest gives a fresh reader the calibrated truth with calibrated credence". Not only what is so, as far as the work has got, but how far each part of it can be trusted, and on what. The ratio is about how much a reader has to get through; this is about what they can rely on when they have. A body of work can be short and true and still leave its reader unable to tell the checked from the merely stated, and then the reader either trusts all of it or re-reads all of it.
 
 The purpose is decided. No amount of computing over the record produces it. What the record can do is steer by it. A purpose with no feedback loop does not steer; and, in Joseph's words, "Feedback loops without purpose can't supply a purpose." Getting back to rest is the harbor. It is not what the ship is for.
 
