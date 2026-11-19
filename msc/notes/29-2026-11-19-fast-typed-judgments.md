@@ -46,6 +46,38 @@ Its own guidance is one sentence: judgments from the model, decisions in code. B
 - **It is an outside service.** Your words and unpublished material would leave the machine. Its own guidance asks for your permission, a budget and a statement of what is sent before any test; the deny-list belongs with that.
 - **Their own warning about tuning.** Wording written to produce a particular answer on particular cases breaks on new inputs and on the next version. Criteria that gain a clause per failing case, and thresholds fitted to a handful of examples, are the signs.
 
+## Addendum, same day: a sweep for what a change touches
+
+*You asked whether it allows a lot of context: could it have many segments loaded and, given a change, give probabilities on which are affected? Written down at your request. Still thoughts; still nothing sent.*
+
+**The limits, from its models page.** By default 64k tokens for a whole request and 32k for any one question together with the shared state. A long-context header raises both to 262k at the same price, and the documentation says that mode is slower and less accurate. Its page on weak spots says accuracy falls when the state is large and mostly irrelevant, and advises filtering first.
+
+**So the shape is the reverse of loading many segments.** Every question in a request sees the whole state. Two hundred segments in the state, and a question about one of them, means each answer is made with 199 irrelevant segments in view. Their own guidance says the same another way: when asking one question of many items, put each item in its own question.
+
+- **State:** the change only. The old text, the new text, and a plain sentence or two saying what is no longer claimed.
+- **Questions:** one per candidate segment, with that segment's text inside the question.
+- **Batching:** as many as fit in 64k per request, with requests sent in parallel.
+
+Each judgment then sees the change and one segment. At the listed price, my rough arithmetic for sweeping four hundred segments of two thousand tokens each is a few cents, so it could run on every change against a whole volume and not only along written references.
+
+**What is asked matters more than how much is loaded.** "Is this segment affected" is too broad for a snap judgment. It breaks into things a person could answer at a glance:
+
+- does this segment use the term that changed;
+- does it restate the sentence that changed;
+- does it rely on the claim holding in the case that was just excluded.
+
+The third is the model's own question for a narrowed premise, "did you rely on what is gone", which nothing computes today. Writing the one or two sentences that say what is gone is itself a judgment, and it is the step I would give to a mind, or check by one.
+
+**What comes back, and what it is for.** A probability per segment: a ranked list for a mind, with the middle band meaning "look". It is a way of finding reliance nobody wrote down, which every pilot named as the hole. Following written references stays in code, and a confirmed hit should become a written reference so the next change reaches it without a sweep.
+
+**What it would not do.** Follow dependence through several steps; that is code's job once the pointers exist. Read dense mathematics well: their page says it does better on plain language than on low-level notation, and I have not tested it. Say that a segment is *not* affected with enough confidence to skip a check that matters.
+
+**Where it sits in the model.** A sweep is a thing done, by an instrument at a pinned version, with the question text on record. Its answers are proposals: a high one puts a question to a piece, to be answered by a mind. A low one is not evidence that the piece is fine.
+
+**A test with labels already in hand.** The repair of the stopped bound on 2026-10-30 has a known change and a known set of consumers that had to be re-read. Sweep that volume with the change and see whether those consumers rank at the top. It would send theory segments to the service, so it needs your go-ahead and a budget first.
+
+**What I do not know.** Latency. How much accuracy the long-context mode loses. Whether any of this holds on your material.
+
 ## If you want a first test
 
 The intake case, on a public store: take one real source already cut by hand, ask for each chunk which of a few candidate pieces it bears on, and compare with where it was actually placed. It sends nothing private, it is where speed matters most, and a wrong answer costs nothing because a mind was going to look anyway.
