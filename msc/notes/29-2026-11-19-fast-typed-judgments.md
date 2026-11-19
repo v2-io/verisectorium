@@ -78,6 +78,12 @@ The third is the model's own question for a narrowed premise, "did you rely on w
 
 **What I do not know.** Latency. How much accuracy the long-context mode loses. Whether any of this holds on your material.
 
+## Addendum 2, same day: Joseph's framing, orientation first
+
+His words, on reading the above: "In my mind I'm thinking of using it more of a 'prerequisite orientation' factor (along with recent heat etc. ala vivarium's verisectorium) -- gives us a very fast way (along with the even faster deterministic dependency graphs etc.) to get an agent into the right initial files with some level of confidence, knowing that it can then expand its orientation to additional things it realizes it needs as it sees fit..."
+
+I think this is a better first use than any above. The sweep is the same (what an arriving mind is about to do, or the piece it was sent to, in the state; one candidate per question), and its answers rank what to read first, beside what the written references and recent activity already give. Three things make it the right place to start. A miss is cheap, because the agent widens its own reading afterwards and nothing is recorded as standing on the ranking. It serves the first objective directly, getting a mind to the locus of action. And it is the one use where a list selected by something other than the reader's own priors is the point: the reading the agent would have chosen for itself is the one with its blind spot in it. The cautions carry over unchanged: a low rank is not a reason to leave something unread, and the version is pinned.
+
 ## If you want a first test
 
 The intake case, on a public store: take one real source already cut by hand, ask for each chunk which of a few candidate pieces it bears on, and compare with where it was actually placed. It sends nothing private, it is where speed matters most, and a wrong answer costs nothing because a mind was going to look anyway.
