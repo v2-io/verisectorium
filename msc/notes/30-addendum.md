@@ -206,6 +206,95 @@ Stood behind and included nowhere: in logos 04, the inverse experiment, normativ
 - *logos 04.* On 2026-06-01 everything that was not prose was moved out of each section into a sidecar: "the in-band apparatus had outgrown the prose". About 7,700 words of body against some 1,200 lines of sidecar and 3,400 of scratch.
 - *comproprium.* "Every failure this day produced was by a mind that already held the correct principle — in its own words, in its own context, minutes earlier."
 
-## 9. Other phrases I would look at and have not worked through
+## 9. "Piece"
+
+*Read whole for this: `core/def/segment.md` and `core/def/veritoid.md`. Not read: where note 28 or 27 first wrote "right or wrong on its own".*
+
+In note 30 "piece" is the plain word for what core calls a «segment». Core says a segment is one of two things:
+
+- a **veritoid**: content with nothing inside it, "the smallest thing a question is asked of". A formal statement, one step of a derivation, a paragraph of explanation, a question, a chunk cut from a source.
+- an **assembly**: slots, each filled by a segment it holds or by a pointer to one that lives elsewhere. A document-like segment is an assembly of veritoids. An outline is an assembly whose slots mostly point.
+
+So it recurses (step, result, chapter, volume), and a file is a rendering of a segment and never the segment.
+
+Note 30 says "pieces, each small enough to be right or wrong on its own, gathered into larger pieces to any depth", and then uses the word at all three scales without saying which. Two things were lost:
+
+1. **The defining property is one core had replaced.** Core lists "unit of fate" among the words to avoid for a veritoid: "how a piece fails is one dimension among several; what makes it one piece is that questions attach to it." Note 30's "right or wrong on its own" is the fate criterion. It also fits only the leaf: an outline is a piece and is not right or wrong in that sense.
+2. **Slots inside a document.** In note 30 "slot" appears only for outlines. In core every assembly has slots, including a single result (its claim, its derivation, its explanation).
+
+Three of the pilots' complaints look to me like rediscoveries of what core already has:
+
+- *comproprium:* "one file here is four or five pieces" (the words, the date, the occasion, an agent's reading, the cue), each with its own author. In core that is an assembly with five slots.
+- *logos 04:* cutting to the sentence "makes the piece the wrong size to write". Core: small segments cost a reader nothing, because the file is only a rendering.
+- *udon-lite:* a fixture file is one record and its cases are the units.
+
+One complaint core does not answer: limen's source files, which are relied on and are not pieces at all. That is the next section.
+
+## 10. Things relied on that are outside
+
+*Read whole for this: `core/def/reference.md`, and `core/def/dimension.md` from its definition to the end. Not read: notes 22 to 28 on this subject, or the address-theory repository.*
+
+**Where it stands: not settled, and said three ways.**
+
+*Core* has two routes to an outside thing and has finished neither.
+- A «reference» goes from a segment to a segment only. Whether a reference's "target may be outside the verisectorium" is listed in its working notes as one of the properties a reference kind should be named by.
+- A dimension's `against` is the other route: what a piece is compared with (logic, "a simulator at a version", "the cited work, named by reference"). A check reads whatever fills it, so a change there lapses the check.
+- Your words of 2026-11-09 are in «dimension»'s working notes: influx as a mixing layer between two flows, each outside anchor with its own velocity, "ideally something slower than the v's, or all you can hope for is a snapshot"; and the two questions kept apart, "how long can we afford having something stale if it is stale" against "what is the likelihood of this being stale by this time". Beside them is a candidate marked untested: an inside veritoid that pins the outside thing, "this source at this version, last looked at then".
+
+*Note 30* has three sentences: things relied on that are not pieces "are held outside the pieces, have versions of their own where they have any, and are asked nothing." It lists the unversioned case under "Not sure of".
+
+*The pilots* each built a different shape.
+- *limen:* a `subject` block for the code and the build identity, and an `outside` block (nvim, node, comrak 0.54.0, your nvim config, `~/src/nightfox.nvim`), fingerprinted at each gate run.
+- *logos 04:* a book is a piece of its own kind, recorded with how far it was read (the store types "[abstract + citing gloss only — body unread]" after a reference by hand). A separate `leans-on` tie goes to a result "held in another verisectorium", in review.
+- *udon-lite:* `neighbour` declarations for the SOP and for address theory, with links written `[[sop/conv:row-type]]`.
+- *comproprium:* a source is its content hash, and "located, source since gone" is a state a quotation can be in.
+
+**What I think is being lumped** (my sorting; no note makes it). At least four different things:
+
+1. **Material brought in and cut**: a transcript, an audit. It ends up inside, as chunks.
+2. **A versioned thing a piece is about that is never brought in**: a build, a toolchain, a simulator, a book at an edition.
+3. **A piece in another verisectorium**, which has a recorded standing of its own there.
+4. **The world**, with no version to name: your half-life case.
+
+They differ in what can be known: whether there is a version to name, and whether anything else records how well the thing stands.
+
+**"Are asked nothing" is wrong.** Your comment on it: "a perfect example of where the ethereal phrase … ends up not only meaning nothing particularly concrete, but where it ends up being concretely wrong under almost any useful definition". The logos pilot records how far each book was read. Your 11-09 note says how likely a source is to have moved is found out, about the source.
+
+**What it would be as data** (my sketch, from your phrase "meta-data + expected obsolescence curve"; untested):
+
+```
+locator            where the thing is: a path, a URL, a citation, a build id
+version            a content hash or an edition, if it has one
+last_checked       when, by whom or by what program, by what method
+obsolescence       the expected rate of change of the source     (found out, about the source)
+max_staleness      how long this use can tolerate being stale    (decided, per use)
+```
+
+The last two are your two questions. With them, whether a reference is due to be checked again is a computation. For kind 2 a change of `version` is detected outright. For kind 4 there is no `version` and the last two fields do all the work. For kind 3 the record could also carry the standing the other verisectorium reported when it was last checked. The pin candidate in core is this record held as a veritoid inside.
+
+## 11. The personifying verbs, as data
+
+Your complaint, as you put it: "personifying a reference instead of saying 'meta-data + expected obselescence curve' just has us drifting further and further from actual underlying principles". The habit is not only note 30's. Core's «dimension» is defined as "one question asked of a piece", and all four pilot ontologies use `asks` as a keyword. Underneath, core's version is concrete: a dimension is declared with six parts (what it measures, of which kinds, against what, found out or decided, produced by what, how it is read). But the verb brings a family with it, and note 30 has most of the family.
+
+The right-hand column is my translation. No note says it, and each row is a best guess.
+
+| As written | As data |
+|---|---|
+| a kind "says what can be asked of it" | a kind declares typed fields |
+| each thing a kind lets be asked is a "dimension" | one declared field, with the six parts above |
+| an "answer", "found out" or "decided" | a field's value, with a type tag saying which of two record shapes backs it: evidence records, or a decision record |
+| an outline "asks" of what it reaches | an outline declares which fields are required for the rows it includes, each blocking or not |
+| an outline the verisectorium "answers for" | an outline declared in the ontology, so that settledness is computed over it |
+| a piece is "held to" what the outlines ask | the set of requirements that apply to it |
+| a decision "stands by whoever is behind it" | a decision record has an author field and a how-decided field |
+| "in whose words" | a decision record has a pointer to a located quotation |
+| "how each piece stands" | the records on file for each of its fields: who or what, by what method, about which version and which part |
+| "puts a question to the piece" | opens an item keyed to the piece's id and not to a version, so that a rewrite does not close it |
+| what a reader is "owed" | fields the outline must show for each row |
+| "knowingly left" | a waiver record: what, why, by whom, when to look again |
+| "unsettled" | a blocking requirement has no current value, or a recorded dependency's target has changed since it was last checked |
+| outside things "are asked nothing" | wrong; see section 10's record |
+
+## 12. Other phrases I would look at and have not worked through
 
 "On its own merits" and "on its own premises" are covered above. Not yet examined in the same way: "stands by" (in section 6's table), "standing" in its several uses, "open at the edge", and "knowingly left". I list them only as places to look.
