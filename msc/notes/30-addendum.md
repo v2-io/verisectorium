@@ -325,7 +325,11 @@ What the epistemology adds to that, as far as I can see, is three things and no 
 2. **Values come in two types** by what backs them: evidence, or a decision by someone with authority to make it.
 3. **Constraints differ per reader**, and a reference to something outside carries an expected rate of going stale.
 
-If that is right, the model is a provenance-carrying, event-sourced database with per-view constraints, and the vocabulary that sounds like a third thing is naming these three additions and re-naming the rest.
+I first ended this section by saying that the model therefore *is* a provenance-carrying, event-sourced database with per-view constraints. That claimed too much, and you corrected it: the database reading is "a useful perspective on verisectorium (especially to help avoid generative clutter) but not as an attempt at defining verisectorium, which … has as much to do with the limits of individual reader's attention and minds and the difference between the sources, integration efforts, corpus, and outputs -- as a dynamical system -- all tied to the epistemology with ergonomics becoming first-class concerns accordingly".
+
+So this table is one reading among several you named as each acceptable for its audience: conventions and tooling; a document store; a schema and a document flow; an epistemology. What it is good for is checking whether a coined phrase names something new or re-names a row above.
+
+What the table leaves out is what you list. It describes what is stored and what must hold. It says nothing about rates: how fast sources arrive, how fast they are integrated, how much sits between, and how much one reader can take in. The pilots' most concrete findings were all of that sort and none is a schema fact: 51 harvested segments staged for 111 days in comproprium, 23 looks waiting on you in limen with the oldest 58 days old, a 13.5K-line spike in udon-lite from which no card had changed.
 
 ## 13. Other phrases I would look at and have not worked through
 
