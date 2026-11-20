@@ -220,6 +220,8 @@ So it recurses (step, result, chapter, volume), and a file is a rendering of a s
 Note 30 says "pieces, each small enough to be right or wrong on its own, gathered into larger pieces to any depth", and then uses the word at all three scales without saying which. Two things were lost:
 
 1. **The defining property is one core had replaced.** Core lists "unit of fate" among the words to avoid for a veritoid: "how a piece fails is one dimension among several; what makes it one piece is that questions attach to it." Note 30's "right or wrong on its own" is the fate criterion. It also fits only the leaf: an outline is a piece and is not right or wrong in that sense.
+
+   Your correction to this (2026-11-19, after reading it): "'unit of fate' is too ambiguous already to begin with. It was useful when identifying an accidental composition that wasn't broken into veritoids (two or more parts can be falsified / 'fated' independent of the others ==> not fully broken into the smallest 'kinds' yet). It does not do a good job in core, where the concept ends up too ambiguous and too restrictive at the same time." So it is a test for a piece that has not been cut far enough, and not a definition of a piece. Core's own discussion says nearly that ("'One fate' is a quality target … a check that narrows part of it is the evidence that it wants splitting"), and note 30 took the test for the definition.
 2. **Slots inside a document.** In note 30 "slot" appears only for outlines. In core every assembly has slots, including a single result (its claim, its derivation, its explanation).
 
 Three of the pilots' complaints look to me like rediscoveries of what core already has:
@@ -295,6 +297,36 @@ The right-hand column is my translation. No note says it, and each row is a best
 | "unsettled" | a blocking requirement has no current value, or a recorded dependency's target has changed since it was last checked |
 | outside things "are asked nothing" | wrong; see section 10's record |
 
-## 12. Other phrases I would look at and have not worked through
+## 12. The same things in database terms
+
+You, the same evening: "I don't mind that we're revisiting database theory in terms of epistemology-- I do mind that what has emerged sounds like a third thing altogether". This is the mapping as I see it. Every row is my guess, the right-hand column is loose where it says so, and I have checked none of it against the address-theory repository or against note 13 (which has an Ash/Rowan lead I have not read).
+
+| In the notes | In database terms |
+|---|---|
+| a kind | a table's schema |
+| a veritoid | one row, in a table cut to normal form |
+| the "one fate" test | a normalization test: if two parts of a row can be shown wrong independently, the row holds two facts and should be split. (Loose: normal forms are defined by functional dependencies, and this test is by independent falsification.) |
+| a dimension | a column, declared with its type and with what may write it |
+| an assembly's slots; holding and pointing | composition and foreign keys |
+| a reference with the version it last saw | a foreign key that also stores the target's version when it was last read, so that staleness is a comparison |
+| an outline | a view over the tables, with an order |
+| what was written, at versions that never change | immutable, content-addressed rows |
+| what was done (the acta) | an append-only event log |
+| "computed in place of asserted" | a derived value or a view over the log, in place of a stored column someone updates |
+| a status written into a piece | a denormalized stored copy of a derived value, which goes stale |
+| "unsettled" | an integrity constraint is violated |
+| a resting state | a consistent snapshot |
+| a changeset; "off to the side" | a transaction; a branch |
+| an outline's requirements, blocking or not | constraints declared per view, some enforced and some only reported |
+
+What the epistemology adds to that, as far as I can see, is three things and no more:
+
+1. **Every value carries its provenance**: who or what produced it, by what method, about which version, relying on what.
+2. **Values come in two types** by what backs them: evidence, or a decision by someone with authority to make it.
+3. **Constraints differ per reader**, and a reference to something outside carries an expected rate of going stale.
+
+If that is right, the model is a provenance-carrying, event-sourced database with per-view constraints, and the vocabulary that sounds like a third thing is naming these three additions and re-naming the rest.
+
+## 13. Other phrases I would look at and have not worked through
 
 "On its own merits" and "on its own premises" are covered above. Not yet examined in the same way: "stands by" (in section 6's table), "standing" in its several uses, "open at the edge", and "knowingly left". I list them only as places to look.
