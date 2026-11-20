@@ -108,6 +108,104 @@ Seen in the uncommitted diff at 20:00 on 11-19. I changed none of these.
 
 **One observation about the stores.** The collection's pilot found that the pieces had not been touched since the two days they were made, while the document drawn from them was edited for weeks: "the root with a real reader and a real third mind stayed alive, and the store of pieces behind it, with neither, did not." That is a reading from file dates and about a ninth of the document, by its own account. If it holds, it bears on the pool-and-outline split in correction 2: a pool that no outline with a reader draws on is not kept up.
 
-## 8. Other phrases I would look at and have not worked through
+## 8. The concrete instances behind each interpretation
+
+*For you to check against what you know of the stores. Every instance below is from a pilot's files, in the pilot's words or counts. I opened none of the four stores myself, so each is the pilot's report of the store, and the pilots say which of their numbers were counted and which read from prose. Quotation marks are around words the pilots quote from the stores.*
+
+### 8.1 The declaration: an outline names a reader, what it includes, and what it requires
+
+**Different readers over the same pieces.**
+- *udon-lite.* The people working on lite build on leans; an implementer cannot. The store has a decision that a lean is "enough to act on decisively, as working spec".
+- *logos 04.* The anonymous build and the named build are one outline that differs in what it leaves out. The neighbouring logos 03 already builds two assemblies over one set of sections.
+- *comproprium.* The system prompt (an agent that will not come back to it), `the-chain.md` (a mind reading once, in order), and the `vera/`, `praxes/`, `exempla/` directories, for which no outline exists.
+- *limen.* A builder with one row to land, you in the window, and an auditor arriving cold on a bare brief.
+
+**What an outline includes.**
+- *udon-lite.* Of 155 outline rows: 142 proposed, 10 gaps, 3 examples, none landed. Under note 28's wording nothing in the store was held to anything, while `rule:unquoted-run-is-one-value` lists five conflicts with other cards "each to put to Joseph".
+- *logos 04.* The manifest's list headed "Held back … the larger/earlier witness paper", and the question whether one circuit of the argument is "paper 4's bridge, or the sibling paper's spine", open in three places when the paper was sent.
+- *limen.* `impl/rp1-bursts.md` and `impl/cb1-fence-floor.md` are linked from no PIPELINE row.
+
+**Required, but not blocking.**
+- *limen.* 23 of the 46 rows in VERDICTS.md end in some form of "his eyes pending", the oldest from 2026-09-22. DEBTS.md ends with a second list: "Verdicts still owed by Joseph (not debts, listed so they are not lost)".
+- *comproprium.* A practice that "is obviously correct and has never fired is `proposed`, and that is the honest and useful label."
+
+**Order.**
+- *logos 04.* "Presentation / build order — DECIDED 2026-06-01"; "Filename numbers are LOGICAL IDs, not build order … do NOT renumber". After it, a citation plan was wrong ("the original '§3-first' plan predates the build-order decision"), and a term was used before the section that introduces it.
+- *comproprium.* `the-chain.md`: "Atomizing it keeps every conclusion and destroys the derivation." And FORMAT.md: "An empty pair means: this belongs in an onboarding view, not in a system prompt".
+
+**A limit on size.**
+- *logos 04.* The anonymous build is 8,333 words against the venue's length.
+- *limen.* PIPELINE.md is the required first read; with the other top-level documents it is about 160 KB before the first design segment.
+
+**Who may see it.**
+- *logos 04.* The deny-list scan is the only automated gate the store has; some material appears in any paper "only as structure".
+- *comproprium.* The drafting record is kept out of git "because this repo is public"; PROVENANCE logs redactions from the stopgap on 2026-08-12.
+
+### 8.2 The five things "built-upon" could mean
+
+| Meaning | An instance |
+|---|---|
+| has dependents | *udon-lite:* `def:framed` is used by eight rules, is "agent vocabulary", and nobody has ruled on it; two of the eight read it differently. 39 of 40 definitions are provisional while 94 rules use them. |
+| fit to rely on | *limen:* P9 (the page owns no colour) is asserted by `web/test-page-colors.js`. Its counter-case: a design sentence the code contradicted for three weeks because nothing asserted it. |
+| placed | *comproprium:* 51 harvested segments staged in `INGEST/harvest-a` and `-b` since 2026-07-30/31. *udon-lite:* the value spike, 13.5K lines: "Nothing is decided and no card has changed from this work." |
+| accepted for building on | *logos 04:* `[?JW]` and "attest/retire" mark lines waiting on you. *limen:* "Yes on sizing" (IM-2). |
+| used, and it helped | *comproprium:* the probe against piping through `head` fired once for the agent that derived it and was missed three times within the hour by the successor that had just transcribed it. *limen:* verdict #15, "Table looks great!" |
+
+Stood behind and included nowhere: in logos 04, the inverse experiment, normative generativity at length, and the self-severing circuit.
+
+### 8.3 "The whole" as a pool of pieces and as one outline
+
+- *logos 04.* The pilot's main finding about the store: the argument is the body of work and a paper is an order over it for one reader.
+- *comproprium.* All 57 segment files in `vera/`, `praxes/` and `exempla/` were last modified between 2026-07-30 and 2026-08-01. The stopgap was last modified 2026-08-24. It has 18 interrupt cards where `praxes/` has 10 segments, and contains no `#slug` reference to the corpus. README says "where it and the living corpus disagree, the corpus wins".
+
+### 8.4 "How each piece stands" as the answers on record
+
+**Two answers on one piece, one decided and one found out.**
+- *limen.* "`<C-e>`/`<C-y>` are a pure view scroll": a "deliberate deviation" from vim by the D2 session, still on the list of verdicts owed; whether limen does it is shown by `parity/d2.js`.
+- *udon-lite.* `rule:nil-spelling`: your own call of 10-09 on the spelling, and a lean of 10-21 on the warning ("null as text should cause a warning, not an error, IMO."), with no cases written.
+
+**By what method, and about which version.**
+- *limen.* W1-o stood as "inferred from the code" for five weeks before a gate reproduced it. A Chrome test "had checked the model, not the drawing", and the message area drew 4 px tall in your window (verdict #33). On 2026-09-21 an audit found "the suites had been running against the cached binary from 2026-08-29".
+- *logos 04.* A gloss of Ricoeur dropped "in some sense". An example attributed to Belshaw was not found in Belshaw 2012.
+
+**Answers that accumulate.**
+- *logos 04.* "a four-reader convergent flag" on "it is the only warrant anyone has ever had".
+- *comproprium.* The typed ladder fired / fired-once / proposed cannot tell the deriver from an inheritor, and the corpus says the two "are different events".
+
+**Parts of one piece that stand differently.**
+- *comproprium.* A harvester's two verifiers passed its quotation segments twice while both real defects were in the fields an agent had written: "independence of *method* does not give you independence of *scope*."
+
+**The written-in status that this replaces.**
+- *udon-lite.* `awaiting-second` is true on all 225 records.
+- *logos 04.* The manifest's Stage column says "outline" for the fusion section, drafted by 2026-06-01 and submitted on 2026-06-02.
+- *limen.* PIPELINE's State reads `specified` for D4, whose three steps landed in September.
+
+### 8.5 The three steps
+
+**Made without having to agree with the existing work.**
+- *limen.* The EC-0 spike of 2026-10-08 refuted the design it was opened beside: the design said nvim's `'autoread'` would notice changes and that the apply could run inside the autocmd.
+- *logos 04.* `scratch/flow-04-the-fusion.md`, five attempts, mined for lines afterwards.
+
+**Checked on its maker's own assumptions.**
+- *udon-lite.* Two audits re-ran the value spikes' scripts.
+- *limen.* The D4 verifier, on a bare brief: "the headline survives … the characterization was too clean".
+
+**Made to meet the requirements of where it is going.**
+- *limen.* At the EC merge the coordinator found that `engine.rs` masked every line equal to `=======`: "caught by the coordinator at merge". After an audit found "the proposal's superseded text still under amendments that contradicted it", `external-changes.md` was rewritten to say what is built. Two sentences still say a finding "is DEBTS RP-1", 42 days after RP-1 landed.
+- *comproprium.* Nobody has done it: the two harvests have sat for 111 days.
+
+**The further step where the content is decided.**
+- *udon-lite.* The handoff of 10-29: "Turned a clarification (`<…>`) and a request to change my recommendation (`null`) into card edits marked decided. Both reverted." And the first ADJUDICATION-GUIDE "opened with the spikes' internal terms".
+- *limen.* "a choice made for Joseph on his evident intent, not his ruling".
+- *comproprium.* "Ruled `exempla` by Joseph, 2026-07-30": the quoted words are not in the staged primaries. And `feedback.md` on the 5–15-line brief: "an agent invented a quota".
+
+### 8.6 Priorities and the ratio
+
+- *udon-lite.* `CTQ-FACTORS.md` carries weights on the aims, and scores a branch's "impact radius" by each card's `strength` (forced > decided > lean > provisional).
+- *limen.* Lines marked as amendments: `cli.md` ten, `structure-engine.md` and `formats-and-plugins.md` nine each, `page-architecture.md` eight. `typography.md` reasons toward a 66-character measure and ends by saying it is now 120 columns.
+- *logos 04.* On 2026-06-01 everything that was not prose was moved out of each section into a sidecar: "the in-band apparatus had outgrown the prose". About 7,700 words of body against some 1,200 lines of sidecar and 3,400 of scratch.
+- *comproprium.* "Every failure this day produced was by a mind that already held the correct principle — in its own words, in its own context, minutes earlier."
+
+## 9. Other phrases I would look at and have not worked through
 
 "On its own merits" and "on its own premises" are covered above. Not yet examined in the same way: "stands by" (in section 6's table), "standing" in its several uses, "open at the edge", and "knowingly left". I list them only as places to look.
