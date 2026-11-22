@@ -331,6 +331,41 @@ So this table is one reading among several you named as each acceptable for its 
 
 What the table leaves out is what you list. It describes what is stored and what must hold. It says nothing about rates: how fast sources arrive, how fast they are integrated, how much sits between, and how much one reader can take in. The pilots' most concrete findings were all of that sort and none is a schema fact: 51 harvested segments staged for 111 days in comproprium, 23 looks waiting on you in limen with the oldest 58 days old, a 13.5K-line spike in udon-lite from which no card had changed.
 
-## 13. Other phrases I would look at and have not worked through
+## 13. Which of note 30's words have been kicked, and which have not
+
+*Added 2026-11-21. You said that evening that kicking every under-defined term and looking for unasked questions "feels like a very, very worthy use of effort and time right now", and that your unease about a model settling early is usually a sense of "unasked questions hiding in the work". Every word kicked so far has had one. This section says where the kicking has reached and where it has not, so the next kick can be chosen. The right-hand judgments are mine.*
+
+**Kicked, with what was under it** (and where).
+
+| Word or phrase | What was under it | Where |
+|---|---|---|
+| root | two different graphs | note 30, dated paragraph of 11-19 |
+| act; instrument; typed; telling; waiting | each was covering two things | note 30, dated paragraphs of 11-19 |
+| asserted | three cases; the fault is detachment from the record | note 30 §8 |
+| built-upon | five possible meanings | sections 3 and 7 here |
+| the whole; reaches; held to; answers for; at rest; the whole's terms | one declaration, with seven facets | sections 1 and 7 here |
+| how each piece stands | answers that accumulate; parts that stand differently | section 7 here |
+| the ratio | a quantity, or two aims in order: not yet answered | section 4 here |
+| piece | a test for cutting taken as a definition; slots inside a document lost | section 9 here |
+| are asked nothing | wrong; four kinds of outside thing | section 10 here |
+| by what method; about exactly what | found by the agents' footnotes to be what a list of sources read cannot replace | the working file, 3f |
+
+**Not yet kicked, where I would expect something.** For each: what note 30 says, an instance from a pilot, and the question I think is hiding. In the order I would take them.
+
+1. **"A specific reader (an individual, not an abstraction)"** (section 1). Every reader the four pilots named is a role, a task or a moment: "someone implementing a parser, who has read nothing else"; "a mind doing the round-up for a session about to start"; "an agent on a named substrate, at its first token"; "a referee… reading once, in order". None is an individual. And one of the research reports found that what a reader gets from a text depends on the task as much as on the reader. *Is a reader a person, a role, a task or a moment, and which of those does an outline name?*
+2. **"Something other than its maker"** (section 2). The collection's pilot: "the checker was written by the maker of these pieces, in the same session." Your account of 11-09: a compaction is "one agent finishing and a new distinct (often somewhat confused and deceived) agent just starting". A fork starts with everything its parent read. *Other in what respect: what it has read, what it was told, or what model it runs on? Does the same session after a compaction count?* What can be recorded is a key for the actor, whether it was forked from another, and what it read; "other" would then be computed from those and not asserted.
+3. **"Where the stakes ask for it"** and **"how cheaply the reflecting can be undone"** (section 2). Both decide how much checking a thing gets and in what order, and neither is recorded or computed anywhere in the note. Note 30 took the word "importance" out and still leans on it here under another name. *Where do the stakes of a change live before the change is made?*
+4. **"A question is about the piece and not a version"** (section 7). That needs a piece to stay the same piece through a rewrite. The application's pilot replaced one design document whole. The collection's says "a different occasion is a different saying." Core answers this (an identity minted at creation; a split retires it and names its descendants). Note 30 does not, and its one chosen rule depends on it. *What makes it the same piece afterwards?*
+5. **"Open at the edge"** (section 8). The note puts two things there: "questions about whether more could be said", and "the answers the outline wants and does not wait for". The application pilot's screen has five under that heading: looks owed by you, questions for you, choices made on your behalf, first guesses, and rows only proposed. Some of those are where the work could go next. Others are debts that do not block. *Are these one list?* The first kind is the only place in the note where moving the work forward appears at all.
+6. **"How much would move if a given piece did"** (section 8). The application pilot's three answers to it were "change it in passing", "his to confirm, yours to try another way", and "not a thing to change in passing". *Does "move" mean has to be checked again, decided again, or rewritten?* The three cost very different amounts.
+7. **"Found out or decided"** (section 6). I have not kicked this at all, because it is your spine. The collection's pilot wanted a third (witnessed) and folded it back. The ASF report maps the two onto what an agent believes and what it aims at. *Is "decided" one thing: a choice about what the work says, a choice about what to do with a piece, and the purpose itself?*
+8. **"Each piece at each of its versions"** (section 7). *A version of what: a sentence, a section, a file? Is a reflowed paragraph a new version?* Core says a version is a hash of content normalized as its kind declares.
+9. **"Material keeps the standing its source gave it"** (section 9). *What standing does a source give?* An audit by an unknown reader, your own message and a published paper differ.
+10. **"The locus of action"** (section 1, your words). One research agent asked what "acting well" means for an arriving mind here: auditing, attempting something new, or integrating. *Is there one locus, or one per kind of work?*
+11. **"Since you last looked"** (section 3). *Who is "you" for a mind that did not exist last time?*
+
+**One finding about questions themselves.** `msc/notes/16-2026-11-06-unasked-questions.md` records eleven questions a session gave you on 11-06 when you asked what was not being asked. Three of them I raised on 11-21 believing they were new: "What reaches you, and in what form? Your attention is the scarcest thing in the system and the model says almost nothing about it"; "Is the store answering to anything outside itself?"; and "How does anything leave, and is the surface shrinking?" Two others, on what agents will do to make the list of unsettled things empty and on what can be shown to a skeptical outsider, do not appear in note 30 at all. So besides unanswered and unasked there is a third kind, asked and lost, and nothing in this repository gathers what has been asked. An agent is gathering it now, into `msc/scratch/vision-2026-11-21/questions-asked.md`.
+
+## 14. Other phrases I would look at and have not worked through
 
 "On its own merits" and "on its own premises" are covered above. Not yet examined in the same way: "stands by" (in section 6's table), "standing" in its several uses, "open at the edge", and "knowingly left". I list them only as places to look.
