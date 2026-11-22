@@ -1,32 +1,35 @@
-# The model in a nutshell, after four stores
+# The Model (In a Nutshell)
 
 *A self-contained statement of what a verisectorium is and how it works, meant to be held in the head. It assumes nothing from earlier notes. Written 2026-11-19 by a Fable 5.2 agent that arrived fresh, at the request of Joseph Wecker and of the session that wrote note 28. It is note 28 said again after that note was taken to four real bodies of work: a specification still in design, a philosophy paper built from sources, an application built by agents for one person, and a collection of sayings, practices and accounts that feeds a system prompt. In each, a mind imagined what the store wants to be and reported where the note helped, strained or was silent. This is a proposal. Nothing in it has been built or run. Sections 1 to 10 are the model. After them: how this differs from note 28, with what I left out that a pilot asked for and what I kept that a pilot argued against; what it is not sure of; and what it rests on.*
 
 ---
 
-## The whole thing in one paragraph
+## Nutshell in a (smaller) Nutshell
 
-A verisectorium is a body of work in which many minds, each arriving cold, raise the proportion of what is true and built-upon to what a reader has to get through. It advances by one pattern: something is made off to the side on its own merits; it is checked on its own premises by something other than its maker; and it is reflected into the whole on the whole's terms, replacing what it supersedes. The whole is made of pieces small enough to be right or wrong on their own, each of a kind that says what can be asked of it. The same pieces are gathered in different orders for different readers, and each gathering says what its reader needs answered before building on a piece. Every answer is either found out, and stands by evidence, or decided, and stands by whoever is behind it, and most pieces have one of each. The verisectorium holds as fact only what was written and what was done: who did it, about exactly what, by what method, and relying on what. From that record, in place of anyone's say-so wherever it can be, an arriving mind is shown what has piled up, and what is waiting on whom and for how long; how each piece stands; how much would move if a given piece did; and where the work is unsettled for a given reader. For that reader it is at rest when everything is settled, and what was knowingly left, and what lies open at the edge, are shown beside it.
+A verisectorium is a body of work in which many agents (minds), each arriving cold, raise the proportion of what is true and built-upon to what a reader has to get through (the truth to noise ratio). It tends to advance and evolve in the following pattern:
+- Something is made or established off to the side on its own merits, sometimes predicated on the body of work that exists so far;
+- It is checked on its own premises by something other than its maker; and
+- It is reflected into the whole on the whole's terms, replacing what it supersedes.
+
+The whole is made of pieces small enough to be right or wrong on their own, each of a kind defined by that verisectorium by what questions can be asked about it. The same pieces may be gathered in different topologies or orders for different purposes (readers), and each gathering says what its reader needs answered to be considered truthful and consistent. Every answer is either (a) found out (in which case it is determined by evidence), or (b) decided (standing then behind the authority of the decision-maker). Many piece kinds have both. The verisectorium holds as its core facts about *what was written* and *what was done*: who did it, about exactly what, by what method, and relying on what, after preparing how, and so forth. From that record, in place of anyone's say-so wherever it can be, an arriving mind is shown what has piled up, and what is waiting on whom and for how long; how each piece stands; how much would move if a given piece did; and where the work is unsettled for a given reader. For that reader it is at rest when everything is settled, and what was knowingly left, and what lies open at the edge, are shown beside it.
 
 ## 1. What it is for
-
-*(This section is note 28's, as Joseph last edited it, with two changes he asked for: the two sentences about a "simpler telling" now speak of a restatement, and the paragraph on what a reader is owed at rest was added on 2026-11-19 by the lead session, at his word.)*
 
 The purpose is generally to serve truth, which requires the presence and honesty of that truth with as much clarity as possible. It can be thought of as a ratio: what is known to be true by its degree, over what a reader has to get through to comprehend it;  that is, the truth to noise ratio. The numerator alone is not enough. A verisectorium can be perfectly consistent and twice the size it needs to be, therefore making much of the truth inaccessible, or consistent beside a thousand things brought in and never placed that also hold truth but unadjudicated and undistilled.
 
 Two things about the ratio. Where the two pull apart, truer comes before shorter. And it is a ratio for some *specific reader* (an individual, not an abstraction), starting where that reader starts: precision a mind has nothing yet to hang on arrives as noise, so the same sentence raises the ratio for one reader and lowers it for another. A body of work too large for any one mind therefore needs layers, a scaffold that fits in a mind and deeper pieces that hang on it, with each restatement tied to the piece it restates. A restatement depends on the piece it restates and makes no claim on top of it: it builds beside it, not above it. It may be simpler, for a reader starting further back, or the same fact at full fidelity in other words, at any length. A simpler one is honest when the fuller thing is held behind it and learning more enlarges it without reversing it.
 
-What a reader is owed is the other half of the same purpose. In Joseph's words: "a verisectorium at rest gives a fresh reader the calibrated truth with calibrated credence". Not only what is so, as far as the work has got, but how far each part of it can be trusted, and on what. The ratio is about how much a reader has to get through; this is about what they can rely on when they have. A body of work can be short and true and still leave its reader unable to tell the checked from the merely stated, and then the reader either trusts all of it or re-reads all of it.
+What a reader is owed is the other half of the same purpose. In Joseph's words: *"A verisectorium at rest gives a fresh reader the calibrated truth with calibrated credence."* Not only what is so, as far as the work has got, but how far each part of it can be trusted, and on what. The ratio is about how much a reader has to get through; this is about what they can rely on when they have. A body of work can be short and true and still leave its reader unable to tell the checked from the merely stated, and then the reader either trusts all of it or re-reads all of it.
 
 The purpose is decided. No amount of computing over the record produces it. What the record can do is steer by it. A purpose with no feedback loop does not steer; and, in Joseph's words, "Feedback loops without purpose can't supply a purpose." Getting back to rest is the harbor. It is not what the ship is for.
 
 From the side of the mind using it, three things the model and its tools should reach for, in Joseph's words:
 
-1. "Allow the minds to quickly get caught up to the locus of action."
-2. "Allow the minds as much as possible to think and work in the domain of the problem, not the tooling."
-3. "Prevent easily preventable errors of [e.g., misattribution, incoherence, hyperbole, ...]."
+1. "Facilitate them getting caught up to the locus of action."
+2. "Facilitate their thinking and working to be, as much as possible, in the *domain of the problem*, not the tooling."
+3. "Prevent easily preventable and well-understood errors of [e.g., misattribution, incoherence, hyperbole, bad math, ...]."
 
-The first is the ratio seen from the arriving mind. A distinction belongs in the model if one of these three needs it.
+Number 1 on that list is the truth/noise ratio being applied to the newly arriving agent. Distinctions that help with one or more of these factors are more important for this model, or meta-ontology.
 
 ## 2. How the work moves
 
