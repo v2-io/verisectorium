@@ -4,9 +4,39 @@
 
 *Its exit. ASF's system review of 2026-10-30 observed that each review of that system "added a layer", and that any such map "must define its own drain or it becomes the next un-lifted pool." This file is a pool of that kind. It should be deleted once its questions have been put to you and whatever survives has been written into note 30 or into core. If it is still here in a month and nothing elsewhere has changed because of it, that is the finding.*
 
-*How to read it. Section 1 is a backbrief: what I take you to be asking of the model, said back so you can correct it. Section 2 states the problem without the solution's vocabulary. Section 3 holds the attempts at seeing the whole, each with its standing. Section 4 is tests for cutting. Section 5 is questions, which I think are the most useful part. Section 6 is where I think you may be missing something; you asked for that plainly. Section 7 is the log.*
+*How to read it. Section 0 says where this has got to and was written last. Section 1 is a backbrief: what I take you to be asking of the model, said back so you can correct it. Section 2 states the problem without the solution's vocabulary. Section 3 holds the attempts at seeing the whole, each with its standing. Section 4 is tests for cutting. Section 5 is questions, which I think are the most useful part. Section 6 is where I think you may be missing something; you asked for that plainly. Section 7 is the log.*
 
 *What I read whole for this, beyond what the addendum to note 30 lists: your prompts in this project from 11-08 09:36 to 11-11 22:59 (all of them); `relevant-mental-models.md`; `core/src/disc-better.md` and `disc-what-would-show-this-wrong.md`; the first 140 lines of your note 26 (the model, not the supporting quotations). Not read: your aat-v3 and councils prompts (11-04 to 11-07), where the earliest statements are; the August sweeps of outside fields; notes 09, 13, 19, 22, 27, 28; vsect 0.1's design; ASF.*
+
+---
+
+## 0. Where this has got to
+
+*Written last, at 21:46 on 2026-11-21, after all four reports. Read this first; the rest is how it was reached, in the order it happened, with the wrong turns left in.*
+
+**It is largely an arc back to section 1 of note 28, with both halves of your ratio made more concrete.** You said that might be the outcome. Here is the arc.
+
+1. **What makes a part worth relying on is contact.** A part of the work has earned reliance to the extent that it has been tested against something that could have shown it wrong: a source, a run, a derivation done again, a mind arriving cold, or you. The record's job is to say, for each part, what it last touched, when, by what method and by whom. A part written only from someone's reading of other parts has touched nothing. Your theory says such parts lose information at each handover (section 3c), and three unrelated fields found that they also come out stronger and less conditioned than their sources (section 3d).
+2. **What limits everything is attention, and the scarce kind is reading and checking.** Agents made writing nearly free. Each arriving mind's reading and your checking did not get cheaper. So small, legible and routed to the right reader matter as much as true, and every part kept has to be kept true as things move.
+3. **Some of what matters cannot be handed over in writing, and has to be regrown.** The understanding that lets someone extend the work correctly is held by a person; here, by you. A record can carry reasons, rejected alternatives, and where to ask. It cannot hand over the judgment. An arriving mind regrows some of it by attempting something small and being checked, and the record's second job is to make that fast.
+4. **The work moves forward by going outside what it holds and coming back through the same contact.** This is the thinnest part of everything below; nearly all of it is about staying true and staying reachable.
+5. **The way the model gets made obeys the same rule.** It improved when something outside its author pushed back (the pilots, core read as a primary, your reading), and drifted when each statement was written from the last.
+
+**What is new in this beyond note 28,** as far as I can tell: the first point as a single test for any handover or tool (what comes in here that the last mind's writing could not have supplied?); rewritten-from-reading as the class of surface that decays; that the scarce thing is reading; the third point, with its consequence that arrival should be an attempt and a check more than a read; and a fourth job the model is thin on, carrying what facts do not (the knowledge behind a decision, what was tried and rejected, the last mind's stance, who to ask).
+
+**How to judge the meta-ontology, as I would now answer.** By what pushes back on it, in rough order of how much each can show: a cold mind applying it to a real store and saying where it had to guess; whether it would have prevented or shown each failure the hand-kept stores have on record; what stays the same across applications to different stores; and you using what it produces. Section 1 says back the fuller list in your words.
+
+**On where you start when you cut.** The people best at it say they cannot teach it, and one of them gives a reason: only someone who holds the whole can judge a part irrelevant. What can be said is how an omission earns trust, and where to stand: start from outside the text (the problems, the record of what went wrong, the decisions to be made), since cutting from inside the text finds only repetition. Section 4 has fifteen tests; I would put 1, 2, 4, 10 and 12 first.
+
+**What I am least sure of.** Whether point 1 is a finding or one idea I have restated five ways. Three of its sources are unrelated to each other, which is the best evidence I have that it is the first. Whether point 3 holds for a body of theory as it does for code. And everything about your reasons and your queue, which I know from documents.
+
+**The five questions I would put to you first** (the full list is section 5 and the "added" lists in 3b to 3e):
+
+- At each handover, what comes in that the last mind's writing could not have supplied? (17)
+- What talks back to the model itself, and how fast? (27)
+- Which reader is the model for: one who must act well within a budget, or one who must come to hold the theory? (13)
+- Which decisions need you at all? (3)
+- When truer and shorter pull apart in the one case that separates them, a long true text that exhausts its reader before the decisive part against a short one with a small marked error, which wins? (16)
 
 ---
 
@@ -311,6 +341,45 @@ I give the segment name the report cites and what it would mean. I have read non
 
 ---
 
+## 3e. After the fourth outside report: how working models get made
+
+*`how-models-get-made.md` in this directory, by an Opus agent; I read it whole. It read seven primary texts whole (Parnas and Clements, Thurston, Tao, Naur, the Amazon formal-methods paper, a controlled study by Goel, Knuth's keynote on the errors of TeX) and parts of a dozen more; its ledger says which. The controlled studies it found are small and cover the first hour or two of design. I have read none of its sources.*
+
+**What it adds.**
+
+1. **The finished account hides the making, and the fields that looked say so.** Parnas and Clements: "Even the small program developments shown in textbooks and papers are unreal. They have been revised and polished until the author has shown us what he wishes he had done, not what actually did happen." Their answer is to write the final documents as an ideal process would have produced them, and to keep, apart, "all of the design alternatives that we considered and rejected."
+2. **A correction to how I had understood your early stage.** Experts do immerse themselves in detail early, but it is the detail of instances: Thurston's years building "a repertoire of constructions, examples and proofs" before conjecturing; Lamport's advice to "start by writing the first few steps of one or two sample behaviors"; Knuth typing hundreds of pages with his own system. What they avoid early is precision of notation and commitment. In the one controlled study, nine expert designers given a precise drawing tool in place of a sketch made fewer than half as many moves to a different idea; a precise medium "serves to fixate and stifle further exploration." The Amazon team writes a prose design first and refines parts of it into formal notation later. The report marks the reconciliation (concrete instances, loose medium, early; abstract and precise, late) as its own inference.
+3. **Wrong versions help in two ways that pull against each other.** Early they help when they are cheap and can be re-read as something else. Later they help only when the failure can be traced to one part: "structured in such a way that we can localize its errors and attribute them to some parts" (Wimsatt). A medium good for the first is bad for the second.
+4. **Lakatos's catalogue of what people do with a counterexample.** The bad move is redefining a term so that the counterexample no longer counts. The good one finds which unstated condition the counterexample refutes and makes it a stated condition, so that the improved definition is produced by the failure.
+5. **Nobody who is good at leaving things out can say how.** Lamport, in a textbook written to teach it: "I don't know how to teach you about abstraction." Naur: "the decision that a part of the world is relevant can only be made by someone who understands the whole world." What the sources do describe is how an omission comes to be trusted: vary the detail and see that nothing you care about changes ("our truth is the intersection of independent lies", Levins); say what the detail is irrelevant *to*; leave it out of the artifact but keep its status in view and name what the omission costs ("you won't learn that from my specification", Lamport); and have some check of the whole that would notice if the omission broke something.
+6. **The question the report thinks is better than mine: what talks back, and how fast?** In every rich account the version improves because something outside the author pushes back: for Knuth, implementing it himself, using it, writing its manual ("the process of explaining the language gave me views of the system that I never would have perceived"), and a torture test; for Lakatos, counterexamples; for the Amazon team, a model checker. "A model with no such channel cannot iterate well however disciplined its author is." (The last sentence is the report's own.)
+7. **Two details from Knuth.** His first version was a thin slice that ran from start to finish, not a complete layer. And he threw the first system away once it had "served [its] purpose of accumulating enough user experience to indicate what such languages ought to be."
+
+**What this does to the attempts.**
+
+- **The method and the thing are one problem.** The fourth report's "what talks back" (about how a model gets made), ASF's fresh information at each handover (about how a corpus persists), the newcomer study's frequent checking (about how a mind arrives), the incoming operator's "do you know that for sure?", and this estate's own list of the places where "the universe corrects a logogenic mind" (code, tool output, mathematical rigor, the human at the keyboard) are the same requirement met five times. Three of those sources have nothing to do with one another or with this estate. I hold this as the strongest thing the evening found, and I notice that it is also the kind of unification you said is wrong more often than right.
+- **Why the addendum helped, said more exactly.** A phrase like "built-upon" or "are asked nothing" is in neither useful state. It is too finished to be re-read as something else, and too vague to be shown wrong. Pushing each phrase down to plain data and an instance made it sharp enough to fail, and several did.
+- **"Asked nothing" was the bad Lakatos move.** The application's source files did not fit "piece", and note 30 answered by declaring them not pieces and exempt. The other move asks what unstated condition "piece" depended on (that whatever is relied on is something this body of work adjudicates), and that question is what produced the record for outside things in the addendum's section 10.
+- **Section 6, item 4 needs correcting.** I wrote that the project is doing what it was started to stop, by writing notes beside core. The evidence here is that exploration belongs in a loose medium and gets refined into the strict one in parts. So the notes are not the failure. What goes wrong is narrower: the notes are written in a finished register, so they are neither sketches nor testable claims; each is written from the one before; and no part has yet been refined into core.
+- **Your stage of "inhabiting in detail" and the agents' multiplying of terms are different things** that I had been treating as one. The first is detail of instances in a loose medium. The second is precise definitions made before the instances exist, which is the thing the controlled study found suppresses exploration. Your own words on 11-08 already said it: terms "in relation to one another instead of putting together a realistic model".
+- **vsect 0.1 on ASF may be this project's first system in Knuth's sense:** built, used in earnest, and now being replaced by what the use showed. If so, its record of use is the richest thing that has talked back to the model so far, and I have not read it.
+
+**Added to the tests for cutting (section 4).**
+
+12. **Vary it:** did every one of several different applications need it? What only one needed is detail of that application. (This is test 7 with its reason. The pilots are a weak version of "independent", being one model family reading one note.)
+13. **Irrelevant to what?** Say what the detail does not bear on, and what would show that it does.
+14. **Name what the omission costs** at the place it is omitted, and keep its status in view.
+15. **What would notice if leaving it out broke something?**
+
+**Added to the questions.**
+
+27. **What talks back to the model itself, and how fast?** So far, as I can count them: your reading; cold reads; the formal builds; the imagined pilots; vsect 0.1's real use on ASF; and your experience of the hand-kept stores. Which of these do you trust most, and which is quickest?
+28. **Is the model at the stage where a wrong version should be cheap and re-readable, or the stage where it should be sharp enough to fail?** The medium should differ.
+29. **Who holds the theory of this model besides you,** and is making a second holder part of the work?
+30. **When a store does not fit a term, which move is being made:** redefining the term so the case is excluded, or finding the unstated condition?
+
+---
+
 ## 4. Tests for cutting
 
 You said you were not sure you could yet say where you start when you cut. These are candidates collected from tonight. None is yours unless marked.
@@ -367,3 +436,4 @@ You asked for this without softening. Each is an observation from three days and
 - **Same night, 21:39.** `cold-reader.md` arrived and I read it whole. Section 3b added: one new sub-problem (S16), one new attempt (A7), A4 found to be missing its main row, section 2's two harms found too coarse, four questions added. Three reports still out.
 - **Same night, 21:41 by the clock at commit.** (I had again written a guessed time here, "21:50 to about 22:00", before reading the clock. Thirteen minutes have passed since this file was begun; it has felt like several hours.) `asf-bearing.md` arrived; I read it whole, then ASF's system review of 2026-10-30 whole, then lines 1 to 75 of the turnover segment. Section 3c added: what I had been re-deriving, one new attempt (A8), three corrections to earlier sections, four questions, a tenth test for cutting, and an exit for this file. Two reports still out.
 - **Same night, 21:44 by the clock.** `outside-fields.md` arrived and I read it whole. Section 3d added: one new sub-problem (S17), A3 supported from outside, A8 extended, one row of A4 corrected, an eleventh test for cutting, six questions. One report still out (how working models get made).
+- **Same night, 21:46 by the clock.** `how-models-get-made.md` arrived and I read it whole. Section 3e added, with one more correction to section 6. Section 0 written, as the place to start. All four reports are in. Twenty-seven minutes on the clock since this file was begun.
