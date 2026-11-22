@@ -440,6 +440,27 @@ I give the segment name the report cites and what it would mean. I have read non
 
 ---
 
+## 3g. Joseph on the cycle, the same night
+
+*His words, from his message of about 22:52, quoted where the wording matters. They answer the question I asked him in 3e's source conversation (what kind of detail his early stage is) and bear on questions 27 and 28.*
+
+- **On what went wrong in note 30:** "a sense of poetic authority that was accidentally detailing things easily known in the context of the applications of the ideas, and abstracting things (like 'built upon') that ended up losing some of the more precise insights that needed to be preserved better."
+- **Terminology comes after experience:** "terminology absolutely comes *after* concrete experiences."
+- **What he checks an abstraction against.** A practitioner "can [hear] some attempt at an abstraction and run a quick simulation in their mind in parallel of their past experiences if they had applied the abstraction in that way and kind of get an aggregate answer very quickly-- 'oh no, my mind predicts frustration if I had been thinking like that...' vs 'oh, that would have saved me from so much frustration'".
+- **On his own early stage, answering my question:** "*I* was conflating concrete details and intuition and just trying to get basic feedback-from-the-universe which tends to sometimes take simple initial mental models and explode them with edge-cases and nuance". He had supposed that was like agents multiplying terms, "which might be right depending on what kind of model they care to be building since what was really happening was the wrong universe was pushing back on the ideas I think".
+- **The shape of the whole cycle:** "a big bell-looking curve of complexity". A simple model; then the intricacies, "the questions themselves being slowly uncovered"; a peak "where the right questions have all been formed and are well-formed and the right aspects involved are known (which could explode forever if there's no practical universe to test against)"; then "things start packing back up into their more principled areas of responsibility and abstraction", which he describes as a packing problem "where there is tension between cohesion, coupling, and leakage".
+- **Where he thinks this project is:** "just to the right of the top of the curve-- just starting to speed our descent into simplicity". That is why he is content to leave core alone for now.
+- **What tells him a factoring is right:** it "makes many minds in the many many verisectoria here say 'ahh, that would have made things much nicer...'"
+
+**What I take from it** (my reading, not his words).
+
+- **"The wrong universe was pushing back" is section 3f's three-way split, applied.** The leads who multiplied terms were being pushed on by formal builds, typed languages and cold reads of the text for consistency. That kind of push-back finds edge cases without end and cannot say which of them matter. Use is what says that, and he carries twenty months of use.
+- **A mind without his experience can borrow some by replaying recorded episodes.** The pilots' best pages did this: one replayed a real day of an application's history through the imagined commands, and another ended with a table of things that happened beside what the record would have shown. That is his fast simulation done slowly and in writing. It is the nearest thing an agent has to his test.
+- **His diagnosis of note 30 is two errors in opposite directions,** and each has had a remedy tonight: for abstraction where precision was needed, the addendum's push down to plain data and instances; for detail the reader could have worked out, A3's filter.
+- **His test for a factoring is the fitness I could not write in section 1.** A factoring is good when the people who lived in the stores would have been spared trouble by it.
+
+---
+
 ## 4. Tests for cutting
 
 You said you were not sure you could yet say where you start when you cut. These are candidates collected from tonight. None is yours unless marked.
@@ -500,3 +521,4 @@ You asked for this without softening. Each is an observation from three days and
 - **Same night, 22:15 by the clock.** At Joseph's suggestion the four agents were invited to tie each main claim to its source by a footnote. Two revised reports came back with eleven changes between them. Section 3f added; point 1 of section 0 rewritten; question 17 corrected and question 31 added. Two revisions still out.
 - **Same night, 22:15 by the clock.** The third revised report came back with ten changes; five touched section 3e and one touched section 0. Written into 3f; section 0's paragraph on cutting corrected. One revision still out (the cold reader).
 - **Same night, 22:16 by the clock.** The fourth revised report came back with eight changes; two sentences of section 3b corrected in place; 3f extended and totalled. All four revisions are in: 261 footnotes, 29 changes.
+- **Same night, 22:52 by the clock.** Joseph's account of the cycle recorded in his words as section 3g.
