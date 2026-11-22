@@ -16,7 +16,12 @@
 
 **It is largely an arc back to section 1 of note 28, with both halves of your ratio made more concrete.** You said that might be the outcome. Here is the arc.
 
-1. **What makes a part worth relying on is contact.** A part of the work has earned reliance to the extent that it has been tested against something that could have shown it wrong: a source, a run, a derivation done again, a mind arriving cold, or you. The record's job is to say, for each part, what it last touched, when, by what method and by whom. A part written only from someone's reading of other parts has touched nothing. Your theory says such parts lose information at each handover (section 3c), and three unrelated fields found that they also come out stronger and less conditioned than their sources (section 3d).
+1. **What makes a part worth relying on is that something could have pushed back on it. Three different things can, and they are not interchangeable.** *(Rewritten after the footnotes; section 3f says what was wrong with the first version.)*
+   - *The world:* a new source, a run, a measurement, what you know. Only this brings in anything the body of work did not already hold, and only this keeps up with a subject that moves.
+   - *The stored originals:* a primary kept verbatim. Reading it restores what a rewriting lost, and never more than the original holds.
+   - *Work done again:* a derivation re-derived, a check re-run. It catches slips. It brings in nothing new.
+
+   The record's job is to say, for each part, which of these it last met, when, by what method and by whom. A part written only from someone's reading of other parts has met none of them. Your theory says such a part keeps less and less of what it knew about its subject unless something from the world keeps coming in (section 3c), and three unrelated fields found that such restatements also come out sounding stronger and less conditioned than their sources (section 3d).
 2. **What limits everything is attention, and the scarce kind is reading and checking.** Agents made writing nearly free. Each arriving mind's reading and your checking did not get cheaper. So small, legible and routed to the right reader matter as much as true, and every part kept has to be kept true as things move.
 3. **Some of what matters cannot be handed over in writing, and has to be regrown.** The understanding that lets someone extend the work correctly is held by a person; here, by you. A record can carry reasons, rejected alternatives, and where to ask. It cannot hand over the judgment. An arriving mind regrows some of it by attempting something small and being checked, and the record's second job is to make that fast.
 4. **The work moves forward by going outside what it holds and coming back through the same contact.** This is the thinnest part of everything below; nearly all of it is about staying true and staying reachable.
@@ -380,6 +385,42 @@ I give the segment name the report cites and what it would mean. I have read non
 
 ---
 
+## 3f. After the footnotes
+
+*You suggested inviting the agents to give each main claim a footnote: the citation, a link, a quotation where they have one, and what surrounds it. I passed that on in your words. Two reports had come back revised when this was written (`outside-fields.md`, now with 60 footnotes; `asf-bearing.md`, now with 91). I read each report's own list of what changed, whole. The other two are still out.*
+
+**What happened is a small measurement of the evening's main claim.** Each agent had already kept a ledger of which sources it had read and how far. Going back to tie each claim to its source changed eleven things across the two reports. One agent's account of why the ledger had not caught them: it "said which sources I had touched, but not which sentence rested on which touch". That is note 30's "about exactly what", found the practical way.
+
+**It also caught me.** The turnover segment's line 44 defines fresh information as "exactly the part not derivable from the compressed state". I read that line two hours ago, quoted it in section 3c, and in the same section listed "a derivation done again" as fresh information, because the agent's list had it. A derivation is worked out from what a mind already holds. I had the primary in front of me and carried the report's list over it.
+
+**Corrections to what I wrote, from the ASF report's revision.**
+
+- **A8 is two remedies and I wrote it as one.** For what the stored originals already hold, the remedy is to keep them verbatim and tie rewritten text back to them; that restores what was lost and cannot exceed what they hold. For anything they do not hold, or a subject that moves, only contact outside the body of work helps: new sources, runs, what you know. The segment's result is about the second.
+- **Doing a derivation again is neither.** It catches errors of working. It brings in nothing. And the correctness of a derivation is computation, which the theory places outside its scope. So for the mathematical content of a theory, A8 does not apply at all; it applies to what a mind believes the corpus says, what sources show, and what you intend.
+- **Fresh information does not have to arrive at every handover.** The segment needs it to keep recurring, not to be present each time. My question 17 ("at each handover, what comes in…") asks for more than the theory does.
+- **The bullet on decisions had the theory backwards in one clause.** When a decision rests on knowledge the record lacks, it is the claims kept *independent* of the decision that go wrong. Claims that lean on the decision are consistent with it but are no longer independent of what was wanted. Recording the knowledge itself repairs both.
+- **"Calibrated credence is what lets the corpus keep learning" is an analogy.** The agent has now read the gain segment whole. Its body does say that uncertainty "should spike" after a structural change or an agent "continues trusting a stale model". But its own notes say the ratio is defined only when both uncertainties are in one measure, and that for language models the principle is at sketch level.
+- **"Your theory does not reach the fluent mistakes of the minds doing the correcting"** rests on the agent's reading of one exclusion, of agents "whose disturbance rises with their own correction effort". The theory does not speak of fluent mistakes.
+
+**Corrections from the outside-fields report's revision.**
+
+- **Naur, now read by the agent itself, is sharper and also concedes more.** In his compiler case the second team made "no use of the facilities that were not only inherent in the structure of the existing compiler but were discussed at length in its documentation". The answer was written down and a "highly motivated" team did not find it. He also says revival from documents alone "will rarely arise", and his remedy is for the new programmer to "work in close contact with the programmers who already possess the theory".
+- **Thurston gave two reasons his field emptied, and I reported one.** The second: "More than the knowledge, people want personal understanding. And in our credit-driven system, they also want and need theorem-credits." For his next programme he held proofs back "to leave room for many other people to pick up credit."
+- **Three things I repeated that were overstated.** That the 1986 method was "priced out" is the agent's memory, unchecked; what it read is the plant's own "too costly without reliable, comprehensive tool support". That a small curated subset "worked" for protein databases overstates it: the hand-curated database had almost no errors and the authors recommend such subsets, without having tested one. And the maintainer I mentioned ended a bounty for reports, not the reports.
+
+**What this does to section 0.**
+
+- Point 1 is rewritten there. "Contact" was covering three things that push back in different ways. An idea that splits in three under its first real pressure was partly the kind of unification you warned about. What survives is the weaker statement and the question it gives.
+- Point 5 ("the way the model gets made obeys the same rule") holds only at that weaker level: something outside the author's account pushed back. Which of the three it was differs case by case.
+- Naur's corrected case strengthens two things already in the file: that being written down is not the same as being found at the moment it is needed (the reader in the middle of acting, section 3b), and that arrival goes by attempt and check in contact with whoever holds the understanding (A7).
+- Thurston's second reason is the first thing in any report that bears on S17, moving the work forward. A body of work that leaves an arriving mind nothing of its own to find loses its people. This estate's rule against writing another mind's method for it does the same job as his holding proofs back, and "open at the edge" in note 30 is where that room is recorded.
+
+**Corrections to the questions.** Question 17 should read: what keeps coming in, from outside what the body of work already holds, and how often? And a new one:
+
+31. **For each kind of piece, which of the three can push back on it:** the world, a stored original, or the work done again? A quotation has an original. A derivation has re-derivation. A decision has you. Some pieces may have none.
+
+---
+
 ## 4. Tests for cutting
 
 You said you were not sure you could yet say where you start when you cut. These are candidates collected from tonight. None is yours unless marked.
@@ -437,3 +478,4 @@ You asked for this without softening. Each is an observation from three days and
 - **Same night, 21:41 by the clock at commit.** (I had again written a guessed time here, "21:50 to about 22:00", before reading the clock. Thirteen minutes have passed since this file was begun; it has felt like several hours.) `asf-bearing.md` arrived; I read it whole, then ASF's system review of 2026-10-30 whole, then lines 1 to 75 of the turnover segment. Section 3c added: what I had been re-deriving, one new attempt (A8), three corrections to earlier sections, four questions, a tenth test for cutting, and an exit for this file. Two reports still out.
 - **Same night, 21:44 by the clock.** `outside-fields.md` arrived and I read it whole. Section 3d added: one new sub-problem (S17), A3 supported from outside, A8 extended, one row of A4 corrected, an eleventh test for cutting, six questions. One report still out (how working models get made).
 - **Same night, 21:46 by the clock.** `how-models-get-made.md` arrived and I read it whole. Section 3e added, with one more correction to section 6. Section 0 written, as the place to start. All four reports are in. Eighteen minutes on the clock since this file was begun at 21:28. (I first wrote "twenty-seven" here, from arithmetic done without looking. That is the third time tonight a duration or a time went into this log from feel.)
+- **Same night, 22:15 by the clock.** At Joseph's suggestion the four agents were invited to tie each main claim to its source by a footnote. Two revised reports came back with eleven changes between them. Section 3f added; point 1 of section 0 rewritten; question 17 corrected and question 31 added. Two revisions still out.
