@@ -2,6 +2,8 @@
 
 *To Joseph, and to whoever picks this up cold. Begun 2026-11-21 (Saturday evening) by the Fable 5.2 session `dcfebd69`, at your invitation to think hard and widely about the whole thing with no fixed deliverable. This is a place where attempts are written down as attempts. Most of what is here will turn out wrong or already known, and each attempt carries what would kill it. Nothing here is integrated anywhere, and nothing was built or run.*
 
+*Its exit. ASF's system review of 2026-10-30 observed that each review of that system "added a layer", and that any such map "must define its own drain or it becomes the next un-lifted pool." This file is a pool of that kind. It should be deleted once its questions have been put to you and whatever survives has been written into note 30 or into core. If it is still here in a month and nothing elsewhere has changed because of it, that is the finding.*
+
 *How to read it. Section 1 is a backbrief: what I take you to be asking of the model, said back so you can correct it. Section 2 states the problem without the solution's vocabulary. Section 3 holds the attempts at seeing the whole, each with its standing. Section 4 is tests for cutting. Section 5 is questions, which I think are the most useful part. Section 6 is where I think you may be missing something; you asked for that plainly. Section 7 is the log.*
 
 *What I read whole for this, beyond what the addendum to note 30 lists: your prompts in this project from 11-08 09:36 to 11-11 22:59 (all of them); `relevant-mental-models.md`; `core/src/disc-better.md` and `disc-what-would-show-this-wrong.md`; the first 140 lines of your note 26 (the model, not the supporting quotations). Not read: your aat-v3 and councils prompts (11-04 to 11-07), where the earliest statements are; the August sweeps of outside fields; notes 09, 13, 19, 22, 27, 28; vsect 0.1's design; ASF.*
@@ -209,6 +211,69 @@ A1, A2, A4 and A5 each end up at the same two roots from section 2 by a differen
 
 ---
 
+## 3c. After the ASF report, and ASF's own review of its system
+
+*Read whole: `asf-bearing.md` in this directory (an Opus agent's report; it read 28 ASF segments whole and keeps what the theory says apart from its own extensions); and `~/src/arch/asf/msc/inside-out-2026-10/system-review/00-system.md`, a Fable 5.1 owner's review of the system around ASF, dated 2026-10-30. Read in part: `der-turnover-information-recursion` in ASF's third volume, lines 1 to 75 of 137, to check the report's account of it against the segment. Every other ASF segment named below I know only through the report, at the status its author typed.*
+
+### What I had been re-deriving
+
+The system review measured, three weeks ago, several things I wrote tonight as observations of my own. I had not read it; nothing I read pointed at it clearly. That is sub-problem S2 happening to me.
+
+- "Every mechanism that needed a person to remember it, or Joseph to attend to it, decayed at exactly that cadence. Every mechanism that was a command held whenever someone ran the command." Ten decision briefs, "none decided in 3.5 months". That day you lifted the gates on yourself, which the review counts as "the fourth time the project has told agents to stop waiting".
+- "An agent that cannot see whether something was decided files it as undecided. The repair is the record, not the instruction."
+- "Its memory is keyed by where things came from, not by what they say."
+- "Hand-set surfaces drift; generated ones hold."
+- It proposed the experiment I attached to A3 (two cold launches on one task, a long orientation and a short one, counting the named failures). I do not know whether it was run.
+
+So questions 1 to 3 and items 2 and 3 of section 6 are a second finding of something already found, from different material (four pilots and this repository, against ASF's own history). What is new in them is small: this project's praxis, written on 11-09, put a steward's gate back on core ("acceptance is a decision of the steward and the lead, in unity"), ten days after the same kind of gate was lifted in ASF for having stalled; and core has stalled.
+
+It also gives a tenth test for section 4, in the review's words: **"does it fire without a person remembering?"** If it does not, "it is a wish".
+
+### A8. Across a handover, what persists has to be brought in from outside
+
+*Standing: new tonight for me; it is a result in your own theory. The segment's typed status is conditional, and the report says an independent verifier re-derived the mathematics and narrowed it. Carrying it from one agent's sessions to a store shared by many minds is the report's step and mine, not the segment's.*
+
+The segment: when a state is destroyed and rebuilt from a lossy store at each boundary, its information about what it has to predict obeys $I_{k+1} \le \eta_k (I_k + \rho_k)$, where $\eta_k \lt 1$ is what a lossy rebuilding keeps and $\rho_k$ is fresh information, "exactly the part not derivable from the compressed state". With no fresh information it decays geometrically to nothing. "Persistence across turnover is therefore not a property the composite can possess intrinsically: it is wholly imported through a non-vanishing reinjection channel." And this is a different regime from drift against correction inside one working session; the segment says the rate condition "provably does not transfer".
+
+Read onto a body of work kept by a succession of minds, it says something plain. What crosses from one mind to the next is what was written. Any part that a mind rewrites from its own partial reading of the rest loses information each time it is rewritten, however good the mind, unless the rewriting brings in something that could not have been worked out from what the last mind left: a primary read whole, a derivation done again, a new source, a run, or what the steward knows.
+
+That would explain several things at once.
+
+- **The notes in this repository.** Each statement of the model since note 22 was written largely from the one before. "Built-upon" travelled through five paragraphs unchanged and undefined. "Piece" lost what core's definition had. That is the walk the segment describes.
+- **Where the progress came from.** Each real step in the last four days came from outside the previous statement: the pilots' contact with four stores, core's definitions read as primaries, and you.
+- **What several of the model's mechanisms are for.** A check that records which version it read and what it relied on is a record that something from outside came in. A standing read from that record cannot be rewritten from recollection. A restatement tied to what it restates cannot drift far from it. How far a source was read says how much came in. The cold read is a second position to look from.
+- **Naur.** His claim is the segment's no-go: with nothing brought in, the understanding does not survive the handover. The segment adds the conditional positive that he does not have.
+- **A7.** An attempt checked against something real is fresh information in exactly this sense. Reading the last mind's account is not.
+
+If this holds, the question to ask of any handover, tool or outline is: **what comes in here that could not have been derived from what the last mind wrote?**
+
+*What would kill it.* The report gives the test: a corpus maintained only by re-reading and rewriting that kept its accuracy against primaries over many generations of minds. Also: the segment is about one agent, the quantity has been computed for no real system, and I am leaning on about half the segment read and a report for the rest.
+
+### Other things the report says ASF has, each of which lands on something here
+
+I give the segment name the report cites and what it would mean. I have read none of these segments.
+
+- **Keeping many things calibrated from one stream of checking** (`deriv-evidence-allocation-ceiling`; typed exact under named conditions; the report notes its confirming checks have lapsed). The more claims that must all stay accurate, the less drift each can tolerate; past the limit the remedies are more independent checking, fewer claims held as maintained, or checking deep claims directly. That is a reason for keeping a corpus small that has nothing to do with the reader's patience. The report adds a distinction worth keeping: marking a check as lapsed does not make the claim any more accurate. It turns hidden lag into reported uncertainty.
+- **How much a new source should move the corpus** (the gain, `emp-update-gain`, which the report knows only by quotation). The gain is the model's uncertainty over the sum of its own and the observation's. A corpus that overstates how sure it is stops being moved by anything new, and from outside that looks the same as being settled. So "calibrated credence" is not only for the reader deciding whether to rely on a piece (A1). It is what lets the corpus keep learning. That is a second reason for your sentence about rest, from your own theory.
+- **Decisions made from knowledge the record lacks** (`der-directed-separation`). When someone decides on the strength of something the corpus does not hold, recording the decision alone leaves everything that depends on it miscalibrated. The knowledge has to go in as well. Note 30 asks for your words. This asks for what your words rest on. It is S16 again.
+- **Slow things changed before fast things settle** (`der-temporal-nesting`). Changing structure or vocabulary while the claims underneath are still moving makes a system oscillate. The notes here renamed a handful of terms in each of the last four statements. And recurring findings of the same kind point at structure, not sentences: the ten corrections in A3 have each been made more than once, with a memory file about them loaded every session.
+- **A misleading name misleads every reader the same way** (the software volume). Comprehension is paid for again by every arriving mind, so a clearer statement is worth its cost times the number of readers, and more readers do not catch a misleading phrase because they all meet the same one.
+
+### Corrections to what I wrote above
+
+- **Section 6, item 2.** I called your close reading of note 30 "its narrowest pipe". By the last point above that framing was wrong in what it implied. The statement every arriving mind will read is where a misleading phrase costs most, so reading it phrase by phrase is the most leveraged work in the project, not a bottleneck to be designed around. What stands is narrower: the amount written beside the statement is outrunning that reading, and I added to it.
+- **Section 2, the two roots.** ASF, as reported, says the fluent mistakes of the minds doing the correcting are outside what its central result covers. So the second root is a place where your theory does not yet reach, which may be worth knowing in itself.
+- **A2.** ASF has its own form of the mission-command point (`hyp-auftragstaktik-principle`, discussion-grade): share objectives before strategy before models, reversed when local observation is poor. The report notes the estate's delegation practice follows the reversed order, and that the theory's own exception covers it.
+
+### Added to the questions
+
+17. **At each handover, what comes in that could not have been derived from what the last mind wrote?**
+18. **Which parts of a verisectorium are written by minds from their reading of other parts** (summaries, outlines, short statements, memory files, this file), and what ties each back to something that is not?
+19. **When you decide from knowledge the record lacks, how does the knowledge get in,** and not only the decision?
+20. **Is the gate on core the same kind of gate you lifted in ASF on 10-30?**
+
+---
+
 ## 4. Tests for cutting
 
 You said you were not sure you could yet say where you start when you cut. These are candidates collected from tonight. None is yours unless marked.
@@ -261,5 +326,6 @@ You asked for this without softening. Each is an observation from three days and
 
 ## 7. Log
 
-- **2026-11-21, about 21:30 to 23:00.** Sections 1 to 6 written in one sitting after reading your prompts of 11-08 to 11-11 and the model part of note 26. Four questions sent to Opus agents, each to report into this directory: which fields have lived with this problem and what they learned at cost (`outside-fields.md`); how working formal models and specifications actually get made (`how-models-get-made.md`); how a mind arriving cold gets to acting well (`cold-reader.md`); what ASF says about a system like this (`asf-bearing.md`). None had reported when this was written. Next: read each whole, and see which attempts in section 3 survive.
-- **Same night, about 23:40.** `cold-reader.md` arrived and I read it whole. Section 3b added: one new sub-problem (S16), one new attempt (A7), A4 found to be missing its main row, section 2's two harms found too coarse, four questions added. Three reports still out.
+- **2026-11-21, from 21:28 by the clock.** (I first wrote "about 21:30 to 23:00" here and "about 23:40" below. Both were guesses from how long the work felt; the clock read 21:39 when the second entry was committed.) Sections 1 to 6 written in one sitting after reading your prompts of 11-08 to 11-11 and the model part of note 26. Four questions sent to Opus agents, each to report into this directory: which fields have lived with this problem and what they learned at cost (`outside-fields.md`); how working formal models and specifications actually get made (`how-models-get-made.md`); how a mind arriving cold gets to acting well (`cold-reader.md`); what ASF says about a system like this (`asf-bearing.md`). None had reported when this was written. Next: read each whole, and see which attempts in section 3 survive.
+- **Same night, 21:39.** `cold-reader.md` arrived and I read it whole. Section 3b added: one new sub-problem (S16), one new attempt (A7), A4 found to be missing its main row, section 2's two harms found too coarse, four questions added. Three reports still out.
+- **Same night, 21:50 to about 22:00 by the clock at commit.** `asf-bearing.md` arrived; I read it whole, then ASF's system review of 2026-10-30 whole, then lines 1 to 75 of the turnover segment. Section 3c added: what I had been re-deriving, one new attempt (A8), three corrections to earlier sections, four questions, a tenth test for cutting, and an exit for this file. Two reports still out.
