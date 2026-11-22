@@ -19,7 +19,7 @@ What worked on 11-19 to 11-21 went around that cost. He did not write the model 
 1. *The world:* a new source, a run, a measurement. Only this says whether the work bears on anything.
 2. *A stored original,* kept verbatim. It restores what a rewriting lost and no more than it holds.
 3. *The steward:* what he knows and what he wants.
-4. *What the arriving mind itself brings.* Joseph added this, and I had left it out: an agent's training is a very wide body of distilled knowledge that the work does not hold, and its cross-domain connections are a real contribution, in time possibly a unique one. The outside ancestors and parallels found on 11-21 (Parnas and Clements, Naur, Thurston, Lakatos, the handoff studies) came in this way. Like any inflow it arrives unadjudicated: plausible until something checks it.
+4. *What the arriving mind itself brings.* Joseph added this, and I had left it out: an agent's training is a very wide body of distilled knowledge that the work does not hold, and its cross-domain connections are a real contribution, in time possibly a unique one. The outside ancestors and parallels found on 11-21 (Parnas and Clements, Naur, Thurston, Lakatos, the handoff studies) came in this way. Like any inflow it arrives unadjudicated: plausible until something checks it. Joseph also named its floor: even with nothing special about any one mind, many varied attempts are a brute-force search, "as long as there is a way to filter truth out of the noise". That form is worth what the filter can absorb, and attempts from one model family vary less than their number suggests.
 
 Doing a derivation again is not on that list. It catches slips and brings in nothing.
 
