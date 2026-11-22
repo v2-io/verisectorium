@@ -177,6 +177,38 @@ A1, A2, A4 and A5 each end up at the same two roots from section 2 by a differen
 
 ---
 
+## 3b. After the first outside report: the cold reader
+
+*`cold-reader.md` in this directory, by an Opus agent; I read it whole. It read one paper whole itself (Dagenais et al. 2010, on newcomers to software projects) and says so; most of its other sources it saw as abstracts or through a summarizing fetch, and the two papers on context compaction only as abstracts. It had read the addendum's section on the ratio before searching, so where it agrees with A1 it is partly agreeing with me.*
+
+**What it adds that I did not have.**
+
+1. **Arrival is a loop, and the hooks are made by acting.** In the newcomer study the same architecture overview "didn't really hit home" on day one and would have connected "a week or two later", after work on the code. The best pattern found was a brief overview and then a small real task, with frequent checks that the newcomer was heading the right way. Newcomers "could not tell which documents were outdated". Detailed histories tying a change to its reason helped more than maps.
+2. **Naur's "Programming as Theory Building" (1985) is a direct challenge to the premise.** As the report gives it: a program's substance is a theory held by the people who built it, documents cannot carry it, and when those people go the program dies. Three things the holder knows beyond any document: how it maps to the world, why each part is as it is, and how to respond to a new demand. I have not read Naur myself.
+3. **The ratio already exists as a field's central quantity** (information foraging: value gained per unit time), and it has two terms mine lacked. The cost includes finding your way between pieces, and a reader's cheap advance estimate of what a piece is worth and how far to trust it. And the value depends on the task as well as the reader.
+4. **A case that separates a ratio from an ordering.** If a trusted falsehood counts as negative value, "truer before shorter" mostly falls out. It fails when a longer, fully true text runs a reader out of budget before the part that decides things, and a shorter text with a small marked error would have served. If truer still wins there, it is an ordering.
+5. **Noise is at least six things,** not my two: irrelevant material; restatement of what is already reachable; near-truth (stale, superseded, unadjudicated), which the evidence makes the most harmful; unneeded instructions, which agents obey; precision with nothing to hang on; and falsehood.
+6. **The reader in the middle of acting is a studied problem.** The bottleneck is noticing that a principle applies. What helps: the principle stored as "in this situation, do this", worded as the moment looks from inside, shown again from outside the actor's memory, with very few things kept in the head. Two 2026 studies (abstracts only) report that when context is compacted, instructions about how to work are dropped far more often than descriptions of what to build, while task success holds; so the failure does not show in outcomes.
+7. **Ways to measure,** cheap with agents: the same questions answered from only the relevant excerpt against the whole corpus at a fixed budget; and asking a cold reader what it believes and how sure it is, scored against what the record actually supports. The second measures "calibrated truth with calibrated credence" directly. The report found nobody doing it.
+8. **A doubt about the ratio:** for a reader who has to come to hold the theory, some effort is how the holding gets built. Least-effort may be right for a mind that must act within a budget and wrong for one meant to become the next lead.
+
+**What this does to the attempts.**
+
+- **A new sub-problem, and I think it belongs near the top. S16: the understanding that lets someone extend the work correctly lives in a person, and documents carry only part of it.** You said it on 11-19: "critical model assumptions that only I have been able to cary forward through all of the sessions". Tonight you supplied what "unit of fate" was for, which no file held. Naur predicts this estate's experience with leads closely: each new mind has the documents and not the theory, and drifts.
+- **A4 is missing its most important row, and has its strongest opponent.** Everything in my table of what a continuing colleague supplies is something a record can hold. The thing Naur says a holder has and a record lacks is the ability to say what a new case is like. If he is right, a verisectorium cannot hand an arriving mind the theory. What it could do is let that mind rebuild the theory fast, by doing small real things and being checked. That would make the record less a text to be read and more a set of things to try an attempt against.
+- **A new attempt, A7: the corpus is there to check attempts against, more than to be read.** *Standing: an hour old; from one study of eighteen human developers and from how this session actually went.* I spent the first hours of this session reading, and what oriented me was attempting plain translations of note 30's phrases and being corrected by you and by two more pilots. An earlier lead reported that your prompts in order "did more than all the rest": those are a trail of decisions with their reasons, not a map. If A7 holds, the first objective (get a mind to the locus of action) is met by a short frame, a small real task, and fast checking, and the arriving screen matters mostly as a way to pick the task. *What would kill it:* the agent evidence is from bug-fixing in code, where the code is the ground truth; in a body of theory the record is the ground truth and reading may matter much more. And this estate's own practice of reading wholes exists because skipping them failed, often.
+- **A1 survives with two more terms and a sharper question for you** (question 5 below, now with a case).
+- **Section 2's "two harms" was too coarse.** The six kinds have different remedies. Near-truth being the worst is an argument for replacing over keeping beside, and it describes this repository's notes: thirty of them, each superseding the earlier ones in part, with a hand-kept column saying which.
+
+**Added to the questions (section 5).**
+
+13. **Which reader is the model for: one who must act well within a budget, or one who must come to hold the theory?** They may want opposite things from the same pages.
+14. **Is orientation here read-first, and should it be attempt-first?** A short frame, one small real task, and a check, in place of a long read.
+15. **Naur's question: can a record carry enough of the theory that the work survives when its holder is away?** If the answer is "only by letting each arrival rebuild it", what does a record have to hold for the rebuilding to be fast?
+16. **For question 5, the case:** a long, fully true text that exhausts its reader before the decisive part, against a short one with a small marked error. Which is better?
+
+---
+
 ## 4. Tests for cutting
 
 You said you were not sure you could yet say where you start when you cut. These are candidates collected from tonight. None is yours unless marked.
@@ -230,3 +262,4 @@ You asked for this without softening. Each is an observation from three days and
 ## 7. Log
 
 - **2026-11-21, about 21:30 to 23:00.** Sections 1 to 6 written in one sitting after reading your prompts of 11-08 to 11-11 and the model part of note 26. Four questions sent to Opus agents, each to report into this directory: which fields have lived with this problem and what they learned at cost (`outside-fields.md`); how working formal models and specifications actually get made (`how-models-get-made.md`); how a mind arriving cold gets to acting well (`cold-reader.md`); what ASF says about a system like this (`asf-bearing.md`). None had reported when this was written. Next: read each whole, and see which attempts in section 3 survive.
+- **Same night, about 23:40.** `cold-reader.md` arrived and I read it whole. Section 3b added: one new sub-problem (S16), one new attempt (A7), A4 found to be missing its main row, section 2's two harms found too coarse, four questions added. Three reports still out.
